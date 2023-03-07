@@ -1,5 +1,5 @@
-#include "src/date.h"
-#include "src/version.h"
+//#include "src/date.h"
+//#include "src/version.h"
 #include "src/macros.h"
 #include "src/XpressNetMaster.h"
 #include "src/debounceClass.h"
