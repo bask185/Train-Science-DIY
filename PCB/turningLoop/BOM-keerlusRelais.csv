@@ -1,0 +1,13 @@
+Comment,Designator,Footprint,LCSC
+D,D2,D_DO-34_SOD68_P7.62mm_Horizontal,
+470uF,C3,CP_Radial_D8.0mm_P3.50mm,
+G5V-2,K1,Relay_DPDT_Omron_G5V-2,
+330nF,C1,C_Disc_D3.0mm_W2.0mm_P2.50mm,
+DCC_IN,J2,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+Conn_01x03_Male,J3,PinHeader_1x03_P2.54mm_Horizontal,
+1k5,R1,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+D_Bridge_+-AA,D1,Diode_Bridge_DIP-4_W7.62mm_P5.08mm,
+BC547,Q1,TO-92_Inline_Wide,
+100nF,C2,C_Disc_D3.0mm_W2.0mm_P2.50mm,
+LM78L05,U1,TO-92_Inline_Wide,
+DCC_out,J1,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
