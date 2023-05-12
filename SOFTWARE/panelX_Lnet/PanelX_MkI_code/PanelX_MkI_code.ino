@@ -6,6 +6,8 @@
 #include "src/LocoNet.h"
 
 #define LN_TX_PIN     2
+lnMsg  *LnPacket;          // pointer to a received LNet packet
+
 
 const int CURVED   = 1 ;
 const int STRAIGHT = 0 ;

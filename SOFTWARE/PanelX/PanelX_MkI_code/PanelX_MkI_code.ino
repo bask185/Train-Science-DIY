@@ -1,14 +1,27 @@
-//#include "src/date.h"
-//#include "src/version.h"
+#include "config.h"
 #include "src/macros.h"
-#include "src/XpressNetMaster.h"
 #include "src/debounceClass.h"
 #include "src/eeprom.h"
 
 
+#if defined LOCONET
+
+#include "src/LocoNet.h"
+const int LN_TX_PIN = 2 ;
+lnMsg  *LnPacket;          // pointer to a received LNet packet
+
+#elif defined XPRESSNES
+#include "src/XpressNetMaster.h"
+XpressNetMasterClass Xnet ;
+const int rs485dir = 2 ;
+
+#else
+//#error NEITHER XPRESSNET OR LOCONET IS DEFINED
+#endif
+
 
 /************ VARIABLES & CONSTANTS ***********/
-const int       rs485dir        =  2 ;
+
 const uint8_t   pins[]   = 
 { 
      3,  4,  5,  6,  7,  8,  9, 10,
@@ -19,9 +32,7 @@ const uint8_t nInputs = sizeof(pins) / sizeof(pins[0]) ;
 
 Debounce    input[ nInputs ] ;
 
-#ifndef DEBUG
-XpressNetMasterClass Xnet ;
-#endif
+
 
 enum modes
 {
@@ -65,7 +76,11 @@ void readSwitches()
                 
                 if( btnState == FALLING ) state ^= 1 ;
 
-                #ifndef DEBUG
+                #if defined LOCONET
+                loconet.requestSwitch( Address+1, 1,  state ) ; // verivy the +1 may not be needed. IIRC it was an xpressnet thingy
+                loconet.requestSwitch( Address+1, 0,  state ) ;
+
+                #elif defined XPRESSNET
                 Xnet.SetTrntPos( address+1, state, 1) ;
                 delay(20) ;
                 Xnet.SetTrntPos( address+1, state, 0) ;                               // maybe not needed? should check for this
@@ -127,8 +142,16 @@ void setup()
     delay( 100 ) ;
     debounce() ;
 
+  #ifdef LOCONET
+    LocoNet.init(LN_TX_PIN);
+
+  #elif defined XPRESSNET
     Xnet.setup( Loco128 , rs485dir ) ;
+    
+  #endif
+    
     pinMode(13,OUTPUT) ;
+
     for (int i = 0; i < nInputs; i++)
     {
         input[i].begin(pins[i]) ;
@@ -143,12 +166,39 @@ void loop()
     debounce() ;
     readSwitches() ;
    
-    #ifndef DEBUG
+  #ifdef LOCONET
+    LnPacket = LocoNet.receive() ;
+    if( LnPacket )
+    {   
+        LocoNet.processSwitchSensorMessage(LnPacket);
+    }
+  #elif defined XPRESSNET
     Xnet.update() ;
-    #endif
+  #endif
+
 
 }
 
+#ifdef LOCONET // TEST ME
+void notifySensor( uint16_t address, uint8_t state )
+{    
+}
+
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t dir )
+{
+}
+
+void notifySwitchReport( uint16_t address, uint8_t output, uint8_t dir )
+{
+}
+
+void notifySwitchState( uint16_t address, uint8_t output, uint8_t dir ) // MAY need the the switchRequest instead
+{
+    if( mode == NORMAL ) return ;
+
+    lastAddress  = address ;// & 0x03FF ;
+}
+#elif defined XPRESSNET
 void notifyXNetLocoFunc1( uint16_t address, uint8_t func )
 {
     if( address != 9999 ) return ;
@@ -166,3 +216,4 @@ void notifyXNetTrnt( uint16_t Address,  uint8_t data )
         lastAddress  = Address;// & 0x03FF ;
     }
 }
+#endif

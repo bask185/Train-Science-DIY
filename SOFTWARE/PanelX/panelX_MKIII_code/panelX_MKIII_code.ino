@@ -71,6 +71,8 @@ Debounce button[] =
 const int  nRoutes = sizeof( accessories ) / sizeof( accessories[0] ) ; // caluclate the amount of routes in above table
 const int nButtons = sizeof( button )      / sizeof( button[0] ) ;
 
+XpressNetMasterClass Xnet ;
+
 void readButtons()
 {
     REPEAT_MS( 20 )
@@ -111,8 +113,6 @@ void NX()
     case getFirstButton:
         if( btnState == FALLING )
         {
-            Serial.println("falling 1");
-            Serial.println(currentButton) ;
             firstButton = currentButton ;
             stateMachine = getSecondButton ;
         }
@@ -121,14 +121,11 @@ void NX()
     case getSecondButton:
         if( btnState == FALLING )
         {
-            Serial.println("falling 2");
-            Serial.println(currentButton) ;
             secondButton = currentButton ;
             stateMachine = getIndex ;
         }
         if( btnState == RISING )
         {
-            Serial.println("rising 1");
             stateMachine = getFirstButton ;
             firstButton  = 0xFF ;
             secondButton = 0xFF ;
@@ -145,14 +142,12 @@ void NX()
                 stateMachine = setRoute ;
                 streetIndex = i ;
                 pointIndex  = 2 ;
-                Serial.println("route found");
                 return ;
             }
         }
         stateMachine = getFirstButton ;
         firstButton  = 0xFF ;
         secondButton = 0xFF ;
-        Serial.println("invalid combo");
         }
         break ;
 
@@ -169,12 +164,9 @@ void NX()
             }
             else
             {
-                //Xnet.setXnetTurnout(address, state, 1) ;
+                Xnet.SetTrntPos(address, state, 1) ;
                 delay(20);
-                //Xnet.setXnetTurnout(address, state, 1) ;
-                Serial.print("setting point: ");
-                Serial.print(address) ;Serial.print(" ");
-                Serial.println(state) ;
+                Xnet.SetTrntPos(address, state, 1) ;
             }
         }
         END_REPEAT
@@ -184,35 +176,14 @@ void NX()
 
 void setup()
 {
-
-    Serial.begin( 115200 ) ;
-
-    Serial.print("nRoutes ");
-    Serial.println(nRoutes);
+    Xnet.setup( Loco128, 2 ) ;
 }
+
 byte test = 0 ;
 void loop()
 {
+    Xnet.update() ;
     readButtons() ;
-
-    REPEAT_MS(2000)
-    {
-        switch( test++ )
-        {
-        case 1:
-            btnState = FALLING ;
-            currentButton = 6 ;
-            break ;
-
-        case 2:
-            btnState = FALLING ;
-            currentButton = 22 ;
-            break ;
-        }
-
-    }
-    END_REPEAT
-
     NX() ;
 }
 

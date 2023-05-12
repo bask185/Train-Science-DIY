@@ -8,6 +8,8 @@ Debounce::Debounce( )
 void Debounce::begin( uint8_t _pin ) 
 {
 	pin = _pin ;
+	state = HIGH ;
+	statePrev = HIGH ;
 	pinMode(_pin, INPUT_PULLUP); // take note I use a pull-up resistor by default
 }
 
