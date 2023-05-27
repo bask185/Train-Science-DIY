@@ -7,7 +7,7 @@
 #if defined LOCONET
 
 #include "src/LocoNet.h"
-const int LN_TX_PIN = 2 ;
+const int LN_TX_PIN = 7 ;
 lnMsg  *LnPacket;          // pointer to a received LNet packet
 
 #elif defined XPRESSNES
@@ -24,7 +24,7 @@ const int rs485dir = 2 ;
 
 const uint8_t   pins[]   = 
 { 
-     3,  4,  5,  6,  7,  8,  9, 10,
+    2, 3,  4,  5,  6,  /*7,  8,*/  9, 10,
     11, 12, A0, A1, A2, A3, A4, A5
 } ;
 uint8_t flash ;
@@ -77,8 +77,10 @@ void readSwitches()
                 if( btnState == FALLING ) state ^= 1 ;
 
                 #if defined LOCONET
-                loconet.requestSwitch( Address+1, 1,  state ) ; // verivy the +1 may not be needed. IIRC it was an xpressnet thingy
-                loconet.requestSwitch( Address+1, 0,  state ) ;
+                LocoNet.requestSwitch( address, 1,  state ) ; // verivy the +1 may not be needed. IIRC it was an xpressnet thingy
+                LocoNet.requestSwitch( address, 0,  state ) ;
+                Serial.print("setting point: ");Serial.print(address);
+                Serial.println(" @ " ) ; Serial.println(state) ;
 
                 #elif defined XPRESSNET
                 Xnet.SetTrntPos( address+1, state, 1) ;
@@ -144,6 +146,7 @@ void setup()
 
   #ifdef LOCONET
     LocoNet.init(LN_TX_PIN);
+    Serial.begin(115200);
 
   #elif defined XPRESSNET
     Xnet.setup( Loco128 , rs485dir ) ;
@@ -186,6 +189,14 @@ void notifySensor( uint16_t address, uint8_t state )
 
 void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t dir )
 {
+    Serial.print("receiving point: ");Serial.print(address);
+    Serial.println(" @ " ) ; Serial.println(dir) ;
+
+    if( address == 2000 )
+    {
+        if( dir ) { mode = TEACHIN ; digitalWrite(13, HIGH ); }
+        else      { mode = NORMAL  ; digitalWrite(13,  LOW ); }
+    }
 }
 
 void notifySwitchReport( uint16_t address, uint8_t output, uint8_t dir )
