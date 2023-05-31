@@ -10,7 +10,7 @@
 const int LN_TX_PIN = 7 ;
 lnMsg  *LnPacket;          // pointer to a received LNet packet
 
-#elif defined XPRESSNES
+#elif defined XPRESSNET
 #include "src/XpressNetMaster.h"
 XpressNetMasterClass Xnet ;
 const int rs485dir = 2 ;
@@ -21,18 +21,24 @@ const int rs485dir = 2 ;
 
 
 /************ VARIABLES & CONSTANTS ***********/
-
-const uint8_t   pins[]   = 
+#ifdef XPRESSNET
+const uint8_t pins[]   = 
 { 
-    2, 3,  4,  5,  6,  /*7,  8,*/  9, 10,
+     3,  4,  5,  6,  7,  8,  9, 10,
     11, 12, A0, A1, A2, A3, A4, A5
 } ;
-uint8_t flash ;
+#else
+const uint8_t pins[]   = 
+{ 
+     0,  1,  2,  3,  4,  5,  6,  7,  8, 
+     9, 10, 11, 12, A0, A1, A2, A3, A4, A5
+} ;
+#endif
+
+uint8_t flash, booted ;
 const uint8_t nInputs = sizeof(pins) / sizeof(pins[0]) ;
 
 Debounce    input[ nInputs ] ;
-
-
 
 enum modes
 {
@@ -71,21 +77,20 @@ void readSwitches()
                 uint16_t address = loadPoint( pin ) ;                           // fetch address & state from EEPROM
         
                 uint8_t state = address >> 15 ;                                  // stuff MSB in state
-                address &= 0x03FF ;                                              // remove MSB from address 
-                //address -- ;
+                address &= 0x07FF ;                                              // remove MSB from address 
                 
                 if( btnState == FALLING ) state ^= 1 ;
 
                 #if defined LOCONET
-                LocoNet.requestSwitch( address, 1,  state ) ; // verivy the +1 may not be needed. IIRC it was an xpressnet thingy
+                LocoNet.requestSwitch( address, 1,  state ) ;
                 LocoNet.requestSwitch( address, 0,  state ) ;
-                Serial.print("setting point: ");Serial.print(address);
-                Serial.println(" @ " ) ; Serial.println(state) ;
+                // Serial.print("setting point: ");Serial.print(address);
+                // Serial.print(" @ " ) ; Serial.println(state) ;
 
                 #elif defined XPRESSNET
-                Xnet.SetTrntPos( address+1, state, 1) ;
+                Xnet.SetTrntPos( address, state, 1) ;
                 delay(20) ;
-                Xnet.SetTrntPos( address+1, state, 0) ;                               // maybe not needed? should check for this
+                Xnet.SetTrntPos( address, state, 0) ;                               // maybe not needed? should check for this
                 #else
                 Serial.print("pin = " ) ;               Serial.println( pin ) ;
                 Serial.print("address in EEPROM = ");   Serial.println(address) ;
@@ -95,16 +100,17 @@ void readSwitches()
             else                                                                    // store point
             {   
                 uint16_t toStore ;
-                if( btnState ==  RISING ) toStore = lastAddress | (0x1 << 15) ;     // set state according to button position
-                else                      toStore = lastAddress | (0x0 << 15) ;
+                if( btnState ==  RISING ) toStore = lastAddress | (0x0 << 15) ;     // set state according to button position
+                else                      toStore = lastAddress | (0x1 << 15) ;
 
                 storePoint( pin, toStore ) ;                                         // store in EEPROM
 
+                // Serial.print("\nconnecting pin "); Serial.print(pin) ;
+                // Serial.print(" to address ") ; Serial.println( lastAddress ) ;
+                // Serial.print("with state ") ; Serial.println( toStore ) ;
 
                 #ifdef DEBUG
-                Serial.print("\nconnecting pin "); Serial.print(pin) ;
-                Serial.print(" to address ") ; Serial.println( lastAddress ) ;
-                Serial.print("with state ") ; Serial.println( toStore ) ;
+                
                 #endif                
             }
         }
@@ -146,7 +152,7 @@ void setup()
 
   #ifdef LOCONET
     LocoNet.init(LN_TX_PIN);
-    Serial.begin(115200);
+    // Serial.begin(115200);
 
   #elif defined XPRESSNET
     Xnet.setup( Loco128 , rs485dir ) ;
@@ -182,33 +188,25 @@ void loop()
 
 }
 
-#ifdef LOCONET // TEST ME
-void notifySensor( uint16_t address, uint8_t state )
-{    
-}
-
+#ifdef LOCONET
 void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t dir )
 {
-    Serial.print("receiving point: ");Serial.print(address);
-    Serial.println(" @ " ) ; Serial.println(dir) ;
+    if( dir ) dir = 1 ;
 
-    if( address == 2000 )
+    // Serial.print("receiving point: ");Serial.print(address);
+    // Serial.println(" @ " ) ; Serial.println(dir) ;
+
+    if( address == 1 )
     {
-        if( dir ) { mode = TEACHIN ; digitalWrite(13, HIGH ); }
-        else      { mode = NORMAL  ; digitalWrite(13,  LOW ); }
+        if( dir ) { mode = NORMAL  ; }
+        else      { mode = TEACHIN ; }
+    }
+    else
+    {
+        lastAddress = address ;
     }
 }
 
-void notifySwitchReport( uint16_t address, uint8_t output, uint8_t dir )
-{
-}
-
-void notifySwitchState( uint16_t address, uint8_t output, uint8_t dir ) // MAY need the the switchRequest instead
-{
-    if( mode == NORMAL ) return ;
-
-    lastAddress  = address ;// & 0x03FF ;
-}
 #elif defined XPRESSNET
 void notifyXNetLocoFunc1( uint16_t address, uint8_t func )
 {
