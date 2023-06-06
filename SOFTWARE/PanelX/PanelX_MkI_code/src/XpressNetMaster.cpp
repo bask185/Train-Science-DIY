@@ -28,6 +28,7 @@
 
 // include this library's description file
 #include "XpressNetMaster.h"
+#include "../config.h"
 
 #ifdef XPRESSNET
 

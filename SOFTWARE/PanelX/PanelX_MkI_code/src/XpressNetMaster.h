@@ -31,7 +31,7 @@
 	- fix range CV# Adr to uint16_t
 */
 
-#include "config.h"
+#include "../config.h"
 
 #ifdef XPRESSNET
 
