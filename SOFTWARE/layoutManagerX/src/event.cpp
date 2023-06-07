@@ -131,7 +131,7 @@ void EventHandler::storeEvent( uint8 _data1, uint16 _data2, uint8 _data3 )
     
     //if(notifyI2cErrror)                         notifyI2cErrror( error ) ; gets me error 4 which is kinda annoying, better to turn this one off
     if( displayStoreMemory )                    displayStoreMemory( eeAddress ) ;
-    if( displayFreeMemory  )                    displayFreeMemory( ( (0x2000 - eeAddress - beginAddress) / sizeof( localEvent ) ) ) ;
+    if( displayFreeMemory  )                    displayFreeMemory( ( ((maxAddress-beginAddress) - eeAddress) / sizeof( localEvent ) ) ) ;
     if( eeAddress == maxAddress && memoryFull ) memoryFull() ;
 
     eeAddress += sizeof( localEvent ) ;            // increase EEPROM address for next event ;
