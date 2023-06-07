@@ -52,17 +52,19 @@ XpressNetMasterClass Xnet ;
 /***** DEBOUNCE STUFF *****/
 
 // lcd switches -> addresses 4-7
-Debounce    switches( 255 ) ;
-const int   nSwitches =  4 ;
-const int   switchPin = A3 ;
-uint8_t     lastPressedSwitch ;
-uint16_t    reference[4] ; /* = NOTE to be filled in 
-{
-    0,
-    val,
-    val,
-    val,
-} ; */
+Debounce        switches( 255 ) ;
+const int       switchPin = A3 ;
+const int       nSwitches = 4 ;
+uint8_t         lastPressedSwitch ;
+const uint32_t  R1 = 1000 ;
+const uint32_t  R2 = 4700 ;
+// const uint16_t reference[] =
+// {   
+//     ( 0 * 1024 * R1 / ( R2 + ( 0 * R1))) , // CHECK IF I AM ACCORDING TO ACTUAL MEASUREMENTS
+//     ( 1 * 1024 * R1 / ( R2 + ( 1 * R1))) ,
+//     ( 2 * 1024 * R1 / ( R2 + ( 2 * R1))) ,
+//     ( 3 * 1024 * R1 / ( R2 + ( 3 * R1))) ,
+// } ;
 
 // LCD switches
 Debounce    lcdKeys( 255 ) ;
@@ -162,6 +164,8 @@ void debounceSwitches()
 
         for( int i = 0 ; i < nSwitches ; i ++ )
         {
+            uint16_t reference = i * 1024 * R1 / ( R2 + ( i * R1)) ; // NOTE. may consume too much process effor, not that much tho
+
             uint16_t lowerBound ;
             if( reference[i] < 20 ) lowerBound = 0 ; 
             else                    lowerBound = reference[i] - 20 ;
