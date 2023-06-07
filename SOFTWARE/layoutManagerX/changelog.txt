@@ -1,0 +1,4 @@
+layoutManagerX
+v0.0.0   Date/time:2023-06-07 12:45:51.380164
+Project assembled
+
