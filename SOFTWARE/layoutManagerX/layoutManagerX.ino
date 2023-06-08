@@ -151,7 +151,7 @@ Loco loco[nLocos] ;
 /**** END OF VARIABLES ****/
 
 
-void showFunction( uint16_t address, uint8_t group, uint8_t functions )
+void showFunction( uint16_t address, uint8_t group, uint8_t incFunctions )
 {
     for( int  i = 0 ; i < nLocos ; i ++ )
     {
@@ -208,13 +208,13 @@ void showFunction( uint16_t address, uint8_t group, uint8_t functions )
 
             for( int j = 0 ; j < nFunc ; j ++ )
             {
-                uint8_t        Fx = startFunc + i ;          // locomotive function number
-                uint8_t funcState = functions >> j ;         // the incomming function state 
+                uint8_t funcState = incFunctions >> j ;      // the incomming function state 
+                uint8_t        Fx = startFunc +  j ;         // locomotive function number
                 uint8_t locoState = loco[i].function >> Fx ; // current state of loco function
                 
-                if( funcState != locoState )
+                if( funcState != locoState )                 // compare incomming state with loco state
                 {
-                    bitWrite( loco[i].function, Fx, locoState ) ; // update function number in locoslot
+                    bitWrite( loco[i].function, Fx, locoState ) ; // update function number in locoslot and display
                     lcd.setCursor(0,1);
                     lcd.print("F");
                     lcd.print(Fx);
