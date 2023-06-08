@@ -123,8 +123,87 @@ enum customEvents
     F13_F20Event,
 } ;
 
+/****** LOCO SLOTS *********/
+
+// NOTE: slots are not really needed, I use the mainy for better displaying function commands.
+// as XpressNet sends 4-8 functions per message I can use these slots to see which bit changes
+typedef struct Locos
+{
+    uint16_t address ;
+    uint8_t  speed : 7 ;
+    uint8_t  dir : 1 ;
+    uint8_t F0 : 1 ; uint8_t  F9 : 1 ; uint8_t F18 : 1 ; uint8_t F27 : 1 ;
+    uint8_t F1 : 1 ; uint8_t F10 : 1 ; uint8_t F19 : 1 ; uint8_t F28 : 1 ;
+    uint8_t F2 : 1 ; uint8_t F11 : 1 ; uint8_t F20 : 1 ;
+    uint8_t F3 : 1 ; uint8_t F12 : 1 ; uint8_t F21 : 1 ;
+    uint8_t F4 : 1 ; uint8_t F13 : 1 ; uint8_t F22 : 1 ;
+    uint8_t F5 : 1 ; uint8_t F14 : 1 ; uint8_t F23 : 1 ;
+    uint8_t F6 : 1 ; uint8_t F15 : 1 ; uint8_t F24 : 1 ;
+    uint8_t F7 : 1 ; uint8_t F16 : 1 ; uint8_t F25 : 1 ;
+    uint8_t F8 : 1 ; uint8_t F17 : 1 ; uint8_t F26 : 1 ;
+
+} Loco ;
+
+const int nLocos = 25 ;
+Loco loco[nLocos] ;
 /**** END OF VARIABLES ****/
 
+
+// first, get the slot index, add a slot if address is not used
+void setFunction( uint16_t address, uint8_t group, uint8_t functions )
+{
+    for( int  i = 0 ; i < nlocos ; i ++ )
+    {
+        if( loco[i].address == 0x0000 ) // if address 0 is found in the list before a match is found
+        {                               // than we know the address was not used before and we may commission a slot by inserting an address
+            loco[i].address = address ;
+        }
+
+        if( address == loco[i].address ) // if true -> slot found
+        {
+            switch( group )
+            {
+            case F0_F4Event:
+                if( (functions&0b10000) != loco[i].F0 ) {loco[i].F0 = (functions >> 4) ;} // bit cumbersome do it like this, but it should work
+                if( (functions&0b00001) != loco[i].F1 ) {loco[i].F1 = (functions     ) ;}
+                if( (functions&0b00010) != loco[i].F2 ) {loco[i].F2 = (functions >> 1) ;}
+                if( (functions&0b00100) != loco[i].F3 ) {loco[i].F3 = (functions >> 2) ;}
+                if( (functions&0b01000) != loco[i].F4 ) {loco[i].F4 = (functions >> 3) ;}
+                break ;
+
+            case F5_F8Event:
+                if( (functions&0b0001) != loco[i].F5 ) {loco[i].F5 = (functions     ) ;}
+                if( (functions&0b0010) != loco[i].F6 ) {loco[i].F6 = (functions >> 1) ;}
+                if( (functions&0b0100) != loco[i].F7 ) {loco[i].F7 = (functions >> 2) ;}
+                if( (functions&0b1000) != loco[i].F8 ) {loco[i].F8 = (functions >> 3) ;}
+                break ;
+
+            case F9_F12Event:
+                if( (functions&0b0001) != loco[i].F9  ) {loco[i].F9  = (functions     ) ;}
+                if( (functions&0b0010) != loco[i].F10 ) {loco[i].F10 = (functions >> 1) ;}
+                if( (functions&0b0100) != loco[i].F11 ) {loco[i].F11 = (functions >> 2) ;}
+                if( (functions&0b1000) != loco[i].F12 ) {loco[i].F12 = (functions >> 3) ;}
+                break ;
+
+            case F13_F20Event:
+                if( (functions&0b00000001) != loco[i].F13 ) {loco[i].F13 = (functions     ) ;}
+                if( (functions&0b00000010) != loco[i].F14 ) {loco[i].F14 = (functions >> 1) ;}
+                if( (functions&0b00000100) != loco[i].F15 ) {loco[i].F15 = (functions >> 2) ;}
+                if( (functions&0b00001000) != loco[i].F16 ) {loco[i].F16 = (functions >> 3) ;}
+                if( (functions&0b00010000) != loco[i].F17 ) {loco[i].F17 = (functions >> 4) ;}
+                if( (functions&0b00100000) != loco[i].F18 ) {loco[i].F18 = (functions >> 5) ;}
+                if( (functions&0b01000000) != loco[i].F19 ) {loco[i].F19 = (functions >> 6) ;}
+                if( (functions&0b10000000) != loco[i].F20 ) {loco[i].F20 = (functions >> 7) ;}
+                break ;
+
+            }
+
+            return ;
+        }
+    }
+}
+
+/****** helper functions ******/
 void clearln()
 {
     for( int i = 0 ; i < 16 ; i++ )
@@ -156,6 +235,14 @@ void displayStatus()
     lcd.print(F("STAT: ")) ;
 }
 
+
+/***** CORE FUNCTIONS ******
+ 
+ * debounceSwitches
+ * debounceLcdKeys
+ * debounceSensors
+*/
+
 void debounceSwitches()
 {
     REPEAT_MS( 20 )
@@ -167,9 +254,9 @@ void debounceSwitches()
             uint16_t reference = i * 1024 * R1 / ( R2 + ( i * R1)) ; // NOTE. may consume too much process effor, not that much tho
 
             uint16_t lowerBound ;
-            if( reference[i] < 20 ) lowerBound = 0 ; 
-            else                    lowerBound = reference[i] - 20 ;
-            uint16_t                upperBound = reference[i] + 20 ;
+            if( reference < 20 ) lowerBound = 0 ; 
+            else                    lowerBound = reference - 20 ;
+            uint16_t                upperBound = reference + 20 ;
 
             if( sample > lowerBound 
             &&  sample < upperBound )
