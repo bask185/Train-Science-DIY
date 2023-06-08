@@ -132,15 +132,17 @@ typedef struct Locos
     uint16_t address ;
     uint8_t  speed : 7 ;
     uint8_t  dir : 1 ;
-    uint8_t F0 : 1 ; uint8_t  F9 : 1 ; uint8_t F18 : 1 ; uint8_t F27 : 1 ;
-    uint8_t F1 : 1 ; uint8_t F10 : 1 ; uint8_t F19 : 1 ; uint8_t F28 : 1 ;
-    uint8_t F2 : 1 ; uint8_t F11 : 1 ; uint8_t F20 : 1 ;
-    uint8_t F3 : 1 ; uint8_t F12 : 1 ; uint8_t F21 : 1 ;
-    uint8_t F4 : 1 ; uint8_t F13 : 1 ; uint8_t F22 : 1 ;
-    uint8_t F5 : 1 ; uint8_t F14 : 1 ; uint8_t F23 : 1 ;
-    uint8_t F6 : 1 ; uint8_t F15 : 1 ; uint8_t F24 : 1 ;
-    uint8_t F7 : 1 ; uint8_t F16 : 1 ; uint8_t F25 : 1 ;
-    uint8_t F8 : 1 ; uint8_t F17 : 1 ; uint8_t F26 : 1 ;
+    // uint8_t F0 : 1 ; uint8_t  F9 : 1 ; uint8_t F18 : 1 ; uint8_t F27 : 1 ;
+    // uint8_t F1 : 1 ; uint8_t F10 : 1 ; uint8_t F19 : 1 ; uint8_t F28 : 1 ;
+    // uint8_t F2 : 1 ; uint8_t F11 : 1 ; uint8_t F20 : 1 ;
+    // uint8_t F3 : 1 ; uint8_t F12 : 1 ; uint8_t F21 : 1 ;
+    // uint8_t F4 : 1 ; uint8_t F13 : 1 ; uint8_t F22 : 1 ;
+    // uint8_t F5 : 1 ; uint8_t F14 : 1 ; uint8_t F23 : 1 ;
+    // uint8_t F6 : 1 ; uint8_t F15 : 1 ; uint8_t F24 : 1 ;
+    // uint8_t F7 : 1 ; uint8_t F16 : 1 ; uint8_t F25 : 1 ;
+    // uint8_t F8 : 1 ; uint8_t F17 : 1 ; uint8_t F26 : 1 ;
+
+    uint32_t function ;
 
 } Loco ;
 
@@ -149,10 +151,9 @@ Loco loco[nLocos] ;
 /**** END OF VARIABLES ****/
 
 
-// first, get the slot index, add a slot if address is not used
-void setFunction( uint16_t address, uint8_t group, uint8_t functions )
+void showFunction( uint16_t address, uint8_t group, uint8_t functions )
 {
-    for( int  i = 0 ; i < nlocos ; i ++ )
+    for( int  i = 0 ; i < nLocos ; i ++ )
     {
         if( loco[i].address == 0x0000 ) // if address 0 is found in the list before a match is found
         {                               // than we know the address was not used before and we may commission a slot by inserting an address
@@ -161,44 +162,68 @@ void setFunction( uint16_t address, uint8_t group, uint8_t functions )
 
         if( address == loco[i].address ) // if true -> slot found
         {
+            uint8_t startFunc ;
+            uint8_t nFunc ;
+
             switch( group )
             {
-            case F0_F4Event:
-                if( (functions&0b10000) != loco[i].F0 ) {loco[i].F0 = (functions >> 4) ;} // bit cumbersome do it like this, but it should work
-                if( (functions&0b00001) != loco[i].F1 ) {loco[i].F1 = (functions     ) ;}
-                if( (functions&0b00010) != loco[i].F2 ) {loco[i].F2 = (functions >> 1) ;}
-                if( (functions&0b00100) != loco[i].F3 ) {loco[i].F3 = (functions >> 2) ;}
-                if( (functions&0b01000) != loco[i].F4 ) {loco[i].F4 = (functions >> 3) ;}
-                break ;
+            // case F0_F4Event:
+            //     if( (functions&0b10000) != loco[i].F0 ) {loco[i].F0 = (functions >> 4) ;} // bit cumbersome do it like this, but it should work
+            //     if( (functions&0b00001) != loco[i].F1 ) {loco[i].F1 = (functions     ) ;}
+            //     if( (functions&0b00010) != loco[i].F2 ) {loco[i].F2 = (functions >> 1) ;}
+            //     if( (functions&0b00100) != loco[i].F3 ) {loco[i].F3 = (functions >> 2) ;}
+            //     if( (functions&0b01000) != loco[i].F4 ) {loco[i].F4 = (functions >> 3) ;}
+            //     break ;
 
-            case F5_F8Event:
-                if( (functions&0b0001) != loco[i].F5 ) {loco[i].F5 = (functions     ) ;}
-                if( (functions&0b0010) != loco[i].F6 ) {loco[i].F6 = (functions >> 1) ;}
-                if( (functions&0b0100) != loco[i].F7 ) {loco[i].F7 = (functions >> 2) ;}
-                if( (functions&0b1000) != loco[i].F8 ) {loco[i].F8 = (functions >> 3) ;}
-                break ;
+            // case F5_F8Event:
+            //     if( (functions&0b0001) != loco[i].F5 ) {loco[i].F5 = (functions     ) ;}
+            //     if( (functions&0b0010) != loco[i].F6 ) {loco[i].F6 = (functions >> 1) ;}
+            //     if( (functions&0b0100) != loco[i].F7 ) {loco[i].F7 = (functions >> 2) ;}
+            //     if( (functions&0b1000) != loco[i].F8 ) {loco[i].F8 = (functions >> 3) ;}
+            //     break ;
 
-            case F9_F12Event:
-                if( (functions&0b0001) != loco[i].F9  ) {loco[i].F9  = (functions     ) ;}
-                if( (functions&0b0010) != loco[i].F10 ) {loco[i].F10 = (functions >> 1) ;}
-                if( (functions&0b0100) != loco[i].F11 ) {loco[i].F11 = (functions >> 2) ;}
-                if( (functions&0b1000) != loco[i].F12 ) {loco[i].F12 = (functions >> 3) ;}
-                break ;
+            // case F9_F12Event:
+            //     if( (functions&0b0001) != loco[i].F9  ) {loco[i].F9  = (functions     ) ;}
+            //     if( (functions&0b0010) != loco[i].F10 ) {loco[i].F10 = (functions >> 1) ;}
+            //     if( (functions&0b0100) != loco[i].F11 ) {loco[i].F11 = (functions >> 2) ;}
+            //     if( (functions&0b1000) != loco[i].F12 ) {loco[i].F12 = (functions >> 3) ;}
+            //     break ;
 
-            case F13_F20Event:
-                if( (functions&0b00000001) != loco[i].F13 ) {loco[i].F13 = (functions     ) ;}
-                if( (functions&0b00000010) != loco[i].F14 ) {loco[i].F14 = (functions >> 1) ;}
-                if( (functions&0b00000100) != loco[i].F15 ) {loco[i].F15 = (functions >> 2) ;}
-                if( (functions&0b00001000) != loco[i].F16 ) {loco[i].F16 = (functions >> 3) ;}
-                if( (functions&0b00010000) != loco[i].F17 ) {loco[i].F17 = (functions >> 4) ;}
-                if( (functions&0b00100000) != loco[i].F18 ) {loco[i].F18 = (functions >> 5) ;}
-                if( (functions&0b01000000) != loco[i].F19 ) {loco[i].F19 = (functions >> 6) ;}
-                if( (functions&0b10000000) != loco[i].F20 ) {loco[i].F20 = (functions >> 7) ;}
-                break ;
+            // case F13_F20Event:
+            //     if( (functions&0b00000001) != loco[i].F13 ) {loco[i].F13 = (functions     ) ;}
+            //     if( (functions&0b00000010) != loco[i].F14 ) {loco[i].F14 = (functions >> 1) ;}
+            //     if( (functions&0b00000100) != loco[i].F15 ) {loco[i].F15 = (functions >> 2) ;}
+            //     if( (functions&0b00001000) != loco[i].F16 ) {loco[i].F16 = (functions >> 3) ;}
+            //     if( (functions&0b00010000) != loco[i].F17 ) {loco[i].F17 = (functions >> 4) ;}
+            //     if( (functions&0b00100000) != loco[i].F18 ) {loco[i].F18 = (functions >> 5) ;}
+            //     if( (functions&0b01000000) != loco[i].F19 ) {loco[i].F19 = (functions >> 6) ;}
+            //     if( (functions&0b10000000) != loco[i].F20 ) {loco[i].F20 = (functions >> 7) ;}
+            //     break ;
 
+                case F0_F4Event:   startFunc =  0 ; nFunc = 5 ; break ; // used to calculate correct function number below
+                case F5_F8Event:   startFunc =  5 ; nFunc = 4 ; break ;
+                case F9_F12Event:  startFunc =  9 ; nFunc = 4 ; break ;
+                case F13_F20Event: startFunc = 13 ; nFunc = 8 ; break ; 
             }
 
-            return ;
+            for( int j = 0 ; j < nFunc ; j ++ )
+            {
+                uint8_t        Fx = startFunc + i ;          // locomotive function number
+                uint8_t funcState = functions >> j ;         // the incomming function state 
+                uint8_t locoState = loco[i].function >> Fx ; // current state of loco function
+                
+                if( funcState != locoState )
+                {
+                    bitWrite( loco[i].function, Fx, locoState ) ; // update function number in locoslot
+                    lcd.setCursor(0,1);
+                    lcd.print("F");
+                    lcd.print(Fx);
+                    lcd.print(' ');
+                    bitRead(loco[i].function, Fx) ? lcd.print("ON") : lcd.print("OFF") ;
+                    clearln();
+                    return ;
+                }
+            }
         }
     }
 }
@@ -428,18 +453,22 @@ void notifyXNetLocoDrive128( uint16_t Address, uint8_t Speed )
 void notifyXNetLocoFunc1( uint16_t Address, uint8_t Func1 )  //              F0  F4  F3  F2  F1
 { 
     program[currentProgram].storeEvent( F0_F4Event, Address, Func1 ) ; 
+    showFunction( Address, F0_F4Event, Func1 ) ;
 }
 void notifyXNetLocoFunc2( uint16_t Address, uint8_t Func2 )  //                  F8  F7  F6  F5
 { 
     program[currentProgram].storeEvent( F5_F8Event, Address, Func2 ) ; 
+    showFunction( Address, F5_F8Event, Func2 ) ;
 }
 void notifyXNetLocoFunc3( uint16_t Address, uint8_t Func3 )  //                 F12 F11 F10  F9
 { 
-    program[currentProgram].storeEvent( F9_F12Event, Address, Func3 ) ; 
+    program[currentProgram].storeEvent( F9_F12Event, Address, Func3 ) ;
+    showFunction( Address, F9_F12Event, Func3 ) ;
 }
 void notifyXNetLocoFunc4( uint16_t Address, uint8_t Func4 )  // F20 F19 F18 F17 F16 F15 F14 F13
 { 
     program[currentProgram].storeEvent( F13_F20Event, Address, Func4 ) ; 
+    showFunction( Address, F13_F20Event, Func4 ) ;
 }
 
 void notifyXNetTrnt(uint16_t Address, uint8_t data ) // call back from Xnet lib to indicate a point is set. 
@@ -459,10 +488,10 @@ void notifyEvent( uint8 type, uint16 address, uint8 data )                      
     switch( type )
     {
     case speedEvent:     Xnet.setSpeed(      address, Loco128, data ) ;  break ; // TODO add lcd messages to indicate what is happening?
-    case F0_F4Event:     Xnet.setFunc0to4(   address, data ) ;           break ;
-    case F5_F8Event:     Xnet.setFunc5to8(   address, data ) ;           break ;
-    case F9_F12Event:    Xnet.setFunc9to12(  address, data ) ;           break ;
-    case F13_F20Event:   Xnet.setFunc13to20( address, data ) ;           break ;
+    case F0_F4Event:     Xnet.setFunc0to4(   address, data ) ; showFunction( address, F0_F4Event,  data ) ;  break ;
+    case F5_F8Event:     Xnet.setFunc5to8(   address, data ) ; showFunction( address, F5_F8Event,  data ) ;  break ;
+    case F9_F12Event:    Xnet.setFunc9to12(  address, data ) ; showFunction( address, F9_F12Event, data ) ;  break ;
+    case F13_F20Event:   Xnet.setFunc13to20( address, data ) ; showFunction( address, F13_F20Event,data ) ;  break ;
 
     case accessoryEvent: 
             Xnet.SetTrntPos( address, data, 1 ) ; // check if dis works properly
