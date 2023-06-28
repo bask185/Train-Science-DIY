@@ -1,0 +1,4 @@
+LoPiTS-XS
+v0.0.0   Date/time:2023-06-15 08:19:23.761689
+Project assembled
+

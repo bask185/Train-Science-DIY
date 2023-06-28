@@ -1,0 +1,1566 @@
+
+C:\Users\sknippels\AppData\Local\Temp\arduino-sketch-900DC2732405CD5EEC057239F0717164/LoPiTS-XS.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000200 <__vectors>:
+__vectors():
+../../../../crt1/gcrt1.S:61
+ 200:	3e c0       	rjmp	.+124    	; 0x27e <__ctors_end>
+ 202:	00 00       	nop
+../../../../crt1/gcrt1.S:67
+ 204:	61 c0       	rjmp	.+194    	; 0x2c8 <__bad_interrupt>
+ 206:	00 00       	nop
+../../../../crt1/gcrt1.S:68
+ 208:	5f c0       	rjmp	.+190    	; 0x2c8 <__bad_interrupt>
+ 20a:	00 00       	nop
+../../../../crt1/gcrt1.S:69
+ 20c:	86 c3       	rjmp	.+1804   	; 0x91a <__vector_3>
+ 20e:	00 00       	nop
+../../../../crt1/gcrt1.S:70
+ 210:	81 c3       	rjmp	.+1794   	; 0x914 <__vector_4>
+ 212:	00 00       	nop
+../../../../crt1/gcrt1.S:71
+ 214:	7c c3       	rjmp	.+1784   	; 0x90e <__vector_5>
+ 216:	00 00       	nop
+../../../../crt1/gcrt1.S:72
+ 218:	57 c0       	rjmp	.+174    	; 0x2c8 <__bad_interrupt>
+ 21a:	00 00       	nop
+../../../../crt1/gcrt1.S:73
+ 21c:	55 c0       	rjmp	.+170    	; 0x2c8 <__bad_interrupt>
+ 21e:	00 00       	nop
+../../../../crt1/gcrt1.S:74
+ 220:	53 c0       	rjmp	.+166    	; 0x2c8 <__bad_interrupt>
+ 222:	00 00       	nop
+../../../../crt1/gcrt1.S:75
+ 224:	51 c0       	rjmp	.+162    	; 0x2c8 <__bad_interrupt>
+ 226:	00 00       	nop
+../../../../crt1/gcrt1.S:76
+ 228:	4f c0       	rjmp	.+158    	; 0x2c8 <__bad_interrupt>
+ 22a:	00 00       	nop
+../../../../crt1/gcrt1.S:77
+ 22c:	4d c0       	rjmp	.+154    	; 0x2c8 <__bad_interrupt>
+ 22e:	00 00       	nop
+../../../../crt1/gcrt1.S:78
+ 230:	4b c0       	rjmp	.+150    	; 0x2c8 <__bad_interrupt>
+ 232:	00 00       	nop
+../../../../crt1/gcrt1.S:79
+ 234:	49 c0       	rjmp	.+146    	; 0x2c8 <__bad_interrupt>
+ 236:	00 00       	nop
+../../../../crt1/gcrt1.S:80
+ 238:	47 c0       	rjmp	.+142    	; 0x2c8 <__bad_interrupt>
+ 23a:	00 00       	nop
+../../../../crt1/gcrt1.S:81
+ 23c:	2e c3       	rjmp	.+1628   	; 0x89a <__vector_15>
+ 23e:	00 00       	nop
+../../../../crt1/gcrt1.S:82
+ 240:	43 c0       	rjmp	.+134    	; 0x2c8 <__bad_interrupt>
+ 242:	00 00       	nop
+../../../../crt1/gcrt1.S:83
+ 244:	41 c0       	rjmp	.+130    	; 0x2c8 <__bad_interrupt>
+ 246:	00 00       	nop
+../../../../crt1/gcrt1.S:84
+ 248:	3f c0       	rjmp	.+126    	; 0x2c8 <__bad_interrupt>
+ 24a:	00 00       	nop
+../../../../crt1/gcrt1.S:85
+ 24c:	3d c0       	rjmp	.+122    	; 0x2c8 <__bad_interrupt>
+ 24e:	00 00       	nop
+../../../../crt1/gcrt1.S:86
+ 250:	3b c0       	rjmp	.+118    	; 0x2c8 <__bad_interrupt>
+ 252:	00 00       	nop
+../../../../crt1/gcrt1.S:87
+ 254:	39 c0       	rjmp	.+114    	; 0x2c8 <__bad_interrupt>
+ 256:	00 00       	nop
+../../../../crt1/gcrt1.S:88
+ 258:	37 c0       	rjmp	.+110    	; 0x2c8 <__bad_interrupt>
+ 25a:	00 00       	nop
+../../../../crt1/gcrt1.S:89
+ 25c:	35 c0       	rjmp	.+106    	; 0x2c8 <__bad_interrupt>
+ 25e:	00 00       	nop
+../../../../crt1/gcrt1.S:90
+ 260:	33 c0       	rjmp	.+102    	; 0x2c8 <__bad_interrupt>
+ 262:	00 00       	nop
+../../../../crt1/gcrt1.S:91
+ 264:	31 c0       	rjmp	.+98     	; 0x2c8 <__bad_interrupt>
+ 266:	00 00       	nop
+../../../../crt1/gcrt1.S:92
+ 268:	2f c0       	rjmp	.+94     	; 0x2c8 <__bad_interrupt>
+ 26a:	00 00       	nop
+../../../../crt1/gcrt1.S:93
+ 26c:	2d c0       	rjmp	.+90     	; 0x2c8 <__bad_interrupt>
+ 26e:	00 00       	nop
+../../../../crt1/gcrt1.S:94
+ 270:	2b c0       	rjmp	.+86     	; 0x2c8 <__bad_interrupt>
+ 272:	00 00       	nop
+../../../../crt1/gcrt1.S:95
+ 274:	29 c0       	rjmp	.+82     	; 0x2c8 <__bad_interrupt>
+ 276:	00 00       	nop
+../../../../crt1/gcrt1.S:96
+ 278:	27 c0       	rjmp	.+78     	; 0x2c8 <__bad_interrupt>
+	...
+
+0000027c <__ctors_start>:
+__trampolines_start():
+ 27c:	d7 04       	cpc	r13, r7
+
+0000027e <__ctors_end>:
+__dtors_end():
+../../../../crt1/gcrt1.S:230
+ 27e:	11 24       	eor	r1, r1
+../../../../crt1/gcrt1.S:231
+ 280:	1f be       	out	0x3f, r1	; 63
+../../../../crt1/gcrt1.S:232
+ 282:	cf ef       	ldi	r28, 0xFF	; 255
+../../../../crt1/gcrt1.S:234
+ 284:	cd bf       	out	0x3d, r28	; 61
+../../../../crt1/gcrt1.S:236
+ 286:	df e3       	ldi	r29, 0x3F	; 63
+../../../../crt1/gcrt1.S:237
+ 288:	de bf       	out	0x3e, r29	; 62
+
+0000028a <_initThreeStuff()>:
+__do_copy_data():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2409
+ 28a:	18 e3       	ldi	r17, 0x38	; 56
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+ 28c:	a0 e0       	ldi	r26, 0x00	; 0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+ 28e:	b8 e3       	ldi	r27, 0x38	; 56
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+ 290:	ea e8       	ldi	r30, 0x8A	; 138
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+ 292:	fc e0       	ldi	r31, 0x0C	; 12
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+ 294:	02 c0       	rjmp	.+4      	; 0x29a <_initThreeStuff()+0x10>
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2417
+ 296:	05 90       	lpm	r0, Z+
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2422
+ 298:	0d 92       	st	X+, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2424
+ 29a:	a6 30       	cpi	r26, 0x06	; 6
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+ 29c:	b1 07       	cpc	r27, r17
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+ 29e:	d9 f7       	brne	.-10     	; 0x296 <_initThreeStuff()+0xc>
+
+000002a0 <__do_clear_bss>:
+__do_clear_bss():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+ 2a0:	29 e3       	ldi	r18, 0x39	; 57
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+ 2a2:	a6 e0       	ldi	r26, 0x06	; 6
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+ 2a4:	b8 e3       	ldi	r27, 0x38	; 56
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+ 2a6:	01 c0       	rjmp	.+2      	; 0x2aa <.do_clear_bss_start>
+
+000002a8 <.do_clear_bss_loop>:
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+ 2a8:	1d 92       	st	X+, r1
+
+000002aa <.do_clear_bss_start>:
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+ 2aa:	aa 36       	cpi	r26, 0x6A	; 106
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+ 2ac:	b2 07       	cpc	r27, r18
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+ 2ae:	e1 f7       	brne	.-8      	; 0x2a8 <.do_clear_bss_loop>
+
+000002b0 <__do_global_ctors>:
+__do_global_ctors():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
+ 2b0:	11 e0       	ldi	r17, 0x01	; 1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2467
+ 2b2:	cf e3       	ldi	r28, 0x3F	; 63
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2468
+ 2b4:	d1 e0       	ldi	r29, 0x01	; 1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2472
+ 2b6:	03 c0       	rjmp	.+6      	; 0x2be <__do_global_ctors+0xe>
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2474
+ 2b8:	21 97       	sbiw	r28, 0x01	; 1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2480
+ 2ba:	fe 01       	movw	r30, r28
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2481
+ 2bc:	b4 d4       	rcall	.+2408   	; 0xc26 <__tablejump2__>
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2483
+ 2be:	ce 33       	cpi	r28, 0x3E	; 62
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2484
+ 2c0:	d1 07       	cpc	r29, r17
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2489
+ 2c2:	d1 f7       	brne	.-12     	; 0x2b8 <__do_global_ctors+0x8>
+../../../../crt1/gcrt1.S:314
+ 2c4:	88 d3       	rcall	.+1808   	; 0x9d6 <main>
+../../../../crt1/gcrt1.S:315
+ 2c6:	c4 c4       	rjmp	.+2440   	; 0xc50 <_exit>
+
+000002c8 <__bad_interrupt>:
+__vector_22():
+ 2c8:	9b cf       	rjmp	.-202    	; 0x200 <__vectors>
+
+000002ca <DCC_Decoder::State_Boot()>:
+_ZN11DCC_Decoder10State_BootEv():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+  // Finally, none of these three things need to be done if running optiboot!
+  // We want the vectors in the alt location, it checks, clears, and stashes the reset flags (in GPR0)
+  // and it providews the entrypoint we call to write to flash.
+#else
+  void _initThreeStuff() __attribute__ ((naked)) __attribute__((used)) __attribute__ ((section (".init3")));
+  void _initThreeStuff() {
+ 2ca:	08 95       	ret
+
+000002cc <DCC_Decoder::Address() [clone .constprop.0]>:
+_ZN11DCC_Decoder7AddressEv.constprop.0():
+ 2cc:	80 91 73 38 	lds	r24, 0x3873	; 0x803873 <DCC_Decoder::gCV+0x1d>
+ 2d0:	87 ff       	sbrs	r24, 7
+ 2d2:	0d c0       	rjmp	.+26     	; 0x2ee <DCC_Decoder::Address() [clone .constprop.0]+0x22>
+ 2d4:	80 91 5f 38 	lds	r24, 0x385F	; 0x80385f <DCC_Decoder::gCV+0x9>
+ 2d8:	28 2f       	mov	r18, r24
+ 2da:	30 e0       	ldi	r19, 0x00	; 0
+ 2dc:	c9 01       	movw	r24, r18
+ 2de:	46 e0       	ldi	r20, 0x06	; 6
+ 2e0:	88 0f       	add	r24, r24
+ 2e2:	99 1f       	adc	r25, r25
+ 2e4:	4a 95       	dec	r20
+ 2e6:	e1 f7       	brne	.-8      	; 0x2e0 <DCC_Decoder::Address() [clone .constprop.0]+0x14>
+ 2e8:	82 2b       	or	r24, r18
+ 2ea:	93 2b       	or	r25, r19
+ 2ec:	08 95       	ret
+ 2ee:	85 ff       	sbrs	r24, 5
+ 2f0:	08 c0       	rjmp	.+16     	; 0x302 <DCC_Decoder::Address() [clone .constprop.0]+0x36>
+ 2f2:	80 91 67 38 	lds	r24, 0x3867	; 0x803867 <DCC_Decoder::gCV+0x11>
+ 2f6:	90 91 68 38 	lds	r25, 0x3868	; 0x803868 <DCC_Decoder::gCV+0x12>
+ 2fa:	98 27       	eor	r25, r24
+ 2fc:	89 27       	eor	r24, r25
+ 2fe:	98 27       	eor	r25, r24
+ 300:	08 95       	ret
+ 302:	80 91 57 38 	lds	r24, 0x3857	; 0x803857 <DCC_Decoder::gCV+0x1>
+ 306:	90 e0       	ldi	r25, 0x00	; 0
+ 308:	08 95       	ret
+
+0000030a <BasicAccDecoderPacket_Handler(int, bool, unsigned char)>:
+_Z29BasicAccDecoderPacket_Handleribh():
+ 30a:	08 95       	ret
+
+0000030c <DCC_Decoder::State_Reset()>:
+_ZN11DCC_Decoder11State_ResetEv():
+ 30c:	10 92 3c 38 	sts	0x383C, r1	; 0x80383c <DCC_Decoder::gHandledAsRawPacket>
+ 310:	10 92 36 38 	sts	0x3836, r1	; 0x803836 <DCC_Decoder::gPacket+0x5>
+ 314:	10 92 35 38 	sts	0x3835, r1	; 0x803835 <DCC_Decoder::gPacket+0x4>
+ 318:	10 92 34 38 	sts	0x3834, r1	; 0x803834 <DCC_Decoder::gPacket+0x3>
+ 31c:	10 92 33 38 	sts	0x3833, r1	; 0x803833 <DCC_Decoder::gPacket+0x2>
+ 320:	10 92 32 38 	sts	0x3832, r1	; 0x803832 <DCC_Decoder::gPacket+0x1>
+ 324:	10 92 31 38 	sts	0x3831, r1	; 0x803831 <DCC_Decoder::gPacket>
+ 328:	10 92 30 38 	sts	0x3830, r1	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 32c:	80 e8       	ldi	r24, 0x80	; 128
+ 32e:	80 93 2f 38 	sts	0x382F, r24	; 0x80382f <DCC_Decoder::gPacketMask>
+ 332:	f8 94       	cli
+ 334:	80 91 2e 38 	lds	r24, 0x382E	; 0x80382e <DCC_Decoder::gPacketEndedWith1>
+ 338:	88 23       	and	r24, r24
+ 33a:	21 f1       	breq	.+72     	; 0x384 <DCC_Decoder::State_Reset()+0x78>
+ 33c:	20 91 47 38 	lds	r18, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 340:	30 91 48 38 	lds	r19, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 344:	91 e0       	ldi	r25, 0x01	; 1
+ 346:	80 e0       	ldi	r24, 0x00	; 0
+ 348:	40 91 2c 38 	lds	r20, 0x382C	; 0x80382c <DCC_Decoder::gLastChaos>
+ 34c:	50 91 2d 38 	lds	r21, 0x382D	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 350:	42 17       	cp	r20, r18
+ 352:	53 07       	cpc	r21, r19
+ 354:	09 f0       	breq	.+2      	; 0x358 <DCC_Decoder::State_Reset()+0x4c>
+ 356:	90 e0       	ldi	r25, 0x00	; 0
+ 358:	90 93 2a 38 	sts	0x382A, r25	; 0x80382a <DCC_Decoder::gPreambleCount>
+ 35c:	80 93 2b 38 	sts	0x382B, r24	; 0x80382b <DCC_Decoder::gPreambleCount+0x1>
+ 360:	10 92 47 38 	sts	0x3847, r1	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 364:	10 92 48 38 	sts	0x3848, r1	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 368:	10 92 2c 38 	sts	0x382C, r1	; 0x80382c <DCC_Decoder::gLastChaos>
+ 36c:	10 92 2d 38 	sts	0x382D, r1	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 370:	78 94       	sei
+ 372:	10 92 2e 38 	sts	0x382E, r1	; 0x80382e <DCC_Decoder::gPacketEndedWith1>
+ 376:	8d e2       	ldi	r24, 0x2D	; 45
+ 378:	92 e0       	ldi	r25, 0x02	; 2
+ 37a:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 37e:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 382:	08 95       	ret
+ 384:	90 e0       	ldi	r25, 0x00	; 0
+ 386:	80 e0       	ldi	r24, 0x00	; 0
+ 388:	e7 cf       	rjmp	.-50     	; 0x358 <DCC_Decoder::State_Reset()+0x4c>
+
+0000038a <micros>:
+micros():
+ 38a:	9f b7       	in	r25, 0x3f	; 63
+ 38c:	f8 94       	cli
+ 38e:	88 e0       	ldi	r24, 0x08	; 8
+ 390:	80 93 84 0a 	sts	0x0A84, r24	; 0x800a84 <digital_pin_to_port+0x7f7e0c>
+ 394:	80 91 8e 0a 	lds	r24, 0x0A8E	; 0x800a8e <digital_pin_to_port+0x7f7e16>
+ 398:	81 ff       	sbrs	r24, 1
+ 39a:	fc cf       	rjmp	.-8      	; 0x394 <micros+0xa>
+ 39c:	80 91 8d 0a 	lds	r24, 0x0A8D	; 0x800a8d <digital_pin_to_port+0x7f7e15>
+ 3a0:	e0 91 a2 0a 	lds	r30, 0x0AA2	; 0x800aa2 <digital_pin_to_port+0x7f7e2a>
+ 3a4:	f0 91 a3 0a 	lds	r31, 0x0AA3	; 0x800aa3 <digital_pin_to_port+0x7f7e2b>
+ 3a8:	20 91 43 38 	lds	r18, 0x3843	; 0x803843 <timingStruct+0x6>
+ 3ac:	30 91 44 38 	lds	r19, 0x3844	; 0x803844 <timingStruct+0x7>
+ 3b0:	40 91 45 38 	lds	r20, 0x3845	; 0x803845 <timingStruct+0x8>
+ 3b4:	50 91 46 38 	lds	r21, 0x3846	; 0x803846 <timingStruct+0x9>
+ 3b8:	9f bf       	out	0x3f, r25	; 63
+ 3ba:	80 ff       	sbrs	r24, 0
+ 3bc:	07 c0       	rjmp	.+14     	; 0x3cc <micros+0x42>
+ 3be:	e7 30       	cpi	r30, 0x07	; 7
+ 3c0:	f1 05       	cpc	r31, r1
+ 3c2:	20 f4       	brcc	.+8      	; 0x3cc <micros+0x42>
+ 3c4:	2f 5f       	subi	r18, 0xFF	; 255
+ 3c6:	3f 4f       	sbci	r19, 0xFF	; 255
+ 3c8:	4f 4f       	sbci	r20, 0xFF	; 255
+ 3ca:	5f 4f       	sbci	r21, 0xFF	; 255
+ 3cc:	bf 01       	movw	r22, r30
+ 3ce:	76 95       	lsr	r23
+ 3d0:	67 95       	ror	r22
+ 3d2:	cf 01       	movw	r24, r30
+ 3d4:	86 0f       	add	r24, r22
+ 3d6:	91 1d       	adc	r25, r1
+ 3d8:	e6 2f       	mov	r30, r22
+ 3da:	e6 95       	lsr	r30
+ 3dc:	e6 95       	lsr	r30
+ 3de:	76 2f       	mov	r23, r22
+ 3e0:	72 95       	swap	r23
+ 3e2:	7f 70       	andi	r23, 0x0F	; 15
+ 3e4:	e7 1b       	sub	r30, r23
+ 3e6:	ff 0b       	sbc	r31, r31
+ 3e8:	67 fd       	sbrc	r22, 7
+ 3ea:	31 96       	adiw	r30, 0x01	; 1
+ 3ec:	e8 0f       	add	r30, r24
+ 3ee:	f9 1f       	adc	r31, r25
+ 3f0:	a0 e3       	ldi	r26, 0x30	; 48
+ 3f2:	b3 e0       	ldi	r27, 0x03	; 3
+ 3f4:	0e d4       	rcall	.+2076   	; 0xc12 <__muluhisi3>
+ 3f6:	6e 0f       	add	r22, r30
+ 3f8:	7f 1f       	adc	r23, r31
+ 3fa:	81 1d       	adc	r24, r1
+ 3fc:	91 1d       	adc	r25, r1
+ 3fe:	08 95       	ret
+
+00000400 <DCC_Decoder::DCC_Interrupt()>:
+_ZN11DCC_Decoder13DCC_InterruptEv():
+ 400:	cf 93       	push	r28
+ 402:	c3 df       	rcall	.-122    	; 0x38a <micros>
+ 404:	c0 91 4d 38 	lds	r28, 0x384D	; 0x80384d <DCC_Decoder::gInterruptTimeIndex>
+ 408:	2c 2f       	mov	r18, r28
+ 40a:	30 e0       	ldi	r19, 0x00	; 0
+ 40c:	e0 91 4f 38 	lds	r30, 0x384F	; 0x80384f <DCC_Decoder::gInterruptMicros>
+ 410:	f0 91 50 38 	lds	r31, 0x3850	; 0x803850 <DCC_Decoder::gInterruptMicros+0x1>
+ 414:	db 01       	movw	r26, r22
+ 416:	ae 1b       	sub	r26, r30
+ 418:	bf 0b       	sbc	r27, r31
+ 41a:	f9 01       	movw	r30, r18
+ 41c:	ee 0f       	add	r30, r30
+ 41e:	ff 1f       	adc	r31, r31
+ 420:	e7 5b       	subi	r30, 0xB7	; 183
+ 422:	f7 4c       	sbci	r31, 0xC7	; 199
+ 424:	a0 83       	st	Z, r26
+ 426:	b1 83       	std	Z+1, r27	; 0x01
+ 428:	60 93 4f 38 	sts	0x384F, r22	; 0x80384f <DCC_Decoder::gInterruptMicros>
+ 42c:	70 93 50 38 	sts	0x3850, r23	; 0x803850 <DCC_Decoder::gInterruptMicros+0x1>
+ 430:	80 93 51 38 	sts	0x3851, r24	; 0x803851 <DCC_Decoder::gInterruptMicros+0x2>
+ 434:	90 93 52 38 	sts	0x3852, r25	; 0x803852 <DCC_Decoder::gInterruptMicros+0x3>
+ 438:	40 91 47 38 	lds	r20, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 43c:	50 91 48 38 	lds	r21, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 440:	24 0f       	add	r18, r20
+ 442:	35 1f       	adc	r19, r21
+ 444:	20 93 47 38 	sts	0x3847, r18	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 448:	30 93 48 38 	sts	0x3848, r19	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 44c:	91 e0       	ldi	r25, 0x01	; 1
+ 44e:	8c 2f       	mov	r24, r28
+ 450:	89 27       	eor	r24, r25
+ 452:	80 93 4d 38 	sts	0x384D, r24	; 0x80384d <DCC_Decoder::gInterruptTimeIndex>
+ 456:	cf 91       	pop	r28
+ 458:	08 95       	ret
+
+0000045a <DCC_Decoder::State_ReadPreamble()>:
+_ZN11DCC_Decoder18State_ReadPreambleEv():
+ 45a:	f8 94       	cli
+ 45c:	80 91 47 38 	lds	r24, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 460:	90 91 48 38 	lds	r25, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 464:	20 91 2c 38 	lds	r18, 0x382C	; 0x80382c <DCC_Decoder::gLastChaos>
+ 468:	30 91 2d 38 	lds	r19, 0x382D	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 46c:	82 17       	cp	r24, r18
+ 46e:	93 07       	cpc	r25, r19
+ 470:	11 f4       	brne	.+4      	; 0x476 <DCC_Decoder::State_ReadPreamble()+0x1c>
+ 472:	78 94       	sei
+ 474:	08 95       	ret
+ 476:	80 91 47 38 	lds	r24, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 47a:	90 91 48 38 	lds	r25, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 47e:	82 1b       	sub	r24, r18
+ 480:	93 0b       	sbc	r25, r19
+ 482:	02 97       	sbiw	r24, 0x02	; 2
+ 484:	58 f0       	brcs	.+22     	; 0x49c <DCC_Decoder::State_ReadPreamble()+0x42>
+ 486:	78 94       	sei
+ 488:	86 e8       	ldi	r24, 0x86	; 134
+ 48a:	91 e0       	ldi	r25, 0x01	; 1
+ 48c:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 490:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 494:	87 e6       	ldi	r24, 0x67	; 103
+ 496:	80 93 4e 38 	sts	0x384E, r24	; 0x80384e <DCC_Decoder::gResetReason>
+ 49a:	08 95       	ret
+ 49c:	20 91 49 38 	lds	r18, 0x3849	; 0x803849 <DCC_Decoder::gInterruptTime>
+ 4a0:	30 91 4a 38 	lds	r19, 0x384A	; 0x80384a <DCC_Decoder::gInterruptTime+0x1>
+ 4a4:	80 91 4b 38 	lds	r24, 0x384B	; 0x80384b <DCC_Decoder::gInterruptTime+0x2>
+ 4a8:	90 91 4c 38 	lds	r25, 0x384C	; 0x80384c <DCC_Decoder::gInterruptTime+0x3>
+ 4ac:	40 91 47 38 	lds	r20, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 4b0:	50 91 48 38 	lds	r21, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 4b4:	40 93 2c 38 	sts	0x382C, r20	; 0x80382c <DCC_Decoder::gLastChaos>
+ 4b8:	50 93 2d 38 	sts	0x382D, r21	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 4bc:	78 94       	sei
+ 4be:	a9 01       	movw	r20, r18
+ 4c0:	44 53       	subi	r20, 0x34	; 52
+ 4c2:	51 09       	sbc	r21, r1
+ 4c4:	4d 30       	cpi	r20, 0x0D	; 13
+ 4c6:	51 05       	cpc	r21, r1
+ 4c8:	68 f0       	brcs	.+26     	; 0x4e4 <DCC_Decoder::State_ReadPreamble()+0x8a>
+ 4ca:	2a 55       	subi	r18, 0x5A	; 90
+ 4cc:	31 09       	sbc	r19, r1
+ 4ce:	27 3b       	cpi	r18, 0xB7	; 183
+ 4d0:	36 42       	sbci	r19, 0x26	; 38
+ 4d2:	40 f0       	brcs	.+16     	; 0x4e4 <DCC_Decoder::State_ReadPreamble()+0x8a>
+ 4d4:	86 e8       	ldi	r24, 0x86	; 134
+ 4d6:	91 e0       	ldi	r25, 0x01	; 1
+ 4d8:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 4dc:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 4e0:	88 e6       	ldi	r24, 0x68	; 104
+ 4e2:	d9 cf       	rjmp	.-78     	; 0x496 <DCC_Decoder::State_ReadPreamble()+0x3c>
+ 4e4:	9c 01       	movw	r18, r24
+ 4e6:	24 53       	subi	r18, 0x34	; 52
+ 4e8:	31 09       	sbc	r19, r1
+ 4ea:	2d 30       	cpi	r18, 0x0D	; 13
+ 4ec:	31 05       	cpc	r19, r1
+ 4ee:	38 f1       	brcs	.+78     	; 0x53e <DCC_Decoder::State_ReadPreamble()+0xe4>
+ 4f0:	8a 55       	subi	r24, 0x5A	; 90
+ 4f2:	91 09       	sbc	r25, r1
+ 4f4:	87 3b       	cpi	r24, 0xB7	; 183
+ 4f6:	96 42       	sbci	r25, 0x26	; 38
+ 4f8:	68 f7       	brcc	.-38     	; 0x4d4 <DCC_Decoder::State_ReadPreamble()+0x7a>
+ 4fa:	4d 30       	cpi	r20, 0x0D	; 13
+ 4fc:	51 05       	cpc	r21, r1
+ 4fe:	68 f0       	brcs	.+26     	; 0x51a <DCC_Decoder::State_ReadPreamble()+0xc0>
+ 500:	80 91 2a 38 	lds	r24, 0x382A	; 0x80382a <DCC_Decoder::gPreambleCount>
+ 504:	90 91 2b 38 	lds	r25, 0x382B	; 0x80382b <DCC_Decoder::gPreambleCount+0x1>
+ 508:	0a 97       	sbiw	r24, 0x0a	; 10
+ 50a:	a4 f0       	brlt	.+40     	; 0x534 <DCC_Decoder::State_ReadPreamble()+0xda>
+ 50c:	8c ea       	ldi	r24, 0xAC	; 172
+ 50e:	92 e0       	ldi	r25, 0x02	; 2
+ 510:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 514:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 518:	08 95       	ret
+ShiftInterruptAlignment():
+ 51a:	f8 94       	cli
+ 51c:	80 91 4b 38 	lds	r24, 0x384B	; 0x80384b <DCC_Decoder::gInterruptTime+0x2>
+ 520:	90 91 4c 38 	lds	r25, 0x384C	; 0x80384c <DCC_Decoder::gInterruptTime+0x3>
+ 524:	80 93 49 38 	sts	0x3849, r24	; 0x803849 <DCC_Decoder::gInterruptTime>
+ 528:	90 93 4a 38 	sts	0x384A, r25	; 0x80384a <DCC_Decoder::gInterruptTime+0x1>
+ 52c:	81 e0       	ldi	r24, 0x01	; 1
+ 52e:	80 93 4d 38 	sts	0x384D, r24	; 0x80384d <DCC_Decoder::gInterruptTimeIndex>
+ 532:	78 94       	sei
+_ZN11DCC_Decoder18State_ReadPreambleEv():
+ 534:	10 92 2a 38 	sts	0x382A, r1	; 0x80382a <DCC_Decoder::gPreambleCount>
+ 538:	10 92 2b 38 	sts	0x382B, r1	; 0x80382b <DCC_Decoder::gPreambleCount+0x1>
+ 53c:	08 95       	ret
+ 53e:	4d 30       	cpi	r20, 0x0D	; 13
+ 540:	51 05       	cpc	r21, r1
+ 542:	58 f7       	brcc	.-42     	; 0x51a <DCC_Decoder::State_ReadPreamble()+0xc0>
+ 544:	80 91 2a 38 	lds	r24, 0x382A	; 0x80382a <DCC_Decoder::gPreambleCount>
+ 548:	90 91 2b 38 	lds	r25, 0x382B	; 0x80382b <DCC_Decoder::gPreambleCount+0x1>
+ 54c:	01 96       	adiw	r24, 0x01	; 1
+ 54e:	80 93 2a 38 	sts	0x382A, r24	; 0x80382a <DCC_Decoder::gPreambleCount>
+ 552:	90 93 2b 38 	sts	0x382B, r25	; 0x80382b <DCC_Decoder::gPreambleCount+0x1>
+ 556:	08 95       	ret
+
+00000558 <DCC_Decoder::State_ReadPacket()>:
+_ZN11DCC_Decoder16State_ReadPacketEv():
+ 558:	f8 94       	cli
+ 55a:	80 91 47 38 	lds	r24, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 55e:	90 91 48 38 	lds	r25, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 562:	20 91 2c 38 	lds	r18, 0x382C	; 0x80382c <DCC_Decoder::gLastChaos>
+ 566:	30 91 2d 38 	lds	r19, 0x382D	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 56a:	82 17       	cp	r24, r18
+ 56c:	93 07       	cpc	r25, r19
+ 56e:	11 f4       	brne	.+4      	; 0x574 <DCC_Decoder::State_ReadPacket()+0x1c>
+ 570:	78 94       	sei
+ 572:	08 95       	ret
+ 574:	80 91 47 38 	lds	r24, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 578:	90 91 48 38 	lds	r25, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 57c:	82 1b       	sub	r24, r18
+ 57e:	93 0b       	sbc	r25, r19
+ 580:	02 97       	sbiw	r24, 0x02	; 2
+ 582:	58 f0       	brcs	.+22     	; 0x59a <DCC_Decoder::State_ReadPacket()+0x42>
+ 584:	78 94       	sei
+ 586:	86 e8       	ldi	r24, 0x86	; 134
+ 588:	91 e0       	ldi	r25, 0x01	; 1
+ 58a:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 58e:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 592:	87 e6       	ldi	r24, 0x67	; 103
+ 594:	80 93 4e 38 	sts	0x384E, r24	; 0x80384e <DCC_Decoder::gResetReason>
+ 598:	08 95       	ret
+ 59a:	40 91 49 38 	lds	r20, 0x3849	; 0x803849 <DCC_Decoder::gInterruptTime>
+ 59e:	50 91 4a 38 	lds	r21, 0x384A	; 0x80384a <DCC_Decoder::gInterruptTime+0x1>
+ 5a2:	80 91 4b 38 	lds	r24, 0x384B	; 0x80384b <DCC_Decoder::gInterruptTime+0x2>
+ 5a6:	90 91 4c 38 	lds	r25, 0x384C	; 0x80384c <DCC_Decoder::gInterruptTime+0x3>
+ 5aa:	20 91 47 38 	lds	r18, 0x3847	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ 5ae:	30 91 48 38 	lds	r19, 0x3848	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+ 5b2:	20 93 2c 38 	sts	0x382C, r18	; 0x80382c <DCC_Decoder::gLastChaos>
+ 5b6:	30 93 2d 38 	sts	0x382D, r19	; 0x80382d <DCC_Decoder::gLastChaos+0x1>
+ 5ba:	78 94       	sei
+ 5bc:	9a 01       	movw	r18, r20
+ 5be:	24 53       	subi	r18, 0x34	; 52
+ 5c0:	31 09       	sbc	r19, r1
+ 5c2:	2d 30       	cpi	r18, 0x0D	; 13
+ 5c4:	31 05       	cpc	r19, r1
+ 5c6:	68 f0       	brcs	.+26     	; 0x5e2 <DCC_Decoder::State_ReadPacket()+0x8a>
+ 5c8:	4a 55       	subi	r20, 0x5A	; 90
+ 5ca:	51 09       	sbc	r21, r1
+ 5cc:	47 3b       	cpi	r20, 0xB7	; 183
+ 5ce:	56 42       	sbci	r21, 0x26	; 38
+ 5d0:	40 f0       	brcs	.+16     	; 0x5e2 <DCC_Decoder::State_ReadPacket()+0x8a>
+ 5d2:	86 e8       	ldi	r24, 0x86	; 134
+ 5d4:	91 e0       	ldi	r25, 0x01	; 1
+ 5d6:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 5da:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 5de:	88 e6       	ldi	r24, 0x68	; 104
+ 5e0:	d9 cf       	rjmp	.-78     	; 0x594 <DCC_Decoder::State_ReadPacket()+0x3c>
+ 5e2:	bc 01       	movw	r22, r24
+ 5e4:	64 53       	subi	r22, 0x34	; 52
+ 5e6:	71 09       	sbc	r23, r1
+ 5e8:	41 e0       	ldi	r20, 0x01	; 1
+ 5ea:	6d 30       	cpi	r22, 0x0D	; 13
+ 5ec:	71 05       	cpc	r23, r1
+ 5ee:	08 f0       	brcs	.+2      	; 0x5f2 <DCC_Decoder::State_ReadPacket()+0x9a>
+ 5f0:	40 e0       	ldi	r20, 0x00	; 0
+ 5f2:	6d 30       	cpi	r22, 0x0D	; 13
+ 5f4:	71 05       	cpc	r23, r1
+ 5f6:	28 f0       	brcs	.+10     	; 0x602 <DCC_Decoder::State_ReadPacket()+0xaa>
+ 5f8:	8a 55       	subi	r24, 0x5A	; 90
+ 5fa:	91 09       	sbc	r25, r1
+ 5fc:	87 3b       	cpi	r24, 0xB7	; 183
+ 5fe:	96 42       	sbci	r25, 0x26	; 38
+ 600:	40 f7       	brcc	.-48     	; 0x5d2 <DCC_Decoder::State_ReadPacket()+0x7a>
+ 602:	81 e0       	ldi	r24, 0x01	; 1
+ 604:	2d 30       	cpi	r18, 0x0D	; 13
+ 606:	31 05       	cpc	r19, r1
+ 608:	08 f0       	brcs	.+2      	; 0x60c <DCC_Decoder::State_ReadPacket()+0xb4>
+ 60a:	80 e0       	ldi	r24, 0x00	; 0
+ 60c:	84 13       	cpse	r24, r20
+ 60e:	e1 cf       	rjmp	.-62     	; 0x5d2 <DCC_Decoder::State_ReadPacket()+0x7a>
+ 610:	80 91 2f 38 	lds	r24, 0x382F	; 0x80382f <DCC_Decoder::gPacketMask>
+ 614:	88 23       	and	r24, r24
+ 616:	89 f0       	breq	.+34     	; 0x63a <DCC_Decoder::State_ReadPacket()+0xe2>
+ 618:	2d 30       	cpi	r18, 0x0D	; 13
+ 61a:	31 05       	cpc	r19, r1
+ 61c:	40 f4       	brcc	.+16     	; 0x62e <DCC_Decoder::State_ReadPacket()+0xd6>
+ 61e:	e0 91 30 38 	lds	r30, 0x3830	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 622:	f0 e0       	ldi	r31, 0x00	; 0
+ 624:	ef 5c       	subi	r30, 0xCF	; 207
+ 626:	f7 4c       	sbci	r31, 0xC7	; 199
+ 628:	90 81       	ld	r25, Z
+ 62a:	98 2b       	or	r25, r24
+ 62c:	90 83       	st	Z, r25
+ 62e:	90 e0       	ldi	r25, 0x00	; 0
+ 630:	95 95       	asr	r25
+ 632:	87 95       	ror	r24
+ 634:	80 93 2f 38 	sts	0x382F, r24	; 0x80382f <DCC_Decoder::gPacketMask>
+ 638:	08 95       	ret
+ 63a:	80 91 30 38 	lds	r24, 0x3830	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 63e:	91 e0       	ldi	r25, 0x01	; 1
+ 640:	98 0f       	add	r25, r24
+ 642:	90 93 30 38 	sts	0x3830, r25	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 646:	40 e8       	ldi	r20, 0x80	; 128
+ 648:	40 93 2f 38 	sts	0x382F, r20	; 0x80382f <DCC_Decoder::gPacketMask>
+ 64c:	2d 30       	cpi	r18, 0x0D	; 13
+ 64e:	31 05       	cpc	r19, r1
+ 650:	a8 f4       	brcc	.+42     	; 0x67c <DCC_Decoder::State_ReadPacket()+0x124>
+ 652:	91 e0       	ldi	r25, 0x01	; 1
+ 654:	90 93 2e 38 	sts	0x382E, r25	; 0x80382e <DCC_Decoder::gPacketEndedWith1>
+ 658:	82 50       	subi	r24, 0x02	; 2
+ 65a:	84 30       	cpi	r24, 0x04	; 4
+ 65c:	38 f4       	brcc	.+14     	; 0x66c <DCC_Decoder::State_ReadPacket()+0x114>
+ 65e:	89 e4       	ldi	r24, 0x49	; 73
+ 660:	93 e0       	ldi	r25, 0x03	; 3
+ 662:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 666:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 66a:	08 95       	ret
+ 66c:	86 e8       	ldi	r24, 0x86	; 134
+ 66e:	91 e0       	ldi	r25, 0x01	; 1
+ 670:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 674:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 678:	89 e6       	ldi	r24, 0x69	; 105
+ 67a:	8c cf       	rjmp	.-232    	; 0x594 <DCC_Decoder::State_ReadPacket()+0x3c>
+ 67c:	96 30       	cpi	r25, 0x06	; 6
+ 67e:	08 f4       	brcc	.+2      	; 0x682 <DCC_Decoder::State_ReadPacket()+0x12a>
+ 680:	8b cf       	rjmp	.-234    	; 0x598 <DCC_Decoder::State_ReadPacket()+0x40>
+ 682:	86 e8       	ldi	r24, 0x86	; 134
+ 684:	91 e0       	ldi	r25, 0x01	; 1
+ 686:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 68a:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 68e:	8a e6       	ldi	r24, 0x6A	; 106
+ 690:	81 cf       	rjmp	.-254    	; 0x594 <DCC_Decoder::State_ReadPacket()+0x3c>
+
+00000692 <DCC_Decoder::State_Execute()>:
+_ZN11DCC_Decoder13State_ExecuteEv():
+ 692:	ef 92       	push	r14
+ 694:	ff 92       	push	r15
+ 696:	1f 93       	push	r17
+ 698:	cf 93       	push	r28
+ 69a:	df 93       	push	r29
+ 69c:	80 91 31 38 	lds	r24, 0x3831	; 0x803831 <DCC_Decoder::gPacket>
+ 6a0:	90 91 32 38 	lds	r25, 0x3832	; 0x803832 <DCC_Decoder::gPacket+0x1>
+ 6a4:	89 27       	eor	r24, r25
+ 6a6:	e0 91 30 38 	lds	r30, 0x3830	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 6aa:	e4 30       	cpi	r30, 0x04	; 4
+ 6ac:	68 f0       	brcs	.+26     	; 0x6c8 <DCC_Decoder::State_Execute()+0x36>
+ 6ae:	90 91 33 38 	lds	r25, 0x3833	; 0x803833 <DCC_Decoder::gPacket+0x2>
+ 6b2:	89 27       	eor	r24, r25
+ 6b4:	e4 30       	cpi	r30, 0x04	; 4
+ 6b6:	41 f0       	breq	.+16     	; 0x6c8 <DCC_Decoder::State_Execute()+0x36>
+ 6b8:	90 91 34 38 	lds	r25, 0x3834	; 0x803834 <DCC_Decoder::gPacket+0x3>
+ 6bc:	89 27       	eor	r24, r25
+ 6be:	e5 30       	cpi	r30, 0x05	; 5
+ 6c0:	19 f0       	breq	.+6      	; 0x6c8 <DCC_Decoder::State_Execute()+0x36>
+ 6c2:	90 91 35 38 	lds	r25, 0x3835	; 0x803835 <DCC_Decoder::gPacket+0x4>
+ 6c6:	89 27       	eor	r24, r25
+ 6c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 6ca:	e0 5d       	subi	r30, 0xD0	; 208
+ 6cc:	f7 4c       	sbci	r31, 0xC7	; 199
+ 6ce:	90 81       	ld	r25, Z
+ 6d0:	98 17       	cp	r25, r24
+ 6d2:	51 f0       	breq	.+20     	; 0x6e8 <DCC_Decoder::State_Execute()+0x56>
+ 6d4:	86 e8       	ldi	r24, 0x86	; 134
+ 6d6:	91 e0       	ldi	r25, 0x01	; 1
+ 6d8:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 6dc:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 6e0:	84 e6       	ldi	r24, 0x64	; 100
+ 6e2:	80 93 4e 38 	sts	0x384E, r24	; 0x80384e <DCC_Decoder::gResetReason>
+ 6e6:	2a c0       	rjmp	.+84     	; 0x73c <DCC_Decoder::State_Execute()+0xaa>
+millis():
+ 6e8:	2f b7       	in	r18, 0x3f	; 63
+ 6ea:	f8 94       	cli
+ 6ec:	80 91 3f 38 	lds	r24, 0x383F	; 0x80383f <timingStruct+0x2>
+ 6f0:	90 91 40 38 	lds	r25, 0x3840	; 0x803840 <timingStruct+0x3>
+ 6f4:	a0 91 41 38 	lds	r26, 0x3841	; 0x803841 <timingStruct+0x4>
+ 6f8:	b0 91 42 38 	lds	r27, 0x3842	; 0x803842 <timingStruct+0x5>
+ 6fc:	2f bf       	out	0x3f, r18	; 63
+_ZN11DCC_Decoder13State_ExecuteEv():
+ 6fe:	80 93 38 38 	sts	0x3838, r24	; 0x803838 <DCC_Decoder::gThisPacketMS>
+ 702:	90 93 39 38 	sts	0x3839, r25	; 0x803839 <DCC_Decoder::gThisPacketMS+0x1>
+ 706:	a0 93 3a 38 	sts	0x383A, r26	; 0x80383a <DCC_Decoder::gThisPacketMS+0x2>
+ 70a:	b0 93 3b 38 	sts	0x383B, r27	; 0x80383b <DCC_Decoder::gThisPacketMS+0x3>
+ 70e:	10 92 37 38 	sts	0x3837, r1	; 0x803837 <DCC_Decoder::gLastPacketToThisAddress>
+ 712:	90 91 30 38 	lds	r25, 0x3830	; 0x803830 <DCC_Decoder::gPacketIndex>
+ 716:	93 30       	cpi	r25, 0x03	; 3
+ 718:	09 f0       	breq	.+2      	; 0x71c <DCC_Decoder::State_Execute()+0x8a>
+ 71a:	88 c0       	rjmp	.+272    	; 0x82c <__DATA_REGION_LENGTH__+0x2c>
+ 71c:	10 91 32 38 	lds	r17, 0x3832	; 0x803832 <DCC_Decoder::gPacket+0x1>
+ 720:	80 91 31 38 	lds	r24, 0x3831	; 0x803831 <DCC_Decoder::gPacket>
+ 724:	11 11       	cpse	r17, r1
+ 726:	1a c0       	rjmp	.+52     	; 0x75c <DCC_Decoder::State_Execute()+0xca>
+ 728:	8f 3f       	cpi	r24, 0xFF	; 255
+ 72a:	71 f4       	brne	.+28     	; 0x748 <DCC_Decoder::State_Execute()+0xb6>
+ 72c:	26 e8       	ldi	r18, 0x86	; 134
+ 72e:	31 e0       	ldi	r19, 0x01	; 1
+ 730:	20 93 57 39 	sts	0x3957, r18	; 0x803957 <DCC_Decoder::gState>
+ 734:	30 93 58 39 	sts	0x3958, r19	; 0x803958 <DCC_Decoder::gState+0x1>
+ 738:	90 93 4e 38 	sts	0x384E, r25	; 0x80384e <DCC_Decoder::gResetReason>
+ 73c:	df 91       	pop	r29
+ 73e:	cf 91       	pop	r28
+ 740:	1f 91       	pop	r17
+ 742:	ff 90       	pop	r15
+ 744:	ef 90       	pop	r14
+ 746:	08 95       	ret
+ 748:	81 11       	cpse	r24, r1
+ 74a:	08 c0       	rjmp	.+16     	; 0x75c <DCC_Decoder::State_Execute()+0xca>
+ 74c:	86 e8       	ldi	r24, 0x86	; 134
+ 74e:	91 e0       	ldi	r25, 0x01	; 1
+ 750:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 754:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 758:	84 e0       	ldi	r24, 0x04	; 4
+ 75a:	c3 cf       	rjmp	.-122    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 75c:	98 2f       	mov	r25, r24
+ 75e:	90 7c       	andi	r25, 0xC0	; 192
+ 760:	90 38       	cpi	r25, 0x80	; 128
+ 762:	09 f0       	breq	.+2      	; 0x766 <DCC_Decoder::State_Execute()+0xd4>
+ 764:	3f c0       	rjmp	.+126    	; 0x7e4 <DCC_Decoder::State_Execute()+0x152>
+ 766:	17 ff       	sbrs	r17, 7
+ 768:	3d c0       	rjmp	.+122    	; 0x7e4 <DCC_Decoder::State_Execute()+0x152>
+ 76a:	e1 2e       	mov	r14, r17
+ 76c:	f1 2c       	mov	r15, r1
+ 76e:	e7 01       	movw	r28, r14
+ 770:	c0 95       	com	r28
+ 772:	d0 95       	com	r29
+ 774:	cc 0f       	add	r28, r28
+ 776:	dd 1f       	adc	r29, r29
+ 778:	cc 0f       	add	r28, r28
+ 77a:	dd 1f       	adc	r29, r29
+ 77c:	c0 7c       	andi	r28, 0xC0	; 192
+ 77e:	d1 70       	andi	r29, 0x01	; 1
+ 780:	8f 73       	andi	r24, 0x3F	; 63
+ 782:	c8 0f       	add	r28, r24
+ 784:	d1 1d       	adc	r29, r1
+ 786:	a2 dd       	rcall	.-1212   	; 0x2cc <DCC_Decoder::Address() [clone .constprop.0]>
+ 788:	21 e0       	ldi	r18, 0x01	; 1
+ 78a:	c8 17       	cp	r28, r24
+ 78c:	d9 07       	cpc	r29, r25
+ 78e:	09 f0       	breq	.+2      	; 0x792 <DCC_Decoder::State_Execute()+0x100>
+ 790:	20 e0       	ldi	r18, 0x00	; 0
+ 792:	20 93 37 38 	sts	0x3837, r18	; 0x803837 <DCC_Decoder::gLastPacketToThisAddress>
+ 796:	c8 17       	cp	r28, r24
+ 798:	d9 07       	cpc	r29, r25
+ 79a:	39 f0       	breq	.+14     	; 0x7aa <DCC_Decoder::State_Execute()+0x118>
+ 79c:	cf 33       	cpi	r28, 0x3F	; 63
+ 79e:	d1 05       	cpc	r29, r1
+ 7a0:	21 f0       	breq	.+8      	; 0x7aa <DCC_Decoder::State_Execute()+0x118>
+ 7a2:	80 91 53 38 	lds	r24, 0x3853	; 0x803853 <DCC_Decoder::func_BasicAccPacket_All_Packets>
+ 7a6:	88 23       	and	r24, r24
+ 7a8:	a9 f0       	breq	.+42     	; 0x7d4 <DCC_Decoder::State_Execute()+0x142>
+ 7aa:	80 91 3c 38 	lds	r24, 0x383C	; 0x80383c <DCC_Decoder::gHandledAsRawPacket>
+ 7ae:	81 11       	cpse	r24, r1
+ 7b0:	11 c0       	rjmp	.+34     	; 0x7d4 <DCC_Decoder::State_Execute()+0x142>
+ 7b2:	e0 91 54 38 	lds	r30, 0x3854	; 0x803854 <DCC_Decoder::func_BasicAccPacket>
+ 7b6:	f0 91 55 38 	lds	r31, 0x3855	; 0x803855 <DCC_Decoder::func_BasicAccPacket+0x1>
+ 7ba:	30 97       	sbiw	r30, 0x00	; 0
+ 7bc:	59 f0       	breq	.+22     	; 0x7d4 <DCC_Decoder::State_Execute()+0x142>
+ 7be:	41 2f       	mov	r20, r17
+ 7c0:	47 70       	andi	r20, 0x07	; 7
+ 7c2:	b7 01       	movw	r22, r14
+ 7c4:	53 e0       	ldi	r21, 0x03	; 3
+ 7c6:	75 95       	asr	r23
+ 7c8:	67 95       	ror	r22
+ 7ca:	5a 95       	dec	r21
+ 7cc:	e1 f7       	brne	.-8      	; 0x7c6 <DCC_Decoder::State_Execute()+0x134>
+ 7ce:	61 70       	andi	r22, 0x01	; 1
+ 7d0:	ce 01       	movw	r24, r28
+ 7d2:	09 95       	icall
+ 7d4:	86 e8       	ldi	r24, 0x86	; 134
+ 7d6:	91 e0       	ldi	r25, 0x01	; 1
+ 7d8:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 7dc:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 7e0:	87 e0       	ldi	r24, 0x07	; 7
+ 7e2:	7f cf       	rjmp	.-258    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 7e4:	87 ff       	sbrs	r24, 7
+ 7e6:	08 c0       	rjmp	.+16     	; 0x7f8 <DCC_Decoder::State_Execute()+0x166>
+ 7e8:	86 e8       	ldi	r24, 0x86	; 134
+ 7ea:	91 e0       	ldi	r25, 0x01	; 1
+ 7ec:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 7f0:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 7f4:	85 e6       	ldi	r24, 0x65	; 101
+ 7f6:	75 cf       	rjmp	.-278    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 7f8:	10 7c       	andi	r17, 0xC0	; 192
+ 7fa:	10 34       	cpi	r17, 0x40	; 64
+ 7fc:	41 f0       	breq	.+16     	; 0x80e <__DATA_REGION_LENGTH__+0xe>
+ 7fe:	86 e8       	ldi	r24, 0x86	; 134
+ 800:	91 e0       	ldi	r25, 0x01	; 1
+ 802:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 806:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 80a:	86 e6       	ldi	r24, 0x66	; 102
+ 80c:	6a cf       	rjmp	.-300    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 80e:	91 e0       	ldi	r25, 0x01	; 1
+ 810:	20 91 57 38 	lds	r18, 0x3857	; 0x803857 <DCC_Decoder::gCV+0x1>
+ 814:	28 13       	cpse	r18, r24
+ 816:	90 e0       	ldi	r25, 0x00	; 0
+ 818:	90 93 37 38 	sts	0x3837, r25	; 0x803837 <DCC_Decoder::gLastPacketToThisAddress>
+ 81c:	86 e8       	ldi	r24, 0x86	; 134
+ 81e:	91 e0       	ldi	r25, 0x01	; 1
+ 820:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 824:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 828:	86 e0       	ldi	r24, 0x06	; 6
+ 82a:	5b cf       	rjmp	.-330    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 82c:	94 30       	cpi	r25, 0x04	; 4
+ 82e:	61 f5       	brne	.+88     	; 0x888 <__DATA_REGION_LENGTH__+0x88>
+ 830:	c0 91 31 38 	lds	r28, 0x3831	; 0x803831 <DCC_Decoder::gPacket>
+ 834:	8c 2f       	mov	r24, r28
+ 836:	80 7c       	andi	r24, 0xC0	; 192
+ 838:	80 38       	cpi	r24, 0x80	; 128
+ 83a:	31 f5       	brne	.+76     	; 0x888 <__DATA_REGION_LENGTH__+0x88>
+ 83c:	20 91 32 38 	lds	r18, 0x3832	; 0x803832 <DCC_Decoder::gPacket+0x1>
+ 840:	82 2f       	mov	r24, r18
+ 842:	85 78       	andi	r24, 0x85	; 133
+ 844:	81 30       	cpi	r24, 0x01	; 1
+ 846:	01 f5       	brne	.+64     	; 0x888 <__DATA_REGION_LENGTH__+0x88>
+ 848:	82 2f       	mov	r24, r18
+ 84a:	86 70       	andi	r24, 0x06	; 6
+ 84c:	90 e0       	ldi	r25, 0x00	; 0
+ 84e:	98 2f       	mov	r25, r24
+ 850:	88 27       	eor	r24, r24
+ 852:	20 77       	andi	r18, 0x70	; 112
+ 854:	44 e0       	ldi	r20, 0x04	; 4
+ 856:	24 9f       	mul	r18, r20
+ 858:	90 01       	movw	r18, r0
+ 85a:	11 24       	eor	r1, r1
+ 85c:	82 0f       	add	r24, r18
+ 85e:	93 1f       	adc	r25, r19
+ 860:	cf 73       	andi	r28, 0x3F	; 63
+ 862:	c8 0f       	add	r28, r24
+ 864:	d9 2f       	mov	r29, r25
+ 866:	d1 1d       	adc	r29, r1
+ 868:	31 dd       	rcall	.-1438   	; 0x2cc <DCC_Decoder::Address() [clone .constprop.0]>
+ 86a:	21 e0       	ldi	r18, 0x01	; 1
+ 86c:	c8 17       	cp	r28, r24
+ 86e:	d9 07       	cpc	r29, r25
+ 870:	09 f0       	breq	.+2      	; 0x874 <__DATA_REGION_LENGTH__+0x74>
+ 872:	20 e0       	ldi	r18, 0x00	; 0
+ 874:	20 93 37 38 	sts	0x3837, r18	; 0x803837 <DCC_Decoder::gLastPacketToThisAddress>
+ 878:	86 e8       	ldi	r24, 0x86	; 134
+ 87a:	91 e0       	ldi	r25, 0x01	; 1
+ 87c:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 880:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 884:	88 e0       	ldi	r24, 0x08	; 8
+ 886:	2d cf       	rjmp	.-422    	; 0x6e2 <DCC_Decoder::State_Execute()+0x50>
+ 888:	86 e8       	ldi	r24, 0x86	; 134
+ 88a:	91 e0       	ldi	r25, 0x01	; 1
+ 88c:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 890:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 894:	10 92 4e 38 	sts	0x384E, r1	; 0x80384e <DCC_Decoder::gResetReason>
+ 898:	51 cf       	rjmp	.-350    	; 0x73c <DCC_Decoder::State_Execute()+0xaa>
+
+0000089a <__vector_15>:
+__vector_15():
+ 89a:	ef 93       	push	r30
+ 89c:	ff 93       	push	r31
+ 89e:	ed e3       	ldi	r30, 0x3D	; 61
+ 8a0:	f8 e3       	ldi	r31, 0x38	; 56
+ 8a2:	8f 93       	push	r24
+ 8a4:	8f b7       	in	r24, 0x3f	; 63
+ 8a6:	8f 93       	push	r24
+ 8a8:	9f 93       	push	r25
+ 8aa:	7f 93       	push	r23
+ 8ac:	70 e0       	ldi	r23, 0x00	; 0
+ 8ae:	80 81       	ld	r24, Z
+ 8b0:	91 81       	ldd	r25, Z+1	; 0x01
+ 8b2:	80 5d       	subi	r24, 0xD0	; 208
+ 8b4:	9c 4f       	sbci	r25, 0xFC	; 252
+ 8b6:	80 83       	st	Z, r24
+ 8b8:	91 83       	std	Z+1, r25	; 0x01
+ 8ba:	88 5e       	subi	r24, 0xE8	; 232
+ 8bc:	93 40       	sbci	r25, 0x03	; 3
+ 8be:	18 f0       	brcs	.+6      	; 0x8c6 <lower>
+ 8c0:	80 83       	st	Z, r24
+ 8c2:	91 83       	std	Z+1, r25	; 0x01
+ 8c4:	7f 5f       	subi	r23, 0xFF	; 255
+
+000008c6 <lower>:
+ 8c6:	92 81       	ldd	r25, Z+2	; 0x02
+ 8c8:	97 0f       	add	r25, r23
+ 8ca:	92 83       	std	Z+2, r25	; 0x02
+ 8cc:	80 e0       	ldi	r24, 0x00	; 0
+ 8ce:	93 81       	ldd	r25, Z+3	; 0x03
+ 8d0:	98 1f       	adc	r25, r24
+ 8d2:	93 83       	std	Z+3, r25	; 0x03
+ 8d4:	94 81       	ldd	r25, Z+4	; 0x04
+ 8d6:	98 1f       	adc	r25, r24
+ 8d8:	94 83       	std	Z+4, r25	; 0x04
+ 8da:	95 81       	ldd	r25, Z+5	; 0x05
+ 8dc:	98 1f       	adc	r25, r24
+ 8de:	95 83       	std	Z+5, r25	; 0x05
+ 8e0:	96 81       	ldd	r25, Z+6	; 0x06
+ 8e2:	9f 5f       	subi	r25, 0xFF	; 255
+ 8e4:	96 83       	std	Z+6, r25	; 0x06
+ 8e6:	97 81       	ldd	r25, Z+7	; 0x07
+ 8e8:	9f 4f       	sbci	r25, 0xFF	; 255
+ 8ea:	97 83       	std	Z+7, r25	; 0x07
+ 8ec:	90 85       	ldd	r25, Z+8	; 0x08
+ 8ee:	9f 4f       	sbci	r25, 0xFF	; 255
+ 8f0:	90 87       	std	Z+8, r25	; 0x08
+ 8f2:	91 85       	ldd	r25, Z+9	; 0x09
+ 8f4:	9f 4f       	sbci	r25, 0xFF	; 255
+ 8f6:	91 87       	std	Z+9, r25	; 0x09
+ 8f8:	81 e0       	ldi	r24, 0x01	; 1
+ 8fa:	80 93 8d 0a 	sts	0x0A8D, r24	; 0x800a8d <digital_pin_to_port+0x7f7e15>
+ 8fe:	7f 91       	pop	r23
+ 900:	9f 91       	pop	r25
+ 902:	8f 91       	pop	r24
+ 904:	8f bf       	out	0x3f, r24	; 63
+ 906:	8f 91       	pop	r24
+ 908:	ff 91       	pop	r31
+ 90a:	ef 91       	pop	r30
+ 90c:	18 95       	reti
+
+0000090e <__vector_5>:
+__vector_5():
+ 90e:	0f 93       	push	r16
+ 910:	04 e0       	ldi	r16, 0x04	; 4
+ 912:	06 c0       	rjmp	.+12     	; 0x920 <isrBody>
+
+00000914 <__vector_4>:
+__vector_4():
+ 914:	0f 93       	push	r16
+ 916:	02 e0       	ldi	r16, 0x02	; 2
+ 918:	03 c0       	rjmp	.+6      	; 0x920 <isrBody>
+
+0000091a <__vector_3>:
+__vector_3():
+ 91a:	0f 93       	push	r16
+ 91c:	00 e0       	ldi	r16, 0x00	; 0
+ 91e:	00 c0       	rjmp	.+0      	; 0x920 <isrBody>
+
+00000920 <isrBody>:
+isrBody():
+ 920:	0f 92       	push	r0
+ 922:	0f b6       	in	r0, 0x3f	; 63
+ 924:	0f 92       	push	r0
+ 926:	1f 92       	push	r1
+ 928:	11 24       	eor	r1, r1
+ 92a:	ff 92       	push	r15
+ 92c:	1f 93       	push	r17
+ 92e:	2f 93       	push	r18
+ 930:	3f 93       	push	r19
+ 932:	4f 93       	push	r20
+ 934:	5f 93       	push	r21
+ 936:	6f 93       	push	r22
+ 938:	7f 93       	push	r23
+ 93a:	8f 93       	push	r24
+ 93c:	9f 93       	push	r25
+ 93e:	af 93       	push	r26
+ 940:	bf 93       	push	r27
+ 942:	cf 93       	push	r28
+ 944:	df 93       	push	r29
+ 946:	ef 93       	push	r30
+ 948:	ff 93       	push	r31
+ 94a:	a0 e0       	ldi	r26, 0x00	; 0
+ 94c:	b8 e3       	ldi	r27, 0x38	; 56
+ 94e:	a0 0f       	add	r26, r16
+ 950:	b1 1d       	adc	r27, r1
+ 952:	cd 91       	ld	r28, X+
+ 954:	dc 91       	ld	r29, X
+ 956:	00 0f       	add	r16, r16
+ 958:	0d 5f       	subi	r16, 0xFD	; 253
+ 95a:	a0 2f       	mov	r26, r16
+ 95c:	b0 e0       	ldi	r27, 0x00	; 0
+ 95e:	fc 90       	ld	r15, X
+ 960:	10 97       	sbiw	r26, 0x00	; 0
+ 962:	61 f0       	breq	.+24     	; 0x97c <AIntEnd>
+ 964:	1f 2d       	mov	r17, r15
+
+00000966 <AIntLoop>:
+ 966:	16 95       	lsr	r17
+ 968:	18 f0       	brcs	.+6      	; 0x970 <AIntLoop+0xa>
+ 96a:	41 f0       	breq	.+16     	; 0x97c <AIntEnd>
+ 96c:	22 96       	adiw	r28, 0x02	; 2
+ 96e:	fb cf       	rjmp	.-10     	; 0x966 <AIntLoop>
+ 970:	e9 91       	ld	r30, Y+
+ 972:	f9 91       	ld	r31, Y+
+ 974:	30 97       	sbiw	r30, 0x00	; 0
+ 976:	b9 f3       	breq	.-18     	; 0x966 <AIntLoop>
+ 978:	09 95       	icall
+ 97a:	f5 cf       	rjmp	.-22     	; 0x966 <AIntLoop>
+
+0000097c <AIntEnd>:
+ 97c:	a0 2f       	mov	r26, r16
+ 97e:	b0 e0       	ldi	r27, 0x00	; 0
+ 980:	fc 92       	st	X, r15
+ 982:	ff 91       	pop	r31
+ 984:	ef 91       	pop	r30
+ 986:	df 91       	pop	r29
+ 988:	cf 91       	pop	r28
+ 98a:	bf 91       	pop	r27
+ 98c:	af 91       	pop	r26
+ 98e:	9f 91       	pop	r25
+ 990:	8f 91       	pop	r24
+ 992:	7f 91       	pop	r23
+ 994:	6f 91       	pop	r22
+ 996:	5f 91       	pop	r21
+ 998:	4f 91       	pop	r20
+ 99a:	3f 91       	pop	r19
+ 99c:	2f 91       	pop	r18
+ 99e:	1f 91       	pop	r17
+ 9a0:	ff 90       	pop	r15
+ 9a2:	1f 90       	pop	r1
+ 9a4:	0f 90       	pop	r0
+ 9a6:	0f be       	out	0x3f, r0	; 63
+ 9a8:	0f 90       	pop	r0
+ 9aa:	0f 91       	pop	r16
+ 9ac:	18 95       	reti
+
+000009ae <global constructors keyed to 65535_0_LoPiTS_XS.ino.cpp.o.2276>:
+_GLOBAL__I_65535_0_LoPiTS_XS.ino.cpp.o.2276():
+ 9ae:	85 e6       	ldi	r24, 0x65	; 101
+ 9b0:	91 e0       	ldi	r25, 0x01	; 1
+ 9b2:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ 9b6:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ 9ba:	e9 e5       	ldi	r30, 0x59	; 89
+ 9bc:	f9 e3       	ldi	r31, 0x39	; 57
+ 9be:	12 86       	std	Z+10, r1	; 0x0a
+ 9c0:	13 86       	std	Z+11, r1	; 0x0b
+ 9c2:	14 86       	std	Z+12, r1	; 0x0c
+ 9c4:	15 86       	std	Z+13, r1	; 0x0d
+ 9c6:	16 86       	std	Z+14, r1	; 0x0e
+ 9c8:	81 e0       	ldi	r24, 0x01	; 1
+ 9ca:	84 83       	std	Z+4, r24	; 0x04
+ 9cc:	82 e3       	ldi	r24, 0x32	; 50
+ 9ce:	87 83       	std	Z+7, r24	; 0x07
+ 9d0:	84 e6       	ldi	r24, 0x64	; 100
+ 9d2:	80 87       	std	Z+8, r24	; 0x08
+ 9d4:	08 95       	ret
+
+000009d6 <main>:
+main():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1549
+    #if (defined(CLOCK_TUNE_INTERNAL))
+      tune_internal(); // Will be inlined as only called once. Just too long and ugly to put two implementations in middle of this.
+    #else
+      #if (F_CPU == 20000000)
+        /* No division on clock */
+        _PROTECTED_WRITE(CLKCTRL_MCLKCTRLB, 0x00);
+ 9d6:	88 ed       	ldi	r24, 0xD8	; 216
+ 9d8:	90 e0       	ldi	r25, 0x00	; 0
+ 9da:	84 bf       	out	0x34, r24	; 52
+ 9dc:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <digital_pin_to_port+0x7f73e9>
+init_ADC0():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1664
+
+
+/********************************* ADC ****************************************/
+void __attribute__((weak)) init_ADC0() {
+  ADC_t* pADC;
+  _fastPtr_d(pADC, &ADC0);
+ 9e0:	e0 e0       	ldi	r30, 0x00	; 0
+ 9e2:	f6 e0       	ldi	r31, 0x06	; 6
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1685
+   **************************************************************************/
+    //                              30 MHz / 32 = 937 kHz,  32 MHz / 32 =  1 MHz.
+    #if   F_CPU   > 24000000     // 24 MHz / 16 = 1.5 MHz,  25 MHz / 32 =  780 kHz
+      pADC->CTRLC  = ADC_PRESC_DIV32_gc | ADC_REFSEL_VDDREF_gc | ADC_SAMPCAP_bm;
+    #elif F_CPU  >= 12000000    // 16 MHz / 16 = 1.0 MHz,  20 MHz / 16 = 1.25 MHz
+      pADC->CTRLC  = ADC_PRESC_DIV16_gc | ADC_REFSEL_VDDREF_gc | ADC_SAMPCAP_bm;
+ 9e4:	83 e5       	ldi	r24, 0x53	; 83
+ 9e6:	82 83       	std	Z+2, r24	; 0x02
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1696
+      pADC->CTRLC  =  ADC_PRESC_DIV2_gc | ADC_REFSEL_VDDREF_gc | ADC_SAMPCAP_bm;
+    #endif
+    #if   (F_CPU == 6000000 || F_CPU == 12000000 || F_CPU == 24000000 || F_CPU ==25000000)
+      pADC->SAMPCTRL = (7); // 9 ADC clocks, 12 us
+    #elif (F_CPU == 5000000 || F_CPU == 10000000 || F_CPU == 20000000)
+      pADC->SAMPCTRL = (13);   // 15 ADC clock,s 12 us
+ 9e8:	8d e0       	ldi	r24, 0x0D	; 13
+ 9ea:	85 83       	std	Z+5, r24	; 0x05
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1700
+    #else
+      pADC->SAMPCTRL = (10); // 12 ADC clocks, 12 us
+    #endif
+    pADC->CTRLD    = ADC_INITDLY_DLY16_gc;
+ 9ec:	80 e2       	ldi	r24, 0x20	; 32
+ 9ee:	83 83       	std	Z+3, r24	; 0x03
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1701
+    pADC->CTRLA    = ADC_ENABLE_bm;
+ 9f0:	81 e0       	ldi	r24, 0x01	; 1
+ 9f2:	80 83       	st	Z, r24
+init_TCA0():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1791
+
+void __attribute__((weak)) init_TCA0() {
+  /*  TYPE A TIMER   */
+  #if !defined(TCA_BUFFERED_3PIN)
+    #if defined(PORTMUX_CTRLC)
+      PORTMUX.CTRLC = TCA_PORTMUX;
+ 9f4:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <digital_pin_to_port+0x7f758a>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1795
+    #else
+      PORTMUX.TCAROUTEA = TCA_PORTMUX;
+    #endif
+    TCA0.SPLIT.CTRLD   = TCA_SPLIT_SPLITM_bm;
+ 9f8:	80 93 03 0a 	sts	0x0A03, r24	; 0x800a03 <digital_pin_to_port+0x7f7d8b>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1796
+    TCA0.SPLIT.LPER    = PWM_TIMER_PERIOD;
+ 9fc:	9e ef       	ldi	r25, 0xFE	; 254
+ 9fe:	90 93 26 0a 	sts	0x0A26, r25	; 0x800a26 <digital_pin_to_port+0x7f7dae>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1797
+    TCA0.SPLIT.HPER    = PWM_TIMER_PERIOD;
+ a02:	90 93 27 0a 	sts	0x0A27, r25	; 0x800a27 <digital_pin_to_port+0x7f7daf>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1798
+    TCA0.SPLIT.CTRLA   = (TIMERA_PRESCALER_bm | TCA_SPLIT_ENABLE_bm);
+ a06:	9b e0       	ldi	r25, 0x0B	; 11
+ a08:	90 93 00 0a 	sts	0x0A00, r25	; 0x800a00 <digital_pin_to_port+0x7f7d88>
+init_millis():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1440
+      #endif
+    #elif defined(MILLIS_USE_TIMERA1)
+      TCA1.SPLIT.INTCTRL |= TCA_SPLIT_HUNF_bm;
+    #elif defined(MILLIS_USE_TIMERD0)
+      TCD_t* pTCD;
+      _fastPtr_d(pTCD, &TCD0);
+ a0c:	e0 e8       	ldi	r30, 0x80	; 128
+ a0e:	fa e0       	ldi	r31, 0x0A	; 10
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1441
+      pTCD->CMPBCLR        = TIME_TRACKING_TIMER_PERIOD; // essentially, this is TOP
+ a10:	2d ef       	ldi	r18, 0xFD	; 253
+ a12:	31 e0       	ldi	r19, 0x01	; 1
+ a14:	26 a7       	std	Z+46, r18	; 0x2e
+ a16:	37 a7       	std	Z+47, r19	; 0x2f
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1442
+      pTCD->CTRLB          = 0x00; // oneramp mode
+ a18:	11 82       	std	Z+1, r1	; 0x01
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1443
+      pTCD->CTRLC          = 0x80;
+ a1a:	90 e8       	ldi	r25, 0x80	; 128
+ a1c:	92 83       	std	Z+2, r25	; 0x02
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1444
+      pTCD->INTCTRL        = 0x01; // enable interrupt
+ a1e:	84 87       	std	Z+12, r24	; 0x0c
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1445
+      pTCD->CTRLA          = TIMERD0_PRESCALER | 0x01; // set clock source and enable!
+ a20:	91 e1       	ldi	r25, 0x11	; 17
+ a22:	90 83       	st	Z, r25
+main():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:1530
+    init_millis();
+  #endif
+  /*************************** ENABLE GLOBAL INTERRUPTS *************************/
+  // Finally, after everything is initialized, we go ahead and enable interrupts.
+  if (onAfterInit()) {
+    sei();
+ a24:	78 94       	sei
+SetupDecoder():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:637
+//
+// SetupDecoder
+//
+void DCC_Decoder::SetupDecoder(byte mfgID, byte mfgVers, byte interrupt)  
+{
+    if( gInterruptMicros == 0 )
+ a26:	40 91 4f 38 	lds	r20, 0x384F	; 0x80384f <DCC_Decoder::gInterruptMicros>
+ a2a:	50 91 50 38 	lds	r21, 0x3850	; 0x803850 <DCC_Decoder::gInterruptMicros+0x1>
+ a2e:	60 91 51 38 	lds	r22, 0x3851	; 0x803851 <DCC_Decoder::gInterruptMicros+0x2>
+ a32:	70 91 52 38 	lds	r23, 0x3852	; 0x803852 <DCC_Decoder::gInterruptMicros+0x3>
+ a36:	45 2b       	or	r20, r21
+ a38:	46 2b       	or	r20, r22
+ a3a:	47 2b       	or	r20, r23
+ a3c:	b9 f5       	brne	.+110    	; 0xaac <main+0xd6>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:640
+    {        
+            // Save mfg info
+        gCV[kCV_ManufacturerVersionNo] = mfgID;
+ a3e:	80 93 5d 38 	sts	0x385D, r24	; 0x80385d <DCC_Decoder::gCV+0x7>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:641
+        gCV[kCV_ManufacturedID] = mfgVers;
+ a42:	80 93 5e 38 	sts	0x385E, r24	; 0x80385e <DCC_Decoder::gCV+0x8>
+StartInterrupt():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:69
+
+///////////////////////////////////////////////////
+
+void DCC_Decoder::StartInterrupt(byte interrupt)
+{
+    gInterruptTimeIndex = 0;
+ a46:	10 92 4d 38 	sts	0x384D, r1	; 0x80384d <DCC_Decoder::gInterruptTimeIndex>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:70
+    gInterruptTime[0] = gInterruptTime[1] = 0;
+ a4a:	10 92 4b 38 	sts	0x384B, r1	; 0x80384b <DCC_Decoder::gInterruptTime+0x2>
+ a4e:	10 92 4c 38 	sts	0x384C, r1	; 0x80384c <DCC_Decoder::gInterruptTime+0x3>
+ a52:	10 92 49 38 	sts	0x3849, r1	; 0x803849 <DCC_Decoder::gInterruptTime>
+ a56:	10 92 4a 38 	sts	0x384A, r1	; 0x80384a <DCC_Decoder::gInterruptTime+0x1>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:71
+    gInterruptChaos = 0;
+ a5a:	10 92 47 38 	sts	0x3847, r1	; 0x803847 <DCC_Decoder::gInterruptChaos>
+ a5e:	10 92 48 38 	sts	0x3848, r1	; 0x803848 <DCC_Decoder::gInterruptChaos+0x1>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:72
+    gInterruptMicros = micros();
+ a62:	93 dc       	rcall	.-1754   	; 0x38a <micros>
+ a64:	60 93 4f 38 	sts	0x384F, r22	; 0x80384f <DCC_Decoder::gInterruptMicros>
+ a68:	70 93 50 38 	sts	0x3850, r23	; 0x803850 <DCC_Decoder::gInterruptMicros+0x1>
+ a6c:	80 93 51 38 	sts	0x3851, r24	; 0x803851 <DCC_Decoder::gInterruptMicros+0x2>
+ a70:	90 93 52 38 	sts	0x3852, r25	; 0x803852 <DCC_Decoder::gInterruptMicros+0x3>
+attachInterrupt():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:100
+        mode = PORT_ISC_LEVEL_gc;
+        break;
+      default:
+        return;
+    }
+    if (intFunc[port] != NULL && userFunc != NULL) {
+ a74:	e0 91 00 38 	lds	r30, 0x3800	; 0x803800 <__DATA_REGION_ORIGIN__>
+ a78:	f0 91 01 38 	lds	r31, 0x3801	; 0x803801 <__DATA_REGION_ORIGIN__+0x1>
+ a7c:	30 97       	sbiw	r30, 0x00	; 0
+ a7e:	69 f0       	breq	.+26     	; 0xa9a <main+0xc4>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:102
+      // if it is null the port is not enabled for attachInterrupt, and obviously a null user function is invalid too.
+      intFunc[port][bitpos] = userFunc;
+ a80:	80 e0       	ldi	r24, 0x00	; 0
+ a82:	92 e0       	ldi	r25, 0x02	; 2
+ a84:	84 87       	std	Z+12, r24	; 0x0c
+ a86:	95 87       	std	Z+13, r25	; 0x0d
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:104
+      uint8_t portoffset = ((port << 5) & 0xE0) + 0x10 + bitpos;
+      uint8_t oldSREG = SREG;
+ a88:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:105
+      cli();
+ a8a:	f8 94       	cli
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:107
+      // We now have the port, the mode, the bitpos and the pointer
+      uint8_t settings = *(portbase + portoffset) & 0xF8;
+ a8c:	80 91 16 04 	lds	r24, 0x0416	; 0x800416 <digital_pin_to_port+0x7f779e>
+ a90:	88 7f       	andi	r24, 0xF8	; 248
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:108
+      *(portbase + portoffset) = settings | mode;
+ a92:	81 60       	ori	r24, 0x01	; 1
+ a94:	80 93 16 04 	sts	0x0416, r24	; 0x800416 <digital_pin_to_port+0x7f779e>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:109
+      SREG = oldSREG;
+ a98:	9f bf       	out	0x3f, r25	; 63
+SetupDecoder():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:647
+        
+            // Attach the DCC interrupt
+        StartInterrupt(interrupt);
+    
+            // Start decoder in reset state
+        GOTO_DecoderReset( kDCC_OK_BOOT );
+ a9a:	86 e8       	ldi	r24, 0x86	; 134
+ a9c:	91 e0       	ldi	r25, 0x01	; 1
+ a9e:	80 93 57 39 	sts	0x3957, r24	; 0x803957 <DCC_Decoder::gState>
+ aa2:	90 93 58 39 	sts	0x3958, r25	; 0x803958 <DCC_Decoder::gState+0x1>
+ aa6:	82 e0       	ldi	r24, 0x02	; 2
+ aa8:	80 93 4e 38 	sts	0x384E, r24	; 0x80384e <DCC_Decoder::gResetReason>
+SetBasicAccessoryDecoderPacketHandler():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:213
+BasicAccDecoderPacket DCC_Decoder::func_BasicAccPacket = NULL;
+boolean               DCC_Decoder::func_BasicAccPacket_All_Packets = false;
+
+void DCC_Decoder::SetBasicAccessoryDecoderPacketHandler(BasicAccDecoderPacket func, boolean allPackets)
+{
+    func_BasicAccPacket = func;
+ aac:	85 e8       	ldi	r24, 0x85	; 133
+ aae:	91 e0       	ldi	r25, 0x01	; 1
+ ab0:	80 93 54 38 	sts	0x3854, r24	; 0x803854 <DCC_Decoder::func_BasicAccPacket>
+ ab4:	90 93 55 38 	sts	0x3855, r25	; 0x803855 <DCC_Decoder::func_BasicAccPacket+0x1>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:214
+    func_BasicAccPacket_All_Packets = allPackets;
+ ab8:	81 e0       	ldi	r24, 0x01	; 1
+ aba:	80 93 53 38 	sts	0x3853, r24	; 0x803853 <DCC_Decoder::func_BasicAccPacket_All_Packets>
+begin():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:13
+    Fmax = _Fmax ;
+} 
+
+void Weistra::begin()
+{
+    pinMode(trackPin, OUTPUT);
+ abe:	20 91 5d 39 	lds	r18, 0x395D	; 0x80395d <pwm+0x4>
+check_valid_digital_pin():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/Arduino.h:814
+#if !defined(NUM_TOTAL_PINS)
+  #define NUM_TOTAL_PINS                (NUM_DIGITAL_PINS) /* Used the same way as NUM_DIGITAL_PINS. so it doesn't mean what it's named  - I didn't make the convention*/
+#endif
+
+inline __attribute__((always_inline)) void check_valid_digital_pin(pin_size_t pin) {
+  if (__builtin_constant_p(pin)) {
+ ac2:	82 2f       	mov	r24, r18
+ ac4:	90 e0       	ldi	r25, 0x00	; 0
+pinMode():
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:44
+}
+
+void pinMode(uint8_t pin, uint8_t mode) {
+  check_valid_digital_pin(pin);         /* generate compile error if a constant that is not a valid pin is used as the pin */
+  check_valid_pin_mode(mode);           /* generate compile error if a constant that is not a valid pin mode is used as the mode */
+  uint8_t bit_mask = digitalPinToBitMask(pin);
+ ac6:	22 31       	cpi	r18, 0x12	; 18
+ ac8:	c8 f4       	brcc	.+50     	; 0xafc <main+0x126>
+ aca:	fc 01       	movw	r30, r24
+ acc:	ea 59       	subi	r30, 0x9A	; 154
+ ace:	f3 47       	sbci	r31, 0x73	; 115
+ ad0:	20 81       	ld	r18, Z
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:45
+  if ((bit_mask == NOT_A_PIN) || (mode > INPUT_PULLUP)) {
+ ad2:	2f 3f       	cpi	r18, 0xFF	; 255
+ ad4:	99 f0       	breq	.+38     	; 0xafc <main+0x126>
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:48
+    return;                             /* ignore invalid pins passed at runtime */
+  }
+  volatile uint8_t * port_base = (volatile uint8_t *) (uint16_t) ((&PORTA) + digitalPinToPort(pin));
+ ad6:	fc 01       	movw	r30, r24
+ ad8:	e8 58       	subi	r30, 0x88	; 136
+ ada:	f3 47       	sbci	r31, 0x73	; 115
+ adc:	e0 81       	ld	r30, Z
+ ade:	30 e2       	ldi	r19, 0x20	; 32
+ ae0:	e3 9f       	mul	r30, r19
+ ae2:	f0 01       	movw	r30, r0
+ ae4:	11 24       	eor	r1, r1
+ ae6:	fc 5f       	subi	r31, 0xFC	; 252
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:51
+  if (mode & 0x01) {
+    // OUTPUT mode, so write DIRSET with the mask.
+    *(port_base + 1) = bit_mask;
+ ae8:	21 83       	std	Z+1, r18	; 0x01
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:77
+  // then load with displacement 2 clocks. IFF the compiler puts this pointer into Y or Z, it is faster and smaller
+  // by 2 bytes and one clock. And let's hope it is, because the code above would suck too if it was in X.
+  // Handwritten assembly that exploited the knowledge that there will never be a carry would save 1 word and 1 clock.
+  // and could probably save at least several times that in initializing the port_base pointer. But if you're using
+  // pinMode you probably don't care.
+  port_base += (uint8_t) digitalPinToBitPosition(pin);
+ aea:	8c 5a       	subi	r24, 0xAC	; 172
+ aec:	93 47       	sbci	r25, 0x73	; 115
+ aee:	dc 01       	movw	r26, r24
+ af0:	8c 91       	ld	r24, X
+ af2:	e8 0f       	add	r30, r24
+ af4:	f1 1d       	adc	r31, r1
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:78
+  bit_mask = *(port_base + 0x10);
+ af6:	80 89       	ldd	r24, Z+16	; 0x10
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:82
+  if (mode & 2) {
+    bit_mask |= 0x08;
+  } else {
+    bit_mask &= 0xF7;
+ af8:	87 7f       	andi	r24, 0xF7	; 247
+C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring_digital.c:84
+  }
+  *(port_base + 0x10) = bit_mask;
+ afa:	80 8b       	std	Z+16, r24	; 0x10
+begin():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:15
+
+    byte port   = digitalPinToPort( trackPin );
+ afc:	20 91 5d 39 	lds	r18, 0x395D	; 0x80395d <pwm+0x4>
+main():
+ b00:	8f ef       	ldi	r24, 0xFF	; 255
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:16
+    trackPin    = digitalPinToBitMask( trackPin );
+ b02:	9f ef       	ldi	r25, 0xFF	; 255
+begin():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:15
+
+void Weistra::begin()
+{
+    pinMode(trackPin, OUTPUT);
+
+    byte port   = digitalPinToPort( trackPin );
+ b04:	22 31       	cpi	r18, 0x12	; 18
+ b06:	48 f4       	brcc	.+18     	; 0xb1a <main+0x144>
+ b08:	30 e0       	ldi	r19, 0x00	; 0
+ b0a:	f9 01       	movw	r30, r18
+ b0c:	e8 58       	subi	r30, 0x88	; 136
+ b0e:	f3 47       	sbci	r31, 0x73	; 115
+ b10:	80 81       	ld	r24, Z
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:16
+    trackPin    = digitalPinToBitMask( trackPin );
+ b12:	2a 59       	subi	r18, 0x9A	; 154
+ b14:	33 47       	sbci	r19, 0x73	; 115
+ b16:	f9 01       	movw	r30, r18
+ b18:	90 81       	ld	r25, Z
+ b1a:	90 93 5d 39 	sts	0x395D, r25	; 0x80395d <pwm+0x4>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:17
+    portx_p     = portOutputRegister( port );
+ b1e:	83 30       	cpi	r24, 0x03	; 3
+ b20:	08 f0       	brcs	.+2      	; 0xb24 <main+0x14e>
+ b22:	74 c0       	rjmp	.+232    	; 0xc0c <main+0x236>
+ b24:	90 e0       	ldi	r25, 0x00	; 0
+ b26:	80 96       	adiw	r24, 0x20	; 32
+ b28:	25 e0       	ldi	r18, 0x05	; 5
+ b2a:	88 0f       	add	r24, r24
+ b2c:	99 1f       	adc	r25, r25
+ b2e:	2a 95       	dec	r18
+ b30:	e1 f7       	brne	.-8      	; 0xb2a <main+0x154>
+ b32:	04 96       	adiw	r24, 0x04	; 4
+ b34:	80 93 68 39 	sts	0x3968, r24	; 0x803968 <pwm+0xf>
+ b38:	90 93 69 39 	sts	0x3969, r25	; 0x803969 <pwm+0x10>
+loop():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/DCC_Decoder.cpp:670
+//
+// Hearbeat function. Dispatch the dcc_decoder library state machine.
+//
+void DCC_Decoder::loop()
+{
+    (gState)();
+ b3c:	e0 91 57 39 	lds	r30, 0x3957	; 0x803957 <DCC_Decoder::gState>
+ b40:	f0 91 58 39 	lds	r31, 0x3958	; 0x803958 <DCC_Decoder::gState+0x1>
+ b44:	09 95       	icall
+update():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:22
+}
+
+void Weistra::update() 
+{
+    if( portx_p != 0 )
+ b46:	80 91 68 39 	lds	r24, 0x3968	; 0x803968 <pwm+0xf>
+ b4a:	90 91 69 39 	lds	r25, 0x3969	; 0x803969 <pwm+0x10>
+ b4e:	89 2b       	or	r24, r25
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:24
+    {
+        uint32_t currentTime = micros() ; 
+ b50:	a9 f3       	breq	.-22     	; 0xb3c <main+0x166>
+ b52:	1b dc       	rcall	.-1994   	; 0x38a <micros>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:26
+
+        if( currentTime - prevTime >= intervalTime )
+ b54:	00 91 64 39 	lds	r16, 0x3964	; 0x803964 <pwm+0xb>
+ b58:	10 91 65 39 	lds	r17, 0x3965	; 0x803965 <pwm+0xc>
+ b5c:	20 91 66 39 	lds	r18, 0x3966	; 0x803966 <pwm+0xd>
+ b60:	30 91 67 39 	lds	r19, 0x3967	; 0x803967 <pwm+0xe>
+ b64:	6b 01       	movw	r12, r22
+ b66:	7c 01       	movw	r14, r24
+ b68:	c0 1a       	sub	r12, r16
+ b6a:	d1 0a       	sbc	r13, r17
+ b6c:	e2 0a       	sbc	r14, r18
+ b6e:	f3 0a       	sbc	r15, r19
+ b70:	97 01       	movw	r18, r14
+ b72:	86 01       	movw	r16, r12
+ b74:	40 91 59 39 	lds	r20, 0x3959	; 0x803959 <pwm>
+ b78:	50 91 5a 39 	lds	r21, 0x395A	; 0x80395a <pwm+0x1>
+ b7c:	6a 01       	movw	r12, r20
+ b7e:	f1 2c       	mov	r15, r1
+ b80:	e1 2c       	mov	r14, r1
+ b82:	0c 15       	cp	r16, r12
+ b84:	1d 05       	cpc	r17, r13
+ b86:	2e 05       	cpc	r18, r14
+ b88:	3f 05       	cpc	r19, r15
+ b8a:	c0 f2       	brcs	.-80     	; 0xb3c <main+0x166>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:28
+        { 
+            prevTime = currentTime;
+ b8c:	60 93 64 39 	sts	0x3964, r22	; 0x803964 <pwm+0xb>
+ b90:	70 93 65 39 	sts	0x3965, r23	; 0x803965 <pwm+0xc>
+ b94:	80 93 66 39 	sts	0x3966, r24	; 0x803966 <pwm+0xd>
+ b98:	90 93 67 39 	sts	0x3967, r25	; 0x803967 <pwm+0xe>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:30
+
+            if( counter == 0 && newDutyCycle > 0 )      // if counter reaches 100, reset it to 0 and enable the track power pin
+ b9c:	80 91 63 39 	lds	r24, 0x3963	; 0x803963 <pwm+0xa>
+ ba0:	81 11       	cpse	r24, r1
+ ba2:	19 c0       	rjmp	.+50     	; 0xbd6 <main+0x200>
+ ba4:	80 91 5f 39 	lds	r24, 0x395F	; 0x80395f <pwm+0x6>
+ ba8:	88 23       	and	r24, r24
+ baa:	a9 f0       	breq	.+42     	; 0xbd6 <main+0x200>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:32
+            {
+                *portx_p |=  trackPin ;
+ bac:	e0 91 68 39 	lds	r30, 0x3968	; 0x803968 <pwm+0xf>
+ bb0:	f0 91 69 39 	lds	r31, 0x3969	; 0x803969 <pwm+0x10>
+ bb4:	80 81       	ld	r24, Z
+ bb6:	90 91 5d 39 	lds	r25, 0x395D	; 0x80395d <pwm+0x4>
+ bba:	89 2b       	or	r24, r25
+ bbc:	80 83       	st	Z, r24
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:33
+                dutyCycle = newDutyCycle ;              // a new dutycucle can only be accepted on the beginning of a cycle, this prevents weird jumps of the trains
+ bbe:	80 91 5f 39 	lds	r24, 0x395F	; 0x80395f <pwm+0x6>
+ bc2:	80 93 5e 39 	sts	0x395E, r24	; 0x80395e <pwm+0x5>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:34
+                intervalTime = newIntervalTime ;        // new speed is accepted at the beginning of a cycle
+ bc6:	80 91 5b 39 	lds	r24, 0x395B	; 0x80395b <pwm+0x2>
+ bca:	90 91 5c 39 	lds	r25, 0x395C	; 0x80395c <pwm+0x3>
+ bce:	80 93 59 39 	sts	0x3959, r24	; 0x803959 <pwm>
+ bd2:	90 93 5a 39 	sts	0x395A, r25	; 0x80395a <pwm+0x1>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:36
+            }
+            if( counter == dutyCycle /*&& dutyCycle < 100*/ ) // commented code seems buggy??
+ bd6:	90 91 63 39 	lds	r25, 0x3963	; 0x803963 <pwm+0xa>
+ bda:	80 91 5e 39 	lds	r24, 0x395E	; 0x80395e <pwm+0x5>
+ bde:	98 13       	cpse	r25, r24
+ be0:	0a c0       	rjmp	.+20     	; 0xbf6 <main+0x220>
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:38
+            {
+                *portx_p &= ~trackPin;
+ be2:	e0 91 68 39 	lds	r30, 0x3968	; 0x803968 <pwm+0xf>
+ be6:	f0 91 69 39 	lds	r31, 0x3969	; 0x803969 <pwm+0x10>
+ bea:	90 81       	ld	r25, Z
+ bec:	80 91 5d 39 	lds	r24, 0x395D	; 0x80395d <pwm+0x4>
+ bf0:	80 95       	com	r24
+ bf2:	89 23       	and	r24, r25
+ bf4:	80 83       	st	Z, r24
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:40
+            }
+            if( ++counter > 100) counter = 0 ;
+ bf6:	80 91 63 39 	lds	r24, 0x3963	; 0x803963 <pwm+0xa>
+ bfa:	8f 5f       	subi	r24, 0xFF	; 255
+ bfc:	80 93 63 39 	sts	0x3963, r24	; 0x803963 <pwm+0xa>
+ c00:	85 36       	cpi	r24, 0x65	; 101
+ c02:	08 f4       	brcc	.+2      	; 0xc06 <main+0x230>
+ c04:	9b cf       	rjmp	.-202    	; 0xb3c <main+0x166>
+ c06:	10 92 63 39 	sts	0x3963, r1	; 0x803963 <pwm+0xa>
+ c0a:	98 cf       	rjmp	.-208    	; 0xb3c <main+0x166>
+main():
+C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS\src/weistra.cpp:17
+{
+    pinMode(trackPin, OUTPUT);
+
+    byte port   = digitalPinToPort( trackPin );
+    trackPin    = digitalPinToBitMask( trackPin );
+    portx_p     = portOutputRegister( port );
+ c0c:	90 e0       	ldi	r25, 0x00	; 0
+ c0e:	80 e0       	ldi	r24, 0x00	; 0
+ c10:	90 cf       	rjmp	.-224    	; 0xb32 <main+0x15c>
+
+00000c12 <__muluhisi3>:
+__muluhisi3():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:626
+ c12:	0f d0       	rcall	.+30     	; 0xc32 <__umulhisi3>
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:627
+ c14:	a5 9f       	mul	r26, r21
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:628
+ c16:	90 0d       	add	r25, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:629
+ c18:	b4 9f       	mul	r27, r20
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:630
+ c1a:	90 0d       	add	r25, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:631
+ c1c:	a4 9f       	mul	r26, r20
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:632
+ c1e:	80 0d       	add	r24, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:633
+ c20:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:634
+ c22:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:635
+ c24:	08 95       	ret
+
+00000c26 <__tablejump2__>:
+__tablejump2__():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
+ c26:	ee 0f       	add	r30, r30
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2297
+ c28:	ff 1f       	adc	r31, r31
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2328
+ c2a:	05 90       	lpm	r0, Z+
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2329
+ c2c:	f4 91       	lpm	r31, Z
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2330
+ c2e:	e0 2d       	mov	r30, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2331
+ c30:	09 94       	ijmp
+
+00000c32 <__umulhisi3>:
+__umulhisi3():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:564
+ c32:	a2 9f       	mul	r26, r18
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:565
+ c34:	b0 01       	movw	r22, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:566
+ c36:	b3 9f       	mul	r27, r19
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:567
+ c38:	c0 01       	movw	r24, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:568
+ c3a:	a3 9f       	mul	r26, r19
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:573
+ c3c:	70 0d       	add	r23, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:574
+ c3e:	81 1d       	adc	r24, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:575
+ c40:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:576
+ c42:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:580
+ c44:	b2 9f       	mul	r27, r18
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:581
+ c46:	70 0d       	add	r23, r0
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:582
+ c48:	81 1d       	adc	r24, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:583
+ c4a:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:584
+ c4c:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:585
+ c4e:	08 95       	ret
+
+00000c50 <_exit>:
+exit():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+ c50:	f8 94       	cli
+
+00000c52 <__stop_program>:
+__stop_program():
+/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+ c52:	ff cf       	rjmp	.-2      	; 0xc52 <__stop_program>
