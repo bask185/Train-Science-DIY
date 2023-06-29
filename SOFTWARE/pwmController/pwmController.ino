@@ -145,19 +145,18 @@ uint8_t control()
         if(      setPoint < (512-50)) setPoint = map( setPoint,      0, 512-50, -maxSpeed,         0 ) ; // test me
         else if( setPoint > (512+50)) setPoint = map( setPoint, 512+50,   1023,         0,  maxSpeed ) ;
         else                          setPoint = 0 ;
-
-        if( setPoint > currentSpeed ) currentSpeed ++ ; //could be relocated?
-        if( setPoint < currentSpeed ) currentSpeed -- ;
-
-        pwm.setSpeed( currentSpeed ) ;
     }
     END_REPEAT
 
     // if potentiometer changes, abort shuttle service at once (should discard sensors)?
     if( setPoint != prevSetPoint )
     {  prevSetPoint = setPoint ;
+        
+        if( currentSpeed < setPoint ) currentSpeed ++ ;
+        if( currentSpeed > setPoint ) currentSpeed -- ;
 
-        sm.nextState( runMode, 3000 ) ; // go to runmode and lockout sensor for 3 seconds
+        pwm.setSpeed( currentSpeed ) ;
+        sm.nextState( runMode, 3000 ) ; // go to runmode and lockout sensor for 3 seconds        
     }
 
 
