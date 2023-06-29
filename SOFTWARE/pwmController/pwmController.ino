@@ -33,7 +33,7 @@ void loop()
         int setPoint = analogRead( speedPin ) ;
         static int currentSpeed = 0 ;
 
-        setPoint = map( setPoint, 0, 1023, -100, 100 ) ;
+        setPoint = map( setPoint, 0, 1023, -maxSpeed, maxSpeed ) ;
 
         if( setPoint > currentSpeed ) currentSpeed ++ ;
         if( setPoint < currentSpeed ) currentSpeed -- ;
