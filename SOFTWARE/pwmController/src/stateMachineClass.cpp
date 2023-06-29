@@ -21,6 +21,7 @@ void StateMachine::setState( uint8 _state )
 {
     state = _state ;
     runOnce = true ;
+    interval = 0 ;
     exitFlag = false ;
 }
 
