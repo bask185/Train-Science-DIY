@@ -6,6 +6,9 @@
 int     setPoint ;
 int     prevSetPoint ;
 uint8_t brakeSensor ;
+uint8_t lastDir ;
+int8_t  brakeSpeed ;
+int8_t  currentSpeed ;
 
 StateMachine sm ;
 enum states
@@ -56,7 +59,8 @@ void setup()
         hasShuttleSerice = 1 ;
     }
 
-
+    pinMode( S1, INPUT_PULLUP ) ;
+    pinMode( S2, INPUT_PULLUP ) ;
 }
 
 void loop()
@@ -88,41 +92,43 @@ void loop()
 StateFunction( runMode )
 {
     if( digitalRead( S1 ) == 0 || digitalRead( S2 ) == 0 ) sm.exit() ;
+    
+    return sm.endState() ;
 }
 
 StateFunction( braking )
 {
     if( sm.entryState() )
     {
-        
+        brakeSpeed = currentSpeed ;
+        if( brakeSpeed < 0 ) lastDir = 1 ;
+        else                 lastDir = 0 ;
     }
     if( sm.onState() )
     {
-        
-        sm.exit() ;
+        if( sm.repeat( accelerationFactor ) )
+        {
+            if(      brakeSpeed < 0 ) brakeSpeed ++ ;
+            else if( brakeSpeed > 0 ) brakeSpeed -- ;
+            else         sm.exit() ;   // when speed is 0 exit 
+        }
     }
-    if( sm.exitState() )
-    {
-        
-    }
+
     return sm.endState() ;
 }
 
 StateFunction( departing )
 {
-    if( sm.entryState() )
+    if( sm.repeat( accelerationFactor ) )
     {
-        
+        if( lastDir ) brakeSpeed -- ;
+        else          brakeSpeed ++ ;
+        pwm.setSpeed( brakeSpeed ) ;
+
+        if( brakeSpeed == -maxSpeed 
+        ||  brakeSpeed ==  maxSpeed ) sm.exit() ;
     }
-    if( sm.onState() )
-    {
-        
-        sm.exit() ;
-    }
-    if( sm.exitState() )
-    {
-        
-    }
+
     return sm.endState() ;
 }
 
@@ -133,7 +139,6 @@ uint8_t control()
     REPEAT_MS( accelerationFactor )
     {
         setPoint = analogRead( speedPin ) ;
-        static int currentSpeed = 0 ;
 
     // sample    0      512-50   512   512+50      1023
     // speed  -100   <->   0      0       0   <->   100  // dead zone in middle
@@ -141,7 +146,7 @@ uint8_t control()
         else if( setPoint > (512+50)) setPoint = map( setPoint, 512+50,   1023,         0,  maxSpeed ) ;
         else                          setPoint = 0 ;
 
-        if( setPoint > currentSpeed ) currentSpeed ++ ;
+        if( setPoint > currentSpeed ) currentSpeed ++ ; //could be relocated?
         if( setPoint < currentSpeed ) currentSpeed -- ;
 
         pwm.setSpeed( currentSpeed ) ;
@@ -152,8 +157,9 @@ uint8_t control()
     if( setPoint != prevSetPoint )
     {  prevSetPoint = setPoint ;
 
-        sm.nextState( runMode , 3000 ) ; // go to runmode and lockout sensor for 3 seconds
+        sm.nextState( runMode, 3000 ) ; // go to runmode and lockout sensor for 3 seconds
     }
+
 
     STATE_MACHINE_BEGIN( sm )
     {
@@ -166,5 +172,5 @@ uint8_t control()
         State( departing ) {
             sm.nextState( runMode , 5000 ) ; } // 5 seconds lockout for sensors
     }
-    STATE_MACHINE_END(sm)
+    STATE_MACHINE_END( sm )
 }
