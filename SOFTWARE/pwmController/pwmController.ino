@@ -21,6 +21,7 @@ enum states
 Weistra pwm( in1, in2, Fmin, Fmax ) ;
 
 uint8_t     hasMaxSpeedPot ;
+uint8_t     hasMinSpeedPot ;
 uint8_t     hasAccelPot ;
 uint8_t     hasWaitPot ;
 uint8_t     hasShuttleSerice ;
@@ -33,6 +34,7 @@ void setup()
 
 // for following 3 pins, I enable pullups and I take a sample, if the sample is < then 1023, I know a potentiometer is attached
     pinMode( maxSpeedPin,       INPUT_PULLUP ) ;
+    pinMode( minSpeedPin,       INPUT_PULLUP ) ;
     pinMode( accelFactorPin,    INPUT_PULLUP ) ;
     pinMode( waitTimePin,       INPUT_PULLUP ) ;
 
@@ -42,6 +44,13 @@ void setup()
     {
         pinMode( maxSpeedPin, INPUT ) ;
         hasMaxSpeedPot = 1 ;
+    }
+
+    sample = analogRead( minSpeedPin ) ;
+    if( sample < 1023 )
+    {
+        pinMode( minSpeedPin, INPUT ) ;
+        hasMinSpeedPot = 1 ;
     }
 
     sample = analogRead( accelFactorPin ) ;
@@ -75,6 +84,11 @@ void loop()
             sample = analogRead( maxSpeedPin ) ;
             maxSpeed = map( sample, 0, 1023, 20, 100 ) ;
         }
+        if( hasMinSpeedPot )
+        {
+            sample = analogRead( minSpeedPin ) ;
+            minSpeed = map( sample, 0, 1023, 0, 25 ) ;
+        }
         if( hasAccelPot )
         {
             sample = analogRead( accelFactorPin ) ;
@@ -91,9 +105,9 @@ void loop()
 
 StateFunction( runMode )
 {
-    if( digitalRead( S1 ) == 0 || digitalRead( S2 ) == 0 ) sm.exit() ;
+    if( digitalRead( S1 ) == 0 || digitalRead( S2 ) == 0 ) return 1 ;
     
-    return sm.endState() ;
+    return 0 ;
 }
 
 StateFunction( braking )
@@ -110,7 +124,9 @@ StateFunction( braking )
         {
             if(      brakeSpeed < 0 ) brakeSpeed ++ ;
             else if( brakeSpeed > 0 ) brakeSpeed -- ;
-            else         sm.exit() ;   // when speed is 0 exit 
+            else         sm.exit() ;   // when speed is 0 exit
+
+            pwm.setSpeed( brakeSpeed ) ;
         }
     }
 
@@ -142,8 +158,8 @@ uint8_t control()
 
     // sample    0      512-50   512   512+50      1023
     // speed  -100   <->   0      0       0   <->   100  // dead zone in middle
-        if(      setPoint < (512-50)) setPoint = map( setPoint,      0, 512-50, -maxSpeed,         0 ) ; // test me
-        else if( setPoint > (512+50)) setPoint = map( setPoint, 512+50,   1023,         0,  maxSpeed ) ;
+        if(      setPoint < (512-50)) setPoint = map( setPoint,      0, 512-50, -maxSpeed,  minSpeed ) ; // test me
+        else if( setPoint > (512+50)) setPoint = map( setPoint, 512+50,   1023,  minSpeed,  maxSpeed ) ;
         else                          setPoint = 0 ;
     }
     END_REPEAT
@@ -154,6 +170,11 @@ uint8_t control()
         
         if( currentSpeed < setPoint ) currentSpeed ++ ;
         if( currentSpeed > setPoint ) currentSpeed -- ;
+
+        if( currentSpeed < minSpeed && currentSpeed > - minSpeed ) // if within dead zone
+        {
+            // do something clever to skip the steps in the dead zone.
+        }
 
         pwm.setSpeed( currentSpeed ) ;
         sm.nextState( runMode, 3000 ) ; // go to runmode and lockout sensor for 3 seconds        
@@ -169,7 +190,7 @@ uint8_t control()
             sm.nextState( departing, waitTime ) ; }
 
         State( departing ) {
-            sm.nextState( runMode , 5000 ) ; } // 5 seconds lockout for sensors
+            sm.nextState( runMode , 8000 ) ; } // 8 seconds lockout for sensors
     }
     STATE_MACHINE_END( sm )
 }
