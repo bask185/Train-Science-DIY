@@ -100,8 +100,16 @@ void loop()
           
           if( currentSpeed < setPoint ) currentSpeed ++ ;
           if( currentSpeed > setPoint ) currentSpeed -- ;
-  
-          pwm.setSpeed( currentSpeed ) ;
+
+          if( currentSpeed > -minSpeed && currentSpeed < minSpeed )
+          {
+              pwm.setSpeed( 0 ) ; 
+          }
+          else
+          {
+              pwm.setSpeed( currentSpeed ) ;
+          }
+          
           sm.nextState( runMode, 3000 ) ; // go to runmode and lockout sensor for 3 seconds   
       }
     }

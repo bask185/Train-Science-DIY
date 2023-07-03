@@ -18,8 +18,8 @@ const int S2                 =   4 ;
 // PWM parameters
 const int Fmin               =  50 ;
 const int Fmax               = 100 ;
-      int accelerationFactor =  10 ;
-      int minSpeed           =  20 ; // minimum speed. Slow trains start driving at higher throttle levers
+      int accelerationFactor =  15 ;
+      int minSpeed           =  10 ; // minimum speed. Slow trains start driving at higher throttle levers
       int maxSpeed           = 100 ; // may NOT be bigger than 100
 
 // shuttle service station wait time
