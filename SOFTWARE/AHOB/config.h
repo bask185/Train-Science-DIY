@@ -1,5 +1,28 @@
-#define armSpeed 5000					// speed of arms opening/closing bases on 90 degrees
-#define closePos 90						// degrees of close positions of servos
-#define openPos 0						// degrees of open positions of servos
-#define BLINK_TIME 500					// interval of blinking leds
-#define debounceInterval 100			// interval of sampling sensors
+#include <Arduino.h>
+
+const int armSpeed         = 5000 ;                    // speed of arms opening/closing bases on 90 degrees
+const int closePos         =   90 ;                    // degrees of close positions of servos
+const int openPos          =    0 ;                    // degrees of open positions of servos
+const int blinkTime        =   12 ;                    // interval of blinking leds
+const int fadeTime         =  500 ;                    // fade time in micros * 256
+const int debounceInterval =  100 ;                    // interval of sampling sensors
+
+// #define IS_AHOB
+// #define IS_AKI
+
+const int dccPin    =  2 ;
+// Available PWM pins
+// 3, 5, 6, 11
+
+const int blinkLed1 =  3 ;
+const int blinkLed2 =  5 ;
+const int blinkLed3 =  6 ;
+const int servoPin1 =  7 ; 
+const int servoPin2 =  8 ;
+
+const int detector1 = A0 ;
+const int detector2 = A1 ;
+const int detector3 = A2 ;
+const int detector4 = A3 ;
+const int detector5 = A4 ;
+const int detector6 = A5 ;

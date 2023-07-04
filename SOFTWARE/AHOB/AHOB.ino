@@ -1,4 +1,4 @@
-#include "src/io.h"
+#include "config.h"
 #include "railCrossing.h"
 #include "track.h"
 
@@ -6,22 +6,16 @@ const int trackPins[][2] =                                                      
 {
     { detector1, detector2 } ,                                                  // track 1
     { detector3, detector4 } ,                                                  // track 2
-    //{ detector5, detector6 } ,                                                // track 3 add as many as you want
+    { detector5, detector6 } ,                                                // track 3 add as many as you want
  } ;
 
-Track track[] =                                                                 // array of track objects, each track object has 2 sensors
-{
-    Track(),
-    Track(),
-    // Track(),                                                                 // for every track, you need to add a line here
-} ;
+ const int nTracks = sizeof(trackPins) / sizeof(trackPins[0]) ;
 
-const uint8_t nTracks = sizeof(track) / sizeof(track[0] ) ;                     // should correctly get the amount of tracks.
+Track track[nTracks] ;
 
 void setup()
 {
-    initIO();
-    Serial.begin(4800);
+    Serial.begin(115200);
     Serial.println(F("AHOB STARTED")) ;
 
     for( int i = 0 ; i < nTracks ; i ++ )
