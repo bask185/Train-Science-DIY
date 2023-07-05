@@ -3,8 +3,10 @@
 const int armSpeed         = 5000 ;                    // speed of arms opening/closing bases on 90 degrees
 const int closePos         =   90 ;                    // degrees of close positions of servos
 const int openPos          =    0 ;                    // degrees of open positions of servos
-const int blinkTime        =   12 ;                    // interval of blinking leds
-const int fadeTime         =  500 ;                    // fade time in micros * 256
+// 45 blinks/minute -> 0.75Hz -> blink time = 1333ms   // SK: may need to be halved
+// 90 blinks/minute -> 1.50Hz -? blink time =  667ms
+const int blinkTime        = 1333 ;                    // interval of blinking leds
+const int fadeTime         =  500 ;                    // Total fade time = `fadeTime` * 256uS
 const int debounceInterval =  100 ;                    // interval of sampling sensors
 
 // #define IS_AHOB
