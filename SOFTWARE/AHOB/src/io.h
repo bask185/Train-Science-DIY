@@ -9,4 +9,3 @@
 #define blinkLed1 12
 #define blinkLed2 13
 
-extern void initIO(void);

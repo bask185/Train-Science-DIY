@@ -1,9 +1,0 @@
-2	detector1	INPUT_PULLUP
-3	detector2	INPUT_PULLUP
-4	detector3	INPUT_PULLUP
-5	detector4	INPUT_PULLUP
-6	servoPin1	OUTPUT
-7	servoPin2	OUTPUT
-10	led1	OUTPUT
-12	blinkLed1	OUTPUT
-13	blinkLed2	OUTPUT

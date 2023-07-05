@@ -19,6 +19,8 @@ const int blinkLed2 =  5 ;
 const int blinkLed3 =  6 ;
 const int servoPin1 =  7 ; 
 const int servoPin2 =  8 ;
+const int servoPin3 =  9 ;
+const int servoPin4 = 10 ;
 
 const int detector1 = A0 ;
 const int detector2 = A1 ;

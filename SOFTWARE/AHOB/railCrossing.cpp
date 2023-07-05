@@ -22,11 +22,13 @@ uint8_t angle ;
 #ifdef IS_AHOB
 static Servo arm1 ;
 static Servo arm2 ;
+static Servo arm3 ;
+static Servo arm4 ;
 #endif
 
 static Fader led1( blinkLed1 ) ;
 static Fader led2( blinkLed2 ) ;
-static Fader led3( blinkLed3 ) ;
+static Fader led3( blinkLed3 ) ; // on AHOB outer led on arm, AKI -> white led
 
 
 // FUNCTIONS
@@ -36,19 +38,18 @@ extern void railCrossingInit(void)
 
 #ifdef IS_AHOB
     arm1.write(openPos) ;
-    arm2.write(openPos) ;
     arm1.attach(servoPin1) ;
+    arm2.write(openPos) ;
     arm2.attach(servoPin2) ;
+    arm3.write(openPos) ;
+    arm3.attach(servoPin3) ;
+    arm4.write(openPos) ;
+    arm4.attach(servoPin4) ;
+#endif
 
-    led1.begin() ;
-    led2.begin() ;
-
-#else
     led1.begin() ;
     led2.begin() ;
     led3.begin() ;
-
-#endif
 }
 
 void blinkLeds()
@@ -122,6 +123,8 @@ void moveArms()
     #ifdef IS_AHOB                  // if no ahob, dont do servo
         arm1.write(angle) ;
         arm2.write(angle) ;
+        arm3.write(angle) ;
+        arm4.write(angle) ;
     #endif
 
     }
