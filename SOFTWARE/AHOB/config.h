@@ -9,10 +9,10 @@ const int blinkTime        = 1333 ;                    // interval of blinking l
 const int fadeTime         =  500 ;                    // Total fade time = `fadeTime` * 256uS
 const int debounceInterval =  100 ;                    // interval of sampling sensors
 
-// #define IS_AHOB
+#define IS_AHOB
 // #define IS_AKI
 
-const int dccPin    =  2 ;
+const int dccPin  =  2 ;
 // Available PWM pins
 // 3, 5, 6, 11
 
