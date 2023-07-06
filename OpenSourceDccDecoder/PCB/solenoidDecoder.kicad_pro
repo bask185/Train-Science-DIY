@@ -114,7 +114,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.01,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.0,
         "min_hole_clearance": 0.25,
@@ -418,7 +418,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.18,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -453,7 +453,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 80,
+    "annotate_start_num": 0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
@@ -515,7 +515,7 @@
     ],
     [
       "ab851e10-6952-453a-94c1-2661101c520a",
-      "LDO"
+      "POWER"
     ],
     [
       "6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9",
