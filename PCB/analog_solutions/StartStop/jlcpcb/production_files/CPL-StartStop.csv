@@ -1,0 +1,10 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1,D,D_DO-34_SOD68_P7.62mm_Horizontal,162.814,-92.202,90.0,bottom
+D2,LED,LED_D3.0mm,162.225,-80.0,0.0,top
+D3,LED,LED_D3.0mm,171.5,-80.0,180.0,top
+D4,D,D_DO-34_SOD68_P7.62mm_Horizontal,169.926,-92.202,90.0,bottom
+J1,RJ12,RJ25_Wayconn_MJEA-660X1_Horizontal,145.0,-96.95,90.0,bottom
+J2,Screw_Terminal_01x04,"TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",174.0,-102.0,0.0,bottom
+J3,RJ12,RJ25_Wayconn_MJEA-660X1_Horizontal,187.0,-102.0,270.0,bottom
+R1,2k2,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,165.342,-92.202,90.0,bottom
+R2,2k2,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,167.628,-92.202,90.0,bottom

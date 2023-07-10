@@ -1,0 +1,11 @@
+Comment,Designator,Footprint,LCSC
+SolderJumper_2_Open,JP1,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
+LED,D3,LED_D3.0mm,
+LED,D2,LED_D3.0mm,
+Screw_Terminal_01x04,J2,"TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",
+2k2,R2,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+D,D1,D_DO-34_SOD68_P7.62mm_Horizontal,
+2k2,R1,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+D,D4,D_DO-34_SOD68_P7.62mm_Horizontal,
+RJ12,J3,RJ25_Wayconn_MJEA-660X1_Horizontal,
+RJ12,J1,RJ25_Wayconn_MJEA-660X1_Horizontal,

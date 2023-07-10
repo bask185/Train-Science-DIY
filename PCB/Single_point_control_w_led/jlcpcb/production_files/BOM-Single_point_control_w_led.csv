@@ -1,0 +1,12 @@
+Comment,Designator,Footprint,LCSC
+22uF,C1,C_1206_3216Metric,C12891
+330R,"R1,R4",R_0805_handsolder-smalltext,C17630
+6k8,"R2,R3",R_0805_handsolder-smalltext,C17772
+BC847,"Q1,Q2",SOT-23,C475630
+D,"D4,D5,D6",D_SOD-123F,C64898
+LED,D3,LED_D3.0mm,
+SW_DPDT_x2,SW1,MTS_DPDT,
+Screw_Terminal_01x05,J1,"TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal",
+LED,D2,LED_D3.0mm,
+LED,D1,LED_D3.0mm,
+LED,D7,LED_D3.0mm,

@@ -1,0 +1,73 @@
+DIY dingen die ik wil verkopen
+
+arduino nano + base shields + USB?
+
+Inkoop breakout boards e.d. :
+
+servo's
+relaismodules
+5V led
+potmeters
+12mm pushbuttons https://hackerstore.nl/Artikel/1513
+dupont
+EEPROM
+
+PCB
+lichtsluis
+stroomdetectie
+LDR
+gelijkrichter + buck + screw terminals
+SplitX
+Lnet/Xnet splits
+diode matrix print? te ontwikkelen
+DCC  module
+DCC  shield (met buck)
+Xnet module
+Xnet shield? <- PANEL X shield
+Lnet module
+Lnet shield?
+MTS print + MTS
+keerlus relais
+
+SoftWare:
+AHOB
+PanelX Mk I
+PanelX Mk II
+PanelX Mk III
+shuttle service (Xnet)
+multimaus enhancer
+
+
+bestuckte PCB?
+idk een ULN2003 print ofzo
+arduino nano er op en je hebt versterkte uitgangen...
+bestuckte okkie? idk
+
+overig
+MTS long lever 3d printsel
+
+
+Wil je ook digitaal rijden? je kan natuurlijk ook analoog blijven rijden. Ook dat kan je goed doen met arduino. Allebei door elkaar kan ook.  :police:
+
+Ik heb qua hardware een paar minimalistische printjes gemaakt, een printje voor een lichtsluis, Xnet interface, Lnet interface, DCC interface, stroomdetectie printje, LDR detectie printje etc.
+
+In [url=https://forum.beneluxspoor.net/index.php?topic=106496.0]dit draadje[/url], heb ik een arduino icm gebruikt met mijn Xnet printje om een inleerbare schakelpaneel controller te maken.
+In [url=https://forum.beneluxspoor.net/index.php?topic=94212.msg3222270926#msg3222270926]dit draadje[/url] gebruik ik een multimaus om via Xnet een analoge baan met servo's en relais aan te sturen.
+
+Ik heb ook een arduino library gemaakt waarmee ik relatief makkelijk handelingen kan opnemen en afspelen. Zo kan ik bepaalde dingen automatisch laten doen.
+
+Wat je nodig hebt aan boodschappen: 
+Om een arduino servo's aan te laten sturen wijs ik meestal naar een arduino Nano en IO base shield
+Om inputs zoals schakelaars aan te sluiten, wijs ik ook naar de nano met een screw terminal shield.
+Die vind je o.a. allemaal [url=https://nl.aliexpress.com/item/1999613956.html?spm=a2g0o.productlist.main.1.67fa162cGPDDr4&algo_pvid=4d62cbd2-44b9-49f2-b47a-28570dcdba1f&algo_exp_id=4d62cbd2-44b9-49f2-b47a-28570dcdba1f-0&pdp_npi=3%40dis%21EUR%211.57%211.41%21%21%21%21%21%40212272e216844816394836990d07cb%2112000031430656380%21sea%21NL%21175003200&curPageLogUid=k7q1sMqmv5Ws]hier[/url]
+
+Als je analoog wilt rijden, wil je waarschijnlijk [url=https://nl.aliexpress.com/item/33038634587.html?spm=a2g0o.productlist.main.5.4ea4457eYVJ6Hu&algo_pvid=0bd18c9f-95a8-4268-8c67-4d5b52eb71bc&algo_exp_id=0bd18c9f-95a8-4268-8c67-4d5b52eb71bc-2&pdp_npi=3%40dis%21EUR%211.44%211.29%21%21%21%21%21%40210217c716844817328474167d073c%2167329513676%21sea%21NL%21175003200&curPageLogUid=I6MID8NaRNk1]relais modules[/url] hebben.
+
+Om trein te laten rijden zijnde analoog of digitaal heb je iets van een H-brug nodig. Je kan denken aan een [url=https://nl.aliexpress.com/item/1005003205575609.html?spm=a2g0o.productlist.main.3.4d097d4bsSj8Kb&algo_pvid=ed144bd2-f7e4-482e-b5a8-f66ec1872740&algo_exp_id=ed144bd2-f7e4-482e-b5a8-f66ec1872740-1&pdp_npi=3%40dis%21EUR%212.09%212.03%21%21%21%21%21%40211bea7b16844818330693292d07d7%2112000024654467064%21sea%21NL%21175003200&curPageLogUid=mdTdv0Rur82t]losse[/url] of een arduino met [url=https://nl.aliexpress.com/item/32663218841.html?spm=a2g0o.productlist.main.25.7c7562aaWN4v3R&algo_pvid=0d96df0b-6bdf-424c-b200-9405902fdf99&algo_exp_id=0d96df0b-6bdf-424c-b200-9405902fdf99-12&pdp_npi=3%40dis%21EUR%2117.82%2111.22%21%21%21%21%21%4021021a7216844818654471303d0744%2159915179724%21sea%21NL%21175003200&curPageLogUid=NmdXW2Pq3zxd]motorshield[/url]
+
+Evt, hangt er van af wat je wilt, heb je [url=https://nl.aliexpress.com/item/4000337865699.html?spm=a2g0o.productlist.main.1.26f0277eMJr2lf&algo_pvid=dc877baa-e0d7-4b44-890e-9cd9a9b6c6a7&algo_exp_id=dc877baa-e0d7-4b44-890e-9cd9a9b6c6a7-0&pdp_npi=3%40dis%21EUR%210.54%210.51%21%21%21%21%21%40211beca116844819755856715d07ea%2110000001381874778%21sea%21NL%21175003200&curPageLogUid=DcX5O8VvL36A]handige potmeters[/url], [url=https://nl.aliexpress.com/item/32790788377.html?spm=a2g0o.productlist.main.47.3dc57641VfsqwZ&algo_pvid=d5d690b9-b12e-44ca-93c8-5b6d4eee7565&algo_exp_id=d5d690b9-b12e-44ca-93c8-5b6d4eee7565-23&pdp_npi=3%40dis%21EUR%210.68%210.59%21%21%21%21%21%40211bf48d16844820329338505d07bc%2110000001117979805%21sea%21NL%21175003200&curPageLogUid=rrkikgLKlCR9]encoders[/url]
+
+
+Mvg,
+
+Bas
