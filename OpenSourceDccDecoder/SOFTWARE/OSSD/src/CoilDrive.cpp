@@ -21,7 +21,7 @@ uint8_t CoilDrive::update()
         else        digitalWrite( pinB, HIGH ) ;
     }
 
-    if( set == true && (millis() - prevTime) >= 100 )
+    if( set == true && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
     {   set  = false ;
         
         digitalWrite( pinA, LOW ) ;

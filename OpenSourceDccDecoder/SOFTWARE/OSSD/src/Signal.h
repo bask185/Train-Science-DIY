@@ -7,7 +7,6 @@ public:
     Signal() ;
     void    setState( uint8_t ) ;
     void    setMode( uint8_t ) ;
-    uint8_t update() ;
 
 private:
     uint8   pinA ;

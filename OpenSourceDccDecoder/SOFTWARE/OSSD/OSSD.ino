@@ -11,6 +11,7 @@ const int   nCoils   = 8 ;    // always 8
 int         nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
 uint32_t    beginTime ;
 uint8_t     mode ;
+uint8_t     activeMode ;
 
 CoilDrive   coil[nCoils] ;
 Signal      signals[nSignals] ;
@@ -89,6 +90,14 @@ void loop()
     dcc.process() ;
 
     configure() ;
+
+    if( activeMode == mode1 )
+    {
+        for( int i = 0 ; i < nCoils ; i ++ )
+        {
+            if( coil[i].update() ) break ; // only 1 coil can be activated at any give time.
+        }
+    }
 }
 
 void storeMode( uint8_t _mode )
@@ -179,10 +188,64 @@ void switchOutput( uint16_t address, uint8_t direction )            // interface
     }
 }
 
+void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) 
+{
+    uint8_t     nAddresses = getAspectAmount() / 2 + 1 ; // gets the amount of dcc addresses per signal
+    uint8_t     nSignals   = 16 / getOutputAmount() ;
+    uint16_t   endAddress  = myAddress + (nAddresses * nSignals) ;
+
+    for (int i = 0; i < nSignals; i++ )
+    {
+        if( address >= myAddress && address < endAddress )
+        {
+            uint8_t index  = (address - myAddress) / nAddresses ; // this should point to the correct signal.
+
+            signal[index].setState( aspect ) ;
+        }
+    }
+}
+
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
     if( output   != 0 ) return ;
     if( direction > 0 ) direction = 1 ;
 
-    switchOutput( address, direction ) ;
+    if( activeMode == 1 || activeMode == 2 )
+    {
+        switchOutput( address, direction ) ;
+    }
+    else // for signals only
+    {
+        uint8_t     nAddresses = getAspectAmount() / 2 + 1 ; // gets the amount of dcc addresses per signal
+        uint8_t     nSignals   = 16 / getOutputAmount() ;
+        uint16_t   endAddress  = myAddress + (nAddresses * nSignals) ;
+
+        for (int i = 0; i < nSignals; i++ )
+        {
+            if( address >= myAddress && address < endAddress )
+            {
+                uint8_t index  = (address - myAddress) / nAddresses ; // this should point to the correct signal.
+                uint8_t aspect = ((address - myAddress) % nAddresses) * 2 + direction ; // TEST ME
+
+                printNumberln("\r\nrecevied address: ", address) ;
+                printNumberln("my address: ", myAddress) ;
+                printNumberln("nAddresses: ", nAddresses) ;
+                printNumberln("nSignals: ", nSignals) ;
+                printNumberln("index: ", aspect) ;
+                printNumberln("aspect: ", aspect) ;
+
+                signal[index].setState( aspect ) ;
+            }
+        }
+        
+        /* TODO /*
+        first we need to now how many DCC addresses per signal are needed.
+        This helps us to determen the index of the signal object.
+
+        if we have the DCC addresses amount we can also determen which aspect 
+        is to be set.
+
+        notifyDccSigOutputState
+        */
+    }
 }
