@@ -1,8 +1,8 @@
 #include "src/macros.h"
 #include "src/NmraDcc.h"
 #include "config.h"
-#include "src/CoilDrive.h"
 #include "src/Signal.h"
+#include "src/CoilDrive.h"
 #include <EEPROM.h>
 
 NmraDcc     dcc ;
@@ -10,11 +10,11 @@ NmraDcc     dcc ;
 const int   nCoils   = 8 ;    // always 8
 int         nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
 uint32_t    beginTime ;
-uint8_t     mode ;
 uint8_t     activeMode ;
+uint16_t    myAddress ;
 
 CoilDrive   coil[nCoils] ;
-Signal      signals[nSignals] ;
+Signal      signal[8] ;
 
 enum modeState
 {
@@ -26,7 +26,8 @@ enum modeState
     setMode4,
 
     checkButton, // not a actual mode
-}
+} ;
+
 enum modes
 {
     mode1,
@@ -34,7 +35,7 @@ enum modes
     mode3,
     mode4,
     mode5,
-}
+} ;
 
 uint8_t mode = idle ;
 uint8_t state = idle ;
@@ -79,9 +80,9 @@ void setup()
         pinMode( GPIO[i], OUTPUT ) ;
     }
 
-    loadEeprom() ;
+    // loadEeprom() ;
     
-    dcc.init( MAN_ID_DIY, 10, CV29_ACCESSORY_DECODER | CV29_OUTPUT_ADDRESS_MODE, 0 );
+    dcc.init( MAN_ID_DIY, 10, 0, 0 );
 }
 
 void loop()
@@ -89,7 +90,7 @@ void loop()
     static uint8_t index = 0 ;
     dcc.process() ;
 
-    configure() ;
+    config() ;
 
     if( activeMode == mode1 )
     {
@@ -173,20 +174,18 @@ void config()
 }
 
 
-void switchOutput( uint16_t address, uint8_t direction )            // interface abstract method to set output
-{
-    send2config( address ) ;
-
-    for( int i = 0 ; i < settings.nGpio ; i ++ )
-    {
-        if( address == settings.myAddress + i )
-        {
-            setIndex( i ) ;
-            Serial.println(i) ;
-            return ;
-        }
-    }
-}
+// void switchOutput( uint16_t address, uint8_t direction )            // interface abstract method to set output
+// {
+//     for( int i = 0 ; i < settings.nGpio ; i ++ )
+//     {
+//         if( address == settings.myAddress + i ) // obsolete?
+//         {
+//             //setIndex( i ) ;
+//             Serial.println(i) ;
+//             return ;
+//         }
+//     }
+// }
 
 void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) 
 {
@@ -200,7 +199,7 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect )
         {
             uint8_t index  = (address - myAddress) / nAddresses ; // this should point to the correct signal.
 
-            signal[index].setState( aspect ) ;
+            //signal[index].setState( aspect ) ;
         }
     }
 }
@@ -212,7 +211,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
     if( activeMode == 1 || activeMode == 2 )
     {
-        switchOutput( address, direction ) ;
+        //switchOutput( address, direction ) ;
     }
     else // for signals only
     {
@@ -234,7 +233,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
                 printNumberln("index: ", aspect) ;
                 printNumberln("aspect: ", aspect) ;
 
-                signal[index].setState( aspect ) ;
+                //signal[index].setState( aspect ) ;
             }
         }
         

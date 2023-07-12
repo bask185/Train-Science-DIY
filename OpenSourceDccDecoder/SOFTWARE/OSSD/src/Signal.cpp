@@ -25,53 +25,41 @@ As of now FLASHING is not (yet) supported. I need to create a struct for that in
 
 static uint8_t  currentAspect ;
 
-const int       nSignalTypes    = 10 ;
-const int       maxAspect       = 10 ;
-const int       maxLeds         =  5 ;
 
-const int       OFF             = 0b00 ;
-const int        ON             = 0b01 ;
-const int         X             = 0b10 ; // flash
-struct Aspects 
-{
-    const uint8_t nAspect ;
-    const uint8_t nLeds ;
-    uint8_t aspects[maxAspect][maxLeds] ;
-} Aspect ;
 
 Aspect aspect[8] = {
 
 {   2,                          // nAspect
     2,                          // nLeds
-    {  ON, OFF },               // Green
-    { OFF,  ON }, },            // Red
+{   {  ON, OFF },               // Green
+    { OFF,  ON }, }, },            // Red
 
 {   5,                          // nAspect 
     3,                          // nLeds
-    {  ON, OFF, OFF },          // Green
-    {   x, OFF, OFF },          // Green flashing
+{   {  ON, OFF, OFF },          // Green
+    {   X, OFF, OFF },          // Green flashing
     { OFF,  ON, OFF },          // Yellow
     { OFF,   X, OFF },          // Yellow flashing
-    { OFF, OFF,  ON }, } ,      // red
+    { OFF, OFF,  ON }, } } ,      // red
 
 {   6,                          // nAspect 
     4,                          // nLeds
-    {  ON, OFF, OFF, OFF },     // red
+{   {  ON, OFF, OFF, OFF },     // red
     { OFF,  ON, OFF,  ON },     // double yellow
     { OFF,   X, OFF,   X },     // double yellow flashing
     { OFF,  ON, OFF, OFF },     // single yellow
     { OFF,   X, OFF, OFF },     // single yellow flashing
-    { OFF, OFF,  ON, OFF }, },  // RED
+    { OFF, OFF,  ON, OFF }, }, },  // RED
 } ;
 
 uint8_t getAspectAmount()
 {
-    return signal[currentAspect].nAspect ;
+    return aspect[currentAspect].nAspect ;
 }
 
 uint8_t getOutputAmount()
 {
-    return signal[currentAspect].nLeds ;
+    return aspect[currentAspect].nLeds ;
 }
 
 
