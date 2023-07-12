@@ -27,39 +27,34 @@ static uint8_t  currentAspect ;
 
 
 
-Aspect aspect[8] = {
+Aspect aspects[8] =
+{
+    {   2,                                  // nAspect
+        2,                                  // nLeds
+        {   {  ON, OFF },                   // Green
+            { OFF,  ON }, }, },             // Red
 
-{   2,                          // nAspect
-    2,                          // nLeds
-{   {  ON, OFF },               // Green
-    { OFF,  ON }, }, },            // Red
+    {   5,                                  // nAspect 
+        3,                                  // nLeds
+        {   {  ON, OFF, OFF },              // Green
+            {   X, OFF, OFF },              // Green flashing
+            { OFF,  ON, OFF },              // Yellow
+            { OFF,   X, OFF },              // Yellow flashing
+            { OFF, OFF,  ON }, } } ,        // red
 
-{   5,                          // nAspect 
-    3,                          // nLeds
-{   {  ON, OFF, OFF },          // Green
-    {   X, OFF, OFF },          // Green flashing
-    { OFF,  ON, OFF },          // Yellow
-    { OFF,   X, OFF },          // Yellow flashing
-    { OFF, OFF,  ON }, } } ,      // red
-
-{   6,                          // nAspect 
-    4,                          // nLeds
-{   {  ON, OFF, OFF, OFF },     // red
-    { OFF,  ON, OFF,  ON },     // double yellow
-    { OFF,   X, OFF,   X },     // double yellow flashing
-    { OFF,  ON, OFF, OFF },     // single yellow
-    { OFF,   X, OFF, OFF },     // single yellow flashing
-    { OFF, OFF,  ON, OFF }, }, },  // RED
+    {   6,                                  // nAspect 
+        4,                                  // nLeds
+        {   {  ON, OFF, OFF, OFF },         // red
+            { OFF,  ON, OFF,  ON },         // double yellow
+            { OFF,   X, OFF,   X },         // double yellow flashing
+            { OFF,  ON, OFF, OFF },         // single yellow
+            { OFF,   X, OFF, OFF },         // single yellow flashing
+            { OFF, OFF,  ON, OFF }, },},    // RED
 } ;
 
-uint8_t getAspectAmount()
+Aspect getAspect( uint8_t index )
 {
-    return aspect[currentAspect].nAspect ;
-}
-
-uint8_t getOutputAmount()
-{
-    return aspect[currentAspect].nLeds ;
+    return aspects[index] ;
 }
 
 
@@ -67,55 +62,42 @@ Signal::Signal()
 {
 }
 
-void Signal::begin( uint8_t tone, uint8_t _A, uint8_t _B, uint8_t _C, uint8_t _D ) // tone is 2, 3 or 4.
+void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
 {
-    pinA = _A ;
-    pinB = _B ;
-    pinC = _C ;
-
-    pinMode( pinA, OUTPUT ) ;
-    pinMode( pinB, OUTPUT ) ;
-    pinMode( pinC, OUTPUT ) ;
-    pinMode( pinD, OUTPUT ) ;
-
-    digitalWrite( pinA,  LOW ) ;
-    digitalWrite( pinB,  LOW ) ;
-    digitalWrite( pinC,  LOW ) ;
-    digitalWrite( pinD,  LOW ) ;
+    type        = _type ;
+    beginPin    = _beginPin ;
+    ledCount    = _ledCount ;
 }
 
-void Signal::setMode( uint8_t _aspect )
-{
-    aspect = _aspect ;
-}
 
-void Signal::setState( uint8_t state )
+void Signal::update()
 {
-    if( state == 0 ) // green
-    {
-        digitalWrite( pinA, HIGH ) ;
-        digitalWrite( pinB,  LOW ) ;
-        digitalWrite( pinC,  LOW ) ;
+    uint32 currTime = millis() ;
+    if( currTime - prevTime >= 1000 )  // CHANGE IN CONSTANT OR VARIABLE...
+    {   prevTime = currTime ;
+
+        for( int i = 0 ; i < ledCount ; i ++ )
+        {
+            // update all of led.
+        }
     }
-    if( state == 1 ) // yellow
-    {
-        digitalWrite( pinA,  LOW ) ;
-        digitalWrite( pinB, HIGH ) ;
-        digitalWrite( pinC,  LOW ) ;
-    }
-    if( state == 2 ) // red
-    {
-        digitalWrite( pinA,  LOW ) ;
-        digitalWrite( pinB,  LOW ) ;
-        digitalWrite( pinC, HIGH ) ;
-    }    
-    if( state == 3 ) // off
-    {
-        digitalWrite( pinA,  LOW ) ;
-        digitalWrite( pinB,  LOW ) ;
-        digitalWrite( pinC,  LOW ) ;
-    }    
 }
+
+void Signal::setType( uint8_t _type )
+{
+    type = _type ;
+}
+
+void Signal::setFirstIO( uint8_t _IO )
+{
+    beginPin = _IO ;
+}
+
+uint8_t Signal::getLedCount()
+{
+    return ledCount ;
+}
+
 
 /*  NS signal, green yellow n red
    ___

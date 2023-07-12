@@ -1,11 +1,4 @@
 #include <Arduino.h>
-<<<<<<< Updated upstream
-
-const int configButton = 2 ;
-const int ledPin = 13 ;
-const int nGPIO = 16 ;
-=======
->>>>>>> Stashed changes
 
 const int GPIO[] =
 {
@@ -15,9 +8,7 @@ const int GPIO[] =
     A3, A3, A2, A0,
 } ;
 
-<<<<<<< Updated upstream
-const int   MODE_ADDRESS = 0x0000 ;
-=======
+const int nGpio = 16 ;
 const int configButton = 8 ;
+const int ledPin = 13 ;
 
->>>>>>> Stashed changes

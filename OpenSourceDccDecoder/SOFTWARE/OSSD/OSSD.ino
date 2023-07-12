@@ -8,38 +8,30 @@
 
 
 const int   nCoils   = 8 ;    // always 8
-int         nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
-uint32_t    beginTime ;
-uint8_t     activeMode ;
-uint16_t    myAddress ;
+const int   nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
 
 NmraDcc     dcc ;
 CoilDrive   coil[nCoils] ;
-Signal      signal[8] ;
+Signal      signal[nSignals] ;
 
 enum modeState
 {
     idle,
     getAddress,
-    setMode1,
-    setMode2,
-    setMode3,
-    setMode4,
+    getIndex,
+    getType,
 
     checkButton, // not a actual mode
 } ;
 
-enum modes
-{
-    mode1,
-    mode2,
-    mode3,
-    mode4,
-    mode5,
-} ;
+uint8_t     mode        = idle ;
+uint8_t     state       = idle ;
+uint32_t    beginTime ;
+uint8_t     activeMode ;
+uint8_t     index ;
+uint16_t    receivedAddress ;
+uint16_t    myAddress ;
 
-uint8_t mode  = idle ;
-uint8_t state = idle ;
 
 // what are out variables?
 // we are a type
@@ -77,18 +69,16 @@ void statusLed() // TESTME
     }
 }
 
+
+
 void setup()
 {
-    for( int i = 0 ; i < nGPIO ; i ++ )
+    for( int i = 0 ; i < 16 ; i ++ )
     {
         pinMode( GPIO[i], OUTPUT ) ;
     }
 
-<<<<<<< Updated upstream
-    // loadEeprom() ;
-=======
     //loadEeprom() ;
->>>>>>> Stashed changes
     
     dcc.init( MAN_ID_DIY, 10, 0, 0 );
 }
@@ -99,25 +89,22 @@ void loop()
     dcc.process() ;
 
     config() ;
-<<<<<<< Updated upstream
-
-    if( activeMode == mode1 )
+}
+const int MODE_ADDRESS = 0 ;
+void resetSignals()
+{
+    signalCount = 0 ; // reset this to 0
+    uint8_t ledCount ;
+    for( int i = 0 ; i < nSignals ; i ++ )
     {
-        for( int i = 0 ; i < nCoils ; i ++ )
+        uint8_t nLeds = signal[i].getLedCount() ;
+        if( nLeds + ledCount >= nGpio ) break ;  // IO is full, no more room for this signal, break
+        else
         {
-            if( coil[i].update() ) break ; // only 1 coil can be activated at any give time.
+            ledCount += nLeds ;
+            signal[i].setFirstIO( ledCount ) ;
         }
     }
-=======
->>>>>>> Stashed changes
-}
-
-void storeMode( uint8_t _mode )
-{
-    mode = _mode ;
-    EEPROM.write( MODE_ADDRESS, mode ) ; // may be enough debounce time...this lasts 3ms iirc?
-    delay( 10 ) ;  // extra debounce time for switch
-    state = idle ;
 }
 
 
@@ -136,48 +123,38 @@ void config()
 
     case checkButton:
         if( digitalRead( configButton ) == 1 )  state = getAddress ;
-        if( millis() - beginTime >= 2000 )      state = setMode1 ;
+        if( millis() - beginTime >= 2000 )      state = getIndex ;
         break ;
 
     case getAddress:
         if(1/* address received*/)
         {
-            storeMode( mode1 ) ;
+            state = idle ;
         }
         break ; 
 
-    case setMode1:
-        if( digitalRead( configButton ) == 1 )  
-        {
-            storeMode( mode2 ) ;
-
+    case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
+        if( receivedAddress )  
+        {   receivedAddress = 0 ;
+            state = getType ;
+            index = receivedAddress ;
         }
-        if( millis() - beginTime >= 4000 ) state = setMode2 ;
-
+        if( digitalRead( configButton ) == 0 ) 
+        {
+            delay(5) ; // debounce and wait until button is released again
+            while(digitalRead( configButton ) == 0 ) {;}
+            delay(5) ;
+            state = idle ;
+        }
         break ; 
 
-    case setMode2:
-        if( digitalRead( configButton ) == 1 )  
-        {
-            storeMode( mode3 ) ;
-        }
-        if( millis() - beginTime >= 6000 ) state = setMode3 ;
-
-        break ; 
-
-    case setMode3:
-        if( digitalRead( configButton ) == 1 )  
-        {
-            storeMode( mode4 ) ;
-        }
-        if( millis() - beginTime >= 8000 ) state = setMode4 ;
-
-        break ; 
-
-    case setMode4:
-        if( digitalRead( configButton ) == 1 )
-        {
-            storeMode( mode5 ) ;
+    case getType:
+        if( receivedAddress ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
+        {   
+            signal[index-1].setType( receivedAddress ) ;
+            resetSignals() ;
+            receivedAddress = 0 ;
+            state = getIndex ;
         }
         break ; 
     }
@@ -200,12 +177,12 @@ void config()
 
 void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) 
 {
-    for( int i = 0 ; i < nGpio ; i ++ )
+    //for( int i = 0 ; i < nGpio ; i ++ )
     {
         if( address == myAddress )
         {
             //setIndex( i ) ;
-            Serial.println(i) ;
+            //Serial.println(i) ;
             return ;
         }
     }
@@ -213,6 +190,8 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect )
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
+    receivedAddress = address ;
+
     if( output   != 0 ) return ;
     if( direction > 0 ) direction = 1 ;
 
@@ -220,13 +199,13 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     {
         //switchOutput( address, direction ) ;
     }
-    else // for signals only
+    else // for signals only 
     {
         uint8_t     nAddresses = getAspectAmount() / 2 + 1 ; // gets the amount of dcc addresses per signal
         uint8_t     nSignals   = 16 / getOutputAmount() ;
         uint16_t   endAddress  = myAddress + (nAddresses * nSignals) ;
 
-        for (int i = 0; i < nSignals; i++ )
+        for (int i = 0; i < nSignals; i++ ) // NOTE: Despite this works, I must redo this part to take in acount different signal types.
         {
             if( address >= myAddress && address < endAddress )
             {
