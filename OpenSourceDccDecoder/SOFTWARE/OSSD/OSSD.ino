@@ -5,7 +5,7 @@
 #include "src/CoilDrive.h"
 #include <EEPROM.h>
 
-NmraDcc     dcc ;
+
 
 const int   nCoils   = 8 ;    // always 8
 int         nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
@@ -13,6 +13,7 @@ uint32_t    beginTime ;
 uint8_t     activeMode ;
 uint16_t    myAddress ;
 
+NmraDcc     dcc ;
 CoilDrive   coil[nCoils] ;
 Signal      signal[8] ;
 
@@ -37,10 +38,14 @@ enum modes
     mode5,
 } ;
 
-uint8_t mode = idle ;
+uint8_t mode  = idle ;
 uint8_t state = idle ;
 
-void statusLed()
+// what are out variables?
+// we are a type
+// we have an address
+
+void statusLed() // TESTME
 {
     static uint8_t prevMode ;
     static uint8_t flashes ;
@@ -70,7 +75,6 @@ void statusLed()
             digitalWrite( ledPin, !digitalRead( ledPin )) ;
         } END_REPEAT
     }
-       
 }
 
 void setup()
@@ -80,7 +84,11 @@ void setup()
         pinMode( GPIO[i], OUTPUT ) ;
     }
 
+<<<<<<< Updated upstream
     // loadEeprom() ;
+=======
+    //loadEeprom() ;
+>>>>>>> Stashed changes
     
     dcc.init( MAN_ID_DIY, 10, 0, 0 );
 }
@@ -91,6 +99,7 @@ void loop()
     dcc.process() ;
 
     config() ;
+<<<<<<< Updated upstream
 
     if( activeMode == mode1 )
     {
@@ -99,6 +108,8 @@ void loop()
             if( coil[i].update() ) break ; // only 1 coil can be activated at any give time.
         }
     }
+=======
+>>>>>>> Stashed changes
 }
 
 void storeMode( uint8_t _mode )
@@ -189,17 +200,13 @@ void config()
 
 void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) 
 {
-    uint8_t     nAddresses = getAspectAmount() / 2 + 1 ; // gets the amount of dcc addresses per signal
-    uint8_t     nSignals   = 16 / getOutputAmount() ;
-    uint16_t   endAddress  = myAddress + (nAddresses * nSignals) ;
-
-    for (int i = 0; i < nSignals; i++ )
+    for( int i = 0 ; i < nGpio ; i ++ )
     {
-        if( address >= myAddress && address < endAddress )
+        if( address == myAddress )
         {
-            uint8_t index  = (address - myAddress) / nAddresses ; // this should point to the correct signal.
-
-            //signal[index].setState( aspect ) ;
+            //setIndex( i ) ;
+            Serial.println(i) ;
+            return ;
         }
     }
 }

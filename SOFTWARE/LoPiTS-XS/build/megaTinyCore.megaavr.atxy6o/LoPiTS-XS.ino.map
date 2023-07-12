@@ -1,9 +1,29 @@
 
 
-Symbols from C:\Users\sknippels\AppData\Local\Temp\arduino-sketch-900DC2732405CD5EEC057239F0717164/LoPiTS-XS.ino.elf:
+Symbols from C:\Users\GEBRUI~1\AppData\Local\Temp\arduino-sketch-A3EF24301ADE5274F618D60ADD78D775/LoPiTS-XS.ino.elf:
 
 Name                  Value   Class        Type         Size     Line  Section
 
+notifyAdvancedCVAck |        |   w  |            NOTYPE|        |     |*UND*
+notifyCVAck         |        |   w  |            NOTYPE|        |     |*UND*
+notifyCVChange      |        |   w  |            NOTYPE|        |     |*UND*
+notifyCVRead        |        |   w  |            NOTYPE|        |     |*UND*
+notifyCVResetFactoryDefault|        |   w  |            NOTYPE|        |     |*UND*
+notifyCVValid       |        |   w  |            NOTYPE|        |     |*UND*
+notifyCVWrite       |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccAccBoardAddrSet|        |   w  |            NOTYPE|        |     |*UND*
+notifyDccAccOutputAddrSet|        |   w  |            NOTYPE|        |     |*UND*
+notifyDccAccState   |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccAccTurnoutBoard|        |   w  |            NOTYPE|        |     |*UND*
+notifyDccAccTurnoutOutput|        |   w  |            NOTYPE|        |     |*UND*
+notifyDccCVChange   |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccIdle       |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccMsg        |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccReset      |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccSigOutputState|        |   w  |            NOTYPE|        |     |*UND*
+notifyDccSigState   |        |   w  |            NOTYPE|        |     |*UND*
+notifyDccSpeedRaw   |        |   w  |            NOTYPE|        |     |*UND*
+notifyServiceMode   |        |   w  |            NOTYPE|        |     |*UND*
 __heap_end          |00000000|   W  |            NOTYPE|        |     |*ABS*
 __TEXT_REGION_ORIGIN__|00000000|   W  |            NOTYPE|        |     |*ABS*
 __tmp_reg__         |00000000|   a  |            NOTYPE|        |     |*ABS*
@@ -28,102 +48,110 @@ _initThreeStuff()   |0000028a|   T  |              FUNC|        |     |.text	/ho
 __do_clear_bss      |000002a0|   T  |            NOTYPE|00000010|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
 .do_clear_bss_loop  |000002a8|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
 .do_clear_bss_start |000002aa|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
-__do_global_ctors   |000002b0|   T  |            NOTYPE|00000014|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
-__bad_interrupt     |000002c8|   T  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_1          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_10         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_11         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_12         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_13         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_14         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_16         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_17         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_18         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_19         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_2          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_20         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_21         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_22         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_23         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_24         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_25         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_26         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_27         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_28         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_29         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_30         |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_6          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_7          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_8          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-__vector_9          |000002c8|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:315
-DCC_Decoder::State_Boot()|000002ca|   t  |              FUNC|00000002|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-DCC_Decoder::Address() [clone .constprop.0]|000002cc|   t  |              FUNC|0000003e|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-BasicAccDecoderPacket_Handler(int, bool, unsigned char)|0000030a|   t  |              FUNC|00000002|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-DCC_Decoder::State_Reset()|0000030c|   t  |              FUNC|0000007e|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-micros              |0000038a|   t  |              FUNC|00000076|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:512
+__do_global_ctors   |000002b0|   T  |            NOTYPE|00000016|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
+__bad_interrupt     |000002cc|   T  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_1          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_10         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_11         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_12         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_13         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_14         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_16         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_17         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_18         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_19         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_2          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_20         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_21         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_22         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_23         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_24         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_25         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_26         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_27         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_28         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_29         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_30         |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_6          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_7          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_8          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+__vector_9          |000002cc|   W  |            NOTYPE|        |     |.text	../../../../crt1/gcrt1.S:209
+attachInterrupt.constprop.10|000002ce|   t  |              FUNC|00000090|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+ackCV()             |0000035e|   t  |              FUNC|0000000e|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+micros              |0000036c|   t  |              FUNC|00000078|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:512
+ExternalInterruptHandler()|000003e4|   t  |              FUNC|00000376|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
 __LOCK_REGION_LENGTH__|00000400|   A  |            NOTYPE|        |     |*ABS*
 __SIGNATURE_REGION_LENGTH__|00000400|   A  |            NOTYPE|        |     |*ABS*
 __USER_SIGNATURE_REGION_LENGTH__|00000400|   A  |            NOTYPE|        |     |*ABS*
-DCC_Decoder::DCC_Interrupt()|00000400|   t  |              FUNC|0000005a|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-DCC_Decoder::State_ReadPreamble()|0000045a|   t  |              FUNC|000000fe|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-DCC_Decoder::State_ReadPacket()|00000558|   t  |              FUNC|0000013a|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-DCC_Decoder::State_Execute()|00000692|   t  |              FUNC|00000208|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+resetServiceModeTimer(unsigned char)|0000075a|   t  |              FUNC|00000082|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+notifyDccSpeed      |000007dc|   t  |              FUNC|00000002|     |.text
+notifyDccFunc       |000007de|   t  |              FUNC|00000002|     |.text
+writeCV(unsigned int, unsigned char)|000007e0|   t  |              FUNC|000000ca|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
 __DATA_REGION_LENGTH__|00000800|   A  |            NOTYPE|        |     |*ABS*
-__vector_15         |0000089a|   T  |              FUNC|00000074|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:199
-lower               |000008c6|   t  |            NOTYPE|        |     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-__vector_5          |0000090e|   T  |              FUNC|00000006|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:355
-__vector_4          |00000914|   T  |              FUNC|00000006|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:341
-__vector_3          |0000091a|   T  |              FUNC|00000006|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:328
-AttachedISR         |00000920|   t  |            NOTYPE|        |     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-isrBody             |00000920|   T  |              FUNC|0000008e|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:113
-AIntLoop            |00000966|   t  |            NOTYPE|        |     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-AIntEnd             |0000097c|   t  |            NOTYPE|        |     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
-global constructors keyed to 65535_0_LoPiTS_XS.ino.cpp.o.2276|000009ae|   t  |              FUNC|00000028|     |.text
-main                |000009d6|   T  |              FUNC|0000023c|     |.text	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:49
-__muluhisi3         |00000c12|   T  |            NOTYPE|00000014|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:626
-__tablejump2__      |00000c26|   T  |            NOTYPE|0000000c|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
-__umulhisi3         |00000c32|   T  |            NOTYPE|0000001e|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:564
-_exit               |00000c50|   T  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
-exit                |00000c50|   W  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
-__stop_program      |00000c52|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
-_etext              |00000c54|   T  |            NOTYPE|        |     |.text
-__data_load_start   |00000c8a|   A  |            NOTYPE|        |     |*ABS*
-__data_load_end     |00000c90|   A  |            NOTYPE|        |     |*ABS*
+readCV(unsigned int)|000008aa|   t  |              FUNC|00000016|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+getMyAddr()         |000008c0|   t  |              FUNC|00000092|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+validCV(unsigned int, unsigned char)|00000952|   t  |              FUNC|0000006e|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+processDirectCVOperation(unsigned char, unsigned int, unsigned char, void (*)())|000009c0|   t  |              FUNC|000000cc|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+processMultiFunctionMessage(unsigned int, DCC_ADDR_TYPE, unsigned char, unsigned char, unsigned char)|00000a8c|   t  |              FUNC|000000f8|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+ackAdvancedCV()     |00000b84|   t  |              FUNC|00000014|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+clearDccProcState(unsigned char)|00000b98|   t  |              FUNC|0000001c|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+__vector_15         |00000bb4|   T  |              FUNC|00000074|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:199
+lower               |00000be0|   t  |            NOTYPE|        |     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+__vector_5          |00000c28|   T  |              FUNC|00000006|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:355
+__vector_4          |00000c2e|   T  |              FUNC|00000006|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:341
+__vector_3          |00000c34|   T  |              FUNC|00000006|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:328
+AttachedISR         |00000c3a|   t  |            NOTYPE|        |     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+isrBody             |00000c3a|   T  |              FUNC|0000008e|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:113
+AIntLoop            |00000c80|   t  |            NOTYPE|        |     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+AIntEnd             |00000c96|   t  |            NOTYPE|        |     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:197
+main                |00000cc8|   T  |              FUNC|000006e6|     |.text	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/main.cpp:49
+_GLOBAL__sub_I_dcc  |000013ae|   t  |              FUNC|0000001c|     |.text
+__divmodhi4         |000013ca|   T  |            NOTYPE|00000026|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1440
+_div                |000013ca|   T  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1440
+__divmodhi4_neg1    |000013e0|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1454
+__divmodhi4_neg2    |000013e8|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1460
+__divmodhi4_exit    |000013ee|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1464
+__muluhisi3         |000013f0|   T  |            NOTYPE|00000014|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:626
+__udivmodhi4        |00001404|   T  |            NOTYPE|00000028|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1408
+__udivmodhi4_loop   |0000140c|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1413
+__udivmodhi4_ep     |0000141a|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1421
+__tablejump2__      |0000142c|   T  |            NOTYPE|0000000c|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
+__umulhisi3         |00001438|   T  |            NOTYPE|0000001e|     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:564
+memcmp              |00001456|   T  |              FUNC|0000001a|     |.text
+_exit               |00001470|   T  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+exit                |00001470|   W  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+__stop_program      |00001472|   t  |            NOTYPE|        |     |.text	/home/admin/Arduino/toolchain-avr-special/gcc-build/avr/avrxmega3/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+_etext              |00001474|   T  |            NOTYPE|        |     |.text
+__data_load_start   |000014aa|   A  |            NOTYPE|        |     |*ABS*
+__data_load_end     |000014b0|   A  |            NOTYPE|        |     |*ABS*
 __stack             |00003fff|   W  |            NOTYPE|        |     |*ABS*
 __RODATA_PM_OFFSET__|00008000|   A  |            NOTYPE|        |     |*ABS*
 __TEXT_REGION_LENGTH__|00008000|   A  |            NOTYPE|        |     |*ABS*
-digital_pin_to_bit_position|00008c54|   r  |            OBJECT|00000012|     |.rodata	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:330
-digital_pin_to_bit_mask|00008c66|   r  |            OBJECT|00000012|     |.rodata	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:354
-digital_pin_to_port |00008c78|   r  |            OBJECT|00000012|     |.rodata	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:305
+digital_pin_to_bit_mask|00009474|   r  |            OBJECT|00000012|     |.rodata	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:354
+digital_pin_to_port |00009486|   r  |            OBJECT|00000012|     |.rodata	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:305
+digital_pin_to_bit_position|00009498|   r  |            OBJECT|00000012|     |.rodata	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\variants\txy6/pins_arduino.h:330
 __DATA_REGION_ORIGIN__|00803800|   A  |            NOTYPE|        |     |*ABS*
 __data_start        |00803800|   D  |            NOTYPE|        |     |.data
-intFunc             |00803800|   d  |            OBJECT|00000006|     |.data	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:50
+intFunc             |00803800|   d  |            OBJECT|00000006|     |.data	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:50
 __bss_start         |00803806|   B  |            NOTYPE|        |     |.bss
 __data_end          |00803806|   D  |            NOTYPE|        |     |.data
 _edata              |00803806|   D  |            NOTYPE|        |     |.data
-intFunc_C           |00803806|   b  |            OBJECT|00000008|     |.bss	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:48
-intFunc_B           |0080380e|   b  |            OBJECT|0000000c|     |.bss	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:45
-intFunc_A           |0080381a|   b  |            OBJECT|00000010|     |.bss	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:43
-DCC_Decoder::gPreambleCount|0080382a|   b  |            OBJECT|00000002|     |.bss
-DCC_Decoder::gLastChaos|0080382c|   b  |            OBJECT|00000002|     |.bss
-DCC_Decoder::gPacketEndedWith1|0080382e|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gPacketMask|0080382f|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gPacketIndex|00803830|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gPacket|00803831|   b  |            OBJECT|00000006|     |.bss
-DCC_Decoder::gLastPacketToThisAddress|00803837|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gThisPacketMS|00803838|   b  |            OBJECT|00000004|     |.bss
-DCC_Decoder::gHandledAsRawPacket|0080383c|   b  |            OBJECT|00000001|     |.bss
-timingStruct        |0080383d|   b  |            OBJECT|0000000a|     |.bss	C:\Users\sknippels\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:186
-DCC_Decoder::gInterruptChaos|00803847|   b  |            OBJECT|00000002|     |.bss
-DCC_Decoder::gInterruptTime|00803849|   b  |            OBJECT|00000004|     |.bss
-DCC_Decoder::gInterruptTimeIndex|0080384d|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gResetReason|0080384e|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::gInterruptMicros|0080384f|   b  |            OBJECT|00000004|     |.bss
-DCC_Decoder::func_BasicAccPacket_All_Packets|00803853|   b  |            OBJECT|00000001|     |.bss
-DCC_Decoder::func_BasicAccPacket|00803854|   b  |            OBJECT|00000002|     |.bss
-DCC_Decoder::gCV    |00803856|   b  |            OBJECT|00000101|     |.bss
-DCC_Decoder::gState |00803957|   b  |            OBJECT|00000002|     |.bss
-pwm                 |00803959|   b  |            OBJECT|00000011|     |.bss	C:\Users\sknippels\Documents\hobbyProjects\Train-Science-DIY\SOFTWARE\LoPiTS-XS/LoPiTS-XS.ino:5
-__bss_end           |0080396a|   B  |            NOTYPE|        |     |.bss
-_end                |0080396a|   N  |            NOTYPE|        |     |.comment
+intFunc_C           |00803806|   b  |            OBJECT|00000008|     |.bss	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:48
+intFunc_B           |0080380e|   b  |            OBJECT|0000000c|     |.bss	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:45
+intFunc_A           |0080381a|   b  |            OBJECT|00000010|     |.bss	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/WInterrupts.c:43
+ExternalInterruptHandler()::preambleBitCount|0080382a|   b  |            OBJECT|00000001|     |.bss
+ExternalInterruptHandler()::bit1|0080382b|   b  |            OBJECT|00000001|     |.bss
+ExternalInterruptHandler()::halfBit|0080382c|   b  |            OBJECT|00000001|     |.bss
+ExternalInterruptHandler()::lastMicros|0080382d|   b  |            OBJECT|00000002|     |.bss
+ISRLevel            |0080382f|   b  |            OBJECT|00000001|     |.bss	C:\Users\GEBRUI~1\AppData\Local\Temp\arduino-sketch-A3EF24301ADE5274F618D60ADD78D775\sketch\src/NmraDcc.cpp:267
+ISREdge             |00803830|   b  |            OBJECT|00000001|     |.bss
+bitMin              |00803831|   b  |            OBJECT|00000002|     |.bss
+bitMax              |00803833|   b  |            OBJECT|00000002|     |.bss
+timingStruct        |00803835|   b  |            OBJECT|0000000a|     |.bss	C:\Users\Gebruiker\AppData\Local\Arduino15\packages\megaTinyCore\hardware\megaavr\2.6.8\cores\megatinycore/wiring.c:186
+DccRx               |0080383f|   b  |            OBJECT|00000016|     |.bss	C:\Users\GEBRUI~1\AppData\Local\Temp\arduino-sketch-A3EF24301ADE5274F618D60ADD78D775\sketch\src/NmraDcc.cpp:302
+DccProcState        |00803855|   b  |            OBJECT|0000001a|     |.bss	C:\Users\GEBRUI~1\AppData\Local\Temp\arduino-sketch-A3EF24301ADE5274F618D60ADD78D775\sketch\src/NmraDcc.cpp:328
+pwm                 |0080386f|   b  |            OBJECT|00000011|     |.bss	C:\Users\Gebruiker\Documents\PROJECTS\Train-Science-DIY\SOFTWARE\LoPiTS-XS/LoPiTS-XS.ino:5
+dcc                 |00803880|   b  |            OBJECT|00000008|     |.bss	C:\Users\Gebruiker\Documents\PROJECTS\Train-Science-DIY\SOFTWARE\LoPiTS-XS/LoPiTS-XS.ino:4
+__bss_end           |00803888|   B  |            NOTYPE|        |     |.bss
+_end                |00803888|   N  |            NOTYPE|        |     |.comment
 __eeprom_end        |00810000|   N  |            NOTYPE|        |     |.comment
