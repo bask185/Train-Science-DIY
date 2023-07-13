@@ -167,6 +167,8 @@ void resetSignals()
 
 /* TODO
 need an option to enable extended commands
+need an option to pick between solenoids, perhaps still implement as a signal
+(it would solve soo many problems, and it is propably workable)
 */
 void config()
 {

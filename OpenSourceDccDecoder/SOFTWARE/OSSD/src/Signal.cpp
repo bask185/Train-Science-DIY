@@ -29,10 +29,11 @@ static uint8_t  currentAspect = 2 ;
 
 const Aspect aspects[15] =
 {
-    {   2,                                  // nAspect
+    {   3,                                  // nAspect
         1,                                  // nLeds   <-- for single output devices like decouplers
         {   { OFF },                        // OFF
-            {  ON }, }, },                  // ON
+            {  ON },                        // ON
+            {   X }, }, },                  // toggle
 
     {   2,                                  // nAspect
         2,                                  // nLeds
