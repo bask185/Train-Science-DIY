@@ -6,7 +6,7 @@ import sys
 # print('ADDING TIME STAMP')
 # os.system("addDate.py")
 print('BUILDING PROJECT')
-x = os.system('arduino-cli compile -b arduino:avr:nano -e')
+x = os.system('arduino-cli compile -b arduino:avr:uno -e')
 if x == 1 :
     print('BUILD FAILED!!!')
     sys.exit(1)

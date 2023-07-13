@@ -15,7 +15,7 @@ typedef struct Aspects
     uint8_t aspects[maxAspect][maxLeds] ;
 } Aspect ;
 
-extern Aspect aspect[] ;
+extern Aspect aspects[] ;
 
 
 uint8_t getAspectAmount() ;
@@ -26,19 +26,30 @@ class Signal {
 
 public:
     Signal() ;
-    void    begin( uint8_t, uint8_t, uint8_t ) ; // used during boot
+    void    begin( uint8, uint8, uint8 ) ; // used during boot
     void    update() ;
 
     uint8   getLedCount() ;
-    void    setType() ;
-    void    setFirstIO( uint8_t ) ;
+    void    setType( uint8 ) ;
+    void    setFirstIO( uint8 ) ;
+    void    setAddress( uint16 ) ;
+    uint8   setAspectExt( uint16, uint8 ) ;
+    uint8   setAspect(    uint16, uint8 ) ;
+    uint8   getAspectAmount() ;
+    uint8   get1stPin() ;
+    uint16  getAddress() ;
+    uint16  getAddressAmount() ;
 
 private:
     uint8   beginPin ;
-    uint8   aspect  ;
-    uint8   type  ;
+    uint8   aspect ;
+    uint8   nAspects ;
+    uint8   nAddresses ;
+    uint8   type ;
     uint8   ledCount ;
+    uint16  myAddress ;
     uint32  prevTime ;
+    
 } ;
 
 /* humanizing:
@@ -59,3 +70,5 @@ De nodige methods zijn:
  begin/init
  update
  get led count
+
+ */

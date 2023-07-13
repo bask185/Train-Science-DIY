@@ -23,9 +23,9 @@ As of now FLASHING is not (yet) supported. I need to create a struct for that in
  *
  * */ 
 
-static uint8_t  currentAspect ;
+static uint8_t  currentAspect = 2 ;
 
-
+// NOTE: as is now 1 aspect consumes 52 bytes. So I can add like 15 or so..
 
 Aspect aspects[8] =
 {
@@ -42,13 +42,14 @@ Aspect aspects[8] =
             { OFF,   X, OFF },              // Yellow flashing
             { OFF, OFF,  ON }, } } ,        // red
 
-    {   6,                                  // nAspect 
+    {   7,                                  // nAspect 
         4,                                  // nLeds
         {   {  ON, OFF, OFF, OFF },         // red
             { OFF,  ON, OFF,  ON },         // double yellow
             { OFF,   X, OFF,   X },         // double yellow flashing
             { OFF,  ON, OFF, OFF },         // single yellow
             { OFF,   X, OFF, OFF },         // single yellow flashing
+            { OFF, OFF,   X, OFF },         // red flashing
             { OFF, OFF,  ON, OFF }, },},    // RED
 } ;
 
@@ -58,8 +59,7 @@ Aspect getAspect( uint8_t index )
 }
 
 
-Signal::Signal()
-{
+Signal::Signal(){
 }
 
 void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
@@ -83,9 +83,35 @@ void Signal::update()
     }
 }
 
+/* SETTERS */
+uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
+{
+    if( dccAddress == myAddress )
+    {
+        aspect = _aspect ;
+        return 1 ;
+    }
+    return 0 ;
+}
+
+uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
+{
+    uint16 beginAddress = myAddress ;
+    uint16   endAddress = beginAddress + nAddresses -1 ;
+    if( dccAddress >= beginAddress && dccAddress <=endAddress )
+    {
+        aspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // TEST ME
+        printNumberln("Aspect set: ",aspect) ;
+    }
+
+}
+
 void Signal::setType( uint8_t _type )
 {
     type = _type ;
+    ledCount = aspects[type].nLeds ;
+    nAspects = aspects[type].nAspect ;
+    nAddresses = (nAspects-1) / 2 + 1  ;
 }
 
 void Signal::setFirstIO( uint8_t _IO )
@@ -93,10 +119,38 @@ void Signal::setFirstIO( uint8_t _IO )
     beginPin = _IO ;
 }
 
+void Signal::setAddress( uint16 _address )
+{
+    myAddress = _address ;
+}
+
+
+/* GETTERS */
 uint8_t Signal::getLedCount()
 {
     return ledCount ;
 }
+
+uint8_t Signal::get1stPin()
+{
+    return beginPin ;
+}
+
+uint8_t Signal::getAspectAmount()
+{
+    return nAspects ;
+}
+
+uint16 Signal::getAddress()
+{
+    return myAddress ;
+}
+
+uint16 Signal::getAddressAmount()
+{
+    return( nAddresses ) ;
+}
+
 
 
 /*  NS signal, green yellow n red

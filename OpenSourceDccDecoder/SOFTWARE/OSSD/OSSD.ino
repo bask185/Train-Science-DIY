@@ -7,12 +7,12 @@
 
 
 
-const int   nCoils   = 8 ;    // always 8
-const int   nSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
+const int   nCoils     = 8 ;    // always 8
+const int   maxSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
 
 NmraDcc     dcc ;
 CoilDrive   coil[nCoils] ;
-Signal      signal[nSignals] ;
+Signal      signal[maxSignals] ;
 
 enum modeState
 {
@@ -28,9 +28,12 @@ uint8_t     mode        = idle ;
 uint8_t     state       = idle ;
 uint32_t    beginTime ;
 uint8_t     activeMode ;
+uint8_t     signalCount ;
 uint8_t     index ;
 uint16_t    receivedAddress ;
 uint16_t    myAddress ;
+
+const int MODE_ADDRESS = 0 ;
 
 
 // what are out variables?
@@ -75,12 +78,26 @@ void setup()
 {
     for( int i = 0 ; i < 16 ; i ++ )
     {
-        pinMode( GPIO[i], OUTPUT ) ;
+        //pinMode( GPIO[i], OUTPUT ) ;
     }
 
     //loadEeprom() ;
     
-    dcc.init( MAN_ID_DIY, 10, 0, 0 );
+    //dcc.init( MAN_ID_DIY, 10, 0, 0 );
+
+    Serial.begin(115200);
+    printNumberln("mynumber = ", myAddress ) ;
+
+    myAddress = 32 ;
+    signal[0].setType(2) ; // 4 leds
+    signal[1].setType(2) ; // 8 leds
+    signal[2].setType(1) ; // 11 leds
+    signal[3].setType(1) ; // 14 leds
+    signal[4].setType(0) ; // 16 leds
+    signal[5].setType(0) ; // 16 leds
+    signal[6].setType(0) ; // 16 leds
+    signal[7].setType(0) ; // 16 leds
+    resetSignals() ;
 }
 
 void loop()
@@ -90,24 +107,45 @@ void loop()
 
     config() ;
 }
-const int MODE_ADDRESS = 0 ;
+
+
 void resetSignals()
 {
+    Serial.println("\r\n\r\nSETTING SIGNALS");
     signalCount = 0 ; // reset this to 0
+
+    printNumberln(F("begin address: "), myAddress );
+
     uint8_t ledCount ;
-    for( int i = 0 ; i < nSignals ; i ++ )
+    uint16_t addressCount = myAddress ;
+    for( int i = 0 ; i < maxSignals ; i ++ )
     {
         uint8_t nLeds = signal[i].getLedCount() ;
-        if( nLeds + ledCount >= nGpio ) break ;  // IO is full, no more room for this signal, break
+        
+        if( nLeds + ledCount > nGpio ) break ;  // IO is full, no more room for this signal, break
         else
         {
-            ledCount += nLeds ;
             signal[i].setFirstIO( ledCount ) ;
+            signal[i].setAddress( addressCount ) ;
+
+            ledCount += nLeds ;
+            addressCount += signal[i].getAddressAmount() ;
+
+            printNumber_(F("\r\nsignal #"),      i ) ;
+            printNumberln(F("led amount: "),     ledCount);
+            printNumberln(F("first IO pin: "),   signal[i].get1stPin());
+            printNumberln(F("aspect amount: "),  signal[i].getAspectAmount());
+            printNumberln(F("begin address: "),  signal[i].getAddress()) ;
+            printNumberln(F("end address: "),    signal[i].getAddress() + signal[i].getAddressAmount() - 1 ) ;
+            signalCount ++ ;
         }
     }
+    printNumberln(F("amount ot signals: "), signalCount ) ;
 }
 
-
+/* TODO
+need an option to enable extended commands
+*/
 void config()
 {
     switch( state )
@@ -158,7 +196,6 @@ void config()
         }
         break ; 
     }
-
 }
 
 
@@ -195,42 +232,52 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     if( output   != 0 ) return ;
     if( direction > 0 ) direction = 1 ;
 
-    if( activeMode == 1 || activeMode == 2 )
+    if( activeMode == 1 )
+    {
+        for( int i = 0 ; i < signalCount ; i ++ )
+        {
+        }
+    }
+    else if( activeMode == 2 )
     {
         //switchOutput( address, direction ) ;
     }
     else // for signals only 
     {
-        uint8_t     nAddresses = getAspectAmount() / 2 + 1 ; // gets the amount of dcc addresses per signal
-        uint8_t     nSignals   = 16 / getOutputAmount() ;
-        uint16_t   endAddress  = myAddress + (nAddresses * nSignals) ;
-
-        for (int i = 0; i < nSignals; i++ ) // NOTE: Despite this works, I must redo this part to take in acount different signal types.
+                /* SIT REP /*
+        Ok, following code should theoretically figure out which address belongs to which signal and what aspect it should show.
+        Before I can test that, I need initialized values to test the below.
+        
+         
+        
+        */
+        uint8_t addressCounter = 0 ;
+        for( int i = 0 ; i < signalCount ; i ++ )
         {
-            if( address >= myAddress && address < endAddress )
+            uint8_t      nAspects = signal[i].getAspectAmount() ;
+            uint8_t    nAddresses = (nAspects-1) / 2 + 1  ;
+            uint8_t  beginAddress = myAddress    + addressCounter ;
+            uint8_t    endAddress = beginAddress + nAddresses ;
+
+            addressCounter += nAddresses ; // dynamically increment for next signal. 
+
+            if( address >= beginAddress && address < endAddress ) // if recveived address and dir is for one of my signals, we need to determen which aspect to display 
             {
-                uint8_t index  = (address - myAddress) / nAddresses ; // this should point to the correct signal.
-                uint8_t aspect = ((address - myAddress) % nAddresses) * 2 + direction ; // TEST ME
+                uint8_t index  =  (address - beginAddress) / nAddresses ; // this should point to the correct signal. // TEST ME
+                uint8_t aspect = ((address - beginAddress) % nAddresses) * 2 + direction ; // TEST ME
+            
+                printNumberln( F("\r\nreceived address: "), address ) ;
+                printNumberln( F("received direction  : "), direction ) ;
+                printNumberln( F("nAspects            : "), nAspects ) ;
+                printNumberln( F("begin address       : "), beginAddress ) ;
+                printNumberln( F("end address         : "), endAddress ) ;
+                printNumberln( F("nSignals            : "), signalCount ) ;
+                printNumberln( F("index               : "), index ) ;
+                printNumberln( F("aspect              : "), aspect ) ;
+                break ;
 
-                printNumberln("\r\nrecevied address: ", address) ;
-                printNumberln("my address: ", myAddress) ;
-                printNumberln("nAddresses: ", nAddresses) ;
-                printNumberln("nSignals: ", nSignals) ;
-                printNumberln("index: ", aspect) ;
-                printNumberln("aspect: ", aspect) ;
-
-                //signal[index].setState( aspect ) ;
+        //         //signal[index].setState( aspect ) ;
             }
         }
-        
-        /* TODO /*
-        first we need to now how many DCC addresses per signal are needed.
-        This helps us to determen the index of the signal object.
-
-        if we have the DCC addresses amount we can also determen which aspect 
-        is to be set.
-
-        notifyDccSigOutputState
-        */
     }
 }
