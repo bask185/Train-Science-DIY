@@ -8,6 +8,7 @@ const int       maxLeds         =  5 ;
 const int       OFF             = 0b00 ;
 const int        ON             = 0b01 ;
 const int         X             = 0b10 ; // flash
+
 typedef struct Aspects 
 {
     const uint8_t nAspect ;

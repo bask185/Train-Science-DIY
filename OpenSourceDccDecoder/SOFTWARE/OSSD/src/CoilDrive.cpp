@@ -15,14 +15,14 @@ uint8_t CoilDrive::update()
     {  prevState = state ;
 
         prevTime = millis() ;
-        set = true ;
+        set = false ;
 
         if( state ) digitalWrite( pinA, HIGH ) ;
         else        digitalWrite( pinB, HIGH ) ;
     }
 
-    if( set == true && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
-    {   set  = false ;
+    if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
+    {   set  = true ;
         
         digitalWrite( pinA, LOW ) ;
         digitalWrite( pinB, LOW ) ;

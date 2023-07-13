@@ -8,7 +8,7 @@
 
 
 const int   nCoils     = 8 ;    // always 8
-const int   maxSignals = 8 ;    // start with maximum amount, may be less depending on what mode is selected.
+const int   maxSignals = 16 ;   // 16 for single outputs
 
 NmraDcc     dcc ;
 CoilDrive   coil[nCoils] ;
@@ -28,6 +28,7 @@ uint8_t     mode        = idle ;
 uint8_t     state       = idle ;
 uint32_t    beginTime ;
 uint8_t     activeMode ;
+uint8_t     coilIndex ;
 uint8_t     signalCount ;
 uint8_t     index ;
 uint16_t    receivedAddress ;
@@ -89,28 +90,23 @@ void setup()
     printNumberln("mynumber = ", myAddress ) ;
 
     myAddress = 32 ;
-    signal[0].setType(2) ; // 4 leds
-    signal[1].setType(2) ; // 8 leds
-    signal[2].setType(1) ; // 11 leds
-    signal[3].setType(1) ; // 14 leds
+    signal[0].setType(0) ; // 4 leds
+    signal[1].setType(0) ; // 8 leds
+    signal[2].setType(0) ; // 11 leds
+    signal[3].setType(0) ; // 14 leds
     signal[4].setType(0) ; // 16 leds
     signal[5].setType(0) ; // 16 leds
     signal[6].setType(0) ; // 16 leds
     signal[7].setType(0) ; // 16 leds
+    signal[8].setType(0) ; // 16 leds
+    signal[9].setType(0) ; // 16 leds
+    signal[10].setType(0) ; // 16 leds
+    signal[11].setType(0) ; // 16 leds
+    signal[12].setType(0) ; // 16 leds
+    signal[13].setType(0) ; // 16 leds
+    signal[14].setType(0) ; // 16 leds
+    signal[15].setType(0) ; // 16 leds
     resetSignals() ;
-
-    signal[1].setAspect( 36, 0) ; // NOTE: CONVENTIONAL ADDRESSING WORKS! VERIFIED!
-    signal[1].setAspect( 36, 1) ; //
-    signal[1].setAspect( 37, 0) ;
-    signal[1].setAspect( 37, 1) ;
-    signal[1].setAspect( 38, 0) ;
-    signal[1].setAspect( 38, 1) ;
-    signal[1].setAspect( 39, 0) ;
-    signal[1].setAspect( 39, 1) ;
-    signal[1].setAspect( 40, 0) ;
-    signal[1].setAspect( 40, 1) ;
-    signal[1].setAspect( 41, 0) ;
-    signal[1].setAspect( 41, 1) ;
 }
 
 void loop()
@@ -120,12 +116,15 @@ void loop()
 
     config() ;
 
-    if( activeMode == 1 ) for( int i = 0 ; i < nCoils ; i ++ )
+    if( activeMode == 1 ) // coil mode
     {
-        coil[i].update() ;
+        if( coil[coilIndex].update() == 1 ) // if a coil is being set, the index won't be changed. Prevent from more than 1 coils to be powered at any given time
+        {
+            if( ++ coilIndex == nCoils ) coilIndex = 0 ;
+        }
     }
-    
-    if( activeMode == 3 ) for( int i = 0 ; i < signalCount ; i ++ )
+
+    if( activeMode == 2 ) for( int i = 0 ; i < signalCount ; i ++ )
     {
         signal[i].update() ;
     }
@@ -134,7 +133,7 @@ void loop()
 
 void resetSignals()
 {
-    Serial.println("\r\n\r\nSETTING SIGNALS");
+    // Serial.println("\r\n\r\nSETTING SIGNALS");
     signalCount = 0 ; // reset this to 0
 
     printNumberln(F("begin address: "), myAddress );
