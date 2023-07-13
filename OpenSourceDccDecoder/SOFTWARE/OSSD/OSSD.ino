@@ -98,6 +98,19 @@ void setup()
     signal[6].setType(0) ; // 16 leds
     signal[7].setType(0) ; // 16 leds
     resetSignals() ;
+
+    signal[1].setAspect( 36, 0) ; // NOTE: CONVENTIONAL ADDRESSING WORKS! VERIFIED!
+    signal[1].setAspect( 36, 1) ; //
+    signal[1].setAspect( 37, 0) ;
+    signal[1].setAspect( 37, 1) ;
+    signal[1].setAspect( 38, 0) ;
+    signal[1].setAspect( 38, 1) ;
+    signal[1].setAspect( 39, 0) ;
+    signal[1].setAspect( 39, 1) ;
+    signal[1].setAspect( 40, 0) ;
+    signal[1].setAspect( 40, 1) ;
+    signal[1].setAspect( 41, 0) ;
+    signal[1].setAspect( 41, 1) ;
 }
 
 void loop()
@@ -106,6 +119,16 @@ void loop()
     dcc.process() ;
 
     config() ;
+
+    if( activeMode == 1 ) for( int i = 0 ; i < nCoils ; i ++ )
+    {
+        coil[i].update() ;
+    }
+    
+    if( activeMode == 3 ) for( int i = 0 ; i < signalCount ; i ++ )
+    {
+        signal[i].update() ;
+    }
 }
 
 
@@ -234,50 +257,25 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
     if( activeMode == 1 )
     {
-        for( int i = 0 ; i < signalCount ; i ++ )
+        if( address >= myAddress && address < (myAddress+16))
         {
+            uint8_t index = address - myAddress ;
+            coil[index].setState( direction ) ;
         }
     }
     else if( activeMode == 2 )
     {
-        //switchOutput( address, direction ) ;
+        if( address >= myAddress && address < (myAddress+16))
+        {
+            uint8_t index = address - myAddress ;
+            digitalWrite( GPIO[index], direction ) ;
+        }
     }
     else // for signals only 
     {
-                /* SIT REP /*
-        Ok, following code should theoretically figure out which address belongs to which signal and what aspect it should show.
-        Before I can test that, I need initialized values to test the below.
-        
-         
-        
-        */
-        uint8_t addressCounter = 0 ;
         for( int i = 0 ; i < signalCount ; i ++ )
         {
-            uint8_t      nAspects = signal[i].getAspectAmount() ;
-            uint8_t    nAddresses = (nAspects-1) / 2 + 1  ;
-            uint8_t  beginAddress = myAddress    + addressCounter ;
-            uint8_t    endAddress = beginAddress + nAddresses ;
-
-            addressCounter += nAddresses ; // dynamically increment for next signal. 
-
-            if( address >= beginAddress && address < endAddress ) // if recveived address and dir is for one of my signals, we need to determen which aspect to display 
-            {
-                uint8_t index  =  (address - beginAddress) / nAddresses ; // this should point to the correct signal. // TEST ME
-                uint8_t aspect = ((address - beginAddress) % nAddresses) * 2 + direction ; // TEST ME
-            
-                printNumberln( F("\r\nreceived address: "), address ) ;
-                printNumberln( F("received direction  : "), direction ) ;
-                printNumberln( F("nAspects            : "), nAspects ) ;
-                printNumberln( F("begin address       : "), beginAddress ) ;
-                printNumberln( F("end address         : "), endAddress ) ;
-                printNumberln( F("nSignals            : "), signalCount ) ;
-                printNumberln( F("index               : "), index ) ;
-                printNumberln( F("aspect              : "), aspect ) ;
-                break ;
-
-        //         //signal[index].setState( aspect ) ;
-            }
+            signal[i].setAspect( address, direction ) ; // a signal objects checks his own address (should add this to coil object?) nah...
         }
     }
 }

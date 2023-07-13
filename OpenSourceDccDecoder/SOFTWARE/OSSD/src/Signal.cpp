@@ -27,7 +27,7 @@ static uint8_t  currentAspect = 2 ;
 
 // NOTE: as is now 1 aspect consumes 52 bytes. So I can add like 15 or so..
 
-Aspect aspects[8] =
+const Aspect aspects[15] =
 {
     {   2,                                  // nAspect
         2,                                  // nLeds
@@ -51,6 +51,7 @@ Aspect aspects[8] =
             { OFF,   X, OFF, OFF },         // single yellow flashing
             { OFF, OFF,   X, OFF },         // red flashing
             { OFF, OFF,  ON, OFF }, },},    // RED
+
 } ;
 
 Aspect getAspect( uint8_t index )
@@ -59,7 +60,8 @@ Aspect getAspect( uint8_t index )
 }
 
 
-Signal::Signal(){
+Signal::Signal()
+{
 }
 
 void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
