@@ -1,8 +1,7 @@
 #include "src/macros.h"
 #include "src/NmraDcc.h"
 #include "config.h"
-#include "src/Signal.h"
-#include "src/CoilDrive.h"
+#include "Signal.h"
 #include <EEPROM.h>
 
 
@@ -11,7 +10,6 @@ const int   nCoils     = 8 ;    // always 8
 const int   maxSignals = 16 ;   // 16 for single outputs
 
 NmraDcc     dcc ;
-CoilDrive   coil[nCoils] ;
 Signal      signal[maxSignals] ;
 
 enum modeState
@@ -28,9 +26,8 @@ uint8_t     mode        = idle ;
 uint8_t     state       = idle ;
 uint32_t    beginTime ;
 uint8_t     activeMode ;
-uint8_t     coilIndex ;
-uint8_t     signalCount ;
 uint8_t     index ;
+uint8_t     signalCount ;
 uint16_t    receivedAddress ;
 uint16_t    myAddress ;
 
@@ -111,22 +108,13 @@ void setup()
 
 void loop()
 {
-    static uint8_t index = 0 ;
     dcc.process() ;
 
     config() ;
 
-    if( activeMode == 1 ) // coil mode
+    if( signal[index].update() == 1 )
     {
-        if( coil[coilIndex].update() == 1 ) // if a coil is being set, the index won't be changed. Prevent from more than 1 coils to be powered at any given time
-        {
-            if( ++ coilIndex == nCoils ) coilIndex = 0 ;
-        }
-    }
-
-    if( activeMode == 2 ) for( int i = 0 ; i < signalCount ; i ++ )
-    {
-        signal[i].update() ;
+        if( ++ index == signalCount ) index = 0 ;
     }
 }
 
@@ -256,27 +244,8 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     if( output   != 0 ) return ;
     if( direction > 0 ) direction = 1 ;
 
-    if( activeMode == 1 )
+    for( int i = 0 ; i < signalCount ; i ++ )
     {
-        if( address >= myAddress && address < (myAddress+16))
-        {
-            uint8_t index = address - myAddress ;
-            coil[index].setState( direction ) ;
-        }
-    }
-    else if( activeMode == 2 )
-    {
-        if( address >= myAddress && address < (myAddress+16))
-        {
-            uint8_t index = address - myAddress ;
-            digitalWrite( GPIO[index], direction ) ;
-        }
-    }
-    else // for signals only 
-    {
-        for( int i = 0 ; i < signalCount ; i ++ )
-        {
-            signal[i].setAspect( address, direction ) ; // a signal objects checks his own address (should add this to coil object?) nah...
-        }
+        signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
     }
 }
