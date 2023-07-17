@@ -13,17 +13,24 @@ static uint8_t  currentAspect = 2 ;
 
 const Aspect aspects[15] =
 {
-    {   2,                                  // nAspect
-        2,                                  // nLeds   <-- for double coils only
+    {   2,                                  // nAspect  SPECIAL double coils, default mode for points
+        2,                                  // nLeds
         {   { C },                          // OFF
             { C }, }, },                    // toggle
 
     {   3,                                  // nAspect
-        1,                                  // nLeds   <-- for single output devices like decouplers
+        1,                                  // nLeds   SPECIAL single output only devices
         {   { OFF },                        // OFF
             {  ON },                        // ON
             {   X }, }, },                  // toggle
 
+    {   4,                                  // nAspect  SPECIAL, RAILWAY CROSSINGS
+        3,                                  // nLeds
+        {   { OFF, OFF, OFF },              // AHOB OFF
+            {  ON,   X,   X },              // AHOB ON  NOTE! need differentiating between the 2 blink leds
+            { OFF,   X, OFF },              // AKI  OFF
+            {   X, OFF,   X }, }, },        // AKI ON   NOTE! need differentiating between the 2 blink leds
+            
     {   2,                                  // nAspect
         2,                                  // nLeds
         {   {  ON, OFF },                   // Green
@@ -35,7 +42,7 @@ const Aspect aspects[15] =
             {   X, OFF, OFF },              // Green flashing
             { OFF,  ON, OFF },              // Yellow
             { OFF,   X, OFF },              // Yellow flashing
-            { OFF, OFF,  ON }, } } ,        // red
+            { OFF, OFF,  ON }, }, } ,        // red
 
     {   7,                                  // nAspect 
         4,                                  // nLeds
@@ -45,7 +52,7 @@ const Aspect aspects[15] =
             { OFF,  ON, OFF, OFF },         // single yellow
             { OFF,   X, OFF, OFF },         // single yellow flashing
             { OFF, OFF,   X, OFF },         // red flashing
-            { OFF, OFF,  ON, OFF }, },},    // RED
+            { OFF, OFF,  ON, OFF }, }, },    // RED
 
 } ;
 
