@@ -1,0 +1,207 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 2820f084-e181-411b-a103-bf35250c3853)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 44.831 23.241) (size 12.7 9.525) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 0059ad9a-b06d-4941-b48e-523425aa7a56)
+    (property "Sheetname" "UK-4tone" (at 44.831 22.5294 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "UK-4tone.kicad_sch" (at 44.831 33.3506 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 44.831 23.241 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 80.899 41.91) (size 12.7 12.573)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 0260f95e-4fe1-45f9-92fd-c4b8b4bb9ad8)
+    (property "Sheetname" "HV Haupt" (at 82.423 46.482 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "2-tone def.kicad_sch" (at 80.899 55.0676 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "7"))
+      )
+    )
+  )
+
+  (sheet (at 179.959 20.955) (size 16.51 15.24) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 0f0cd18d-974d-4270-86a1-36cfc305e5ee)
+    (property "Sheetname" "Belgian home " (at 179.959 20.2434 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Belgian home.kicad_sch" (at 179.959 36.7796 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "11"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 24.13) (size 12.7 7.874) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 25fe611e-da5f-4b5c-8a3b-bae062b91860)
+    (property "Sheetname" "Dutch1" (at 19.05 23.4184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Dutch1.kicad_sch" (at 19.05 32.5886 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 18.669 38.735) (size 12.7 10.16) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 26d78e90-f409-4f93-82ed-e6fb059145f1)
+    (property "Sheetname" "Dutch2" (at 18.669 38.0234 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Dutch2.kicad_sch" (at 18.669 49.4796 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 45.212 39.37) (size 13.081 11.43) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 63f257b4-b437-4851-8903-b4e217e36080)
+    (property "Sheetname" "UK-4tone w point" (at 45.212 38.6584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "UK-4tone w point.kicad_sch" (at 45.212 51.3846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 45.212 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 80.772 22.352) (size 12.7 12.573) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 6551ecd7-c5d3-48c7-8a23-38ba05ef41a0)
+    (property "Sheetname" "2-tone def" (at 80.772 21.6404 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "2-tone def.kicad_sch" (at 80.772 35.5096 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "6"))
+      )
+    )
+  )
+
+  (sheet (at 134.366 20.701) (size 17.653 16.256) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7111d9d4-658d-4bf5-903b-f6db74c81c65)
+    (property "Sheetname" "HV vor" (at 134.366 19.9894 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "HV vor.kicad_sch" (at 134.366 37.5416 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "9"))
+      )
+    )
+  )
+
+  (sheet (at 179.959 45.085) (size 16.51 15.24)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 8a33454c-2c1a-4723-b53f-da7fb0ad1759)
+    (property "Sheetname" "Belgian home counter" (at 179.959 50.165 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Belgian home.kicad_sch" (at 179.959 60.9096 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "12"))
+      )
+    )
+  )
+
+  (sheet (at 158.496 21.082) (size 13.589 15.494) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid bfe93ba8-febe-456f-b26a-d1126f3046bf)
+    (property "Sheetname" "HV out" (at 158.496 20.3704 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "HV out.kicad_sch" (at 158.496 37.1606 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "10"))
+      )
+    )
+  )
+
+  (sheet (at 110.998 21.209) (size 16.002 16.002) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid d0e43f93-42ca-4802-b0c9-5c3b9affb3f5)
+    (property "Sheetname" "HV haupt " (at 110.998 20.4974 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "HV haupt.kicad_sch" (at 110.998 37.7956 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "signal PCB"
+        (path "/2820f084-e181-411b-a103-bf35250c3853" (page "8"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

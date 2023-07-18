@@ -256,7 +256,6 @@ void Signal::setType( uint8_t _type )
 
     ledCount = localAspect.nLeds ;
     nAspects = localAspect.nAspect ;
-
     nAddresses = (nAspects-1) / 2 + 1  ;
 }
 

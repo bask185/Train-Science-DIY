@@ -8,9 +8,13 @@
 
 
 /******* SK NOTES **********
- * The config menu should be equiped with serial texts
- * Serial input should be used to insert DCC addresses. This allows me to debug the config menu
- *  
+ * TODO
+   The DCC bus must be verified
+ v PROGMEM values must be verified
+   The actual signal control must be verified
+   The config menu as well as EEPROM must be verified
+   real signal PCB must be made and ordered
+   
 
 */
 
@@ -63,26 +67,27 @@ void(* RESET) (void) = 0 ;
 
 void statusLed()
 {
-    uint16 blinkTime = 1000 ;
+    static uint16 blinkTime = 1000 ;
 
-    switch( state )
+    REPEAT_MS( blinkTime )
     {
-    default: digitalWrite( ledPin, HIGH ) ;
-        break ;
-
-    case getMode:       blinkTime =  50 ; goto blink ;  //  125/2
-    case getSignalType: blinkTime = 125 ; goto blink ;  //  250/2
-    case getIndex:      blinkTime = 250 ; goto blink ;  //  500/2
-    case getAddress:    blinkTime = 500 ;               // 1000/2
-    
-    blink:
-        REPEAT_MS( blinkTime )
+        switch( state )
         {
+        default: 
+            digitalWrite( ledPin, HIGH ) ;
+            break ;
+
+        case getMode:       blinkTime =  50 ; goto blink ;  //  125/2
+        case getSignalType: blinkTime = 125 ; goto blink ;  //  250/2
+        case getIndex:      blinkTime = 250 ; goto blink ;  //  500/2
+        case getAddress:    blinkTime = 500 ;               // 1000/2
+        
+        blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
+            break;
         }
-        END_REPEAT
-        break;
     }
+    END_REPEAT
 }
 
 void storeType( uint8 idx, uint8 val )
@@ -101,6 +106,8 @@ uint8 loadType( uint8 idx )
 
 void setup()
 {
+    Serial.begin(115200);
+
     for( int i = 0 ; i < 16 ; i ++ )
     {
         //pinMode( GPIO[i], OUTPUT ) ; // ENABLE FOR FINAL PRODUCT
@@ -111,7 +118,7 @@ void setup()
     {   EEPROM.write( DEFAULT_ADDRESS,     DEFAULT_VALUE ) ;
 
         configBits = DEFAULT_CONFIG ;
-        EEPROM.write( CONFIG_ADDRESS, config ) ;
+        EEPROM.write( CONFIG_ADDRESS, configBits ) ;
 
         myAddress = DEFAULT_DCC ;
         EEPROM.put( DCC_ADDRESS, myAddress ) ; // initialize DCC address
@@ -122,31 +129,32 @@ void setup()
     EEPROM.get( DCC_ADDRESS, myAddress ) ; // load dcc address from EEPROM
     for( int  i = 0 ; i < nGpio ; i ++ )
     {
-        uint8_t type = loadType( i ) ; // fetch from EEPROM
-        signal[i].setType( type ) ;
+        uint8_t type = loadType( i ) ;  // fetch from EEPROM
+        signal[i].setType( type ) ;     // intialize the signals
+        printNumberln("type: ", type ) ;
     }
     
     //dcc.init( MAN_ID_DIY, 10, 0, 0 );
 
-    Serial.begin(115200);
+    
     printNumberln("mynumber = ", myAddress ) ;
 
-    signal[0].setType(0) ; // 4 leds
-    signal[1].setType(0) ; // 8 leds
-    signal[2].setType(0) ; // 11 leds
-    signal[3].setType(0) ; // 14 leds
-    signal[4].setType(0) ; // 16 leds
-    signal[5].setType(0) ; // 16 leds
-    signal[6].setType(0) ; // 16 leds
-    signal[7].setType(0) ; // 16 leds
-    signal[8].setType(0) ; // 16 leds
-    signal[9].setType(0) ; // 16 leds
-    signal[10].setType(0) ; // 16 leds
-    signal[11].setType(0) ; // 16 leds
-    signal[12].setType(0) ; // 16 leds
-    signal[13].setType(0) ; // 16 leds
-    signal[14].setType(0) ; // 16 leds
-    signal[15].setType(0) ; // 16 leds
+    // signal[0].setType(0) ; // 4 leds
+    // signal[1].setType(0) ; // 8 leds
+    // signal[2].setType(0) ; // 11 leds
+    // signal[3].setType(0) ; // 14 leds
+    // signal[4].setType(0) ; // 16 leds
+    // signal[5].setType(0) ; // 16 leds
+    // signal[6].setType(0) ; // 16 leds
+    // signal[7].setType(0) ; // 16 leds
+    // signal[8].setType(0) ; // 16 leds
+    // signal[9].setType(0) ; // 16 leds
+    // signal[10].setType(0) ; // 16 leds
+    // signal[11].setType(0) ; // 16 leds
+    // signal[12].setType(0) ; // 16 leds
+    // signal[13].setType(0) ; // 16 leds
+    // signal[14].setType(0) ; // 16 leds
+    // signal[15].setType(0) ; // 16 leds
 
     initSignals() ;
     Serial.println("BOOTED!!!");
@@ -155,11 +163,6 @@ void setup()
 
 void loop()
 {
-     if(millis() >  3000) state = getAddress ;
-     if(millis() >  6000) state = getIndex ;
-     if(millis() >  9000) state = getSignalType ;
-     if(millis() > 12000) state = getMode ;
-
     statusLed() ;
 
     dcc.process() ;
@@ -180,7 +183,7 @@ void initSignals()
 
     printNumberln(F("begin address: "), myAddress );
 
-    uint8_t ledCount ;
+    uint8_t ledCount = 0 ;
     uint16_t addressCount = myAddress ;
     for( int i = 0 ; i < maxSignals ; i ++ )
     {
@@ -191,8 +194,6 @@ void initSignals()
         {
             signal[i].setFirstIO( ledCount ) ;
             signal[i].setAddress( addressCount ) ;
-
-            ledCount += nLeds ;
 
             // NOTE, if DCC extended is used, one address per item should be used
             if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;
@@ -205,6 +206,8 @@ void initSignals()
             printNumberln(F("begin address: "),  signal[i].getAddress()) ;
             printNumberln(F("end address: "),    signal[i].getAddress() + signal[i].getAddressAmount() - 1 ) ;
             signalCount ++ ;
+
+            ledCount += nLeds ;
         }
     }
     printNumberln(F("amount ot devices: "), signalCount ) ;
