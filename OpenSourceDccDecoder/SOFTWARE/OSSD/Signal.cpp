@@ -1,17 +1,8 @@
 #include "Signal.h"
 #include "config.h"
 
-
-/******* SK NOTES **********
-
-
-*/
-
-static uint8_t  currentAspect = 2 ;
-
-// NOTE: as is now 1 aspect consumes 52 bytes. So I can add like 15 or so..
-
-const Aspect aspects[15] =
+const int nAspects = 30 ;
+const static Aspect aspects[nAspects] PROGMEM =
 {
     {   2,                                  // nAspect
         2,                                  // nLeds   <-- for double coils only
@@ -49,10 +40,14 @@ const Aspect aspects[15] =
 
 } ;
 
-Aspect getAspect( uint8_t index )
-{
-    return aspects[index] ;
-}
+static Aspect localAspect ;
+
+// Aspect getAspect( uint8_t index )
+// {
+//     memcpy_P(aspect , &aspects[index], sizeof( aspect ) ) ;
+
+//     return aspect[index] ;
+// }
 
 
 Signal::Signal()
@@ -72,15 +67,15 @@ void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
 uint8 Signal::updateCoils()
 {
     uint8 set ;
-    if( aspect != aspectPrev ) // state has changed, turn on a coil
-    {  aspectPrev = aspect ;
+    if( currentAspect != aspectPrev ) // state has changed, turn on a coil
+    {  aspectPrev = currentAspect ;
 
         prevTime = millis() ;
         set = false ;
 
-        if( aspect ) digitalWrite( beginPin  , HIGH ) ; // FIXME
-        else         digitalWrite( beginPin+1, HIGH ) ; // FIXME
-    }
+        if( currentAspect ) digitalWrite( beginPin  , HIGH ) ; // FIXME what's wrong?
+        else                digitalWrite( beginPin+1, HIGH ) ; // FIXME
+    } 
 
     if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
     {   set  = true ;
@@ -93,21 +88,19 @@ uint8 Signal::updateCoils()
 }
 
 
-// uint8_t aspects[maxAspect][maxLeds] ;
-// const Aspect aspects[15] =
 uint8 Signal::update()
 {
     if( type > 0 )
     {
+        memcpy_P( localAspect , &aspects[type], sizeof( localAspect ) ) ;
+
         uint32 currTime = millis() ;
         if( currTime - prevTime >= interval )  // CHANGE IN CONSTANT OR VARIABLE...
         {   prevTime = currTime ;
 
-            uint8 led = 0 ;
-
-            for( int i = 0 ; i < ledCount ; i ++ )
+            for( int led = 0 ; led < ledCount ; led ++ )
             {
-                uint8 state = aspects[type].aspects[aspect][led++] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
+                uint8 state = localAspect.aspects[currentAspect][led++] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 uint8   pin = GPIO[beginPin+led] ;
                 switch( state )
                 {
@@ -131,7 +124,7 @@ uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
 {
     if( dccAddress == myAddress )
     {
-        aspect = _aspect ;
+        currentAspect = _aspect ;
         return 1 ;
     }
     return 0 ;
@@ -144,16 +137,20 @@ uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
 
     if( dccAddress >= beginAddress && dccAddress <=endAddress )
     {
-        aspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // TEST ME
-        printNumberln("Aspect set: ",aspect) ;
+        currentAspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // TEST ME
+        printNumberln("Aspect set: ",currentAspect) ;
     }
 }
 
 void Signal::setType( uint8_t _type )
 {
     type = _type ;
-    ledCount = aspects[type].nLeds ;
-    nAspects = aspects[type].nAspect ;
+
+    memcpy_P( localAspect , &aspects[type], sizeof( localAspect ) ) ;
+
+    ledCount = localAspect.nLeds ;
+    nAspects = localAspect.nAspect ;
+
     nAddresses = (nAspects-1) / 2 + 1  ;
 }
 
@@ -192,6 +189,11 @@ uint16 Signal::getAddress()
 uint16 Signal::getAddressAmount()
 {
     return( nAddresses ) ;
+}
+
+uint8_t Signal::getType()
+{
+    return type ;
 }
 
 

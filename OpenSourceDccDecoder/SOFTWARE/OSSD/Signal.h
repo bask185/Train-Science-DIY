@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "src/macros.h"
 
-const int       nSignalTypes    = 10 ;
+const int       nSignalTypes    = 20 ;
 const int       maxAspect       = 10 ;
 const int       maxLeds         =  5 ;
 
@@ -12,17 +12,18 @@ const int         C             = 0b11 ; // coil
 
 typedef struct Aspects 
 {
-    const uint8_t nAspect ;
-    const uint8_t nLeds ;
-    uint8_t aspects[maxAspect][maxLeds] ;
+    uint8 nAspect ;
+    uint8 nLeds ;
+    uint8 aspects[maxAspect][maxLeds] ;
 } Aspect ;
 
 //extern Aspect aspects[] ;
 
 
-uint8_t getAspectAmount() ;
-uint8_t getOutputAmount() ;
-Aspect getAspect( uint8_t index ) ;
+uint8 getAspectAmount() ;
+uint8 getOutputAmount() ;
+
+//Aspect getAspect( uint8 index ) ;
 
 class Signal {
 
@@ -41,10 +42,11 @@ public:
     uint8   get1stPin() ;
     uint16  getAddress() ;
     uint16  getAddressAmount() ;
+    uint8   getType() ;
 
 private:
     uint8   beginPin ;
-    uint8   aspect ;
+    uint8   currentAspect ;
     uint8   aspectPrev ;
     uint8   nAspects ;
     uint8   nAddresses ;

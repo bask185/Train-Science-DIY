@@ -9,6 +9,6 @@ const int GPIO[] =
 } ;
 
 const int nGpio = 16 ;
-const int configButton = 8 ;
+const int configPin = 8 ;
 const int ledPin = 13 ;
 
