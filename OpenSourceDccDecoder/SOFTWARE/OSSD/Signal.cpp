@@ -28,13 +28,14 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    {   2,                                  // nAspect // Simple 2 tone green and red, no blinking. Good for H/V block signale
+    {   2,                                  // nAspect // Simple 2 tone green and red, no blinking. Good for many signals
         2,                                  // nLeds
         {   {  ON, OFF },                   // Green
             { OFF,  ON },                   // Red
         },
     },
 
+    // DUTCH
     {   5,                                  // nAspect  // Standard 3 tone dutch signal without number designator
         3,                                  // nLeds
         {   {  ON, OFF, OFF },              // Green
@@ -58,6 +59,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     } ,  
 
+    // UK
     {   6,                                  // nAspect  UK 4-tone signaling system NOTE: to add a white point indicator I recommend using a separate single output
         4,                                  // nLeds
         {   {  ON, OFF, OFF, OFF },         // red
@@ -69,6 +71,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
+    // GERMANY
     {   3,                                  // nAspect  German H/V Haupt signale also In signale or curve signal.
         3,                                  // nLeds
         {   { OFF, OFF,  ON },              // green
@@ -76,7 +79,6 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  ON, OFF, OFF },              // red
         },
     },
-
     {   3,                                  // nAspect  German H/V Vor signale
         4,                                  // nLeds
         {   { OFF,  ON, OFF,  ON },         // green  green
@@ -85,7 +87,6 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF, OFF, OFF },         // None
         },
     },
-
     {   3,                                  // nAspect  German H/V Out signal
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
@@ -94,6 +95,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF,  ON,  ON, OFF, OFF },    // 2x red
         },
     },
+
     // BELGIAN
     {   6,  // S    R    Y2   Y1   G        // nAspect  Belgian home signal with shunt LEFT SIDE
         5,                                  // nLeds
@@ -116,16 +118,42 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
+    // AUSTRIA
+    /*
+    MAIN ASPECTS
+    RED
+    GREEN
+    GREEN GREEN
+    GREEN YELLOW
+
+    DISTANT
+    GREEN GREEN
+    GREEN GREEN YELLOW
+    off (main is red)
+    green yellow yellow
+    yellow yellow
+
+    AUSTRA 'SUPER' SIGNAL
+    Sams as above but with 4 extra lights for departure (green) and pass red allowed, and
+    RED
+    RED + double white shunting admitted
+    RED + white permission to pass at stop (flashing white)
+    GREEN
+    GREEN + flashing green departure allowed
+    GREEN GREEN
+    GREEN YELLOW
+
+    // SWISS
+
+
+
+    */
+
+
 } ;
 
 static Aspect localAspect ;
 
-// Aspect getAspect( uint8_t index )
-// {
-//     memcpy_P(&localAspect , &aspects[index], sizeof( localAspect ) ) ;
-
-//     return localAspect[index] ;
-// }
 
 
 Signal::Signal()
@@ -170,7 +198,7 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
 {
     if( type > 0 )
     {
-        memcpy_P( &localAspect, &aspects[type], sizeof( localAspect ) ) ;
+        memcpy_P( &localAspect, &aspects[type], sizeof( localAspect ) ) ; // keep or copy content to local signal variables
 
         uint32 currTime = millis() ;
         if( currTime - prevTime >= interval )  // CHANGE IN CONSTANT OR VARIABLE...
@@ -182,8 +210,8 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
                 uint8   pin = GPIO[beginPin+led] ;
                 switch( state )
                 {
-                    case  ON: digitalWrite( pin,  ON ) ; break ;
-                    case OFF: digitalWrite( pin, OFF ) ; break ;
+                    case  ON: digitalWrite( pin, HIGH ) ; break ;
+                    case OFF: digitalWrite( pin,  LOW ) ; break ;
                     case   X: digitalWrite( pin, !digitalRead( pin )) ; break ;
                 }                
             }
@@ -193,7 +221,7 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
 
     else
     {
-        return  updateCoils() ;  // coild return false while being powered, to prevent more than one being triggered at once.
+        return updateCoils() ;  // coils return false while being powered, to prevent more than one being triggered at once.
     }
 }
 
