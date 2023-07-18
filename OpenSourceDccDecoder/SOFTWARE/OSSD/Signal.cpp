@@ -23,8 +23,8 @@ const static Aspect aspects[nAspects] PROGMEM =
         3,                                  // nLeds
         {   { OFF, OFF, OFF },              // AHOB OFF
             {  ON,   X,   X },              // AHOB ON  NOTE! need differentiating between the 2 blink leds
-            { OFF,   X, OFF },              // AKI  OFF
-            {   X, OFF,   X },              // AKI ON   NOTE! need differentiating between the 2 blink leds
+            {   X, OFF, OFF },              // AKI  OFF
+            { OFF,   X,   X },              // AKI ON   NOTE! need differentiating between the 2 blink leds
         },
     },
 
@@ -94,15 +94,25 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF,  ON,  ON, OFF, OFF },    // 2x red
         },
     },
-
-    {   6,                                  // nAspect  Belgian home signal DO ME PLEASE
+    // BELGIAN
+    {   6,  // S    R    Y2   Y1   G        // nAspect  Belgian home signal with shunt LEFT SIDE
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
             { OFF, OFF, OFF,  ON,  ON },    // yellow yellow
-            {  ON, OFF,  ON, OFF, OFF },    // red
-            { OFF,  ON,  ON, OFF, OFF },    // red + shunt
-            { OFF,  ON,  ON, OFF, OFF },    // green + yellow right GrGH
-            { OFF,  ON,  ON, OFF, OFF },    // green + yellow down  GrGV
+            { OFF, OFF,  ON,  ON, OFF },    // red
+            {  ON,  ON, OFF, OFF, OFF },    // red + shunt
+            { OFF, OFF, OFF,  ON,  ON },    // green + yellow  GrGH
+            { OFF, OFF,  ON, OFF,  ON },    // green + yellow  GrGV
+        },
+    },
+    {   6,  // S    R    Y2   Y1   G        // nAspect  Belgian home signal with shunt OPPOSING SIDE, same as above but with blinking instead
+        5,                                  // nLeds
+        {   { OFF, OFF, OFF, OFF,   X },    // green
+            { OFF, OFF, OFF,   X,   X },    // yellow yellow
+            { OFF, OFF,   X,  ON, OFF },    // red
+            {   X,   X, OFF, OFF, OFF },    // red + shunt
+            { OFF, OFF, OFF,   X,   X },    // green + yellow  GrGH
+            { OFF, OFF,   X, OFF,   X },    // green + yellow  GrGV
         },
     },
 
@@ -112,9 +122,9 @@ static Aspect localAspect ;
 
 // Aspect getAspect( uint8_t index )
 // {
-//     memcpy_P(aspect , &aspects[index], sizeof( aspect ) ) ;
+//     memcpy_P(&localAspect , &aspects[index], sizeof( localAspect ) ) ;
 
-//     return aspect[index] ;
+//     return localAspect[index] ;
 // }
 
 
@@ -141,8 +151,8 @@ uint8 Signal::updateCoils()
         prevTime = millis() ;
         set = false ;
 
-        if( currentAspect ) digitalWrite( beginPin  , HIGH ) ; // FIXME what's wrong?
-        else                digitalWrite( beginPin+1, HIGH ) ; // FIXME
+        if( currentAspect ) digitalWrite( beginPin  , HIGH ) ;
+        else                digitalWrite( beginPin+1, HIGH ) ;
     } 
 
     if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
@@ -156,11 +166,11 @@ uint8 Signal::updateCoils()
 }
 
 
-uint8 Signal::update()
+uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 and led 1
 {
     if( type > 0 )
     {
-        memcpy_P( localAspect , &aspects[type], sizeof( localAspect ) ) ;
+        memcpy_P( &localAspect, &aspects[type], sizeof( localAspect ) ) ;
 
         uint32 currTime = millis() ;
         if( currTime - prevTime >= interval )  // CHANGE IN CONSTANT OR VARIABLE...
@@ -214,7 +224,7 @@ void Signal::setType( uint8_t _type )
 {
     type = _type ;
 
-    memcpy_P( localAspect , &aspects[type], sizeof( localAspect ) ) ;
+    memcpy_P( &localAspect , &aspects[type], sizeof( localAspect ) ) ;
 
     ledCount = localAspect.nLeds ;
     nAspects = localAspect.nAspect ;
