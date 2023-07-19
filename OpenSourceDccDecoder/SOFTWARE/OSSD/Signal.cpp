@@ -3,7 +3,7 @@
 
 const int nAspects = 30 ;
 const static Aspect aspects[nAspects] PROGMEM =
-{   // #0 DOUBLE COIL MODE
+{   // #1 DOUBLE COIL MODE
     {   2,                                  // nAspect
         2,                                  // nLeds
         {   { C },                          // OFF
@@ -11,7 +11,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #1 SINGLE OUTPUT
+    // #2 SINGLE OUTPUT
     {   3,                                  // nAspect
         1,                                  // nLeds   SPECIAL single output only devices, 2nd address in use for optional blinking
         {   { OFF },                        // OFF
@@ -20,7 +20,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #2 SPECIAL RAILWAY CROSSING
+    // #3 SPECIAL RAILWAY CROSSING
     {   4,// TREE  Bl2   Bl1                // nAspect
         3,                                  // nLeds
         {   { OFF, OFF, OFF },              // AHOB OFF
@@ -30,7 +30,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #3 GENERIC TWO TONE GREEN AND RED SIGNAL
+    // #4 GENERIC TWO TONE GREEN AND RED SIGNAL
     {   2, //  R    G                       // nAspect // Simple 2 tone green and red, no blinking. Good for many signals
         2,                                  // nLeds
         {   { OFF,  ON },                   // Green
@@ -38,7 +38,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #4 DUTCH  STANDARD 3 TONE SIGNAL WITHOUT NUMBER DESIGNATOR
+    // #5 DUTCH  STANDARD 3 TONE SIGNAL WITHOUT NUMBER DESIGNATOR
     {   5,//    R    Y    G                 // nAspect
         3,                                  // nLeds
         {   { OFF, OFF,  ON },              // Green
@@ -48,7 +48,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  ON, OFF, OFF },              // red
         },
     } ,       
-    // #5  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR
+    // #6  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR
     {   8, //  W    R    Y    G                                // nAspect
         4,                                  // nLeds
         {   { OFF, OFF, OFF,  ON },         // Green
@@ -62,7 +62,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     } ,  
 
-    // #6 UK UK 4-TONE SIGNALING SYSTEM 
+    // #7 UK UK 4-TONE SIGNALING SYSTEM 
     {   6, //  R   Y2   G    Y1             // nAspect  
         4,                                  // nLeds
         {   { OFF, OFF,  ON, OFF },         // green
@@ -74,14 +74,14 @@ const static Aspect aspects[nAspects] PROGMEM =
         }, // NOTE: to add a white point indicator I recommend using a separate single output
     },
 
-    // #7 GERMANY   GERMAN HP HAUPT SIGNALE ALSO IN SIGNALE OR CURVE SIGNAL.
+    // #8 GERMANY   GERMAN HP HAUPT SIGNALE ALSO IN SIGNALE OR CURVE SIGNAL.
     {   3,  // R    Y     G                 // nAspect
         3,                                  // nLeds
         {   { OFF, OFF,  ON },              // green
             { OFF,  ON,  ON },              // green yellow
             {  ON, OFF, OFF },              // red
         },
-    }, // #8   GERMAN HP VOR SIGNALE
+    }, // #9   GERMAN HP VOR SIGNALE
     {   3,   // Y2  G2   Y1   G1            // nAspect
         4,                                  // nLeds
         {   { OFF,  ON, OFF,  ON },         // green  green
@@ -89,7 +89,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  ON, OFF,  ON, OFF },         // yellow yellow
             { OFF, OFF, OFF, OFF },         // None
         },
-    }, // #9 GERMAN HP OUT SIGNAL WITH SHUNT
+    }, // #10 GERMAN HP OUT SIGNAL WITH SHUNT
     {   5, //  S    R2   R1   Y    G        // nAspect
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
@@ -100,7 +100,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #10 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
+    // #11 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
     {   6,  // S    R    Y2   Y1   G        // nAspect  
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
@@ -110,7 +110,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF, OFF,  ON,  ON },    // green + yellow  GrGH
             { OFF, OFF,  ON, OFF,  ON },    // green + yellow  GrGV
         },
-    },// #11  BELGIAN HOME SIGNAL WITH SHUNT OPPOSING SIDE
+    },// #12  BELGIAN HOME SIGNAL WITH SHUNT OPPOSING SIDE
     {   6,  // S    R    Y2   Y1   G        // nAspect
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,   X },    // green
@@ -121,7 +121,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF,   X, OFF,   X },    // green + yellow  GrGV
         },
     },
-    // #12 AUSTRIA MAIN SIGNAL
+    // #13 AUSTRIA MAIN SIGNAL
     {   4,  // R    Y     G   G        // nAspect
         4,                             // nLeds
         {   { OFF, OFF, OFF,  ON },    // green
@@ -129,7 +129,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF,  ON, OFF,  ON },    // green yellow
             { OFF,  ON, OFF, OFF },    // red
         },
-    },// #13    AUSTRIA MAIN SIGNAL WITH SHUNTING AND DEPARTURE LIGHTS
+    },// #14    AUSTRIA MAIN SIGNAL WITH SHUNTING AND DEPARTURE LIGHTS
     {   7,  // Wp,  Ws, Gd,  R    Y     G    G        // nAspect  
         7,  //  p=permission, s=shunt d=depart        // nLeds
         {   { OFF, OFF, OFF, OFF, OFF, OFF,  ON },    // green
@@ -140,7 +140,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF,  ON, OFF,  ON, OFF, OFF, OFF },    // red + double white shunting admitted
             {   X, OFF, OFF,  ON, OFF, OFF, OFF },    // red + white permission to pass at stop (flashing white)
         },
-    }, // #14 AUSTRIA DISTANT SIGNAL
+    }, // #15 AUSTRIA DISTANT SIGNAL
     {   4,  // Y    Y     G   G        // nAspect    
         4,                             // nLeds
         {   { OFF, OFF,  ON,  ON },    // green green
