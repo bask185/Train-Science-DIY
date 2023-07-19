@@ -54,13 +54,17 @@ enum modeState
     checkButton, // not a actual mode
 } ;
 
-uint8       mode        = idle ;
 uint8       state       = idle ;
 uint32      beginTime ;
 uint8       index ;
 uint8       signalCount ;
-uint16      receivedAddress ;
+volatile uint16      
+            receivedAddress ;
+volatile uint8       
+            newAddressSet ;
 uint16      myAddress ;
+uint8       signalIndex ;
+volatile static uint32 lastTime ;
 
 
 void(* RESET) (void) = 0 ;
@@ -69,7 +73,7 @@ void statusLed()
 {
     static uint16 blinkTime = 1000 ;
 
-    REPEAT_MS( blinkTime )
+    REPEAT_MS(blinkTime )
     {
         switch( state )
         {
@@ -80,7 +84,7 @@ void statusLed()
         case getMode:       blinkTime =  50 ; goto blink ;  //  125/2
         case getSignalType: blinkTime = 125 ; goto blink ;  //  250/2
         case getIndex:      blinkTime = 250 ; goto blink ;  //  500/2
-        case getAddress:    blinkTime = 500 ;               // 1000/2
+        case getAddress:    blinkTime = 500 ; goto blink ;  // 1000/2
         
         blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
@@ -107,10 +111,10 @@ uint8 loadType( uint8 idx )
 void setup()
 {
     Serial.begin(115200);
-
+ 
     for( int i = 0 ; i < 16 ; i ++ )
     {
-        //pinMode( GPIO[i], OUTPUT ) ; // ENABLE FOR FINAL PRODUCT
+        pinMode( GPIO[i], OUTPUT ) ;
     }
     configButton.begin( configPin ) ;
 
@@ -133,43 +137,42 @@ void setup()
         signal[i].setType( type ) ;     // intialize the signals
         printNumberln("type: ", type ) ;
     }
-    
-    //dcc.init( MAN_ID_DIY, 10, 0, 0 );
+
+    dcc.pin(2, 0);
+    dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 
     
     printNumberln("mynumber = ", myAddress ) ;
 
-    // signal[0].setType(0) ; // 4 leds
-    // signal[1].setType(0) ; // 8 leds
-    // signal[2].setType(0) ; // 11 leds
-    // signal[3].setType(0) ; // 14 leds
-    // signal[4].setType(0) ; // 16 leds
-    // signal[5].setType(0) ; // 16 leds
-    // signal[6].setType(0) ; // 16 leds
-    // signal[7].setType(0) ; // 16 leds
-    // signal[8].setType(0) ; // 16 leds
-    // signal[9].setType(0) ; // 16 leds
-    // signal[10].setType(0) ; // 16 leds
-    // signal[11].setType(0) ; // 16 leds
-    // signal[12].setType(0) ; // 16 leds
-    // signal[13].setType(0) ; // 16 leds
-    // signal[14].setType(0) ; // 16 leds
-    // signal[15].setType(0) ; // 16 leds
 
+    signal[0].setType(3) ;
+    signal[1].setType(1) ;
     initSignals() ;
+
+    
+
     Serial.println("BOOTED!!!");
     pinMode(13,OUTPUT);
+
+    signalIndex = 0 ;
 }
 
 void loop()
 {
+    // if( millis() > 3000 ) state = getAddress ;
+    // if( millis() > 6000 ) state = getIndex ;
+    // if( millis() > 2000 ) state = getSignalType ;
+    // if( millis() > 6000 ) state = idle ;
+    // if( millis() > 12000 ) state = getMode ;
+
+
     statusLed() ;
 
     dcc.process() ;
 
     config() ;
 
-    //if( signal[index].update() == 1 ) // if the signal is a coil instead, it will return 0 whilst being set. This prevents that more than 1 output can be activated
+    if( signal[index].update() == 1 ) // if the signal is a coil instead, it will return 0 whilst being set. This prevents that more than 1 output can be activated
     {
         if( ++ index == signalCount ) index = 0 ;
     }
@@ -181,7 +184,7 @@ void initSignals()
     // Serial.println("\r\n\r\nSETTING SIGNALS");
     signalCount = 0 ; // reset this to 0
 
-    printNumberln(F("begin address: "), myAddress );
+    // printNumberln(F("begin address: "), myAddress );
 
     uint8_t ledCount = 0 ;
     uint16_t addressCount = myAddress ;
@@ -199,18 +202,18 @@ void initSignals()
             if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;
             else                                      addressCount += signal[i].getAddressAmount() ;
 
-            printNumber_(F("\r\nsignal #"),      i ) ;
-            printNumberln(F("led amount: "),     ledCount);
-            printNumberln(F("first IO pin: "),   signal[i].get1stPin());
-            printNumberln(F("aspect amount: "),  signal[i].getAspectAmount());
-            printNumberln(F("begin address: "),  signal[i].getAddress()) ;
-            printNumberln(F("end address: "),    signal[i].getAddress() + signal[i].getAddressAmount() - 1 ) ;
+            // printNumber_(F("\r\nsignal #"),      i ) ;
+            // printNumberln(F("led amount: "),     nLeds);
+            // printNumberln(F("first IO pin: "),   signal[i].get1stPin());
+            // printNumberln(F("aspect amount: "),  signal[i].getAspectAmount());
+            // printNumberln(F("begin address: "),  signal[i].getAddress()) ;
+            // printNumberln(F("end address: "),    signal[i].getAddress() + signal[i].getAddressAmount() - 1 ) ;
             signalCount ++ ;
 
             ledCount += nLeds ;
         }
     }
-    printNumberln(F("amount ot devices: "), signalCount ) ;
+    // printNumberln(F("amount ot devices: "), signalCount ) ;
 }
 
 /* TODO
@@ -220,8 +223,6 @@ need an option to pick between solenoids, perhaps still implement as a signal
 */
 void config()
 {
-    static uint8 signalIndex ;
-
     REPEAT_MS( 20 )
     {
         configButton.debounceInputs() ;
@@ -247,63 +248,72 @@ void config()
         break ;
 
     case getAddress:
-        if( receivedAddress )
-        {
+        if( newAddressSet == 1 )
+        {   newAddressSet = 0 ;
+
             myAddress = receivedAddress ;
             EEPROM.put( DCC_ADDRESS, myAddress ) ;
+            initSignals() ;
             state = idle ;
+            newAddressSet = 0 ;
         }
-        //if( btnState == FALLING )  state = idle ; // if button is pressed before address is received, action is aborted.
+        if( btnState == FALLING )  state = idle ; // if button is pressed before address is received, action is aborted.
         break ; 
 
     case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
-        if( btnState == FALLING )          state = idle ;    // if button is pressed before address is received, action is aborted.
-        if( btnState == LOW
-        &&  millis() - beginTime >= 4000 ) state = getMode ; // button held down for 4s
+        // if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
+        // if( btnState == LOW
+        // &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
 
-        if( receivedAddress <= nSignalTypes ) // if valid address is received... set the index.
-        {
+        if( newAddressSet == 1  )
+        {   newAddressSet = 0 ;
+
             signalIndex = receivedAddress-1 ;
             state = getSignalType ;
         }
-        
         break ; 
 
     case getSignalType:
-        if( receivedAddress ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
-        {   
-            signal[signalIndex].setType( receivedAddress ) ;
+        if( btnState == FALLING )          state = idle ;
+
+        if( newAddressSet == 1 ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
+        {   newAddressSet = 0 ;
+
+            signal[signalIndex].setType( receivedAddress-1 ) ; //(should go to EEPROM?)
             initSignals() ;
-            state = getIndex ;
+            state = idle ;
         }
         break ; 
     
     case getMode:
         if( btnState  == FALLING ) state = idle ; // if button is pressed before address is received, action is aborted.
-        if( receivedAddress == 1 ) // use conventional DCC addresses
-        {
-            bitClear( configBits, DCC_EXTENDED ) ;
-            EEPROM.write( CONFIG_ADDRESS, configBits ) ;
-            initSignals() ;
-            state = idle ;
-        }
-        if( receivedAddress == 2 ) // use DCC EXT addresses
-        {
-            bitSet( configBits, DCC_EXTENDED ) ;
-            EEPROM.write( CONFIG_ADDRESS, configBits ) ;
-            initSignals() ;
-            state = idle ;
-        }
-        if( receivedAddress == 10 )
-        {
-            EEPROM.write( DEFAULT_ADDRESS, ~DEFAULT_VALUE ) ;   // 'corrupt' default value to let decoder re-initialize the decoder's EEPROM
-            Serial.println("FACTORY RESET in 2 seconds");
-            delay(2000);
-            RESET() ;                                           // reset the decoder
+        if( newAddressSet == 1 )
+        {   newAddressSet = 0 ;
+
+            if( receivedAddress == 1 ) // use conventional DCC addresses
+            {
+                bitClear( configBits, DCC_EXTENDED ) ;
+                EEPROM.write( CONFIG_ADDRESS, configBits ) ;
+                initSignals() ;
+                state = idle ;
+            }
+            if( receivedAddress == 2 ) // use DCC EXT addresses
+            {
+                bitSet( configBits, DCC_EXTENDED ) ;
+                EEPROM.write( CONFIG_ADDRESS, configBits ) ;
+                initSignals() ;
+                state = idle ;
+            }
+            if( receivedAddress == 10 )
+            {
+                EEPROM.write( DEFAULT_ADDRESS, ~DEFAULT_VALUE ) ;   // 'corrupt' default value to let decoder re-initialize the decoder's EEPROM
+                Serial.println("FACTORY RESET in 2 seconds");
+                delay(2000);
+                RESET() ;                                           // reset the decoder
+            }
         }
         break ;
     }
-    receivedAddress = 0 ;
 }
 
 
@@ -328,9 +338,15 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
-    receivedAddress = address ;
+    if( millis() - lastTime >= 2000 ) // create lockout time of 100ms to prevent processing package
+    {   lastTime = millis() ;
 
-    if( output   == 0 ) return ;
+        newAddressSet = 1 ;
+        receivedAddress = address ;
+    }
+
+    if(  state != idle ) return ;
+    if( output ==    0 ) return ;
     if( direction > 0 ) direction = 1 ;
 
     for( int i = 0 ; i < signalCount ; i ++ )

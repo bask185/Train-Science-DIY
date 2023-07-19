@@ -190,15 +190,15 @@ uint8 Signal::updateCoils()
         prevTime = millis() ;
         set = false ;
 
-        if( currentAspect ) digitalWrite( beginPin  , HIGH ) ;
-        else                digitalWrite( beginPin+1, HIGH ) ;
+        if( currentAspect ) digitalWrite( GPIO[beginPin]  , HIGH ) ;
+        else                digitalWrite( GPIO[beginPin+1], HIGH ) ;
     } 
 
     if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
     {   set  = true ;
         
-        digitalWrite( beginPin  , LOW ) ;
-        digitalWrite( beginPin+1, LOW ) ;
+        digitalWrite( GPIO[beginPin]  , LOW ) ;
+        digitalWrite( GPIO[beginPin+1], LOW ) ;
     }
 
     return set ;
@@ -215,10 +215,11 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
         if( currTime - prevTime >= interval )  // CHANGE IN CONSTANT OR VARIABLE...
         {   prevTime = currTime ;
 
-            for( int led = 0 ; led < ledCount ; led ++ )
+
+            for( int led = 0 ; led <ledCount ; led ++ )
             {
-                uint8 state = localAspect.aspects[currentAspect][led++] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 uint8   pin = GPIO[beginPin+led] ;
+                uint8 state = localAspect.aspects[currentAspect][led] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 switch( state )
                 {
                     case  ON: digitalWrite( pin, HIGH ) ; break ;
