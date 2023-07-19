@@ -3,14 +3,15 @@
 
 const int nAspects = 30 ;
 const static Aspect aspects[nAspects] PROGMEM =
-{
-    {   2,                                  // nAspect  SPECIAL double coils, default mode for points
+{   // #0 DOUBLE COIL MODE
+    {   2,                                  // nAspect
         2,                                  // nLeds
         {   { C },                          // OFF
             { C },                          // toggle
         },
     },
 
+    // #1 SINGLE OUTPUT
     {   3,                                  // nAspect
         1,                                  // nLeds   SPECIAL single output only devices, 2nd address in use for optional blinking
         {   { OFF },                        // OFF
@@ -19,7 +20,8 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    {   4,                                  // nAspect  SPECIAL, RAILWAY CROSSINGS
+    // #2 SPECIAL RAILWAY CROSSING
+    {   4,// TREE  Bl2   Bl1                // nAspect
         3,                                  // nLeds
         {   { OFF, OFF, OFF },              // AHOB OFF
             {  ON,   X,   X },              // AHOB ON  NOTE! need differentiating between the 2 blink leds
@@ -28,76 +30,78 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    {   2,                                  // nAspect // Simple 2 tone green and red, no blinking. Good for many signals
+    // #3 GENERIC TWO TONE GREEN AND RED SIGNAL
+    {   2, //  R    G                       // nAspect // Simple 2 tone green and red, no blinking. Good for many signals
         2,                                  // nLeds
-        {   {  ON, OFF },                   // Green
-            { OFF,  ON },                   // Red
+        {   { OFF,  ON },                   // Green
+            {  ON, OFF },                   // Red
         },
     },
 
-    // DUTCH
-    {   5,                                  // nAspect  // Standard 3 tone dutch signal without number designator
+    // #4 DUTCH  STANDARD 3 TONE SIGNAL WITHOUT NUMBER DESIGNATOR
+    {   5,//    R    Y    G                 // nAspect
         3,                                  // nLeds
-        {   {  ON, OFF, OFF },              // Green
-            {   X, OFF, OFF },              // Green flashing
+        {   { OFF, OFF,  ON },              // Green
+            { OFF, OFF,   X },              // Green flashing
             { OFF,  ON, OFF },              // Yellow
             { OFF,   X, OFF },              // Yellow flashing
-            { OFF, OFF,  ON },              // red
+            {  ON, OFF, OFF },              // red
         },
-    } ,        
-
-    {   8,                                  // nAspect  // Standard 3 tone dutch signal with number designator
+    } ,       
+    // #5  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR
+    {   8, //  W    R    Y    G                                // nAspect
         4,                                  // nLeds
-        {   { OFF,  ON, OFF, OFF },         // Green
-            { OFF,   X, OFF, OFF },         // Green flashing
-            {  ON,   X, OFF, OFF },         // Green flashing w number
+        {   { OFF, OFF, OFF,  ON },         // Green
+            { OFF, OFF, OFF,   X },         // Green flashing
+            {  ON, OFF, OFF,   X },         // Green flashing w number
             { OFF, OFF,  ON, OFF },         // Yellow
             {  ON, OFF,  ON, OFF },         // Yellow w number
             { OFF, OFF,   X, OFF },         // Yellow flashing
             {   X, OFF,   X, OFF },         // Yellow flashing w number
-            { OFF, OFF, OFF,  ON },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
+            { OFF,  ON, OFF, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
         },
     } ,  
 
-    // UK
-    {   6,                                  // nAspect  UK 4-tone signaling system NOTE: to add a white point indicator I recommend using a separate single output
+    // #6 UK UK 4-TONE SIGNALING SYSTEM 
+    {   6, //  R   Y2   G    Y1             // nAspect  
         4,                                  // nLeds
-        {   {  ON, OFF, OFF, OFF },         // red
+        {   { OFF, OFF,  ON, OFF },         // green
             { OFF,  ON, OFF,  ON },         // double yellow
             { OFF,   X, OFF,   X },         // double yellow flashing
             { OFF,  ON, OFF, OFF },         // single yellow
             { OFF,   X, OFF, OFF },         // single yellow flashing
-            { OFF, OFF,  ON, OFF },         // green
-        },
+            {  ON, OFF, OFF, OFF },         // red
+        }, // NOTE: to add a white point indicator I recommend using a separate single output
     },
 
-    // GERMANY
-    {   3,                                  // nAspect  German H/V Haupt signale also In signale or curve signal.
+    // #7 GERMANY   GERMAN HP HAUPT SIGNALE ALSO IN SIGNALE OR CURVE SIGNAL.
+    {   3,  // R    Y     G                 // nAspect
         3,                                  // nLeds
         {   { OFF, OFF,  ON },              // green
             { OFF,  ON,  ON },              // green yellow
             {  ON, OFF, OFF },              // red
         },
-    },
-    {   3,                                  // nAspect  German H/V Vor signale
+    }, // #8   GERMAN HP VOR SIGNALE
+    {   3,   // Y2  G2   Y1   G1            // nAspect
         4,                                  // nLeds
         {   { OFF,  ON, OFF,  ON },         // green  green
             {  ON, OFF, OFF,  ON },         // yellow green
             {  ON, OFF,  ON, OFF },         // yellow yellow
             { OFF, OFF, OFF, OFF },         // None
         },
-    },
-    {   3,                                  // nAspect  German H/V Out signal
+    }, // #9 GERMAN HP OUT SIGNAL WITH SHUNT
+    {   3, //  S    R2   R1   Y    G        // nAspect
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
             { OFF, OFF, OFF,  ON,  ON },    // green yellow
+            { OFF, OFF,  ON, OFF, OFF },    // 1x red
             {  ON, OFF,  ON, OFF, OFF },    // 1x red with shunt
             { OFF,  ON,  ON, OFF, OFF },    // 2x red
         },
     },
 
-    // BELGIAN
-    {   6,  // S    R    Y2   Y1   G        // nAspect  Belgian home signal with shunt LEFT SIDE
+    // #10 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
+    {   6,  // S    R    Y2   Y1   G        // nAspect  
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
             { OFF, OFF, OFF,  ON,  ON },    // yellow yellow
@@ -106,8 +110,8 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF, OFF,  ON,  ON },    // green + yellow  GrGH
             { OFF, OFF,  ON, OFF,  ON },    // green + yellow  GrGV
         },
-    },
-    {   6,  // S    R    Y2   Y1   G        // nAspect  Belgian home signal with shunt OPPOSING SIDE, same as above but with blinking instead
+    },// #11  BELGIAN HOME SIGNAL WITH SHUNT OPPOSING SIDE
+    {   6,  // S    R    Y2   Y1   G        // nAspect
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,   X },    // green
             { OFF, OFF, OFF,   X,   X },    // yellow yellow
@@ -117,40 +121,47 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF,   X, OFF,   X },    // green + yellow  GrGV
         },
     },
+    // #12 AUSTRIA MAIN SIGNAL
+    {   4,  // R    Y     G   G        // nAspect
+        4,                             // nLeds
+        {   { OFF, OFF, OFF,  ON },    // green
+            { OFF, OFF,  ON,  ON },    // green green
+            { OFF,  ON, OFF,  ON },    // green yellow
+            { OFF,  ON, OFF, OFF },    // red
+        },
+    },// #13    AUSTRIA MAIN SIGNAL WITH SHUNTING AND DEPARTURE LIGHTS
+    {   7,  // Wp,  Ws, Gd,  R    Y     G    G        // nAspect  
+        7,  //  p=permission, s=shunt d=depart        // nLeds
+        {   { OFF, OFF, OFF, OFF, OFF, OFF,  ON },    // green
+            { OFF, OFF, OFF, OFF, OFF,  ON,  ON },    // green green
+            { OFF, OFF,   X, OFF, OFF, OFF,  ON },    // green + departure green
+            { OFF, OFF, OFF, OFF,  ON, OFF,  ON },    // green yellow
+            { OFF, OFF, OFF,  ON, OFF, OFF, OFF },    // red
+            { OFF,  ON, OFF,  ON, OFF, OFF, OFF },    // red + double white shunting admitted
+            {   X, OFF, OFF,  ON, OFF, OFF, OFF },    // red + white permission to pass at stop (flashing white)
+        },
+    }, // #14 AUSTRIA DISTANT SIGNAL
+    {   4,  // Y    Y     G   G        // nAspect    
+        4,                             // nLeds
+        {   { OFF, OFF,  ON,  ON },    // green green
+            { OFF,  ON,  ON,  ON },    // green green yellow
+            {  ON,  ON, OFF,  ON },    // green yellow yellow
+            {  ON,  ON, OFF, OFF },    // yellow yellow
+        },
+    },
 
-    // AUSTRIA
+
     /*
-    MAIN ASPECTS
-    RED
-    GREEN
-    GREEN GREEN
-    GREEN YELLOW
-
-    DISTANT
-    GREEN GREEN
-    GREEN GREEN YELLOW
-    off (main is red)
-    green yellow yellow
-    yellow yellow
-
-    AUSTRA 'SUPER' SIGNAL
-    Sams as above but with 4 extra lights for departure (green) and pass red allowed, and
-    RED
-    RED + double white shunting admitted
-    RED + white permission to pass at stop (flashing white)
-    GREEN
-    GREEN + flashing green departure allowed
-    GREEN GREEN
-    GREEN YELLOW
-
     // SWISS
 
 
+    // French
 
     */
 
-
 } ;
+
+
 
 static Aspect localAspect ;
 

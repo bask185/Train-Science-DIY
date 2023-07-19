@@ -2,8 +2,8 @@
 #include "src/macros.h"
 
 const int       nSignalTypes    = 20 ;
-const int       maxAspect       = 10 ;
-const int       maxLeds         =  5 ;
+const int       maxAspect       = 20 ;
+const int       maxLeds         =  7 ;
 
 const int       OFF             = 0b00 ;
 const int        ON             = 0b01 ;
