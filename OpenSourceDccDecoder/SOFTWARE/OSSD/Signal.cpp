@@ -90,7 +90,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF, OFF, OFF },         // None
         },
     }, // #9 GERMAN HP OUT SIGNAL WITH SHUNT
-    {   3, //  S    R2   R1   Y    G        // nAspect
+    {   5, //  S    R2   R1   Y    G        // nAspect
         5,                                  // nLeds
         {   { OFF, OFF, OFF, OFF,  ON },    // green
             { OFF, OFF, OFF,  ON,  ON },    // green yellow

@@ -383,7 +383,7 @@
     (property "Value" "Conn_01x04" (at 84.074 102.87 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 86.614 100.33 0)
+    (property "Footprint" "custom_kicad_lib_sk:04_solderpad_2.54" (at 86.614 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 86.614 100.33 0)

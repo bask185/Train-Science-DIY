@@ -333,7 +333,7 @@
     (property "Value" "Conn_01x05" (at 98.679 51.689 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" (at 101.219 50.419 0)
+    (property "Footprint" "custom_kicad_lib_sk:05_solderpad_2.54" (at 101.219 50.419 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 101.219 50.419 0)
