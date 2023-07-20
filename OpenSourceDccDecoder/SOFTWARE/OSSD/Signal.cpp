@@ -3,7 +3,7 @@
 
 const int nAspects = 30 ;
 const static Aspect aspects[nAspects] PROGMEM =
-{   // #0 DOUBLE COIL MODE
+{   // #1 DOUBLE COIL MODE
     {   2,                                  // nAspect
         2,                                  // nLeds
         // {   { C },                          // set coil
@@ -11,7 +11,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         // },
     },
 
-    // #1 SINGLE OUTPUT
+    // #2 SINGLE OUTPUT
     {   3,                                  // nAspect
         1,                                  // nLeds   SPECIAL single output only devices, 2nd address in use for optional blinking
         {   {  ON },                        // On
@@ -20,7 +20,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #2 SPECIAL RAILWAY CROSSING
+    // #3 SPECIAL RAILWAY CROSSING
     {   4,// TREE  Bl2   Bl1                // nAspect
         3,                                  // nLeds
         {   {  OFF, OFF, OFF },              // AHOB OFF
@@ -30,7 +30,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
 
-    // #3 GENERIC TWO TONE GREEN AND RED SIGNAL
+    // #4 GENERIC TWO TONE GREEN AND RED SIGNAL
     {   2, //  R    G                       // nAspect // Simple 2 tone green and red, no blinking. Good for many signals
         2,                                  // nLeds
         {   {  ON, OFF },                   // Green  // NEED FLASHING??
@@ -198,15 +198,15 @@ uint8 Signal::updateCoils()
         prevTime = millis() ;
         set = false ;
 
-        if( currentAspect ) digitalWrite( beginPin  , HIGH ) ;
-        else                digitalWrite( beginPin+1, HIGH ) ;
+        if( currentAspect ) digitalWrite( GPIO[beginPin]  , HIGH ) ;
+        else                digitalWrite( GPIO[beginPin+1], HIGH ) ;
     } 
 
     if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
     {   set  = true ;
         
-        digitalWrite( beginPin  , LOW ) ;
-        digitalWrite( beginPin+1, LOW ) ;
+        digitalWrite( GPIO[beginPin]  , LOW ) ;
+        digitalWrite( GPIO[beginPin+1], LOW ) ;
     }
 
     return set ;
@@ -223,10 +223,11 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
         if( currTime - prevTime >= interval )  // CHANGE IN CONSTANT OR VARIABLE...
         {   prevTime = currTime ;
 
-            for( int led = 0 ; led < ledCount ; led ++ )
+
+            for( int led = 0 ; led <ledCount ; led ++ )
             {
-                uint8 state = localAspect.aspects[currentAspect][led++] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 uint8   pin = GPIO[beginPin+led] ;
+                uint8 state = localAspect.aspects[currentAspect][led] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 switch( state )
                 {
                     case  ON: digitalWrite( pin, HIGH ) ; break ;
