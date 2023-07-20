@@ -530,7 +530,7 @@
     (property "Value" "LED" (at 147.701 75.2475 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "custom_kicad_lib_sk:LED_NO_SILK" (at 151.13 72.39 0)
+    (property "Footprint" "custom_kicad_lib_sk:02_solderpad_2.54" (at 151.13 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 72.39 0)
