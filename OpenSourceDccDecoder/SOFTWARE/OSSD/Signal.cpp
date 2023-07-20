@@ -49,16 +49,17 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     } ,       
     // #5  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR
-    {   8, //   G    Y    R    W             // nAspect
+    {   9, //   G    Y    R    W             // nAspect
         4,                                   // nLeds
         {   {   ON, OFF, OFF, OFF },         // Green
             {    X, OFF, OFF, OFF },         // Green flashing
             {    X, OFF, OFF,  ON },         // Green flashing w number
             {  OFF,  ON, OFF, OFF },         // Yellow
-            {  OFF,  ON, OFF,  ON },         // Yellow w number
             {  OFF,   X, OFF, OFF },         // Yellow flashing
+            {  OFF,  ON, OFF,  ON },         // Yellow w number
             {  OFF,   X, OFF,   X },         // Yellow flashing w number
-            {  OFF, OFF,  ON, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
+            {  OFF, OFF,  ON, OFF },         // red 
+            {  OFF, OFF,   X, OFF },         // red blinking
         },
     } ,  
 

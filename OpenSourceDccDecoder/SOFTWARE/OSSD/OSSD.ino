@@ -9,11 +9,17 @@
 
 /******* SK NOTES **********
  * TODO
-   The DCC bus must be verified
+ V The DCC bus must be verified
  v PROGMEM values must be verified
-   The actual signal control must be verified
-   The config menu as well as EEPROM must be verified
-   real signal PCB must be made and ordered
+ V The actual signal control must be verified
+ P  The config menu as well as EEPROM must be verified
+ V real signal PCB must be made and ordered
+ 
+ DOCUMENTATION
+ new spreadsheets must be finished
+ I want 2 sheets
+ 1 with aspect/address count and LED connections
+ 1 with all possible aspects
    
 
 */
