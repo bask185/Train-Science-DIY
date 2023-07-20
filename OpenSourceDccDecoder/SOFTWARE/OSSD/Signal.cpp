@@ -184,6 +184,7 @@ void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
     type        = _type ;
     beginPin    = _beginPin ;
     ledCount    = _ledCount ;
+    set         = true ;
 }
 
 
@@ -191,9 +192,10 @@ void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
 
 uint8 Signal::updateCoils()
 {
-    uint8 set ;
-    if( currentAspect != aspectPrev ) // state has changed, turn on a coil
-    {  aspectPrev = currentAspect ;
+    if( currentAspect != aspectPrev && set == true ) // state has changed, turn on a coil
+    {  
+        currentAspect &= 1 ;
+        aspectPrev = currentAspect ;
 
         prevTime = millis() ;
         set = false ;
@@ -207,6 +209,7 @@ uint8 Signal::updateCoils()
         
         digitalWrite( GPIO[beginPin]  , LOW ) ;
         digitalWrite( GPIO[beginPin+1], LOW ) ;
+        currentAspect &= 1 ;
     }
 
     return set ;
@@ -227,7 +230,7 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
             for( int led = 0 ; led <ledCount ; led ++ )
             {
                 uint8   pin = GPIO[beginPin+led] ;
-                uint8 state = localAspect.aspects[currentAspect][led] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
+                uint8 state = localAspect.aspects[currentAspect&0x7F][led] ; // left operand = row, right is COL  OUTPUT: ON, OFF or X
                 switch( state )
                 {
                     case  ON: digitalWrite( pin, HIGH ) ; break ;
@@ -264,6 +267,7 @@ uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
     if( dccAddress >= beginAddress && dccAddress <=endAddress )
     {
         currentAspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // TEST ME
+        if( type == 0 ) currentAspect |= 0x80 ;
         printNumberln("Aspect set: ",currentAspect) ;
     }
 }

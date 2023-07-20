@@ -9,11 +9,12 @@
 
 /******* SK NOTES **********
  * TODO
-   The DCC bus must be verified
+ V  The DCC bus must be verified
  v PROGMEM values must be verified
-   The actual signal control must be verified
-   The config menu as well as EEPROM must be verified
-   real signal PCB must be made and ordered
+ V The actual signal control must be verified
+ X The config menu 
+   EEPROM must be verified
+ V real signal PCB must be made and ordered
    
 
 */
@@ -145,11 +146,9 @@ void setup()
     printNumberln("mynumber = ", myAddress ) ;
 
 
-    signal[0].setType(3) ;
-    signal[1].setType(1) ;
+    // signal[0].setType(3) ; DEBUG THINGY
+    // signal[1].setType(1) ;
     initSignals() ;
-
-    
 
     Serial.println("BOOTED!!!");
     pinMode(13,OUTPUT);
@@ -238,12 +237,12 @@ void config()
         {
             beginTime = millis() ;
             state = checkButton ;
+            newAddressSet = 0 ;
         }
         break ;
 
     case checkButton:
-        if( btnState == LOW
-        &&  millis() - beginTime >= 2000 ) state =   getIndex ; // long press, configure output type
+        if( millis() - beginTime >= 1000 ) state =   getIndex ; // long press, configure output type
         if( btnState == RISING )           state = getAddress ; // btn released before 2 seconds
         break ;
 
@@ -261,9 +260,9 @@ void config()
         break ; 
 
     case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
-        // if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
-        // if( btnState == LOW
-        // &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
+        if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
+        if( btnState == LOW
+        &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
 
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
@@ -338,22 +337,23 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
-    if( millis() - lastTime >= 2000 ) // create lockout time of 100ms to prevent processing package
+    if( millis() - lastTime >= 500 ) // create lockout time of 100ms to prevent processing package
     {   lastTime = millis() ;
 
         newAddressSet = 1 ;
         receivedAddress = address ;
-    }
+    
 
-    if(  state != idle ) return ;
-    if( output ==    0 ) return ;
-    if( direction > 0 ) direction = 1 ;
+        if(  state != idle ) return ;
+        if( output ==    0 ) return ;
+        if( direction > 0 ) direction = 1 ;
 
-    for( int i = 0 ; i < signalCount ; i ++ )
-    {
-        uint8 type = signal[i].getType() ;
-        if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ;
+        for( int i = 0 ; i < signalCount ; i ++ )
+        {
+            uint8 type = signal[i].getType() ;
+            if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ;
 
-        signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
+            signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
+        }
     }
 }
