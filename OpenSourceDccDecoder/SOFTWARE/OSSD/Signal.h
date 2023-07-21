@@ -54,7 +54,7 @@ private:
     uint8   ledCount ;
     uint16  myAddress ;
     uint32  prevTime ;
-    uint8   set ;
+    uint8   sm ; // state machine
 
     const int interval = 1000 ; // may need to be variable in struct..
 

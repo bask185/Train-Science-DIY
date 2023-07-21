@@ -49,16 +49,17 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     } ,       
     // #5  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR
-    {   8, //   G    Y    R    W             // nAspect
+    {   9, //   G    Y    R    W             // nAspect
         4,                                   // nLeds
         {   {   ON, OFF, OFF, OFF },         // Green
             {    X, OFF, OFF, OFF },         // Green flashing
             {    X, OFF, OFF,  ON },         // Green flashing w number
             {  OFF,  ON, OFF, OFF },         // Yellow
-            {  OFF,  ON, OFF,  ON },         // Yellow w number
             {  OFF,   X, OFF, OFF },         // Yellow flashing
+            {  OFF,  ON, OFF,  ON },         // Yellow w number
             {  OFF,   X, OFF,   X },         // Yellow flashing w number
             {  OFF, OFF,  ON, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
+            {  OFF, OFF,   X, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
         },
     } ,  
 
@@ -184,35 +185,54 @@ void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
     type        = _type ;
     beginPin    = _beginPin ;
     ledCount    = _ledCount ;
-    set         = true ;
 }
 
 
+enum coilStates 
+{
+    idle,
+    setting,
+    waiting,
+    lockout,
+    reset,
 
+} ;
 
 uint8 Signal::updateCoils()
 {
-    if( currentAspect != aspectPrev && set == true ) // state has changed, turn on a coil
-    {  
-        currentAspect &= 1 ;
-        aspectPrev = currentAspect ;
+    switch( sm )
+    {
+    case idle:
+        if( currentAspect & 0x80 ) sm ++ ;
+        return 1 ;
+
+    case setting:
+        if( currentAspect & 0x1 ) digitalWrite( GPIO[beginPin]  , HIGH ) ;
+        else                      digitalWrite( GPIO[beginPin+1], HIGH ) ;
 
         prevTime = millis() ;
-        set = false ;
+        sm ++ ;
+        return 0 ;
 
-        if( currentAspect ) digitalWrite( GPIO[beginPin]  , HIGH ) ;
-        else                digitalWrite( GPIO[beginPin+1], HIGH ) ;
-    } 
+    case waiting:
+        if( millis() - prevTime >= 100 )
+        {
+            digitalWrite( GPIO[beginPin]  , LOW ) ;
+            digitalWrite( GPIO[beginPin+1], LOW ) ;
+            sm ++ ;
+            prevTime = millis() ;
+        }
+        return 0 ;
 
-    if( set == false && (millis() - prevTime) >= 100 ) // if time has expired, kill coils and clear set flag
-    {   set  = true ;
-        
-        digitalWrite( GPIO[beginPin]  , LOW ) ;
-        digitalWrite( GPIO[beginPin+1], LOW ) ;
+    case lockout:
+        if( millis() - prevTime >= 500 ) sm ++ ; // wait for repetive DCC messages to pass
+        return 0 ;
+
+    case reset:
         currentAspect &= 1 ;
+        sm = idle ;
+        return 0 ;
     }
-
-    return set ;
 }
 
 

@@ -158,13 +158,6 @@ void setup()
 
 void loop()
 {
-    // if( millis() > 3000 ) state = getAddress ;
-    // if( millis() > 6000 ) state = getIndex ;
-    // if( millis() > 2000 ) state = getSignalType ;
-    // if( millis() > 6000 ) state = idle ;
-    // if( millis() > 12000 ) state = getMode ;
-
-
     statusLed() ;
 
     dcc.process() ;
@@ -342,18 +335,17 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
         newAddressSet = 1 ;
         receivedAddress = address ;
-    
+    }
 
-        if(  state != idle ) return ;
-        if( output ==    0 ) return ;
-        if( direction > 0 ) direction = 1 ;
+    if(  state != idle ) return ;
+    if( output ==    0 ) return ;
+    if( direction > 0 ) direction = 1 ;
 
-        for( int i = 0 ; i < signalCount ; i ++ )
-        {
-            uint8 type = signal[i].getType() ;
-            if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ;
+    for( int i = 0 ; i < signalCount ; i ++ )
+    {
+        uint8 type = signal[i].getType() ;
+        if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ;
 
-            signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
-        }
+        signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
     }
 }
