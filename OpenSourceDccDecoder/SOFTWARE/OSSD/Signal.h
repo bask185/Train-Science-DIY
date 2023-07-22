@@ -1,23 +1,8 @@
 #include <Arduino.h>
 #include "src/macros.h"
 
-const int       nSignalTypes    = 20 ;
-const int       maxAspect       = 20 ;
-const int       maxLeds         =  7 ;
-
-const int       OFF             = 0b00 ;
-const int        ON             = 0b01 ;
-const int         X             = 0b10 ; // flash
-const int         C             = 0b11 ; // coil
-
-
-//extern Aspect aspects[] ;
-
-
 uint8 getAspectAmount() ;
 uint8 getOutputAmount() ;
-
-//Aspect getAspect( uint8 index ) ;
 
 class Signal {
 

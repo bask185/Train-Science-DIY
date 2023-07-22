@@ -1,6 +1,12 @@
 #include "Signal.h"
 #include "config.h"
 
+const int       maxAspect       = 30 ;
+const int       maxLeds         =  8 ;
+
+const int       OFF             = 0b00 ;
+const int        ON             = 0b01 ;
+const int         X             = 0b10 ; // flash
 typedef struct Aspects 
 {
     uint8   nAspect ;
@@ -132,7 +138,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF, OFF, OFF },         // None
         },
     }, 
-    // #10 GERMAN HP OUT SIGNAL WITH SHUNT
+    // #11 GERMAN HP OUT SIGNAL WITH SHUNT
     {   5, //    G   Y   R1   R2    S        // nAspect
         5,                                   // nLeds
         50,                                 // blink interval
@@ -143,7 +149,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF,  ON,  ON, OFF },    // 2x red
         },
     },
-    // #11 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
+    // #12 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
     {   6,  //  G    Y1    Y2   R   S        // nAspect
         5,                                   // nLeds
         50,                                 // blink interval
@@ -155,7 +161,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {   ON, OFF,  ON, OFF, OFF },    // green + yellow  GrGV
         },
     },
-    // #12  BELGIAN HOME SIGNAL WITH SHUNT OPPOSING SIDE
+    // #13  BELGIAN HOME SIGNAL WITH SHUNT OPPOSING SIDE
     {   6,  //  G    Y1    Y2   R   S        // nAspect
         5,                                   // nLeds
         50,                                  // blink interval
@@ -232,20 +238,19 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
     // 18 French
-    {   6,  //  G1   G2   Y1   Y2   Y3           // nAspect    
-        7,                                       // nLeds
+    {   8,  //  G,   Y1,  Y2,  R1, R2,           // nAspect    
+        5,                                       // nLeds
         NA,                                      // blink interval
-        {   {   ON,  ON, OFF, OFF, OFF },        // Aspect 1 : The track ahead is clear.
-            {   ON, OFF,  ON, OFF, OFF },        // Aspect 2 : Max speed 40 km/u
-            {   ON,  ON,  ON, OFF, OFF },        // Aspect 3 : Max speed 60 km/h 
-            {   ON,  ON, OFF,  ON, OFF },        // Aspect 5 : Max speed 90 km/h for the points in diverging position. 
-            {   ON, OFF,  ON, OFF, OFF },        // Aspect 6 : Max speed 40 km/h, the next signal shows 'stop' and is at reduced distance.
-            {  OFF, OFF, OFF,  ON,  ON },        // ‘Stop’ Aspect
+        {   {   ON, OFF, OFF, OFF, OFF },        // Green    
+            {  OFF,  ON, OFF, OFF, OFF },       // YELLOW
+            {  OFF,   X, OFF, OFF, OFF },       // YELLOW FLASH
+            {  OFF,  ON,  ON, OFF, OFF },       // 2x YELLOW
+            {  OFF,   X,   X, OFF, OFF },       // 2x YELLOW FLASH
+            {  OFF, OFF, OFF,  ON, OFF },       // RED
+            {  OFF, OFF, OFF,   X, OFF },       // RED FLASH
+            {  OFF, OFF, OFF,  ON,  ON },       // 2x RED
         },
     },
-
-    
-
 } ;
 
 
