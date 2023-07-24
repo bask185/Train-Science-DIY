@@ -9,17 +9,12 @@
 
 /******* SK NOTES **********
  * TODO
- V The DCC bus must be verified
+ V  The DCC bus must be verified
  v PROGMEM values must be verified
  V The actual signal control must be verified
- P  The config menu as well as EEPROM must be verified
+ X The config menu 
+   EEPROM must be verified
  V real signal PCB must be made and ordered
- 
- DOCUMENTATION
- new spreadsheets must be finished
- I want 2 sheets
- 1 with aspect/address count and LED connections
- 1 with all possible aspects
    
 
 */
@@ -151,11 +146,9 @@ void setup()
     printNumberln("mynumber = ", myAddress ) ;
 
 
-    signal[0].setType(3) ;
-    signal[1].setType(1) ;
+    // signal[0].setType(3) ; DEBUG THINGY
+    // signal[1].setType(1) ;
     initSignals() ;
-
-    
 
     Serial.println("BOOTED!!!");
     pinMode(13,OUTPUT);
@@ -165,13 +158,6 @@ void setup()
 
 void loop()
 {
-    // if( millis() > 3000 ) state = getAddress ;
-    // if( millis() > 6000 ) state = getIndex ;
-    // if( millis() > 2000 ) state = getSignalType ;
-    // if( millis() > 6000 ) state = idle ;
-    // if( millis() > 12000 ) state = getMode ;
-
-
     statusLed() ;
 
     dcc.process() ;
@@ -244,12 +230,12 @@ void config()
         {
             beginTime = millis() ;
             state = checkButton ;
+            newAddressSet = 0 ;
         }
         break ;
 
     case checkButton:
-        if( btnState == LOW
-        &&  millis() - beginTime >= 2000 ) state =   getIndex ; // long press, configure output type
+        if( millis() - beginTime >= 1000 ) state =   getIndex ; // long press, configure output type
         if( btnState == RISING )           state = getAddress ; // btn released before 2 seconds
         break ;
 
@@ -267,9 +253,9 @@ void config()
         break ; 
 
     case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
-        // if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
-        // if( btnState == LOW
-        // &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
+        if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
+        if( btnState == LOW
+        &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
 
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
@@ -344,7 +330,7 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
-    if( millis() - lastTime >= 2000 ) // create lockout time of 100ms to prevent processing package
+    if( millis() - lastTime >= 500 ) // create lockout time of 100ms to prevent processing package
     {   lastTime = millis() ;
 
         newAddressSet = 1 ;

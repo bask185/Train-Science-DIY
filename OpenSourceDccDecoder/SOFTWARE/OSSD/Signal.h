@@ -1,29 +1,8 @@
 #include <Arduino.h>
 #include "src/macros.h"
 
-const int       nSignalTypes    = 20 ;
-const int       maxAspect       = 20 ;
-const int       maxLeds         =  7 ;
-
-const int       OFF             = 0b00 ;
-const int        ON             = 0b01 ;
-const int         X             = 0b10 ; // flash
-const int         C             = 0b11 ; // coil
-
-typedef struct Aspects 
-{
-    uint8 nAspect ;
-    uint8 nLeds ;
-    uint8 aspects[maxAspect][maxLeds] ;
-} Aspect ;
-
-//extern Aspect aspects[] ;
-
-
 uint8 getAspectAmount() ;
 uint8 getOutputAmount() ;
-
-//Aspect getAspect( uint8 index ) ;
 
 class Signal {
 
@@ -54,6 +33,8 @@ private:
     uint8   ledCount ;
     uint16  myAddress ;
     uint32  prevTime ;
+    uint8   tglState ;
+    uint8   sm ; // state machine
 
     const int interval = 1000 ; // may need to be variable in struct..
 
