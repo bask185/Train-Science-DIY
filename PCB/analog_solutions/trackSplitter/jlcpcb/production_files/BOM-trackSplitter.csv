@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC
+Screw_Terminal_01x02,J3,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+Screw_Terminal_01x02,J2,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+SW_DPDT_x2,SW1,MTS_DPDT,
+Screw_Terminal_01x02,J1,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",

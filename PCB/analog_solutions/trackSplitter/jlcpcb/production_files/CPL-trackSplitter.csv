@@ -1,0 +1,5 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",163.881,-99.187,-90.0,top
+J2,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",190.703,-94.229,90.0,top
+J3,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",190.703,-104.389,90.0,top
+SW1,SW_DPDT_x2,MTS_DPDT,176.84,-99.314,90.0,top

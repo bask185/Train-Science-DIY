@@ -94,8 +94,8 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF,   X, OFF, OFF },         // Yellow flashing
             {  OFF,  ON, OFF,  ON },         // Yellow w number
             {  OFF,   X, OFF,   X },         // Yellow flashing w number
-            {  OFF, OFF,  ON, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
-            {  OFF, OFF,   X, OFF },         // red (RED BLINKING NOT IMPLEMENTED, OVERKILL, saves an address)
+            {  OFF, OFF,  ON, OFF },         // red 
+            {  OFF, OFF,   X, OFF },         // 
         },
     } ,  
     // #7 UK UK 4-TONE SIGNALING SYSTEM 

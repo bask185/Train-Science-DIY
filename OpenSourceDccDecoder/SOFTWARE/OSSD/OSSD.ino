@@ -12,11 +12,9 @@
  V  The DCC bus must be verified
  v PROGMEM values must be verified
  V The actual signal control must be verified
- X The config menu 
-   EEPROM must be verified
+ V The config menu 
+ V EEPROM must be verified
  V real signal PCB must be made and ordered
-   
-
 */
 
 const int   DEFAULT_ADDRESS = 1000 ;
