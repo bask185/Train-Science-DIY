@@ -1044,7 +1044,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 57.15 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 10554bcb-0b5a-476b-82f7-05bc96199134)
-    (property "Reference" "U1" (at 58.42 80.01 0)
+    (property "Reference" "C1" (at 58.42 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 57.15 83.82 0)
@@ -1064,7 +1064,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U1") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -1098,7 +1098,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 69.85 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 21cb43fd-0721-4db5-a518-96aa4aa31e8d)
-    (property "Reference" "U3" (at 71.12 80.01 0)
+    (property "Reference" "C3" (at 71.12 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 69.85 83.82 0)
@@ -1118,7 +1118,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U3") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -1178,7 +1178,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 63.5 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 46d92657-61f5-47e4-ac1a-b434832770cb)
-    (property "Reference" "U2" (at 64.77 80.01 0)
+    (property "Reference" "C2" (at 64.77 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 63.5 83.82 0)
@@ -1198,7 +1198,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U2") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -1338,7 +1338,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 88.9 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6d9d91f7-602e-4e81-9632-b8c4e056f272)
-    (property "Reference" "U6" (at 90.17 80.01 0)
+    (property "Reference" "C6" (at 90.17 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 88.9 83.82 0)
@@ -1358,7 +1358,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U6") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -1379,6 +1379,9 @@
     (property "Datasheet" "http://www.ti.com/lit/ds/snvs774n/snvs774n.pdf" (at 99.06 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "JLCPCB Part#" "C75510" (at 99.06 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid a98beeb9-5ad6-4028-ab1f-b459d1bcff5f))
     (pin "2" (uuid 79b64f73-ec7f-42a3-a8f3-6782bbcf4ebd))
     (pin "3" (uuid 6ec36dda-5827-4959-8dd6-3af7cf202abd))
@@ -1394,7 +1397,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 76.2 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 798cad38-a8e1-4dc4-b704-91fccdfe9522)
-    (property "Reference" "U4" (at 77.47 80.01 0)
+    (property "Reference" "C4" (at 77.47 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 76.2 83.82 0)
@@ -1414,7 +1417,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U4") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -1549,7 +1552,7 @@
   (symbol (lib_id "capacitor_miscellaneous:C_1206_47uF") (at 82.55 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b7e2a61c-ddf9-4420-a675-0add71b2c50f)
-    (property "Reference" "U5" (at 83.82 80.01 0)
+    (property "Reference" "C5" (at 83.82 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 82.55 83.82 0)
@@ -1569,7 +1572,7 @@
     (instances
       (project "ledStrip"
         (path "/79a19cf4-5e4a-4938-b6b8-eb4ff50aadd8"
-          (reference "U5") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )

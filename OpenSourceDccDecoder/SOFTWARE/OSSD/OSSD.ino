@@ -99,7 +99,6 @@ void storeType( uint8 idx, uint8 val )
     EEPROM.write( eeAddress, val ) ;
 }
 
-
 uint8 loadType( uint8 idx )
 {
     int eeAddress = idx ;
@@ -109,8 +108,6 @@ uint8 loadType( uint8 idx )
 
 void setup()
 {
-    Serial.begin(115200);
- 
     for( int i = 0 ; i < 16 ; i ++ )
     {
         pinMode( GPIO[i], OUTPUT ) ;
@@ -134,23 +131,13 @@ void setup()
     {
         uint8_t type = loadType( i ) ;  // fetch from EEPROM
         signal[i].setType( type ) ;     // intialize the signals
-        printNumberln("type: ", type ) ;
     }
 
     dcc.pin(2, 0);
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 
-    
-    printNumberln("mynumber = ", myAddress ) ;
-
-
-    // signal[0].setType(3) ; DEBUG THINGY
-    // signal[1].setType(1) ;
     initSignals() ;
-
-    Serial.println("BOOTED!!!");
     pinMode(13,OUTPUT);
-
     signalIndex = 0 ;
 }
 
@@ -192,12 +179,6 @@ void initSignals()
             if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;
             else                                      addressCount += signal[i].getAddressAmount() ;
 
-            // printNumber_(F("\r\nsignal #"),      i ) ;
-            // printNumberln(F("led amount: "),     nLeds);
-            // printNumberln(F("first IO pin: "),   signal[i].get1stPin());
-            // printNumberln(F("aspect amount: "),  signal[i].getAspectAmount());
-            // printNumberln(F("begin address: "),  signal[i].getAddress()) ;
-            // printNumberln(F("end address: "),    signal[i].getAddress() + signal[i].getAddressAmount() - 1 ) ;
             signalCount ++ ;
 
             ledCount += nLeds ;

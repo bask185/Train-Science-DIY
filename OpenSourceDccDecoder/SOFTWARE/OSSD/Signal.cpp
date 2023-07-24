@@ -57,7 +57,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
     // #3 SPECIAL RAILWAY CROSSING
-    {   2,// TREE  Bl2   Bl1                 // nAspect
+    {   2, //   B2   B1    W           // nAspect
         3,                                   // nLeds
         67,                                  // blink interval
         {   {  OFF, OFF,   X },              // AKI  OFF
@@ -119,26 +119,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF,  ON },              // red
         },
     },
-    // #9 GERMANY   GERMAN HP HAUPT WITH VOR SIGNAL
-    {   3,  //   G    R   Gv   Yv           // nAspect
-        4,                                  // nLeds
-        50,                                 // blink interval
-        {   {    ON, OFF,  ON, OFF },       // green, expect green
-            {    ON, OFF, OFF,  ON },       // green, expect red
-            {   OFF,  ON, OFF, OFF },       // red,      off
-        },
-    },
-    // #10   GERMAN HP VOR SIGNALE
-    {   3,   // G1  Y1   G2   Y2             // nAspect
-        4,                                   // nLeds
-        50,                                 // blink interval
-        {   {   ON, OFF,  ON, OFF },         // green  green
-            {   ON, OFF, OFF,  ON },         // yellow green
-            {  OFF,  ON, OFF,  ON },         // yellow yellow
-            {  OFF, OFF, OFF, OFF },         // None
-        },
-    }, 
-    // #11 GERMAN HP OUT SIGNAL WITH SHUNT
+     // #9 GERMAN HP OUT SIGNAL WITH SHUNT
     {   5, //    G   Y   R1   R2    S        // nAspect
         5,                                   // nLeds
         50,                                 // blink interval
@@ -149,6 +130,26 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF,  ON,  ON, OFF },    // 2x red
         },
     },
+    // #10 GERMAN HP HAUPT WITH VOR SIGNAL
+    {   4,  //   G    R   G1v  Y1v  G2v Y2v     // nAspect
+        6,                                      // nLeds
+        NA,                                     // blink interval
+        {   {    ON, OFF,  ON, OFF,  ON, OFF }, // green, expect green
+            {    ON, OFF,  ON, OFF, OFF,  ON }, // green, expect yellow
+            {    ON, OFF, OFF,  ON, OFF,  ON }, // green, expect red
+            {   OFF,  ON, OFF, OFF, OFF, OFF }, // red,      off
+        },
+    },
+    // #11   GERMAN HP VOR SIGNALE
+    {   3,   // G1  Y1   G2   Y2             // nAspect
+        4,                                   // nLeds
+        50,                                 // blink interval
+        {   {   ON, OFF,  ON, OFF },         // green  green
+            {   ON, OFF, OFF,  ON },         // yellow green
+            {  OFF,  ON, OFF,  ON },         // yellow yellow
+        },
+    }, 
+   
     // #12 BELGIAN HOME SIGNAL WITH SHUNT LEFT SIDE
     {   6,  //  G    Y1    Y2   R   S        // nAspect
         5,                                   // nLeds
@@ -173,7 +174,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {    X, OFF,   X, OFF, OFF },    // green + yellow  GrGV
         },
     },
-    // #13 AUSTRIA MAIN SIGNAL
+    // #14 AUSTRIA MAIN SIGNAL
     {   4,  //   G    G    Y   R        // nAspect
         4,                              // nLeds
         50,                             // blink interval
@@ -183,7 +184,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF, OFF,  ON },    // red
         },
     },
-    // #14    AUSTRIA MAIN SIGNAL WITH SHUNTING AND DEPARTURE LIGHTS
+    // #15    AUSTRIA MAIN SIGNAL WITH SHUNTING AND DEPARTURE LIGHTS
     {   7,  //  G,   G,  Y,  R   Gd    Ws   Ws         // nAspect  
         7,  //  p=permission, s=shunt d=depart         // nLeds
         50,                                            // blink interval
@@ -196,7 +197,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             { OFF, OFF, OFF,  ON, OFF, OFF ,   X },    // red + white permission to pass at stop (flashing white)
         },
     }, 
-    // #15 AUSTRIA DISTANT SIGNAL
+    // #16 AUSTRIA DISTANT SIGNAL
     {   4,  // G    G     Y   Y             // nAspect    
         4,                                  // nLeds
         50,                                 // blink interval
@@ -213,19 +214,20 @@ const static Aspect aspects[nAspects] PROGMEM =
      G4 Y2 
      G3
      */
-    // # 16 SWISS HOME
-    {   6,  //  G1   G2   G3   G4   Y1   Y2   Y3   R            // nAspect    
-        7,                                                      // nLeds
-        NA,                                                     // blink interval
-        {   {   ON, OFF, OFF, OFF, OFF, OFF, OFF, OFF },        // Aspect 1 : The track ahead is clear.
-            {   ON, OFF, OFF, OFF, OFF, OFF,  ON, OFF },        // Aspect 2 : Max speed 40 km/u
-            {   ON, OFF, OFF,  ON, OFF, OFF, OFF, OFF },        // Aspect 3 : Max speed 60 km/h 
-            {   ON,  ON,  ON, OFF, OFF, OFF, OFF, OFF },        // Aspect 5 : Max speed 90 km/h for the points in diverging position. 
-            {  OFF, OFF, OFF, OFF,  ON,  ON, OFF, OFF },        // Aspect 6 : Max speed 40 km/h, the next signal shows 'stop' and is at reduced distance.
-            {  OFF, OFF, OFF, OFF, OFF, OFF, OFF,  ON },        // ‘Stop’ Aspect
+    
+    // # 17 SWISS HOME
+    {   6,  //  G1   G2   G3   G4   Y1   Y2   Y3   R      // nAspect    
+        7,                                                // nLeds
+        NA,                                               // blink interval
+        {   {   ON, OFF, OFF, OFF, OFF, OFF, OFF, OFF },  // Aspect 1 : The track ahead is clear.
+            {   ON, OFF, OFF, OFF, OFF, OFF,  ON, OFF },  // Aspect 2 : Max speed 40 km/u
+            {   ON, OFF, OFF,  ON, OFF, OFF, OFF, OFF },  // Aspect 3 : Max speed 60 km/h 
+            {   ON,  ON,  ON, OFF, OFF, OFF, OFF, OFF },  // Aspect 5 : Max speed 90 km/h for the points in diverging position. 
+            {  OFF, OFF, OFF, OFF,  ON,  ON, OFF, OFF },  // Aspect 6 : Max speed 40 km/h, the next signal shows 'stop' and is at reduced distance.
+            {  OFF, OFF, OFF, OFF, OFF, OFF, OFF,  ON },  // ‘Stop’ Aspect
         },
     },
-    // #17 SWISS DISTANT
+    // #18 SWISS DISTANT
     {   6,  //  G1   G2   Y1   Y2   Y3           // nAspect    
         7,                                       // nLeds
         NA,                                      // blink interval
@@ -237,7 +239,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF, OFF,  ON,  ON },        // ‘Stop’ Aspect
         },
     },
-    // 18 French
+    // 19 French
     {   8,  //  G,   Y1,  Y2,  R1, R2,           // nAspect    
         5,                                       // nLeds
         NA,                                      // blink interval
