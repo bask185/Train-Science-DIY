@@ -48,11 +48,11 @@ Debounce    configButton ;
 enum modeState
 {
     idle,
-    getAddress,
+    getBaseAddress,
     getIndex,
     getUniqueAddress,
     getSignalType,
-    getMode,
+    configMode,
 
     checkButton, // not a actual mode
 } ;
@@ -84,11 +84,11 @@ void statusLed()
             digitalWrite( ledPin, HIGH ) ;
             break ;
 
-        case getMode:           blinkTime =  50 ; goto blink ;  //  125/2
+        case configMode:        blinkTime =  50 ; goto blink ;  //  125/2
         case getSignalType:     blinkTime = 125 ; goto blink ;  //  250/2
         case getUniqueAddress:  blinkTime = 190 ; goto blink ;  //  190/2
         case getIndex:          blinkTime = 250 ; goto blink ;  //  500/2
-        case getAddress:        blinkTime = 500 ; goto blink ;  // 1000/2
+        case getBaseAddress:    blinkTime = 500 ; goto blink ;  // 1000/2
         
         blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
@@ -146,7 +146,7 @@ void setup()
         for( int i = 0 ; i < 16 ; i ++ )
         {
             storeType( i, 0 ) ;   // set all items to coil type. DEFAULT
-            storeAddress(i, i+1 ) ; // set all unique addresses in incrementing order. Not used in default.
+            storeAddress(i, i+1 ) ; // set all unique addresses in incrementing order. Only used in unique address mode
         }
     }
 
@@ -248,11 +248,15 @@ void config()
         break ;
 
     case checkButton:
-        if( millis() - beginTime >= 1000 ) state =   getIndex ; // long press, configure output type
-        if( btnState == RISING )           state = getAddress ; // btn released before 2 seconds
+        if( millis() - beginTime >= 1000 ) state =   getIndex ; // long press
+        if( btnState == RISING )                                // short press
+        {
+            if( bitRead( configBits, UNIQUE_ADDRESSES )) state = getIndex ;
+            else                                         state = getBaseAddress ;
+        }
         break ;
 
-    case getAddress:
+    case getBaseAddress:
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
@@ -266,7 +270,7 @@ void config()
 
     case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
         if( btnState == LOW
-        &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
+        &&  (millis() - beginTime >= 4000) ) state = configMode ; // button held down for 4s
 
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
@@ -283,7 +287,7 @@ void config()
 
             storeAddress( signalIndex, receivedAddress ) ;
             initSignals() ;
-            state = getSignalType ;
+            state = getIndex ;
         }
         break ;
 
@@ -293,11 +297,11 @@ void config()
 
             signal[signalIndex].setType( receivedAddress-1 ) ; //(should go to EEPROM?)
             initSignals() ;
-            state = idle ;
+            state = getIndex ;
         }
         break ; 
     
-    case getMode:
+    case configMode:
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
