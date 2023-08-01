@@ -17,6 +17,9 @@
  V real signal PCB must be made and ordered
 */
 
+// bytes 0-15   hold types
+// bytes 16-47  hold unique DCC addresses
+
 const int   DEFAULT_ADDRESS = 1000 ;
 const int   DEFAULT_VALUE   = 0xCC ;
 
@@ -28,9 +31,9 @@ const int   DEFAULT_CONFIG  = 0x00 ;
 
 
 // config bits
-const int   DCC_EXTENDED    = 0 ;
-// const int   bit1    = 1 ;
-// const int   bit2    = 2 ;
+const int   DCC_EXTENDED        = 0 ;
+const int   UNIQUE_ADDRESSES    = 1 ;
+// const int   bit2         = 2 ;
 
 uint8       configBits ;
 
@@ -47,6 +50,7 @@ enum modeState
     idle,
     getAddress,
     getIndex,
+    getUniqueAddress,
     getSignalType,
     getMode,
 
@@ -80,10 +84,11 @@ void statusLed()
             digitalWrite( ledPin, HIGH ) ;
             break ;
 
-        case getMode:       blinkTime =  50 ; goto blink ;  //  125/2
-        case getSignalType: blinkTime = 125 ; goto blink ;  //  250/2
-        case getIndex:      blinkTime = 250 ; goto blink ;  //  500/2
-        case getAddress:    blinkTime = 500 ; goto blink ;  // 1000/2
+        case getMode:           blinkTime =  50 ; goto blink ;  //  125/2
+        case getSignalType:     blinkTime = 125 ; goto blink ;  //  250/2
+        case getUniqueAddress:  blinkTime = 190 ; goto blink ;  //  190/2
+        case getIndex:          blinkTime = 250 ; goto blink ;  //  500/2
+        case getAddress:        blinkTime = 500 ; goto blink ;  // 1000/2
         
         blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
@@ -93,7 +98,7 @@ void statusLed()
     END_REPEAT
 }
 
-void storeType( uint8 idx, uint8 val )
+void storeType( uint8 idx, uint8 val )  // type use 1 byte. (0-15)
 {
     int eeAddress = idx ;
     EEPROM.write( eeAddress, val ) ;
@@ -105,9 +110,24 @@ uint8 loadType( uint8 idx )
     return EEPROM.read( eeAddress ) ;
 }
 
+void storeAddress( uint8 idx, uint16 val )  // address use 2 byte. (16-47)
+{
+    int eeAddress = (idx * 2) + 16 ;
+    EEPROM.put( eeAddress, val ) ;
+}
+
+uint16_t loadAddress( uint8 idx )
+{
+    int eeAddress = (idx * 2) + 16 ;
+    uint16 val ;
+    EEPROM.get( eeAddress, val ) ;
+    return val ;
+}
+
 
 void setup()
 {
+    pinMode( 13, OUTPUT ) ;
     for( int i = 0 ; i < 16 ; i ++ )
     {
         pinMode( GPIO[i], OUTPUT ) ;
@@ -123,7 +143,11 @@ void setup()
         myAddress = DEFAULT_DCC ;
         EEPROM.put( DCC_ADDRESS, myAddress ) ; // initialize DCC address
 
-        for( int i = 0 ; i < 16 ; i ++ )  storeType( i, 0 ) ; // set all items to coil type.
+        for( int i = 0 ; i < 16 ; i ++ )
+        {
+            storeType( i, 0 ) ;   // set all items to coil type. DEFAULT
+            storeAddress(i, i+1 ) ; // set all unique addresses in incrementing order. Not used in default.
+        }
     }
 
     EEPROM.get( DCC_ADDRESS, myAddress ) ; // load dcc address from EEPROM
@@ -137,7 +161,6 @@ void setup()
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 
     initSignals() ;
-    pinMode(13,OUTPUT);
     signalIndex = 0 ;
 }
 
@@ -172,11 +195,16 @@ void initSignals()
         if( nLeds + ledCount > nGpio ) break ;  // IO is full, no more room for this signal, break
         else
         {
+            if( bitRead( configBits, UNIQUE_ADDRESSES ))
+            {
+                addressCount = loadAddress( i ) ; // if unique addresses are used, fetch an address from EEPROM instead
+            }
+
             signal[i].setFirstIO( ledCount ) ;
             signal[i].setAddress( addressCount ) ;
 
             // NOTE, if DCC extended is used, one address per item should be used
-            if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;
+            if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;  // BUG, somehow dcc ext does not seem to work for index 2 or higher
             else                                      addressCount += signal[i].getAddressAmount() ;
 
             signalCount ++ ;
@@ -201,6 +229,12 @@ void config()
     END_REPEAT
 
     uint8_t btnState = configButton.getState() ;
+
+    if( btnState == FALLING && state != idle )
+    {
+        state = idle ;
+        btnState = HIGH ;
+    }
 
     switch( state )
     {
@@ -228,11 +262,9 @@ void config()
             state = idle ;
             newAddressSet = 0 ;
         }
-        if( btnState == FALLING )  state = idle ; // if button is pressed before address is received, action is aborted.
         break ; 
 
     case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
-        if( btnState == FALLING )            state = idle ;    // if button is pressed before address is received, action is aborted.
         if( btnState == LOW
         &&  (millis() - beginTime >= 4000) ) state = getMode ; // button held down for 4s
 
@@ -240,13 +272,22 @@ void config()
         {   newAddressSet = 0 ;
 
             signalIndex = receivedAddress-1 ;
+            if( bitRead( configBits, UNIQUE_ADDRESSES )) state = getUniqueAddress ;
+            else                                         state = getSignalType ;
+        }
+        break ;
+
+    case getUniqueAddress:
+        if( newAddressSet == 1 ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
+        {   newAddressSet = 0 ;
+
+            storeAddress( signalIndex, receivedAddress ) ;
+            initSignals() ;
             state = getSignalType ;
         }
-        break ; 
+        break ;
 
     case getSignalType:
-        if( btnState == FALLING )          state = idle ;
-
         if( newAddressSet == 1 ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
         {   newAddressSet = 0 ;
 
@@ -257,7 +298,6 @@ void config()
         break ; 
     
     case getMode:
-        if( btnState  == FALLING ) state = idle ; // if button is pressed before address is received, action is aborted.
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
@@ -275,7 +315,21 @@ void config()
                 initSignals() ;
                 state = idle ;
             }
-            if( receivedAddress == 10 )
+            if( receivedAddress == 3 ) // use sequential addresses
+            {
+                bitClear( configBits, UNIQUE_ADDRESSES ) ;
+                EEPROM.write( CONFIG_ADDRESS, configBits ) ;
+                initSignals() ;
+                state = idle ;
+            }
+            if( receivedAddress == 4 ) // use unique address per object
+            {
+                bitSet( configBits, UNIQUE_ADDRESSES ) ;
+                EEPROM.write( CONFIG_ADDRESS, configBits ) ;
+                initSignals() ;
+                state = idle ;
+            }
+            if( receivedAddress == 10 ) // FACTORY RESET
             {
                 EEPROM.write( DEFAULT_ADDRESS, ~DEFAULT_VALUE ) ;   // 'corrupt' default value to let decoder re-initialize the decoder's EEPROM
                 Serial.println("FACTORY RESET in 2 seconds");
