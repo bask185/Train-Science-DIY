@@ -110,7 +110,20 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF, OFF,  ON },         // red
         }, // NOTE: to add a white point indicator I recommend using a separate single output
     },
-    // #8 GERMANY   GERMAN HP HAUPT SIGNALE ALSO IN SIGNALE OR CURVE SIGNAL.
+
+    // #8 GERMAN HP OUT SIGNAL WITH SHUNT
+    {   5, //    G   Y   R1   R2    S        // nAspect
+        5,                                   // nLeds
+        50,                                 // blink interval
+        {   {   ON, OFF, OFF, OFF, OFF },    // green
+            {   ON,  ON, OFF, OFF, OFF },    // green yellow
+            {  OFF, OFF,  ON, OFF, OFF },    // 1x red
+            {  OFF, OFF,  ON,  ON, OFF },    // 2x red
+            {  OFF, OFF,  ON, OFF,  ON },    // 1x red with shunt
+        },
+    },
+
+    // #9 GERMANY   GERMAN HP HAUPT SIGNALE ALSO IN SIGNALE OR CURVE SIGNAL.
     {   3,  //  G    Y     R                 // nAspect
         3,                                   // nLeds
         50,                                  // blink interval
@@ -119,17 +132,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF, OFF,  ON },              // red
         },
     },
-     // #9 GERMAN HP OUT SIGNAL WITH SHUNT
-    {   5, //    G   Y   R1   R2    S        // nAspect
-        5,                                   // nLeds
-        50,                                 // blink interval
-        {   {   ON, OFF, OFF, OFF, OFF },    // green
-            {   ON,  ON, OFF, OFF, OFF },    // green yellow
-            {  OFF, OFF,  ON, OFF, OFF },    // 1x red
-            {  OFF, OFF,  ON, OFF,  ON },    // 1x red with shunt
-            {  OFF, OFF,  ON,  ON, OFF },    // 2x red
-        },
-    },
+    
     // #10 GERMAN HP HAUPT WITH VOR SIGNAL
     {   4,  //   G    R   G1v  Y1v  G2v Y2v     // nAspect
         6,                                      // nLeds

@@ -49,7 +49,8 @@ enum modeState
 {
     idle,
     getBaseAddress,
-    getIndex,
+    getIndex4Address,
+    getIndex4Type,
     getUniqueAddress,
     getSignalType,
     configMode,
@@ -67,6 +68,7 @@ volatile uint8
             newAddressSet ;
 uint16      myAddress ;
 uint8       signalIndex ;
+uint8       settingType ;
 volatile static uint32 lastTime ;
 
 
@@ -84,11 +86,12 @@ void statusLed()
             digitalWrite( ledPin, HIGH ) ;
             break ;
 
-        case configMode:        blinkTime =  50 ; goto blink ;  //  125/2
-        case getSignalType:     blinkTime = 125 ; goto blink ;  //  250/2
-        case getUniqueAddress:  blinkTime = 190 ; goto blink ;  //  190/2
-        case getIndex:          blinkTime = 250 ; goto blink ;  //  500/2
-        case getBaseAddress:    blinkTime = 500 ; goto blink ;  // 1000/2
+        case configMode:        blinkTime =  50 ; goto blink ;
+        case getSignalType:     blinkTime = 250 ; goto blink ;
+        case getIndex4Address:  
+        case getIndex4Type:     blinkTime = 100 ; goto blink ;
+        case getUniqueAddress:  
+        case getBaseAddress:    blinkTime = 500 ; goto blink ;
         
         blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
@@ -131,6 +134,7 @@ void setup()
     for( int i = 0 ; i < 16 ; i ++ )
     {
         pinMode( GPIO[i], OUTPUT ) ;
+        digitalWrite(GPIO[i], LOW ) ;
     }
     configButton.begin( configPin ) ;
 
@@ -248,11 +252,11 @@ void config()
         break ;
 
     case checkButton:
-        if( millis() - beginTime >= 1000 ) state =   getIndex ; // long press
-        if( btnState == RISING )                                // short press
+        if( millis() - beginTime >= 1000 ) state = getIndex4Type ; // long press
+        if( btnState == RISING )                                   // short press
         {
-            if( bitRead( configBits, UNIQUE_ADDRESSES )) state = getIndex ;
-            else                                         state = getBaseAddress ;
+            if( bitRead( configBits, UNIQUE_ADDRESSES )) { state = getIndex4Address ; }
+            else                                         { state = getBaseAddress ;   }
         }
         break ;
 
@@ -268,7 +272,7 @@ void config()
         }
         break ; 
 
-    case getIndex: // RESTRAIN VALUE TO ACCEPTABLE NUMBERS 
+    case getIndex4Address:
         if( btnState == LOW
         &&  (millis() - beginTime >= 4000) ) state = configMode ; // button held down for 4s
 
@@ -276,8 +280,7 @@ void config()
         {   newAddressSet = 0 ;
 
             signalIndex = receivedAddress-1 ;
-            if( bitRead( configBits, UNIQUE_ADDRESSES )) state = getUniqueAddress ;
-            else                                         state = getSignalType ;
+            state = getUniqueAddress ;
         }
         break ;
 
@@ -287,7 +290,19 @@ void config()
 
             storeAddress( signalIndex, receivedAddress ) ;
             initSignals() ;
-            state = getIndex ;
+            state = getIndex4Address ;
+        }
+        break ;
+
+    case getIndex4Type:
+        if( btnState == LOW
+        &&  (millis() - beginTime >= 4000) ) state = configMode ; // button held down for 4s
+
+        if( newAddressSet == 1  )
+        {   newAddressSet = 0 ;
+
+            signalIndex = receivedAddress-1 ;
+            state = getSignalType ;
         }
         break ;
 
@@ -295,9 +310,12 @@ void config()
         if( newAddressSet == 1 ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
         {   newAddressSet = 0 ;
 
-            signal[signalIndex].setType( receivedAddress-1 ) ; //(should go to EEPROM?)
+            uint8 type = receivedAddress-1 ;
+
+            signal[signalIndex].setType( type ) ; //(should go to EEPROM?)
+            storeType( signalIndex, type ) ;
             initSignals() ;
-            state = getIndex ;
+            state = getIndex4Type ;
         }
         break ; 
     
