@@ -378,7 +378,6 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
     for( int i = 0 ; i < signalCount ; i ++ )
     {
         signal[i].setAspectExt( address, aspect ) ; // only does something if address is correct. 
-        return ;
     }
 }
 
