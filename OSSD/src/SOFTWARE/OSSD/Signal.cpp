@@ -81,6 +81,7 @@ const static Aspect aspects[nAspects] PROGMEM =
             {  OFF,  ON, OFF },              // Yellow
             {  OFF,   X, OFF },              // Yellow flashing
             {  OFF, OFF,  ON },              // red
+            {  OFF, OFF,   X },              // red flashing
         },
     } ,       
     // #6  DUTCH STANDARD 3 TONE SIGNAL WITH NUMBER DESIGNATOR

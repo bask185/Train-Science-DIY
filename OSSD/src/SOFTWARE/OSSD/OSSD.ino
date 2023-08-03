@@ -37,7 +37,6 @@ const int   UNIQUE_ADDRESSES    = 1 ;
 
 uint8       configBits ;
 
-const int   nCoils     = 8 ;    // always 8
 const int   maxSignals = 16 ;   // 16 for single outputs
 
 NmraDcc     dcc ;
@@ -86,12 +85,12 @@ void statusLed()
             digitalWrite( ledPin, HIGH ) ;
             break ;
 
-        case configMode:        blinkTime =  50 ; goto blink ;
-        case getSignalType:     blinkTime = 250 ; goto blink ;
+        case configMode:        blinkTime =  50 ; goto blink ; // 10Hz
+        case getSignalType:     blinkTime = 250 ; goto blink ; // 2Hz
         case getIndex4Address:  
-        case getIndex4Type:     blinkTime = 125 ; goto blink ;
+        case getIndex4Type:     blinkTime = 125 ; goto blink ; // 4Hz
         case getUniqueAddress:  
-        case getBaseAddress:    blinkTime = 500 ; goto blink ;
+        case getBaseAddress:    blinkTime = 500 ; goto blink ; // 1Hz
         
         blink:
             digitalWrite( ledPin, !digitalRead( ledPin ));
