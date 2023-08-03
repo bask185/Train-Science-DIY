@@ -86,8 +86,8 @@ void statusLed()
 
         case configMode:        blinkTime =  50 ; goto blink ;  //  125/2
         case getSignalType:     blinkTime = 125 ; goto blink ;  //  250/2
-        case getUniqueAddress:  blinkTime = 190 ; goto blink ;  //  190/2
         case getIndex:          blinkTime = 250 ; goto blink ;  //  500/2
+        case getUniqueAddress:
         case getBaseAddress:    blinkTime = 500 ; goto blink ;  // 1000/2
         
         blink:
