@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid e2bf8432-441f-44b7-a728-b9329977eac0)
+  (uuid 85ae880e-5522-447b-9018-304950a26426)
 
   (paper "A4")
 
@@ -193,7 +193,7 @@
   (symbol (lib_id "Device:C") (at 203.2 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 10d890dd-f309-4ce7-bb04-a4ac495436b1)
-    (property "Reference" "C31" (at 206.121 91.8753 0)
+    (property "Reference" "C1202" (at 206.121 91.8753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 206.121 94.4122 0)
@@ -227,7 +227,7 @@
   (symbol (lib_id "Regulator_Linear:L78L05_SOT89") (at 193.04 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33606ce4-c18d-47e6-89ab-a0492a2e13f1)
-    (property "Reference" "U26" (at 193.04 83.2952 0)
+    (property "Reference" "U1201" (at 193.04 83.2952 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "L78L05_SOT89" (at 193.04 85.8321 0)
@@ -262,7 +262,7 @@
   (symbol (lib_id "Device:C") (at 177.8 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid df8f921d-165e-4dca-97f9-1895a8a89a10)
-    (property "Reference" "C30" (at 180.721 91.8753 0)
+    (property "Reference" "C1201" (at 180.721 91.8753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "330nF" (at 180.721 94.4122 0)
@@ -296,7 +296,7 @@
   (symbol (lib_id "Device:C") (at 214.63 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid eafef0c6-2ad5-4e9f-9e06-070cce207021)
-    (property "Reference" "C32" (at 217.551 91.8753 0)
+    (property "Reference" "C1203" (at 217.551 91.8753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF" (at 217.551 94.4122 0)
