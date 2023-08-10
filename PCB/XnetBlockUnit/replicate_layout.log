@@ -1,0 +1,53 @@
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, May 18 2023, 07:48:16) [MSC v.1936 64 bit (AMD64)]'
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.6
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x000002320E3B9EE0>
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with U501 as a reference
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'U501'
+Located on: ['sensor1']
+With filenames: ['sensor.kicad_sch']
+With sheet_id:['sensor1']
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('U601', ['sensor2']), ('U501', ['sensor1'])]
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'sensor1', file:'sensor.kicad_sch'
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['sensor2']]
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['sensor1']
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(1878, 96)
+08-10 16:23:34 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1439, 96)
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'sensor1', file:'sensor.kicad_sch'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['sensor2']]
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['sensor2']]
+on level: ['sensor1']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+08-10 16:23:41 root 332:updating GUI message: 'Preparing for replication'
+08-10 16:23:41 root 337:updating GUI with: 0
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
+08-10 16:23:41 root 332:updating GUI message: 'Replicating footprints'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 806:Replicating footprints
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['sensor2']
+08-10 16:23:41 root 332:updating GUI message: 'Replicating tracks'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 977:Replicating tracks
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['sensor2']
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['sensor2'] :[('/sensor1/TRACK', '/sensor2/TRACK'), ('GND', 'GND'), ('/sensor1/COM', '/sensor1/COM'), ('Net-(D501-+)', 'Net-(D601-+)'), ('Net-(R501-Pad1)', 'Net-(R601-Pad1)'), ('/atmega/D3', '/atmega/D4')]
+08-10 16:23:41 root 332:updating GUI message: 'Replicating zones'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1047:Replicating zones
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['sensor2']
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['sensor2'] :[('/sensor1/TRACK', '/sensor2/TRACK'), ('GND', 'GND'), ('/sensor1/COM', '/sensor1/COM'), ('Net-(D501-+)', 'Net-(D601-+)'), ('Net-(R501-Pad1)', 'Net-(R601-Pad1)'), ('/atmega/D3', '/atmega/D4')]
+08-10 16:23:41 root 332:updating GUI message: 'Replicating text'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1136:Replicating text
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['sensor2']
+08-10 16:23:41 root 332:updating GUI message: 'Replicating drawings'
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1187:Replicating drawings
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['sensor2']
+08-10 16:23:41 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete
