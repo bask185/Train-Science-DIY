@@ -905,6 +905,10 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid c36ed66c-b01c-4e9d-ac28-c87fc2491afd)
   )
+  (hierarchical_label "GND" (shape passive) (at 162.56 127 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid c92abb74-0cbc-43d1-a699-d10251a99bb4)
+  )
   (hierarchical_label "D2" (shape bidirectional) (at 186.69 101.6 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid c982e556-61c9-44b6-a33a-ceaff0a564fd)
@@ -1163,36 +1167,6 @@
         )
         (path "/e777d9ec-d073-4229-a9e6-2cf85636e407/f45deb4c-210f-430e-87b5-c6786dfa45a7"
           (reference "C40") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 162.56 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 729e00a4-2eb2-4f8a-9f4c-f5dd4aaa5261)
-    (property "Reference" "#PWR0202" (at 162.56 133.35 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 162.56 131.4434 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 162.56 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 162.56 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid dd9ce6f8-14fc-4c21-a508-3a92f083b1fd))
-    (instances
-      (project "XnetBlockUnit"
-        (path "/68824df7-235c-431f-a817-f5c5a64c6fe3/5d46e491-9329-4a84-b412-faaf7812fe70"
-          (reference "#PWR0202") (unit 1)
-        )
-      )
-      (project "general_schematics"
-        (path "/e777d9ec-d073-4229-a9e6-2cf85636e407/f45deb4c-210f-430e-87b5-c6786dfa45a7"
-          (reference "#PWR054") (unit 1)
         )
       )
     )
