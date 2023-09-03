@@ -1,0 +1,89 @@
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, May 18 2023, 07:48:16) [MSC v.1936 64 bit (AMD64)]'
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.5
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x0000023185EED670>
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with K601 as a reference
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'K601'
+Located on: ['relaySensor2']
+With filenames: ['untitled.kicad_sch']
+With sheet_id:['relaySensor2']
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('K701', ['relaySensor3']), ('K501', ['relaySensor1']), ('K801', ['relaySensor4']), ('K1001', ['relaySensor6']), ('K901', ['relaySensor5']), ('K401', ['relaySensor']), ('K601', ['relaySensor2'])]
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'relaySensor2', file:'untitled.kicad_sch'
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['relaySensor'], ['relaySensor1'], ['relaySensor3'], ['relaySensor4'], ['relaySensor5'], ['relaySensor6']]
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['relaySensor2']
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(1643, 80)
+08-05 20:19:15 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1204, 80)
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'relaySensor2', file:'untitled.kicad_sch'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['relaySensor'], ['relaySensor1'], ['relaySensor3'], ['relaySensor4'], ['relaySensor5'], ['relaySensor6']]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['relaySensor'], ['relaySensor1'], ['relaySensor3'], ['relaySensor4'], ['relaySensor5'], ['relaySensor6']]
+on level: ['relaySensor2']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+08-05 20:19:19 root 332:updating GUI message: 'Preparing for replication'
+08-05 20:19:19 root 337:updating GUI with: 0
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
+08-05 20:19:19 root 332:updating GUI message: 'Replicating footprints'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 806:Replicating footprints
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor1']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor3']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor4']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor5']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relaySensor6']
+08-05 20:19:19 root 332:updating GUI message: 'Replicating tracks'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 977:Replicating tracks
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor'] :[('unconnected-(K601-Pad6)', 'unconnected-(K401-Pad6)'), ('/com', '/com'), ('Net-(R601-Pad1)', 'Net-(R401-Pad1)'), ('GND', 'GND'), ('Net-(D601-Pad2)', 'Net-(D401-Pad2)'), ('Net-(D601-+)', 'Net-(D401-+)'), ('/track3', '/track1'), ('/Sensor3', '/Sensor1'), ('/Coil3', '/Coil1'), ('unconnected-(K601-Pad2)', 'unconnected-(K401-Pad2)'), ('unconnected-(K601-Pad5)', 'unconnected-(K401-Pad5)'), ('+12V', '+12V'), ('unconnected-(K601-Pad7)', 'unconnected-(K401-Pad7)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor1']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor1'] :[('unconnected-(K601-Pad6)', 'unconnected-(K501-Pad6)'), ('/com', '/com'), ('Net-(R601-Pad1)', 'Net-(R501-Pad1)'), ('GND', 'GND'), ('unconnected-(K601-Pad7)', 'unconnected-(K501-Pad7)'), ('Net-(D601-Pad2)', 'Net-(D501-Pad2)'), ('+12V', '+12V'), ('unconnected-(K601-Pad2)', 'unconnected-(K501-Pad2)'), ('/Sensor3', '/Sensor2'), ('unconnected-(K601-Pad5)', 'unconnected-(K501-Pad5)'), ('Net-(D601-+)', 'Net-(D501-+)'), ('/track3', '/track2'), ('/Coil3', '/Coil2')]
+08-05 20:19:19 root 337:updating GUI with: 17
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor3']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor3'] :[('Net-(D601-Pad2)', 'Net-(D701-Pad2)'), ('/Coil3', '/Coil4'), ('unconnected-(K601-Pad7)', 'unconnected-(K701-Pad7)'), ('/com', '/com'), ('GND', 'GND'), ('unconnected-(K601-Pad5)', 'unconnected-(K701-Pad5)'), ('/track3', '/track4'), ('unconnected-(K601-Pad2)', 'unconnected-(K701-Pad2)'), ('/Sensor3', '/Sensor4'), ('+12V', '+12V'), ('Net-(R601-Pad1)', 'Net-(R701-Pad1)'), ('unconnected-(K601-Pad6)', 'unconnected-(K701-Pad6)'), ('Net-(D601-+)', 'Net-(D701-+)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor4']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor4'] :[('unconnected-(K601-Pad7)', 'unconnected-(K801-Pad7)'), ('/com', '/com'), ('Net-(D601-+)', 'Net-(D801-+)'), ('GND', 'GND'), ('/Sensor3', '/Sensor5'), ('/track3', '/track5'), ('unconnected-(K601-Pad5)', 'unconnected-(K801-Pad5)'), ('/Coil3', '/Coil5'), ('+12V', '+12V'), ('unconnected-(K601-Pad2)', 'unconnected-(K801-Pad2)'), ('unconnected-(K601-Pad6)', 'unconnected-(K801-Pad6)'), ('Net-(R601-Pad1)', 'Net-(R801-Pad1)'), ('Net-(D601-Pad2)', 'Net-(D801-Pad2)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor5']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor5'] :[('/track3', '/track6'), ('unconnected-(K601-Pad2)', 'unconnected-(K901-Pad2)'), ('Net-(D601-+)', 'Net-(D901-+)'), ('/com', '/com'), ('/Sensor3', '/Sensor6'), ('unconnected-(K601-Pad6)', 'unconnected-(K901-Pad6)'), ('GND', 'GND'), ('Net-(R601-Pad1)', 'Net-(R901-Pad1)'), ('unconnected-(K601-Pad7)', 'unconnected-(K901-Pad7)'), ('unconnected-(K601-Pad5)', 'unconnected-(K901-Pad5)'), ('Net-(D601-Pad2)', 'Net-(D901-Pad2)'), ('+12V', '+12V'), ('/Coil3', '/Coil6')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relaySensor6']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor6'] :[('/track3', '/track7'), ('/Sensor3', '/Sensor7'), ('Net-(D601-Pad2)', 'Net-(D1001-Pad2)'), ('unconnected-(K601-Pad5)', 'unconnected-(K1001-Pad5)'), ('/com', '/com'), ('Net-(D601-+)', 'Net-(D1001-+)'), ('Net-(R601-Pad1)', 'Net-(R1001-Pad1)'), ('GND', 'GND'), ('/Coil3', '/Coil7'), ('+12V', '+12V'), ('unconnected-(K601-Pad7)', 'unconnected-(K1001-Pad7)'), ('unconnected-(K601-Pad2)', 'unconnected-(K1001-Pad2)'), ('unconnected-(K601-Pad6)', 'unconnected-(K1001-Pad6)')]
+08-05 20:19:19 root 332:updating GUI message: 'Replicating zones'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1047:Replicating zones
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor'] :[('unconnected-(K601-Pad6)', 'unconnected-(K401-Pad6)'), ('/com', '/com'), ('Net-(R601-Pad1)', 'Net-(R401-Pad1)'), ('GND', 'GND'), ('Net-(D601-Pad2)', 'Net-(D401-Pad2)'), ('Net-(D601-+)', 'Net-(D401-+)'), ('/track3', '/track1'), ('/Sensor3', '/Sensor1'), ('/Coil3', '/Coil1'), ('unconnected-(K601-Pad2)', 'unconnected-(K401-Pad2)'), ('unconnected-(K601-Pad5)', 'unconnected-(K401-Pad5)'), ('+12V', '+12V'), ('unconnected-(K601-Pad7)', 'unconnected-(K401-Pad7)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor1']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor1'] :[('unconnected-(K601-Pad6)', 'unconnected-(K501-Pad6)'), ('/com', '/com'), ('Net-(R601-Pad1)', 'Net-(R501-Pad1)'), ('GND', 'GND'), ('unconnected-(K601-Pad7)', 'unconnected-(K501-Pad7)'), ('Net-(D601-Pad2)', 'Net-(D501-Pad2)'), ('+12V', '+12V'), ('unconnected-(K601-Pad2)', 'unconnected-(K501-Pad2)'), ('/Sensor3', '/Sensor2'), ('unconnected-(K601-Pad5)', 'unconnected-(K501-Pad5)'), ('Net-(D601-+)', 'Net-(D501-+)'), ('/track3', '/track2'), ('/Coil3', '/Coil2')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor3']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor3'] :[('Net-(D601-Pad2)', 'Net-(D701-Pad2)'), ('/Coil3', '/Coil4'), ('unconnected-(K601-Pad7)', 'unconnected-(K701-Pad7)'), ('/com', '/com'), ('GND', 'GND'), ('unconnected-(K601-Pad5)', 'unconnected-(K701-Pad5)'), ('/track3', '/track4'), ('unconnected-(K601-Pad2)', 'unconnected-(K701-Pad2)'), ('/Sensor3', '/Sensor4'), ('+12V', '+12V'), ('Net-(R601-Pad1)', 'Net-(R701-Pad1)'), ('unconnected-(K601-Pad6)', 'unconnected-(K701-Pad6)'), ('Net-(D601-+)', 'Net-(D701-+)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor4']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor4'] :[('unconnected-(K601-Pad7)', 'unconnected-(K801-Pad7)'), ('/com', '/com'), ('Net-(D601-+)', 'Net-(D801-+)'), ('GND', 'GND'), ('/Sensor3', '/Sensor5'), ('/track3', '/track5'), ('unconnected-(K601-Pad5)', 'unconnected-(K801-Pad5)'), ('/Coil3', '/Coil5'), ('+12V', '+12V'), ('unconnected-(K601-Pad2)', 'unconnected-(K801-Pad2)'), ('unconnected-(K601-Pad6)', 'unconnected-(K801-Pad6)'), ('Net-(R601-Pad1)', 'Net-(R801-Pad1)'), ('Net-(D601-Pad2)', 'Net-(D801-Pad2)')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor5']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor5'] :[('/track3', '/track6'), ('unconnected-(K601-Pad2)', 'unconnected-(K901-Pad2)'), ('Net-(D601-+)', 'Net-(D901-+)'), ('/com', '/com'), ('/Sensor3', '/Sensor6'), ('unconnected-(K601-Pad6)', 'unconnected-(K901-Pad6)'), ('GND', 'GND'), ('Net-(R601-Pad1)', 'Net-(R901-Pad1)'), ('unconnected-(K601-Pad7)', 'unconnected-(K901-Pad7)'), ('unconnected-(K601-Pad5)', 'unconnected-(K901-Pad5)'), ('Net-(D601-Pad2)', 'Net-(D901-Pad2)'), ('+12V', '+12V'), ('/Coil3', '/Coil6')]
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relaySensor6']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relaySensor6'] :[('/track3', '/track7'), ('/Sensor3', '/Sensor7'), ('Net-(D601-Pad2)', 'Net-(D1001-Pad2)'), ('unconnected-(K601-Pad5)', 'unconnected-(K1001-Pad5)'), ('/com', '/com'), ('Net-(D601-+)', 'Net-(D1001-+)'), ('Net-(R601-Pad1)', 'Net-(R1001-Pad1)'), ('GND', 'GND'), ('/Coil3', '/Coil7'), ('+12V', '+12V'), ('unconnected-(K601-Pad7)', 'unconnected-(K1001-Pad7)'), ('unconnected-(K601-Pad2)', 'unconnected-(K1001-Pad2)'), ('unconnected-(K601-Pad6)', 'unconnected-(K1001-Pad6)')]
+08-05 20:19:19 root 332:updating GUI message: 'Replicating text'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1136:Replicating text
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor1']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor3']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor4']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor5']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relaySensor6']
+08-05 20:19:19 root 332:updating GUI message: 'Replicating drawings'
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1187:Replicating drawings
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor1']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor3']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor4']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor5']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relaySensor6']
+08-05 20:19:19 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete

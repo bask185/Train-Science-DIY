@@ -1,0 +1,26 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,12pF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,98.382,-62.169,180.0,top
+C2,100nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,94.869,-60.198,-135.0,top
+C3,12pF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,101.557,-59.502,90.0,top
+C4,10uF,R_0603_1608Metric,91.4735,-67.427,180.0,top
+C5,100nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,91.5,-69.205,180.0,top
+C6,22pF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,83.2835,-77.079,180.0,top
+C7,22pF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,80.389,-79.492,90.0,top
+C8,100nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,83.3335,-75.428,0.0,top
+C9,100nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,94.742,-75.6375,-90.0,top
+J1,USB_B_Mini,USB_Mini-B_Lumberg_2486_01_Horizontal,86.0,-85.666,0.0,top
+J2,2x3 ISP,PinSocket_2x03_P2.54mm_Vertical,100.945,-51.06,0.0,top
+J3,UDPI,PinHeader_1x03_P2.54mm_Horizontal,83.312,-66.04,180.0,top
+J4,USB_TTL,PinHeader_1x05_P2.54mm_Horizontal,99.375,-84.455,0.0,top
+J5,1x6 ISP,PinHeader_1x06_P2.54mm_Horizontal,92.075,-40.456,90.0,top
+R2,10k,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,84.582,-50.165,-90.0,top
+R3,4k7,R_0805_handsolder-smalltext,92.075,-64.262,180.0,top
+R4,1k,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,83.357,-72.126,180.0,top
+R5,1k,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,83.3335,-73.777,0.0,top
+SW2,SW_SPDT,PinHeader_1x03_P2.54mm_Vertical,99.426,-71.247,90.0,top
+SW101,SW_SPDT,PinHeader_1x03_P2.54mm_Vertical,99.426,-67.056,90.0,top
+U1,HEADER_3x2,PinSocket_2x03_P1.27mm_Vertical,81.407,-49.403,180.0,top
+U2,ATmega328-A,TQFP-32_7x7mm_P0.8mm,90.297,-54.864,135.0,top
+U3,CH340G,SOIC-16_3.9x9.9mm_P1.27mm,89.154,-75.946,0.0,top
+Y1,Crystal_GND2,crystal_arduino,98.432,-59.028,0.0,top
+Y2,Crystal,crystal_arduino,83.217,-79.773,180.0,top
