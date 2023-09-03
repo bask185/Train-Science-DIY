@@ -570,7 +570,7 @@
     (property "Datasheet" "" (at 63.5 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c24e82b7-10c9-4ed9-942a-7a34107357e7))
+    (pin "1" (uuid 8bc29aa8-a1ae-4acc-9ab7-48f8b654450c))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
@@ -595,7 +595,7 @@
     (property "Datasheet" "" (at 92.71 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d65c72a4-f153-480d-83ea-e638da7e9c83))
+    (pin "1" (uuid ce768c1e-06e7-45d1-90bf-f36943d3bc96))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
@@ -620,10 +620,10 @@
     (property "Datasheet" "~" (at 39.37 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4173adbb-d3a0-4a94-b2c8-6de0cab77116))
-    (pin "2" (uuid 6d4b7dd5-fa0d-4f6c-b5b7-cd7094217ff4))
-    (pin "3" (uuid 88744471-385b-437f-8e3c-5057a5a53a96))
-    (pin "4" (uuid 713b637b-86eb-4d9b-9b75-94762eb919ca))
+    (pin "1" (uuid a15f4ae6-2a12-4ab7-a606-fe00eb0ef946))
+    (pin "2" (uuid 29662766-6b9e-4fdf-8371-a273e2bdef7c))
+    (pin "3" (uuid 376dbc4e-9b88-4a49-86b1-1b1adab10988))
+    (pin "4" (uuid bc4288e7-f201-4151-8216-bb57cd95aade))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
@@ -648,7 +648,7 @@
     (property "Datasheet" "" (at 59.69 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 433ddd48-7317-4006-8b6a-e630f5a5dc16))
+    (pin "1" (uuid 77bbbc44-ce54-46a3-9bae-52f07f18cba3))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
@@ -673,7 +673,7 @@
     (property "Datasheet" "" (at 81.28 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 58f47972-4a91-4fe8-bf0f-1aeec34955e0))
+    (pin "1" (uuid d95ed40a-98b6-40b2-92e2-1aa7260164ea))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
@@ -698,7 +698,7 @@
     (property "Datasheet" "" (at 144.78 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8c5660af-1df2-4137-9823-8790ccf1f2d0))
+    (pin "1" (uuid 36a1a41f-cade-48e9-ab20-99943252e36f))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf"

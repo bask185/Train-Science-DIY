@@ -1,6 +1,6 @@
 Comment,Designator,Footprint,LCSC
 Crystal_GND2,Y201,crystal_arduino,C13738
-100nF,"C202,C301,C402",C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C14663
+100nF,"C102,C202,C301,C402",C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C14663
 ATmega328-A,U202,TQFP-32_7x7mm_P0.8mm,C14877
 100uF,C403,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,C15008
 330nF,C401,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C1615
@@ -27,3 +27,4 @@ Screw_Terminal_01x08,J102,"TerminalBlock_Phoenix_MKDS-1,5-8-5.08_1x08_P5.08mm_Ho
 RJ12,J302,RJ12,
 RJ12,J301,RJ12,
 SolderJumper_2_Open,JP101,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
+R_Potentiometer,RV101,Potentiometer_Runtron_RM-065_Vertical,

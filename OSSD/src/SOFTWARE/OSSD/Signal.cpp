@@ -1,6 +1,8 @@
 #include "Signal.h"
 #include "config.h"
 
+extern uint8    pulseTime ;
+
 const int       maxAspect       = 30 ;
 const int       maxLeds         =  8 ;
 
@@ -160,7 +162,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         50,                                 // blink interval
         {   {   ON, OFF, OFF, OFF, OFF },    // green
             {   ON,  ON, OFF, OFF, OFF },    // yellow yellow
-            {  OFF,  ON,  ON, OFF, OFF },    // red
+            {  OFF, OFF, OFF,  ON, OFF },    // red
             {  OFF, OFF, OFF,  ON,  ON },    // red + shunt
             {   ON,  ON, OFF, OFF, OFF },    // green + yellow  GrGH
             {   ON, OFF,  ON, OFF, OFF },    // green + yellow  GrGV
@@ -172,7 +174,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         50,                                  // blink interval
         {   {    X, OFF, OFF, OFF, OFF },    // green
             {    X,   X, OFF, OFF, OFF },    // yellow yellow
-            {  OFF,  ON,   X, OFF, OFF },    // red
+            {  OFF, OFF, OFF,   X, OFF },    // red
             {  OFF, OFF, OFF,   X,   X },    // red + shunt
             {    X,   X, OFF, OFF, OFF },    // green + yellow  GrGH
             {    X, OFF,   X, OFF, OFF },    // green + yellow  GrGV
@@ -304,7 +306,7 @@ uint8 Signal::updateCoils()
         return 0 ;
 
     case waiting:
-        if( millis() - prevTime >= 100 )
+        if( millis() - prevTime >= pulseTime )
         {
             digitalWrite( GPIO[beginPin]  , LOW ) ;
             digitalWrite( GPIO[beginPin+1], LOW ) ;

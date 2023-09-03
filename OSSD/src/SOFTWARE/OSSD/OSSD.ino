@@ -26,13 +26,15 @@ const int   DEFAULT_VALUE   = 0xCC ;
 const int   DCC_ADDRESS     = 1002 ;
 const int   DEFAULT_DCC     = 0x01 ;
 
-const int   CONFIG_ADDRESS  = 1004 ;
+const int   PULSE_ADDRESS   = 1004 ;
+const int   DEFAULT_PULSE_TIME = 100 ;
+
+const int   CONFIG_ADDRESS  = 1005 ;
 const int   DEFAULT_CONFIG  = 0x00 ;
 
-
 // config bits
-const int   DCC_EXTENDED        = 0 ;
-const int   UNIQUE_ADDRESSES    = 1 ;
+const int   DCC_EXTENDED       = 0 ;
+const int   UNIQUE_ADDRESSES   = 1 ;
 // const int   bit2         = 2 ;
 
 uint8       configBits ;
@@ -53,8 +55,9 @@ enum modeState
     getUniqueAddress,
     getSignalType,
     configMode,
+    setPulseTime,
 
-    checkButton, // not a actual mode
+    checkButton, // not an actual mode
 } ;
 
 uint8       state       = idle ;
@@ -66,8 +69,8 @@ volatile uint16
 volatile uint8       
             newAddressSet ;
 uint16      myAddress ;
+uint8       pulseTime ;
 uint8       signalIndex ;
-uint8       settingType ;
 volatile static uint32 lastTime ;
 
 
@@ -85,6 +88,7 @@ void statusLed()
             digitalWrite( ledPin, HIGH ) ;
             break ;
 
+        case setPulseTime:      blinkTime =  35 ; goto blink ;
         case configMode:        blinkTime =  50 ; goto blink ; // 10Hz
         case getSignalType:     blinkTime = 250 ; goto blink ; // 2Hz
         case getIndex4Address:  
@@ -146,6 +150,9 @@ void setup()
         myAddress = DEFAULT_DCC ;
         EEPROM.put( DCC_ADDRESS, myAddress ) ; // initialize DCC address
 
+        pulseTime = DEFAULT_PULSE_TIME ;
+        EEPROM.write( PULSE_ADDRESS, DEFAULT_PULSE_TIME ) ;
+
         for( int i = 0 ; i < 16 ; i ++ )
         {
             storeType( i, 0 ) ;   // set all items to coil type. DEFAULT
@@ -154,6 +161,7 @@ void setup()
     }
 
     EEPROM.get( DCC_ADDRESS, myAddress ) ; // load dcc address from EEPROM
+    pulseTime = EEPROM.read( PULSE_ADDRESS ) ;
     for( int  i = 0 ; i < nGpio ; i ++ )
     {
         uint8_t type = loadType( i ) ;  // fetch from EEPROM
@@ -350,6 +358,10 @@ void config()
                 initSignals() ;
                 state = idle ;
             }
+            if( receivedAddress == 5 ) // use unique address per object
+            {
+                state = setPulseTime ;
+            }
             if( receivedAddress == 10 ) // FACTORY RESET
             {
                 EEPROM.write( DEFAULT_ADDRESS, ~DEFAULT_VALUE ) ;   // 'corrupt' default value to let decoder re-initialize the decoder's EEPROM
@@ -357,6 +369,17 @@ void config()
                 delay(2000);
                 RESET() ;                                           // reset the decoder
             }
+        }
+        break ;
+
+    case setPulseTime:
+        if( newAddressSet == 1 )
+        {   newAddressSet = 0 ;
+
+            receivedAddress = constrain( receivedAddress, 30, 250 ) ;
+            pulseTime = receivedAddress ;
+            EEPROM.write( PULSE_ADDRESS, pulseTime ) ;
+            state = idle ;
         }
         break ;
     }

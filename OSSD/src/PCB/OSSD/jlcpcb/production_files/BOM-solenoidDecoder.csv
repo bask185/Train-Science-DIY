@@ -1,5 +1,6 @@
 Comment,Designator,Footprint,LCSC
 6N137,U3,SOP-8_6.62x9.15mm_P2.54mm,C110020
+Crystal_GND2,Y1,crystal_arduino,C13738
 100nF,"C3,C402",C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C14663
 ATmega328-A,U1,TQFP-32_7x7mm_P0.8mm,C14877
 100uF,C403,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,C15008
@@ -23,7 +24,6 @@ SolderJumper_2_Open,JP1,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
 Screw_Terminal_01x04,J62,"TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",
 ~,J41,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
 ICSP,J3,PinHeader_1x06_P2.54mm_Vertical,
-Crystal_GND2,Y1,crystal_arduino,
 ~,J81,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
 ~,J61,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
 ~,J51,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",

@@ -517,8 +517,8 @@
     (property "JLCPCB Part#" "C25804" (at 121.92 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7f793819-7d45-46fd-a2de-87bc4ef20ddf))
-    (pin "2" (uuid 14f9d3f2-456d-449f-a0a2-f288670d0bc5))
+    (pin "1" (uuid 8e1dc1ed-2cbb-405c-9402-741a663ed735))
+    (pin "2" (uuid 79e58b92-4204-4597-aac8-6f1805a9725a))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -567,8 +567,8 @@
     (property "JLCPCB Part#" "C8678" (at 157.48 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 469e94da-a858-4add-a51d-e8fc826dbbcf))
-    (pin "2" (uuid 4558567e-85cb-4ff1-a37d-9c4d57182aae))
+    (pin "1" (uuid 5ad8c624-41ef-47a6-8602-8ffb0541e20f))
+    (pin "2" (uuid 36c72de2-b6d2-4c6f-93b1-b74e7e30008f))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -614,9 +614,9 @@
     (property "Datasheet" "~" (at 166.37 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f8b866e1-2152-43cc-8d86-0c1a0c496dfe))
-    (pin "2" (uuid 80e81ed7-ecec-4bc1-bc74-01b8341ce5d8))
-    (pin "3" (uuid 52330d46-64c9-4c96-87eb-6a96f8881edd))
+    (pin "1" (uuid e8a72f9b-a0ea-4b38-a4af-408fa10f31ce))
+    (pin "2" (uuid 4aab2bf5-0092-43ea-85db-0278231b1334))
+    (pin "3" (uuid 6429b56d-6aff-4f2c-a497-864f63482b64))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -665,9 +665,9 @@
     (property "JLCPCB Part#" "C20917" (at 133.35 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8b4a0294-8360-4d43-bf9b-4b54641ce2ff))
-    (pin "2" (uuid 95291ea1-9b2a-4ba6-876f-793ca82c56ca))
-    (pin "3" (uuid 54432f63-ba08-4426-a5e5-2774c5a34a55))
+    (pin "1" (uuid d2d0bb29-7ee3-4f96-87c8-d1da78a68697))
+    (pin "2" (uuid 30559a49-171b-4220-a94c-d1db4d7cdb06))
+    (pin "3" (uuid d5a6d754-1579-4959-8492-60ea9ead71a7))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -716,8 +716,8 @@
     (property "JLCPCB Part#" "C8678" (at 157.48 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f3ac9e5d-40c5-4739-b813-21a0b56866ff))
-    (pin "2" (uuid b8a67ca5-0123-44d9-bdad-ae53a45392b8))
+    (pin "1" (uuid 9b6daff7-4762-4383-b297-1b15dddc345b))
+    (pin "2" (uuid b2ead771-3aba-4a78-983f-530e5053b290))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -766,8 +766,8 @@
     (property "JLCPCB Part#" "C25804" (at 118.11 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid db523e4a-c3a1-4ed5-83be-6585f93c5dc5))
-    (pin "2" (uuid aaa17a86-8d84-47d1-affd-c9e5cff505c8))
+    (pin "1" (uuid c48430c5-1996-4e94-b223-53f2e6bddf8d))
+    (pin "2" (uuid da6e53c8-c26b-44fd-9188-bcfa51792870))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -816,9 +816,9 @@
     (property "JLCPCB Part#" "C20917" (at 147.32 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 307affe5-26ce-4547-ae95-ddf6b1725986))
-    (pin "2" (uuid 5e554c76-9e7f-41f6-b549-c1fbdf94d836))
-    (pin "3" (uuid dc9c8b60-f7fc-4cd9-b705-54348f9154db))
+    (pin "1" (uuid b21c7202-1465-4465-a90a-e8b189851a1a))
+    (pin "2" (uuid 39407558-7632-44e5-aa40-cc67e579bdb6))
+    (pin "3" (uuid ca3ac76f-823a-4477-be67-996fe1e239f6))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -867,8 +867,8 @@
     (property "JLCPCB Part#" "C23345" (at 109.22 45.72 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 254a0b22-d7d4-40eb-bb50-4bc5abfe7ac2))
-    (pin "2" (uuid 2d327585-6abf-4f95-8ad3-d702243a64d4))
+    (pin "1" (uuid 2293d9fe-db3a-440a-8fce-6075049492c1))
+    (pin "2" (uuid 3d58fbc8-551d-41c5-aa39-d134080d2acb))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
@@ -917,8 +917,8 @@
     (property "JLCPCB Part#" "C23345" (at 107.95 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b8bd8c83-5d8a-4881-addf-fe6a39612528))
-    (pin "2" (uuid 3d4d723d-498f-4a3c-b968-f252c4638c0f))
+    (pin "1" (uuid e673d051-af17-4e72-af70-4cac06e0122d))
+    (pin "2" (uuid facc9f22-ecaf-47db-8d54-7286c356721a))
     (instances
       (project "solenoidDecoder"
         (path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"

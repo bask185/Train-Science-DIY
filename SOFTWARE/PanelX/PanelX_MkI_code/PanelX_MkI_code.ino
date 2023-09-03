@@ -7,7 +7,7 @@
 #if defined LOCONET
 
 #include "src/LocoNet.h"
-const int LN_TX_PIN = 7 ;
+const int LN_TX_PIN = 9 ;
 lnMsg  *LnPacket;          // pointer to a received LNet packet
 
 #elif defined XPRESSNET
@@ -170,6 +170,15 @@ void setup()
 
 void loop()
 {
+  REPEAT_MS( 500 )
+    {
+        for (int i = 0; i < nInputs; i++)
+        {
+            input[i].debounce() ;
+        }
+    }
+    END_REPEAT
+  
     updateLED() ;
 
     debounce() ;
