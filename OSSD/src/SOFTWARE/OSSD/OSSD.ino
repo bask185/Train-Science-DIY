@@ -145,13 +145,13 @@ void setup()
     {   EEPROM.write( DEFAULT_ADDRESS,     DEFAULT_VALUE ) ;
 
         configBits = DEFAULT_CONFIG ;
-        EEPROM.write( CONFIG_ADDRESS, configBits ) ;
+        EEPROM.put( CONFIG_ADDRESS, configBits ) ;
 
         myAddress = DEFAULT_DCC ;
         EEPROM.put( DCC_ADDRESS, myAddress ) ; // initialize DCC address
 
         pulseTime = DEFAULT_PULSE_TIME ;
-        EEPROM.write( PULSE_ADDRESS, DEFAULT_PULSE_TIME ) ;
+        EEPROM.put( PULSE_ADDRESS, DEFAULT_PULSE_TIME ) ;
 
         for( int i = 0 ; i < 16 ; i ++ )
         {
@@ -159,9 +159,10 @@ void setup()
             storeAddress(i, i+1 ) ; // set all unique addresses in incrementing order. Only used in unique address mode
         }
     }
-
-    EEPROM.get( DCC_ADDRESS, myAddress ) ; // load dcc address from EEPROM
-    pulseTime = EEPROM.read( PULSE_ADDRESS ) ;
+    EEPROM.get( CONFIG_ADDRESS, configBits ) ;
+    EEPROM.get( DCC_ADDRESS,    myAddress ) ; // load dcc address from EEPROM
+    EEPROM.get( PULSE_ADDRESS,  pulseTime ) ;
+    
     for( int  i = 0 ; i < nGpio ; i ++ )
     {
         uint8_t type = loadType( i ) ;  // fetch from EEPROM

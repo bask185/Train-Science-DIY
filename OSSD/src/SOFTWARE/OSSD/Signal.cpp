@@ -161,9 +161,9 @@ const static Aspect aspects[nAspects] PROGMEM =
         5,                                   // nLeds
         50,                                 // blink interval
         {   {   ON, OFF, OFF, OFF, OFF },    // green
-            {   ON,  ON, OFF, OFF, OFF },    // yellow yellow
+            {  OFF,  ON,  ON, OFF, OFF },    // yellow yellow
             {  OFF, OFF, OFF,  ON, OFF },    // red
-            {  OFF, OFF, OFF,  ON,  ON },    // red + shunt
+            {  OFF, OFF, OFF,  ON,   X },    // red + shunt
             {   ON,  ON, OFF, OFF, OFF },    // green + yellow  GrGH
             {   ON, OFF,  ON, OFF, OFF },    // green + yellow  GrGV
         },
@@ -173,7 +173,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         5,                                   // nLeds
         50,                                  // blink interval
         {   {    X, OFF, OFF, OFF, OFF },    // green
-            {    X,   X, OFF, OFF, OFF },    // yellow yellow
+            {  OFF,   X,   X, OFF, OFF },    // yellow yellow
             {  OFF, OFF, OFF,   X, OFF },    // red
             {  OFF, OFF, OFF,   X,   X },    // red + shunt
             {    X,   X, OFF, OFF, OFF },    // green + yellow  GrGH

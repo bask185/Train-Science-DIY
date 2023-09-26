@@ -45,7 +45,7 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
 /******* Xnet *******/
-const int _485dir ;
+const int _485dir = 2 ;
 XpressNetMasterClass Xnet ;
 
 
@@ -71,10 +71,10 @@ Debounce    lcdKeys( 255 ) ;
 uint8_t     lastPressedKey ;
 const int   lcdKeyPin = A0 ;
 const int   lcdKeyValues[] = { 0,       // right TESTME!
-                             144,       // up
-                             329,       // down
-                             504,       // left
-                             741 } ;    // select
+                             132,       // up
+                             308,       // down
+                             480,       // left
+                             721 } ;    // select
 const int nLcdKeys = sizeof( lcdKeyValues ) / sizeof( lcdKeyValues[0] ) ;
 enum {
     RIGHT,
@@ -109,7 +109,7 @@ EventHandler program[] =
     EventHandler( 2*programSize, programSize, 0x29) ,
     EventHandler( 3*programSize, programSize, 0x29) ,
 } ;
-const int   nPrograms = sizeof( program ) / sizeof( program[0] ) ;
+const int   nPrograms = 8 ;
 int8_t      currentProgram ;
 uint8_t     prgState ;
 
@@ -245,7 +245,7 @@ void displayStatus()
     lcd.print(F(": ")) ;
 
     #define showState(x) case x: lcd.print(F(#x)); break ;
-    prgState = program[currentProgram].getState() ;
+    //prgState = program[currentProgram].getState() ;
     switch( prgState )
     {
         showState( idle ) ;
@@ -256,8 +256,8 @@ void displayStatus()
     clearln() ;
 
   // LOWER LINE
-    lcd.setCursor( 0, 1 ) ;
-    lcd.print(F("STAT: ")) ;
+    //lcd.setCursor( 0, 1 ) ;
+    //lcd.print(F("STAT: ")) ;
 }
 
 
@@ -279,26 +279,26 @@ void debounceSwitches()
             uint16_t reference = i * 1024 * R1 / ( R2 + ( i * R1)) ; // NOTE. may consume too much process effor, not that much tho
 
             uint16_t lowerBound ;
-            if( reference < 20 ) lowerBound = 0 ; 
-            else                    lowerBound = reference - 20 ;
-            uint16_t                upperBound = reference + 20 ;
+            if( reference < 30 ) lowerBound = 0 ; 
+            else                    lowerBound = reference - 30 ;
+            uint16_t                upperBound = reference + 30 ;
 
-            if( sample > lowerBound 
-            &&  sample < upperBound )
+            if( sample >= lowerBound 
+            &&  sample <= upperBound )
             {
                 lastPressedSwitch = i + 4 ; // 4-7
                 switches.debounce( 0 ) ;
-                break ;
+                goto skipDebounce1 ;
             }
-            else
-            {
-                lastPressedSwitch = 0 ;
-                switches.debounce( 1 ) ;
-            }
+
         }
     }
     END_REPEAT
 
+    lastPressedSwitch = 0 ;
+    switches.debounce( 1 ) ;
+
+skipDebounce1:
     uint8_t state = switches.getState() ;
     if( state == FALLING )
     {
@@ -312,56 +312,66 @@ void debounceSwitches()
 
 void debounceLcdKeys()
 {
-    REPEAT_MS( 20 )
+    REPEAT_MS( 100 )
     {
-        uint16_t sample = analogRead( switchPin ) ;
+        uint16_t sample = analogRead( lcdKeyPin ) ;
 
-        for( int i = 0 ; i < nSwitches ; i ++ )
+        //  lcd.clear();
+        //  lcd.print(lastPressedKey);
+        //  lcd.setCursor(0,1);
+        //  lcd.print(sample);
+        for( int i = 0 ; i < nLcdKeys ; i ++ )
         {
             uint16_t lowerBound ;
-            if( lcdKeyValues[i] < 20 ) lowerBound = 0 ; 
-            else                       lowerBound = lcdKeyValues[i] - 20 ;
-            uint16_t                   upperBound = lcdKeyValues[i] + 20 ;
+            if( lcdKeyValues[i] < 30 ) lowerBound = 0 ; 
+            else                       lowerBound = lcdKeyValues[i] - 30 ;
+            uint16_t                   upperBound = lcdKeyValues[i] + 30 ;
 
-            if( sample > lowerBound 
-            &&  sample < upperBound )
+            if( sample >= lowerBound 
+            &&  sample <= upperBound )
             {
-                lastPressedKey = i + 3 ;
-                switches.debounce( 0 ) ;
-                break ;
-            }
-            else
-            {
-                switches.debounce( 1 ) ;
+                lastPressedKey = i ;// + 3 ;
+                lcdKeys.debounce( 0 ) ;
+                // lcd.clear();lcd.print("debounce 0");
+                goto skipDebounce2 ;
             }
         }
+        lcdKeys.debounce( 1 ) ;
     }
     END_REPEAT
 
-    uint8_t state = switches.getState() ;
+skipDebounce2:
+    uint8_t state = lcdKeys.getState() ;
     
     if( state == FALLING )
-    {
+    {   
+        //lcd.clear();lcd.print("FALLING");
+     
         switch( lastPressedKey )
         {
         case SELECT: // PLAY
+            // lcd.clear();lcd.print("SELECT");
             program[currentProgram].startPlaying() ;
             break ;
 
         case LEFT: // RECORD
+            // lcd.clear();lcd.print("LEFT");
             program[currentProgram].startRecording() ;
             break ;
 
         case RIGHT:  // STOP
-            program[currentProgram].stop() ;
+            // lcd.clear();lcd.print("RIGHT");
+           program[currentProgram].stop() ;
             break ;
 
         case UP:
+            // lcd.clear();lcd.print("UP");
             if( prgState == recording ) break ; // during recording, current program must not be changed
             if( ++ currentProgram == nPrograms ) currentProgram = 0 ;
             break ;
 
         case DOWN:
+            // lcd.clear();lcd.print("DOWN");
             if( prgState == recording ) break ;
             if( -- currentProgram == -1 ) currentProgram = nPrograms-1 ;
             break ;
@@ -407,7 +417,7 @@ void debounceSensors()
 
 void setup()
 {
-    Xnet.setup( Loco128, _485dir ) ;
+    
 
     for( int i = 0 ; i < nPrograms ; i ++ ) 
     {
@@ -415,10 +425,25 @@ void setup()
     }
 
     lcd.begin( 16, 2 ) ; 
+    lcd.print(F("layout manager X")) ;
+
+    pinMode(13,OUTPUT);
+    Xnet.setup( Loco128, _485dir ) ;
 }
 
 void loop()
 {
+    REPEAT_MS(500)
+    {
+        static uint8 state ;
+        state^=1;
+        PORTB ^= (1<<5);
+            Xnet.SetTrntPos( 5, state, 1 ) ; // check if dis works properly
+            delay(20);
+            Xnet.SetTrntPos( 5, state, 0 ) ; // TODO: show message
+    }
+    END_REPEAT
+
     Xnet.update() ;
 
     for( int i = 0 ; i < nPrograms ; i ++ ) 
@@ -436,6 +461,9 @@ void loop()
 void notifyXNetLocoDrive128( uint16_t Address, uint8_t Speed )                   
 {
     program[currentProgram].storeEvent( speedEvent, Address, Speed ) ;
+    lcd.setCursor(0,0); 
+    lcd.print("loco #");lcd.print(Address); 
+    lcd.print("Speed: ");lcd.print(Speed); 
 
     // int8_t speed ;
     // speed = Speed & 0x7F ;

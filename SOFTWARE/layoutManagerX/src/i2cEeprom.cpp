@@ -9,6 +9,12 @@ I2cEeprom::I2cEeprom( uint8 addr )
 
 void I2cEeprom::begin( uint8 addr )
 {
+    static uint8_t notBegunYet = 1 ;
+    if(notBegunYet)
+    {
+        notBegunYet = 0 ;
+        Wire.begin() ;
+    }
 	i2cAddress = addr ;
 }
 

@@ -1,7 +1,0 @@
-Comment,Designator,Footprint,LCSC
-LDR,J1101,TerminalBlock_MetzConnect_Type073_RT02603HBLU_1x03_P5.08mm_Horizontal,
-ter,J1102,PinHeader_1x03_P2.54mm_Horizontal,
-10k,R1101,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
-ter,J1103,TerminalBlock_MetzConnect_Type073_RT02603HBLU_1x03_P5.08mm_Horizontal,
-10k,R1102,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
-LM393,U1101,DIP-8_W7.62mm,
