@@ -1,0 +1,8 @@
+Comment,Designator,Footprint,LCSC
+ter,J1203,PinHeader_1x03_P2.54mm_Horizontal,
+10k,R1202,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+ter,J1202,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
+tracks,J1201,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+D,D1201,Diode_Bridge_DIP-4_W7.62mm_P5.08mm,
+100R,R1201,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+EL814,U1201,DIP-4_W7.62mm,

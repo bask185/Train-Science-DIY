@@ -1,0 +1,15 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,100nF,C_0402_1005Metric,71.0692,-79.647,180.0,top
+C2,100nF,C_0402_1005Metric,78.2828,-84.6054,-90.0,top
+C3,100nF,C_0402_1005Metric,73.0758,-79.02,-90.0,top
+C4,100nF,C_0402_1005Metric,79.4258,-79.02,-90.0,top
+C5,22uF,C_0603_1608Metric,79.5,-81.5,90.0,top
+D1,D_Bridge_+-AA,Diode_Bridge_Diotec_MicroDil_3.0x3.0x1.8mm,72.2376,-85.0398,180.0,top
+D3,D,D_SOD-923,76.4,-84.0,0.0,top
+J5,Conn_01x03_Pin,PinHeader_1x03_P1.27mm_Vertical,82.6516,-79.9548,180.0,top
+R1,10k,R_0402_1005Metric,80.518,-78.9946,-90.0,top
+R2,33k,R_0402_1005Metric,76.454,-86.0558,180.0,top
+R3,100R,R_0402_1005Metric,76.454,-85.0398,0.0,top
+U1,~,WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm,71.5924,-81.4798,0.0,top
+U2,ATtiny416-M,VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm,81.7,-84.7,0.0,top
+U3,L78L05_SOT89,SOT-89-3,76.2508,-80.925,-90.0,top

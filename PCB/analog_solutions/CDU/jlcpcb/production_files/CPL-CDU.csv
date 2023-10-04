@@ -1,0 +1,11 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1001,D,D_SMA,102.5,-54.0,0.0,top
+D1002,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,107.569,-86.741,-90.0,top
+D1003,D,D_SMA,101.473,-58.801,180.0,top
+D1004,D,D_SMA,101.473,-62.992,180.0,top
+Q1001,4A_DARLINGTON,TO-252-2,101.219,-82.423,-90.0,top
+R1001,2k,R_1206_smalltext,101.092,-66.167,0.0,top
+R1002,2k,R_1206_smalltext,101.092,-68.707,0.0,top
+R1003,2k,R_1206_smalltext,101.092,-71.247,0.0,top
+R1004,2k,R_1206_smalltext,101.092,-73.66,0.0,top
+R1005,1k,R_0603_smalltext,107.442,-83.185,180.0,top
