@@ -1,12 +1,8 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid e09de966-b98b-4182-ac18-90166626a017)
+  (uuid 7317d9e6-8792-45f9-b9f9-2d6830137df0)
 
   (paper "A4")
-
-  (title_block
-    (company "Train-Science")
-  )
 
   (lib_symbols
     (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
@@ -208,6 +204,46 @@
         (pin input line (at -2.54 -11.43 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "PWR_FLAG" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "flag power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "PWR_FLAG_0_0"
+        (pin power_out line (at 0 0 90) (length 0)
+          (name "pwr" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
         )
       )
     )
@@ -428,7 +464,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 6b24dac0-6b14-4140-b20a-d28f7446ca02)
   )
-  (hierarchical_label "Vin" (shape passive) (at 101.6 72.39 180) (fields_autoplaced)
+  (hierarchical_label "VDC_in" (shape passive) (at 101.6 72.39 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid ebb32371-9b91-4413-a383-fe8eb3820c2d)
   )
@@ -454,8 +490,8 @@
     (pin "1" (uuid cc2c69c0-9f17-4276-8146-58b6c95e3b1e))
     (pin "2" (uuid d2e9bb83-246f-498f-9a85-ec08a2ecca4f))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "R903") (unit 1)
         )
       )
@@ -493,8 +529,8 @@
     (pin "1" (uuid f8cd1683-0a88-4017-a71d-6df301d0ea71))
     (pin "2" (uuid 8c1d77f8-7e72-4f33-92b5-a5c55c312fc1))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C902") (unit 1)
         )
       )
@@ -532,8 +568,8 @@
     (pin "1" (uuid 76554e5d-f103-46e6-a78e-7e6b0ac81dce))
     (pin "2" (uuid 49b6b563-e394-47d5-a80b-bda909a79e26))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C903") (unit 1)
         )
       )
@@ -571,8 +607,8 @@
     (pin "1" (uuid a5f783e7-ea52-447e-bc98-90eb5ef612bc))
     (pin "2" (uuid a1230e51-a25e-405f-a529-6d77ce24c790))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "L901") (unit 1)
         )
       )
@@ -610,8 +646,8 @@
     (pin "1" (uuid 8d0454fb-e81d-4e29-8689-800ea35a0628))
     (pin "2" (uuid 3937f4d7-fdea-40f6-b0f5-2fae538ef4f7))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C905") (unit 1)
         )
       )
@@ -649,8 +685,8 @@
     (pin "1" (uuid a80649f0-5ca6-458f-b68c-85b937d5db7d))
     (pin "2" (uuid 0cb1c78a-480e-4a30-ae05-22e63b50d461))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C901") (unit 1)
         )
       )
@@ -688,8 +724,8 @@
     (pin "1" (uuid cdf4e69f-14bf-424d-8e1d-1110bc7998e1))
     (pin "2" (uuid 585daf34-da4b-48a1-a171-6d12182cd44e))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "R902") (unit 1)
         )
       )
@@ -734,8 +770,8 @@
     (pin "8" (uuid a2e3f1d8-3e18-4f01-aa94-137cd101809d))
     (pin "9" (uuid 4d1d38b3-8e20-4755-a392-8681465c8fe6))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "U901") (unit 1)
         )
       )
@@ -773,8 +809,8 @@
     (pin "1" (uuid 076dedcc-771e-437a-814c-4567b92a4b5a))
     (pin "2" (uuid 193c6262-8bec-41dc-80dc-fa3cc70dacec))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C904") (unit 1)
         )
       )
@@ -812,8 +848,8 @@
     (pin "1" (uuid 78e17a01-26e3-468c-86a7-6890ed9e73c4))
     (pin "2" (uuid 99ac923f-78c4-4f03-8904-9f70d791f7bc))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "R901") (unit 1)
         )
       )
@@ -825,6 +861,34 @@
       (project "general_schematics"
         (path "/e777d9ec-d073-4229-a9e6-2cf85636e407/891f98c0-3628-49fd-a4d5-1cf0156a22a0"
           (reference "R1501") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 176.53 74.93 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid ce2b3ac7-51e5-4cfc-b48a-e88e2f391fda)
+    (property "Reference" "#FLG01101" (at 176.53 73.025 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 176.53 69.85 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 176.53 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 176.53 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 40777914-d0e4-49e4-8870-1b7b5b8f0db2))
+    (instances
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/0c27c8b7-3734-4129-8cd0-d3d033ef2608"
+          (reference "#FLG01101") (unit 1)
+        )
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
+          (reference "#FLG0501") (unit 1)
         )
       )
     )
@@ -851,8 +915,8 @@
     (pin "1" (uuid ca2fd8b7-e4d3-419a-a0cc-a8b1f32d3e05))
     (pin "2" (uuid 5ac09499-36ac-4382-80a3-f9a46e2e4e9b))
     (instances
-      (project "OS-ServoDriver"
-        (path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd/09fa05e0-8432-45ce-9107-75e3f3cdb40f"
+      (project "OS-servoDriver"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "C906") (unit 1)
         )
       )
