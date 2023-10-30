@@ -1,0 +1,15 @@
+- 3x NPN TOR 					12c   	conrad
+- 3x 1k R    					 3c   	conrad
+- 1x 100k R  					 1c   	conrad
+- 1x diode   					 3c   	conrad
+- 1x elco    					 6c   	conrad
+- 3x 2P screw terminal			21c
+- 1x 3P screw terminal			14c
+- 1x arduino nano 				1,80€
+- 1x PCB 						1,10€
+- 1x jumper 					 1c
+- 1x 10p connector right angle 	10c
+- 1x 6p connector straight 		10c
+- 1x DC DC  					42c
+- 1x potentiometer 				16c
+- 1x dipswitch 					55c 

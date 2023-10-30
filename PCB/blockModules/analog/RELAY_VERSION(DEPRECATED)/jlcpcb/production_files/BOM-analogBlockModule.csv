@@ -1,0 +1,13 @@
+Comment,Designator,Footprint,LCSC
+Screw_Terminal_01x08,J2,"TerminalBlock_Phoenix_MKDS-1,5-8-5.08_1x08_P5.08mm_Horizontal",
+D,D1,D_DO-34_SOD68_P7.62mm_Horizontal,
+HDF3,U1,HDF3,
+Conn_01x08_Male,J1,PinHeader_1x08_P2.54mm_Horizontal,
+D,D5,D_DO-34_SOD68_P7.62mm_Horizontal,
+Conn_01x08_Female,J4,PinSocket_1x08_P2.54mm_Horizontal,
+D,D6,D_DO-34_SOD68_P7.62mm_Horizontal,
+D,D7,D_DO-34_SOD68_P7.62mm_Horizontal,
+D,D8,D_DO-34_SOD68_P7.62mm_Horizontal,
+Screw_Terminal_01x02,J3,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+HDF3,U3,HDF3,
+HDF3,U2,HDF3,

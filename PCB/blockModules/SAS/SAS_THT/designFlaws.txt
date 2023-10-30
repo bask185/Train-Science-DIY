@@ -1,0 +1,7 @@
+1. terminal connectors should be moved a few mm inwards so silk texts van be placed in front of them
+2. The dc-dc converter needs slightly bigger holes, and it is currently mounted upside down
+3. The bottem 90 degree connector should also be moved more inwards so an extension unit's PCB may be pressed against this PCB.
+4. The detector connector is rather close to a screw terminal as well as on the config connector. The detector connector
+  should have enough space for an extra pair of screw terminals.
+5. Though no error, the transistors and the resistors can be housed under the arduino
+6. It is a PITA to solder the miniscule transistor legs, it is better to use the larger footprint.

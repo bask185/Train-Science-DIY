@@ -1,0 +1,76 @@
+Blox Mk I:
+    buffer
+    analoog werkt in 1 richting
+    met 2 kleuren lichtsein
+    traploos afremmen/optrekken
+
+BloX Mk II
+    buffer
+    analoog werkt in 1 richting
+    traploos afremmen/optrekken
+    met slow approach
+    met 3 kleuren lichtsein
+
+BloX Mk III: (train catcher)
+    buffer
+    analoog werkt in 2 richtingen
+    traploos afremmen/optrekken
+    met slow approach
+    met 3 kleuren lichtsein
+    pauze optie
+    pendel optie (trein keren)
+    signal uitgang
+    hold ingang
+
+
+
+BloX ABC MkI
+
+    1 richting
+    ABC systeem zonder slow approach (analoog aangestuurd)
+    met lichtsein
+    geen buffer
+
+BloX ABC MkII
+
+    ABC systeem zonder slow approach
+    Met buffer
+    lichtsein of servo
+    1 richting
+
+BloX ABC MkIII
+
+    ABC systeem met slow approach
+    Met buffer
+    2 kleuren lichtsein of servo
+    1 richting
+
+
+
+BloX M MkI
+    - monostabiel relais
+    - analoog bediend
+    - 2x kleuren lichtsein aansluiting
+
+BloX M MkII
+    - bi stabiel relais
+    - analoog bediend
+    - 2x kleuren lichtsein
+    - met schakelaar aansluitingen
+
+
+
+BloX Ultimate MkI
+
+    2 richtingen
+    seinen en servo beide richtingen
+    alleen analoog
+
+BloX Ultimate MkII
+
+    2 richtingen
+    seinen en servo beide richtingen
+    analoog en digitaal
+    Cab control
+
+

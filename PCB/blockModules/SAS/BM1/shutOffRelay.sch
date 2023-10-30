@@ -1,0 +1,247 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5FFB6D67
+P 4300 5000
+F 0 "R1" V 4093 5000 50  0000 C CNN
+F 1 "330" V 4184 5000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4230 5000 50  0001 C CNN
+F 3 "~" H 4300 5000 50  0001 C CNN
+	1    4300 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 5300 3800 5300
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5FFBB06D
+P 6600 4750
+F 0 "J2" H 6680 4742 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6680 4651 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 6600 4750 50  0001 C CNN
+F 3 "~" H 6600 4750 50  0001 C CNN
+	1    6600 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4850 6400 5600
+$Comp
+L power:+5V #PWR0101
+U 1 1 5FFCA424
+P 3800 4700
+F 0 "#PWR0101" H 3800 4550 50  0001 C CNN
+F 1 "+5V" H 3815 4873 50  0000 C CNN
+F 2 "" H 3800 4700 50  0001 C CNN
+F 3 "" H 3800 4700 50  0001 C CNN
+	1    3800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FFCAD8C
+P 3800 5300
+F 0 "#PWR0102" H 3800 5050 50  0001 C CNN
+F 1 "GND" H 3805 5127 50  0000 C CNN
+F 2 "" H 3800 5300 50  0001 C CNN
+F 3 "" H 3800 5300 50  0001 C CNN
+	1    3800 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 4900 6250 5600
+$Comp
+L Device:D D7
+U 1 1 60122965
+P 6250 4750
+F 0 "D7" V 6296 4670 50  0000 R CNN
+F 1 "D" V 6205 4670 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6250 4750 50  0001 C CNN
+F 3 "~" H 6250 4750 50  0001 C CNN
+	1    6250 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 60121597
+P 6000 5450
+F 0 "D2" V 5954 5530 50  0000 L CNN
+F 1 "D" V 6045 5530 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6000 5450 50  0001 C CNN
+F 3 "~" H 6000 5450 50  0001 C CNN
+	1    6000 5450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D6
+U 1 1 60121F9B
+P 6000 4050
+F 0 "D6" V 5954 4130 50  0000 L CNN
+F 1 "D" V 6045 4130 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6000 4050 50  0001 C CNN
+F 3 "~" H 6000 4050 50  0001 C CNN
+	1    6000 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D5
+U 1 1 60121DB0
+P 6000 4400
+F 0 "D5" V 5954 4480 50  0000 L CNN
+F 1 "D" V 6045 4480 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6000 4400 50  0001 C CNN
+F 3 "~" H 6000 4400 50  0001 C CNN
+	1    6000 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 601218B8
+P 6000 5100
+F 0 "D3" V 5954 5180 50  0000 L CNN
+F 1 "D" V 6045 5180 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6000 5100 50  0001 C CNN
+F 3 "~" H 6000 5100 50  0001 C CNN
+	1    6000 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q1
+U 1 1 61E39AC4
+P 5300 4850
+F 0 "Q1" H 5504 4896 50  0000 L CNN
+F 1 "IRF540N" H 5504 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5550 4775 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 5300 4850 50  0001 L CNN
+	1    5300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:SFH617A-1 U1
+U 1 1 61E3A698
+P 4800 5100
+F 0 "U1" H 4800 5425 50  0000 C CNN
+F 1 "SFH617A-1" H 4800 5334 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 4600 4900 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 4800 5100 50  0001 L CNN
+	1    4800 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 61E40A93
+P 5100 4550
+F 0 "R2" V 4893 4550 50  0000 C CNN
+F 1 "1k" V 4984 4550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5030 4550 50  0001 C CNN
+F 3 "~" H 5100 4550 50  0001 C CNN
+	1    5100 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 60121AB2
+P 6000 4750
+F 0 "D4" V 5954 4830 50  0000 L CNN
+F 1 "D" V 6045 4830 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6000 4750 50  0001 C CNN
+F 3 "~" H 6000 4750 50  0001 C CNN
+	1    6000 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 5300 6000 5250
+Wire Wire Line
+	6000 4950 6000 4900
+Wire Wire Line
+	6000 4600 6000 4550
+Wire Wire Line
+	6000 4250 6000 4200
+Wire Wire Line
+	6400 3900 6250 3900
+Wire Wire Line
+	6400 3900 6400 4750
+Connection ~ 6000 3900
+Wire Wire Line
+	6000 3900 5400 3900
+Wire Wire Line
+	6250 4600 6250 3900
+Connection ~ 6250 3900
+Wire Wire Line
+	6250 3900 6000 3900
+Wire Wire Line
+	6400 5600 6250 5600
+Connection ~ 6250 5600
+Wire Wire Line
+	6000 5600 6250 5600
+Wire Wire Line
+	5100 4850 5100 4700
+Wire Wire Line
+	5400 4650 5400 3900
+Connection ~ 5400 3900
+Wire Wire Line
+	5400 3900 5100 3900
+Wire Wire Line
+	5100 4400 5100 3900
+Wire Wire Line
+	6000 5600 5400 5600
+Wire Wire Line
+	5400 5600 5400 5050
+Connection ~ 6000 5600
+Wire Wire Line
+	5100 5000 5100 4850
+Connection ~ 5100 4850
+Wire Wire Line
+	5100 5200 5100 5600
+Wire Wire Line
+	5100 5600 5400 5600
+Connection ~ 5400 5600
+Wire Wire Line
+	4500 5000 4450 5000
+$Comp
+L w_connectors:HEADER_4 J1
+U 1 1 5FFB7ED1
+P 3650 5150
+F 0 "J1" H 3750 4750 60  0000 C CNN
+F 1 "HEADER_3" H 3800 4850 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 3650 5150 60  0001 C CNN
+F 3 "" H 3650 5150 60  0000 C CNN
+	1    3650 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 5200 3800 5200
+Wire Wire Line
+	3800 5200 3800 4700
+Wire Wire Line
+	3750 5000 4150 5000
+$Comp
+L power:GND #PWR0103
+U 1 1 61E5EDF3
+P 4450 5300
+F 0 "#PWR0103" H 4450 5050 50  0001 C CNN
+F 1 "GND" H 4455 5127 50  0000 C CNN
+F 2 "" H 4450 5300 50  0001 C CNN
+F 3 "" H 4450 5300 50  0001 C CNN
+	1    4450 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 5300 4450 5200
+Wire Wire Line
+	4450 5200 4500 5200
+NoConn ~ 3750 5100
+$EndSCHEMATC

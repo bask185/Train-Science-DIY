@@ -1,0 +1,1700 @@
+EESchema Schematic File Version 5
+EELAYER 36 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Connection ~ 1300 1900
+Connection ~ 1450 1800
+Connection ~ 1450 2400
+Connection ~ 1600 1700
+Connection ~ 1600 2400
+Connection ~ 1750 1600
+Connection ~ 1750 2400
+Connection ~ 1900 1500
+Connection ~ 1900 2400
+Connection ~ 2000 2400
+Connection ~ 2050 1400
+Connection ~ 2050 2400
+Connection ~ 2200 1300
+Connection ~ 2200 2400
+Connection ~ 2350 1200
+Connection ~ 2350 2400
+Connection ~ 2500 1100
+Connection ~ 2500 2400
+Connection ~ 2650 1000
+Connection ~ 2900 1900
+Connection ~ 3050 1800
+Connection ~ 3050 2400
+Connection ~ 3200 1700
+Connection ~ 3200 2400
+Connection ~ 3350 1600
+Connection ~ 3350 2400
+Connection ~ 3400 5750
+Connection ~ 3500 1500
+Connection ~ 3500 2400
+Connection ~ 3500 7000
+Connection ~ 3600 2400
+Connection ~ 3650 1400
+Connection ~ 3650 2400
+Connection ~ 3800 1300
+Connection ~ 3800 2400
+Connection ~ 3950 1200
+Connection ~ 3950 2400
+Connection ~ 4100 1100
+Connection ~ 4100 2400
+Connection ~ 4250 1000
+Connection ~ 4450 1900
+Connection ~ 4600 1800
+Connection ~ 4600 2400
+Connection ~ 4750 1700
+Connection ~ 4750 2400
+Connection ~ 4750 4350
+Connection ~ 4900 1600
+Connection ~ 4900 2400
+Connection ~ 5050 1500
+Connection ~ 5050 2400
+Connection ~ 5150 2400
+Connection ~ 5150 4450
+Connection ~ 5200 1400
+Connection ~ 5200 2400
+Connection ~ 5350 1300
+Connection ~ 5350 2400
+Connection ~ 5500 1200
+Connection ~ 5500 2400
+Connection ~ 5550 4550
+Connection ~ 5550 5300
+Connection ~ 5650 1100
+Connection ~ 5650 2400
+Connection ~ 5800 1000
+Connection ~ 5950 4650
+Connection ~ 5950 5300
+Connection ~ 6000 1900
+Connection ~ 6150 1800
+Connection ~ 6150 2400
+Connection ~ 6300 1700
+Connection ~ 6300 2400
+Connection ~ 6350 4750
+Connection ~ 6350 5300
+Connection ~ 6450 1600
+Connection ~ 6450 2400
+Connection ~ 6600 1500
+Connection ~ 6600 2400
+Connection ~ 6650 2400
+Connection ~ 6750 1400
+Connection ~ 6750 2400
+Connection ~ 6750 4850
+Connection ~ 6900 1300
+Connection ~ 6900 2400
+Connection ~ 7050 1200
+Connection ~ 7050 2400
+Connection ~ 7200 1100
+Connection ~ 7200 2400
+Connection ~ 7350 1000
+Connection ~ 7600 1900
+Connection ~ 7750 1800
+Connection ~ 7750 2400
+Connection ~ 7900 1700
+Connection ~ 7900 2400
+Connection ~ 8050 1600
+Connection ~ 8050 2400
+Connection ~ 8200 1500
+Connection ~ 8200 2400
+Connection ~ 8300 2400
+Connection ~ 8350 1400
+Connection ~ 8350 2400
+Connection ~ 8500 1300
+Connection ~ 8500 2400
+Connection ~ 8650 1200
+Connection ~ 8650 2400
+Connection ~ 8800 1100
+Connection ~ 8800 2400
+Connection ~ 8850 4150
+Connection ~ 8950 1000
+Connection ~ 9150 1900
+Connection ~ 9300 1800
+Connection ~ 9300 2400
+Connection ~ 9450 1700
+Connection ~ 9450 2400
+Connection ~ 9600 1600
+Connection ~ 9600 2400
+Connection ~ 9750 1500
+Connection ~ 9750 2400
+Connection ~ 9800 2400
+Connection ~ 9900 1400
+Connection ~ 9900 2400
+Connection ~ 10050 1300
+Connection ~ 10050 2400
+Connection ~ 10200 1200
+Connection ~ 10200 2400
+Connection ~ 10350 1100
+Connection ~ 10350 2400
+Connection ~ 10500 1000
+NoConn ~ 3900 5050
+NoConn ~ 3900 5150
+NoConn ~ 3900 5250
+NoConn ~ 3900 5450
+NoConn ~ 10900 1000
+NoConn ~ 10900 1100
+NoConn ~ 10900 1200
+NoConn ~ 10900 1300
+NoConn ~ 10900 1400
+NoConn ~ 10900 1500
+NoConn ~ 10900 1600
+NoConn ~ 10900 1700
+NoConn ~ 10900 1800
+NoConn ~ 10900 1900
+Wire Wire Line
+	1050 1000 2650 1000
+Wire Wire Line
+	1050 1100 2500 1100
+Wire Wire Line
+	1050 1200 2350 1200
+Wire Wire Line
+	1050 1300 2200 1300
+Wire Wire Line
+	1050 1400 2050 1400
+Wire Wire Line
+	1050 1500 1900 1500
+Wire Wire Line
+	1050 1600 1750 1600
+Wire Wire Line
+	1050 1700 1600 1700
+Wire Wire Line
+	1050 1800 1450 1800
+Wire Wire Line
+	1050 1900 1300 1900
+Wire Wire Line
+	1300 1900 2900 1900
+Wire Wire Line
+	1300 2100 1300 1900
+Wire Wire Line
+	1450 1800 3050 1800
+Wire Wire Line
+	1450 2100 1450 1800
+Wire Wire Line
+	1450 2400 1300 2400
+Wire Wire Line
+	1600 1700 3200 1700
+Wire Wire Line
+	1600 2100 1600 1700
+Wire Wire Line
+	1600 2400 1450 2400
+Wire Wire Line
+	1750 1600 1750 2100
+Wire Wire Line
+	1750 1600 3350 1600
+Wire Wire Line
+	1750 2400 1600 2400
+Wire Wire Line
+	1900 1500 3500 1500
+Wire Wire Line
+	1900 2100 1900 1500
+Wire Wire Line
+	1900 2400 1750 2400
+Wire Wire Line
+	2000 2400 1900 2400
+Wire Wire Line
+	2000 3200 2000 2400
+Wire Wire Line
+	2050 1400 3650 1400
+Wire Wire Line
+	2050 2100 2050 1400
+Wire Wire Line
+	2050 2400 2000 2400
+Wire Wire Line
+	2050 5200 2050 5150
+Wire Wire Line
+	2050 5550 2050 5500
+Wire Wire Line
+	2200 1300 3800 1300
+Wire Wire Line
+	2200 2100 2200 1300
+Wire Wire Line
+	2200 2400 2050 2400
+Wire Wire Line
+	2250 4350 2900 4350
+Wire Wire Line
+	2350 1200 3950 1200
+Wire Wire Line
+	2350 2100 2350 1200
+Wire Wire Line
+	2350 2400 2200 2400
+Wire Wire Line
+	2500 1100 2500 2100
+Wire Wire Line
+	2500 1100 4100 1100
+Wire Wire Line
+	2500 2400 2350 2400
+Wire Wire Line
+	2500 4450 2500 5750
+Wire Wire Line
+	2500 5750 3400 5750
+Wire Wire Line
+	2650 1000 4250 1000
+Wire Wire Line
+	2650 2100 2650 1000
+Wire Wire Line
+	2650 2400 2500 2400
+Wire Wire Line
+	2900 1900 4450 1900
+Wire Wire Line
+	2900 2100 2900 1900
+Wire Wire Line
+	2900 2400 3050 2400
+Wire Wire Line
+	2900 4450 2500 4450
+Wire Wire Line
+	2900 4650 2700 4650
+Wire Wire Line
+	3050 1800 4600 1800
+Wire Wire Line
+	3050 2100 3050 1800
+Wire Wire Line
+	3050 2400 3200 2400
+Wire Wire Line
+	3200 1700 4750 1700
+Wire Wire Line
+	3200 2100 3200 1700
+Wire Wire Line
+	3200 2400 3350 2400
+Wire Wire Line
+	3350 1600 3350 2100
+Wire Wire Line
+	3350 1600 4900 1600
+Wire Wire Line
+	3350 2400 3500 2400
+Wire Wire Line
+	3400 4050 3400 4000
+Wire Wire Line
+	3400 5800 3400 5750
+Wire Wire Line
+	3400 7000 3500 7000
+Wire Wire Line
+	3400 7100 3500 7100
+Wire Wire Line
+	3500 1500 5050 1500
+Wire Wire Line
+	3500 2100 3500 1500
+Wire Wire Line
+	3500 2400 3600 2400
+Wire Wire Line
+	3500 7000 3800 7000
+Wire Wire Line
+	3500 7100 3500 7000
+Wire Wire Line
+	3600 2400 3650 2400
+Wire Wire Line
+	3600 3150 3600 2400
+Wire Wire Line
+	3650 1400 5200 1400
+Wire Wire Line
+	3650 2100 3650 1400
+Wire Wire Line
+	3650 2400 3800 2400
+Wire Wire Line
+	3800 1300 5350 1300
+Wire Wire Line
+	3800 2100 3800 1300
+Wire Wire Line
+	3800 2400 3950 2400
+Wire Wire Line
+	3800 6200 3400 6200
+Wire Wire Line
+	3800 6300 3400 6300
+Wire Wire Line
+	3800 6400 3400 6400
+Wire Wire Line
+	3800 6500 3400 6500
+Wire Wire Line
+	3800 6600 3400 6600
+Wire Wire Line
+	3800 6700 3400 6700
+Wire Wire Line
+	3900 4450 5150 4450
+Wire Wire Line
+	3900 4550 5550 4550
+Wire Wire Line
+	3900 4650 5950 4650
+Wire Wire Line
+	3900 4750 6350 4750
+Wire Wire Line
+	3900 4850 6750 4850
+Wire Wire Line
+	3900 4950 5150 4950
+Wire Wire Line
+	3950 1200 5500 1200
+Wire Wire Line
+	3950 2100 3950 1200
+Wire Wire Line
+	3950 2400 4100 2400
+Wire Wire Line
+	4000 6800 3400 6800
+Wire Wire Line
+	4000 6800 4000 6750
+Wire Wire Line
+	4000 6900 3400 6900
+Wire Wire Line
+	4000 7150 4000 6900
+Wire Wire Line
+	4100 1100 4100 2100
+Wire Wire Line
+	4100 1100 5650 1100
+Wire Wire Line
+	4100 2400 4250 2400
+Wire Wire Line
+	4250 1000 5800 1000
+Wire Wire Line
+	4250 2100 4250 1000
+Wire Wire Line
+	4450 1900 6000 1900
+Wire Wire Line
+	4450 2100 4450 1900
+Wire Wire Line
+	4450 2400 4600 2400
+Wire Wire Line
+	4600 1800 6150 1800
+Wire Wire Line
+	4600 2100 4600 1800
+Wire Wire Line
+	4600 2400 4750 2400
+Wire Wire Line
+	4750 1700 6300 1700
+Wire Wire Line
+	4750 2100 4750 1700
+Wire Wire Line
+	4750 2400 4900 2400
+Wire Wire Line
+	4750 3200 2000 3200
+Wire Wire Line
+	4750 3200 4750 3650
+Wire Wire Line
+	4750 4250 4750 4350
+Wire Wire Line
+	4750 4350 3900 4350
+Wire Wire Line
+	4750 4350 7300 4350
+Wire Wire Line
+	4900 1600 4900 2100
+Wire Wire Line
+	4900 1600 6450 1600
+Wire Wire Line
+	4900 2400 5050 2400
+Wire Wire Line
+	5050 1500 6600 1500
+Wire Wire Line
+	5050 2100 5050 1500
+Wire Wire Line
+	5050 2400 5150 2400
+Wire Wire Line
+	5150 2400 5200 2400
+Wire Wire Line
+	5150 3100 5150 2400
+Wire Wire Line
+	5150 3150 3600 3150
+Wire Wire Line
+	5150 3150 5150 3650
+Wire Wire Line
+	5150 4450 5150 4250
+Wire Wire Line
+	5150 4950 5150 5300
+Wire Wire Line
+	5150 5300 5550 5300
+Wire Wire Line
+	5200 1400 6750 1400
+Wire Wire Line
+	5200 2100 5200 1400
+Wire Wire Line
+	5200 2400 5350 2400
+Wire Wire Line
+	5350 1300 6900 1300
+Wire Wire Line
+	5350 2100 5350 1300
+Wire Wire Line
+	5350 2400 5500 2400
+Wire Wire Line
+	5500 1200 7050 1200
+Wire Wire Line
+	5500 2100 5500 1200
+Wire Wire Line
+	5500 2400 5650 2400
+Wire Wire Line
+	5550 3100 5150 3100
+Wire Wire Line
+	5550 3100 5550 3650
+Wire Wire Line
+	5550 4550 5550 4250
+Wire Wire Line
+	5550 4550 5550 5000
+Wire Wire Line
+	5550 4550 7300 4550
+Wire Wire Line
+	5550 5300 5950 5300
+Wire Wire Line
+	5650 1100 5650 2100
+Wire Wire Line
+	5650 1100 7200 1100
+Wire Wire Line
+	5650 2400 5800 2400
+Wire Wire Line
+	5800 1000 7350 1000
+Wire Wire Line
+	5800 2100 5800 1000
+Wire Wire Line
+	5950 3100 5950 3650
+Wire Wire Line
+	5950 3100 6650 3100
+Wire Wire Line
+	5950 4650 5950 4250
+Wire Wire Line
+	5950 5000 5950 4650
+Wire Wire Line
+	5950 5300 5950 5500
+Wire Wire Line
+	5950 5300 6350 5300
+Wire Wire Line
+	6000 1900 7600 1900
+Wire Wire Line
+	6000 2100 6000 1900
+Wire Wire Line
+	6000 2400 6150 2400
+Wire Wire Line
+	6150 1800 7750 1800
+Wire Wire Line
+	6150 2100 6150 1800
+Wire Wire Line
+	6150 2400 6300 2400
+Wire Wire Line
+	6300 1700 7900 1700
+Wire Wire Line
+	6300 2100 6300 1700
+Wire Wire Line
+	6300 2400 6450 2400
+Wire Wire Line
+	6350 3150 6350 3650
+Wire Wire Line
+	6350 3150 8300 3150
+Wire Wire Line
+	6350 4750 6350 4250
+Wire Wire Line
+	6350 4750 7300 4750
+Wire Wire Line
+	6350 5000 6350 4750
+Wire Wire Line
+	6350 5300 6750 5300
+Wire Wire Line
+	6450 1600 6450 2100
+Wire Wire Line
+	6450 1600 8050 1600
+Wire Wire Line
+	6450 2400 6600 2400
+Wire Wire Line
+	6600 1500 8200 1500
+Wire Wire Line
+	6600 2100 6600 1500
+Wire Wire Line
+	6600 2400 6650 2400
+Wire Wire Line
+	6650 2400 6750 2400
+Wire Wire Line
+	6650 3100 6650 2400
+Wire Wire Line
+	6750 1400 8350 1400
+Wire Wire Line
+	6750 2100 6750 1400
+Wire Wire Line
+	6750 2400 6900 2400
+Wire Wire Line
+	6750 3200 6750 3650
+Wire Wire Line
+	6750 3200 9800 3200
+Wire Wire Line
+	6750 4850 6750 4250
+Wire Wire Line
+	6750 5000 6750 4850
+Wire Wire Line
+	6900 1300 8500 1300
+Wire Wire Line
+	6900 2100 6900 1300
+Wire Wire Line
+	6900 2400 7050 2400
+Wire Wire Line
+	7050 1200 8650 1200
+Wire Wire Line
+	7050 2100 7050 1200
+Wire Wire Line
+	7050 2400 7200 2400
+Wire Wire Line
+	7200 1100 7200 2100
+Wire Wire Line
+	7200 1100 8800 1100
+Wire Wire Line
+	7200 2400 7350 2400
+Wire Wire Line
+	7300 4450 5150 4450
+Wire Wire Line
+	7300 4650 5950 4650
+Wire Wire Line
+	7300 4850 6750 4850
+Wire Wire Line
+	7350 1000 8950 1000
+Wire Wire Line
+	7350 2100 7350 1000
+Wire Wire Line
+	7600 1900 9150 1900
+Wire Wire Line
+	7600 2100 7600 1900
+Wire Wire Line
+	7600 2400 7750 2400
+Wire Wire Line
+	7750 1800 9300 1800
+Wire Wire Line
+	7750 2100 7750 1800
+Wire Wire Line
+	7750 2400 7900 2400
+Wire Wire Line
+	7900 1700 9450 1700
+Wire Wire Line
+	7900 2100 7900 1700
+Wire Wire Line
+	7900 2400 8050 2400
+Wire Wire Line
+	8050 1600 8050 2100
+Wire Wire Line
+	8050 1600 9600 1600
+Wire Wire Line
+	8050 2400 8200 2400
+Wire Wire Line
+	8200 1500 9750 1500
+Wire Wire Line
+	8200 2100 8200 1500
+Wire Wire Line
+	8200 2400 8300 2400
+Wire Wire Line
+	8300 2400 8350 2400
+Wire Wire Line
+	8300 3150 8300 2400
+Wire Wire Line
+	8350 1400 9900 1400
+Wire Wire Line
+	8350 2100 8350 1400
+Wire Wire Line
+	8350 2400 8500 2400
+Wire Wire Line
+	8350 4500 8350 4450
+Wire Wire Line
+	8350 4850 8350 4800
+Wire Wire Line
+	8500 1300 10050 1300
+Wire Wire Line
+	8500 2100 8500 1300
+Wire Wire Line
+	8500 2400 8650 2400
+Wire Wire Line
+	8650 1200 10200 1200
+Wire Wire Line
+	8650 2100 8650 1200
+Wire Wire Line
+	8650 2400 8800 2400
+Wire Wire Line
+	8800 1100 8800 2100
+Wire Wire Line
+	8800 1100 10350 1100
+Wire Wire Line
+	8800 2400 8950 2400
+Wire Wire Line
+	8850 4100 8850 4150
+Wire Wire Line
+	8850 4150 8750 4150
+Wire Wire Line
+	8850 5200 8850 5150
+Wire Wire Line
+	8950 1000 10500 1000
+Wire Wire Line
+	8950 2100 8950 1000
+Wire Wire Line
+	8950 4150 8850 4150
+Wire Wire Line
+	9150 1900 10900 1900
+Wire Wire Line
+	9150 2100 9150 1900
+Wire Wire Line
+	9150 2400 9300 2400
+Wire Wire Line
+	9300 1800 10900 1800
+Wire Wire Line
+	9300 2100 9300 1800
+Wire Wire Line
+	9300 2400 9450 2400
+Wire Wire Line
+	9450 1700 10900 1700
+Wire Wire Line
+	9450 2100 9450 1700
+Wire Wire Line
+	9450 2400 9600 2400
+Wire Wire Line
+	9600 1600 9600 2100
+Wire Wire Line
+	9600 1600 10900 1600
+Wire Wire Line
+	9600 2400 9750 2400
+Wire Wire Line
+	9750 1500 10900 1500
+Wire Wire Line
+	9750 2100 9750 1500
+Wire Wire Line
+	9750 2400 9800 2400
+Wire Wire Line
+	9800 2400 9900 2400
+Wire Wire Line
+	9800 3200 9800 2400
+Wire Wire Line
+	9900 1400 10900 1400
+Wire Wire Line
+	9900 2100 9900 1400
+Wire Wire Line
+	9900 2400 10050 2400
+Wire Wire Line
+	10050 1300 10900 1300
+Wire Wire Line
+	10050 2100 10050 1300
+Wire Wire Line
+	10050 2400 10200 2400
+Wire Wire Line
+	10200 1200 10900 1200
+Wire Wire Line
+	10200 2100 10200 1200
+Wire Wire Line
+	10200 2400 10350 2400
+Wire Wire Line
+	10350 1100 10350 2100
+Wire Wire Line
+	10350 1100 10900 1100
+Wire Wire Line
+	10350 2400 10500 2400
+Wire Wire Line
+	10500 1000 10900 1000
+Wire Wire Line
+	10500 2100 10500 1000
+Text Notes 550  2400 0    50   ~ 0
+<-- to points
+Text Notes 950  4700 0    50   ~ 0
+to 6 train catchers
+Text Notes 7050 4950 0    50   ~ 0
+to 6 train catchers
+Text Label 2250 4350 2    50   ~ 0
+recv
+Text Label 2700 4650 0    50   ~ 0
+reset
+Text Label 3800 6200 2    50   ~ 0
+TC_out6
+Text Label 3800 6300 2    50   ~ 0
+TC_out5
+Text Label 3800 6400 2    50   ~ 0
+TC_out4
+Text Label 3800 6500 2    50   ~ 0
+TC_out3
+Text Label 3800 6600 2    50   ~ 0
+TC_out2
+Text Label 3800 6700 2    50   ~ 0
+TC_out1
+Text Label 3800 7000 2    50   ~ 0
+recv
+Text Label 4750 3300 3    50   ~ 0
+TC6
+Text Label 5150 3300 3    50   ~ 0
+TC5
+Text Label 5550 3300 3    50   ~ 0
+TC4
+Text Label 5950 3300 3    50   ~ 0
+TC3
+Text Label 5950 5500 0    50   ~ 0
+reset
+Text Label 6350 3300 3    50   ~ 0
+TC2
+Text Label 6750 3300 3    50   ~ 0
+TC1
+Text Label 7300 4350 0    50   ~ 0
+TC_out1
+Text Label 7300 4450 0    50   ~ 0
+TC_out2
+Text Label 7300 4550 0    50   ~ 0
+TC_out3
+Text Label 7300 4650 0    50   ~ 0
+TC_out4
+Text Label 7300 4750 0    50   ~ 0
+TC_out5
+Text Label 7300 4850 0    50   ~ 0
+TC_out6
+$Comp
+L power:+5V #PWR0107
+U 1 1 62251BB0
+P 2050 5150
+F 0 "#PWR0107" H 2050 5000 50  0001 C CNN
+F 1 "+5V" H 2065 5323 50  0000 C CNN
+F 2 "" H 2050 5150 50  0001 C CNN
+F 3 "" H 2050 5150 50  0001 C CNN
+	1    2050 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 61F801A6
+P 3400 4000
+F 0 "#PWR0105" H 3400 3850 50  0001 C CNN
+F 1 "+5V" H 3415 4173 50  0000 C CNN
+F 2 "" H 3400 4000 50  0001 C CNN
+F 3 "" H 3400 4000 50  0001 C CNN
+	1    3400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 62058228
+P 4000 6750
+F 0 "#PWR0110" H 4000 6600 50  0001 C CNN
+F 1 "+5V" H 4015 6923 50  0000 C CNN
+F 2 "" H 4000 6750 50  0001 C CNN
+F 3 "" H 4000 6750 50  0001 C CNN
+	1    4000 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 61E22677
+P 8350 4450
+F 0 "#PWR0103" H 8350 4300 50  0001 C CNN
+F 1 "+5V" H 8365 4623 50  0000 C CNN
+F 2 "" H 8350 4450 50  0001 C CNN
+F 3 "" H 8350 4450 50  0001 C CNN
+	1    8350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 61E1FF63
+P 8850 4100
+F 0 "#PWR0101" H 8850 3950 50  0001 C CNN
+F 1 "+5V" H 8865 4273 50  0000 C CNN
+F 2 "" H 8850 4100 50  0001 C CNN
+F 3 "" H 8850 4100 50  0001 C CNN
+	1    8850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 62251BB6
+P 2050 5550
+F 0 "#PWR0108" H 2050 5300 50  0001 C CNN
+F 1 "GND" H 2055 5377 50  0000 C CNN
+F 2 "" H 2050 5550 50  0001 C CNN
+F 3 "" H 2050 5550 50  0001 C CNN
+	1    2050 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 61F8FF51
+P 3400 5800
+F 0 "#PWR0106" H 3400 5550 50  0001 C CNN
+F 1 "GND" H 3405 5627 50  0000 C CNN
+F 2 "" H 3400 5800 50  0001 C CNN
+F 3 "" H 3400 5800 50  0001 C CNN
+	1    3400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 624F406C
+P 4000 7150
+F 0 "#PWR0109" H 4000 6900 50  0001 C CNN
+F 1 "GND" H 4005 6977 50  0000 C CNN
+F 2 "" H 4000 7150 50  0001 C CNN
+F 3 "" H 4000 7150 50  0001 C CNN
+	1    4000 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 61E226AC
+P 8350 4850
+F 0 "#PWR0104" H 8350 4600 50  0001 C CNN
+F 1 "GND" H 8355 4677 50  0000 C CNN
+F 2 "" H 8350 4850 50  0001 C CNN
+F 3 "" H 8350 4850 50  0001 C CNN
+	1    8350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 61E20EFA
+P 8850 5200
+F 0 "#PWR0102" H 8850 4950 50  0001 C CNN
+F 1 "GND" H 8855 5027 50  0000 C CNN
+F 2 "" H 8850 5200 50  0001 C CNN
+F 3 "" H 8850 5200 50  0001 C CNN
+	1    8850 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 620E7E60
+P 5550 5150
+F 0 "JP1" V 5504 5218 50  0000 L CNN
+F 1 "ju" V 5595 5218 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5550 5150 50  0001 C CNN
+F 3 "~" H 5550 5150 50  0001 C CNN
+	1    5550 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 621079C6
+P 5950 5150
+F 0 "JP2" V 5904 5218 50  0000 L CNN
+F 1 "ju" V 5995 5218 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5950 5150 50  0001 C CNN
+F 3 "~" H 5950 5150 50  0001 C CNN
+	1    5950 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 62117039
+P 6350 5150
+F 0 "JP3" V 6304 5218 50  0000 L CNN
+F 1 "ju" V 6395 5218 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6350 5150 50  0001 C CNN
+F 3 "~" H 6350 5150 50  0001 C CNN
+	1    6350 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 62126424
+P 6750 5150
+F 0 "JP4" V 6704 5218 50  0000 L CNN
+F 1 "ju" V 6795 5218 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6750 5150 50  0001 C CNN
+F 3 "~" H 6750 5150 50  0001 C CNN
+	1    6750 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 61E594D5
+P 1300 2250
+F 0 "D1" V 1346 2170 50  0000 R CNN
+F 1 "D" V 1255 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 1300 2250 50  0001 C CNN
+F 3 "~" H 1300 2250 50  0001 C CNN
+	1    1300 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 61E594DB
+P 1450 2250
+F 0 "D2" V 1496 2170 50  0000 R CNN
+F 1 "D" V 1405 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 1450 2250 50  0001 C CNN
+F 3 "~" H 1450 2250 50  0001 C CNN
+	1    1450 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 61E594E1
+P 1600 2250
+F 0 "D3" V 1646 2170 50  0000 R CNN
+F 1 "D" V 1555 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 1600 2250 50  0001 C CNN
+F 3 "~" H 1600 2250 50  0001 C CNN
+	1    1600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 61E594E7
+P 1750 2250
+F 0 "D4" V 1796 2170 50  0000 R CNN
+F 1 "D" V 1705 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 1750 2250 50  0001 C CNN
+F 3 "~" H 1750 2250 50  0001 C CNN
+	1    1750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D5
+U 1 1 61E4A642
+P 1900 2250
+F 0 "D5" V 1946 2170 50  0000 R CNN
+F 1 "D" V 1855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 1900 2250 50  0001 C CNN
+F 3 "~" H 1900 2250 50  0001 C CNN
+	1    1900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D6
+U 1 1 61E4A648
+P 2050 2250
+F 0 "D6" V 2096 2170 50  0000 R CNN
+F 1 "D" V 2005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2050 2250 50  0001 C CNN
+F 3 "~" H 2050 2250 50  0001 C CNN
+	1    2050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D7
+U 1 1 61E4A64E
+P 2200 2250
+F 0 "D7" V 2246 2170 50  0000 R CNN
+F 1 "D" V 2155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2200 2250 50  0001 C CNN
+F 3 "~" H 2200 2250 50  0001 C CNN
+	1    2200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D8
+U 1 1 61E4A654
+P 2350 2250
+F 0 "D8" V 2396 2170 50  0000 R CNN
+F 1 "D" V 2305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2350 2250 50  0001 C CNN
+F 3 "~" H 2350 2250 50  0001 C CNN
+	1    2350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D9
+U 1 1 61E4A65A
+P 2500 2250
+F 0 "D9" V 2546 2170 50  0000 R CNN
+F 1 "D" V 2455 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2500 2250 50  0001 C CNN
+F 3 "~" H 2500 2250 50  0001 C CNN
+	1    2500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D10
+U 1 1 61E4A660
+P 2650 2250
+F 0 "D10" V 2696 2170 50  0000 R CNN
+F 1 "D" V 2605 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2650 2250 50  0001 C CNN
+F 3 "~" H 2650 2250 50  0001 C CNN
+	1    2650 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D11
+U 1 1 61E89A73
+P 2900 2250
+F 0 "D11" V 2946 2170 50  0000 R CNN
+F 1 "D" V 2855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 2900 2250 50  0001 C CNN
+F 3 "~" H 2900 2250 50  0001 C CNN
+	1    2900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D12
+U 1 1 61E89A79
+P 3050 2250
+F 0 "D12" V 3096 2170 50  0000 R CNN
+F 1 "D" V 3005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3050 2250 50  0001 C CNN
+F 3 "~" H 3050 2250 50  0001 C CNN
+	1    3050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D13
+U 1 1 61E89A7F
+P 3200 2250
+F 0 "D13" V 3246 2170 50  0000 R CNN
+F 1 "D" V 3155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3200 2250 50  0001 C CNN
+F 3 "~" H 3200 2250 50  0001 C CNN
+	1    3200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D14
+U 1 1 61E89A85
+P 3350 2250
+F 0 "D14" V 3396 2170 50  0000 R CNN
+F 1 "D" V 3305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3350 2250 50  0001 C CNN
+F 3 "~" H 3350 2250 50  0001 C CNN
+	1    3350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D15
+U 1 1 61E89A4F
+P 3500 2250
+F 0 "D15" V 3546 2170 50  0000 R CNN
+F 1 "D" V 3455 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3500 2250 50  0001 C CNN
+F 3 "~" H 3500 2250 50  0001 C CNN
+	1    3500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D16
+U 1 1 61E89A55
+P 3650 2250
+F 0 "D16" V 3696 2170 50  0000 R CNN
+F 1 "D" V 3605 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3650 2250 50  0001 C CNN
+F 3 "~" H 3650 2250 50  0001 C CNN
+	1    3650 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D17
+U 1 1 61E89A5B
+P 3800 2250
+F 0 "D17" V 3846 2170 50  0000 R CNN
+F 1 "D" V 3755 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3800 2250 50  0001 C CNN
+F 3 "~" H 3800 2250 50  0001 C CNN
+	1    3800 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D18
+U 1 1 61E89A61
+P 3950 2250
+F 0 "D18" V 3996 2170 50  0000 R CNN
+F 1 "D" V 3905 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 3950 2250 50  0001 C CNN
+F 3 "~" H 3950 2250 50  0001 C CNN
+	1    3950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D19
+U 1 1 61E89A67
+P 4100 2250
+F 0 "D19" V 4146 2170 50  0000 R CNN
+F 1 "D" V 4055 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4100 2250 50  0001 C CNN
+F 3 "~" H 4100 2250 50  0001 C CNN
+	1    4100 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D20
+U 1 1 61E89A6D
+P 4250 2250
+F 0 "D20" V 4296 2170 50  0000 R CNN
+F 1 "D" V 4205 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4250 2250 50  0001 C CNN
+F 3 "~" H 4250 2250 50  0001 C CNN
+	1    4250 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D21
+U 1 1 61E8EC80
+P 4450 2250
+F 0 "D21" V 4496 2170 50  0000 R CNN
+F 1 "D" V 4405 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4450 2250 50  0001 C CNN
+F 3 "~" H 4450 2250 50  0001 C CNN
+	1    4450 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D22
+U 1 1 61E8EC86
+P 4600 2250
+F 0 "D22" V 4646 2170 50  0000 R CNN
+F 1 "D" V 4555 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4600 2250 50  0001 C CNN
+F 3 "~" H 4600 2250 50  0001 C CNN
+	1    4600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D23
+U 1 1 61E8EC8C
+P 4750 2250
+F 0 "D23" V 4796 2170 50  0000 R CNN
+F 1 "D" V 4705 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4750 2250 50  0001 C CNN
+F 3 "~" H 4750 2250 50  0001 C CNN
+	1    4750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D24
+U 1 1 61E8EC92
+P 4900 2250
+F 0 "D24" V 4946 2170 50  0000 R CNN
+F 1 "D" V 4855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 4900 2250 50  0001 C CNN
+F 3 "~" H 4900 2250 50  0001 C CNN
+	1    4900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D25
+U 1 1 61E8EC5C
+P 5050 2250
+F 0 "D25" V 5096 2170 50  0000 R CNN
+F 1 "D" V 5005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5050 2250 50  0001 C CNN
+F 3 "~" H 5050 2250 50  0001 C CNN
+	1    5050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D26
+U 1 1 61E8EC62
+P 5200 2250
+F 0 "D26" V 5246 2170 50  0000 R CNN
+F 1 "D" V 5155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5200 2250 50  0001 C CNN
+F 3 "~" H 5200 2250 50  0001 C CNN
+	1    5200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D27
+U 1 1 61E8EC68
+P 5350 2250
+F 0 "D27" V 5396 2170 50  0000 R CNN
+F 1 "D" V 5305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5350 2250 50  0001 C CNN
+F 3 "~" H 5350 2250 50  0001 C CNN
+	1    5350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D28
+U 1 1 61E8EC6E
+P 5500 2250
+F 0 "D28" V 5546 2170 50  0000 R CNN
+F 1 "D" V 5455 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5500 2250 50  0001 C CNN
+F 3 "~" H 5500 2250 50  0001 C CNN
+	1    5500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D29
+U 1 1 61E8EC74
+P 5650 2250
+F 0 "D29" V 5696 2170 50  0000 R CNN
+F 1 "D" V 5605 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5650 2250 50  0001 C CNN
+F 3 "~" H 5650 2250 50  0001 C CNN
+	1    5650 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D30
+U 1 1 61E8EC7A
+P 5800 2250
+F 0 "D30" V 5846 2170 50  0000 R CNN
+F 1 "D" V 5755 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 5800 2250 50  0001 C CNN
+F 3 "~" H 5800 2250 50  0001 C CNN
+	1    5800 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D31
+U 1 1 61E9EB8F
+P 6000 2250
+F 0 "D31" V 6046 2170 50  0000 R CNN
+F 1 "D" V 5955 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6000 2250 50  0001 C CNN
+F 3 "~" H 6000 2250 50  0001 C CNN
+	1    6000 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D32
+U 1 1 61E9EB95
+P 6150 2250
+F 0 "D32" V 6196 2170 50  0000 R CNN
+F 1 "D" V 6105 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6150 2250 50  0001 C CNN
+F 3 "~" H 6150 2250 50  0001 C CNN
+	1    6150 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D33
+U 1 1 61E9EB9B
+P 6300 2250
+F 0 "D33" V 6346 2170 50  0000 R CNN
+F 1 "D" V 6255 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6300 2250 50  0001 C CNN
+F 3 "~" H 6300 2250 50  0001 C CNN
+	1    6300 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D34
+U 1 1 61E9EBA1
+P 6450 2250
+F 0 "D34" V 6496 2170 50  0000 R CNN
+F 1 "D" V 6405 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6450 2250 50  0001 C CNN
+F 3 "~" H 6450 2250 50  0001 C CNN
+	1    6450 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D35
+U 1 1 61E9EB6B
+P 6600 2250
+F 0 "D35" V 6646 2170 50  0000 R CNN
+F 1 "D" V 6555 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6600 2250 50  0001 C CNN
+F 3 "~" H 6600 2250 50  0001 C CNN
+	1    6600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D36
+U 1 1 61E9EB71
+P 6750 2250
+F 0 "D36" V 6796 2170 50  0000 R CNN
+F 1 "D" V 6705 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6750 2250 50  0001 C CNN
+F 3 "~" H 6750 2250 50  0001 C CNN
+	1    6750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D37
+U 1 1 61E9EB77
+P 6900 2250
+F 0 "D37" V 6946 2170 50  0000 R CNN
+F 1 "D" V 6855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 6900 2250 50  0001 C CNN
+F 3 "~" H 6900 2250 50  0001 C CNN
+	1    6900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D38
+U 1 1 61E9EB7D
+P 7050 2250
+F 0 "D38" V 7096 2170 50  0000 R CNN
+F 1 "D" V 7005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7050 2250 50  0001 C CNN
+F 3 "~" H 7050 2250 50  0001 C CNN
+	1    7050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D39
+U 1 1 61E9EB83
+P 7200 2250
+F 0 "D39" V 7246 2170 50  0000 R CNN
+F 1 "D" V 7155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7200 2250 50  0001 C CNN
+F 3 "~" H 7200 2250 50  0001 C CNN
+	1    7200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D40
+U 1 1 61E9EB89
+P 7350 2250
+F 0 "D40" V 7396 2170 50  0000 R CNN
+F 1 "D" V 7305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7350 2250 50  0001 C CNN
+F 3 "~" H 7350 2250 50  0001 C CNN
+	1    7350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D41
+U 1 1 61E9EBD5
+P 7600 2250
+F 0 "D41" V 7646 2170 50  0000 R CNN
+F 1 "D" V 7555 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7600 2250 50  0001 C CNN
+F 3 "~" H 7600 2250 50  0001 C CNN
+	1    7600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D42
+U 1 1 61E9EBDB
+P 7750 2250
+F 0 "D42" V 7796 2170 50  0000 R CNN
+F 1 "D" V 7705 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7750 2250 50  0001 C CNN
+F 3 "~" H 7750 2250 50  0001 C CNN
+	1    7750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D43
+U 1 1 61E9EBE1
+P 7900 2250
+F 0 "D43" V 7946 2170 50  0000 R CNN
+F 1 "D" V 7855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 7900 2250 50  0001 C CNN
+F 3 "~" H 7900 2250 50  0001 C CNN
+	1    7900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D44
+U 1 1 61E9EBE7
+P 8050 2250
+F 0 "D44" V 8096 2170 50  0000 R CNN
+F 1 "D" V 8005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8050 2250 50  0001 C CNN
+F 3 "~" H 8050 2250 50  0001 C CNN
+	1    8050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D45
+U 1 1 61E9EBB1
+P 8200 2250
+F 0 "D45" V 8246 2170 50  0000 R CNN
+F 1 "D" V 8155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8200 2250 50  0001 C CNN
+F 3 "~" H 8200 2250 50  0001 C CNN
+	1    8200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D46
+U 1 1 61E9EBB7
+P 8350 2250
+F 0 "D46" V 8396 2170 50  0000 R CNN
+F 1 "D" V 8305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8350 2250 50  0001 C CNN
+F 3 "~" H 8350 2250 50  0001 C CNN
+	1    8350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D47
+U 1 1 61E9EBBD
+P 8500 2250
+F 0 "D47" V 8546 2170 50  0000 R CNN
+F 1 "D" V 8455 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8500 2250 50  0001 C CNN
+F 3 "~" H 8500 2250 50  0001 C CNN
+	1    8500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D48
+U 1 1 61E9EBC3
+P 8650 2250
+F 0 "D48" V 8696 2170 50  0000 R CNN
+F 1 "D" V 8605 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8650 2250 50  0001 C CNN
+F 3 "~" H 8650 2250 50  0001 C CNN
+	1    8650 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D49
+U 1 1 61E9EBC9
+P 8800 2250
+F 0 "D49" V 8846 2170 50  0000 R CNN
+F 1 "D" V 8755 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8800 2250 50  0001 C CNN
+F 3 "~" H 8800 2250 50  0001 C CNN
+	1    8800 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D50
+U 1 1 61E9EBCF
+P 8950 2250
+F 0 "D50" V 8996 2170 50  0000 R CNN
+F 1 "D" V 8905 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 8950 2250 50  0001 C CNN
+F 3 "~" H 8950 2250 50  0001 C CNN
+	1    8950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D51
+U 1 1 61E9EC1B
+P 9150 2250
+F 0 "D51" V 9196 2170 50  0000 R CNN
+F 1 "D" V 9105 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9150 2250 50  0001 C CNN
+F 3 "~" H 9150 2250 50  0001 C CNN
+	1    9150 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D52
+U 1 1 61E9EC21
+P 9300 2250
+F 0 "D52" V 9346 2170 50  0000 R CNN
+F 1 "D" V 9255 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9300 2250 50  0001 C CNN
+F 3 "~" H 9300 2250 50  0001 C CNN
+	1    9300 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D53
+U 1 1 61E9EC27
+P 9450 2250
+F 0 "D53" V 9496 2170 50  0000 R CNN
+F 1 "D" V 9405 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9450 2250 50  0001 C CNN
+F 3 "~" H 9450 2250 50  0001 C CNN
+	1    9450 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D54
+U 1 1 61E9EC2D
+P 9600 2250
+F 0 "D54" V 9646 2170 50  0000 R CNN
+F 1 "D" V 9555 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9600 2250 50  0001 C CNN
+F 3 "~" H 9600 2250 50  0001 C CNN
+	1    9600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D55
+U 1 1 61E9EBF7
+P 9750 2250
+F 0 "D55" V 9796 2170 50  0000 R CNN
+F 1 "D" V 9705 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9750 2250 50  0001 C CNN
+F 3 "~" H 9750 2250 50  0001 C CNN
+	1    9750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D56
+U 1 1 61E9EBFD
+P 9900 2250
+F 0 "D56" V 9946 2170 50  0000 R CNN
+F 1 "D" V 9855 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 9900 2250 50  0001 C CNN
+F 3 "~" H 9900 2250 50  0001 C CNN
+	1    9900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D57
+U 1 1 61E9EC03
+P 10050 2250
+F 0 "D57" V 10096 2170 50  0000 R CNN
+F 1 "D" V 10005 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 10050 2250 50  0001 C CNN
+F 3 "~" H 10050 2250 50  0001 C CNN
+	1    10050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D58
+U 1 1 61E9EC09
+P 10200 2250
+F 0 "D58" V 10246 2170 50  0000 R CNN
+F 1 "D" V 10155 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 10200 2250 50  0001 C CNN
+F 3 "~" H 10200 2250 50  0001 C CNN
+	1    10200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D59
+U 1 1 61E9EC0F
+P 10350 2250
+F 0 "D59" V 10396 2170 50  0000 R CNN
+F 1 "D" V 10305 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 10350 2250 50  0001 C CNN
+F 3 "~" H 10350 2250 50  0001 C CNN
+	1    10350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D60
+U 1 1 61E9EC15
+P 10500 2250
+F 0 "D60" V 10546 2170 50  0000 R CNN
+F 1 "D" V 10455 2170 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P2.54mm_Vertical_KathodeUp" H 10500 2250 50  0001 C CNN
+F 3 "~" H 10500 2250 50  0001 C CNN
+	1    10500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 62251BAA
+P 2050 5350
+F 0 "C2" H 2165 5396 50  0000 L CNN
+F 1 "C" H 2165 5305 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2088 5200 50  0001 C CNN
+F 3 "~" H 2050 5350 50  0001 C CNN
+	1    2050 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61E220F1
+P 8350 4650
+F 0 "C1" H 8465 4696 50  0000 L CNN
+F 1 "C" H 8465 4605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8388 4500 50  0001 C CNN
+F 3 "~" H 8350 4650 50  0001 C CNN
+	1    8350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x05 J1
+U 1 1 61E38925
+P 850 1200
+F 0 "J1" V 750 750 50  0000 L CNN
+F 1 "points" V 850 600 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal" H 850 1200 50  0001 C CNN
+F 3 "~" H 850 1200 50  0001 C CNN
+	1    850  1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x05 J2
+U 1 1 61E1C210
+P 850 1700
+F 0 "J2" V 722 1980 50  0000 L CNN
+F 1 "points" V 813 1980 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-5-5.08_1x05_P5.08mm_Horizontal" H 850 1700 50  0001 C CNN
+F 3 "~" H 850 1700 50  0001 C CNN
+	1    850  1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 1 1 61E188E9
+P 4750 3950
+F 0 "U1" H 4750 4267 50  0000 C CNN
+F 1 "4009" H 4750 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 4750 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 4750 3950 50  0001 C CNN
+	1    4750 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 2 1 61E19A7A
+P 5150 3950
+F 0 "U1" H 5150 4267 50  0000 C CNN
+F 1 "4009" H 5150 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5150 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 5150 3950 50  0001 C CNN
+	2    5150 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 3 1 61E19F84
+P 5550 3950
+F 0 "U1" H 5550 4267 50  0000 C CNN
+F 1 "4009" H 5550 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5550 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 5550 3950 50  0001 C CNN
+	3    5550 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 4 1 61E1C456
+P 5950 3950
+F 0 "U1" H 5950 4267 50  0000 C CNN
+F 1 "4009" H 5950 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5950 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 5950 3950 50  0001 C CNN
+	4    5950 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 5 1 61E1CE6B
+P 6350 3950
+F 0 "U1" H 6350 4267 50  0000 C CNN
+F 1 "4009" H 6350 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 6350 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 6350 3950 50  0001 C CNN
+	5    6350 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 6 1 61E1DD31
+P 6750 3950
+F 0 "U1" H 6750 4267 50  0000 C CNN
+F 1 "4009" H 6750 4176 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 6750 3950 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 6750 3950 50  0001 C CNN
+	6    6750 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x10_Male J3
+U 1 1 6239A824
+P 3200 6600
+F 0 "J3" V 3127 6528 50  0000 C CNN
+F 1 "train catchers" V 3036 6528 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 3200 6600 50  0001 C CNN
+F 3 "~" H 3200 6600 50  0001 C CNN
+	1    3200 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4009 U1
+U 7 1 61E1E946
+P 8850 4650
+F 0 "U1" H 9080 4696 50  0000 L CNN
+F 1 "4009" H 9080 4605 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 8850 4650 50  0001 C CNN
+F 3 "http://www.sycelectronica.com.ar/semiconductores/CD4009.pdf" H 8850 4650 50  0001 C CNN
+	7    8850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4017 U2
+U 1 1 61F79418
+P 3400 4850
+F 0 "U2" H 3200 5800 50  0000 C CNN
+F 1 "4017" H 3100 5700 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 3400 4850 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 3400 4850 50  0001 C CNN
+	1    3400 4850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

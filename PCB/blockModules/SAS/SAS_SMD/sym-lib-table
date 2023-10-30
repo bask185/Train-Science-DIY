@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ezSignal-rescue)(type Legacy)(uri ${KIPRJMOD}/ezSignal-rescue.lib)(options "")(descr ""))
+)
