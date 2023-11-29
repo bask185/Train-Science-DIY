@@ -1,10 +1,15 @@
 #include "Signal.h"
 #include "config.h"
 
+#include <EEPROM.h>
+
 extern uint8    pulseTime ;
 
-const int       maxAspect       = 30 ;
-const int       maxLeds         =  8 ;
+const int       maxAspect       =   30 ;
+const int       maxLeds         =    8 ;
+
+const int       IS_COIL         =    0 ;
+const int       SET_COIL        = 0x80 ;
 
 const int       OFF             = 0b00 ;
 const int        ON             = 0b01 ;
@@ -269,6 +274,11 @@ static Aspect localAspect ;
 
 Signal::Signal()
 {
+    static uint16 newEeAddress = 48 ; // I deliberately put a static to automatically iterate EEPROM addresses..
+
+    eeAddress = newEeAddress ;
+
+    newEeAddress ++ ;
 }
 
 void Signal::begin( uint8_t _type, uint8_t _beginPin, uint8_t _ledCount )
@@ -286,7 +296,6 @@ enum coilStates
     waiting,
     lockout,
     reset,
-
 } ;
 
 uint8 Signal::updateCoils()
@@ -294,7 +303,7 @@ uint8 Signal::updateCoils()
     switch( sm )
     {
     case idle:
-        if( currentAspect & 0x80 ) sm ++ ;
+        if( currentAspect & SET_COIL ) sm ++ ; // if flag is set, continu
         return 1 ;
 
     case setting:
@@ -316,7 +325,7 @@ uint8 Signal::updateCoils()
         return 0 ;
 
     case lockout:
-        if( millis() - prevTime >= 500 ) sm ++ ; // wait for repetive DCC messages to pass
+        if( millis() - prevTime >= 500 ) sm ++ ; // wait for repetetive DCC messages to pass
         return 0 ;
 
     case reset:
@@ -329,7 +338,7 @@ uint8 Signal::updateCoils()
 
 uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 and led 1
 {
-    if( type > 0 )
+    if( type != IS_COIL ) // if signal..
     {
         memcpy_P( &localAspect, &aspects[type], sizeof( localAspect ) ) ; // keep or copy content to local signal variables
 
@@ -356,11 +365,12 @@ uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 
         return true ;          // signal always return true
     }
 
-    else
+    else // if coil...
     {
         return updateCoils() ;  // coils return false while being powered, to prevent more than one being triggered at once.
     }
 }
+
 
 /* SETTERS */
 uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
@@ -373,17 +383,35 @@ uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
     return 0 ;
 }
 
+void Signal::loadAspect()
+{
+    uint8 oldAspect = EEPROM.read( eeAddress ) ;
+    
+    currentAspect = oldAspect ;
+    if( type == IS_COIL ) currentAspect |= SET_COIL ;
+}
+
+void Signal::saveAspect()
+{
+    uint8 newAspect = currentAspect & 0b01111111 ; // do not store first bit, reserved for coils
+
+    EEPROM.update( eeAddress, newAspect ) ;
+}
+
 uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
 {
     uint16 beginAddress = myAddress ;
     uint16   endAddress = beginAddress + nAddresses - 1 ;
 
-    if( dccAddress >= beginAddress && dccAddress <=endAddress )
+    if( dccAddress >= beginAddress && dccAddress <= endAddress )
     {
-        currentAspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // TEST ME
-        if( type == 0 ) currentAspect |= 0x80 ;
-        printNumberln("Aspect set: ",currentAspect) ;
+        currentAspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // for signals determen which aspect corrsponds with received address
+        if( type == IS_COIL ) currentAspect |= SET_COIL ;
+
+        return 1 ;
     }
+
+    return 0 ;
 }
 
 void Signal::setType( uint8_t _type )

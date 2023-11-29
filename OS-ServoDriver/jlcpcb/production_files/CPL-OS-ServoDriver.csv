@@ -12,7 +12,7 @@ C904,22uF,C_0603_1608Metric,122.7465,-128.38,180.0,top
 C905,22uF,C_0603_1608Metric,122.7465,-126.714,180.0,top
 C906,100nF,C_0402_1005Metric,122.7445,-129.762,180.0,top
 C1101,1000uF,CP_Radial_D10.0mm_P3.50mm,121.882323,-155.5,180.0,top
-D201,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,129.509,-133.6105,90.0,top
+D201,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,129.509,-108.6105,90.0,top
 D1001,1N4148WS,D_SOD-323,108.483,-143.575,180.0,top
 D1101,SS53,D_SMA,131.0,-155.0,0.0,top
 D1102,SS53,D_SMA,138.5,-154.95,0.0,top
@@ -24,7 +24,7 @@ J801,Conn_02x03_Odd_Even,PinHeader_2x03_P2.54mm_Vertical,107.555,-123.735,-90.0,
 J901,Conn_02x03_Odd_Even,PinHeader_2x03_P2.54mm_Vertical,137.5,-123.725,90.0,top
 J1001,Conn_02x03_Odd_Even,PinHeader_2x03_P2.54mm_Vertical,137.5,-134.225,90.0,top
 L901,L,L_Bourns-SRU8028_8.0x8.0mm,119.1905,-116.808,0.0,top
-R201,6k2,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,131.5,-133.5,90.0,top
+R201,6k2,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,131.5,-108.5,90.0,top
 R202,10k,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,136.0,-143.73,90.0,top
 R701,10k,R_0603_smalltext,109.03,-130.3885,180.0,top
 R702,10k,R_0603_smalltext,109.03,-138.5165,180.0,top
@@ -45,7 +45,6 @@ SW602,default_switch,default_switch,122.65,-107.5,90.0,top
 SW603,default_switch,default_switch,122.65,-98.5,90.0,top
 SW604,default_switch,default_switch,114.0,-100.5,180.0,top
 SW605,default_switch,default_switch,111.5,-109.5,180.0,top
-U201,HEADER_3x2,PinSocket_2x03_P1.27mm_Vertical,139.125,-142.735,0.0,top
 U202,ATmega328-A,TQFP-32_7x7mm_P0.8mm,125.025305,-141.169,315.0,top
 U301,L78L05_SOT89,SOT-89-3,133.929,-149.299,90.0,top
 U901,MT2499A,TI_SO-PowerPAD-8,118.3015,-128.0165,-90.0,top

@@ -191,11 +191,11 @@
           (name "VDD" (effects (font (size 1.27 1.27))))
           (number "15" (effects (font (size 1.27 1.27))))
         )
-        (pin power_in line (at -10.16 22.86 0) (length 2.54)
+        (pin input line (at -10.16 22.86 0) (length 2.54)
           (name "STEP" (effects (font (size 1.27 1.27))))
           (number "16" (effects (font (size 1.27 1.27))))
         )
-        (pin power_in line (at -10.16 10.16 0) (length 2.54)
+        (pin input line (at -10.16 10.16 0) (length 2.54)
           (name "REF" (effects (font (size 1.27 1.27))))
           (number "17" (effects (font (size 1.27 1.27))))
         )
@@ -704,8 +704,8 @@
     (property "JLCPCB Part#" "C21120" (at 140.97 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7f2845de-8521-4e83-8473-56bfb4048345))
-    (pin "2" (uuid 12432c34-b41a-4635-8552-fbc2346a5507))
+    (pin "1" (uuid fa0d641f-b85a-4908-9209-9d5fb4211e94))
+    (pin "2" (uuid f55112ad-e906-4b75-a04a-fc559201f091))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -733,8 +733,8 @@
     (property "JLCPCB Part#" "C307331" (at 105.41 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid de278943-be6d-4ef0-95c3-a09b679f2146))
-    (pin "2" (uuid 38c377d3-4456-40f3-9bd6-a424f3e0f165))
+    (pin "1" (uuid 2b034702-34cd-4ad4-9e8c-e29fd02f0fd6))
+    (pin "2" (uuid d2caf197-a6ad-40f5-a723-86b9a1096360))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -762,8 +762,8 @@
     (property "JLCPCB Part#" "C22936" (at 156.21 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fc0a5534-def2-4fa2-a0b6-9a6c16d1dd2f))
-    (pin "2" (uuid a1760369-d48a-4604-b75e-537ffab5160c))
+    (pin "1" (uuid 7ff0fb56-25a9-4abe-9a87-148aa32f54a3))
+    (pin "2" (uuid e6f50fd4-a4fe-40ee-82c3-d8479bd2620a))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -788,8 +788,8 @@
     (property "Datasheet" "~" (at 165.1 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4d041627-9801-4b5c-811a-6fc2973146d2))
-    (pin "2" (uuid d68d2e63-bfac-4bad-8e79-5d9456a4adc5))
+    (pin "1" (uuid 33bfa602-8b46-4818-be52-e5e769e3f0e1))
+    (pin "2" (uuid 34d5c4f2-1e03-49db-89c8-7d65c09f3d32))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -817,8 +817,8 @@
     (property "JLCPCB Part#" "C25804" (at 165.1 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 16b13f60-0192-4f68-81f3-46b6a9f9bef1))
-    (pin "2" (uuid 46631e30-e49c-4868-8f71-c9e561db832c))
+    (pin "1" (uuid cb589559-8970-4910-ac4b-69e5b7d20d59))
+    (pin "2" (uuid eb9ca54b-26d7-4560-97b9-f3981c8f76b8))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -846,8 +846,8 @@
     (property "JLCPCB Part#" "C25803" (at 100.33 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 517ef77d-45f9-4350-8da9-b1ba7d2312de))
-    (pin "2" (uuid e8139a8f-26bc-4494-a469-28830f424c69))
+    (pin "1" (uuid 93f03cee-f189-4561-b352-ad9a7ea6e4a1))
+    (pin "2" (uuid 2aaa004e-277d-4f45-85b7-209cf322febc))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -872,8 +872,8 @@
     (property "Datasheet" "~" (at 96.52 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1e0cac9b-5a1f-47e0-8312-fd660ddc3a45))
-    (pin "2" (uuid 3706a3d9-fb31-4a53-9823-7b20e0a9a7d1))
+    (pin "1" (uuid b57cee7b-00a4-4f05-b47b-889183706bf0))
+    (pin "2" (uuid 221377b8-e929-46c2-a068-ac53fdca0462))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -901,8 +901,8 @@
     (property "JLCPCB Part#" "C22936" (at 153.67 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 40479430-bba5-4f8a-b9e6-2e3efd9ce4b2))
-    (pin "2" (uuid 9703a640-2495-4cb2-96fd-2bf270cfd9f6))
+    (pin "1" (uuid 4c0b25d1-928d-49f9-812f-873c19c5214f))
+    (pin "2" (uuid 0d1a89cc-8b38-4a4c-af7f-abe15d5cbcd6))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -927,8 +927,8 @@
     (property "Datasheet" "~" (at 96.52 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 94d2824d-fb65-4829-b9f6-c71e75ac4a5f))
-    (pin "2" (uuid 29132869-abb1-4d71-a093-036805c36f34))
+    (pin "1" (uuid 108d55fd-f98e-4ec2-885f-6cd322cd659f))
+    (pin "2" (uuid b664d8be-932d-45e7-8822-d0e54e94994e))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -956,8 +956,8 @@
     (property "JLCPCB Part#" "C307331" (at 143.51 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 004ed06c-5a64-4856-861b-31b32718e24f))
-    (pin "2" (uuid 7b58b495-6332-472f-a37e-947f183a9ce3))
+    (pin "1" (uuid ee73de84-34a7-40d7-9e14-dad83e84e5e1))
+    (pin "2" (uuid 3d6da5fa-7647-4ea2-ab2f-6a1c30892bb4))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -976,7 +976,7 @@
     (property "Value" "~" (at 118.11 76.2 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm_ThermalVias" (at 118.11 76.2 0)
+    (property "Footprint" "custom_kicad_lib_sk:a4988" (at 118.11 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 118.11 76.2 0)
@@ -985,35 +985,35 @@
     (property "JLCPCB Part#" "C38437" (at 121.92 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ea2088fe-feb6-4201-9f95-53b4599941ab))
-    (pin "10" (uuid 33fdc96c-63e6-4990-b50e-20c30486aab7))
-    (pin "11" (uuid 94115039-1995-4d13-be96-62dfc453f694))
-    (pin "12" (uuid ef68c7f2-0bf7-4a57-888c-714a4a4257d0))
-    (pin "13" (uuid f992c2d6-7231-4029-9cb3-aa04930a18dc))
-    (pin "14" (uuid ef01170f-acb3-4c50-a0fb-8954ad7db5bd))
-    (pin "15" (uuid 679ef4fa-0587-41e3-b81c-8cd64b796664))
-    (pin "16" (uuid 7dcb0746-0dcc-4ca9-ab5d-29f93e9b434e))
-    (pin "17" (uuid 2e1ae56d-546a-4654-bc76-2e1c23e4b602))
-    (pin "18" (uuid 9784091f-4304-473e-bdd1-43aab6dce41f))
-    (pin "19" (uuid 6a0ddb6c-b644-495c-bb45-41e7776538a3))
-    (pin "2" (uuid 4f27cc59-af6d-4da2-acdf-836de054bee1))
-    (pin "20" (uuid a134246c-a03d-4541-965e-d13e7702f287))
-    (pin "21" (uuid cdb79825-2279-431a-a4fb-fef3406cb2d4))
-    (pin "22" (uuid ec45f0b5-3a88-4196-982f-56c1ccf90987))
-    (pin "23" (uuid 85a69942-18b5-4741-9dc2-f761e0f8464b))
-    (pin "24" (uuid 3e79790c-d071-4495-b576-52b4a2b574c2))
-    (pin "25" (uuid ddbeaa2c-3224-4422-b3e8-28aacced20cb))
-    (pin "26" (uuid e479f8f3-4bc2-44e5-8831-bc4c7a5e474b))
-    (pin "27" (uuid b851c1c1-5661-4202-9ebf-8e25a25ae952))
-    (pin "28" (uuid 5f2261d6-15b4-43c3-8a1b-e1469b705751))
-    (pin "29" (uuid f0433c6c-63bd-405d-aa16-8b5c2e328f02))
-    (pin "3" (uuid f7aca1f5-53e3-4f68-98cd-98b7b8771999))
-    (pin "4" (uuid ae452e72-3695-4082-a0a9-2859887b96e5))
-    (pin "5" (uuid 671d71e0-8bef-41ac-bef7-3e3046ee890e))
-    (pin "6" (uuid 4d935304-db6c-4c4e-9d1c-4645cde19ebf))
-    (pin "7" (uuid 96b29eb2-a69e-45d7-bf4f-2228946454e1))
-    (pin "8" (uuid ea3365f2-d90b-4e06-81ae-7116f61a6239))
-    (pin "9" (uuid caf64693-adf6-498a-86b3-c83a37171506))
+    (pin "1" (uuid ae7b237b-9fc4-4c09-9476-d728bfc60e50))
+    (pin "10" (uuid bf9d99a1-bd83-4843-9afa-5cbbb8035ad5))
+    (pin "11" (uuid 6f4823f6-af54-4dc2-a34a-2d3e08390413))
+    (pin "12" (uuid 452bb0a1-ca84-4956-b30b-e33d54d74081))
+    (pin "13" (uuid 39cc6821-57e8-47a2-86d7-73672cbef474))
+    (pin "14" (uuid 6e73188a-6c3e-410b-ba4d-30a17c0a7a80))
+    (pin "15" (uuid 8d129a59-f419-4a1c-ae60-754b788237c7))
+    (pin "16" (uuid 8369c3bc-e272-430f-9d87-3efe83241537))
+    (pin "17" (uuid cc7a2b4c-7cb0-40b4-9de2-33254b8fb884))
+    (pin "18" (uuid 1cf08852-aa24-461e-a366-38d4d39e7807))
+    (pin "19" (uuid d4bfa014-74f5-4b1f-b4c2-0ce776ccbfe5))
+    (pin "2" (uuid 372dccf7-a4c9-4880-8cc5-cc4ea38f6b85))
+    (pin "20" (uuid 9214d633-27d1-4e67-bf2b-b0c38b688ed4))
+    (pin "21" (uuid 1482c04f-1159-4edf-9b18-0bde80272b4c))
+    (pin "22" (uuid 51e2d39e-a49e-4a3c-bd1f-20c1a8d1704b))
+    (pin "23" (uuid 3b14ad7d-38d1-4010-b3a9-5eafbfc08e18))
+    (pin "24" (uuid 9f5e86ac-b3d5-4ec5-816b-dd37aa6c61b9))
+    (pin "25" (uuid 072211a1-274b-4090-8625-58b581d8d203))
+    (pin "26" (uuid 6310499d-cd1f-4b45-9b0d-cce3ac6c92cb))
+    (pin "27" (uuid 05b06380-58ac-44d3-802a-54ef2ccdd247))
+    (pin "28" (uuid 4ff0552d-dc43-4572-a4d4-bafab7eec516))
+    (pin "29" (uuid e7695dcb-f34a-48a9-983a-d924296eced5))
+    (pin "3" (uuid 114a8f6f-1246-4e11-8827-779af33ca0f2))
+    (pin "4" (uuid 40ff20bd-7e3c-4dfe-b2c7-573921b261a7))
+    (pin "5" (uuid cd94ae6d-9497-4395-b03f-6ba395b882e2))
+    (pin "6" (uuid c704612c-70fa-4232-97b7-bf0be5352398))
+    (pin "7" (uuid b64f4a79-c464-4adc-8907-72f690a271dd))
+    (pin "8" (uuid 20c95ffa-0cfe-4f45-b93a-7161580c1cd3))
+    (pin "9" (uuid 74b588ee-3f87-4406-bbb6-5e0bf6caac7d))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6"
@@ -1044,8 +1044,8 @@
     (property "JLCPCB Part#" "C25803" (at 92.71 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9e2cf363-593c-4785-bfd2-fa919cc37b30))
-    (pin "2" (uuid 8abd5d99-9650-4f28-90e4-fe1ece38f53b))
+    (pin "1" (uuid 9c3009ae-32b6-40b3-9f2b-0ba8c823fb2c))
+    (pin "2" (uuid dba9d5e9-b86e-4408-b523-572a9739974f))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"
@@ -1073,8 +1073,8 @@
     (property "JLCPCB Part#" "C25803" (at 78.74 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3865ed01-6fbd-49f5-b079-b87459f0b0fb))
-    (pin "2" (uuid 7e5fd962-6fc8-4431-abae-5c060185fe59))
+    (pin "1" (uuid 6c9b77d7-546e-4281-8b79-36e4256a001d))
+    (pin "2" (uuid 1aa4d37b-c4e0-46e4-b823-404d8b11a7ce))
     (instances
       (project "pantoGraph"
         (path "/a6379adb-72da-4b0a-b4a5-f4f46a391db6/4d532156-4549-43f8-bf72-fc09adb60074"

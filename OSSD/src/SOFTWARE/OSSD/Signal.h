@@ -22,11 +22,13 @@ public:
     uint16  getAddress() ;
     uint16  getAddressAmount() ;
     uint8   getType() ;
+    void    saveAspect() ;
+    void    loadAspect() ;
 
 private:
     uint8   beginPin ;
     uint8   currentAspect ;
-    uint8   aspectPrev ;
+    uint16  eeAddress ;
     uint8   nAspects ;
     uint8   nAddresses ;
     uint8   type ;

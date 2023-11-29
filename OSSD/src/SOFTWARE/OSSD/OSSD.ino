@@ -19,6 +19,7 @@
 
 // bytes 0-15   hold types
 // bytes 16-47  hold unique DCC addresses
+// bytes 48-63  hold states.
 
 const int   DEFAULT_ADDRESS = 1000 ;
 const int   DEFAULT_VALUE   = 0xCC ;
@@ -71,7 +72,8 @@ volatile uint8
 uint16      myAddress ;
 uint8       pulseTime ;
 uint8       signalIndex ;
-volatile static uint32 lastTime ;
+volatile static uint32 
+            lastTime ;
 
 
 void(* RESET) (void) = 0 ;
@@ -141,7 +143,7 @@ void setup()
     }
     configButton.begin( configPin ) ;
 
-    if( EEPROM.read(  DEFAULT_ADDRESS ) != DEFAULT_VALUE )   
+    if( EEPROM.read(  DEFAULT_ADDRESS ) != DEFAULT_VALUE )   // verify EEPROM
     {   EEPROM.write( DEFAULT_ADDRESS,     DEFAULT_VALUE ) ;
 
         configBits = DEFAULT_CONFIG ;
@@ -167,9 +169,10 @@ void setup()
     {
         uint8_t type = loadType( i ) ;  // fetch from EEPROM
         signal[i].setType( type ) ;     // intialize the signals
+        signal[i].loadAspect() ;        // loads last known aspect from EEPROM
     }
 
-    dcc.pin(2, 0);
+    dcc.pin( 2, 0 ) ;
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 
     initSignals() ;
@@ -193,10 +196,7 @@ void loop()
 /* Dynamically allocate addresses and outputs to signal/point objects */
 void initSignals()
 {
-    // Serial.println("\r\n\r\nSETTING SIGNALS");
     signalCount = 0 ; // reset this to 0
-
-    // printNumberln(F("begin address: "), myAddress );
 
     uint8_t ledCount = 0 ;
     uint16_t addressCount = myAddress ;
@@ -216,7 +216,7 @@ void initSignals()
             signal[i].setAddress( addressCount ) ;
 
             // NOTE, if DCC extended is used, one address per item should be used
-            if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;  // BUG, somehow dcc ext does not seem to work for index 2 or higher
+            if( bitRead( configBits, DCC_EXTENDED ) ) addressCount += 1 ;
             else                                      addressCount += signal[i].getAddressAmount() ;
 
             signalCount ++ ;
@@ -224,14 +224,8 @@ void initSignals()
             ledCount += nLeds ;
         }
     }
-    // printNumberln(F("amount ot devices: "), signalCount ) ;
 }
 
-/* TODO
-need an option to enable extended commands
-need an option to pick between solenoids, perhaps still implement as a signal
-(it would solve soo many problems, and it is propably workable)
-*/
 void config()
 {
     REPEAT_MS( 20 )
@@ -366,7 +360,6 @@ void config()
             if( receivedAddress == 10 ) // FACTORY RESET
             {
                 EEPROM.write( DEFAULT_ADDRESS, ~DEFAULT_VALUE ) ;   // 'corrupt' default value to let decoder re-initialize the decoder's EEPROM
-                Serial.println("FACTORY RESET in 2 seconds");
                 delay(2000);
                 RESET() ;                                           // reset the decoder
             }
@@ -401,13 +394,16 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
     for( int i = 0 ; i < signalCount ; i ++ )
     {
-        signal[i].setAspectExt( address, aspect ) ; // only does something if address is correct. 
+        if( signal[i].setAspectExt( address, aspect ) ) // returns true if aspect has changed, so we know we must commit new aspect to EEPROM
+        {
+            signal[i].saveAspect() ;
+        }
     }
 }
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
-    if( millis() - lastTime >= 500 ) // create lockout time of 100ms to prevent processing package
+    if( millis() - lastTime >= 500 ) // create lockout time of 500ms to prevent processing package more than 1x
     {   lastTime = millis() ;
 
         newAddressSet = 1 ;
@@ -421,7 +417,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     for( int i = 0 ; i < signalCount ; i ++ )
     {
         uint8 type = signal[i].getType() ;
-        if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ;
+        if( bitRead( configBits, DCC_EXTENDED ) && type != 0 ) return ; 
 
         signal[i].setAspect( address, direction ) ; // a signal objects checks this address and direction to see if he should do something with it
     }

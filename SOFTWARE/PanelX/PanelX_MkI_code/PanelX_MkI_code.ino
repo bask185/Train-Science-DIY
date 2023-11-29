@@ -170,19 +170,19 @@ void setup()
 
 void loop()
 {
-//  REPEAT_MS( 500 )
-//    {
-//        for (int i = 0; i < nInputs; i++)
-//        {
-//            input[i].debounce() ;
-//        }
-//    }
-//    END_REPEAT
-//  
-//    updateLED() ;
-//
-//    debounce() ;
-//    readSwitches() ;
+    REPEAT_MS( 500 )
+    {
+        for (int i = 0; i < nInputs; i++)
+        {
+            input[i].debounce() ;
+        }
+    }
+    END_REPEAT
+ 
+   updateLED() ;
+
+   debounce() ;
+   readSwitches() ;
    
   #ifdef LOCONET
     LnPacket = LocoNet.receive() ;
@@ -190,20 +190,9 @@ void loop()
     {   
         LocoNet.processSwitchSensorMessage(LnPacket);
     }
-     REPEAT_MS( 5000 ) // belgians
-    {
-        static byte sm ;
-        if(++sm==6)sm = 0 ;  
-        uint16_t address = 30 + sm/2 ;
-        uint8_t  state = sm%2;
-        LocoNet.requestSwitch( sm, 1, state ) ;
-        LocoNet.requestSwitch( sm, 0, state ) ;
-        printNumber_("addres: ", address ) ;
-        printNumberln("state: ", state ) ;
-    }
-    END_REPEAT
+
   #elif defined XPRESSNET
-    //Xnet.update() ;
+    Xnet.update() ;
   #endif
 
 
