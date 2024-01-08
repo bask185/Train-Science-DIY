@@ -7,6 +7,7 @@ public:
     void begin();
     void update();
     void setSpeed(int8_t);
+    int8_t getSpeed();
     void setState(uint8_t ) ;
     void setCurrentSense( uint8_t, uint8_t ) ;
     uint8_t getState( ) ;
@@ -26,6 +27,7 @@ private:
     uint8_t dir ;
     uint8_t currentLimit ;
     uint8_t sensePin ;
+    int8_t  speedBackup ;
     uint8_t counter = 0;
     uint8_t currentCounter = 0;
     uint32_t prevTime2 = 0;

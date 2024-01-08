@@ -42,6 +42,7 @@ private:
     uint32_t prevTime ;
     uint32_t interval ;
     uint8  state;
+    uint8  state2be;
     uint8  timeOutSet ;
 } ;
 

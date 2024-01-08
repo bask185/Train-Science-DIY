@@ -1,2 +1,2 @@
-#define LOCONET
-// #define XPRESSNET
+// #define LOCONET
+#define XPRESSNET

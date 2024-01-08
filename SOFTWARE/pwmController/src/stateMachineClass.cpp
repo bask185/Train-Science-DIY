@@ -194,6 +194,7 @@ uint8 StateMachine::run()
         if( millis() - prevTime >= interval )
         {
             enabled = 1 ;
+            // state = state2be ;
         }
     }
     return enabled ;

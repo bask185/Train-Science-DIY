@@ -152,7 +152,7 @@ void setup()
 
   #ifdef LOCONET
     LocoNet.init(LN_TX_PIN);
-    Serial.begin(115200);
+    //Serial.begin(115200);
 
   #elif defined XPRESSNET
     Xnet.setup( Loco128 , rs485dir ) ;
@@ -170,19 +170,24 @@ void setup()
 
 void loop()
 {
-    REPEAT_MS( 500 )
+    REPEAT_MS( 1000 )
     {
+        static byte yolo ; yolo ^= 1 ;
         for (int i = 0; i < nInputs; i++)
         {
             input[i].debounce() ;
         }
+
+        Xnet.SetTrntPos( 12, yolo, 1) ;
+        delay(20) ;
+        Xnet.SetTrntPos( 12, yolo, 0) ;  
     }
     END_REPEAT
  
    updateLED() ;
 
-   debounce() ;
-   readSwitches() ;
+   //debounce() ;
+   //readSwitches() ;
    
   #ifdef LOCONET
     LnPacket = LocoNet.receive() ;
@@ -201,7 +206,10 @@ void loop()
 #ifdef LOCONET
 void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t dir )
 {
+    if( output == 0 ) return ;
     if( dir ) dir = 1 ;
+    
+    PORTD ^= 1 ;
 
     // Serial.print("receiving point: ");Serial.print(address);
     // Serial.println(" @ " ) ; Serial.println(dir) ;

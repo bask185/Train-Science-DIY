@@ -39,6 +39,7 @@ void Weistra::begin()
     state = 1 ;
 }
 
+/*currentLimit = Imax * Rshunt / 0.00488 */
 void Weistra::setCurrentSense( uint8_t _sensePin, uint8_t _currentLimit )
 {
     sensePin = _sensePin ;
@@ -52,10 +53,14 @@ void Weistra::update()
         uint32_t currentTime = micros() ; 
 
         if( currentTime - prevTime >= intervalTime )
-        { 
-            prevTime = currentTime;
+        {   prevTime = currentTime;
 
-            if( counter == 0 && newDutyCycle > 0 )      // if counter reaches 100, reset it to 0 and enable the track power pin
+            if( !state )
+            {
+                *portx_p1 &= ~trackPin1;
+                *portx_p2 &= ~trackPin2;
+            }
+            else if( counter == 0 && newDutyCycle > 0 )      // if counter reaches 100, reset it to 0 and enable the track power pin
             {
                 if(dir) *portx_p1 |=  trackPin1 ;
                 else    *portx_p2 |=  trackPin2 ;
@@ -75,7 +80,8 @@ void Weistra::update()
         {
             int current = analogRead( sensePin ) ;
 
-            if( millis() - prevTime2 > interval )
+            if( millis() - prevTime2 > interval 
+            && (*portx_p1 & trackPin1 || *portx_p2 & trackPin2 || !state ) )
             {     prevTime2 = millis() ;
 
                 if( state ) // if on
@@ -93,6 +99,7 @@ void Weistra::update()
                 {
                     setState( 1 ) ; // turn on again
                     interval = sampleRate ; // set sample rate 
+                    currentCounter = 2 ;
                 }
             }
         }
@@ -103,6 +110,7 @@ void Weistra::update()
 void Weistra::setSpeed( int8_t speed)
 {
     byte frequency;
+    speedBackup = speed ;
     if( speed < 0 ) dir = 1 ; // 1 is reverse
     if( speed > 0 ) dir = 0 ;
 
@@ -116,18 +124,23 @@ void Weistra::setSpeed( int8_t speed)
     newIntervalTime = 10000 / frequency; // > between 100us and 500us
 }
 
+int8_t Weistra::getSpeed()
+{
+    return speedBackup ;
+}
+
 void Weistra::setState( uint8_t _state )
 { 
     state = _state ;
     
-    if( !state )
+    if( state )
     {
-        *portx_p1 &= ~trackPin1 ;
-        *portx_p2 &= ~trackPin2 ;
+        counter = 0 ;
     }
     else
     {
-        counter = 0 ;
+        *portx_p1 &= ~trackPin1 ;
+        *portx_p2 &= ~trackPin2 ;
     }
 }
 

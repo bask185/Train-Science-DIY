@@ -1,19 +1,21 @@
 #include <Arduino.h>
 
 // maximum current
-const int currentLimit       =  10 ; // CHECK ME ADD CALCULATION
+const int currentLimit       =  25 ; // roughly 2.5A
 
 // used IO PINs
 const int speedPin           =  A0 ;
-const int currentSensePin    =  A1 ;
-const int minSpeedPin        =  A2 ;
-const int maxSpeedPin        =  A3 ;
-const int accelFactorPin     =  A4 ;
-const int waitTimePin        =  A5 ;
-const int in1                =  10 ; // h brug
-const int in2                =  11 ; // h brug
-const int S1                 =   3 ;
-const int S2                 =   4 ;
+const int currentSensePin    =  A5 ;
+const int minSpeedPin        =  A1 ;
+const int maxSpeedPin        =  A2 ;
+const int accelFactorPin     =  A3 ;
+const int waitTimePin        =  A4 ;
+const int in1                =   6 ; // h brug
+const int in2                =   7 ; // h brug
+const int S1                 =   2 ;
+const int S2                 =   3 ;
+const int ledRed             =   8 ;
+const int ledGreen           =   9 ;
 
 // PWM parameters
 const int Fmin               =  50 ;

@@ -13,6 +13,6 @@ if x == 1 :
     sys.exit(1)
 else :
     print('BUILD SUCCES!!!\r\n')
-    shutil.copy("./build/arduino.avr.uno/OSSD.ino.hex", "../../../Software/bin/OSSD.hex")
+    shutil.copy("./build/arduino.avr.uno/OSSD.ino.hex", "../../../../SOFTWARE_RELEASES/bin/OSSD.hex")
     print('NEW BINARY DEPLOYED!')
     sys.exit(0)
