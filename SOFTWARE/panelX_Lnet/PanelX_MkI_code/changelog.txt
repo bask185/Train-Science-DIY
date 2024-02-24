@@ -1,4 +1,0 @@
-XnPointController
-v0.0.0   Date/time:2021-12-17 12:53:46.191377
-Project assembled
-

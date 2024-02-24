@@ -1,0 +1,7 @@
+Comment,Designator,Footprint,LCSC
+~,D1,4A rectifier,C169511
+47R,R1,R_0603_smalltext,C23182
+10k,R2,R_0603_smalltext,C25804
+Screw_Terminal_01x02,J1,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",C474952
+Conn_01x03_Pin,J2,PinHeader_1x03_P2.54mm_Horizontal,C492411
+EL814,U1,SMDIP-4_W9.53mm,C500388

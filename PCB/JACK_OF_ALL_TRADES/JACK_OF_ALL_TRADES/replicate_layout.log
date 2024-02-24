@@ -1,0 +1,81 @@
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, Oct 13 2023, 05:50:11) [MSC v.1936 64 bit (AMD64)]'
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.10
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x000001B81F218B80>
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with J1101 as a reference
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'J1101'
+Located on: ['relay3']
+With filenames: ['relay.kicad_sch']
+With sheet_id:['relay3']
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('J1201', ['relay4']), ('J1101', ['relay3']), ('J1001', ['relay2']), ('J702', ['relay1'])]
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'relay3', file:'relay.kicad_sch'
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['relay1'], ['relay2'], ['relay4']]
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['relay3']
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(1878, 96)
+01-04 16:18:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1439, 96)
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'relay3', file:'relay.kicad_sch'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['relay1'], ['relay2'], ['relay4']]
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['relay1'], ['relay2'], ['relay4']]
+on level: ['relay3']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+01-04 16:18:59 root 332:updating GUI message: 'Preparing for replication'
+01-04 16:18:59 root 337:updating GUI with: 0
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
+01-04 16:18:59 root 332:updating GUI message: 'Replicating footprints'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 806:Replicating footprints
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relay1']
+01-04 16:18:59 root 337:updating GUI with: 20
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relay2']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['relay4']
+01-04 16:18:59 root 332:updating GUI message: 'Replicating tracks'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 977:Replicating tracks
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relay1']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R1'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay1'] :[('/R3', '/R1'), ('+5VA', '+5VA'), ('unconnected-(K1101-Pad7)', 'unconnected-(K701-Pad7)'), ('Net-(D1101-A)', 'Net-(D701-A)'), ('Net-(J1101-Pin_2)', 'Net-(J702-Pin_2)'), ('Net-(Q1101-B)', 'Net-(Q701-B)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K701-Pad6)'), ('GND', 'GND'), ('Net-(J1101-Pin_1)', 'Net-(J702-Pin_1)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K701-Pad5)'), ('Net-(J1101-Pin_3)', 'Net-(J702-Pin_3)')]
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relay2']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R2'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay2'] :[('Net-(Q1101-B)', 'Net-(Q1001-B)'), ('+5VA', '+5VA'), ('Net-(J1101-Pin_2)', 'Net-(J1001-Pin_2)'), ('Net-(D1101-A)', 'Net-(D1001-A)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K1001-Pad6)'), ('unconnected-(K1101-Pad7)', 'unconnected-(K1001-Pad7)'), ('GND', 'GND'), ('Net-(J1101-Pin_1)', 'Net-(J1001-Pin_1)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K1001-Pad5)'), ('Net-(J1101-Pin_3)', 'Net-(J1001-Pin_3)'), ('/R3', '/R2')]
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['relay4']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R4'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay4'] :[('+5VA', '+5VA'), ('/R3', '/R4'), ('Net-(J1101-Pin_3)', 'Net-(J1201-Pin_3)'), ('unconnected-(K1101-Pad7)', 'unconnected-(K1201-Pad7)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K1201-Pad5)'), ('Net-(J1101-Pin_1)', 'Net-(J1201-Pin_1)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K1201-Pad6)'), ('Net-(Q1101-B)', 'Net-(Q1201-B)'), ('GND', 'GND'), ('Net-(D1101-A)', 'Net-(D1201-A)'), ('Net-(J1101-Pin_2)', 'Net-(J1201-Pin_2)')]
+01-04 16:18:59 root 332:updating GUI message: 'Replicating zones'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1047:Replicating zones
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relay1']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R1'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay1'] :[('/R3', '/R1'), ('+5VA', '+5VA'), ('unconnected-(K1101-Pad7)', 'unconnected-(K701-Pad7)'), ('Net-(D1101-A)', 'Net-(D701-A)'), ('Net-(J1101-Pin_2)', 'Net-(J702-Pin_2)'), ('Net-(Q1101-B)', 'Net-(Q701-B)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K701-Pad6)'), ('GND', 'GND'), ('Net-(J1101-Pin_1)', 'Net-(J702-Pin_1)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K701-Pad5)'), ('Net-(J1101-Pin_3)', 'Net-(J702-Pin_3)')]
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relay2']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R2'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay2'] :[('Net-(Q1101-B)', 'Net-(Q1001-B)'), ('+5VA', '+5VA'), ('Net-(J1101-Pin_2)', 'Net-(J1001-Pin_2)'), ('Net-(D1101-A)', 'Net-(D1001-A)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K1001-Pad6)'), ('unconnected-(K1101-Pad7)', 'unconnected-(K1001-Pad7)'), ('GND', 'GND'), ('Net-(J1101-Pin_1)', 'Net-(J1001-Pin_1)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K1001-Pad5)'), ('Net-(J1101-Pin_3)', 'Net-(J1001-Pin_3)'), ('/R3', '/R2')]
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['relay4']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 750:Significant difference between src net: ['', 'R3'] and dst net: ['', 'R4'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.75
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['relay4'] :[('+5VA', '+5VA'), ('/R3', '/R4'), ('Net-(J1101-Pin_3)', 'Net-(J1201-Pin_3)'), ('unconnected-(K1101-Pad7)', 'unconnected-(K1201-Pad7)'), ('unconnected-(K1101-Pad5)', 'unconnected-(K1201-Pad5)'), ('Net-(J1101-Pin_1)', 'Net-(J1201-Pin_1)'), ('unconnected-(K1101-Pad6)', 'unconnected-(K1201-Pad6)'), ('Net-(Q1101-B)', 'Net-(Q1201-B)'), ('GND', 'GND'), ('Net-(D1101-A)', 'Net-(D1201-A)'), ('Net-(J1101-Pin_2)', 'Net-(J1201-Pin_2)')]
+01-04 16:18:59 root 332:updating GUI message: 'Replicating text'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1136:Replicating text
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relay1']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relay2']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['relay4']
+01-04 16:18:59 root 332:updating GUI message: 'Replicating drawings'
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1187:Replicating drawings
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relay1']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relay2']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['relay4']
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 259:Letting the user know there are some issues with replicated design
+01-04 16:18:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 263:Looks like the design has an exotic connectivity that the plugin might not handle properly
+ Make sure that you check the connectivity around:
+Footprint R703, pad 1
+Footprint R1001, pad 1
+Footprint R1201, pad 1
+

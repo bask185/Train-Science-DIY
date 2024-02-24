@@ -169,25 +169,11 @@ void setup()
 
 
 void loop()
-{
-    REPEAT_MS( 1000 )
-    {
-        static byte yolo ; yolo ^= 1 ;
-        for (int i = 0; i < nInputs; i++)
-        {
-            input[i].debounce() ;
-        }
-
-        Xnet.SetTrntPos( 12, yolo, 1) ;
-        delay(20) ;
-        Xnet.SetTrntPos( 12, yolo, 0) ;  
-    }
-    END_REPEAT
- 
+{ 
    updateLED() ;
 
-   //debounce() ;
-   //readSwitches() ;
+   debounce() ;
+   readSwitches() ;
    
   #ifdef LOCONET
     LnPacket = LocoNet.receive() ;

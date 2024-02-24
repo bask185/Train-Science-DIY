@@ -1,0 +1,7 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1,~,4A rectifier,73.0,-60.0,-90.0,top
+J1,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",56.0,-60.0,-90.0,top
+J2,Conn_01x03_Pin,PinHeader_1x03_P2.54mm_Horizontal,90.875,-60.485,0.0,top
+R1,47R,R_0603_smalltext,64.0,-55.0,180.0,top
+R2,10k,R_0603_smalltext,86.487,-55.245,0.0,top
+U1,EL814,SMDIP-4_W9.53mm,79.883,-60.071,90.0,top

@@ -1,0 +1,14 @@
+1	servoPin1	OUTPUT
+0	servoPin2	OUTPUT
+4	servoPin3	OUTPUT
+3	servoPin4	OUTPUT
+6	servoPin5	OUTPUT
+5	servoPin6	OUTPUT
+9	servoPin7	OUTPUT
+8	servoPin8	OUTPUT
+A0	switchPin0	INPUT_PULLUP
+A1	switchPin1	INPUT_PULLUP
+A2	switchPin2	INPUT_PULLUP
+A3	switchPin3	INPUT_PULLUP
+A4	switchPin4	INPUT_PULLUP
+13	ledPin	OUTPUT

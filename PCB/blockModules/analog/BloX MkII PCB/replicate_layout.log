@@ -1,0 +1,39 @@
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, Aug  8 2023, 05:38:28) [MSC v.1936 64 bit (AMD64)]'
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.7
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x0000021A2E280040>
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with U501 as a reference
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 136:Footprint REF** does not have Sheetfile property, it will not be replicated. Most likely it is only in layout
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 136:Footprint REF** does not have Sheetfile property, it will not be replicated. Most likely it is only in layout
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 136:Footprint REF** does not have Sheetfile property, it will not be replicated. Most likely it is only in layout
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 136:Footprint REF** does not have Sheetfile property, it will not be replicated. Most likely it is only in layout
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'U501'
+Located on: ['Stop']
+With filenames: ['CS.kicad_sch']
+With sheet_id:['Stop']
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('U501', ['Stop']), ('U401', ['Brake']), ('U302', ['Buffer'])]
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'Stop', file:'CS.kicad_sch'
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['Brake'], ['Buffer']]
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['Stop']
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(1643, 80)
+01-30 21:36:47 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1204, 80)
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'Stop', file:'CS.kicad_sch'
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['Brake'], ['Buffer']]
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['Brake'], ['Buffer']]
+on level: ['Stop']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+01-30 21:36:50 root 332:updating GUI message: 'Preparing for replication'
+01-30 21:36:50 root 337:updating GUI with: 0
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+01-30 21:36:50 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
