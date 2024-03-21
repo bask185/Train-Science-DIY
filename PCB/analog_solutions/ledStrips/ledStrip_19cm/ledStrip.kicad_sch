@@ -1080,10 +1080,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 19ed71bf-95e1-4f0d-860b-cd3b27e4e6dd)
   )
-  (text "maybe use 300?" (at 114.3 62.23 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 83fdf6ee-1668-426b-a66d-4ca9a0ad2596)
-  )
 
   (label "Vled" (at 133.35 71.12 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))

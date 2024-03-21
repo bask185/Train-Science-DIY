@@ -7,12 +7,13 @@ Track::Track() {;}
 void Track::begin( uint8_t _sw1, uint8_t _sw2 )
 {
 	sw1.begin( _sw1 ) ;
-	sw2.begin( _sw2 ) ;
+	sw2.begin( _sw2 ) ;image.png
 }	
 
 
 
 bool Track::monitorSw1Sw2F()
+StateFunction( monitorSw1Sw2F )
 {
 	if( sm.entryState() )
 	{
