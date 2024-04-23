@@ -1,0 +1,11 @@
+0	servoPin1	OUTPUT
+1	servoPin2	OUTPUT
+6	relayPin1	OUTPUT
+5	relayPin2	OUTPUT
+4	relayPin3	OUTPUT
+3	relayPin4	OUTPUT
+9	switchPin0	INPUT_PULLUP
+10	switchPin1	INPUT_PULLUP
+11	switchPin2	INPUT_PULLUP
+12	switchPin3	INPUT_PULLUP
+13	ledPin	OUTPUT

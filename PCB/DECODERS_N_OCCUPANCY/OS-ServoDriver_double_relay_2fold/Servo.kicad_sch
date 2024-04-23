@@ -649,6 +649,9 @@
     (property "Datasheet" "~" (at 175.26 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "JLCPCB Part#" "C8465" (at 175.26 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 4f15d6fa-d158-4589-94e7-0e29e9f719f1))
     (pin "2" (uuid 50b3efac-aafb-4ca5-b42a-ce16c200c5e2))
     (instances

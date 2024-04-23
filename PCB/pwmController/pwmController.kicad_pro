@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.95,
+          "width": 0.9
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -404,7 +404,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -419,7 +419,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pwmControllerFrontPanel.kicad_pro",
+    "filename": "pwmController.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -510,6 +510,30 @@
     [
       "1530fab0-c90c-486e-bfa4-6e4802e22a47",
       "LDO"
+    ],
+    [
+      "a04d47b4-b48c-4dd7-946c-e6a06fe4318a",
+      "EEPROM"
+    ],
+    [
+      "dac4fbd2-5b77-4f1d-ab5b-a54cb27db23c",
+      "tracks"
+    ],
+    [
+      "1722a2da-79b6-4eac-90c8-d7e615ed73a1",
+      "Potentiometers"
+    ],
+    [
+      "1467fe14-dc12-49a3-a4d3-8e6ce2c066cd",
+      "LCD"
+    ],
+    [
+      "6e57800b-5325-46c0-b2d4-03fcbe1e2e0c",
+      "Lnet"
+    ],
+    [
+      "451b8876-55b2-432e-bd21-af95a077f74d",
+      "slots"
     ]
   ],
   "text_variables": {}

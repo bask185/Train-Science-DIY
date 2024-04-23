@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC
+SW_SPDT,SW502,limitSwitch,
+SW_SPDT,SW501,limitSwitch,
+Screw_Terminal_01x02,J2,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",
+Screw_Terminal_01x03,J1,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",

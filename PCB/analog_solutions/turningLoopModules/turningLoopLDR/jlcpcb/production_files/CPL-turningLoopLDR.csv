@@ -1,0 +1,14 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,100nF,C_0603_1608Metric,198.0,-158.225,-90.0,top
+C2,100nF,C_0603_1608Metric,199.771,-149.225,90.0,top
+D1,MB10S,TO-269AA,192.5,-153.0,180.0,top
+D2,1N4148WS,D_SOD-323,199.509,-139.311,-90.0,top
+J1,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",182.55,-147.325,-90.0,top
+J2,Screw_Terminal_01x03,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",182.55,-160.025,-90.0,top
+J3,Screw_Terminal_01x02,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",182.55,-137.165,-90.0,top
+K1,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,193.5,-144.5,270.0,top
+R1,10k,R_0603_smalltext,199.907,-162.5,90.0,top
+R2,10k,R_0603_smalltext,198.239,-162.5,90.0,top
+R3,470R,R_0805_handsolder-smalltext,199.763,-143.375,90.0,top
+RV1,R_Potentiometer,Potentiometer_Bourns_TC33X_Vertical,199.0,-153.5,90.0,top
+U1,LM2903,VSSOP-8_3.0x3.0mm_P0.65mm,192.8,-157.975,180.0,top

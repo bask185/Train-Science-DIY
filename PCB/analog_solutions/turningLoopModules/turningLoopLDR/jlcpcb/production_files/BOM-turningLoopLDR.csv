@@ -1,0 +1,12 @@
+Comment,Designator,Footprint,LCSC
+R_Potentiometer,RV1,Potentiometer_Bourns_TC33X_Vertical,C128547
+100nF,"C1,C2",C_0603_1608Metric,C14663
+470R,R3,R_0805_handsolder-smalltext,C17710
+1N4148WS,D2,D_SOD-323,C2128
+MB10S,D1,TO-269AA,C2488
+10k,"R1,R2",R_0603_smalltext,C25804
+LM2903,U1,VSSOP-8_3.0x3.0mm_P0.65mm,C2998739
+G6K-2F-Y-TR DC12,K1,Relay_DPDT_Omron_G6K-2F-Y,C397192
+Screw_Terminal_01x03,J2,"TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
+Screw_Terminal_01x02,J1,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+Screw_Terminal_01x02,J3,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",

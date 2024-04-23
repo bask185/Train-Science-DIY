@@ -6,7 +6,7 @@ setlocal EnableDelayedExpansion
 
 set /p comNumber= "select comport number!\n!!\n!"
 
-echo UPLOADING ArduinoISP.hex on COM%comNumber%
+echo UPLOADING PanelX MK1 Xnet on COM%comNumber%
 
 tools\avrdude -C tools\avrdude.conf -p atmega328p -c arduino -P COM%comNumber% -b 115200 -D -U flash:w:bin\PanelX_MkI_Xnet.hex:i
 pause
