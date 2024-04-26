@@ -21,7 +21,7 @@ const int defaultMin =  30 ;
 const int defaultMax = 150 ;
 
 ServoSweep servo[ nServos ] =
-{
+{`
     ServoSweep( servoPin1, relayPin1, relayPin2, defaultMin, defaultMax, 20 ),
     ServoSweep( servoPin2, relayPin4, relayPin3, defaultMin, defaultMax, 20 ),
 } ;

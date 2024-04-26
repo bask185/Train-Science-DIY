@@ -13,6 +13,6 @@ if x == 1 :
     sys.exit(1)
 else :
     print('BUILD SUCCES!!!')
-    shutil.copy("./build/arduino.avr.nano/OS-ServoDriver.ino.hex", "../../../../SOFTWARE_RELEASES/bin/OS-ServoDriver.hex")
+    shutil.copy("./build/arduino.avr.nano/OS-ServoDriver.ino.hex", "../../../SOFTWARE_RELEASES/bin/OS-ServoDriver.hex")
     print('NEW BINARY DEPLOYED!')
     sys.exit(0)

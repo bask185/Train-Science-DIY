@@ -10,7 +10,6 @@ enum
     initialize,
     F1_off,
     F2_off,
-    F3_off,
     speed_zero,
 
     configureServo,
@@ -21,9 +20,10 @@ const uint16    eeAddress = 0x50 ;
 uint16          myAddress ;
 uint8           waiting4address ;
 uint8           state = initialize ;
+
 NmraDcc dcc ;
 
-const int nServos   = 6 ;
+const int nServos   = 12 ;
 const int nSwitches = 4 ;
 
 const int defaultMin =  80 ;
@@ -31,12 +31,18 @@ const int defaultMax = 100 ;
 
 ServoSweep servo[nServos] =
 {
-    ServoSweep( servoPin1, defaultMin, defaultMax, 40, 1, relayPin1 ),
-    ServoSweep( servoPin2, defaultMin, defaultMax, 40, 1, relayPin2 ),
-    ServoSweep( servoPin3, defaultMin, defaultMax, 40, 1, relayPin3  ),
-    ServoSweep( servoPin4, defaultMin, defaultMax, 40, 1, relayPin4  ),
-    ServoSweep( servoPin5, defaultMin, defaultMax, 40, 1, relayPin5  ),
-    ServoSweep( servoPin6, defaultMin, defaultMax, 40, 1, relayPin6  ),
+    ServoSweep( servoPin1,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin2,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin3,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin4,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin5,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin6,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin7,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin8,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin9,  defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin10, defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin11, defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin12, defaultMin, defaultMax, 40, 1 ),
 } ;
 
 Debounce switches[nSwitches] = 
@@ -45,50 +51,17 @@ Debounce switches[nSwitches] =
     Debounce( switchPin1 ) ,
     Debounce( switchPin2 ) ,
     Debounce( switchPin3 ) ,
+    //Debounce( switchPin4 ) ,
 } ;
-
 
 enum
 {
-    SEL,
-    TOGGLE,
-    UP,
     DOWN,
+    UP,
+    TOGGLE,
+    SEL,
 } ;
 
-uint8_t     blinkCounter ;
-uint8_t     blinkMax ;
-uint8_t     flashing ;
-uint32_t    blinkInterval = 500 ;
-
-void blinkLed( uint8_t blinks ) 
-{
-    blinkMax = 2*blinks-1 ;
-    blinkCounter = 0 ;
-    blinkInterval = 100 ;
-    flashing = 1 ;
-}
-
-void statusLed()
-{
-    if( blinkCounter > blinkMax ) flashing = 0 ;
-
-    REPEAT_MS( blinkInterval )
-    {
-        if( flashing )  blinkCounter ++ ;
-        else if( waiting4address ) blinkInterval = 333 ;
-        else if( state == F1_off 
-              || state == F2_off 
-              || state == F3_off 
-              || state == speed_zero ) blinkInterval = 100 ;
-        else if( state == configureServo )  blinkInterval = 1000 ;
-        else    blinkInterval = 1 ; // just normal idle mode ;
-
-        if( blinkInterval == 1 ) PORTB &= ~(1 << 5) ; // just be on, if there is nothing going on
-        else                     PORTB ^=   1 << 5  ;    // toggle
-    }
-    END_REPEAT
-}
 
 void processSwitches()
 {
@@ -115,10 +88,41 @@ void processSwitches()
 
     if( millis() - lastTime >= 1500 )
     {
-
         if( switches[SEL].getState() ==    LOW ) waiting4address = 1 ;
-        if(              toggleState == RISING ) { servo[index].toggleRelay() ; blinkLed( 5 ) ; }
     }
+}
+
+uint8_t     blinkCounter ;
+uint8_t     blinkMax ;
+uint8_t     flashing ;
+uint32_t    blinkInterval = 500 ;
+
+void blinkLed( uint8_t blinks ) 
+{
+    blinkMax = 2*blinks-1 ;
+    blinkCounter = 0 ;
+    blinkInterval = 100 ;
+    flashing = 1 ;
+}
+
+void statusLed()
+{
+    if( blinkCounter > blinkMax ) flashing = 0 ;
+
+    REPEAT_MS( blinkInterval )
+    {
+        if( flashing )  blinkCounter ++ ;
+        else if( waiting4address ) blinkInterval = 333 ;
+        else if( state == F1_off 
+              || state == F2_off 
+              || state == speed_zero ) blinkInterval = 100 ;
+        else if( state == configureServo )  blinkInterval = 1000 ;
+        else    blinkInterval = 1 ; // just normal idle mode ;
+
+        if( blinkInterval == 1 ) PORTB |=   1 << 5 ; // just be on, if there is nothing going on
+        else                     PORTB ^=   1 << 5 ;    // toggle
+    }
+    END_REPEAT
 }
 
 
@@ -133,16 +137,15 @@ void setup()
         EEPROM.put( eeAddress, myAddress ) ;
     }
 
+
     for (int i = 0; i < nServos; i++)
     {
         servo[i].useEEPROM() ;
         servo[i].begin() ;
     }
 
-    dcc.pin( 2, 0 ) ; // TODO. add that I can get loco functions as well. need to alter library for that
+    dcc.pin( 2, 0 ) ;
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
-
-    blinkLed( 5 ) ;
 }
 
 void loop()
@@ -170,19 +173,16 @@ void loop()
     dccConfiguration() ;
 }
 
-
-
 // Following code adds DCC methods to configure the device.
 // the servo sweep library has been slightly altered to work with this method
 // servo positions can now be taught in using loco address 9999.
 /*  
     You first need to control a servo using it's DCC address
     than you need to enable F0
-    than F1, F2 and F3 must be OFF and the speed must be set to 0
+    than F1 and F2 must be OFF and the speed must be set to 0
     than the servo follows the throttle. 
     With F1 you can store the CURVED position
     With F2 you can store the STRAIGH position
-    With F3 you can toggle the relay if it moves in the wrong direction.
     If both F1 and F2 are set you can leave the mode by turning F0 OFF again.
 */
 uint8 dccIndex = 0xFF ;
@@ -192,8 +192,6 @@ uint8 F1 ;
 uint8 F1_teach ;
 uint8 F2 ;
 uint8 F2_teach ;
-uint8 F3 ;
-uint8 F3_prev ;
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output )
 {
@@ -209,7 +207,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
     else if( address >= myAddress && address < myAddress + nServos )
     {
-        index = address - myAddress ;
+        uint8 index = address - myAddress ;
         dccIndex = index ;
 
         if( direction >= 1 ) direction = 1 ;
@@ -219,6 +217,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     }
     else dccIndex = 0xFF ;
 }
+
 
 // CONFIG MODE BY DCC THROTTLE
 void notifyDccSpeed( uint16_t Addr, DCC_ADDR_TYPE AddrType, uint8_t Speed, DCC_DIRECTION Dir, DCC_SPEED_STEPS SpeedSteps)
@@ -239,7 +238,6 @@ void notifyDccFunc( uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uin
     if( FuncState & FN_BIT_00 ) F0 = 1 ; else F0 = 0 ;
     if( FuncState & FN_BIT_01 ) F1 = 1 ; else F1 = 0 ;
     if( FuncState & FN_BIT_02 ) F2 = 1 ; else F2 = 0 ;   
-    if( FuncState & FN_BIT_03 ) F3 = 1 ; else F3 = 0 ;   
 } ;
 
 
@@ -258,7 +256,6 @@ void dccConfiguration()
         {   // initialize some variables.
             F1_teach = 1 ;
             F2_teach = 1 ;
-            F3_prev  = 0 ;
 
             state ++ ;
         }
@@ -270,10 +267,6 @@ void dccConfiguration()
 
     case F2_off:
         if( F2 == 0 ) state ++ ;
-        break ;
-
-    case F3_off:
-        if( F3 == 0 ) state ++ ;
         break ;
 
     case speed_zero:
@@ -299,12 +292,7 @@ void dccConfiguration()
             servo[dccIndex].setMax( servoSetpoint ) ;
             blinkLed( 3 ) ;
         }
-        if( F3_prev != F3 )
-        {   F3_prev  = F3 ;
 
-            servo[dccIndex].toggleRelay() ;
-            blinkLed( 4 ) ;
-        }
         if( F0 == 0 )
         {
             servo[dccIndex].manualRelease() ;

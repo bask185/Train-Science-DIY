@@ -11,7 +11,7 @@ Public Domain
 // use the other if you 
 
 const int STORE_POSITIONS   = 0b10000000 ;
-const int DEFAULT_BITS      = 0b01111110 ;
+const int DEFAULT_BITS      = 0b00111110 ;
 
 const int SERVO_EE_SIZE = 3 ;
 /**
@@ -86,12 +86,15 @@ void ServoSweep::begin()
         servoMax = EEPROM.read( eeAddress+1 ) ;
         updateMiddle() ;
 
+        uint8 status = EEPROM.read(eeAddress+2) ;
         if( eeFlags & STORE_POSITIONS )
         {
-            state = EEPROM.read(eeAddress+2) ;
-            if( state & 1 ) pos = servoMax ;
-            else            pos = servoMin ;
+            if( status & 1 ) { pos = servoMax ; state = 1 ; }
+            else             { pos = servoMin ; state = 0 ; }
         }
+
+        if( status & (1<<6) ) { invertRelay = 1 ; }
+        else                  { invertRelay = 0 ; }
         // Serial.println("beginning") ;
         // printNumber_("servoMin ",servoMin);
         // printNumberln("servoMax ",servoMax);
@@ -107,11 +110,10 @@ void ServoSweep::setState( uint8_t _state )
 
     if( eeFlags & STORE_POSITIONS )
     {
-        EEPROM.write( eeAddress+2, state ) ;
-        // printNumberln("STORING state: ", state) ;
+        uint8 newState = EEPROM.read( eeAddress+2 ) ;
+        bitWrite( newState, 0, state ) ;
+        EEPROM.write( eeAddress+2, newState ) ;
     }
-
-    // printNumberln("setting state: ", state) ;
 }
 
 uint8_t ServoSweep::getState()
@@ -138,6 +140,26 @@ void ServoSweep::setMax( uint8_t _max)
     updateMiddle() ;
 }
 
+void ServoSweep::manualOverride( uint8_t pos)
+{
+    servoSetpoint = pos ;
+    override = 1 ;
+}
+
+void ServoSweep::manualRelease()
+{
+    override = 0 ;
+}
+
+void ServoSweep::toggleRelay()
+{
+    uint8 status = EEPROM.read( eeAddress+2 ) ;
+    status ^= (1<<6) ;
+    EEPROM.update( eeAddress+2, status ) ;
+
+    invertRelay ^= 1 ;
+}
+
 void ServoSweep::increment()
 {
     if( state && servoMax <= 174 ) { servoMax += 3 ;  EEPROM.update( eeAddress+1, servoMax ) ; /*printNumberln("incrementing servoMax", servoMax ) ;*/ }
@@ -156,11 +178,27 @@ uint8_t ServoSweep::sweep ( )
 {
     if( millis() - lastTime > servoSpeed )
     {       lastTime = millis() ;
+
+
+        if( relayPin != 0xFF )
+        {
+            // first operand checks if relay must be on or off, 2nd operand checks if min is smaller than max and comensates with XOR. 3 operand is manual inverting of relay
+            uint8_t relayState = 
+                (pos < middlePosition ? 1 : 0) 
+                                ^ 
+                (servoMin > servoMax ? 1 : 0) 
+                                ^ 
+                            invertRelay ;
+
+            digitalWrite( relayPin, relayState ) ;
+        }
      
         uint8_t setPoint ;
 
         if( state ) setPoint = servoMax ; // get set point
         else        setPoint = servoMin ;
+
+        if( override ) setPoint = servoSetpoint ;
 
         if( pos < setPoint ) pos ++ ;   // follow positon to setpoint
         if( pos > setPoint ) pos -- ;
@@ -185,13 +223,6 @@ uint8_t ServoSweep::sweep ( )
             }
 
             // printNumberln("Pos: ", pos );
-
-            if( relayPin != 0xFF )
-            {
-                // first operand checks if relay must be on or off, 2nd operand checks if min is smaller than max and comensates with XOR
-                uint8_t relayState = (pos < middlePosition ? 1 : 0) ^ (servoMin > servoMax ? 1 : 0) ;
-                digitalWrite( relayPin, relayState ) ;
-            }
             
             return pos ;
         }

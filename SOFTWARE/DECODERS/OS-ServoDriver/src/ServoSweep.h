@@ -19,9 +19,12 @@ public:
     void setMax( uint8_t _max) ;
     void increment( ) ;
     void decrement( ) ;
+    void toggleRelay( ) ;
     void useEEPROM( uint16_t _eeAddress ) ;
     void useEEPROM( ) ;
     void reset( ) ;
+    void manualOverride( uint8_t pos ) ;
+    void manualRelease() ;
 
 private:
     void        updateMiddle() ;
@@ -29,15 +32,18 @@ private:
     Servo       servo ;
     uint32_t    lastTime ;
     uint8_t     pos ;
-    uint8_t     state ;
-    uint8_t     prevPos;
-    uint8_t     servoPin ;
+    uint8_t     override : 1;
+    uint8_t     state : 1;
+    uint8_t     prevPos ;
+    uint8_t     servoPin : 6;
     uint8_t     servoSpeed ;
     uint8_t     servoMin ;
     uint8_t     servoMax  ;
     uint8_t     middlePosition ;
-    uint8_t     relayPin ;
-    uint8_t     turnOff ;
+    uint8_t     servoSetpoint ;
+    uint8_t     relayPin : 6 ;
+    uint8_t     turnOff : 1 ;
+    uint8_t     invertRelay : 1 ;
     uint8_t     eeFlags ;
     uint16_t    eeAddress = 0xFFFF ;
 } ;
