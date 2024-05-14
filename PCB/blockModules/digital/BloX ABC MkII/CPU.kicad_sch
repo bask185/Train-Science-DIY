@@ -1346,7 +1346,7 @@
   (symbol (lib_id "power:+5V") (at 251.46 66.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 121139bd-c370-45dd-b466-6d6a11fc301e)
-    (property "Reference" "#PWR0113" (at 251.46 69.85 0)
+    (property "Reference" "#PWR0204" (at 251.46 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 251.46 62.23 0)
@@ -1361,9 +1361,6 @@
     (pin "1" (uuid 0c30d44d-c37f-4e1c-8fa1-ac732fa5b7c1))
     (instances
       (project "BloX_ABC_MkII"
-        (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b"
-          (reference "#PWR0113") (unit 1)
-        )
         (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/88ae271b-145e-4e05-8f06-1bced5dafa44"
           (reference "#PWR0204") (unit 1)
         )
@@ -1374,7 +1371,7 @@
   (symbol (lib_id "power:+5V") (at 241.3 66.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 19245e51-6666-4031-9273-83ab849a661c)
-    (property "Reference" "#PWR0113" (at 241.3 69.85 0)
+    (property "Reference" "#PWR0203" (at 241.3 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 241.3 62.23 0)
@@ -1389,9 +1386,6 @@
     (pin "1" (uuid 99608d6c-9d34-4a41-bf3d-dc08dd14330a))
     (instances
       (project "BloX_ABC_MkII"
-        (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b"
-          (reference "#PWR0113") (unit 1)
-        )
         (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/88ae271b-145e-4e05-8f06-1bced5dafa44"
           (reference "#PWR0203") (unit 1)
         )
@@ -1539,7 +1533,7 @@
   (symbol (lib_id "resistors_0603:R_10k_0603") (at 251.46 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4c0259d4-13ca-4bfd-85f7-f924008c4e42)
-    (property "Reference" "R?" (at 254 68.58 0)
+    (property "Reference" "R204" (at 254 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 254 71.12 0)
@@ -1558,9 +1552,6 @@
     (pin "2" (uuid 18f15c40-a939-4019-a451-6c6e9b5b318b))
     (instances
       (project "BloX_ABC_MkII"
-        (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b"
-          (reference "R?") (unit 1)
-        )
         (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/88ae271b-145e-4e05-8f06-1bced5dafa44"
           (reference "R204") (unit 1)
         )
@@ -1814,7 +1805,7 @@
   (symbol (lib_id "resistors_0603:R_10k_0603") (at 241.3 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a81e8746-778b-4200-a6f6-52a5005b215d)
-    (property "Reference" "R?" (at 243.84 68.58 0)
+    (property "Reference" "R203" (at 243.84 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 243.84 71.12 0)
@@ -1833,9 +1824,6 @@
     (pin "2" (uuid e9b5279d-d35c-4ed9-976e-cd3ffdf08077))
     (instances
       (project "BloX_ABC_MkII"
-        (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b"
-          (reference "R?") (unit 1)
-        )
         (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/88ae271b-145e-4e05-8f06-1bced5dafa44"
           (reference "R203") (unit 1)
         )

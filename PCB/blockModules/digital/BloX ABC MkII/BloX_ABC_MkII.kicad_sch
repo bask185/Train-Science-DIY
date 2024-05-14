@@ -620,7 +620,7 @@
   (symbol (lib_id "power:GND") (at 213.36 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ce091b0-2483-4f7b-bd74-f2af972c7740)
-    (property "Reference" "#PWR0602" (at 213.36 99.06 0)
+    (property "Reference" "#PWR0103" (at 213.36 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 213.36 97.79 0)
@@ -754,7 +754,7 @@
   (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 137.16 135.89 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ecb6f66d-c68f-4ec0-ab6b-673bb91f71e6)
-    (property "Reference" "J?" (at 139.7 135.89 90)
+    (property "Reference" "J1" (at 139.7 135.89 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Screw_Terminal_01x02" (at 134.62 138.43 0)
@@ -770,9 +770,6 @@
     (pin "2" (uuid d2dbf7e5-4fa1-4090-8a7d-da71e48105ac))
     (instances
       (project "BloX_ABC_MkII"
-        (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/83f9dd47-34ee-4f67-a4db-bb3fdf655ff5"
-          (reference "J?") (unit 1)
-        )
         (path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b"
           (reference "J1") (unit 1)
         )

@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 40,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -60,11 +60,10 @@
       34,
       35,
       36,
-      39,
       40
     ],
-    "visible_layers": "7fcffcf_80000001",
-    "zone_display_mode": 1
+    "visible_layers": "7fcffef_80000001",
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "OS-servoDriver_relay.kicad_prl",

@@ -510,58 +510,6 @@
         )
       )
     )
-    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+5V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+5V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+5V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:+5VA" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -1260,37 +1208,6 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 124.46 82.55 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6f9aa316-4dd6-4387-b96e-796805d741d1)
-    (property "Reference" "#PWR0705" (at 124.46 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 124.46 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 124.46 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 124.46 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 3bb4700a-a612-4deb-ad4a-ddee7d00d1e2))
-    (instances
-      (project "OS-servoDriver_relay"
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/073313b1-15a5-4059-84ce-afab649f2c9c"
-          (reference "#PWR0705") (unit 1)
-        )
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/310451f7-f107-489c-855a-07846e0ff657"
-          (reference "#PWR0805") (unit 1)
-        )
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/dccf563b-118f-4f26-a255-e22b406628ac"
-          (reference "#PWR0905") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "custom_kicad_lib_sk:1N4148WS") (at 90.17 110.49 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 80d58339-3c0f-4fe3-9232-ec2872fee47e)
@@ -1485,6 +1402,37 @@
     )
   )
 
+  (symbol (lib_id "power:+5VA") (at 156.21 82.55 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8cf900a4-d464-4cb3-b3c2-03da26f6730d)
+    (property "Reference" "#PWR07" (at 156.21 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5VA" (at 156.21 77.47 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 156.21 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 156.21 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 02001d27-d286-4969-a1f4-2ecb40691fbc))
+    (instances
+      (project "OS-servoDriver_relay"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/073313b1-15a5-4059-84ce-afab649f2c9c"
+          (reference "#PWR07") (unit 1)
+        )
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/310451f7-f107-489c-855a-07846e0ff657"
+          (reference "#PWR08") (unit 1)
+        )
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/dccf563b-118f-4f26-a255-e22b406628ac"
+          (reference "#PWR09") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+5VA") (at 115.57 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad4d52fb-4ae7-41bb-a93b-603cceddcb61)
@@ -1613,6 +1561,37 @@
     )
   )
 
+  (symbol (lib_id "power:+5VA") (at 124.46 82.55 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d80aaa93-a4ac-467f-b691-83739dd5f70a)
+    (property "Reference" "#PWR04" (at 124.46 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5VA" (at 124.46 77.47 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 124.46 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 124.46 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ae6c19bc-b6e3-4781-9630-9a27c02ee297))
+    (instances
+      (project "OS-servoDriver_relay"
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/073313b1-15a5-4059-84ce-afab649f2c9c"
+          (reference "#PWR04") (unit 1)
+        )
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/310451f7-f107-489c-855a-07846e0ff657"
+          (reference "#PWR05") (unit 1)
+        )
+        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/dccf563b-118f-4f26-a255-e22b406628ac"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 78.74 83.82 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dd3f7b2e-86ab-4b45-99dc-c3d12ae40ae7)
@@ -1639,37 +1618,6 @@
         )
         (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/dccf563b-118f-4f26-a255-e22b406628ac"
           (reference "#PWR0908") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 156.21 82.55 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e2eae449-8899-4c68-96d0-47f828b31293)
-    (property "Reference" "#PWR0706" (at 156.21 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 156.21 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 156.21 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 156.21 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid dcba01c9-bb54-4fd1-9d8e-aee41fa3cf38))
-    (instances
-      (project "OS-servoDriver_relay"
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/073313b1-15a5-4059-84ce-afab649f2c9c"
-          (reference "#PWR0706") (unit 1)
-        )
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/310451f7-f107-489c-855a-07846e0ff657"
-          (reference "#PWR0806") (unit 1)
-        )
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/dccf563b-118f-4f26-a255-e22b406628ac"
-          (reference "#PWR0906") (unit 1)
         )
       )
     )

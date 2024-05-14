@@ -905,7 +905,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 176.53 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ce2b3ac7-51e5-4cfc-b48a-e88e2f391fda)
-    (property "Reference" "#FLG01101" (at 176.53 73.025 0)
+    (property "Reference" "#FLG0501" (at 176.53 73.025 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 176.53 69.85 0)
@@ -920,9 +920,6 @@
     (pin "1" (uuid e6142f0a-6e48-45cd-a057-0a8f3c329a34))
     (instances
       (project "servoDecoderInCabinet"
-        (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/0c27c8b7-3734-4129-8cd0-d3d033ef2608"
-          (reference "#FLG01101") (unit 1)
-        )
         (path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
           (reference "#FLG0501") (unit 1)
         )

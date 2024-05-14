@@ -9,7 +9,7 @@ set /p comNumber= "select comport number!\n!!\n!"
 :retry
 echo UPLOADING OS-ServoDriver.hex on COM%comNumber%
 
-tools\avrdude -C tools\avrdude.conf -p atmega328p -V -c stk500v1 -P COM%comNumber% -b 19200 -D -U flash:w:bin\OS-ServoDriver.hex:i -U efuse:w:0xFD:m -U hfuse:w:0xDE:m -U lfuse:w:0xFF:m
+tools\avrdude -C tools\avrdude.conf -v -V -p atmega328p -c stk500v1 -P COM%comNumber% -b 19200 -U flash:w:bin\OS-ServoDriver.hex:i -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse:w:0xDA:m -U lfuse:w:0xFF:m
 
 set /p delBuild=Restart Uploading [y/n]?:
 

@@ -1770,7 +1770,7 @@
     (pad "" smd roundrect (at 0.425 -0.425 270) (size 0.69 0.69) (layers "F.Paste") (roundrect_rratio 0.25) (tstamp 9b95255c-f12d-4250-84fd-1fefe1b26376))
     (pad "" smd roundrect (at 0.425 0.425 270) (size 0.69 0.69) (layers "F.Paste") (roundrect_rratio 0.25) (tstamp 539fae7c-0702-436f-9ba6-73cdec9c3645))
     (pad "1" smd custom (at -1.45 -0.8 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 14 "unconnected-(U101-PA2-Pad1)") (pinfunction "PA2") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 14 "unconnected-(U101-PA2-Pad1)") (pinfunction "PA2") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1790,7 +1790,7 @@
     (pad "4" smd roundrect (at -1.45 0.4 270) (size 0.8 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 3 "+5V") (pinfunction "VCC") (pintype "power_in") (tstamp e899db0a-1c25-4ea9-8be5-6f260553c736))
     (pad "5" smd custom (at -1.45 0.8 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 13 "/LED") (pinfunction "PA4") (pintype "bidirectional") (thermal_bridge_angle 45)
+      (net 13 "/LED") (pinfunction "PA4") (pintype "bidirectional")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1804,7 +1804,7 @@
           (width 0.1) (fill yes))
       ) (tstamp a4c6aad6-9515-4080-9657-7c30b9a55b08))
     (pad "6" smd custom (at -0.8 1.45 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 22 "unconnected-(U101-PA5-Pad6)") (pinfunction "PA5") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 22 "unconnected-(U101-PA5-Pad6)") (pinfunction "PA5") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1824,7 +1824,7 @@
     (pad "9" smd roundrect (at 0.4 1.45 270) (size 0.2 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 16 "unconnected-(U101-PB5-Pad9)") (pinfunction "PB5") (pintype "bidirectional+no_connect") (tstamp 52a98b89-077b-4c9f-a6b2-7706d4df5bee))
     (pad "10" smd custom (at 0.8 1.45 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 17 "unconnected-(U101-PB4-Pad10)") (pinfunction "PB4") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 17 "unconnected-(U101-PB4-Pad10)") (pinfunction "PB4") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1838,7 +1838,7 @@
           (width 0.1) (fill yes))
       ) (tstamp de024939-b069-4784-8c41-f06408c4405f))
     (pad "11" smd custom (at 1.45 0.8 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 18 "unconnected-(U101-PB3-Pad11)") (pinfunction "PB3") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 18 "unconnected-(U101-PB3-Pad11)") (pinfunction "PB3") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1858,7 +1858,7 @@
     (pad "14" smd roundrect (at 1.45 -0.4 270) (size 0.8 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 21 "unconnected-(U101-PB0-Pad14)") (pinfunction "PB0") (pintype "bidirectional+no_connect") (tstamp d33318c8-26c3-423f-9c06-115e1c049f51))
     (pad "15" smd custom (at 1.45 -0.8 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 27 "unconnected-(U101-PC0-Pad15)") (pinfunction "PC0") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 27 "unconnected-(U101-PC0-Pad15)") (pinfunction "PC0") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1872,7 +1872,7 @@
           (width 0.1) (fill yes))
       ) (tstamp e0eb9995-d87a-4179-b489-b0becb089770))
     (pad "16" smd custom (at 0.8 -1.45 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 26 "/power control") (pinfunction "PC1") (pintype "bidirectional") (thermal_bridge_angle 45)
+      (net 26 "/power control") (pinfunction "PC1") (pintype "bidirectional")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1892,7 +1892,7 @@
     (pad "19" smd roundrect (at -0.4 -1.45 270) (size 0.2 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 12 "/UDPI") (pinfunction "~{RESET}/PA0") (pintype "bidirectional") (tstamp c60a52a6-8acb-4c9f-9915-85f6a2cd108b))
     (pad "20" smd custom (at -0.8 -1.45 270) (size 0.143431 0.143431) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 25 "unconnected-(U101-PA1-Pad20)") (pinfunction "PA1") (pintype "bidirectional+no_connect") (thermal_bridge_angle 45)
+      (net 25 "unconnected-(U101-PA1-Pad20)") (pinfunction "PA1") (pintype "bidirectional+no_connect")
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -2802,7 +2802,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp 203fb564-e82f-4d1e-8f83-de7ba3ffb34f)
     (pts (xy 154 78) (xy 86 78))
     (height -2.391)
-    (gr_text "68.0000 mm" (at 120 79.241) (layer "Dwgs.User") (tstamp 203fb564-e82f-4d1e-8f83-de7ba3ffb34f)
+    (gr_text "68,0000 mm" (at 120 79.241) (layer "Dwgs.User") (tstamp 203fb564-e82f-4d1e-8f83-de7ba3ffb34f)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
@@ -2811,7 +2811,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp d9021738-f55c-4c16-aebe-808491589bda)
     (pts (xy 86 78) (xy 86 66))
     (height -1.926)
-    (gr_text "12.0000 mm" (at 82.924 72 90) (layer "Dwgs.User") (tstamp d9021738-f55c-4c16-aebe-808491589bda)
+    (gr_text "12,0000 mm" (at 82.924 72 90) (layer "Dwgs.User") (tstamp d9021738-f55c-4c16-aebe-808491589bda)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
