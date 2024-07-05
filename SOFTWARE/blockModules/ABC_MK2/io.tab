@@ -1,0 +1,12 @@
+0	redPin	OUTPUT
+1	yellowPin	OUTPUT
+2	greenPin	OUTPUT
+3	mainServoPin	OUTPUT
+4	distantServoPin	OUTPUT
+5	bufferSensorPin	INPUT_PULLUP
+6	stopSensorPin	INPUT_PULLUP
+7	uplinePin	INPUT_PULLUP
+8	downlinePin	INPUT_PULLUP
+9	ABC	OUTPUT
+10	toOccupancy	OUTPUT
+13	ledPin	OUTPUT

@@ -27,8 +27,8 @@ const int   DEFAULT_VALUE   = 0xCC ;
 const int   DCC_ADDRESS     = 1002 ;
 const int   DEFAULT_DCC     = 0x01 ;
 
-const int   PULSE_ADDRESS   = 1004 ;
-const int   DEFAULT_PULSE_TIME = 100 ;
+const int   PULSE_ADDRESS       = 1004 ;
+const int   DEFAULT_PULSE_TIME  = 100 ;
 
 const int   CONFIG_ADDRESS  = 1005 ;
 const int   DEFAULT_CONFIG  = 0x00 ;
@@ -412,7 +412,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
     if(  state != idle ) return ;
     if( output ==    0 ) return ;
-    if( direction > 0 ) direction = 1 ;
+    if( direction  > 0 ) direction = 1 ;
 
     for( int i = 0 ; i < signalCount ; i ++ )
     {

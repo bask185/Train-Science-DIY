@@ -1491,7 +1491,7 @@
   (symbol (lib_id "Device:C") (at 86.36 123.19 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 09f1c39c-73b1-4407-9469-0c67823b0d9d)
-    (property "Reference" "C202" (at 78.74 121.92 0)
+    (property "Reference" "C102" (at 78.74 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (at 77.47 124.46 0)
@@ -1510,9 +1510,6 @@
     (pin "2" (uuid 270d74f7-a489-4742-9da2-e497c5ab4de8))
     (instances
       (project "XnetBlockUnit"
-        (path "/68824df7-235c-431f-a817-f5c5a64c6fe3/5d46e491-9329-4a84-b412-faaf7812fe70"
-          (reference "C202") (unit 1)
-        )
         (path "/68824df7-235c-431f-a817-f5c5a64c6fe3"
           (reference "C102") (unit 1)
         )
@@ -1553,7 +1550,7 @@
   (symbol (lib_id "Diode_Bridge:MB6S") (at 132.08 124.46 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0d8b2fdd-ff98-45b8-830b-ef3889b70c71)
-    (property "Reference" "D?" (at 127 128.27 0)
+    (property "Reference" "D101" (at 127 128.27 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MB6S" (at 128.27 130.81 0)
@@ -1574,12 +1571,6 @@
     (pin "4" (uuid a734bf31-d126-41e8-a585-184b7337ecd4))
     (instances
       (project "XnetBlockUnit"
-        (path "/68824df7-235c-431f-a817-f5c5a64c6fe3/e7736df0-222d-4298-ac34-425fe37226f4"
-          (reference "D?") (unit 1)
-        )
-        (path "/68824df7-235c-431f-a817-f5c5a64c6fe3/ed123d09-0416-4e37-84e2-70dd62f130a4"
-          (reference "D?") (unit 1)
-        )
         (path "/68824df7-235c-431f-a817-f5c5a64c6fe3"
           (reference "D101") (unit 1)
         )

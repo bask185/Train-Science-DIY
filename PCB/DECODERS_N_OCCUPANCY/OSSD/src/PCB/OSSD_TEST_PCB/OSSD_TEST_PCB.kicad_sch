@@ -1,0 +1,385 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ca24ce27-0934-4c23-8a2c-87267cf5eb35")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 69.85 38.1)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4347e54f-3b28-4c0d-ab6c-a6816361d987")
+		(property "Sheetname" "test5"
+			(at 73.66 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 69.85 47.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85.09 71.12)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "45e7bd94-2331-43d9-b82e-5c0ee70ed2bf")
+		(property "Sheetname" "test3"
+			(at 88.9 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 85.09 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115.57 38.1)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "59847247-728c-4296-839c-e5532d6130c8")
+		(property "Sheetname" "test8"
+			(at 119.38 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 115.57 47.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115.57 71.12)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "62674635-9d2b-4125-9ccc-e4d3d064c729")
+		(property "Sheetname" "test1"
+			(at 119.38 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 115.57 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 69.85 71.12)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "645327e6-0b99-464e-94f4-24eb6443478c")
+		(property "Sheetname" "test4"
+			(at 73.66 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 69.85 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 71.12)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6c138858-67dd-4bf8-9749-a78af3380257")
+		(property "Sheetname" "test2"
+			(at 104.14 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 100.33 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 138.43 53.34)
+		(size 12.7 13.97)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "723822c7-b847-43f9-92b2-97d8980d3def")
+		(property "Sheetname" "DCC+POW"
+			(at 138.43 52.6284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DCC+POW.kicad_sch"
+			(at 138.43 67.8946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 38.1)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "98c7661d-0c7c-458d-9ac3-e56b1cafdaaa")
+		(property "Sheetname" "test7"
+			(at 104.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 100.33 47.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 69.85 54.61)
+		(size 12.7 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "aecec481-4bf5-499b-bc37-d7d960d7eb5f")
+		(property "Sheetname" "COIL_DRIVE"
+			(at 69.85 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 69.85 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85.09 38.1)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b9703aa4-97f2-4d88-9e5f-9cf4da693aae")
+		(property "Sheetname" "test6"
+			(at 88.9 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "test.kicad_sch"
+			(at 85.09 47.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

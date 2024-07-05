@@ -1,0 +1,1978 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "717c4ad4-7bca-47a7-8398-2f385b3373b1")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x01"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x01"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x01_1_1"
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C2296"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:SS53"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS53"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(bold yes)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C8678"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS53_0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 1.27 0) (xy -1.27 1.27) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS53_1_1"
+				(pin passive line
+					(at -3.81 1.27 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 1.27 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:VCC"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VCC"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VCC_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VCC_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "resistors_0603:R_10k_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10k"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C25804"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_10k_0603_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_10k_0603_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 167.64 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "46099f14-b51d-4185-8379-40fd951527a6")
+	)
+	(junction
+		(at 156.21 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f8f86dd-84e6-4577-abe4-faa7412c690a")
+	)
+	(junction
+		(at 179.07 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad725f67-c20a-4a17-8b55-60bf831702a9")
+	)
+	(wire
+		(pts
+			(xy 167.64 60.96) (xy 167.64 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03d916d6-5ce5-438b-8bb4-9a0c9f32f7c1")
+	)
+	(wire
+		(pts
+			(xy 179.07 59.69) (xy 184.15 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21a3ae82-0e67-49f9-8c74-43e640ec78c4")
+	)
+	(wire
+		(pts
+			(xy 179.07 48.26) (xy 179.07 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "298224ca-d295-44a3-a0db-39762ab33b36")
+	)
+	(wire
+		(pts
+			(xy 179.07 59.69) (xy 179.07 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34461865-6e8a-465b-a2df-76ae898f6a07")
+	)
+	(wire
+		(pts
+			(xy 184.15 48.26) (xy 184.15 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5901ac7c-34ee-4311-9598-fcb6341fd16c")
+	)
+	(wire
+		(pts
+			(xy 167.64 33.02) (xy 167.64 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6034bc50-c87b-42d2-b4b3-95a615eea448")
+	)
+	(wire
+		(pts
+			(xy 156.21 48.26) (xy 156.21 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6223aee6-6068-4cf6-973a-25e60294c44b")
+	)
+	(wire
+		(pts
+			(xy 167.64 48.26) (xy 161.29 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82417190-aaac-4724-97b3-7272832dd55a")
+	)
+	(wire
+		(pts
+			(xy 167.64 48.26) (xy 173.99 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85af15e6-9edc-42b0-a5ec-e6912a558ecb")
+	)
+	(wire
+		(pts
+			(xy 179.07 58.42) (xy 179.07 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ff9e5bd-2726-4418-aa39-3d13d9fcccc5")
+	)
+	(wire
+		(pts
+			(xy 151.13 48.26) (xy 151.13 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac6258a3-6201-4a59-89f3-939e038e3621")
+	)
+	(wire
+		(pts
+			(xy 184.15 59.69) (xy 184.15 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c17862bb-16b9-4edb-988e-7d02603609d7")
+	)
+	(wire
+		(pts
+			(xy 151.13 59.69) (xy 151.13 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7412623-d429-488d-8138-ef0566924782")
+	)
+	(wire
+		(pts
+			(xy 156.21 58.42) (xy 156.21 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d569a31a-c9d3-4211-940e-e05cab3b73a2")
+	)
+	(wire
+		(pts
+			(xy 156.21 59.69) (xy 156.21 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d79f5d40-2d46-462c-85d1-c39c705f5cf8")
+	)
+	(wire
+		(pts
+			(xy 156.21 59.69) (xy 151.13 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff1caef8-2c91-4ba1-a225-c667d0706a74")
+	)
+	(global_label "A"
+		(shape input)
+		(at 151.13 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1cb25d30-47f9-400d-bb46-bb9fc3e89c3b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.0562 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "B"
+		(shape input)
+		(at 184.15 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fed0e0e1-4dfc-434d-9b8a-235b83df28b5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 188.4052 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "resistors_0603:R_10k_0603")
+		(at 176.53 48.26 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2aba6c43-5767-4de9-be78-9d1beb82a6aa")
+		(property "Reference" "R202"
+			(at 176.53 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 176.53 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 179.07 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C25804"
+			(at 176.53 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "362aa903-73ab-4d64-93cd-d4494a8d7a5d")
+		)
+		(pin "1"
+			(uuid "33038299-262b-4cc4-b83a-983613f25557")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "R202")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "R302")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "R402")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "R502")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "R602")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "R702")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "R802")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "R902")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 167.64 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "493627de-7637-4654-962a-c85a28a59fa0")
+		(property "Reference" "#PWR0301"
+			(at 167.64 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 167.64 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 167.64 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf96394c-b28c-4ff2-add5-19debac23f3d")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "#PWR0301")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "#PWR0401")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "#PWR0501")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "#PWR0601")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "#PWR0701")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "#PWR0801")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "#PWR0901")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:LED")
+		(at 156.21 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a2a12db-8dd3-400c-95bf-d677dd5bb4c1")
+		(property "Reference" "D301"
+			(at 160.02 54.9274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 160.02 57.4674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 156.21 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 156.21 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C2296"
+			(at 156.21 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "105424f9-0e5a-45ee-994c-84a1f2ce6d3e")
+		)
+		(pin "2"
+			(uuid "e0c71ce8-4b97-4a1d-8223-cf03160156b2")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "D301")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "D401")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "D501")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "D601")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "D701")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "D801")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "D901")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "D201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 152.4 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "71ebee83-7f85-435b-9568-8aa215e215a2")
+		(property "Reference" "D302"
+			(at 142.24 54.102 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SS53"
+			(at 153.67 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 151.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 152.4 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 151.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 151.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 151.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "32bf1b16-56d6-4eda-970b-f746989e21e4")
+		)
+		(pin "1"
+			(uuid "cb6497b8-bb45-4ef3-bb8f-6015e99409fb")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "D302")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "D402")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "D502")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "D602")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "D702")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "D802")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "D902")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "D202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:LED")
+		(at 179.07 54.61 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82294939-5c4f-4ff3-9700-4bce7c5e2e6a")
+		(property "Reference" "D203"
+			(at 175.26 54.9274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 175.26 57.4674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 179.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 179.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 179.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C2296"
+			(at 179.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f90b078-1a2d-40e3-8dfe-efe4f65a20e1")
+		)
+		(pin "2"
+			(uuid "a790c682-28a9-4304-a218-764bd95f3e32")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "D203")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "D303")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "D403")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "D503")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "D603")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "D703")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "D803")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "D903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 156.21 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87a8c064-f862-4ae8-ba0d-14ff1f306c9d")
+		(property "Reference" "J301"
+			(at 158.75 64.7699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "pogo"
+			(at 158.75 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:pogopin"
+			(at 156.21 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 156.21 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c8383df-fb81-4f0b-8cee-8e79d9e63f6e")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "J301")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "J401")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "J501")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "J601")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "J701")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "J801")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "J901")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "J201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 179.07 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ad046f5e-13ce-43fc-9376-70e052271184")
+		(property "Reference" "J203"
+			(at 181.61 64.7699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "pogo"
+			(at 181.61 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:pogopin"
+			(at 179.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 179.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 179.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec66a93f-2163-44b9-8039-b381bfa161f1")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "J203")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "J303")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "J403")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "J503")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "J603")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "J703")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "J803")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "J903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "resistors_0603:R_10k_0603")
+		(at 158.75 48.26 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d27095f8-8f0a-41c5-917a-5530d2891932")
+		(property "Reference" "R301"
+			(at 158.75 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 158.75 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 156.21 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C25804"
+			(at 158.75 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e5b38d2a-78e3-41bd-a97a-377f84deedfc")
+		)
+		(pin "1"
+			(uuid "12ef5d34-8088-4037-8261-586c4d8a9aaf")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "R301")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "R401")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "R501")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "R601")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "R701")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "R801")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "R901")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "R201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 185.42 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8bf3462-b01b-42d3-89b1-7fe42d2d922e")
+		(property "Reference" "D204"
+			(at 186.69 54.6099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SS53"
+			(at 186.69 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 185.42 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ee5a1f93-2e0f-4d8c-9573-e47858c4d080")
+		)
+		(pin "1"
+			(uuid "d234b6c2-de7f-4665-9ff5-ec7d0304f5b3")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "D204")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "D304")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "D404")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "D504")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "D604")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "D704")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "D804")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "D904")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 167.64 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e408d9bf-f303-4bf2-8b3f-d9cefdc2c56f")
+		(property "Reference" "J202"
+			(at 170.18 64.7699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "pogo"
+			(at 170.18 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:pogopin"
+			(at 167.64 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 167.64 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 167.64 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "021e1705-7e76-47d8-99b2-fee5c9efac7a")
+		)
+		(instances
+			(project "OSSD_TEST_PCB"
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/62674635-9d2b-4125-9ccc-e4d3d064c729"
+					(reference "J202")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/6c138858-67dd-4bf8-9749-a78af3380257"
+					(reference "J302")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/45e7bd94-2331-43d9-b82e-5c0ee70ed2bf"
+					(reference "J402")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/645327e6-0b99-464e-94f4-24eb6443478c"
+					(reference "J502")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/4347e54f-3b28-4c0d-ab6c-a6816361d987"
+					(reference "J602")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/b9703aa4-97f2-4d88-9e5f-9cf4da693aae"
+					(reference "J702")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/98c7661d-0c7c-458d-9ac3-e56b1cafdaaa"
+					(reference "J802")
+					(unit 1)
+				)
+				(path "/ca24ce27-0934-4c23-8a2c-87267cf5eb35/59847247-728c-4296-839c-e5532d6130c8"
+					(reference "J902")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
