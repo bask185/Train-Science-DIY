@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# file is named 'fp-info-cache'
+# Zoek naar bestanden genaamd 'fp-info-cache' of eindigend op '.kicad_sch.lck' of '.kicad_pcb.lck' en verwijder ze.
 
-find . -name fp-info-cache -delete
+find . -type f \( -name "fp-info-cache" -o -name "*.kicad_sch.lck" -o -name "*.kicad_pcb.lck" \) -delete
