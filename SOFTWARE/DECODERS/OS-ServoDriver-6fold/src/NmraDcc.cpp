@@ -1,16 +1,3 @@
-/*
- * Copyright (C) 2024 Sebastiaan Knippels, Train-Science
- *
- * To the extent possible under law, the person who associated CC0 with this work
- * has waived all copyright and related or neighboring rights to this work.
- *
- * This work is published from: The Netherlands
- *
- * You can copy, modify, distribute and perform the work, even for commercial purposes,
- * all without asking permission. See the full license for details at:
- * https://creativecommons.org/publicdomain/zero/1.0/
- */
-
 //------------------------------------------------------------------------
 //
 // Model Railroading with Arduino - NmraDcc.cpp
@@ -23,7 +10,7 @@
 // 	version 2.1 of the License, or (at your option) any later version.
 //
 // 	This library is distributed in the hope that it will be useful,
-// 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+// 	but WITHOUT ANY WARRANTY; without even the implied warranty
 // 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // 	Lesser General Public License for more details.
 //
@@ -42,7 +29,7 @@
 //            2015-11-06 Martin Pischky (martin@pischky.de):
 //                       Experimental Version to support 14 speed steps
 //                       and new signature of notifyDccSpeed and notifyDccFunc
-//            2015-12-16 Version without use of Timer0 by Franz-Peter MÃ¼ller
+//            2015-12-16 Version without use of Timer0 by Franz-Peter Müller
 //            2016-07-16 handle glitches on DCC line
 //			  2016-08-20 added ESP8266 support by Sven (littleyoda)
 //			  2017-01-19 added STM32F1 support by Franz-Peter
@@ -51,6 +38,14 @@
 //            2018-12-17 added ESP32 support by Trusty (thierry@lapajaparis.net)
 //            2019-02-17 added ESP32 specific changes by Hans Tanner
 //            2020-05-15 changes to pass NMRA Tests ( always search for preamble )
+//            2021-03-11 fix ESP32 bug on interrupt reinitialisation
+//------------------------------------------------------------------------
+//
+// purpose:   Provide a simplified interface to decode NMRA DCC packets
+//			  and build DCC Mobile and Stationary Decoders
+//
+//------------------------------------------------------------------------
+
 //            2021-03-11 fix ESP32 bug on interrupt reinitialisation
 //------------------------------------------------------------------------
 //
