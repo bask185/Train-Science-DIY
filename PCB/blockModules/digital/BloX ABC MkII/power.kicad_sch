@@ -1705,6 +1705,12 @@
 		(uuid "2d4724e8-f1bf-4f5e-9603-01854c5030ab")
 	)
 	(junction
+		(at 144.78 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3237e915-0f50-473b-9fa9-97e16e3426d8")
+	)
+	(junction
 		(at 151.13 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1793,12 +1799,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ab6e5705-4adf-4c9e-aeb9-c9b356e04ec5")
-	)
-	(junction
-		(at 144.78 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cb2a539b-dec1-4f20-b446-ecb6c37cd0e7")
 	)
 	(junction
 		(at 144.78 36.83)
@@ -3082,101 +3082,6 @@
 			(project "general_schematics"
 				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/891f98c0-3628-49fd-a4d5-1cf0156a22a0"
 					(reference "C1502")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L")
-		(at 148.59 48.26 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2fae9301-3b73-48f2-adb9-e144e9113a9d")
-		(property "Reference" "L901"
-			(at 148.59 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "L"
-			(at 148.59 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_Bourns-SRU8028_8.0x8.0mm"
-			(at 148.59 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 148.59 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C92945"
-			(at 148.59 48.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35ce4659-6ea1-4e9a-8bd2-b9c423b23e69")
-		)
-		(pin "2"
-			(uuid "72e82d66-0b79-46c4-91b4-724100310627")
-		)
-		(instances
-			(project "BloX_ABC_MkII"
-				(path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/b368658c-42d0-4763-aae6-8b1a7be184bc"
-					(reference "L901")
-					(unit 1)
-				)
-			)
-			(project "OS-servoDriver"
-				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
-					(reference "L901")
-					(unit 1)
-				)
-			)
-			(project "buck_5V"
-				(path "/d1cb43a0-bc81-49bf-86a7-735d10d531df"
-					(reference "L901")
-					(unit 1)
-				)
-			)
-			(project "general_schematics"
-				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/891f98c0-3628-49fd-a4d5-1cf0156a22a0"
-					(reference "L1501")
 					(unit 1)
 				)
 			)
@@ -4670,6 +4575,83 @@
 			(project "general_schematics"
 				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/4377a106-93b9-41cd-88a1-8112c9568850"
 					(reference "C1803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 148.59 48.26 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0658c2a-40d0-447a-b4ca-7322720dabdf")
+		(property "Reference" "L901"
+			(at 148.59 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 148.59 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Bourns-SRN8040_8x8.15mm"
+			(at 148.59 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C92945"
+			(at 148.59 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "90e9a417-76b1-45fa-a2c5-fafd31ff4483")
+		)
+		(pin "2"
+			(uuid "893fd743-c304-4ba5-aff3-74428b27a660")
+		)
+		(instances
+			(project "BloX_ABC_MkII"
+				(path "/8a26887a-4615-4d87-8c0a-2e69eaebfe7b/b368658c-42d0-4763-aae6-8b1a7be184bc"
+					(reference "L901")
 					(unit 1)
 				)
 			)

@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2024 Sebastiaan Knippels, Train-Science
+ *
+ * To the extent possible under law, the person who associated CC0 with this work
+ * has waived all copyright and related or neighboring rights to this work.
+ *
+ * This work is published from: The Netherlands
+ *
+ * You can copy, modify, distribute and perform the work, even for commercial purposes,
+ * all without asking permission. See the full license for details at:
+ * https://creativecommons.org/publicdomain/zero/1.0/
+ */
+
+// Written By: Sebastiaan Knippels. This library is public domain
+
 #include "Signal.h"
 #include "config.h"
 
@@ -14,16 +29,17 @@ const int       SET_COIL        = 0x80 ;
 const int       OFF             = 0b00 ;
 const int        ON             = 0b01 ;
 const int         X             = 0b10 ; // flash
+
 typedef struct Aspects 
 {
-    uint8   nAspect ;
-    uint8   nLeds ;
-    uint32  blinkInterval ;
+    uint32   nAspect       :  4 ; // 16 aspects per signal max
+    uint32   nLeds         :  3 ; //  8 leds max
+    uint32   blinkInterval : 32 ;
     uint8 aspects[maxAspect][maxLeds] ;
 } Aspect ;
 
-const int nAspects  = 30 ;
-const int NA        = 0 ;
+const int nSignalTypes  = 60 ; // should this not be named nSignalTypes?
+const int NA            =  0 ;
 
 /* NOTE ABOUT BLINK FREQUENCIES
 The blink interval value is in x10ms. That means that a value of 10 result in 100ms blinking time.
@@ -45,7 +61,7 @@ blinkTime = 3000 / Blinks_per_minute
 */
 
 
-const static Aspect aspects[nAspects] PROGMEM =
+const static Aspect aspects[nSignalTypes] PROGMEM =
 {   // #1 DOUBLE COIL MODE
     {   2,                                  // nAspect
         2,                                  // nLeds
@@ -80,7 +96,7 @@ const static Aspect aspects[nAspects] PROGMEM =
         },
     },
     // #5 DUTCH  STANDARD 3 TONE SIGNAL WITHOUT NUMBER DESIGNATOR
-    {   5,//    G    Y    R                  // nAspect
+    {   6,//    G    Y    R                  // nAspect  // used to be 5? changed it to 6
         3,                                   // nLeds
         50,                                  // blink interval
         {   {   ON, OFF, OFF },              // Green
@@ -266,11 +282,7 @@ const static Aspect aspects[nAspects] PROGMEM =
     },
 } ;
 
-
-
 static Aspect localAspect ;
-
-
 
 Signal::Signal()
 {
@@ -338,7 +350,7 @@ uint8 Signal::updateCoils()
 
 uint8 Signal::update() // TODO: type 2 needs differentiating for blinking led 0 and led 1
 {
-    if( type != IS_COIL ) // if signal..
+    if( type != IS_COIL ) // if signal..  SK: Note, in order to accomodate 3-way and english points, I may need to add signal types
     {
         memcpy_P( &localAspect, &aspects[type], sizeof( localAspect ) ) ; // keep or copy content to local signal variables
 

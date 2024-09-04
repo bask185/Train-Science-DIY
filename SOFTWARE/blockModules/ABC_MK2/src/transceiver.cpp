@@ -1,3 +1,16 @@
+/*
+ * Copyright (C) 2024 Sebastiaan Knippels, Train-Science
+ *
+ * To the extent possible under law, the person who associated CC0 with this work
+ * has waived all copyright and related or neighboring rights to this work.
+ *
+ * This work is published from: The Netherlands
+ *
+ * You can copy, modify, distribute and perform the work, even for commercial purposes,
+ * all without asking permission. See the full license for details at:
+ * https://creativecommons.org/publicdomain/zero/1.0/
+ */
+
 #include "transceiver.h"
 
 /* TODO,
@@ -10,10 +23,11 @@ const int HOLD_TRAIN        =  5 ; // EXIT module flags to hold down train
 const int DEPARTURE         = 10 ; // EXIT module flags departure
 const int BLOCK_RED_A       = 15 ; // upline buffer sensor occupied
 const int BLOCK_RED_B       = 20 ; // upline stop sensor occupied   B superseeds A
-const int BLOCK_YELLOW      = 25 ; // upline ABC flags that next block is occupied 
-const int BLOCK_GREEN       = 30 ; // upline ABC flags track is free
-const int RESPONS_OCCUPIED  = 35 ; // respond EXIT module I have a train
-const int RESPONS_FREE      = 40 ; // respond EXIT module I have no train
+const int BLOCK_RED_BOTH    = 25 ;
+const int BLOCK_YELLOW      = 30 ; // upline ABC flags that next block is occupied 
+const int BLOCK_GREEN       = 35 ; // upline ABC flags track is free
+const int RESPONS_OCCUPIED  = 40 ; // respond EXIT module I have a train
+const int RESPONS_FREE      = 45 ; // respond EXIT module I have no train
 
 Sender::Sender( uint8 _pin, uint8 _type )
 {
@@ -43,7 +57,7 @@ void Transceiver::setMyOccupancy_B( uint8 _state ) // stop sensor
 
 void Transceiver::setHisOccupancy( uint8 _state )
 {
-    hisOccupancy = _state ;
+    //hisOccupancy = _state ;
 }
 
 uint8 Transceiver::getMyOccupancy()
@@ -51,10 +65,18 @@ uint8 Transceiver::getMyOccupancy()
     return myOccupancy_A | myOccupancy_B ;
 }
 
-uint8 Transceiver::getHisOccupancy()
+uint8 Transceiver::getHisOccupancy_A()
 {
-    return hisOccupancy ;
+    return hisOccupancy_A  ;
 }
+
+uint8 Transceiver::getHisOccupancy_B()
+{
+    return hisOccupancy_B ; // 2 = stop sensor
+}
+// END parent class
+
+
 
 // inherrited stuff
 void Sender::transmitt()
@@ -69,9 +91,12 @@ void Sender::transmitt()
         
         if( type == ABC_MODULE )
         {
-            if(      myOccupancy_B ) { pulseLength = BLOCK_RED_B ;  Serial.println("my STOP sensor is occupied") ; }
+            if( myOccupancy_A && myOccupancy_B ) {
+                                       pulseLength = BLOCK_RED_BOTH ; }
+            else if( myOccupancy_B ) { pulseLength = BLOCK_RED_B ;  Serial.println("my STOP sensor is occupied") ; }
             else if( myOccupancy_A ) { pulseLength = BLOCK_RED_A ;  Serial.println("my BUFFER sensor is occupied") ; }
-            else if(  hisOccupancy ) { pulseLength = BLOCK_YELLOW ; Serial.println("next block is occupied") ; }
+            else if(  hisOccupancy_A || hisOccupancy_B ) { 
+                                       pulseLength = BLOCK_YELLOW ; Serial.println("next block is occupied") ; }
             else                     { pulseLength = BLOCK_GREEN ;  Serial.println("I and next blocks are all free") ; }
         }
         else // I am exit module
@@ -108,8 +133,8 @@ void Sender::transmitt()
     case waitResponse:
         if( millis() - lastPulse >= 15 ) // after 15ms we will observe if the ABC is holding down the line
         {
-            if( digitalRead( pin ) == LOW ) { hisOccupancy = 1 ; Serial.println("SEND: DOWN LINE ABC REPORTS: OCCUPIED") ;}
-            else                            { hisOccupancy = 0 ; Serial.println("SEND: DOWN LINE ABC REPORTS: FREE") ;    }
+            if( digitalRead( pin ) == LOW ) { /*hisOccupancy = 1 ;*/ Serial.println("SEND: DOWN LINE ABC REPORTS: OCCUPIED") ;}
+            else                            { /*hisOccupancy = 0 ;*/ Serial.println("SEND: DOWN LINE ABC REPORTS: FREE") ;    }
             
             lastPulse = millis() ;
             state = waitNewCycle ;
@@ -150,10 +175,11 @@ void Receiver::receive()
                 case HOLD_TRAIN:        Serial.println("HOLD_TRAIN") ;     break ;
                 case DEPARTURE:         Serial.println("DEPARTURE") ;      break ;
 
-                case BLOCK_RED_A:        hisOccupancy = 1 ; Serial.println("BLOCK_RED_BUFFER_SENSOR") ;      break ;
-                case BLOCK_RED_B:        hisOccupancy = 1 ; Serial.println("BLOCK_RED_STOP_SENSOR") ;      break ;
-                case BLOCK_YELLOW:     hisOccupancy = 0 ;  Serial.println("BLOCK_YELLOW") ;   break ;
-                case BLOCK_GREEN:      hisOccupancy = 0 ; Serial.println("BLOCK_GREEN") ;    break ;
+                case BLOCK_RED_BOTH:  hisOccupancy_A = 1 ; hisOccupancy_B = 1 ; break ;
+                case BLOCK_RED_A:     hisOccupancy_A = 1 ; hisOccupancy_B = 0 ; Serial.println("BLOCK_RED_BUFFER_SENSOR") ;      break ;
+                case BLOCK_RED_B:     hisOccupancy_A = 0 ; hisOccupancy_B = 1 ; Serial.println("BLOCK_RED_STOP_SENSOR") ;      break ;
+                case BLOCK_YELLOW:    hisOccupancy_A = 0 ; hisOccupancy_B = 0 ; Serial.println("BLOCK_YELLOW") ;   break ;
+                case BLOCK_GREEN:     hisOccupancy_A = 0 ; hisOccupancy_B = 0 ; Serial.println("BLOCK_GREEN") ;    break ;
             } 
 
             // process pulseTime 

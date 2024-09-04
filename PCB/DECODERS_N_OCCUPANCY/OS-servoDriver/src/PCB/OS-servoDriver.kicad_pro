@@ -604,7 +604,7 @@
   "sheets": [
     [
       "b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e",
-      ""
+      "Root"
     ],
     [
       "e54a5306-d8a9-4407-bf5c-e8c3485c5b77",
@@ -613,10 +613,6 @@
     [
       "1efd0b4f-2acb-4126-88e4-4e4c50af21d3",
       "DCC"
-    ],
-    [
-      "ddd3f1a6-e741-4c69-a29b-6a8bbe8c6b4e",
-      "LDO"
     ],
     [
       "7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5",

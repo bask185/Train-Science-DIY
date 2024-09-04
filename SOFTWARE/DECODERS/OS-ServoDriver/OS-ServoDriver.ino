@@ -229,11 +229,25 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 
         if( direction >= 1 ) direction = 1 ;
 
+        servo[index].manualRelease() ;
         servo[index].setState( direction ) ;
         blinkLed(3);
     }
     else dccIndex = 0xFF ;
 }
+
+// DCC extended directly controls a servo motor
+void notifyDccSigOutputState( uint16_t address, uint8_t state )
+{
+    if( address >= myAddress && address < myAddress + 8 )
+    {
+        uint8 index = address - myAddress ;
+
+        uint8 setpoint = map( state, 0, 255, 20,  160 ) ;
+        servo[index].manualOverride( setpoint ) ;
+    }
+}
+
 
 
 // CONFIG MODE BY DCC THROTTLE

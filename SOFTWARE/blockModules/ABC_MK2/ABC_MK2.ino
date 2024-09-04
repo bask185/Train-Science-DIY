@@ -5,13 +5,46 @@
 #include "src/debounceClass.h"
 #include "src/ServoSweep.h"
 #include "src/transceiver.h"
+#include "src/Trigger.h"
+#include <Servo.h>
+
+/* humanize problem
+
+    if the next block is freeded up. departGO must become true.
+    when the next block receives the train in the stop section, deportGo must become false
+
+    go signal = falling flank on digitalRead( ABC ) ;
+    stop signal = rising flank on upline stop detector !!! this info is not present
+
+    stop signal, RISING flank on both my own sensors. If both sensors are freed up, all is well
+*/
+
+Servo distArm ; uint8 distPos = 90 ; 
+Servo stopArm ; uint8 stopPos = 90 ;
 
 Debounce bufferSensor( bufferSensorPin ) ;
-Debounce stopSensor( stopSensorPin ) ;
+Debounce stopSensor(     stopSensorPin ) ;
 
-bool iAmOccupied ;
-bool trainIsBuffered ;
-bool upLineHasTrain ;
+
+bool  iAmOccupied ;
+bool  trainIsBuffered ;
+bool  upLineHasTrain ;
+bool  SP_DIST ;
+bool  SP_STOP ;
+bool  departure ;
+uint8 semaphore ;
+uint8 stopState ;
+uint8 nextBlock_A;
+uint8 nextBlock_B;
+uint8 bufferState ;
+uint32 ledInterval ;
+
+enum 
+{
+    green,
+    red,
+    yellow,
+} ;
 
 Sender   sender( downlinePin, ABC_MODULE ) ;
 Receiver receiver( uplinePin ) ;
@@ -28,26 +61,107 @@ void debounceInput()
 }
 
 
-void processInput()
+void processTransceiver()
 {
-    uint32 ledInterval = 500 ;
+    sender.transmitt() ;
+    receiver.receive() ;
 
-    uint8 state_A = bufferSensor.getState() == LOW ; // set the debounced sensors to the Sender for transmission downline
+    ledInterval = 500 ;
+
+    bufferState = bufferSensor.getState() ;
+    uint8 state_A     = bufferState == LOW ; // set the debounced sensors to the Sender for transmission downline
+
     sender.setMyOccupancy_A( state_A ) ;
     receiver.setMyOccupancy_A( state_A ) ;
 
-    uint8 state_B = stopSensor.getState() == LOW ;
-    sender.setMyOccupancy_B( state_B ) ;
+    stopState  = stopSensor.getState() ; 
+    uint8 state_B    = stopState == LOW ;
+
+    sender.setMyOccupancy_B(   state_B ) ;
     receiver.setMyOccupancy_B( state_B ) ;
+
+    if( state_A ) ledInterval = 120 ;
     if( state_B ) ledInterval = 250 ;
 
-    uint8 nextBlockOccupied = receiver.getHisOccupancy() ;
-    digitalWrite( ABC, nextBlockOccupied && state_B ) ;    // next block is occupied AND train is buffered, engage ABC
-    if( digitalRead( ABC ) ) ledInterval = 100 ;
+    nextBlock_A = receiver.getHisOccupancy_A() ;
+    nextBlock_B = receiver.getHisOccupancy_B() ;
 
+    SP_STOP = nextBlock_A ; // test code
+    SP_DIST = nextBlock_B ;
+}
+
+void trackLogic()
+{
+    
+    static F_trigger nextBlockFreed ;
+    static R_trigger myBlockCleared ;
+
+// wanneer moet sein op rood?
+//     als van het volgende blok een melder op rood staat.
+    if( nextBlock_A || nextBlock_B ) semaphore = red ;
+
+// wanneer moet sein op groen?
+//     Als het volgende sein groen of geel is het blok is niet bezet
+    if( !nextBlock_A && !nextBlock_B ) semaphore = green ;
+
+// wanneer moet ABC aan?
+//     Een neergaande flank van de stopmelder, EN de trein vertrekt niet EN het volgende blok is BEZET
+    if( stopState == FALLING && (nextBlock_A || nextBlock_B) && departure == false )
+    {
+        digitalWrite( ABC, HIGH ) ;
+    }
+// wanneer vertrekt de tein?
+//     Als het volgende blok is vrij gekomen
+    if( nextBlockFreed.trigger( nextBlock_A || nextBlock_B ) ) // falling trigger
+    {
+        departure =  true ; // if both sensors of next block become low, departure is allowed
+        digitalWrite( ABC, LOW ) ; // this part seems to work
+    }
+// wanneer vertrekt de trein niet meer?
+//     Als de stopmelder van het volgende blok opkomt
+    if( myBlockCleared.trigger( nextBlock_B ) )
+    {
+        departure = false ; 
+    }
+}
+
+void blinkLed()
+{
+    if( digitalRead( ABC ) ) ledInterval = 100 ;
     REPEAT_MS( ledInterval ) 
     {
         PORTB ^= 1<<5 ;
+    }
+    END_REPEAT
+}
+
+void signals()
+{
+    // switch( semaphore )
+    // {
+    // case  green: digitalWrite( greenPin, HIGH ) ; digitalWrite( yellowPin,  LOW ) ; digitalWrite( redPin,  LOW ) ; SP_DIST = 0 ; SP_STOP = 0 ; break ; 
+    // case yellow: digitalWrite( greenPin,  LOW ) ; digitalWrite( yellowPin, HIGH ) ; digitalWrite( redPin,  LOW ) ; SP_DIST = 0 ; SP_STOP = 0 ;break ; 
+    // case    red: digitalWrite( greenPin,  LOW ) ; digitalWrite( yellowPin,  LOW ) ; digitalWrite( redPin, HIGH ) ; SP_DIST = 1 ; SP_STOP = 1 ;break ;
+    // }
+
+}
+
+void servos() 
+{
+    REPEAT_MS( 25 ) 
+    {
+        uint8 setPoint ;
+        if( SP_STOP ) setPoint = 135 ;
+        else          setPoint =  90 ;
+        if( setPoint > stopPos ) stopPos ++ ;
+        if( setPoint < stopPos ) stopPos -- ;
+        stopArm.write( stopPos ) ;
+
+        if( SP_DIST ) setPoint = 135 ;
+        else          setPoint =  90 ;
+        if( setPoint > distPos ) distPos ++ ;
+        if( setPoint < distPos ) distPos -- ;
+        distArm.write( distPos ) ;
     }
     END_REPEAT
 }
@@ -56,8 +170,14 @@ void setup()
 {
     initIO() ;
 
-   // sender.begin() ;
-   // receiver.begin() ;
+    sender.begin() ;
+    receiver.begin() ;
+
+    distArm.write( 90 ) ; // 90 degree must be SAFE, 135 is UNSAFE
+    stopArm.write( 90 ) ;
+
+    distArm.attach( distantServoPin ) ;
+    stopArm.attach( mainServoPin ) ;
 
     // delay(100);
     // Serial.begin( 115200) ;
@@ -65,41 +185,25 @@ void setup()
 }
 
 void loop()
-{
-
-
-    // if( Serial.available() )
-    // {
-    //     byte b = Serial.read() ;
-
-    //     if( b == 'd' ) sender.setDeparture( 1 ) ;
-    //     if( b == 'D' ) sender.setDeparture( 0 ) ;
-
-    //     if( b == 'h' ) receiver.setMyOccupancy_A( 1 ) ;
-    //     if( b == 'l' ) receiver.setMyOccupancy_A( 0 ) ;
-
-    //     if( b == 'H' ) receiver.setMyOccupancy_B( 1 ) ; // if his occupancy is set, I should send yellow
-    //     if( b == 'L' ) receiver.setMyOccupancy_B( 0 ) ;
-    // }
-
-    sender.transmitt() ;
-    receiver.receive() ;
-
+{  
     debounceInput() ;
-    processInput() ;
-
-    // if( digitalRead(stopSensorPin) == LOW )
-    // {
-    //     digitalWrite(ledPin, LOW);
-    // }
-    // else{
-    //     digitalWrite(ledPin, HIGH);
-    // }
-    // if( digitalRead(bufferSensorPin) == LOW)
-    // {
-    //     digitalWrite(ABC,HIGH) ;
-    // }
-    // else{
-    //     digitalWrite(ABC,LOW) ;
-    // }
+    processTransceiver() ;
+    trackLogic() ;
+    servos() ;
+    signals() ;
+    blinkLed() ;
 }
+
+/*
+On in state machine variant
+
+Ik kan zijn:
+IDLE. Het volgende blok is vrij en ik ben vrij
+
+I_got_train: ik heb een trein maar het volgende blok is vrij dus ik hoef eigenlijk niks
+
+
+situation 1, Train passes sections with last car re-tripping the stop sensor
+situation 2. Train arrives while next block is already occupied.
+
+*/

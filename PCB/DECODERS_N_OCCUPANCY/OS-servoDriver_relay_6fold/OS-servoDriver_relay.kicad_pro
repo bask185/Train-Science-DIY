@@ -79,6 +79,7 @@
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -505,6 +506,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -604,7 +606,7 @@
   "sheets": [
     [
       "b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e",
-      ""
+      "Root"
     ],
     [
       "e54a5306-d8a9-4407-bf5c-e8c3485c5b77",
