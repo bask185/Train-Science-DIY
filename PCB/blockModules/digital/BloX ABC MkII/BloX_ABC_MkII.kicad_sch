@@ -583,6 +583,12 @@
 		)
 	)
 	(junction
+		(at 82.55 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "04f102dd-db89-4fbd-adf1-5d4e9ed70df7")
+	)
+	(junction
 		(at 142.24 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -595,16 +601,10 @@
 		(uuid "24b525a8-f5ea-4597-9d22-67203a4821dc")
 	)
 	(junction
-		(at 85.09 87.63)
+		(at 85.09 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "576c33f4-a6e0-4795-9609-9ee3783f69bd")
-	)
-	(junction
-		(at 82.55 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ad21404-3faf-42cb-9a70-d2fe6e46b32f")
+		(uuid "713d0ac8-f291-477a-a7fb-f28358a73dad")
 	)
 	(wire
 		(pts
@@ -658,16 +658,6 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 85.09) (xy 82.55 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23efd3f8-41fc-4e8c-872e-e4d396c2bca7")
-	)
-	(wire
-		(pts
 			(xy 143.51 50.8) (xy 147.32 50.8)
 		)
 		(stroke
@@ -688,7 +678,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 85.09) (xy 62.23 85.09)
+			(xy 82.55 87.63) (xy 62.23 87.63)
 		)
 		(stroke
 			(width 0)
@@ -728,13 +718,23 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 55.88) (xy 82.55 85.09)
+			(xy 82.55 55.88) (xy 82.55 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3becfcca-197e-4dee-ad61-797c4c6d2e85")
+	)
+	(wire
+		(pts
+			(xy 85.09 85.09) (xy 85.09 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ccc76ee-a786-4c95-b5e4-8816ee68be65")
 	)
 	(wire
 		(pts
@@ -818,7 +818,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 87.63) (xy 85.09 71.12)
+			(xy 85.09 71.12) (xy 85.09 85.09)
 		)
 		(stroke
 			(width 0)
@@ -945,6 +945,16 @@
 			(type default)
 		)
 		(uuid "8ac86de0-30ad-41d8-bf67-fa360c4d96c4")
+	)
+	(wire
+		(pts
+			(xy 82.55 87.63) (xy 82.55 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c5b9ae6-2b12-4925-8711-0ce29b0e1e68")
 	)
 	(wire
 		(pts
@@ -1108,16 +1118,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 118.11) (xy 85.09 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d71e2457-a013-469a-80d6-47f189bf7312")
-	)
-	(wire
-		(pts
 			(xy 157.48 58.42) (xy 152.4 58.42)
 		)
 		(stroke
@@ -1148,7 +1148,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 87.63) (xy 85.09 87.63)
+			(xy 62.23 85.09) (xy 85.09 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1342,7 +1342,7 @@
 		(uuid "fe1957a3-4f02-4ff1-aa16-9a01b7891095")
 	)
 	(label "ring_left"
-		(at 72.39 85.09 180)
+		(at 72.39 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1397,7 +1397,7 @@
 		(uuid "865f3b48-d896-4878-b8dd-3c323f7a7324")
 	)
 	(label "ring_right"
-		(at 72.39 87.63 180)
+		(at 72.39 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font

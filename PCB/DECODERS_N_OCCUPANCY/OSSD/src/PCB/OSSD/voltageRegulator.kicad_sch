@@ -141,489 +141,7 @@
 				)
 			)
 		)
-		(symbol "Device:D_Bridge_+-AA"
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 2.54 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "D_Bridge_+-AA"
-				(at 2.54 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode bridge, +ve/-ve/AC/AC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "rectifier ACDC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "D*Bridge* D*Rectifier*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_Bridge_+-AA_0_1"
-				(circle
-					(center -5.08 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 0 -5.08)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 3.81) (xy -1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy -2.54 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -1.27) (xy 3.81 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 3.81 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 2.54) (xy -2.54 1.27) (xy -1.905 3.175) (xy -3.81 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -3.81 -2.54) (xy -1.905 -3.175) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 2.54 3.81) (xy 3.175 1.905) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 -1.905) (xy 1.27 -2.54) (xy 2.54 -3.81) (xy 3.175 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 0) (xy 0 -5.08) (xy 5.08 0) (xy 0 5.08) (xy -5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 5.08 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "D_Bridge_+-AA_1_1"
-				(pin passive line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Regulator_Linear:L78L05_SOT89"
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "custom_kicad_lib_sk:AMS1117-5.0"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -635,8 +153,8 @@
 					)
 				)
 			)
-			(property "Value" "L78L05_SOT89"
-				(at -0.635 3.175 0)
+			(property "Value" "AMS1117-5.0"
+				(at 0 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -644,18 +162,17 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
 				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf"
-				(at 0 -1.27 0)
+			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+				(at 2.54 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -663,7 +180,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Positive 100mA 30V Linear Regulator, Fixed Output 5V, SOT-89"
+			(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
 				(at 0 0 0)
 				(effects
 					(font
@@ -672,7 +189,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Voltage Regulator 100mA Positive"
+			(property "JLCPCB Part#" "C6187"
 				(at 0 0 0)
 				(effects
 					(font
@@ -681,7 +198,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?89*"
+			(property "ki_keywords" "linear regulator ldo fixed positive"
 				(at 0 0 0)
 				(effects
 					(font
@@ -690,7 +207,16 @@
 					(hide yes)
 				)
 			)
-			(symbol "L78L05_SOT89_0_1"
+			(property "ki_fp_filters" "SOT?223*TabPin2*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AMS1117-5.0_0_1"
 				(rectangle
 					(start -5.08 1.905)
 					(end 5.08 -5.08)
@@ -703,11 +229,11 @@
 					)
 				)
 			)
-			(symbol "L78L05_SOT89_1_1"
-				(pin power_out line
-					(at 7.62 0 180)
+			(symbol "AMS1117-5.0_1_1"
+				(pin power_in line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "OUT"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -722,10 +248,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "VO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -743,7 +269,7 @@
 				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "IN"
+					(name "VI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -751,6 +277,180 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:SS53"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS53"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(bold yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C8678"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS53_0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 1.27 0) (xy -1.27 1.27) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS53_1_1"
+				(pin passive line
+					(at -3.81 1.27 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 1.27 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -864,10 +564,16 @@
 		(uuid "0fda9e26-de79-457f-a232-2035adc618c6")
 	)
 	(junction
-		(at 156.21 100.33)
+		(at 172.72 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2bd1650b-ab6d-4d7e-aebf-bcd395b2adc5")
+		(uuid "23516ed1-54d9-4350-ac56-d1da746104a9")
+	)
+	(junction
+		(at 172.72 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35727dc1-c1c0-4a77-bbec-f791278455c3")
 	)
 	(junction
 		(at 214.63 88.9)
@@ -888,16 +594,22 @@
 		(uuid "4b708762-d3c8-47bb-814c-3cc2597abb3e")
 	)
 	(junction
-		(at 156.21 85.09)
+		(at 142.24 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5d593fd2-9587-4843-b8d3-f4d4813b1e96")
+	)
+	(junction
+		(at 151.13 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7408a80a-0b96-42d4-9687-0cfb78fa4660")
 	)
 	(junction
-		(at 147.32 92.71)
+		(at 160.02 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "80fa8e3d-faa0-497f-8d5b-1bcd762ade80")
+		(uuid "7792aff5-52a0-452e-8beb-39daf6c96521")
 	)
 	(junction
 		(at 193.04 100.33)
@@ -912,22 +624,28 @@
 		(uuid "a78b7e0e-e4cb-479b-bfb4-12632bf12356")
 	)
 	(junction
-		(at 165.1 100.33)
+		(at 151.13 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d53af5c4-b002-488a-8bb9-329fb1e6b1f6")
+		(uuid "b119c04d-3803-476b-86f6-11a94befe9a6")
+	)
+	(junction
+		(at 151.13 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c4abb4ac-0662-47f8-ab54-f6e5478d0352")
+	)
+	(junction
+		(at 151.13 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdcfb4c0-4ad8-4a84-896e-89f779115d26")
 	)
 	(junction
 		(at 203.2 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ecb68c87-4863-4f23-951f-4e5299e60fea")
-	)
-	(junction
-		(at 165.1 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ff3fdc35-0bfd-4157-8987-a1df426b459f")
 	)
 	(wire
 		(pts
@@ -951,23 +669,43 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 85.09) (xy 156.21 85.09)
+			(xy 149.86 90.17) (xy 151.13 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "102787a8-51e7-4dab-8126-419975e3a53f")
+		(uuid "0623be14-cebd-4548-aa00-771de5decb10")
 	)
 	(wire
 		(pts
-			(xy 156.21 85.09) (xy 177.8 85.09)
+			(xy 160.02 92.71) (xy 163.83 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10ae031f-e67b-43a6-a21c-f6a12ef4f4f2")
+	)
+	(wire
+		(pts
+			(xy 151.13 81.28) (xy 172.72 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1716ad41-e2f0-4f76-80c2-d35c26051c18")
+	)
+	(wire
+		(pts
+			(xy 142.24 90.17) (xy 142.24 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f65b676-bb21-4f46-839c-e39f9716721f")
 	)
 	(wire
 		(pts
@@ -991,6 +729,26 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 90.17) (xy 160.02 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37c11cfb-2ed1-4b94-b104-c2255ff24a5c")
+	)
+	(wire
+		(pts
+			(xy 172.72 96.52) (xy 172.72 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f0c52c1-fd8b-4bfd-9fc7-32b7a89492e7")
+	)
+	(wire
+		(pts
 			(xy 177.8 100.33) (xy 193.04 100.33)
 		)
 		(stroke
@@ -1011,13 +769,13 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 92.71) (xy 148.59 92.71)
+			(xy 172.72 100.33) (xy 177.8 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5caf521d-9c12-48ef-8aaf-5a2be779c625")
+		(uuid "5a8caacc-4892-4517-a74f-b787e23ef98b")
 	)
 	(wire
 		(pts
@@ -1031,6 +789,26 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 81.28) (xy 151.13 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f4adda0-248b-47dd-b4a7-0ad9fa2374c2")
+	)
+	(wire
+		(pts
+			(xy 151.13 90.17) (xy 152.4 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62acd1e3-2ac3-4338-852e-c1bea85dc07b")
+	)
+	(wire
+		(pts
 			(xy 214.63 88.9) (xy 217.17 88.9)
 		)
 		(stroke
@@ -1038,6 +816,36 @@
 			(type default)
 		)
 		(uuid "6d4cd1fb-1c8b-49c4-ba1b-f5cfe2e3c30d")
+	)
+	(wire
+		(pts
+			(xy 151.13 95.25) (xy 152.4 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80a85baf-c9ea-4453-9e5e-fcecb2b93c85")
+	)
+	(wire
+		(pts
+			(xy 172.72 81.28) (xy 177.8 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d057be-9b86-433d-bbdf-62a7043c2916")
+	)
+	(wire
+		(pts
+			(xy 193.04 96.52) (xy 193.04 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8514d3f9-a54e-4d74-91bb-1f45b9c6751d")
 	)
 	(wire
 		(pts
@@ -1051,17 +859,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 92.71) (xy 163.83 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "994ffb71-2732-4547-af2a-3594004522fd")
-	)
-	(wire
-		(pts
-			(xy 144.78 92.71) (xy 147.32 92.71)
+			(xy 138.43 92.71) (xy 142.24 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1071,43 +869,53 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 96.52) (xy 193.04 100.33)
+			(xy 177.8 81.28) (xy 177.8 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b362b877-c371-42f0-8d7b-b395571d355a")
+		(uuid "c03d4cef-7f3b-4c8c-8a16-1eacc2be9764")
 	)
 	(wire
 		(pts
-			(xy 165.1 92.71) (xy 168.91 92.71)
+			(xy 172.72 81.28) (xy 172.72 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c52426db-8e66-4f30-ba37-766620c54834")
+		(uuid "d0f68761-cabd-4708-9611-02278e24b8a2")
 	)
 	(wire
 		(pts
-			(xy 165.1 100.33) (xy 177.8 100.33)
+			(xy 151.13 95.25) (xy 151.13 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d8f6b729-afad-47d6-b62d-bdb253021e0d")
+		(uuid "d58c349e-847a-4502-936a-dc017b620dcd")
 	)
 	(wire
 		(pts
-			(xy 156.21 100.33) (xy 165.1 100.33)
+			(xy 151.13 100.33) (xy 172.72 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d972e181-5117-462e-905b-874aad18c962")
+	)
+	(wire
+		(pts
+			(xy 149.86 95.25) (xy 151.13 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc5ba4f5-56a4-408c-8168-bcd7ffe7960c")
 	)
 	(wire
 		(pts
@@ -1131,6 +939,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 92.71) (xy 160.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec62d3ad-709b-49bf-bd08-9f34a0b5a235")
+	)
+	(wire
+		(pts
 			(xy 193.04 100.33) (xy 193.04 105.41)
 		)
 		(stroke
@@ -1138,6 +956,16 @@
 			(type default)
 		)
 		(uuid "ef04eeb5-2596-45b4-a4d1-c677c7b68cda")
+	)
+	(wire
+		(pts
+			(xy 142.24 92.71) (xy 142.24 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f182f729-e2f3-41dc-a762-3c3c9ad6a3d5")
 	)
 	(wire
 		(pts
@@ -1151,7 +979,7 @@
 	)
 	(hierarchical_label "Vin2"
 		(shape passive)
-		(at 168.91 92.71 0)
+		(at 163.83 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1163,7 +991,7 @@
 	)
 	(hierarchical_label "Vin1"
 		(shape passive)
-		(at 144.78 92.71 180)
+		(at 138.43 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1289,242 +1117,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:L78L05_SOT89")
-		(at 193.04 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "33606ce4-c18d-47e6-89ab-a0492a2e13f1")
-		(property "Reference" "U401"
-			(at 196.85 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "L78L05_SOT89"
-			(at 193.04 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
-			(at 193.04 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf"
-			(at 193.04 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C71136"
-			(at 193.04 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4c0c8750-5db4-455c-87ee-f297d5496744")
-		)
-		(pin "2"
-			(uuid "eb3b8011-9eca-4e55-950d-48f77dcd3f9b")
-		)
-		(pin "3"
-			(uuid "29b447e9-5097-4072-847d-77fee83b89a5")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
-					(reference "U401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 165.1 96.52 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4ae31124-d932-431d-b279-45b9b91afc0c")
-		(property "Reference" "JP2"
-			(at 166.751 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 166.751 97.544 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 165.1 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8c7b8044-cbb0-42e5-80cb-31d1c2029f8a")
-		)
-		(pin "2"
-			(uuid "659ecce5-03b5-479b-8ead-006d0f97658f")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
-					(reference "JP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Bridge_+-AA")
-		(at 156.21 92.71 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4b93dd8b-9ead-4e8e-a8ff-aaf2e16424e0")
-		(property "Reference" "D2"
-			(at 152.4 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 142.8742 91.4202 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "custom_kicad_lib_sk:4A rectifier"
-			(at 156.21 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C169511"
-			(at 156.21 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aa486163-1361-49c5-9adb-8a1540f4595e")
-		)
-		(pin "2"
-			(uuid "692f6c4a-41be-4514-a7a3-0f412004429b")
-		)
-		(pin "3"
-			(uuid "2001c609-15b9-4eac-a607-9a35c1758b80")
-		)
-		(pin "4"
-			(uuid "a6d13653-98fb-42d1-b103-20dad95b58f9")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 156.21 85.09 0)
+		(at 151.13 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1533,7 +1127,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a86eee6-1824-49b3-be4c-cf7e0c98d7ae")
 		(property "Reference" "#FLG01"
-			(at 156.21 83.185 0)
+			(at 151.13 79.375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1542,7 +1136,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 156.21 80.01 0)
+			(at 151.13 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1550,7 +1144,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 85.09 0)
+			(at 151.13 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1559,7 +1153,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 85.09 0)
+			(at 151.13 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1568,7 +1162,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 85.09 0)
+			(at 151.13 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1589,44 +1183,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 147.32 88.9 90)
+		(lib_id "custom_kicad_lib_sk:AMS1117-5.0")
+		(at 193.04 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a1fc62fe-4487-4d02-8cf2-f9316280d766")
-		(property "Reference" "JP1"
-			(at 142.24 88.9 90)
+		(uuid "5d3b5747-6cc2-4653-9b3c-eda618d1fa30")
+		(property "Reference" "U401"
+			(at 201.93 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 148.971 89.924 90)
+		(property "Value" "AMS1117-5.0"
+			(at 191.77 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 147.32 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 88.9 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 193.04 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1634,8 +1216,26 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 147.32 88.9 0)
+		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+			(at 195.58 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
+			(at 193.04 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C6187"
+			(at 193.04 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1644,15 +1244,385 @@
 			)
 		)
 		(pin "1"
-			(uuid "48871adf-f6cf-42fd-9e5c-226f118a91e2")
+			(uuid "977dca36-cfcc-4a61-bdc5-25d1c77740cc")
+		)
+		(pin "3"
+			(uuid "a37e45ea-f7dd-47fe-b764-f0ac6d2cddbc")
 		)
 		(pin "2"
-			(uuid "d76f4cee-ddb1-460d-8ebf-d4b713b7b1ee")
+			(uuid "9e1bd670-086b-4fac-b236-2ab9a69cdd1d")
 		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
-					(reference "JP1")
+					(reference "U401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 156.21 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66929e07-d96f-4b76-83dc-b5b043a86cbd")
+		(property "Reference" "D502"
+			(at 156.21 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS53"
+			(at 156.21 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 156.21 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0ffd871-5434-4c2c-901f-b6aa66bb4761")
+		)
+		(pin "2"
+			(uuid "d7526bac-c11f-461b-b349-c2e38dc994b5")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
+					(reference "D502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 172.72 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b493ec44-2ccc-4ed8-8337-dd1c6e434222")
+		(property "Reference" "C501"
+			(at 168.91 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 166.37 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 173.6852 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C14663"
+			(at 172.72 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "35dbc178-0774-4f7e-b232-b84eb3a9a7f3")
+		)
+		(pin "2"
+			(uuid "73a2ab7a-5582-4a7f-a6c7-04330071f5c5")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
+					(reference "C501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 146.05 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7d0ea03-5d50-4570-9688-33221640cd08")
+		(property "Reference" "D501"
+			(at 146.05 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS53"
+			(at 146.05 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 146.05 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c37124d0-3d17-4c83-ab37-eb9af41c0538")
+		)
+		(pin "2"
+			(uuid "39584fa0-c5ac-40da-aa6e-8a0cbe15f1c6")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
+					(reference "D501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 146.05 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d666e3a8-15a3-423c-8aaf-14d775e7f44c")
+		(property "Reference" "D504"
+			(at 146.05 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS53"
+			(at 146.05 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 146.05 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 146.05 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3c713269-c635-4bfb-b057-c706e647a99e")
+		)
+		(pin "2"
+			(uuid "19c9e36a-b0c7-4378-ba39-7192f37c3bc3")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
+					(reference "D504")
 					(unit 1)
 				)
 			)
@@ -1732,6 +1702,103 @@
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
 					(reference "C401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:SS53")
+		(at 156.21 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e18e0dc7-d94d-45de-a284-d38ebe02e204")
+		(property "Reference" "D503"
+			(at 156.21 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS53"
+			(at 156.21 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 156.21 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 156.21 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 156.21 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 156.21 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C8678"
+			(at 156.21 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d99f251a-7511-499a-a6e7-d8c1ec3f44e2")
+		)
+		(pin "2"
+			(uuid "52e0910d-7a7a-4f33-9f94-328dc6a29bb5")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/ab851e10-6952-453a-94c1-2661101c520a"
+					(reference "D503")
 					(unit 1)
 				)
 			)
@@ -1818,7 +1885,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 156.21 100.33 180)
+		(at 151.13 100.33 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1827,7 +1894,7 @@
 		(fields_autoplaced yes)
 		(uuid "f30b9e3f-731e-437c-af55-442a0702e832")
 		(property "Reference" "#FLG02"
-			(at 156.21 102.235 0)
+			(at 151.13 102.235 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1836,7 +1903,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 156.21 105.41 0)
+			(at 151.13 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1844,7 +1911,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 100.33 0)
+			(at 151.13 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1853,7 +1920,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 100.33 0)
+			(at 151.13 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1862,7 +1929,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 100.33 0)
+			(at 151.13 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)

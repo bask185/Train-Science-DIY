@@ -2104,6 +2104,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part#" "C22380439"
+			(at 26.67 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "17ffbab9-cb69-4b1b-8e95-855674895c7f")
 		)
@@ -2667,7 +2676,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part#" "C2827883"
+		(property "JLCPCB Part#" "C22380441"
 			(at 26.67 143.51 0)
 			(effects
 				(font

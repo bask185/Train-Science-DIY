@@ -1,7 +1,7 @@
 
 #include "../config.h"
 
-#ifdef LNET
+#ifdef LOCONET
 
 #ifndef LOCONET_INCLUDED
 #define LOCONET_INCLUDED

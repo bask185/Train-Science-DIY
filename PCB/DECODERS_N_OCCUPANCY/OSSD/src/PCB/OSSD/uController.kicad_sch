@@ -1554,6 +1554,127 @@
 				)
 			)
 		)
+		(symbol "capacitor_miscellaneous:C_0402_100nF"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF"
+				(at 3.81 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C307331"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0402_100nF_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_0402_100nF_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "custom_kicad_lib_sk:crystal_arduino"
 			(pin_names
 				(offset 1.016) hide)
@@ -1819,10 +1940,6 @@
 		(uuid "2c33635a-9022-4e3a-9c19-8047a340db62")
 	)
 	(no_connect
-		(at 74.93 60.96)
-		(uuid "31e0efa8-94b3-47a5-8451-d650338bf783")
-	)
-	(no_connect
 		(at 105.41 58.42)
 		(uuid "3b5f26ed-a10d-438b-946f-ea89bd46c047")
 	)
@@ -1952,7 +2069,7 @@
 	)
 	(wire
 		(pts
-			(xy 70.739 31.242) (xy 70.739 32.512)
+			(xy 71.12 31.75) (xy 71.12 34.29)
 		)
 		(stroke
 			(width 0)
@@ -1979,6 +2096,16 @@
 			(type default)
 		)
 		(uuid "469c0845-2394-484c-8c49-798a664907fc")
+	)
+	(wire
+		(pts
+			(xy 66.04 60.96) (xy 74.93 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f8cb2fa-8512-4ce9-9e03-a05897bd68de")
 	)
 	(wire
 		(pts
@@ -2282,7 +2409,7 @@
 	)
 	(wire
 		(pts
-			(xy 70.739 40.132) (xy 70.739 41.402)
+			(xy 71.12 39.37) (xy 71.12 41.91)
 		)
 		(stroke
 			(width 0)
@@ -2995,6 +3122,18 @@
 		)
 		(uuid "4ed47102-00e1-4ae5-9bf5-595479916bce")
 	)
+	(hierarchical_label "CS"
+		(shape input)
+		(at 66.04 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "50a28ebf-b607-4a44-954d-eee77d041a21")
+	)
 	(hierarchical_label "GPIO6"
 		(shape input)
 		(at 115.57 60.96 0)
@@ -3033,7 +3172,7 @@
 	)
 	(hierarchical_label "5V"
 		(shape passive)
-		(at 70.739 31.242 0)
+		(at 71.12 31.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3213,7 +3352,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape passive)
-		(at 70.739 41.402 0)
+		(at 71.12 41.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4037,35 +4176,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 70.739 36.322 180)
+		(lib_id "capacitor_miscellaneous:C_0402_100nF")
+		(at 71.12 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d1747514-84b8-48bd-8139-cb62e6af9645")
+		(uuid "f932ddb4-8025-47ca-acf1-c2527a0950d9")
 		(property "Reference" "C3"
-			(at 73.66 35.4873 0)
+			(at 73.66 35.5662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "100nF"
-			(at 73.66 38.0242 0)
+			(at 73.66 38.1062 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 69.7738 32.512 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 73.66 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4073,8 +4212,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 70.739 36.322 0)
+		(property "Datasheet" ""
+			(at 71.12 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4083,7 +4222,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 70.739 36.322 0)
+			(at 71.12 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4091,8 +4230,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part#" "C14663"
-			(at 70.739 36.322 0)
+		(property "JLCPCB Part#" "C307331"
+			(at 71.12 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4101,10 +4240,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "e93b028e-b12f-4b8d-bf6a-05204cb4a8c4")
+			(uuid "fb8dc379-1d9e-4507-99c3-a08611380d5e")
 		)
 		(pin "2"
-			(uuid "25748758-bb9a-44be-8c3b-4ae4b4c3c7eb")
+			(uuid "979d3eb7-45f6-4495-b90d-5299793170aa")
 		)
 		(instances
 			(project "solenoidDecoder"

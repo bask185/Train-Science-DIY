@@ -2239,7 +2239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41db18d2-acb0-44d1-9371-d189602df936")
-		(property "Reference" "C?"
+		(property "Reference" "C402"
 			(at 270.891 61.3953 0)
 			(effects
 				(font
@@ -2302,7 +2302,7 @@
 		(instances
 			(project "OS-servoDriver"
 				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
-					(reference "C?")
+					(reference "C402")
 					(unit 1)
 				)
 			)
@@ -2498,7 +2498,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83d75ca5-c982-49e7-96df-243e79861189")
-		(property "Reference" "D?"
+		(property "Reference" "D401"
 			(at 257.81 49.53 0)
 			(effects
 				(font
@@ -2577,7 +2577,7 @@
 		(instances
 			(project "OS-servoDriver"
 				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
-					(reference "D?")
+					(reference "D401")
 					(unit 1)
 				)
 			)
@@ -3043,7 +3043,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd69c004-33cf-42aa-9b50-56cf825151ae")
-		(property "Reference" "C?"
+		(property "Reference" "C401"
 			(at 257.81 60.071 0)
 			(effects
 				(font
@@ -3106,7 +3106,7 @@
 		(instances
 			(project "OS-servoDriver"
 				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/7745b34c-3ce1-4fee-9e05-e2cc7dc8f5e5"
-					(reference "C?")
+					(reference "C401")
 					(unit 1)
 				)
 			)

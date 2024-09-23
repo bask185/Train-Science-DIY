@@ -150,127 +150,6 @@
 				)
 			)
 		)
-		(symbol "Device:R"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Isolator:6N137"
 			(pin_names
 				(offset 0)
@@ -804,6 +683,222 @@
 				)
 			)
 		)
+		(symbol "resistors_0603:R_10k_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10k"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C25804"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_10k_0603_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_10k_0603_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "resistors_0603:R_1k5_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1k5"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C22843"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_1k5_0603_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1k5_0603_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 115.57 102.87)
@@ -827,13 +922,13 @@
 		(at 151.13 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ccc62cca-d23f-4ffb-b72a-734d0b7a1e2c")
+		(uuid "6f33d9b9-1302-4843-95f1-502d74d99dff")
 	)
 	(junction
-		(at 143.51 86.36)
+		(at 142.24 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "df26e74b-d3e8-42be-a468-53fe16f8ab6b")
+		(uuid "d02cc59d-6d0e-471d-9d63-bc8383fadbc4")
 	)
 	(wire
 		(pts
@@ -867,6 +962,36 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 86.36) (xy 142.24 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32528543-70f4-45ea-b0b1-6aa2ae0ddeb9")
+	)
+	(wire
+		(pts
+			(xy 142.24 92.71) (xy 142.24 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b24b4ae-3c81-428e-b905-53226149e59f")
+	)
+	(wire
+		(pts
+			(xy 151.13 86.36) (xy 151.13 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b9ff0f-7c5f-4bd9-adbd-6ddc3f5d6337")
+	)
+	(wire
+		(pts
 			(xy 135.89 96.52) (xy 151.13 96.52)
 		)
 		(stroke
@@ -874,6 +999,16 @@
 			(type default)
 		)
 		(uuid "4a63eaad-edef-4a7c-981a-a226d3dba546")
+	)
+	(wire
+		(pts
+			(xy 142.24 86.36) (xy 151.13 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "543466ef-a6c0-40ed-a4af-5837afdd2eb8")
 	)
 	(wire
 		(pts
@@ -897,7 +1032,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 86.36) (xy 151.13 86.36)
+			(xy 135.89 86.36) (xy 142.24 86.36)
 		)
 		(stroke
 			(width 0)
@@ -937,23 +1072,13 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 93.98) (xy 143.51 93.98)
+			(xy 135.89 93.98) (xy 142.24 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "aa8b5557-b8bb-432d-ac28-6fafa2759a17")
-	)
-	(wire
-		(pts
-			(xy 135.89 86.36) (xy 143.51 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad523b1d-f1ed-4a3e-9a0e-43a32de99a2b")
 	)
 	(wire
 		(pts
@@ -967,7 +1092,17 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 96.52) (xy 151.13 93.98)
+			(xy 107.95 95.25) (xy 115.57 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc833778-10b5-4e77-9d1e-5b2ea5fcc3e3")
+	)
+	(wire
+		(pts
+			(xy 151.13 92.71) (xy 151.13 96.52)
 		)
 		(stroke
 			(width 0)
@@ -977,7 +1112,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 95.25) (xy 101.6 95.25)
+			(xy 99.06 95.25) (xy 102.87 95.25)
 		)
 		(stroke
 			(width 0)
@@ -994,16 +1129,6 @@
 			(type default)
 		)
 		(uuid "f03b790a-fad9-4797-a926-90500a22b45e")
-	)
-	(wire
-		(pts
-			(xy 109.22 95.25) (xy 115.57 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ffb7a8-fc65-417c-8ddd-dc1eb3803e3d")
 	)
 	(hierarchical_label "GND"
 		(shape passive)
@@ -1066,16 +1191,17 @@
 		(uuid "f6970588-0449-429c-a9b0-938fab079fa3")
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 143.51 90.17 0)
+		(lib_id "resistors_0603:R_10k_0603")
+		(at 142.24 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6787997d-cac1-40a5-b5b7-a248545876a6")
+		(fields_autoplaced yes)
+		(uuid "70e9a2c3-07c1-4b8d-9b80-da8152c6d784")
 		(property "Reference" "R3"
-			(at 144.78 88.9 0)
+			(at 144.78 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1084,7 +1210,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 144.78 93.98 0)
+			(at 144.78 91.4399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1092,8 +1218,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 141.732 90.17 90)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 144.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1101,8 +1227,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 143.51 90.17 0)
+		(property "Datasheet" ""
+			(at 139.7 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1111,7 +1237,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 143.51 90.17 0)
+			(at 142.24 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1119,8 +1245,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part#" "C17414"
-			(at 143.51 90.17 0)
+		(property "JLCPCB Part#" "C25804"
+			(at 142.24 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1129,10 +1255,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b16a3842-38cf-41ee-b321-7ec496e7fc4b")
+			(uuid "86c6f1a6-84fe-44b4-aad0-79fe83177d3f")
 		)
 		(pin "2"
-			(uuid "14b34d75-6d4e-40a8-a95b-891911a3e08f")
+			(uuid "aed49a76-9faf-4097-b4f6-053d5d98dbc0")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -1144,94 +1270,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 105.41 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9d8a59ef-7707-4f48-b5dc-cc4207ed4417")
-		(property "Reference" "R5"
-			(at 101.6 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1k"
-			(at 110.49 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 105.41 97.028 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 105.41 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 105.41 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C17513"
-			(at 105.41 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9eade2b6-871a-4808-9e1d-384e8b12386f")
-		)
-		(pin "2"
-			(uuid "b939925a-ec6d-481a-88e6-46c3e9a63baa")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/8844a919-370c-43dd-897a-ce1fcbceebfa"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
+		(lib_id "resistors_0603:R_10k_0603")
 		(at 151.13 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dc50893b-31d3-4789-b901-e1bcb1f4629b")
+		(fields_autoplaced yes)
+		(uuid "b1f64d53-f83a-474b-b87c-0452dd255cef")
 		(property "Reference" "R4"
-			(at 152.4 88.9 0)
+			(at 153.67 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1240,7 +1289,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 152.4 93.98 0)
+			(at 153.67 91.4399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1248,8 +1297,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 149.352 90.17 90)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 153.67 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1257,8 +1306,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 151.13 90.17 0)
+		(property "Datasheet" ""
+			(at 148.59 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1275,7 +1324,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part#" "C17414"
+		(property "JLCPCB Part#" "C25804"
 			(at 151.13 90.17 0)
 			(effects
 				(font
@@ -1285,10 +1334,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "76842c63-2245-4999-8d7e-6c33d1abc8aa")
+			(uuid "044c2db6-bbe8-4749-97a7-5df01237a0f0")
 		)
 		(pin "2"
-			(uuid "adbd48c3-a668-4c5a-9768-4bd8134ed6b7")
+			(uuid "95495a26-fd89-4b61-9f62-ba6e44a6475a")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -1463,6 +1512,83 @@
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/8844a919-370c-43dd-897a-ce1fcbceebfa"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "resistors_0603:R_1k5_0603")
+		(at 105.41 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa57052a-32c1-4966-a30b-c7de75f3647d")
+		(property "Reference" "R5"
+			(at 105.41 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k5"
+			(at 105.41 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 102.87 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 105.41 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C22843"
+			(at 105.41 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4b3a3b5b-1438-491a-ac50-36a2b2d40a7c")
+		)
+		(pin "1"
+			(uuid "05f9dc6b-8dae-4c45-89d5-d6f14cf46f1c")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/8844a919-370c-43dd-897a-ce1fcbceebfa"
+					(reference "R5")
 					(unit 1)
 				)
 			)

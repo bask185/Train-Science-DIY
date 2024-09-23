@@ -1391,7 +1391,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal"
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal"
 			(at 166.37 34.29 0)
 			(effects
 				(font
@@ -1410,6 +1410,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 166.37 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C430551"
 			(at 166.37 34.29 0)
 			(effects
 				(font

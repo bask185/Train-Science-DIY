@@ -5,42 +5,27 @@
 	(uuid "43d2ffbd-62cb-4cca-b974-5aea08bd7c9a")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Device:C_Polarized"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "capacitor_miscellaneous:C_0603_100nF"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "C"
-				(at 0.635 2.54 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
+			(property "Value" "100nF"
+				(at 3.81 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
+			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 				(at 0 0 0)
 				(effects
 					(font
@@ -49,7 +34,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Polarized capacitor"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -58,7 +43,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "cap capacitor"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -67,7 +52,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "CP_*"
+			(property "JLCPCB Part#" "C14663"
 				(at 0 0 0)
 				(effects
 					(font
@@ -76,12 +61,13 @@
 					(hide yes)
 				)
 			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
+			(symbol "C_0603_100nF_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
 					(stroke
-						(width 0)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -90,44 +76,21 @@
 				)
 				(polyline
 					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 			)
-			(symbol "C_Polarized_1_1"
+			(symbol "C_0603_100nF_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
+					(at 0 2.54 270)
+					(length 2.032)
 					(name "~"
 						(effects
 							(font
@@ -144,8 +107,8 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
+					(at 0 -2.54 90)
+					(length 2.032)
 					(name "~"
 						(effects
 							(font
@@ -434,10 +397,16 @@
 		)
 	)
 	(junction
+		(at 153.67 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c5fa379-16d5-4663-81c2-8961dca55ce9")
+	)
+	(junction
 		(at 154.94 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "577e7e14-ebbb-4eed-961c-77da6e70da5a")
+		(uuid "5c836f53-6f65-40c7-89b6-11de6e89b86c")
 	)
 	(junction
 		(at 135.89 109.22)
@@ -464,12 +433,6 @@
 		(uuid "8aff7d11-8d66-4ba0-ac4c-8cfe5e6fe015")
 	)
 	(junction
-		(at 153.67 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab30f565-8f73-4eeb-9b2c-53b5f8648c6d")
-	)
-	(junction
 		(at 143.51 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -490,16 +453,6 @@
 			(type default)
 		)
 		(uuid "0abe5968-f138-41f9-a9aa-dd50bed149e6")
-	)
-	(wire
-		(pts
-			(xy 165.1 83.82) (xy 153.67 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10e0b595-0a5b-40df-ae74-aa90ec9cdc7a")
 	)
 	(wire
 		(pts
@@ -533,6 +486,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 109.22) (xy 158.75 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46b6c9bf-ee8c-4917-81e3-dcaf5a09677e")
+	)
+	(wire
+		(pts
 			(xy 128.27 96.52) (xy 128.27 97.79)
 		)
 		(stroke
@@ -563,16 +526,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 109.22) (xy 165.1 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54575143-a395-43dd-b36b-8f8d099dc456")
-	)
-	(wire
-		(pts
 			(xy 147.32 96.52) (xy 143.51 96.52)
 		)
 		(stroke
@@ -593,6 +546,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 83.82) (xy 153.67 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8dfb5f-809f-4f5c-a657-a84f8d441002")
+	)
+	(wire
+		(pts
 			(xy 135.89 78.74) (xy 135.89 83.82)
 		)
 		(stroke
@@ -600,6 +563,16 @@
 			(type default)
 		)
 		(uuid "87c05d3e-e728-4e9a-a52a-b3bbd6a2ccb4")
+	)
+	(wire
+		(pts
+			(xy 158.75 92.71) (xy 158.75 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99ee3337-3c7c-49c0-9ed8-ad9c8798ad6b")
 	)
 	(wire
 		(pts
@@ -633,6 +606,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 109.22) (xy 158.75 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b839b549-9fca-48b0-bb46-55af378199be")
+	)
+	(wire
+		(pts
 			(xy 143.51 105.41) (xy 143.51 109.22)
 		)
 		(stroke
@@ -640,16 +623,6 @@
 			(type default)
 		)
 		(uuid "bc42254f-8475-4ab4-a30c-18f5c2b5a758")
-	)
-	(wire
-		(pts
-			(xy 154.94 109.22) (xy 165.1 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cda48630-7236-4346-a706-6a614b7c5151")
 	)
 	(wire
 		(pts
@@ -680,16 +653,6 @@
 			(type default)
 		)
 		(uuid "f83425b8-2657-456a-a93e-d2957db2e580")
-	)
-	(wire
-		(pts
-			(xy 165.1 93.98) (xy 165.1 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8d4809f-26fc-49d0-b9fb-76563b395166")
 	)
 	(wire
 		(pts
@@ -1044,6 +1007,85 @@
 		)
 	)
 	(symbol
+		(lib_id "capacitor_miscellaneous:C_0603_100nF")
+		(at 158.75 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a581408-25a9-4f74-8414-15feb6c485a0")
+		(property "Reference" "C1001"
+			(at 161.29 93.9862 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 161.29 96.5262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 158.75 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C14663"
+			(at 158.75 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1541363b-705b-4a37-9c88-0bc2115564e1")
+		)
+		(pin "2"
+			(uuid "e6d54f92-fe17-4149-bc10-af379408f70c")
+		)
+		(instances
+			(project "OS-servoDriver"
+				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/0c27c8b7-3734-4129-8cd0-d3d033ef2608"
+					(reference "C1001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 153.67 83.82 0)
 		(unit 1)
@@ -1268,85 +1310,6 @@
 			(project "OS-servoDriver"
 				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/0c27c8b7-3734-4129-8cd0-d3d033ef2608"
 					(reference "#FLG01102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 165.1 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e9fe388a-8a12-4306-9feb-e3b8dc662d87")
-		(property "Reference" "C1101"
-			(at 168.91 95.631 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1000uF"
-			(at 168.91 98.171 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10.5"
-			(at 166.0652 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C5162347"
-			(at 165.1 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "803098bd-6232-4706-883d-b8a460638dbc")
-		)
-		(pin "2"
-			(uuid "d50ae679-00fa-4af4-9bb4-07d1e1757ece")
-		)
-		(instances
-			(project "OS-servoDriver"
-				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e/0c27c8b7-3734-4129-8cd0-d3d033ef2608"
-					(reference "C1101")
 					(unit 1)
 				)
 			)

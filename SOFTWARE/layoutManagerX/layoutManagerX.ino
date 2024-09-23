@@ -3,6 +3,9 @@
 #include "src/XpressNetMaster.h"
 #include "src/debounceClass.h"
 #include <LiquidCrystal.h>
+#include <LiquidCrystal.h>
+
+
 
 /* NOTES
 most work is done, I only need to add analog reference values for my own buttons. 
@@ -23,9 +26,6 @@ XXXXXXXXXXXXXXX <-- LINE 1
 XXXXXXXXXXXXXXX <-- LINE 2 
 P8: RECORDING   // or playing, or finishing or idle
 STAT: WAIT S1   // S1-8 are sensors/switches 
-OR
-
-NEXT COM: 1234  // next command and time  kinda useless? You can only see a timer run
 
 OR
 
@@ -70,11 +70,13 @@ const uint32_t  R2 = 4700 ;
 Debounce    lcdKeys( 255 ) ;
 uint8_t     lastPressedKey ;
 const int   lcdKeyPin = A0 ;
-const int   lcdKeyValues[] = { 0,       // right TESTME!
+const int   lcdKeyValues[] = { 0,       // right ALL VALUES VERIVIED
                              132,       // up
                              308,       // down
                              480,       // left
                              721 } ;    // select
+
+
 const int nLcdKeys = sizeof( lcdKeyValues ) / sizeof( lcdKeyValues[0] ) ;
 enum {
     RIGHT,
@@ -153,79 +155,55 @@ Loco loco[nLocos] ;
 
 void showFunction( uint16_t address, uint8_t group, uint8_t incFunctions )
 {
-    for( int  i = 0 ; i < nLocos ; i ++ )
+    lcd.setCursor(0,1) ;
+    switch( group )
     {
-        if( loco[i].address == 0x0000 ) // if address 0 is found in the list before a match is found
-        {                               // than we know the address was not used before and we may commission a slot by inserting an address
-            loco[i].address = address ;
-        }
-
-        if( address == loco[i].address ) // if true -> slot found
-        {
-            uint8_t startFunc ;
-            uint8_t nFunc ;
-
-            switch( group )
-            {
-            // case F0_F4Event:
-            //     if( (functions&0b10000) != loco[i].F0 ) {loco[i].F0 = (functions >> 4) ;} // bit cumbersome do it like this, but it should work
-            //     if( (functions&0b00001) != loco[i].F1 ) {loco[i].F1 = (functions     ) ;}
-            //     if( (functions&0b00010) != loco[i].F2 ) {loco[i].F2 = (functions >> 1) ;}
-            //     if( (functions&0b00100) != loco[i].F3 ) {loco[i].F3 = (functions >> 2) ;}
-            //     if( (functions&0b01000) != loco[i].F4 ) {loco[i].F4 = (functions >> 3) ;}
-            //     break ;
-
-            // case F5_F8Event:
-            //     if( (functions&0b0001) != loco[i].F5 ) {loco[i].F5 = (functions     ) ;}
-            //     if( (functions&0b0010) != loco[i].F6 ) {loco[i].F6 = (functions >> 1) ;}
-            //     if( (functions&0b0100) != loco[i].F7 ) {loco[i].F7 = (functions >> 2) ;}
-            //     if( (functions&0b1000) != loco[i].F8 ) {loco[i].F8 = (functions >> 3) ;}
-            //     break ;
-
-            // case F9_F12Event:
-            //     if( (functions&0b0001) != loco[i].F9  ) {loco[i].F9  = (functions     ) ;}
-            //     if( (functions&0b0010) != loco[i].F10 ) {loco[i].F10 = (functions >> 1) ;}
-            //     if( (functions&0b0100) != loco[i].F11 ) {loco[i].F11 = (functions >> 2) ;}
-            //     if( (functions&0b1000) != loco[i].F12 ) {loco[i].F12 = (functions >> 3) ;}
-            //     break ;
-
-            // case F13_F20Event:
-            //     if( (functions&0b00000001) != loco[i].F13 ) {loco[i].F13 = (functions     ) ;}
-            //     if( (functions&0b00000010) != loco[i].F14 ) {loco[i].F14 = (functions >> 1) ;}
-            //     if( (functions&0b00000100) != loco[i].F15 ) {loco[i].F15 = (functions >> 2) ;}
-            //     if( (functions&0b00001000) != loco[i].F16 ) {loco[i].F16 = (functions >> 3) ;}
-            //     if( (functions&0b00010000) != loco[i].F17 ) {loco[i].F17 = (functions >> 4) ;}
-            //     if( (functions&0b00100000) != loco[i].F18 ) {loco[i].F18 = (functions >> 5) ;}
-            //     if( (functions&0b01000000) != loco[i].F19 ) {loco[i].F19 = (functions >> 6) ;}
-            //     if( (functions&0b10000000) != loco[i].F20 ) {loco[i].F20 = (functions >> 7) ;}
-            //     break ;
-
-                case F0_F4Event:   startFunc =  0 ; nFunc = 5 ; break ; // used to calculate correct function number below
-                case F5_F8Event:   startFunc =  5 ; nFunc = 4 ; break ;
-                case F9_F12Event:  startFunc =  9 ; nFunc = 4 ; break ;
-                case F13_F20Event: startFunc = 13 ; nFunc = 8 ; break ; 
-            }
-
-            for( int j = 0 ; j < nFunc ; j ++ )
-            {
-                uint8_t funcState = incFunctions >> j ;      // the incomming function state 
-                uint8_t        Fx = startFunc +  j ;         // locomotive function number
-                uint8_t locoState = loco[i].function >> Fx ; // current state of loco function
-                
-                if( funcState != locoState )                 // compare incomming state with loco state
-                {
-                    bitWrite( loco[i].function, Fx, locoState ) ; // update function number in locoslot and display
-                    lcd.setCursor(0,1);
-                    lcd.print("F");
-                    lcd.print(Fx);
-                    lcd.print(' ');
-                    bitRead(loco[i].function, Fx) ? lcd.print("ON") : lcd.print("OFF") ;
-                    clearln();
-                    return ;
-                }
-            }
-        }
+        case F0_F4Event:  lcd.print("  F0-F4: ") ; lcd.println(incFunctions) ; /*startFunc =  0 ; nFunc = 5 ;*/ break ; // used to calculate correct function number below
+        case F5_F8Event:  lcd.print("  F5-F8: ") ; lcd.println(incFunctions) ; /*startFunc =  5 ; nFunc = 4 ;*/ break ;
+        case F9_F12Event: lcd.print(" F9-F12: ") ; lcd.println(incFunctions) ; /*startFunc =  9 ; nFunc = 4 ;*/ break ;
+        case F13_F20Event:lcd.print("F13-F20: ") ; lcd.println(incFunctions) ; /*startFunc = 13 ; nFunc = 8 ;*/ break ; 
     }
+
+    // for( int  i = 0 ; i < nLocos ; i ++ )
+    // {
+    //     if( loco[i].address == 0x0000 ) // if address 0 is found in the list before a match is found
+    //     {                               // than we know the address was not used before and we may commission a slot by inserting an address
+    //         loco[i].address = address ;
+    //     }
+
+    //     if( address == loco[i].address ) // if true -> slot found
+    //     {
+    //         uint8_t startFunc ;
+    //         uint8_t nFunc ;
+
+    //         switch( group )
+    //         {
+    //             case F0_F4Event:   startFunc =  0 ; nFunc = 5 ; break ; // used to calculate correct function number below
+    //             case F5_F8Event:   startFunc =  5 ; nFunc = 4 ; break ;
+    //             case F9_F12Event:  startFunc =  9 ; nFunc = 4 ; break ;
+    //             case F13_F20Event: startFunc = 13 ; nFunc = 8 ; break ; 
+    //         }
+
+    //         for( int j = 0 ; j < nFunc ; j ++ )
+    //         {
+    //             uint8_t funcState = incFunctions >> j ;      // the incomming function state 
+    //             uint8_t        Fx = startFunc +  j ;         // locomotive function number
+    //             uint8_t locoState = loco[i].function >> Fx ; // current state of loco function
+                
+    //             if( funcState != locoState )                 // compare incomming state with loco state
+    //             {
+    //                 bitWrite( loco[i].function, Fx, locoState ) ; // update function number in locoslot and display
+    //                 lcd.setCursor(0,1);
+    //                 lcd.print("F");
+    //                 lcd.print(Fx);
+    //                 lcd.print(' ');
+    //                 bitRead(loco[i].function, Fx) ? lcd.print("ON") : lcd.print("OFF") ;
+    //                 clearln();
+    //                 return ;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 /****** helper functions ******/
@@ -245,7 +223,7 @@ void displayStatus()
     lcd.print(F(": ")) ;
 
     #define showState(x) case x: lcd.print(F(#x)); break ;
-    //prgState = program[currentProgram].getState() ;
+    prgState = program[currentProgram].getState() ;
     switch( prgState )
     {
         showState( idle ) ;
@@ -254,10 +232,6 @@ void displayStatus()
         showState( recording ) ;
     }
     clearln() ;
-
-  // LOWER LINE
-    //lcd.setCursor( 0, 1 ) ;
-    //lcd.print(F("STAT: ")) ;
 }
 
 
@@ -316,10 +290,6 @@ void debounceLcdKeys()
     {
         uint16_t sample = analogRead( lcdKeyPin ) ;
 
-        //  lcd.clear();
-        //  lcd.print(lastPressedKey);
-        //  lcd.setCursor(0,1);
-        //  lcd.print(sample);
         for( int i = 0 ; i < nLcdKeys ; i ++ )
         {
             uint16_t lowerBound ;
@@ -343,35 +313,28 @@ void debounceLcdKeys()
 skipDebounce2:
     uint8_t state = lcdKeys.getState() ;
     
-    if( state == FALLING )
+    if( state == FALLING ) // NOTE, ALL buttons and below code are verivied to work
     {   
-        //lcd.clear();lcd.print("FALLING");
-     
         switch( lastPressedKey )
         {
         case SELECT: // PLAY
-            // lcd.clear();lcd.print("SELECT");
             program[currentProgram].startPlaying() ;
             break ;
 
         case LEFT: // RECORD
-            // lcd.clear();lcd.print("LEFT");
             program[currentProgram].startRecording() ;
             break ;
 
         case RIGHT:  // STOP
-            // lcd.clear();lcd.print("RIGHT");
-           program[currentProgram].stop() ;
+            program[currentProgram].stop() ;
             break ;
 
         case UP:
-            // lcd.clear();lcd.print("UP");
             if( prgState == recording ) break ; // during recording, current program must not be changed
             if( ++ currentProgram == nPrograms ) currentProgram = 0 ;
             break ;
 
         case DOWN:
-            // lcd.clear();lcd.print("DOWN");
             if( prgState == recording ) break ;
             if( -- currentProgram == -1 ) currentProgram = nPrograms-1 ;
             break ;
@@ -435,12 +398,10 @@ void loop()
 {
     REPEAT_MS(500)
     {
-        static uint8 state ;
-        state^=1;
+        static byte state ; state ^=1;
+        Xnet.SetTrntPos( 5, state , 1 ); delay(20);
+        Xnet.SetTrntPos( 5, state , 0 );
         PORTB ^= (1<<5);
-            Xnet.SetTrntPos( 5, state, 1 ) ; // check if dis works properly
-            delay(20);
-            Xnet.SetTrntPos( 5, state, 0 ) ; // TODO: show message
     }
     END_REPEAT
 
@@ -461,21 +422,9 @@ void loop()
 void notifyXNetLocoDrive128( uint16_t Address, uint8_t Speed )                   
 {
     program[currentProgram].storeEvent( speedEvent, Address, Speed ) ;
-    lcd.setCursor(0,0); 
+    lcd.setCursor(0,1); 
     lcd.print("loco #");lcd.print(Address); 
     lcd.print("Speed: ");lcd.print(Speed); 
-
-    // int8_t speed ;
-    // speed = Speed & 0x7F ;
-
-    // if( speed > 0 ) speed -- ;
-    // if( Speed & 0x80 ) speed = -speed ;
-   
-    // if(         speed <  -100                ) knob = 4 ; // for future use to to repurpose loco function to set DCC accessories.
-    // else if(    speed >= -100 && speed < -20 ) knob = 3 ;
-    // else if(    speed >   -20 && speed <  20 ) knob = 2 ;
-    // else if(    speed <=  100 && speed >  20 ) knob = 1 ;
-    // else if(    speed >   100                ) knob = 0 ;
 }
 
 void notifyXNetLocoFunc1( uint16_t Address, uint8_t Func1 )  //              F0  F4  F3  F2  F1

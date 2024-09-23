@@ -1,4 +1,4 @@
-23537442596571948
+23540941913194639
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -95571,6 +95571,13 @@ MB10s
 4
 4
 custom_kicad_lib_sk
+MTS402
+
+
+0
+12
+12
+custom_kicad_lib_sk
 MTS_DPDT
 
 
@@ -95584,6 +95591,13 @@ MTS_long_lever
 0
 3
 3
+custom_kicad_lib_sk
+OLED_0.91_INCH
+
+
+0
+4
+4
 custom_kicad_lib_sk
 OSSD_QR
 

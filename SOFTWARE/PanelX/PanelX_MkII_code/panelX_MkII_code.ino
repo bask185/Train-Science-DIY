@@ -1,15 +1,42 @@
-#include "src/XpressNetMaster.h"
 #include "src/macros.h"
 #include "src/debounceClass.h"
 #include <EEPROM.h>
+#include "config.h"
 
-const int rs485dir  =   2 ;
-const int nPoints   =  20 ;
-const uint8_t pins[] = 
+// SK: Software has been made available for loconet. It has not been tested yet.
+
+#if defined LOCONET
+
+#include "src/LocoNet.h"
+const int LN_TX_PIN = 9 ;
+lnMsg  *LnPacket;          // pointer to a received LNet packet
+
+const uint8_t pins[]   = 
+{ 
+     0,  1,  2,  3,  4,  5,  6,  7,  8, 
+     9, 10, 11, 12, A0, A1, A2, A3, A4, A5
+} ;
+
+#elif defined XPRESSNET
+#include "src/XpressNetMaster.h"
+XpressNetMasterClass Xnet ;
+const int rs485dir = 2 ;
+
+const uint8_t pins[]   = 
 { 
      3,  4,  5,  6,  7,  8,  9, 10,
     11, 12, A0, A1, A2, A3, A4, A5
 } ;
+
+#else
+#error NEITHER XPRESSNET OR LOCONET IS DEFINED
+#endif
+
+
+/************ VARIABLES & CONSTANTS ***********/
+
+const int nPoints   =  20 ;
+
 const int nInputs = sizeof(pins) / sizeof( pins[0] ) ;
 
 struct
@@ -31,7 +58,6 @@ uint16_t    prevAddress ;
 bool        settingStreet ;
 bool        firstStreet ;
 
-XpressNetMasterClass Xnet ;
 
 void debounceInputs()
 {
@@ -116,9 +142,14 @@ void setStreet()
             if( state ) flash = 4 ;
             else        flash = 8 ;
 
+        #ifdef XPRESSNET
             Xnet.SetTrntPos( address, state, 1 ) ;
             delay( 20 ) ;
             Xnet.SetTrntPos( address, state, 0 ) ;
+        #else
+            LocoNet.requestSwitch( address, 1,  state ) ;
+            LocoNet.requestSwitch( address, 0,  state ) ;
+        #endif
 
             if( pointIndex ++ == Point.size ) // finished?
             {
@@ -157,13 +188,19 @@ void updateLED()
 
 void setup()
 {
-    Xnet.setup( Loco128, rs485dir ) ;
+#ifdef LOCONET
+    LocoNet.init(LN_TX_PIN);
+
+#elif defined XPRESSNET
+    Xnet.setup( Loco128 , rs485dir ) ;    
+#endif
 
     for( int i = 0 ; i < nInputs ; i ++ )
     {
         uint8_t pin = pins[i] ;
         input[i].begin( pin ) ;
     }
+
     debounceInputs() ;
     delay(50);
     debounceInputs() ;
@@ -173,13 +210,52 @@ void setup()
 
 void loop()
 {
-    updateLED(); 
+#ifdef LOCONET
+    LnPacket = LocoNet.receive() ;
+    if( LnPacket )
+    {   
+        LocoNet.processSwitchSensorMessage(LnPacket);
+    }
+
+#elif defined XPRESSNET
     Xnet.update() ;
+#endif
+
+    updateLED(); 
     debounceInputs() ;
     processInputs() ;
     setStreet() ;
 }
 
+#ifdef LOCONET
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t dir )
+{
+    if( output == 0 ) return ;
+    if( dir ) dir = 1 ;
+    
+
+    if( address == 1 )
+    {
+        if( dir ) { F1state = 1 ; }
+        else      { F1state = 0 ; }
+    }
+    else
+    {
+        if( address != prevAddress )
+        {   prevAddress = address ;
+
+            pointIndex ++ ;
+            Point.size = pointIndex ;
+        }
+
+        if( dir ) flash = 10 ;
+        else      flash = 20 ;
+
+        Point.address[ pointIndex ] = address | (dir << 15) ; // commit both address and state to the array.
+    }
+}
+
+#else // XPRESSNET
 void notifyXNetTrnt( uint16_t Address, uint8_t data ) // put an address and state
 {
     if( bitRead( data, 3 ) == false ) return ;
@@ -208,3 +284,4 @@ void notifyXNetLocoFunc1( uint16_t address, uint8_t func )
     if( func & 1 ) { F1state = 0 ; }
     else           { F1state = 1 ; }
 }
+#endif

@@ -41,7 +41,7 @@
 
 
 #include "../config.h"
-#ifdef LNET
+#ifdef LOCONET
 
 
 #include <avr/io.h>

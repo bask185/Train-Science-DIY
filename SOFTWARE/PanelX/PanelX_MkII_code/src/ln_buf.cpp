@@ -57,7 +57,7 @@
  *****************************************************************************/
 
 #include "../config.h"
-#ifdef LNET
+#ifdef LOCONET
 
 #include <string.h>
 #include <avr/interrupt.h>

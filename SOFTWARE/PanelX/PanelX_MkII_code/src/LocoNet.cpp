@@ -69,7 +69,7 @@
 
 
 #include "../config.h"
-#ifdef LNET
+#ifdef LOCONET
 
 #include "LocoNet.h"
 

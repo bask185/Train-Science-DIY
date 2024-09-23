@@ -1356,6 +1356,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x04")
+		(at 38.1 92.71 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2e38cf82-40b1-4d4b-b622-f197ae30af3d")
+		(property "Reference" "J101"
+			(at 37.719 83.947 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x04"
+			(at 24.13 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 38.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 38.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C395831"
+			(at 38.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff9ee298-b892-40d4-84a5-4b358bd8606a")
+		)
+		(pin "2"
+			(uuid "e0d188f3-ed27-4b9f-8b7c-42a1f1c71ef7")
+		)
+		(pin "3"
+			(uuid "9f8fce16-265e-4364-a6d6-8b2d9a8edf38")
+		)
+		(pin "4"
+			(uuid "25576d4a-b918-49e9-88ad-4c6aff913baa")
+		)
+		(instances
+			(project "OS-servoDriver"
+				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e"
+					(reference "J101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 93.98 110.49 0)
 		(unit 1)
@@ -1548,81 +1631,6 @@
 			(project "OS-servoDriver"
 				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e"
 					(reference "#PWR0103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 38.1 92.71 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bcd41af3-d16c-439e-a328-4b2f72ff148b")
-		(property "Reference" "J101"
-			(at 38.1 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x04"
-			(at 38.1 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal"
-			(at 38.1 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 38.1 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1348bdcf-2ef9-4f8e-b340-86887a51b82e")
-		)
-		(pin "2"
-			(uuid "cbc76f99-d41c-45ff-b4e7-d6191e425dc0")
-		)
-		(pin "3"
-			(uuid "527877c0-5a86-41f2-8fe6-b973501e2d20")
-		)
-		(pin "4"
-			(uuid "b9b69a5f-2eea-42a6-9cd2-a63941fca65a")
-		)
-		(instances
-			(project "OS-servoDriver"
-				(path "/b6ccf16f-5cc5-4d5a-97fc-20f76ee5c73e"
-					(reference "J101")
 					(unit 1)
 				)
 			)

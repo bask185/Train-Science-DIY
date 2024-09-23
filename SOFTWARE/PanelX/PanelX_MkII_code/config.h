@@ -11,5 +11,5 @@
  * https://creativecommons.org/publicdomain/zero/1.0/
  */
 
-// #define LOCONET
-#define XPRESSNET
+#define LOCONET
+// #define XPRESSNET

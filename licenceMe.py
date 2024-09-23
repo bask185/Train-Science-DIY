@@ -20,6 +20,13 @@ license_text = """/*
 # Bestandsextensies die we willen aanpassen
 extensions = ['.cpp', '.h']
 
+# Lijst van bestanden die moeten worden uitgesloten
+excluded_files = [
+    "NmraDcc.cpp", "NmraDcc.h", "ln_buf.cpp", "ln_buf.h", "ln_config.h",
+    "ln_sw_uart.cpp", "ln_sw_uart.h", "ln_opc.h", "utils.h", "utils.c",
+    "LocoNet.h", "LocoNet.cpp", "XpressNetMaster.cpp", "XpressNetMaster.h"
+]
+
 def prepend_license_to_file(file_path):
     with open(file_path, 'r+') as file:
         content = file.read()
@@ -29,10 +36,12 @@ def prepend_license_to_file(file_path):
 def process_files_in_directory(directory):
     for root, _, files in os.walk(directory):
         for file in files:
-            if any(file.endswith(ext) for ext in extensions):
+            if any(file.endswith(ext) for ext in extensions) and file not in excluded_files:
                 file_path = os.path.join(root, file)
                 prepend_license_to_file(file_path)
                 print(f"Licentie toegevoegd aan: {file_path}")
+            else:
+                print(f"Bestand overgeslagen: {file}")
 
 if __name__ == "__main__":
     # Start in de huidige directory

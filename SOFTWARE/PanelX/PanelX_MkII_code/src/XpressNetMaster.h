@@ -32,6 +32,10 @@
 	- fix range CV# Adr to uint16_t
 */
 
+#include "../config.h"
+
+#ifdef XPRESSNET
+
 // ensure this library description is only included once
 #ifndef XpressNetMaster_h
 #define XpressNetMaster_h
@@ -292,3 +296,4 @@ class XpressNetMasterClass
 
 #endif
 
+#endif

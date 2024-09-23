@@ -1,5 +1,5 @@
 Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
-J1,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",143.4325,-95.393,90.0,top
-J2,Screw_Terminal_01x02,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",102.2235,-97.001,-90.0,top
-SW501,SW_SPDT,limitSwitch,141.343,-82.096,0.0,bottom
-SW502,SW_SPDT,limitSwitch,104.132,-82.223,0.0,top
+J1,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",136.5,-95.838,90.0,top
+J2,Screw_Terminal_01x02,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",119.156,-97.556,-90.0,top
+SW501,SW_SPDT,limitSwitch,146.353,-88.055,0.0,bottom
+SW502,SW_SPDT,limitSwitch,109.122,-88.055,0.0,top
