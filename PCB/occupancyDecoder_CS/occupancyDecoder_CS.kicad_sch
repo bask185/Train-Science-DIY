@@ -1,0 +1,660 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5ccbe098-5784-427e-9721-db3f20de1ebf")
+	(paper "A4")
+	(lib_symbols)
+	(polyline
+		(pts
+			(xy 87.63 97.79) (xy 87.63 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00b3d74b-b883-45e1-a0ff-0a26cb926fe2")
+	)
+	(polyline
+		(pts
+			(xy 88.9 87.63) (xy 87.63 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b040c3e-a546-458a-b1ea-507b2c0b73d0")
+	)
+	(polyline
+		(pts
+			(xy 85.09 86.36) (xy 87.63 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f95c75f-0461-4212-9fc7-a3aaf1b4a91a")
+	)
+	(polyline
+		(pts
+			(xy 88.9 81.28) (xy 90.17 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff71050-3cba-46ba-b9ed-e90264558077")
+	)
+	(polyline
+		(pts
+			(xy 88.9 82.55) (xy 88.9 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "156698df-7c28-4666-b47e-bb63599440cf")
+	)
+	(bus
+		(pts
+			(xy 138.43 86.36) (xy 144.78 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1655587c-9fbb-4884-8253-f5fa76722623")
+	)
+	(bus
+		(pts
+			(xy 138.43 74.93) (xy 144.78 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a310e12-247c-4e0f-8e44-24c21f7f4139")
+	)
+	(polyline
+		(pts
+			(xy 88.9 73.66) (xy 87.63 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fdc14ad-bfd9-47e2-9dec-71224fdabfda")
+	)
+	(polyline
+		(pts
+			(xy 87.63 83.82) (xy 87.63 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "217ced44-8570-4cb8-92b8-f34d17050fa0")
+	)
+	(polyline
+		(pts
+			(xy 85.09 74.93) (xy 86.36 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22d67f1b-6237-48c4-a378-518843f38ae5")
+	)
+	(wire
+		(pts
+			(xy 106.68 80.01) (xy 115.57 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e9706d0-dcdd-49f2-ab4e-8499997b4c43")
+	)
+	(polyline
+		(pts
+			(xy 85.09 88.9) (xy 86.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3537cb41-fe69-4f21-9c66-aea43b34e2e5")
+	)
+	(polyline
+		(pts
+			(xy 90.17 95.25) (xy 90.17 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45c3e6ab-e38a-4ea9-a7e4-e8f5ae998e54")
+	)
+	(polyline
+		(pts
+			(xy 85.09 95.25) (xy 86.36 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cb8414d-77f6-41bb-93fb-4df9b8e40ae4")
+	)
+	(polyline
+		(pts
+			(xy 87.63 96.52) (xy 88.9 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e76b8e1-1af8-4faf-bfe0-a56993e1f3ca")
+	)
+	(polyline
+		(pts
+			(xy 90.17 81.28) (xy 90.17 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ff5b479-70f7-4b4f-9317-a5d4732d4c22")
+	)
+	(polyline
+		(pts
+			(xy 88.9 95.25) (xy 90.17 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51e5a94b-3cff-47a1-9248-971ab5ca95a8")
+	)
+	(polyline
+		(pts
+			(xy 88.9 74.93) (xy 88.9 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "736a4e1a-2375-45ac-a24e-cb6a9a2100f6")
+	)
+	(wire
+		(pts
+			(xy 115.57 77.47) (xy 106.68 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "755fd950-4b98-4129-ab99-4d308520b739")
+	)
+	(polyline
+		(pts
+			(xy 90.17 88.9) (xy 88.9 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7587b9ab-1a33-462e-a761-a1dbc49ba3a4")
+	)
+	(polyline
+		(pts
+			(xy 85.09 91.44) (xy 86.36 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e83e8ac-3dde-4547-8a91-e5f244e0823d")
+	)
+	(polyline
+		(pts
+			(xy 90.17 74.93) (xy 88.9 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ec6455d-866a-4943-a7a3-19e73b15d206")
+	)
+	(polyline
+		(pts
+			(xy 85.09 72.39) (xy 87.63 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "882aaf5f-b93f-49b1-b15a-6fd991cc4a5c")
+	)
+	(polyline
+		(pts
+			(xy 85.09 90.17) (xy 86.36 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "893206ff-8beb-48d8-b9a5-01a201990be8")
+	)
+	(polyline
+		(pts
+			(xy 85.09 93.98) (xy 86.36 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4cfa0e9-9aa8-4224-83f1-0c8a3df98c54")
+	)
+	(polyline
+		(pts
+			(xy 85.09 78.74) (xy 86.36 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aad410ca-15e4-417e-b440-bdd23567b3ce")
+	)
+	(polyline
+		(pts
+			(xy 85.09 92.71) (xy 86.36 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af0a71b6-2269-4a19-882a-2c43e1f7959e")
+	)
+	(polyline
+		(pts
+			(xy 85.09 97.79) (xy 87.63 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc3cef51-6725-472a-95bc-27e1dad22d64")
+	)
+	(polyline
+		(pts
+			(xy 85.09 77.47) (xy 86.36 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1e10c15-0200-436a-a5ff-c52dfb4b6508")
+	)
+	(polyline
+		(pts
+			(xy 87.63 82.55) (xy 88.9 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d416db55-872d-4466-be1f-ceb8f18533c8")
+	)
+	(polyline
+		(pts
+			(xy 88.9 88.9) (xy 88.9 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5f55590-c895-4e77-9817-f15f5d108631")
+	)
+	(polyline
+		(pts
+			(xy 88.9 96.52) (xy 88.9 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd4686ff-83ea-4ea2-8725-85b1e73db090")
+	)
+	(polyline
+		(pts
+			(xy 85.09 76.2) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8a1000d-ff5b-495c-a9a0-541e0f47a0c8")
+	)
+	(polyline
+		(pts
+			(xy 85.09 80.01) (xy 86.36 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f26f30b5-fd03-4696-85dc-ab7dc397e1a3")
+	)
+	(polyline
+		(pts
+			(xy 87.63 87.63) (xy 87.63 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4af7d3d-92b7-4654-83b3-603f0935ec49")
+	)
+	(polyline
+		(pts
+			(xy 85.09 81.28) (xy 86.36 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7154f2b-d790-487f-9cc7-f848c5f2a7b5")
+	)
+	(polyline
+		(pts
+			(xy 87.63 73.66) (xy 87.63 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f96b59bb-1e9b-459d-bcab-b890722c1238")
+	)
+	(polyline
+		(pts
+			(xy 85.09 83.82) (xy 87.63 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc93ddc8-6334-403c-b8da-f9a7d2704a96")
+	)
+	(sheet
+		(at 85.09 71.12)
+		(size 21.59 27.94)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3f6d5bd9-4904-46e2-b154-edfbdaf554bc")
+		(property "Sheetname" "Lnet"
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Lnet.kicad_sch"
+			(at 85.09 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Lnet_Rx" input
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7a86b4d8-c73d-4fd4-b708-34aeb047a6bf")
+		)
+		(pin "Lnet_Tx" input
+			(at 106.68 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2fb8f445-8e09-469e-9fe1-51e3feae90a6")
+		)
+		(instances
+			(project "occupancyDecoder_CS"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 81.28)
+		(size 21.59 6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7b0db8f5-927c-4f58-8788-ce2bcff41f7a")
+		(property "Sheetname" "GPIO_B"
+			(at 152.4 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "GPIO_B.kicad_sch"
+			(at 146.05 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GPIO_B[1..8]" input
+			(at 144.78 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "13dba678-0a92-44f3-837e-6cce7d5d6cce")
+		)
+		(instances
+			(project "occupancyDecoder_CS"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 90.17 59.69)
+		(size 12.7 3.81)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ab851e10-6952-453a-94c1-2661101c520a")
+		(property "Sheetname" "LDO"
+			(at 93.98 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "voltageRegulator.kicad_sch"
+			(at 81.28 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "occupancyDecoder_CS"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115.57 69.85)
+		(size 22.86 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ae44f076-083a-4f7c-82da-9165b8813e09")
+		(property "Sheetname" "uController"
+			(at 115.57 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "uController.kicad_sch"
+			(at 115.57 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Lnet_Tx" input
+			(at 115.57 80.01 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2ba785a3-8044-4a3f-8dab-b5fbee381065")
+		)
+		(pin "Lnet_Rx" input
+			(at 115.57 77.47 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3b1309c4-6c13-4da1-99bc-e380f49b3d8c")
+		)
+		(pin "GPIO_B[1..8]" input
+			(at 138.43 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "033af8bf-e2d3-4b98-939f-654cec827820")
+		)
+		(pin "GPIO_A[1..8]" input
+			(at 138.43 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c8588cf0-d988-4546-ad7f-8fc2d6e77ab1")
+		)
+		(instances
+			(project "occupancyDecoder_CS"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 69.85)
+		(size 21.59 7.62)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e02a3c1e-8166-4689-93c8-1f4d15e3973e")
+		(property "Sheetname" "GPIO_A"
+			(at 152.4 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "GPIO_A.kicad_sch"
+			(at 146.05 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GPIO_A[1..8]" input
+			(at 144.78 74.93 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "815f3b53-ba5f-4ccc-9c72-457c1dc568ed")
+		)
+		(instances
+			(project "occupancyDecoder_CS"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "21")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
