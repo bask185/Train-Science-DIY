@@ -1,0 +1,2877 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5ccbe098-5784-427e-9721-db3f20de1ebf")
+	(paper "A4")
+	(lib_symbols
+		(symbol "custom_kicad_lib_sk:screwterminal"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "u"
+				(at 0 0.127 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "screwterminal_1_1"
+				(rectangle
+					(start -2.3 2.3)
+					(end 2.3 -2.3)
+					(stroke
+						(width 0)
+						(type default)
+						(color 0 132 0 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+						(color 137 143 138 1)
+					)
+					(fill
+						(type color)
+						(color 132 132 132 1)
+					)
+				)
+			)
+		)
+	)
+	(bus
+		(pts
+			(xy 109.22 81.28) (xy 120.65 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c313377-3282-46cb-b21d-016d1e2060a0")
+	)
+	(wire
+		(pts
+			(xy 109.22 68.58) (xy 120.65 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23319edb-3d90-4023-b343-afd2f1690585")
+	)
+	(bus
+		(pts
+			(xy 74.93 116.84) (xy 86.36 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea60e94-9fcc-4746-94f1-ded46ba11349")
+	)
+	(bus
+		(pts
+			(xy 109.22 134.62) (xy 120.65 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d467b76-7978-4668-9628-b1c07bfd12c0")
+	)
+	(wire
+		(pts
+			(xy 86.36 68.58) (xy 69.85 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a6a0506-5641-4272-9de2-763bd82c1b71")
+	)
+	(wire
+		(pts
+			(xy 67.31 71.12) (xy 86.36 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c6e02c-c593-4448-9835-5f8bbad78d0c")
+	)
+	(wire
+		(pts
+			(xy 109.22 71.12) (xy 120.65 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a682be3-c5ae-41ea-9c61-eefec1053e75")
+	)
+	(bus
+		(pts
+			(xy 102.87 59.69) (xy 100.33 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "749eafea-a061-437a-a2fd-d19ab201e9b0")
+	)
+	(bus
+		(pts
+			(xy 100.33 59.69) (xy 100.33 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba1054c-cf6b-49d0-9b5c-d7068a7057d9")
+	)
+	(bus
+		(pts
+			(xy 74.93 134.62) (xy 86.36 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90b8779a-a13f-4b44-95eb-4683b07da12d")
+	)
+	(bus
+		(pts
+			(xy 95.25 59.69) (xy 95.25 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "992fac82-9a76-42fc-abc7-3b95b0af3b34")
+	)
+	(bus
+		(pts
+			(xy 92.71 59.69) (xy 95.25 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a58691d1-db9f-4edd-bd0a-86898af829ba")
+	)
+	(bus
+		(pts
+			(xy 74.93 81.28) (xy 86.36 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a623c1e1-94e0-4ae5-b8a1-f0d68f5b9a2b")
+	)
+	(wire
+		(pts
+			(xy 69.85 59.69) (xy 72.39 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a842ba18-5dba-4a99-80db-8c21f0d4ef1f")
+	)
+	(bus
+		(pts
+			(xy 74.93 99.06) (xy 86.36 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae188780-b5ba-4ab7-bd5e-4beb02929aed")
+	)
+	(wire
+		(pts
+			(xy 69.85 68.58) (xy 69.85 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af282697-dcae-4e91-9f2c-264894e2085d")
+	)
+	(bus
+		(pts
+			(xy 109.22 99.06) (xy 120.65 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc3271ef-0ec9-4492-a445-96eec83d52c3")
+	)
+	(bus
+		(pts
+			(xy 109.22 116.84) (xy 120.65 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7bc4fdd-824d-4c35-ac6b-b9c28129f9ca")
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0bff7b4c-ee8d-4b55-842c-9d56c1405c21")
+		(property "Reference" "u124"
+			(at 135.89 96.393 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u124")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d478b2d-703f-4938-b4df-cc17d04f152f")
+		(property "Reference" "u132"
+			(at 135.89 142.113 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u132")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1091100b-91af-4901-9459-8fb3ddec9a7f")
+		(property "Reference" "u122"
+			(at 135.89 83.693 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 90.17 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1799e63a-e105-4fca-af6e-b7445677c097")
+		(property "Reference" "u113"
+			(at 90.297 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 90.17 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18d80a6e-7ede-40b5-adb6-4255028691ed")
+		(property "Reference" "u125"
+			(at 135.89 101.473 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a04593d-5f44-4cb5-ab00-c2152f3b5a26")
+		(property "Reference" "u127"
+			(at 135.89 114.173 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b4b4d36-68ed-4704-9e0c-176d1b6e9c37")
+		(property "Reference" "u111"
+			(at 59.69 137.033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u111")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2beb6305-a63c-4ff1-a07e-9b82d277f134")
+		(property "Reference" "u101"
+			(at 59.69 78.613 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f284b12-ceb6-4199-a068-ee7572f5b8cf")
+		(property "Reference" "u126"
+			(at 135.89 106.553 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "351291fb-1cbd-454c-878a-b24fe4052ce7")
+		(property "Reference" "u106"
+			(at 59.69 106.553 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3cca2231-6d8a-4263-ab4f-77690e87ac12")
+		(property "Reference" "u129"
+			(at 135.89 124.333 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u129")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4187bdd6-f2a0-44e5-bb85-c8eb31f32eca")
+		(property "Reference" "u107"
+			(at 59.69 114.173 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45eb55ed-fb72-42a7-b42f-90b3c013dd80")
+		(property "Reference" "u130"
+			(at 135.89 131.953 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u130")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 95.25 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5526bc89-bcee-441f-96e9-19d68e2b94a8")
+		(property "Reference" "u115"
+			(at 95.377 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 95.25 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 100.33 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56bf41b8-8ad5-484b-bfc7-32d1abcba8c1")
+		(property "Reference" "u117"
+			(at 100.457 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 100.33 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57eeb8f8-bc1f-4bfe-9eca-7f5059255534")
+		(property "Reference" "u112"
+			(at 59.69 142.113 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "596d5a57-e37f-4b5e-9a52-b941e6fe2ecb")
+		(property "Reference" "u104"
+			(at 59.69 96.393 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a6eaaf4-584d-46d4-b5a1-37f1d508a666")
+		(property "Reference" "u109"
+			(at 59.69 124.333 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "765f315c-e930-4f8b-9f65-35dc6ddab0e4")
+		(property "Reference" "u105"
+			(at 59.69 101.473 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e0680a3-df6c-48fc-8577-cac3d49c3e61")
+		(property "Reference" "u131"
+			(at 135.89 137.033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94a3146b-b298-41b5-a02f-b4cea72aaed7")
+		(property "Reference" "u103"
+			(at 59.69 88.773 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d03a2a4-62da-47db-b493-4842b40dc7f3")
+		(property "Reference" "u128"
+			(at 135.89 119.253 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a05e8d45-2273-4eed-a459-9d375a0b664c")
+		(property "Reference" "u123"
+			(at 135.89 88.773 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdde62ea-49b8-42b7-941f-130d90066fee")
+		(property "Reference" "u102"
+			(at 59.69 83.693 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 135.89 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e16bd40c-e583-48c8-8217-7c2ddfb2be62")
+		(property "Reference" "u121"
+			(at 135.89 78.613 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 139.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u121")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 105.41 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7c6dae5-4c2b-4e94-892c-6c54b39f617b")
+		(property "Reference" "u119"
+			(at 105.537 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 105.41 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 105.41 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e899ea0c-d77c-4858-afd5-2646daa99d23")
+		(property "Reference" "u110"
+			(at 59.69 131.953 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f522db20-ee95-46d8-b476-975041c6e0be")
+		(property "Reference" "u108"
+			(at 59.69 119.253 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 63.5 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 129.54)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "1adb3383-6aaf-48f6-b361-31852636e83b")
+		(property "Sheetname" "mosfets4"
+			(at 121.412 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 118.11 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 120.65 134.62 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "02adaa6c-1ba6-44f1-8b11-10366c783337")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 111.76)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "5a3549ea-1dab-4643-a5e9-0237336b8998")
+		(property "Sheetname" "mosfets6"
+			(at 64.008 114.554 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 55.372 127.254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 74.93 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c81dc77f-d2ef-4022-9508-5c09af9907e5")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 111.76)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "6b77a05e-4062-42de-8e89-4de0199dad05")
+		(property "Sheetname" "mosfets3"
+			(at 121.412 114.554 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 118.11 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 120.65 116.84 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "0642fef8-b3f0-4ab7-9ab0-54e73a286346")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 76.2)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9")
+		(property "Sheetname" "mosfets1"
+			(at 123.19 79.248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 118.11 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 120.65 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a31cb827-4048-4aa0-919f-13d119fe921b")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 48.26 67.31)
+		(size 19.05 5.08)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "855e42d4-4790-4f9b-a716-15e9611ea0b5")
+		(property "Sheetname" "currentSense"
+			(at 48.514 70.358 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "currentSense.kicad_sch"
+			(at 42.418 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CS" input
+			(at 67.31 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1cb4a419-952d-4f93-8f5d-30c2e4e92cfa")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 72.39 55.88)
+		(size 20.32 6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "8844a919-370c-43dd-897a-ce1fcbceebfa")
+		(property "Sheetname" "DCC"
+			(at 80.264 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DCC.kicad_sch"
+			(at 72.644 62.738 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_TTL" output
+			(at 72.39 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "ed1fae41-c155-4c27-9552-bc008d13a388")
+		)
+		(pin "{DCC}" input
+			(at 92.71 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "52c950cd-44e1-4956-88b4-41b519b15b16")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 129.54)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "94843fb2-be6a-44fa-a624-8db47a41bc36")
+		(property "Sheetname" "mosfets5"
+			(at 64.262 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 55.372 145.288 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 74.93 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a61b259c-23fe-4427-ba0c-4ea2f70a65ea")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 76.2)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "a23ea9f1-e99e-481b-9310-6190c1957d35")
+		(property "Sheetname" "mosfets8"
+			(at 63.754 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 54.864 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 74.93 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8e3b8905-019b-4200-9fcd-c1343c0e3900")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 102.87 55.88)
+		(size 20.32 6.35)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "ab851e10-6952-453a-94c1-2661101c520a")
+		(property "Sheetname" "POWER"
+			(at 108.204 58.166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "voltageRegulator.kicad_sch"
+			(at 99.822 62.992 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{POW}" input
+			(at 102.87 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9aaa9e0c-3164-4c49-aef5-71e5eb23cdc4")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 67.31)
+		(size 22.86 77.47)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "ae44f076-083a-4f7c-82da-9165b8813e09")
+		(property "Sheetname" "uController"
+			(at 87.63 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "uController.kicad_sch"
+			(at 84.582 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_TTL" passive
+			(at 86.36 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a16e8f37-d912-4776-b1c4-a4c5e20a3daa")
+		)
+		(pin "CS" input
+			(at 86.36 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "72751804-ff56-44d1-af09-39caea98a2d5")
+		)
+		(pin "5{Coil}" input
+			(at 86.36 134.62 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b7c85124-145c-41a5-b65e-1b9f7170acd4")
+		)
+		(pin "6{Coil}" input
+			(at 86.36 116.84 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1fa7ca6b-dbcf-476a-b5da-0d45738e8f36")
+		)
+		(pin "7{Coil}" input
+			(at 86.36 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e735861c-a365-488d-a778-1f903c978d7a")
+		)
+		(pin "8{Coil}" input
+			(at 86.36 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bbdce9c9-7dac-4808-8316-eb31bbd97d14")
+		)
+		(pin "1{Coil}" input
+			(at 109.22 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6bc33fb8-e68c-4478-83bf-ee076b58da67")
+		)
+		(pin "2{Coil}" input
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a7c136dd-9c14-450a-8a74-154539781d5e")
+		)
+		(pin "3{Coil}" input
+			(at 109.22 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "23559268-aff7-4ed4-b105-b68ebdbb9b2c")
+		)
+		(pin "4{Coil}" input
+			(at 109.22 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "839c8467-5992-4449-9b0d-8a68e46684d0")
+		)
+		(pin "chargeEnable" input
+			(at 109.22 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "03f8c086-dc89-4ffe-b9ae-ef5de5547dd0")
+		)
+		(pin "coilVoltage" input
+			(at 109.22 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1a8f92e2-87ab-4f73-9d21-9756df851df9")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 93.98)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "ae46e76e-fd86-4f2f-be93-5435d0a35f38")
+		(property "Sheetname" "mosfets7"
+			(at 63.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 55.372 109.728 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 74.93 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "42eab0b1-a0c3-448e-a2d7-7c9a7ae503f2")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 64.77)
+		(size 17.78 7.62)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "af0ee089-ddd9-4417-9008-8520e1f39b72")
+		(property "Sheetname" "CDU"
+			(at 127 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CDU.kicad_sch"
+			(at 120.65 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "coilVoltage" input
+			(at 120.65 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5f29d349-822f-4ddc-bb38-0d1ec9aa24c4")
+		)
+		(pin "chargeEnable" input
+			(at 120.65 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "0b657fe1-ec61-4193-a78b-1ccab2dd0d66")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 87.63 34.29)
+		(size 20.32 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "e35705ad-433e-48dc-9a12-896839d10491")
+		(property "Sheetname" "connectors"
+			(at 92.964 40.894 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "connectors.kicad_sch"
+			(at 85.09 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{POW}" input
+			(at 100.33 49.53 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "26cd234e-96e8-45ae-81db-a12ce471c0df")
+		)
+		(pin "{DCC}" input
+			(at 95.25 49.53 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b39d2b71-9995-4b5c-81cc-846ca9cc8a8d")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 93.98)
+		(size 17.78 15.24)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 15 185 194 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "ebaeaca9-7f91-4a38-ad09-e71c09d66221")
+		(property "Sheetname" "mosfets2"
+			(at 123.444 96.774 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfets.kicad_sch"
+			(at 118.364 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{Coil}" input
+			(at 120.65 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "ef5e4489-6d76-448a-819b-22404ba434a4")
+		)
+		(instances
+			(project "OSSD-8A"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

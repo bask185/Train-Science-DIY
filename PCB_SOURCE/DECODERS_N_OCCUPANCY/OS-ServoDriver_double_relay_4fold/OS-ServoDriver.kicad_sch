@@ -1,0 +1,1981 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "6c2c208c-97cf-495d-b492-7f3fa6958cdd")
+	(paper "A4")
+	(title_block
+		(title "OS-ServoDriver")
+		(company "Train-Science")
+	)
+	(lib_symbols
+		(symbol "custom_kicad_lib_sk:default_switch"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "default_switch"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:default_switch"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single Pole Single Throw (SPST) switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C318884"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "default_switch_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.524 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "default_switch_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:screwterminal"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "u"
+				(at 0 0.127 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "screwterminal_1_1"
+				(rectangle
+					(start -2.3 2.3)
+					(end 2.3 -2.3)
+					(stroke
+						(width 0)
+						(type default)
+						(color 0 132 0 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+						(color 137 143 138 1)
+					)
+					(fill
+						(type color)
+						(color 132 132 132 1)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(bus_alias "Controls"
+		(members "Servo1" "Servo2" "Relay1" "Relay2" "Relay3" "Relay4")
+	)
+	(junction
+		(at 130.81 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0b09c732-7241-414e-a4b2-59866274137f")
+	)
+	(junction
+		(at 139.7 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f763965-4989-4f8b-bc86-728a69986dac")
+	)
+	(junction
+		(at 147.32 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c13503a0-b0ed-4b68-ac2f-c182111621f2")
+	)
+	(junction
+		(at 135.89 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2a18042-bb20-4b88-8095-12dfc42cc2c0")
+	)
+	(wire
+		(pts
+			(xy 82.55 88.9) (xy 90.17 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0161a1d4-3252-470c-afcd-69872249f67c")
+	)
+	(wire
+		(pts
+			(xy 139.7 123.19) (xy 139.7 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17584312-3aab-4836-b459-ec8dbb9d83af")
+	)
+	(bus
+		(pts
+			(xy 120.65 88.9) (xy 127 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21f7ace9-01d6-4b6a-a153-01ff11d47a7a")
+	)
+	(bus
+		(pts
+			(xy 120.65 91.44) (xy 127 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27aebf98-5e5a-4388-84f3-230311bcc5be")
+	)
+	(wire
+		(pts
+			(xy 135.89 147.32) (xy 135.89 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28a65122-10c1-4594-b7ac-10b3c19c4bc5")
+	)
+	(wire
+		(pts
+			(xy 120.65 123.19) (xy 139.7 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a2a4f7c-0b20-412c-8634-c6ab96ea7897")
+	)
+	(wire
+		(pts
+			(xy 120.65 118.11) (xy 154.94 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b9edff5-bbe2-40ac-847f-fdf5d0325069")
+	)
+	(wire
+		(pts
+			(xy 135.89 142.24) (xy 139.7 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30fe4f79-c5f6-4b87-b065-5ebeb0382e68")
+	)
+	(bus
+		(pts
+			(xy 55.88 88.9) (xy 58.42 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3983de6d-dc43-4af1-9da7-5e677a5441b6")
+	)
+	(wire
+		(pts
+			(xy 123.19 128.27) (xy 120.65 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5be6fa00-7822-4834-aac7-e5a4ff5f49e6")
+	)
+	(wire
+		(pts
+			(xy 120.65 120.65) (xy 147.32 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d3dc110-5d85-4e55-883c-e761995abaef")
+	)
+	(wire
+		(pts
+			(xy 140.97 74.93) (xy 144.78 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60d51164-bd8f-4973-b02e-09ea1e1de9ef")
+	)
+	(bus
+		(pts
+			(xy 127 88.9) (xy 127 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62b7ae89-19a8-4f2b-88cd-6c875411a921")
+	)
+	(bus
+		(pts
+			(xy 52.07 60.96) (xy 69.85 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "646c4db3-628d-431d-beb8-e19ab5ab6f74")
+	)
+	(bus
+		(pts
+			(xy 52.07 73.66) (xy 55.88 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "808284fe-d7ae-4fa2-9e12-6a8c27a334b8")
+	)
+	(bus
+		(pts
+			(xy 127 91.44) (xy 127 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "854b5f09-29f7-42a2-b6e3-d455fbc6bfda")
+	)
+	(wire
+		(pts
+			(xy 147.32 120.65) (xy 147.32 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fc76d94-969d-4a68-8d50-88891a03c9b7")
+	)
+	(bus
+		(pts
+			(xy 127 83.82) (xy 144.78 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4098744-7ab0-4269-a4e6-b348f9d06673")
+	)
+	(wire
+		(pts
+			(xy 154.94 118.11) (xy 154.94 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2f89fbd-8009-4b65-a2ca-43f4892510f3")
+	)
+	(wire
+		(pts
+			(xy 147.32 142.24) (xy 154.94 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd56e82d-4d43-400a-b666-d974bbb0a043")
+	)
+	(wire
+		(pts
+			(xy 140.97 97.79) (xy 144.78 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3410a70-3665-4477-a834-157200a45427")
+	)
+	(wire
+		(pts
+			(xy 130.81 125.73) (xy 120.65 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f36449-4940-4ac6-bfe3-753028e515e9")
+	)
+	(wire
+		(pts
+			(xy 123.19 142.24) (xy 130.81 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c44d82be-53c7-46ff-ba7c-560c73e7a2c9")
+	)
+	(wire
+		(pts
+			(xy 130.81 142.24) (xy 135.89 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c81d302c-cbef-49cf-8fda-dd128d75ecf6")
+	)
+	(wire
+		(pts
+			(xy 139.7 142.24) (xy 147.32 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da9d4435-4291-47a4-8715-5f6e672a6d9e")
+	)
+	(bus
+		(pts
+			(xy 127 106.68) (xy 144.78 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbf25a8e-90a7-490b-a32c-2244d8c1f119")
+	)
+	(wire
+		(pts
+			(xy 123.19 132.08) (xy 123.19 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ece21243-fec6-4e00-a683-2c5291b886a2")
+	)
+	(wire
+		(pts
+			(xy 140.97 100.33) (xy 144.78 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edd43d7b-56d2-405e-bc98-54f62b31fc28")
+	)
+	(bus
+		(pts
+			(xy 55.88 73.66) (xy 55.88 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef17760e-0682-4ed4-acbb-a8bdb682fb2a")
+	)
+	(wire
+		(pts
+			(xy 130.81 132.08) (xy 130.81 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7bd88fa-0984-48fd-80c4-0da4b0e689ef")
+	)
+	(wire
+		(pts
+			(xy 140.97 77.47) (xy 144.78 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f927100f-aa4c-481e-ac06-f4485441004b")
+	)
+	(text "5V high power"
+		(exclude_from_sim no)
+		(at 104.14 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c3a0f53-9404-4d3d-9518-557a122cc6e2")
+	)
+	(text "5V low power"
+		(exclude_from_sim no)
+		(at 104.14 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f99b6598-6fef-469d-a5f9-434d0720d1e6")
+	)
+	(label "DCC_B"
+		(at 140.97 77.47 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6002feac-97b1-4436-b07c-c25874b5e8eb")
+	)
+	(label "DCC_A"
+		(at 140.97 97.79 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "81cac616-83b3-4803-bd29-8a6d06d90dae")
+	)
+	(label "DCC_A"
+		(at 140.97 74.93 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8e50cedd-a943-467d-9fde-63a7ee289ce5")
+	)
+	(label "DCC_B"
+		(at 140.97 100.33 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9fa6b6ac-8683-462c-b823-c21a00772865")
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 41.91 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1689deab-b6bb-47f1-9f6e-4ddceae4f2ff")
+		(property "Reference" "u?"
+			(at 41.91 63.373 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 45.72 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "u?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:default_switch")
+		(at 139.7 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3d224d41-f87e-4784-8cee-2c83fd765678")
+		(property "Reference" "SW103"
+			(at 135.89 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "default_switch"
+			(at 140.97 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:default_switch"
+			(at 147.32 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C318884"
+			(at 140.97 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61a863c5-e7fe-468e-9bbf-75de22ce3647")
+		)
+		(pin "2"
+			(uuid "5bc10a90-4422-4345-90b4-daeeba98afb9")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "SW103")
+					(unit 1)
+				)
+			)
+			(project "atmega328"
+				(path "/8e079fd1-98e3-4beb-9638-08f2e3990e09"
+					(reference "SW201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:default_switch")
+		(at 147.32 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "43757d49-9421-40f3-b777-79f40fc4c0c8")
+		(property "Reference" "SW104"
+			(at 143.51 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "default_switch"
+			(at 148.59 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:default_switch"
+			(at 154.94 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C318884"
+			(at 148.59 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4c3d5bfd-36ac-426a-9f1e-b8f1608d7a69")
+		)
+		(pin "2"
+			(uuid "eddd7c90-6e44-4a4f-9a9b-6b73ebd0e8e3")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "SW104")
+					(unit 1)
+				)
+			)
+			(project "atmega328"
+				(path "/8e079fd1-98e3-4beb-9638-08f2e3990e09"
+					(reference "SW201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 41.91 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48fd03fc-0688-46f5-ba13-1d962a3f4572")
+		(property "Reference" "u?"
+			(at 41.91 58.293 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 45.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "u?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 41.91 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58490e66-b8f8-4141-8799-a0b9a974e2a9")
+		(property "Reference" "u?"
+			(at 41.91 73.533 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 45.72 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "u?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:default_switch")
+		(at 123.19 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65bbf6b4-6f0a-4722-9913-07431450434e")
+		(property "Reference" "SW101"
+			(at 119.38 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "default_switch"
+			(at 124.46 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:default_switch"
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C318884"
+			(at 124.46 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "95b0fe8a-7437-4308-a3d7-9053deef8e7a")
+		)
+		(pin "2"
+			(uuid "af9d4e00-cdcd-4f2b-b4d9-1712f8c050b4")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "SW101")
+					(unit 1)
+				)
+			)
+			(project "atmega328"
+				(path "/8e079fd1-98e3-4beb-9638-08f2e3990e09"
+					(reference "SW201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8efb5b6a-448f-4f12-9888-891227d60380")
+		(property "Reference" "#PWR0713"
+			(at 135.89 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db1f5a7b-90a7-4f6f-85ec-f10d1be50540")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "#PWR0713")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:default_switch")
+		(at 130.81 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bd76209d-0fb8-4f8e-8493-a9234e503eea")
+		(property "Reference" "SW102"
+			(at 127 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "default_switch"
+			(at 132.08 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:default_switch"
+			(at 138.43 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C318884"
+			(at 132.08 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82d7eec6-8e86-4090-adc2-b9d86ae5a27e")
+		)
+		(pin "2"
+			(uuid "e515ea2e-edde-4f24-90be-cb3177d486ba")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "SW102")
+					(unit 1)
+				)
+			)
+			(project "atmega328"
+				(path "/8e079fd1-98e3-4beb-9638-08f2e3990e09"
+					(reference "SW201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:default_switch")
+		(at 154.94 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0159a11-48fd-474e-8dbe-0c78ba4d9739")
+		(property "Reference" "SW105"
+			(at 151.13 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "default_switch"
+			(at 156.21 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:default_switch"
+			(at 162.56 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C318884"
+			(at 156.21 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70671077-b11e-4f39-94b9-9cf86dbbcac4")
+		)
+		(pin "2"
+			(uuid "fc0b5c86-5708-4467-be66-5c169371182b")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "SW105")
+					(unit 1)
+				)
+			)
+			(project "atmega328"
+				(path "/8e079fd1-98e3-4beb-9638-08f2e3990e09"
+					(reference "SW201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 41.91 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0a46b4c-6b40-4108-8ddb-809b7a66e30c")
+		(property "Reference" "u?"
+			(at 41.91 68.453 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 45.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(reference "u?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 90.17 48.26)
+		(size 12.7 12.7)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "09fa05e0-8432-45ce-9107-75e3f3cdb40f")
+		(property "Sheetname" "buck"
+			(at 95.25 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buck.kicad_sch"
+			(at 91.44 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 90.17 66.04)
+		(size 12.7 12.7)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4faee32b-43db-4c12-93f8-176d7e47b91d")
+		(property "Sheetname" "LDO"
+			(at 95.25 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LDO.kicad_sch"
+			(at 90.17 79.3246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 95.25)
+		(size 15.24 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "83f31f7b-a088-43b5-b283-be3bdba91fdf")
+		(property "Sheetname" "Servo3-4"
+			(at 144.78 94.5384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Servo.kicad_sch"
+			(at 144.78 112.3446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_A" input
+			(at 144.78 97.79 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1a55562a-dd67-4062-a13f-0904ced35af5")
+		)
+		(pin "DCC_B" input
+			(at 144.78 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "966ee9a8-9a74-40fb-b0dd-4475b170e9b0")
+		)
+		(pin "{Controls}" input
+			(at 144.78 106.68 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "85b4f188-7eb8-4207-8c48-a1049f5e12d8")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 90.17 82.55)
+		(size 30.48 49.53)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "983e389d-24fe-4aaa-83d5-85bda62eb3f5")
+		(property "Sheetname" "atmega"
+			(at 90.17 81.8384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "atmega.kicad_sch"
+			(at 90.17 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_in" bidirectional
+			(at 90.17 88.9 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5f9073f5-b3da-47fb-bdff-8dfe9dffd05a")
+		)
+		(pin "D9" bidirectional
+			(at 120.65 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "90b40a65-15ee-4387-9269-a6a7d5e12482")
+		)
+		(pin "D11" bidirectional
+			(at 120.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8ce4eaed-b120-4d2d-b9bf-14e8a1585bd8")
+		)
+		(pin "D8" bidirectional
+			(at 120.65 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "5218a0cc-7610-473f-97d6-70806b72aa38")
+		)
+		(pin "D10" bidirectional
+			(at 120.65 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1b44f503-c03b-4ece-859e-fee128e4c02d")
+		)
+		(pin "D12" bidirectional
+			(at 120.65 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "67f67b23-6f11-434f-889b-a8869ae8c2e1")
+		)
+		(pin "serv12{Controls}" input
+			(at 120.65 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2ac211f5-5e3a-40b9-bcca-ade84b66fb27")
+		)
+		(pin "serv34{Controls}" input
+			(at 120.65 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "17e523e9-b563-4b7a-b7e2-55d73ad99251")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 55.88)
+		(size 12.7 20.32)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b7a70e35-c36f-49fb-937e-d14ca40444cd")
+		(property "Sheetname" "connector"
+			(at 40.64 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "connector.kicad_sch"
+			(at 39.37 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "{DCC}" input
+			(at 52.07 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "99e09597-453b-4363-8c7c-948487909682")
+		)
+		(pin "{AC}" input
+			(at 52.07 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8929321c-a028-4a5f-95b5-40d8e734f3cf")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 72.39)
+		(size 15.24 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c99ee1d3-65de-4944-b45b-62e820ecfe14")
+		(property "Sheetname" "Servo1-2"
+			(at 144.78 71.6784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Servo.kicad_sch"
+			(at 144.78 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_A" input
+			(at 144.78 74.93 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2e0a475a-9bcd-4911-86e6-8243b2b6c4fb")
+		)
+		(pin "DCC_B" input
+			(at 144.78 77.47 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b74268a9-9ac3-4473-9a6b-2c7a6a67f945")
+		)
+		(pin "{Controls}" input
+			(at 144.78 83.82 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "38868199-dba8-4011-9ad9-28187aca9d57")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 71.12 54.61)
+		(size 12.7 12.7)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dc187374-5a49-4147-9eb9-33e7913a3d12")
+		(property "Sheetname" "rectifier"
+			(at 71.12 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rectifier.kicad_sch"
+			(at 66.04 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{AC}" input
+			(at 71.12 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e3ecdd2d-ec13-4f33-b9a8-08bebcbf9add")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 58.42 83.82)
+		(size 24.13 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f1422222-882c-4154-9cda-9dd1b52f567d")
+		(property "Sheetname" "DCC"
+			(at 58.42 83.1084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DCC.kicad_sch"
+			(at 58.42 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC_TTL" input
+			(at 82.55 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c03b7aee-484e-4c4e-b630-6ef0ab4a24e1")
+		)
+		(pin "{DCC}" input
+			(at 58.42 88.9 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a8ef1b63-1cb7-4035-b713-28fd8c457ff0")
+		)
+		(instances
+			(project "OS-ServoDriver"
+				(path "/6c2c208c-97cf-495d-b492-7f3fa6958cdd"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

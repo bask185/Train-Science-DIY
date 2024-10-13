@@ -1,0 +1,49 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C201,12pF,C_0603_1608Metric,52.268,-113.13,90.0,top
+C202,100nF,C_0402_1005Metric,54.690589,-110.123589,135.0,top
+C203,12pF,C_0603_1608Metric,55.03,-116.051,0.0,top
+C301,330nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,57.695,-118.351,180.0,top
+C302,100nF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,57.6685,-127.495,180.0,top
+C303,100uF,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,53.34,-128.016,0.0,top
+D1,D,D_SOD-323,52.216,-80.331,180.0,top
+D201,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,65.532,-130.937,0.0,top
+D202,1N4148WS,D_SOD-323,41.846,-82.35,0.0,top
+D301,MB10S,TO-269AA,46.075,-127.0,180.0,top
+D302,1N4148WS,D_SOD-323,67.654,-123.65,180.0,top
+D401,1N4148WS,D_SOD-323,67.654,-95.15,180.0,top
+D501,1N4148WS,D_SOD-323,41.846,-110.35,0.0,top
+J201,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",35.5,-96.5,-90.0,top
+J203,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",35.5,-82.5,-90.0,top
+J301,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",74.0,-110.0,90.0,top
+J302,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",74.0,-124.0,90.0,top
+J401,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",74.0,-82.5,90.0,top
+J402,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",74.0,-96.5,90.0,top
+J501,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",35.5,-124.0,-90.0,top
+J502,~,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",35.5,-110.0,-90.0,top
+J701,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",54.75,-73.0365,180.0,top
+K201,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,44.5,-89.0,270.0,top
+K301,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,65.0,-117.0,90.0,top
+K401,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,65.0,-88.5,90.0,top
+K501,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,44.5,-117.0,270.0,top
+Q201,NPN_TOR,SOT-23,47.1315,-81.527,90.0,top
+Q301,NPN_TOR,SOT-23,62.3685,-124.473,270.0,top
+Q401,NPN_TOR,SOT-23,62.3685,-95.973,270.0,top
+Q501,NPN_TOR,SOT-23,47.1315,-109.527,90.0,top
+R201,6k2,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,65.6425,-132.928,0.0,top
+R202,10k,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,70.612,-70.612,0.0,top
+R203,100R,R_0603_smalltext,41.719,-79.429,0.0,top
+R204,1k,R_0603_smalltext,47.053,-78.159,0.0,top
+R3,10k,R_0603_smalltext,56.3035,-94.301,180.0,top
+R301,100R,R_0603_smalltext,67.781,-126.571,180.0,top
+R302,1k,R_0603_smalltext,62.447,-127.841,180.0,top
+R4,10k,R_0603_smalltext,52.724,-94.301,180.0,top
+R401,100R,R_0603_smalltext,67.781,-98.071,180.0,top
+R402,1k,R_0603_smalltext,62.447,-99.341,180.0,top
+R5,1k5,R_0603_smalltext,55.772,-80.331,180.0,top
+R501,100R,R_0603_smalltext,41.719,-107.429,0.0,top
+R502,1k,R_0603_smalltext,47.053,-106.159,0.0,top
+SW601,default_switch,default_switch,41.073,-133.278,180.0,top
+U202,ATmega328-A,TQFP-32_7x7mm_P0.8mm,58.5,-105.5,315.0,top
+U3,6N137,SOP-8_6.62x9.15mm_P2.54mm,54.61,-87.376,180.0,top
+U301,AMS1117-5.0,SOT-223-3_TabPin2,55.0,-123.0,0.0,top
+Y201,Crystal_GND2,crystal_arduino,54.969,-113.173,-90.0,top

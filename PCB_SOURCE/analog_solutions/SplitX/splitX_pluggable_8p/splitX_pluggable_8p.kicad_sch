@@ -1,0 +1,1454 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "d41a57c9-32fd-446f-bd95-0509f3085df6")
+	(paper "A4")
+	(lib_symbols
+		(symbol "connector_3.50mm_4P_horizontal_FEMALE_1"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FEMALE"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "connector_3.50mm_4P_horizontal_FEMALE_1_1_1"
+				(arc
+					(start 0 -4.572)
+					(mid -0.5058 -5.08)
+					(end 0 -5.588)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -2.032)
+					(mid -0.5058 -2.54)
+					(end 0 -3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -0.508 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0.508)
+					(mid -0.5058 0)
+					(end 0 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 3.048)
+					(mid -0.5058 2.54)
+					(end 0 2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_MALE"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MALE"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:connector_3.50mm_4P horizontal_MALE"
+				(at -5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "connector_3.50mm_4P_horizontal_MALE_1_1"
+				(rectangle
+					(start -4.2164 -4.953)
+					(end -5.08 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.2164 -2.413)
+					(end -5.08 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.2164 0.127)
+					(end -5.08 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.2164 2.667)
+					(end -5.08 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -5.08) (xy -4.2164 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -2.54) (xy -4.2164 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -4.2164 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 2.54) (xy -4.2164 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 176.53 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "284d234f-2b09-4f85-9515-ff5b9c459ac6")
+	)
+	(junction
+		(at 158.75 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a1c6369-1d51-4f3d-ad4b-a7865f9f3041")
+	)
+	(junction
+		(at 173.99 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "adee56dd-68b1-419c-a997-fad974b23f1d")
+	)
+	(junction
+		(at 171.45 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b60dc860-adf2-442d-a3e9-3127579a9ac6")
+	)
+	(junction
+		(at 168.91 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7fbd22b-47e7-41a4-99d4-090df37ce9a4")
+	)
+	(junction
+		(at 163.83 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cad78c92-8416-46ea-8c09-103fe522472f")
+	)
+	(junction
+		(at 161.29 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc168d6e-f5b4-44e1-9984-15fad9646b08")
+	)
+	(junction
+		(at 166.37 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f63dd649-b721-4346-a782-8bb1220170a5")
+	)
+	(wire
+		(pts
+			(xy 154.94 93.98) (xy 161.29 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02714e7e-c584-4c16-82f9-b13a28f22007")
+	)
+	(wire
+		(pts
+			(xy 173.99 106.68) (xy 173.99 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0635fb36-cac4-4487-9e18-610e84a00a0d")
+	)
+	(wire
+		(pts
+			(xy 154.94 109.22) (xy 176.53 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27e8a5a5-9008-4a30-ae52-76912d16a9e5")
+	)
+	(wire
+		(pts
+			(xy 173.99 106.68) (xy 180.34 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28dfd92d-bd23-44ed-8e4b-21fb72c196bb")
+	)
+	(wire
+		(pts
+			(xy 176.53 109.22) (xy 180.34 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40a67d84-68e8-454b-aaec-5afe1f70e58b")
+	)
+	(wire
+		(pts
+			(xy 171.45 88.9) (xy 171.45 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45edec0d-f4b1-416f-a6e6-67f97756fe64")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 171.45 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b34c44b-6c29-4283-8536-41a4b94a8f48")
+	)
+	(wire
+		(pts
+			(xy 168.91 88.9) (xy 168.91 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5755ff78-3e57-417a-9149-7072655d47ee")
+	)
+	(wire
+		(pts
+			(xy 176.53 88.9) (xy 176.53 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "576e4633-43d7-4dd9-bc0b-a76dff0c3656")
+	)
+	(wire
+		(pts
+			(xy 161.29 93.98) (xy 161.29 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c298c6f-7ec7-4a09-9ba1-cc73adf8d43b")
+	)
+	(wire
+		(pts
+			(xy 166.37 88.9) (xy 166.37 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d8ae78b-2d4b-41b1-bd10-99ecfa01ca50")
+	)
+	(wire
+		(pts
+			(xy 163.83 88.9) (xy 163.83 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e34e4c5-6897-4ed5-86a5-90312c613058")
+	)
+	(wire
+		(pts
+			(xy 161.29 93.98) (xy 180.34 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "802f4d5b-7a7a-4f59-b137-a0873c0d7dae")
+	)
+	(wire
+		(pts
+			(xy 161.29 88.9) (xy 161.29 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83bc777a-900a-4031-b052-9d2f199359f7")
+	)
+	(wire
+		(pts
+			(xy 173.99 88.9) (xy 173.99 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a28b8e2-ae20-43b6-a321-0f4d811440ba")
+	)
+	(wire
+		(pts
+			(xy 166.37 99.06) (xy 166.37 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fc1cee4-87ed-4831-a805-3e19f3ad3b44")
+	)
+	(wire
+		(pts
+			(xy 154.94 91.44) (xy 158.75 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94cba295-331f-4899-94ef-2383b762c0d0")
+	)
+	(wire
+		(pts
+			(xy 163.83 96.52) (xy 163.83 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9779b99d-ae89-4d77-8638-f4e59eb81a77")
+	)
+	(wire
+		(pts
+			(xy 154.94 106.68) (xy 173.99 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "980eddf4-f32d-43bf-989f-88a21a006673")
+	)
+	(wire
+		(pts
+			(xy 168.91 101.6) (xy 168.91 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9985e613-2d18-4766-8b07-fb80fb079e72")
+	)
+	(wire
+		(pts
+			(xy 166.37 99.06) (xy 180.34 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5880399-a76e-4b3d-8faf-9f4cf5cef938")
+	)
+	(wire
+		(pts
+			(xy 154.94 96.52) (xy 163.83 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd7af254-6846-4ec4-8502-316fdf51dc70")
+	)
+	(wire
+		(pts
+			(xy 171.45 104.14) (xy 171.45 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdc7ede0-b080-469c-ae1a-1a5cb9563ec0")
+	)
+	(wire
+		(pts
+			(xy 158.75 91.44) (xy 158.75 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0165567-7c93-4c57-936a-ad929e679ffa")
+	)
+	(wire
+		(pts
+			(xy 154.94 99.06) (xy 166.37 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dac03f86-5cd0-4ccf-9746-80e0fc74501f")
+	)
+	(wire
+		(pts
+			(xy 171.45 104.14) (xy 180.34 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc7ca2e9-4283-4b58-9faa-d6bc05a420d3")
+	)
+	(wire
+		(pts
+			(xy 158.75 91.44) (xy 180.34 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e06ca863-e678-4ef9-b9d2-5dde75122bcc")
+	)
+	(wire
+		(pts
+			(xy 163.83 96.52) (xy 180.34 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3695ac5-d301-41fd-9639-5a762b1c8dae")
+	)
+	(wire
+		(pts
+			(xy 158.75 88.9) (xy 158.75 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f41bcdd6-6b66-4366-8ee1-9ead5fea8632")
+	)
+	(wire
+		(pts
+			(xy 176.53 109.22) (xy 176.53 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f52c4bd3-4335-4ca0-8f1f-45f5e1c047e6")
+	)
+	(wire
+		(pts
+			(xy 168.91 101.6) (xy 180.34 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc52f6ff-47e5-47e9-83cf-a84dc2b1d115")
+	)
+	(wire
+		(pts
+			(xy 154.94 101.6) (xy 168.91 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe3ebe72-6b78-4620-b079-00c0083ffee3")
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 149.86 104.14 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0524b3d1-5e9d-4c3b-8df6-00e33c71c7d3")
+		(property "Reference" "J42"
+			(at 150.495 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 150.495 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 149.86 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 149.86 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "694e3004-ca8d-4c6c-95dd-4b51d0f532aa")
+		)
+		(pin "4"
+			(uuid "5c86b34d-3bc2-45d2-be3b-274a7206d295")
+		)
+		(pin "1"
+			(uuid "aa1fd4ca-ba46-4483-9261-1f1e15c567d2")
+		)
+		(pin "3"
+			(uuid "f1b11547-7315-4475-8009-cceb4268a606")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_MALE")
+		(at 180.34 96.52 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "113f31fa-237c-444a-ac86-22e2d9f11b9f")
+		(property "Reference" "J11"
+			(at 186.69 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MALE"
+			(at 186.69 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:connector_3.50mm_4P horizontal_MALE"
+			(at 185.42 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 180.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd72164c-dd70-4694-847e-44680a0a457d")
+		)
+		(pin "4"
+			(uuid "b82b0884-6d53-4f0d-9c76-3867672b9a2c")
+		)
+		(pin "2"
+			(uuid "ea968fd3-0a4f-4501-88f8-31e247a36904")
+		)
+		(pin "3"
+			(uuid "f627eef7-ee32-4f1a-ac66-2c1c49352ff6")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 171.45 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b84ffd4-f3d8-40ca-bc78-ec6a3cbcd60a")
+		(property "Reference" "J32"
+			(at 172.72 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 172.72 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 171.45 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.45 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 171.45 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dc359c04-b267-46e1-9e3d-a5f785cfe336")
+		)
+		(pin "4"
+			(uuid "e017c9c9-45f9-4fb7-85ac-1942bd2203a7")
+		)
+		(pin "1"
+			(uuid "c20b3aa9-b96c-47c1-9352-210890fb4d7a")
+		)
+		(pin "3"
+			(uuid "7d8f3bf3-1239-4013-b053-4b9765853b08")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 161.29 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a4ae01c-1c9f-485e-a58c-a39586b3c167")
+		(property "Reference" "J31"
+			(at 162.56 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 162.56 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 161.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 161.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "781fc000-09e5-44b1-b358-39d99f73910a")
+		)
+		(pin "4"
+			(uuid "9469dec0-3e73-457f-8512-30a660e3bc1c")
+		)
+		(pin "1"
+			(uuid "184fed2f-19a6-4c4c-8454-58a727b6fb4e")
+		)
+		(pin "3"
+			(uuid "6e49cc52-bd83-4400-a93f-3a606a42f75a")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 163.83 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3b307a1-8bf7-4b57-95d4-fcb1a9b97339")
+		(property "Reference" "J21"
+			(at 162.56 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 162.56 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 163.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 163.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "62ced985-3330-4107-b559-ef4676edca73")
+		)
+		(pin "4"
+			(uuid "a59526e2-02e1-4e2c-8dde-69b53531a761")
+		)
+		(pin "1"
+			(uuid "e1189eb5-6a1c-457a-9558-7e5dcc550ef4")
+		)
+		(pin "3"
+			(uuid "28cdd2ff-a5a2-4ecd-9656-27f336f45134")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 173.99 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e953ff1c-2bef-47be-a799-7a74f8059987")
+		(property "Reference" "J22"
+			(at 172.72 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 172.72 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 173.99 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 173.99 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b30336e5-c7f5-4d19-a68d-ec37c35e4c90")
+		)
+		(pin "4"
+			(uuid "a62352ff-a522-47cd-9136-bb9c74375090")
+		)
+		(pin "1"
+			(uuid "d0653b98-1183-48a9-9c9b-a70535ad6baa")
+		)
+		(pin "3"
+			(uuid "c1f2c298-8b5a-4837-9b00-aa97f455048c")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "connector_3.50mm_4P_horizontal_FEMALE_1")
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_FEMALE")
+		(at 149.86 93.98 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f78cf68a-2e33-4cb1-a777-c5e2d96ecffd")
+		(property "Reference" "J41"
+			(at 150.495 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FEMALE"
+			(at 150.495 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
+			(at 149.86 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 149.86 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e571c4c9-34c3-435f-bccc-5e0f9e15c8f6")
+		)
+		(pin "4"
+			(uuid "1f457549-461b-440e-8344-1afbb2ae6166")
+		)
+		(pin "1"
+			(uuid "a5c1e324-ccd7-48f3-91a9-e1f0477ea220")
+		)
+		(pin "3"
+			(uuid "40bc4e55-2ac3-4d10-a904-610f59a740f0")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:connector_3.50mm_4P_horizontal_MALE")
+		(at 180.34 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb5eca44-5bad-45c9-ad11-9f2c4d117f6a")
+		(property "Reference" "J12"
+			(at 186.69 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MALE"
+			(at 186.69 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:connector_3.50mm_4P horizontal_MALE"
+			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 180.34 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8de332cb-58f9-40e4-acba-566783224fb6")
+		)
+		(pin "4"
+			(uuid "4a2ad0c0-bc6b-4b83-a6f6-165b8d3df64c")
+		)
+		(pin "2"
+			(uuid "59c04482-e48c-445e-9d10-55a1a3127c96")
+		)
+		(pin "3"
+			(uuid "5c2c05b7-f911-4902-8cf2-f7260e7337df")
+		)
+		(instances
+			(project "splitX_pluggable_8p"
+				(path "/d41a57c9-32fd-446f-bd95-0509f3085df6"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
