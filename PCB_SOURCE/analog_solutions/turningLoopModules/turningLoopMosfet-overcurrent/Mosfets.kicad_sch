@@ -1,663 +1,1567 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 91073599-5c0c-456d-b5bf-735eaf1ab14b)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Transistor_FET:QM6006D" (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.905 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "QM6006D" (at 5.08 0 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Package_TO_SOT_SMD:TO-252-2" (at 5.08 -1.905 0)
-        (effects (font (size 1.27 1.27) italic) (justify left) hide)
-      )
-      (property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
-      )
-      (property "ki_keywords" "N-Channel MOSFET" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "35A Id, 60V Vds, N-Channel Power MOSFET, 18mOhm Ron, 19.3nC Qg (typ), TO252" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "TO?252*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "QM6006D_0_1"
-        (polyline
-          (pts
-            (xy 0.254 0)
-            (xy -2.54 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.254 1.905)
-            (xy 0.254 -1.905)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 -1.27)
-            (xy 0.762 -2.286)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 0.508)
-            (xy 0.762 -0.508)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 2.286)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 2.54)
-            (xy 2.54 1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 -2.54)
-            (xy 2.54 0)
-            (xy 0.762 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 -1.778)
-            (xy 3.302 -1.778)
-            (xy 3.302 1.778)
-            (xy 0.762 1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 0)
-            (xy 2.032 0.381)
-            (xy 2.032 -0.381)
-            (xy 1.016 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (polyline
-          (pts
-            (xy 2.794 0.508)
-            (xy 2.921 0.381)
-            (xy 3.683 0.381)
-            (xy 3.81 0.254)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.302 0.381)
-            (xy 2.921 -0.254)
-            (xy 3.683 -0.254)
-            (xy 3.302 0.381)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 1.651 0) (radius 2.794)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.54 -1.778) (radius 0.254)
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (circle (center 2.54 1.778) (radius 0.254)
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-      )
-      (symbol "QM6006D_1_1"
-        (pin input line (at -5.08 0 0) (length 2.54)
-          (name "G" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
-          (name "S" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "capacitor_miscellaneous:C_0402_100nF" (in_bom yes) (on_board yes)
-      (property "Reference" "C" (at 1.27 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "100nF" (at 3.81 -2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 2.54 2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "JLCPCB Part#" "C307331" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "C_0402_100nF_0_1"
-        (polyline
-          (pts
-            (xy -1.524 -0.508)
-            (xy 1.524 -0.508)
-          )
-          (stroke (width 0.3302) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.524 0.508)
-            (xy 1.524 0.508)
-          )
-          (stroke (width 0.3048) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "C_0402_100nF_1_1"
-        (pin passive line (at 0 2.54 270) (length 2.032)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -2.54 90) (length 2.032)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "custom_kicad_lib_sk:1N4148WS" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "1N4148WS" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Diode_SMD:D_SOD-323" (at 0 -4.445 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Device" "D" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "JLCPCB Part#" "C2128" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "75V 0.15A Fast switching Diode, SOD-323" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "D*SOD?323*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "1N4148WS_0_1"
-        (polyline
-          (pts
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 0)
-            (xy -1.27 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.27)
-            (xy 1.27 -1.27)
-            (xy -1.27 0)
-            (xy 1.27 1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "1N4148WS_1_1"
-        (pin passive line (at -3.81 0 0) (length 2.54)
-          (name "K" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 3.81 0 180) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "resistors_0603:R_100R_0603" (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 1.27 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "100R" (at 2.54 -2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext" (at 2.54 2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at -2.54 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "JLCPCB Part#" "C22775" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_100R_0603_0_1"
-        (rectangle (start -0.762 1.778) (end 0.762 -1.778)
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_100R_0603_1_1"
-        (pin passive line (at 0 2.54 270) (length 0.762)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -2.54 90) (length 0.762)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 128.27 90.17) (diameter 0) (color 0 0 0 0)
-    (uuid 52a4f941-c94b-4476-9d6c-1a7001c9c023)
-  )
-  (junction (at 144.78 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid b71cc0a3-fb45-4f22-aa71-941a406bfe9f)
-  )
-  (junction (at 128.27 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid cd9ddb00-93d8-4398-a812-3a323911d442)
-  )
-  (junction (at 138.43 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid d3ff2847-9f1a-4ff1-a09c-78d52fe68739)
-  )
-  (junction (at 128.27 85.09) (diameter 0) (color 0 0 0 0)
-    (uuid e925043f-1d9c-464c-9364-115ce6945e4d)
-  )
-
-  (wire (pts (xy 138.43 87.63) (xy 138.43 85.09))
-    (stroke (width 0) (type default))
-    (uuid 04841823-4e79-475f-b84b-14aa618489c1)
-  )
-  (wire (pts (xy 128.27 93.98) (xy 128.27 90.17))
-    (stroke (width 0) (type default))
-    (uuid 27f2dfba-6b95-4eca-8c9a-0d3c8b047c09)
-  )
-  (wire (pts (xy 128.27 87.63) (xy 128.27 90.17))
-    (stroke (width 0) (type default))
-    (uuid 33a81788-8e77-4d04-8daf-e579e88b0f3c)
-  )
-  (wire (pts (xy 109.22 87.63) (xy 111.76 87.63))
-    (stroke (width 0) (type default))
-    (uuid 4a24ba5f-fa1a-4225-9019-c87390d91275)
-  )
-  (wire (pts (xy 128.27 81.28) (xy 137.16 81.28))
-    (stroke (width 0) (type default))
-    (uuid 5a79d601-51ba-414b-aa83-d3a55773c1bb)
-  )
-  (wire (pts (xy 128.27 85.09) (xy 129.54 85.09))
-    (stroke (width 0) (type default))
-    (uuid 5c04f1e3-9a2c-4a6b-bfc5-0692bb5288b5)
-  )
-  (wire (pts (xy 138.43 90.17) (xy 138.43 87.63))
-    (stroke (width 0) (type default))
-    (uuid 60039a86-5477-4aef-b880-e61fe5165ec5)
-  )
-  (wire (pts (xy 144.78 73.66) (xy 144.78 76.2))
-    (stroke (width 0) (type default))
-    (uuid 64315d7b-63bf-407d-8582-f5213e235ead)
-  )
-  (wire (pts (xy 128.27 90.17) (xy 129.54 90.17))
-    (stroke (width 0) (type default))
-    (uuid 7c5c9f35-2579-48c0-8361-35182afb7da4)
-  )
-  (wire (pts (xy 138.43 85.09) (xy 137.16 85.09))
-    (stroke (width 0) (type default))
-    (uuid 7ef43546-bee4-44c6-905e-be4d037d7f66)
-  )
-  (wire (pts (xy 144.78 99.06) (xy 144.78 105.41))
-    (stroke (width 0) (type default))
-    (uuid 7fbf7b98-98ae-4bd2-af59-c8bcdb4ddde6)
-  )
-  (wire (pts (xy 116.84 87.63) (xy 118.11 87.63))
-    (stroke (width 0) (type default))
-    (uuid 9b50b33f-a7e7-4a94-b7fb-ce2276874c58)
-  )
-  (wire (pts (xy 128.27 85.09) (xy 128.27 87.63))
-    (stroke (width 0) (type default))
-    (uuid a7728de0-0472-40d4-a095-673492ca3e99)
-  )
-  (wire (pts (xy 144.78 86.36) (xy 144.78 87.63))
-    (stroke (width 0) (type default))
-    (uuid b33904b5-7884-478f-9277-b065ce369887)
-  )
-  (wire (pts (xy 125.73 87.63) (xy 128.27 87.63))
-    (stroke (width 0) (type default))
-    (uuid bea8b929-ceaf-4c68-88aa-2703d76c3e6f)
-  )
-  (wire (pts (xy 128.27 81.28) (xy 128.27 85.09))
-    (stroke (width 0) (type default))
-    (uuid c3796cd7-26b0-48e7-8e75-b643c87e48ce)
-  )
-  (wire (pts (xy 144.78 87.63) (xy 144.78 88.9))
-    (stroke (width 0) (type default))
-    (uuid c7c6ca36-e711-4028-9ccb-279f8244d288)
-  )
-  (wire (pts (xy 134.62 90.17) (xy 138.43 90.17))
-    (stroke (width 0) (type default))
-    (uuid caa3ace0-1d37-49bb-8657-8611a4e3b7a0)
-  )
-  (wire (pts (xy 128.27 93.98) (xy 137.16 93.98))
-    (stroke (width 0) (type default))
-    (uuid eba43661-d701-4a2c-b47c-474673d36dfa)
-  )
-  (wire (pts (xy 138.43 87.63) (xy 144.78 87.63))
-    (stroke (width 0) (type default))
-    (uuid f00c4c52-d7fc-4635-8d2e-59c8ea6da3db)
-  )
-
-  (text "gate source Vmax = +-20V\nContinous Drain Current 50A"
-    (at 113.03 73.66 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 308b1d68-73a3-4839-b1b3-dc03156af1f2)
-  )
-
-  (hierarchical_label "IN" (shape input) (at 144.78 105.41 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 38cc51ed-c153-4418-bf69-77d7f05e3370)
-  )
-  (hierarchical_label "GATE" (shape input) (at 109.22 87.63 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 93761642-1722-4b44-b8f9-a4c434457baf)
-  )
-  (hierarchical_label "OUT" (shape input) (at 144.78 73.66 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c911eda9-efbf-4253-803e-a24705f4bc26)
-  )
-
-  (symbol (lib_id "resistors_0603:R_100R_0603") (at 114.3 87.63 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 0211a86a-a9d0-4a70-ba43-ffc993a91722)
-    (property "Reference" "R401" (at 114.3 82.55 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "100R" (at 114.3 85.09 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext" (at 111.76 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 114.3 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "JLCPCB Part#" "C22775" (at 114.3 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 03067109-7c92-4aab-b1fc-9bc3724c2245))
-    (pin "2" (uuid 872ad75c-b727-4121-8310-f18fb36e8288))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "R401") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "R701") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "R601") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "R501") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_FET:QM6006D") (at 142.24 81.28 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4d683c3e-772f-43ed-bd57-c09bc802c6c3)
-    (property "Reference" "Q401" (at 148.59 82.55 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MDD50N03D" (at 148.59 80.01 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:TO-252-2" (at 147.32 79.375 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf" (at 142.24 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "JLCPCB Part#" "C5357578" (at 142.24 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid e6e62efb-10bf-4950-989e-ffd26c887d00))
-    (pin "1" (uuid 6af16e9a-9274-42ce-a99c-42497bbdf9a5))
-    (pin "3" (uuid f4514031-9a09-4bb8-b399-6d3dd147996c))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "Q401") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "Q701") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "Q601") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "Q501") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "custom_kicad_lib_sk:1N4148WS") (at 133.35 85.09 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 53f96cd3-53b2-48b0-ad1a-944c3c95ba6d)
-    (property "Reference" "D402" (at 133.35 82.55 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148WS" (at 133.35 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-323" (at 133.35 89.535 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf" (at 133.35 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 133.35 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 133.35 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "JLCPCB Part#" "C2128" (at 133.35 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid fcda6d0c-65d7-4710-ab93-e4fb8cd7db79))
-    (pin "1" (uuid 6b0e5a95-6696-412c-a59f-e5ce467eec41))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "D402") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "D702") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "D602") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "D502") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "custom_kicad_lib_sk:1N4148WS") (at 121.92 87.63 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7a16b9f1-1e75-44af-8b6c-863e37e203e0)
-    (property "Reference" "D401" (at 121.92 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148WS" (at 121.92 83.82 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-323" (at 121.92 83.185 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf" (at 121.92 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 121.92 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 121.92 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "JLCPCB Part#" "C2128" (at 121.92 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 7fa2f47b-16ec-479f-a7bc-d1b38589ed49))
-    (pin "1" (uuid 23a47d30-85ba-4cd6-90e8-ca1758258a59))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "D401") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "D701") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "D601") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "D501") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_FET:QM6006D") (at 142.24 93.98 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d8016cb1-e6e2-487d-9bc2-7da312eb8d74)
-    (property "Reference" "Q402" (at 148.59 92.71 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MDD50N03D" (at 148.59 95.25 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:TO-252-2" (at 147.32 95.885 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "JLCPCB Part#" "C5357578" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid f7408c5b-a265-49e3-bc14-b555acbc5d85))
-    (pin "1" (uuid 200df151-3552-4dad-a4bb-199eadaac669))
-    (pin "3" (uuid 5c28861e-3e5b-47c6-a7ea-30d645e269a5))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "Q402") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "Q702") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "Q602") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "Q502") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "capacitor_miscellaneous:C_0402_100nF") (at 132.08 90.17 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ed9e010c-c6b4-40b2-abea-8fc5e2ba71fa)
-    (property "Reference" "C401" (at 132.08 96.52 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "100nF" (at 132.08 99.06 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 134.62 92.71 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 132.08 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "JLCPCB Part#" "C307331" (at 129.54 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 880b1478-f228-4f19-a9ad-a7116c333a49))
-    (pin "1" (uuid 2b90e616-bbaf-4b83-8a21-12bcb5aa2d26))
-    (instances
-      (project "turningLoopMosfet-overcurrent"
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
-          (reference "C401") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
-          (reference "C701") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
-          (reference "C601") (unit 1)
-        )
-        (path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
-          (reference "C501") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "91073599-5c0c-456d-b5bf-735eaf1ab14b")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Transistor_FET:QM6006D"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "QM6006D"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "35A Id, 60V Vds, N-Channel Power MOSFET, 18mOhm Ron, 19.3nC Qg (typ), TO252"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?252*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "QM6006D_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "QM6006D_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "capacitor_miscellaneous:C_0402_100nF"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF"
+				(at 3.81 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C307331"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0402_100nF_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_0402_100nF_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "custom_kicad_lib_sk:1N4148WS"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148WS"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-323"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C2128"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SOD?323*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4148WS_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148WS_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "resistors_0603:R_100R_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100R"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Part#" "C22775"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_100R_0603_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_100R_0603_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 128.27 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "52a4f941-c94b-4476-9d6c-1a7001c9c023")
+	)
+	(junction
+		(at 144.78 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b71cc0a3-fb45-4f22-aa71-941a406bfe9f")
+	)
+	(junction
+		(at 128.27 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd9ddb00-93d8-4398-a812-3a323911d442")
+	)
+	(junction
+		(at 138.43 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3ff2847-9f1a-4ff1-a09c-78d52fe68739")
+	)
+	(junction
+		(at 128.27 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e925043f-1d9c-464c-9364-115ce6945e4d")
+	)
+	(wire
+		(pts
+			(xy 138.43 87.63) (xy 138.43 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04841823-4e79-475f-b84b-14aa618489c1")
+	)
+	(wire
+		(pts
+			(xy 128.27 93.98) (xy 128.27 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27f2dfba-6b95-4eca-8c9a-0d3c8b047c09")
+	)
+	(wire
+		(pts
+			(xy 128.27 87.63) (xy 128.27 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33a81788-8e77-4d04-8daf-e579e88b0f3c")
+	)
+	(wire
+		(pts
+			(xy 109.22 87.63) (xy 111.76 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a24ba5f-fa1a-4225-9019-c87390d91275")
+	)
+	(wire
+		(pts
+			(xy 128.27 81.28) (xy 137.16 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a79d601-51ba-414b-aa83-d3a55773c1bb")
+	)
+	(wire
+		(pts
+			(xy 128.27 85.09) (xy 129.54 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c04f1e3-9a2c-4a6b-bfc5-0692bb5288b5")
+	)
+	(wire
+		(pts
+			(xy 138.43 90.17) (xy 138.43 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60039a86-5477-4aef-b880-e61fe5165ec5")
+	)
+	(wire
+		(pts
+			(xy 144.78 73.66) (xy 144.78 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64315d7b-63bf-407d-8582-f5213e235ead")
+	)
+	(wire
+		(pts
+			(xy 128.27 90.17) (xy 129.54 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c5c9f35-2579-48c0-8361-35182afb7da4")
+	)
+	(wire
+		(pts
+			(xy 138.43 85.09) (xy 137.16 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ef43546-bee4-44c6-905e-be4d037d7f66")
+	)
+	(wire
+		(pts
+			(xy 144.78 99.06) (xy 144.78 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fbf7b98-98ae-4bd2-af59-c8bcdb4ddde6")
+	)
+	(wire
+		(pts
+			(xy 116.84 87.63) (xy 118.11 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b50b33f-a7e7-4a94-b7fb-ce2276874c58")
+	)
+	(wire
+		(pts
+			(xy 128.27 85.09) (xy 128.27 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7728de0-0472-40d4-a095-673492ca3e99")
+	)
+	(wire
+		(pts
+			(xy 144.78 86.36) (xy 144.78 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b33904b5-7884-478f-9277-b065ce369887")
+	)
+	(wire
+		(pts
+			(xy 125.73 87.63) (xy 128.27 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bea8b929-ceaf-4c68-88aa-2703d76c3e6f")
+	)
+	(wire
+		(pts
+			(xy 128.27 81.28) (xy 128.27 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3796cd7-26b0-48e7-8e75-b643c87e48ce")
+	)
+	(wire
+		(pts
+			(xy 144.78 87.63) (xy 144.78 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7c6ca36-e711-4028-9ccb-279f8244d288")
+	)
+	(wire
+		(pts
+			(xy 134.62 90.17) (xy 138.43 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caa3ace0-1d37-49bb-8657-8611a4e3b7a0")
+	)
+	(wire
+		(pts
+			(xy 128.27 93.98) (xy 137.16 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eba43661-d701-4a2c-b47c-474673d36dfa")
+	)
+	(wire
+		(pts
+			(xy 138.43 87.63) (xy 144.78 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f00c4c52-d7fc-4635-8d2e-59c8ea6da3db")
+	)
+	(text "gate source Vmax = +-20V\nContinous Drain Current 50A"
+		(exclude_from_sim no)
+		(at 113.03 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "308b1d68-73a3-4839-b1b3-dc03156af1f2")
+	)
+	(hierarchical_label "IN"
+		(shape input)
+		(at 144.78 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "38cc51ed-c153-4418-bf69-77d7f05e3370")
+	)
+	(hierarchical_label "GATE"
+		(shape input)
+		(at 109.22 87.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "93761642-1722-4b44-b8f9-a4c434457baf")
+	)
+	(hierarchical_label "OUT"
+		(shape input)
+		(at 144.78 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c911eda9-efbf-4253-803e-a24705f4bc26")
+	)
+	(symbol
+		(lib_id "resistors_0603:R_100R_0603")
+		(at 114.3 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0211a86a-a9d0-4a70-ba43-ffc993a91722")
+		(property "Reference" "R401"
+			(at 114.3 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 114.3 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 111.76 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C22775"
+			(at 114.3 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "03067109-7c92-4aab-b1fc-9bc3724c2245")
+		)
+		(pin "2"
+			(uuid "872ad75c-b727-4121-8310-f18fb36e8288")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "R401")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "R701")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "R601")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "R501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:QM6006D")
+		(at 142.24 81.28 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d683c3e-772f-43ed-bd57-c09bc802c6c3")
+		(property "Reference" "Q401"
+			(at 148.59 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MDD50N03D"
+			(at 148.59 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+			(at 147.32 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf"
+			(at 142.24 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C5357578"
+			(at 142.24 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e6e62efb-10bf-4950-989e-ffd26c887d00")
+		)
+		(pin "1"
+			(uuid "6af16e9a-9274-42ce-a99c-42497bbdf9a5")
+		)
+		(pin "3"
+			(uuid "f4514031-9a09-4bb8-b399-6d3dd147996c")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "Q401")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "Q701")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "Q601")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "Q501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:1N4148WS")
+		(at 133.35 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53f96cd3-53b2-48b0-ad1a-944c3c95ba6d")
+		(property "Reference" "D402"
+			(at 133.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 133.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 133.35 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C2128"
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fcda6d0c-65d7-4710-ab93-e4fb8cd7db79")
+		)
+		(pin "1"
+			(uuid "6b0e5a95-6696-412c-a59f-e5ce467eec41")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "D402")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "D702")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "D602")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "D502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:1N4148WS")
+		(at 121.92 87.63 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a16b9f1-1e75-44af-8b6c-863e37e203e0")
+		(property "Reference" "D401"
+			(at 121.92 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 121.92 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 121.92 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 121.92 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 121.92 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 121.92 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 121.92 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C2128"
+			(at 121.92 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7fa2f47b-16ec-479f-a7bc-d1b38589ed49")
+		)
+		(pin "1"
+			(uuid "23a47d30-85ba-4cd6-90e8-ca1758258a59")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "D401")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "D701")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "D601")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "D501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:QM6006D")
+		(at 142.24 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8016cb1-e6e2-487d-9bc2-7da312eb8d74")
+		(property "Reference" "Q402"
+			(at 148.59 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MDD50N03D"
+			(at 148.59 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+			(at 147.32 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C5357578"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f7408c5b-a265-49e3-bc14-b555acbc5d85")
+		)
+		(pin "1"
+			(uuid "200df151-3552-4dad-a4bb-199eadaac669")
+		)
+		(pin "3"
+			(uuid "5c28861e-3e5b-47c6-a7ea-30d645e269a5")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "Q402")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "Q702")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "Q602")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "Q502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "capacitor_miscellaneous:C_0402_100nF")
+		(at 132.08 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed9e010c-c6b4-40b2-abea-8fc5e2ba71fa")
+		(property "Reference" "C401"
+			(at 132.08 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 132.08 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 134.62 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 132.08 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C307331"
+			(at 129.54 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "880b1478-f228-4f19-a9ad-a7116c333a49")
+		)
+		(pin "1"
+			(uuid "2b90e616-bbaf-4b83-8a21-12bcb5aa2d26")
+		)
+		(instances
+			(project "turningLoopMosfet-overcurrent"
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/570bb46e-e6d8-4cd1-be92-0035ac65cd0d"
+					(reference "C401")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/797a4254-67e2-459b-8def-a6db455957ae"
+					(reference "C701")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/2ee4fb99-109a-4a01-bf8c-b6d4e206e547"
+					(reference "C601")
+					(unit 1)
+				)
+				(path "/255495b4-3c1a-4f0a-aaa5-c4a7cd07b5ac/5b9edc10-e0ca-40dc-96f1-653c14dbe00d"
+					(reference "C501")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

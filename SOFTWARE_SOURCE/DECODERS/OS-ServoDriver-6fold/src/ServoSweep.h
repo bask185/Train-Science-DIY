@@ -19,6 +19,8 @@ Public Domain
 #include <Arduino.h>
 #include <Servo.h>
 
+const int NO_POS = 0xFF ;
+
 class ServoSweep
 {
 public:
@@ -32,6 +34,7 @@ public:
     void setMax( uint8_t _max) ;
     void increment( ) ;
     void decrement( ) ;
+    void commitPos( ) ;
     void toggleRelay( ) ;
     void useEEPROM( uint16_t _eeAddress ) ;
     void useEEPROM( ) ;
@@ -46,6 +49,7 @@ private:
     uint32_t    lastTime ;
     uint8_t     pos ;
     uint8_t     override : 1;
+    uint8_t     tuning   : 1;
     uint8_t     state : 1;
     uint8_t     prevPos ;
     uint8_t     servoPin : 6;
@@ -57,6 +61,8 @@ private:
     uint8_t     relayPin : 6 ;
     uint8_t     turnOff : 1 ;
     uint8_t     invertRelay : 1 ;
+    uint8_t     startUp : 1 ;
     uint8_t     eeFlags ;
     uint16_t    eeAddress = 0xFFFF ;
+    uint32_t    updateTime ;
 } ;

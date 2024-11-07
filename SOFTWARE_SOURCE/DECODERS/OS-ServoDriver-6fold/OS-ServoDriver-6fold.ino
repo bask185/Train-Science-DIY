@@ -1,7 +1,7 @@
 #include "src/io.h"
 #include "src/macros.h"
 #include <EEPROM.h>
-#include "src/debounceClass.h"
+#include "src/debounceClass2.h"
 #include "src/NmraDcc.h"
 #include "src/ServoSweep.h"
 
@@ -21,7 +21,18 @@ const uint16    eeAddress = 0x50 ;
 uint16          myAddress ;
 uint8           waiting4address ;
 uint8           state = initialize ;
-NmraDcc dcc ;
+NmraDcc         dcc ;
+
+uint8           dccIndex = 0xFF ;
+uint8           servoSetpoint  ;
+uint8           F0 ;
+uint8           F1 ;
+uint8           F1_teach ;
+uint8           F2 ;
+uint8           F2_teach ;
+uint8           F3 ;
+uint8           F3_prev ;
+
 
 const int nServos   = 6 ;
 const int nSwitches = 4 ;
@@ -39,12 +50,12 @@ ServoSweep servo[nServos] =
     ServoSweep( servoPin6, defaultMin, defaultMax, 40, 1, relayPin6  ),
 } ;
 
-Debounce switches[nSwitches] = 
+Debouncer switches[nSwitches] = 
 {
-    Debounce( switchPin0 ) ,
-    Debounce( switchPin1 ) ,
-    Debounce( switchPin2 ) ,
-    Debounce( switchPin3 ) ,
+    Debouncer(),
+    Debouncer(),
+    Debouncer(),
+    Debouncer(),
 } ;
 
 
@@ -56,12 +67,12 @@ enum
     DOWN,
 } ;
 
-uint8_t     blinkCounter ;
-uint8_t     blinkMax ;
-uint8_t     flashing ;
-uint32_t    blinkInterval = 500 ;
+uint8     blinkCounter ;
+uint8     blinkMax ;
+uint8     flashing ;
+uint32    blinkInterval = 500 ;
 
-void blinkLed( uint8_t blinks ) 
+void blinkLed( uint8 blinks ) 
 {
     blinkMax = 2*blinks-1 ;
     blinkCounter = 0 ;
@@ -92,39 +103,80 @@ void statusLed()
 
 void processSwitches()
 {
-    static uint32 lastTime ;
+    uint8 stateDown = switches[DOWN].state ;
+    uint8 stateUp   = switches[ UP ].state ;
 
-    if(   switches[DOWN].getState() == FALLING ) { servo[index].decrement() ; blinkLed(1) ; }
-    if(     switches[UP].getState() == FALLING ) { servo[index].increment() ; blinkLed(2) ; }
+// ************ FINE TUNING SERVO POSITION ****************
+    REPEAT_MS( 200 )
+    {
+        if( switches[DOWN].state == LOW && switches[UP].state == LOW )
+        {
+            servo[index].manualOverride( 90 ) ;
+        }
+        else if( switches[DOWN].state == LOW )
+        {
+            waiting4address = 0 ;
+            servo[index].decrement() ;
+            servo[index].manualRelease() ;
+            blinkLed(1) ;
+        }
+        else if( switches[UP].state   == LOW )
+        {
+            waiting4address = 0 ;
+            servo[index].increment() ; 
+            servo[index].manualRelease() ;
+            blinkLed(2) ;
+        }
+    }
+    END_REPEAT
 
-    uint8 toggleState = switches[TOGGLE].getState() ;
-    if( toggleState == FALLING )
-    { 
-        blinkLed(3) ;
-        servo[index].setState( !servo[index].getState() ) ;
-        lastTime = millis() ;
+    if( stateDown == RISING || stateUp == RISING ) // in either one of the 2 buttons is released, we release the signal.
+    {
+        servo[index].commitPos() ;
     }
 
-    if( switches[SEL].getState() == FALLING )
+// ************ TOGGLE BUTTON, SHORT = TOGGLE STATE, LONG = TOGGLE RELAY ****************
+    uint8 time = switches[TOGGLE].pressTime( 2000, 0 ) ;
+    if( time == SHORT )
+    { 
+        waiting4address = 0 ;
+        blinkLed(3) ;
+        servo[index].manualRelease() ;
+        servo[index].setState( !servo[index].getState() ) ;
+    }
+    else if( time == LONG )
     {
-        blinkLed(4) ;
+        waiting4address = 0 ;
+        servo[index].toggleRelay() ;
+        blinkLed( 5 ) ; 
+    }
+
+// ************ SELECT, SHORT = SELECT MOTOR, LONG = GET NEW ADDRESS (OR ABORT)
+    time = switches[SEL].pressTime( 2000, 0 ) ;
+
+    if( time == SHORT)
+    {
+        waiting4address = 0 ;
+        blinkLed( 4 ) ;
         if( ++ index == nServos ) index = 0 ;
         servo[index].setState( !servo[index].getState() ) ;
-        lastTime = millis() ;
     }
 
-    if( millis() - lastTime >= 1500 )
+    else if( time == LONG )
     {
-
-        if( switches[SEL].getState() ==    LOW ) waiting4address = 1 ;
-        if(              toggleState == RISING ) { servo[index].toggleRelay() ; blinkLed( 5 ) ; }
+        waiting4address ^= 1 ;
+        blinkLed(6) ;
     }
 }
-
 
 void setup()
 {
     initIO() ;
+
+    switches[   SEL  ].setPin(switchPin0) ;
+    switches[ TOGGLE ].setPin(switchPin1) ;
+    switches[    UP  ].setPin(switchPin2) ;
+    switches[  DOWN  ].setPin(switchPin3) ;
 
     EEPROM.get( eeAddress, myAddress ) ;
     if( myAddress == 0xFFFF )
@@ -185,17 +237,8 @@ void loop()
     With F3 you can toggle the relay if it moves in the wrong direction.
     If both F1 and F2 are set you can leave the mode by turning F0 OFF again.
 */
-uint8 dccIndex = 0xFF ;
-uint8 servoSetpoint  ;
-uint8 F0 ;
-uint8 F1 ;
-uint8 F1_teach ;
-uint8 F2 ;
-uint8 F2_teach ;
-uint8 F3 ;
-uint8 F3_prev ;
 
-void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output )
+void notifyDccAccTurnoutOutput( uint16 address, uint8 direction, uint8 output )
 {
     if( output == 0 ) return ;
 
@@ -221,7 +264,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
 }
 
 // CONFIG MODE BY DCC THROTTLE
-void notifyDccSpeed( uint16_t Addr, DCC_ADDR_TYPE AddrType, uint8_t Speed, DCC_DIRECTION Dir, DCC_SPEED_STEPS SpeedSteps)
+void notifyDccSpeed( uint16 Addr, DCC_ADDR_TYPE AddrType, uint8 Speed, DCC_DIRECTION Dir, DCC_SPEED_STEPS SpeedSteps)
 {
     if( Addr != 9999 ) return ;
     // is speed is negative (dir = 1?, whatever ) speed of 1-128 must be MAP'ed to 20-90 degrees
@@ -231,7 +274,7 @@ void notifyDccSpeed( uint16_t Addr, DCC_ADDR_TYPE AddrType, uint8_t Speed, DCC_D
     else           servoSetpoint = map( Speed, 1, 128, 90, 160 ) ;
 }
 
-void notifyDccFunc( uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint8_t FuncState)
+void notifyDccFunc( uint16 Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint8 FuncState)
 {
     if( Addr    !=   9999 ) return ;
     if( FuncGrp != FN_0_4 ) return ;

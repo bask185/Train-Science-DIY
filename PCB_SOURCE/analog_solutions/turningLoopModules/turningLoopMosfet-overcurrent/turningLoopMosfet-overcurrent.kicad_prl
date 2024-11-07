@@ -37,6 +37,7 @@
       8,
       9,
       10,
+      11,
       13,
       15,
       16,
@@ -64,6 +65,12 @@
     ],
     "visible_layers": "ffcffff_80000001",
     "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "turningLoopMosfet-overcurrent.kicad_prl",

@@ -115,6 +115,8 @@ void ServoSweep::begin()
     }
 
     if( relayPin != 0xFF ) pinMode( relayPin, OUTPUT ) ;
+
+    startUp = 1 ;
 }
 
 void ServoSweep::setState( uint8_t _state )
@@ -157,6 +159,7 @@ void ServoSweep::manualOverride( uint8_t pos)
 {
     servoSetpoint = pos ;
     override = 1 ;
+    updateTime = millis() ;
 }
 
 void ServoSweep::manualRelease()
@@ -175,16 +178,22 @@ void ServoSweep::toggleRelay()
 
 void ServoSweep::increment()
 {
-    if( state && servoMax <= 174 ) { servoMax += 3 ;  EEPROM.update( eeAddress+1, servoMax ) ; /*printNumberln("incrementing servoMax", servoMax ) ;*/ }
-    else if(     servoMin <= 174 ) { servoMin += 3 ;  EEPROM.update( eeAddress+0, servoMin ) ; /*printNumberln("incrementing servoMin", servoMin ) ;*/ }
+    if( state && servoMax <= 160 ) { servoMax += 2 ; }
+    else if(     servoMin <= 160 ) { servoMin += 2 ; }
     updateMiddle() ;
 }
 
 void ServoSweep::decrement()
 {
-    if( state && servoMax >=   5 ) { servoMax -= 3 ;  EEPROM.update( eeAddress+1, servoMax ) ; /*printNumberln("decrementing servoMax", servoMax ) ;*/ }
-    else if(     servoMin >=   5 ) { servoMin -= 3 ;  EEPROM.update( eeAddress+0, servoMin ) ; /*printNumberln("decrementing servoMin", servoMin ) ;*/ }
+    if( state && servoMax >=   20 ) { servoMax -= 2 ; }
+    else if(     servoMin >=   20 ) { servoMin -= 2 ; }
     updateMiddle() ;
+}
+
+void ServoSweep::commitPos()
+{
+    EEPROM.update( eeAddress+1, servoMax ) ;
+    EEPROM.update( eeAddress+0, servoMin ) ;
 }
 
 uint8_t ServoSweep::sweep ( )
@@ -198,8 +207,6 @@ uint8_t ServoSweep::sweep ( )
             // first operand checks if relay must be on or off, 2nd operand checks if min is smaller than max and comensates with XOR. 3 operand is manual inverting of relay
             uint8_t relayState = 
                 (pos < middlePosition ? 1 : 0) 
-                                ^ 
-                (servoMin > servoMax ? 1 : 0) 
                                 ^ 
                             invertRelay ;
 
@@ -216,34 +223,29 @@ uint8_t ServoSweep::sweep ( )
         if( pos < setPoint ) pos ++ ;   // follow positon to setpoint
         if( pos > setPoint ) pos -- ;
 
-        if( prevPos != pos ) {          // if position has changed.
+        if( prevPos != pos || startUp == 1 ) {          // if position has changed or we have just booted..
             prevPos  = pos ;
 
             if( servoPin != 255 ) servo.write( pos ) ;
+            updateTime = millis() ;
 
-            if( pos != setPoint 
+            if(( pos != setPoint || startUp == 1 ) 
             &&  servo.attached() == false ) // attach motor if needed
             {
                 // Serial.println("engaging servo");
                 servo.attach( servoPin ) ;
+                startUp  = 0 ;
             }
-
-            if( pos == setPoint 
-            &&  turnOff == 1 )
-            {
-                servo.detach( ) ; // detach motor if needed
-                // Serial.println("disengaging servo");
-            }
-
-            // printNumberln("Pos: ", pos );
             
-            return pos ;
+            //return pos ;
         }
-        
-        else
-        {
-            return 0 ;
-        }
+    }
+
+    if( servo.attached() 
+    &&  turnOff == 1 
+    && ( millis() - updateTime > 500) )
+    {
+        servo.detach( ) ; // detach motor if needed
     }
 }
 

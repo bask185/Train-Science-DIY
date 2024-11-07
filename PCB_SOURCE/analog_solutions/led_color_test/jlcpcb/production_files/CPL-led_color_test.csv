@@ -1,7 +1,0 @@
-Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
-D4,LED,LED_1206_3216Metric,107.3,-74.4,90.0,top
-D5,LED,LED_1206_3216Metric,110.69,-74.4,90.0,top
-D6,LED,LED_1206_3216Metric,114.08,-74.4,90.0,top
-R4,1k5,R_0805_handsolder-smalltext,107.7,-69.3,90.0,top
-R5,1k5,R_0805_handsolder-smalltext,110.65,-69.3,90.0,top
-R6,1k5,R_0805_handsolder-smalltext,113.6,-69.3,90.0,top
