@@ -173,6 +173,9 @@ void setup()
 {
     initIO() ;
 
+    dcc.pin( 2, 0 ) ; // TODO. add that I can get loco functions as well. need to alter library for that
+    dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
+
     switches[   SEL  ].setPin(switchPin0) ;
     switches[ TOGGLE ].setPin(switchPin1) ;
     switches[    UP  ].setPin(switchPin2) ;
@@ -191,8 +194,7 @@ void setup()
         servo[i].begin() ;
     }
 
-    dcc.pin( 2, 0 ) ; // TODO. add that I can get loco functions as well. need to alter library for that
-    dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
+
 
     blinkLed( 5 ) ;
 }
