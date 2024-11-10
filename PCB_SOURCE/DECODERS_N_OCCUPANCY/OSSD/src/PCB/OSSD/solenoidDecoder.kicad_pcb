@@ -2299,7 +2299,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C395831"
+		(property "JLCPCB Part#" "C880574"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7106,7 +7106,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11663,7 +11663,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14362,7 +14362,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17586,7 +17586,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19467,7 +19467,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23931,7 +23931,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25577,7 +25577,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26153,7 +26153,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part#" "C430551"
+		(property "JLCPCB Part#" "C880573"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41062,7 +41062,7 @@
 				(xy 104.334359 65.93558) (xy 104.285223 65.96232) (xy 104.215538 65.957236) (xy 104.159665 65.915284)
 				(xy 104.135341 65.849785) (xy 104.136299 65.823476) (xy 104.141688 65.786) (xy 104.121042 65.642404)
 				(xy 104.121041 65.6424) (xy 104.096481 65.588622) (xy 104.086537 65.519463) (xy 104.115562 65.455907)
-				(xy 104.12158 65.449443) (xy 104.534705 65.036318) (xy 104.596028 65.002834) (xy 104.622386 65)
+				(xy 104.12158 65.449443) (xy 104.534705 65.036319) (xy 104.596028 65.002834) (xy 104.622386 65)
 				(xy 116.219414 65)
 			)
 		)
@@ -41150,7 +41150,7 @@
 				(xy 125.5459 66.051004) (xy 125.545899 66.05101) (xy 125.543 66.08785) (xy 124.206145 66.08785)
 				(xy 124.196499 66.026947) (xy 124.193553 66.021166) (xy 124.138326 65.912777) (xy 124.138322 65.912773)
 				(xy 124.138321 65.912771) (xy 124.087059 65.861509) (xy 124.053574 65.800186) (xy 124.058558 65.730494)
-				(xy 124.087057 65.686149) (xy 124.736888 65.036319) (xy 124.798211 65.002834) (xy 124.824569 65)
+				(xy 124.087057 65.686149) (xy 124.736887 65.036318) (xy 124.79821 65.002834) (xy 124.824568 65)
 				(xy 131.2595 65)
 			)
 		)
