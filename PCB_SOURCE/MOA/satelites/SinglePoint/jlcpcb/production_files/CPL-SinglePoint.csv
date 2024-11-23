@@ -1,0 +1,5 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Conn_01x04,JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,28.647,-61.071,-90.0,top
+R1,6k8,R_0603_smalltext,42.109,-54.721,180.0,top
+R2,6k8,R_0603_smalltext,42.4665,-67.421,180.0,top
+SW1,6mm_tactile,tactile_SMD_6mm,37.5,-61.198,-90.0,top

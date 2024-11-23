@@ -29,7 +29,7 @@
 //            2015-11-06 Martin Pischky (martin@pischky.de):
 //                       Experimental Version to support 14 speed steps
 //                       and new signature of notifyDccSpeed and notifyDccFunc
-//            2015-12-16 Version without use of Timer0 by Franz-Peter Müller
+//            2015-12-16 Version without use of Timer0 by Franz-Peter Mï¿½ller
 //            2016-07-16 handle glitches on DCC line
 //			  2016-08-20 added ESP8266 support by Sven (littleyoda)
 //			  2017-01-19 added STM32F1 support by Franz-Peter
@@ -807,7 +807,7 @@ uint8_t readEEPROM (unsigned int CV)
 
 void writeEEPROM (unsigned int CV, uint8_t Value)
 {
-    EEPROM.write (CV, Value) ;
+    //EEPROM.write (CV, Value) ;
     #if defined(ESP8266) ||  defined(ESP32) || defined(ARDUINO_ARCH_RP2040)
     EEPROM.commit();
     #endif

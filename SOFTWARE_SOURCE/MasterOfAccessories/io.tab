@@ -1,0 +1,6 @@
+1	latch_pin	OUTPUT
+2	clock_pin	OUTPUT
+3	data_in_pin	OUTPUT
+4	data_out_pin	OUTPUT
+5	modePin1	INPUT_PULLUP
+6	modePin2	INPUT_PULLUP

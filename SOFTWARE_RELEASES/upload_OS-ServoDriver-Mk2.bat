@@ -22,7 +22,7 @@ if "%comPort%"=="" (
 :retry
 echo UPLOADING OS-ServoDriver.hex on %comPort%
 
-tools\avrdude -C tools\avrdude.conf -v -V -p atmega328p -D -c stk500v1 -P \\.\%comPort% -b 19200  -U flash:w:bin\OS-ServoDriver-6fold.hex:i -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse:w:0xDA:m -U lfuse:w:0xFF:m
+tools\avrdude -C tools\avrdude.conf -v -V -p atmega328p -c stk500v1 -P \\.\%comPort% -b 19200  -U flash:w:bin\OS-ServoDriver-6fold.hex:i -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse:w:0xDA:m -U lfuse:w:0xFF:m
 
 set /p delBuild=Restart Uploading [y/n]?: 
 
