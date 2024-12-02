@@ -1,0 +1,4 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D101,LED,LED_D3.0mm,110.741495,-116.234404,-30.0,top
+J106,Conn_02x05_Odd_Even,PinSocket_2x05_P2.54mm_Vertical_SMD,120.523,-98.044,0.0,bottom
+U101,IS471F,Sharp_IS471F,130.326042,-79.529158,-30.0,top
