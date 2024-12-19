@@ -5,22 +5,24 @@
 	(uuid "5ccbe098-5784-427e-9721-db3f20de1ebf")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Screw_Terminal_01x04"
+		(symbol "custom_kicad_lib_sk:screwterminal"
+			(pin_numbers hide)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 0) hide)
 			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "u"
+				(at 0 0.127 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
-			(property "Value" "Screw_Terminal_01x04"
-				(at 0 -7.62 0)
+			(property "Value" ""
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -29,297 +31,6 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "screw terminal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TerminalBlock*:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Screw_Terminal_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 -5.08)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 -4.7498) (xy 0.3302 -5.588)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 2.8702) (xy 0.3302 2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 -4.572) (xy 0.508 -5.4102)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 0.508) (xy 0.508 -0.3302)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 3.048) (xy 0.508 2.2098)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "capacitor_miscellaneous:C_0402_100nF"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.27 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "100nF"
-				(at 3.81 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-				(at 2.54 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -345,1396 +56,317 @@
 					(hide yes)
 				)
 			)
-			(property "JLCPCB Part#" "C307331"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_0402_100nF_0_1"
-				(polyline
-					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
-					)
-					(stroke
-						(width 0.3302)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_0402_100nF_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.032)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.032)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "power:+5V"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "power:GND"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "GND_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "resistors_1206:R_0R1_1206"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R?"
-				(at 1.778 1.2121 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "0R1"
-				(at 1.778 -1.2121 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "JLCPCB Part#" "C25334"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0R1_1206_0_1"
+			(symbol "screwterminal_1_1"
 				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+					(start -2.3 2.3)
+					(end 2.3 -2.3)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
+						(color 0 132 0 1)
 					)
 					(fill
 						(type none)
 					)
 				)
-			)
-			(symbol "R_0R1_1206_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+						(color 137 143 138 1)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(fill
+						(type color)
+						(color 132 132 132 1)
 					)
 				)
 			)
 		)
 	)
-	(junction
-		(at 144.78 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "20612128-2156-4a92-bb09-91af9a573f21")
-	)
-	(junction
-		(at 138.43 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "286e9a43-c91e-4d9e-9562-59a68c2d3b37")
-	)
-	(junction
-		(at 140.97 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e4125bd-381d-4870-96a8-2541f88fed6b")
-	)
-	(junction
-		(at 142.24 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3dd76c79-6215-40b2-8124-9057ecdb50ca")
-	)
-	(junction
-		(at 148.59 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b078c1c-25cf-43fb-b6a8-95176d8859c5")
-	)
-	(junction
-		(at 142.24 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "628e77f4-514f-4733-ba3c-04d3187e090c")
-	)
-	(junction
-		(at 144.78 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "65a51001-71a8-4208-a231-e9a4609735e1")
-	)
-	(junction
-		(at 142.24 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "67d22bb7-f37f-4051-a53a-2e694b8926b8")
-	)
-	(junction
-		(at 142.24 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6833fd42-3fd4-48bb-8fbb-a8a60547d103")
-	)
-	(junction
-		(at 142.24 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "701bf35e-94fc-43c5-a16b-cd04adb0d7a9")
-	)
-	(junction
-		(at 144.78 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "799d83d0-3e38-4751-a64f-fa2213aae70c")
-	)
-	(junction
-		(at 78.74 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "90fe8d8b-091f-49bc-b0cc-c2d25642ea46")
-	)
-	(junction
-		(at 144.78 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9508de32-b68f-444c-a226-cc304304bed9")
-	)
-	(junction
-		(at 144.78 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ddb4d86-dab3-44f3-811a-5e2798719f2d")
-	)
-	(junction
-		(at 144.78 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3b649f4-d474-4b15-a422-798211e65c73")
-	)
-	(junction
-		(at 140.97 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b8ba0201-3521-48f6-8724-0ab94c9c50e6")
-	)
-	(junction
-		(at 142.24 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c175dc93-ab5d-4791-8991-a8a2c54994eb")
-	)
-	(junction
-		(at 144.78 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c6c3fd95-1635-44cc-abb4-9c5100169066")
-	)
-	(junction
-		(at 144.78 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cad0dbe4-0507-44ac-96a2-009437b7dbb4")
-	)
-	(junction
-		(at 142.24 120.65)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d75d41aa-9407-4f6a-9fbd-cee1abb338a9")
-	)
-	(junction
-		(at 148.59 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "da2d714a-8a34-4751-aaab-bb686201642f")
-	)
-	(junction
-		(at 144.78 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "feb7d7d6-3478-45fe-ab17-9a93735a2005")
-	)
-	(wire
-		(pts
-			(xy 80.01 46.99) (xy 142.24 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00be3810-54db-40f1-a975-cb8065d22ce0")
-	)
-	(wire
-		(pts
-			(xy 46.99 69.85) (xy 44.45 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0206ccc9-1930-4de7-9884-301d2dd5c11f")
-	)
-	(wire
-		(pts
-			(xy 106.68 113.03) (xy 119.38 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04b3f356-68f3-49b6-9cdb-a32306b35266")
-	)
-	(wire
-		(pts
-			(xy 63.5 54.61) (xy 63.5 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05375879-9bed-4d1c-8ccb-6aa9d9729dc3")
-	)
-	(wire
-		(pts
-			(xy 62.23 63.5) (xy 78.74 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05edf6d5-9ad6-4c07-8363-dd93c948f340")
-	)
-	(wire
-		(pts
-			(xy 78.74 63.5) (xy 96.52 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06052ead-389e-4608-b804-977ccd71f815")
-	)
-	(wire
-		(pts
-			(xy 142.24 110.49) (xy 137.16 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "069112b1-5623-444e-a7f1-0dd353e56b10")
-	)
-	(wire
-		(pts
-			(xy 106.68 72.39) (xy 119.38 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06bdc5fc-fa7e-4e6b-8090-959504ea1d15")
-	)
-	(wire
-		(pts
-			(xy 62.23 64.77) (xy 62.23 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08034a78-f5e8-431e-ae17-2af47bc2825d")
-	)
-	(wire
-		(pts
-			(xy 46.99 50.8) (xy 46.99 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "092e5bc8-9510-45db-8182-0be3600505a6")
-	)
-	(wire
-		(pts
-			(xy 106.68 102.87) (xy 119.38 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "176765d1-6811-4cc9-9d59-1dc01a79cd39")
-	)
-	(wire
-		(pts
-			(xy 106.68 110.49) (xy 119.38 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "191e5895-6061-4adb-a5df-bb5878f8214b")
-	)
-	(wire
-		(pts
-			(xy 142.24 80.01) (xy 137.16 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b55ecc7-0d14-4f28-8060-18cddc510d8e")
-	)
-	(wire
-		(pts
-			(xy 137.16 82.55) (xy 144.78 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2284e823-2ee3-4d88-82dc-c4d584c236a3")
-	)
-	(wire
-		(pts
-			(xy 144.78 82.55) (xy 144.78 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2936b9d1-3286-40e3-a82d-31e669575ffe")
-	)
-	(wire
-		(pts
-			(xy 142.24 120.65) (xy 142.24 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ebfc051-a0b5-4fa6-9804-d7ab8c0c6505")
-	)
-	(wire
-		(pts
-			(xy 142.24 100.33) (xy 142.24 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30225e11-3686-4e12-ada7-b0791abaaa85")
-	)
-	(wire
-		(pts
-			(xy 54.61 46.99) (xy 45.72 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33cffda6-4cad-499d-8864-04b3a03f9a45")
-	)
-	(wire
-		(pts
-			(xy 142.24 120.65) (xy 137.16 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34068bc2-2ac7-40fc-bcae-5a4978a2d4b4")
-	)
-	(wire
-		(pts
-			(xy 144.78 72.39) (xy 144.78 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3760513b-f50c-4d6b-9fbf-4ae2baeb66b6")
-	)
-	(wire
-		(pts
-			(xy 142.24 90.17) (xy 142.24 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "384ecf11-d840-457a-aefc-d5cdf1233d78")
-	)
-	(wire
-		(pts
-			(xy 137.16 143.51) (xy 144.78 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39e72edc-ccd1-417a-a4a4-238e8a392683")
-	)
-	(wire
-		(pts
-			(xy 106.68 140.97) (xy 119.38 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a1f6acd-bb88-4e3d-995a-1910d2116ba8")
-	)
-	(wire
-		(pts
-			(xy 96.52 63.5) (xy 96.52 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f41a824-17c4-4d0f-8761-22e77e1aa5ed")
-	)
-	(wire
-		(pts
-			(xy 106.68 130.81) (xy 119.38 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46b91320-cad0-4778-9f85-3e30e2f3200d")
-	)
-	(wire
-		(pts
-			(xy 142.24 110.49) (xy 142.24 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "476a6357-df18-4f68-98e2-54dd1f46c806")
-	)
-	(wire
-		(pts
-			(xy 46.99 50.8) (xy 54.61 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47a0ea6f-f6ad-4cd1-ad94-9cf05a84acf5")
-	)
-	(wire
-		(pts
-			(xy 83.82 52.07) (xy 80.01 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50bc74c1-d6a6-4165-b97d-f08eba3cfccc")
-	)
-	(wire
-		(pts
-			(xy 142.24 46.99) (xy 142.24 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "567f8841-94bb-4748-a315-498a006d047e")
-	)
-	(wire
-		(pts
-			(xy 142.24 100.33) (xy 137.16 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e81cd43-184c-470f-9268-0d1b2e061348")
-	)
-	(wire
-		(pts
-			(xy 144.78 113.03) (xy 144.78 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fa9d136-3287-49b2-a7e0-d9a5646abd6a")
-	)
-	(wire
-		(pts
-			(xy 138.43 157.48) (xy 140.97 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61c88126-ac9d-4fb6-bf43-996fc9232a70")
-	)
-	(wire
-		(pts
-			(xy 44.45 67.31) (xy 45.72 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61e9fec6-9bba-4f17-b027-ef3fb884ab86")
-	)
-	(wire
-		(pts
-			(xy 44.45 72.39) (xy 49.53 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62dee9e0-e52e-4298-a70a-f7c8b7db9e28")
-	)
-	(wire
-		(pts
-			(xy 144.78 157.48) (xy 148.59 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64395eb3-b7c1-40b0-a28f-6d630f56d1fc")
-	)
-	(wire
-		(pts
-			(xy 140.97 149.86) (xy 144.78 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66899d1c-8b45-449a-96be-f36e03bd125a")
-	)
-	(wire
-		(pts
-			(xy 148.59 149.86) (xy 151.13 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69bc4276-6df2-4f38-80a5-a533f8d96e37")
-	)
-	(wire
-		(pts
-			(xy 86.36 72.39) (xy 83.82 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c576db8-bae9-4532-9995-34308a31ef47")
-	)
-	(wire
-		(pts
-			(xy 142.24 90.17) (xy 137.16 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6da7e4d5-d971-458e-b8bb-52dc5490d84c")
-	)
-	(wire
-		(pts
-			(xy 83.82 72.39) (xy 83.82 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ded3841-78e4-4a9a-b00b-260ba4d740d2")
-	)
-	(wire
-		(pts
-			(xy 137.16 140.97) (xy 142.24 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "778ab74a-c0a8-433d-983c-2b6b730bfcde")
-	)
-	(wire
-		(pts
-			(xy 144.78 143.51) (xy 144.78 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b60973d-7f25-447d-b714-73782551852e")
-	)
-	(wire
-		(pts
-			(xy 106.68 143.51) (xy 119.38 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7dfc9cad-d64f-4a66-bcbd-1244a6544d1a")
-	)
-	(wire
-		(pts
-			(xy 144.78 92.71) (xy 144.78 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "834a30e7-fa20-4f8e-8e28-9846bc7d91c1")
-	)
-	(wire
-		(pts
-			(xy 144.78 133.35) (xy 144.78 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8455674a-688e-4d10-9cbd-2a0c6db3a0d0")
-	)
-	(wire
+	(bus
 		(pts
-			(xy 106.68 90.17) (xy 119.38 90.17)
+			(xy 106.68 43.18) (xy 113.03 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "871a833c-c9e5-4932-a82c-e4a7d41f8850")
+		(uuid "024bd9c5-c68f-4ebc-96dc-843e1a5dbf76")
 	)
-	(wire
-		(pts
-			(xy 142.24 130.81) (xy 137.16 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87c33ef3-be50-4452-8149-0ad1b3ced4ad")
-	)
-	(wire
-		(pts
-			(xy 106.68 69.85) (xy 119.38 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89062326-65b9-4cd4-843c-e039eefa5b65")
-	)
-	(wire
-		(pts
-			(xy 45.72 46.99) (xy 45.72 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "935a320b-bffe-4d5f-a50b-d650cbc4bc26")
-	)
-	(wire
+	(bus
 		(pts
-			(xy 137.16 133.35) (xy 144.78 133.35)
+			(xy 80.01 50.8) (xy 82.55 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "995c1545-bbbb-4a39-8295-a0bb2f5da051")
+		(uuid "1d5bc644-a3bb-4eb0-9ae4-bb7b42e0d2e9")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 44.45 74.93) (xy 49.53 74.93)
+			(xy 113.03 43.18) (xy 113.03 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9ab432e4-57f2-4b48-a286-37e34f353de3")
+		(uuid "21fcf1fa-4019-4eca-aacc-440ae54da7e7")
 	)
 	(wire
 		(pts
-			(xy 144.78 149.86) (xy 144.78 151.13)
+			(xy 80.01 57.15) (xy 82.55 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9c49732a-1c09-4ade-a0db-9ff38e590c43")
+		(uuid "2d0159b6-318a-4865-8071-0ada306ee575")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 137.16 123.19) (xy 144.78 123.19)
+			(xy 74.93 71.12) (xy 82.55 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0ee2982-6813-4eb0-a58a-2c2d105f64d4")
+		(uuid "383937c4-2132-4b9e-959e-3df8f6923c95")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 106.68 80.01) (xy 119.38 80.01)
+			(xy 113.03 50.8) (xy 110.49 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ab76482b-ca2a-4581-9752-0c57fa94fbb1")
+		(uuid "3f740362-ed9c-4265-bcb7-1e8ea83c9e51")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 106.68 120.65) (xy 119.38 120.65)
+			(xy 110.49 71.12) (xy 118.11 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ad9bf27d-6c35-4eba-86be-6559635302b6")
+		(uuid "6b45cc57-f28e-4ae6-abd7-ec034af221c9")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 144.78 156.21) (xy 144.78 157.48)
+			(xy 80.01 43.18) (xy 80.01 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ba3e4fc0-9517-4afd-bd32-1ad5a18a88da")
+		(uuid "75a30b70-2999-45ca-8a54-1bb40ffaae33")
 	)
 	(wire
 		(pts
-			(xy 92.71 153.67) (xy 92.71 158.75)
+			(xy 96.52 132.08) (xy 96.52 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "be9ae26c-5326-45c7-9a7d-7241e8585a30")
+		(uuid "8469b53e-69fe-4bcb-a2df-05dfc330b916")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 106.68 123.19) (xy 119.38 123.19)
+			(xy 110.49 88.9) (xy 118.11 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c1718753-dd95-4433-86ac-5e9f169e4fe4")
+		(uuid "9cff1bf3-2c4c-411b-a2c7-753bb7185080")
 	)
 	(wire
 		(pts
-			(xy 106.68 100.33) (xy 119.38 100.33)
+			(xy 110.49 57.15) (xy 113.03 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c282e7a9-7c4b-4e44-bdda-6f36e9081b3c")
+		(uuid "9ef4f9c0-8df4-4a8b-96e1-00a588f75753")
 	)
 	(wire
 		(pts
-			(xy 144.78 123.19) (xy 144.78 133.35)
+			(xy 113.03 57.15) (xy 113.03 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c62ea68c-6bd6-4964-8b84-495e47e7a4cf")
+		(uuid "a4e8f197-ac43-4d0b-8179-110b476e4390")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 138.43 149.86) (xy 140.97 149.86)
+			(xy 110.49 106.68) (xy 118.11 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c96f67f7-68b8-4dfb-b5fa-be02df02cf54")
+		(uuid "a7094658-5bfe-4357-bf5e-1371e42fe5cd")
 	)
 	(wire
 		(pts
-			(xy 137.16 72.39) (xy 144.78 72.39)
+			(xy 82.55 66.04) (xy 80.01 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cc4107e7-f24c-49ed-b9f5-e501d84e5590")
+		(uuid "a727a68e-2f71-4955-bb78-d57690832db5")
 	)
 	(wire
 		(pts
-			(xy 140.97 157.48) (xy 144.78 157.48)
+			(xy 110.49 66.04) (xy 113.03 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cee4458e-98b2-4aba-a309-241a0591b4db")
+		(uuid "ba61c64b-539a-46f8-8831-3a3cdab7c8d1")
 	)
 	(wire
 		(pts
-			(xy 144.78 102.87) (xy 144.78 113.03)
+			(xy 80.01 66.04) (xy 80.01 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cf2cf2f5-695c-4ce2-9c9a-b23ddf59d684")
+		(uuid "d3671ac5-dedb-4390-854e-f2b9ba72e472")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 144.78 149.86) (xy 148.59 149.86)
+			(xy 74.93 88.9) (xy 82.55 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d1c66663-13f5-4d74-b408-46ecd1c01b4e")
+		(uuid "dbc9f91a-7b25-49b6-a7f6-0bf616f8480a")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 106.68 133.35) (xy 119.38 133.35)
+			(xy 74.93 106.68) (xy 82.55 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d57a62a2-c860-4662-8aff-1cc4801c9524")
+		(uuid "e3509f22-8de9-4738-b2bd-f6142faf368f")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 69.85 74.93) (xy 86.36 74.93)
+			(xy 110.49 124.46) (xy 118.11 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9966e4c-f8f7-48e0-8f4d-761e8a9b964f")
+		(uuid "f2efd985-121e-468d-8cc1-2047e8e815f0")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 137.16 113.03) (xy 144.78 113.03)
+			(xy 74.93 124.46) (xy 82.55 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "db9b294a-8b08-48bc-8ad9-cd009d2f2eee")
+		(uuid "fc7ed41a-6d0d-470f-8b40-b7f0a85fd027")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 142.24 80.01) (xy 142.24 69.85)
+			(xy 86.36 43.18) (xy 80.01 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e29388c2-2284-4ce6-8145-9603baa4e198")
+		(uuid "ff5df8a4-ccde-45ee-b49c-62c9d4d76741")
 	)
-	(wire
-		(pts
-			(xy 106.68 82.55) (xy 119.38 82.55)
-		)
+	(circle
+		(center 60.96 38.1)
+		(radius 2.54)
 		(stroke
 			(width 0)
 			(type default)
-		)
-		(uuid "e2d56874-1402-4beb-88fb-8c31aeb6d119")
-	)
-	(wire
-		(pts
-			(xy 142.24 69.85) (xy 137.16 69.85)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(fill
+			(type none)
 		)
-		(uuid "e3d7c3cb-7463-43c4-8f1b-631add60ea4d")
+		(uuid 3bc0a9ab-e91a-4f2a-8a9f-b34cebdcf26d)
 	)
-	(wire
-		(pts
-			(xy 106.68 149.86) (xy 138.43 149.86)
-		)
+	(circle
+		(center 60.96 139.7)
+		(radius 2.54)
 		(stroke
 			(width 0)
 			(type default)
-		)
-		(uuid "e8684c78-79a6-489f-8ae1-8f88f15ad4de")
-	)
-	(wire
-		(pts
-			(xy 148.59 157.48) (xy 151.13 157.48)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(fill
+			(type none)
 		)
-		(uuid "eaac47bc-47e0-462c-9728-831bd1e479df")
+		(uuid 536f617a-dc0e-44b5-bd18-0829ac0bbaff)
 	)
-	(wire
-		(pts
-			(xy 106.68 92.71) (xy 119.38 92.71)
-		)
+	(circle
+		(center 132.08 139.7)
+		(radius 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eea2e08e-1ae9-4d00-ae49-931dafe4bbb9")
-	)
-	(wire
-		(pts
-			(xy 59.69 81.28) (xy 59.69 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
+		(fill
+			(type none)
 		)
-		(uuid "f54b0d0b-adc6-47e4-a9ce-41ca2bcb0aba")
+		(uuid 6eb44c02-ba3b-4674-84bd-98c61cbb5176)
 	)
-	(wire
-		(pts
-			(xy 142.24 130.81) (xy 142.24 120.65)
-		)
+	(rectangle
+		(start 57.15 34.29)
+		(end 135.89 143.51)
 		(stroke
 			(width 0)
 			(type default)
-		)
-		(uuid "fac9ec51-ea0c-42cd-badc-60f01b12d072")
-	)
-	(wire
-		(pts
-			(xy 137.16 102.87) (xy 144.78 102.87)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(fill
+			(type none)
 		)
-		(uuid "fca8cc69-5fdf-406c-9597-249434a02a7b")
+		(uuid df69868c-bed8-480c-a42b-f0cf703f210d)
 	)
-	(wire
-		(pts
-			(xy 137.16 92.71) (xy 144.78 92.71)
-		)
+	(circle
+		(center 132.08 38.1)
+		(radius 2.54)
 		(stroke
 			(width 0)
 			(type default)
-		)
-		(uuid "fd6be28d-0591-4200-ad8b-42cd9ba10506")
-	)
-	(wire
-		(pts
-			(xy 142.24 140.97) (xy 142.24 130.81)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(fill
+			(type none)
 		)
-		(uuid "fdcb4cdf-fb23-4810-a40e-6411544ea2b4")
-	)
-	(text "AC/DC"
-		(exclude_from_sim no)
-		(at 48.26 46.99 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bddedf77-b294-4231-bc9e-d3107d4da069")
-	)
-	(text "AC/DC"
-		(exclude_from_sim no)
-		(at 48.26 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d3d24332-400d-4263-9491-0d07fcbdae4a")
-	)
-	(label "GND2"
-		(at 144.78 143.51 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3d3812b5-f885-4ad4-ae48-7844ebdbd30a")
+		(uuid ec1b862b-8c9d-4807-9de3-e5fe75f5baac)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 63.5 57.15 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2710f884-b07a-4ad4-a2f3-7aa446f692bd")
-		(property "Reference" "#PWR03"
-			(at 63.5 63.5 0)
+		(uuid "0b8619ec-62b6-42fc-b747-633f9277395c")
+		(property "Reference" "u109"
+			(at 59.563 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1742,16 +374,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 63.5 61.095 0)
+		(property "Value" "~"
+			(at 59.69 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 57.15 0)
+			(at 59.69 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1760,7 +393,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 57.15 0)
+			(at 59.69 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1769,7 +402,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 63.5 57.15 0)
+			(at 59.69 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1777,30 +410,27 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "8bc29aa8-a1ae-4acc-9ab7-48f8b654450c")
-		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "#PWR03")
+					(reference "u109")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 92.71 158.75 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 119.38 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3a46e446-2021-44d4-a88e-cbbc04badc93")
-		(property "Reference" "#PWR08"
-			(at 92.71 165.1 0)
+		(uuid "0d3c4229-55a8-4d12-9b19-36cf8565fa67")
+		(property "Reference" "u111"
+			(at 59.563 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1808,16 +438,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 92.71 162.695 0)
+		(property "Value" "~"
+			(at 59.69 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 158.75 0)
+			(at 59.69 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1826,7 +457,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 158.75 0)
+			(at 59.69 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1835,7 +466,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 92.71 158.75 0)
+			(at 59.69 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1843,347 +474,27 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "ce768c1e-06e7-45d1-90bf-f36943d3bc96")
-		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "#PWR08")
+					(reference "u111")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "resistors_1206:R_0R1_1206")
-		(at 151.13 153.67 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 88.9 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "480c01bb-ccdd-49f3-863b-b634d0fc15f1")
-		(property "Reference" "R104"
-			(at 158.75 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R1"
-			(at 158.75 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 149.352 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C25334"
-			(at 151.13 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "82ba5ff7-5263-4bc6-8020-ba9be134ad4f")
-		)
-		(pin "2"
-			(uuid "2c038faf-7443-4cfb-8811-71f9b5c2cb32")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "R104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "capacitor_miscellaneous:C_0402_100nF")
-		(at 144.78 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "697770dd-a48e-4b68-b83c-fbc75d840363")
-		(property "Reference" "C101"
-			(at 146.05 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 146.05 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 147.32 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 144.78 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C307331"
-			(at 144.78 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1596ac67-f293-4d3b-a435-f752dd245835")
-		)
-		(pin "2"
-			(uuid "2148ccb0-5198-4d5f-ad8b-4d963c421c82")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "C101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "resistors_1206:R_0R1_1206")
-		(at 140.97 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "728c1c47-837f-4ae6-87fc-9fd239d26f87")
-		(property "Reference" "R102"
-			(at 133.35 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R1"
-			(at 133.35 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 139.192 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 140.97 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 140.97 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C25334"
-			(at 140.97 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e82c12e-29e2-4bcf-83e3-89d03c113fb5")
-		)
-		(pin "2"
-			(uuid "11fd6a28-bf93-4de6-9c66-9a6884a44a53")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "R102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 39.37 72.39 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "90cfc67b-11c7-4cc6-a7bc-11b01f2b12fc")
-		(property "Reference" "J62"
-			(at 38.989 63.627 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x04"
-			(at 25.4 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
-			(at 39.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 39.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C880574"
-			(at 39.37 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a15f4ae6-2a12-4ab7-a606-fe00eb0ef946")
-		)
-		(pin "2"
-			(uuid "29662766-6b9e-4fdf-8371-a273e2bdef7c")
-		)
-		(pin "3"
-			(uuid "376dbc4e-9b88-4a49-86b1-1b1adab10988")
-		)
-		(pin "4"
-			(uuid "bc4288e7-f201-4151-8216-bb57cd95aade")
-		)
-		(instances
-			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "J62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.69 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "99c7f804-e758-4f4d-8e19-8f8f665829f1")
-		(property "Reference" "#PWR07"
-			(at 59.69 90.17 0)
+		(uuid "1aeacad1-bd3e-48c5-8f00-30347add10b6")
+		(property "Reference" "u113"
+			(at 88.9 36.703 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2191,12 +502,525 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 59.69 87.765 0)
+		(property "Value" "~"
+			(at 92.71 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1c3afbc1-534d-4d2c-a17f-e2d767156480")
+		(property "Reference" "u106"
+			(at 59.563 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 78.74 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1da80e32-39f8-46c9-bda3-240477748268")
+		(property "Reference" "u104"
+			(at 59.563 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2712894b-215c-40d2-92b6-a0067a5288d5")
+		(property "Reference" "u128"
+			(at 133.223 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44385491-c3e0-43a2-8ea3-484969e3296a")
+		(property "Reference" "u123"
+			(at 133.223 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 60.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44fcd3b1-4370-482e-9c06-4341c3261086")
+		(property "Reference" "u117"
+			(at 133.223 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48d84c32-920a-4073-a3ab-d9049fabf720")
+		(property "Reference" "u122"
+			(at 133.223 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 71.12 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ad95b63-b82a-4b27-b649-cedf26404bac")
+		(property "Reference" "u103"
+			(at 59.563 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cffe2d6-1633-43ca-88d0-d6c9ce24208c")
+		(property "Reference" "u105"
+			(at 59.563 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -2226,30 +1050,27 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "77bbbc44-ce54-46a3-9bae-52f07f18cba3")
-		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "#PWR07")
+					(reference "u105")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 78.74 63.5 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a3f64989-a44a-4b13-ad92-28c65509922a")
-		(property "Reference" "#PWR01"
-			(at 78.74 67.31 0)
+		(uuid "60c7c5c6-15be-4f6a-b5f4-af6b57558301")
+		(property "Reference" "u107"
+			(at 59.563 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2257,16 +1078,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 78.74 59.555 0)
+		(property "Value" "~"
+			(at 59.69 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 63.5 0)
+			(at 59.69 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2275,7 +1097,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 63.5 0)
+			(at 59.69 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2284,7 +1106,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 78.74 63.5 0)
+			(at 59.69 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2292,30 +1114,27 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "d95ed40a-98b6-40b2-92e2-1aa7260164ea")
-		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "#PWR01")
+					(reference "u107")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 144.78 157.48 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a992a316-7860-49e0-8b3f-aeb8f5bfec00")
-		(property "Reference" "#PWR02"
-			(at 144.78 163.83 0)
+		(uuid "64aef09d-39f3-4ad0-ba41-0bec84cb0192")
+		(property "Reference" "u112"
+			(at 59.563 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,16 +1142,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 144.78 161.425 0)
+		(property "Value" "~"
+			(at 59.69 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 157.48 0)
+			(at 59.69 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2341,7 +1161,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 157.48 0)
+			(at 59.69 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2350,7 +1170,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 144.78 157.48 0)
+			(at 59.69 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2358,29 +1178,36 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "36a1a41f-cade-48e9-ab20-99943252e36f")
-		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "#PWR02")
+					(reference "u112")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "resistors_1206:R_0R1_1206")
-		(at 138.43 153.67 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
-		(uuid "eeef0b62-4ea9-4f1c-ba8e-e29c2217a56b")
-		(property "Reference" "R101"
-			(at 128.27 152.4 0)
+		(fields_autoplaced yes)
+		(uuid "6676c3c3-4919-47f1-b226-c035de559b5c")
+		(property "Reference" "u120"
+			(at 133.223 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2388,17 +1215,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0R1"
-			(at 128.27 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 136.652 153.67 90)
+		(property "Footprint" ""
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2406,8 +1224,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 138.43 153.67 0)
+		(property "Datasheet" ""
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2415,50 +1233,45 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 138.43 153.67 0)
+		(property "Description" ""
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "JLCPCB Part#" "C25334"
-			(at 138.43 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ac006c08-d231-4f19-8789-580eab8a6247")
-		)
-		(pin "2"
-			(uuid "b0251ef4-2f1d-4e45-859b-3bebba671951")
 		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "R101")
+					(reference "u120")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "resistors_1206:R_0R1_1206")
-		(at 148.59 153.67 0)
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 60.96 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
-		(uuid "fb6c91b8-3df5-4302-a97d-3f66e33f4a85")
-		(property "Reference" "R103"
-			(at 153.67 152.4 0)
+		(fields_autoplaced yes)
+		(uuid "6f98dfe4-a2d4-4081-b872-b8291347f06c")
+		(property "Reference" "u101"
+			(at 59.563 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2466,17 +1279,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0R1"
-			(at 153.67 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 146.812 153.67 90)
+		(property "Footprint" ""
+			(at 59.69 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2484,8 +1288,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 148.59 153.67 0)
+		(property "Datasheet" ""
+			(at 59.69 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2493,42 +1297,859 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 148.59 153.67 0)
+		(property "Description" ""
+			(at 59.69 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "JLCPCB Part#" "C25334"
-			(at 148.59 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6f2c0f52-a06b-4c82-bee7-80e9dc32d497")
-		)
-		(pin "2"
-			(uuid "20d63c99-7fa1-4ee9-a8d7-71d38715586a")
 		)
 		(instances
 			(project "solenoidDecoder"
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
-					(reference "R103")
+					(reference "u101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "72a67023-7ce9-4182-953a-433b6597b515")
+		(property "Reference" "u121"
+			(at 133.223 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u121")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 71.12 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97ab1f6e-a255-4d4d-92ac-ddb6a0ac9df8")
+		(property "Reference" "u119"
+			(at 133.223 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 66.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98d6b4ac-30b7-4047-9c39-c899a6d5e573")
+		(property "Reference" "u118"
+			(at 133.223 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u118")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7fd1117-df77-4af2-bb78-b90bbc026a4d")
+		(property "Reference" "u127"
+			(at 133.223 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 114.3 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8832586-667f-4f3c-b9d9-e7c224bb08fc")
+		(property "Reference" "u110"
+			(at 59.563 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf9dbf8a-7c05-4a8c-81c6-fa82ff89cc45")
+		(property "Reference" "u124"
+			(at 133.223 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u124")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 114.3 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0e073dc-34fb-4b45-a619-d2ca74b115ef")
+		(property "Reference" "u126"
+			(at 133.223 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 66.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c343ffa3-1fe0-4e98-8a04-8f4e44232932")
+		(property "Reference" "u102"
+			(at 59.563 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 99.06 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4682a2b-4db1-46bc-bc32-fd645c9cdde5")
+		(property "Reference" "u115"
+			(at 99.06 36.703 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 102.87 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 133.35 106.68 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d737361b-40fb-4e8d-a479-908b8640c9c6")
+		(property "Reference" "u125"
+			(at 133.223 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 133.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 104.14 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "defa46cb-6037-4920-911c-52a036d1c762")
+		(property "Reference" "u116"
+			(at 104.14 36.703 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 107.95 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u116")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 93.98 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfc5d926-cc28-4634-89b0-9af3c7ba60f9")
+		(property "Reference" "u114"
+			(at 93.98 36.703 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 97.79 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 59.69 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1bd570c-5cd9-4135-86e6-cc4ee98ce302")
+		(property "Reference" "u108"
+			(at 59.563 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 59.69 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(reference "u108")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(sheet
-		(at 119.38 76.2)
-		(size 17.78 7.62)
+		(at 118.11 76.2)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2537,8 +2158,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "13632baa-2697-4964-b8b7-b6a342545e82")
-		(property "Sheetname" "mosfets1"
-			(at 124.46 78.74 0)
+		(property "Sheetname" "mosfets2"
+			(at 120.65 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2547,7 +2168,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 84.4046 0)
+			(at 116.84 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2555,45 +2176,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "bbcc6e4e-8735-480d-b323-4e9634867b41")
-		)
-		(pin "Coil_B" input
-			(at 119.38 82.55 180)
+		(pin "{COIL}" input
+			(at 118.11 88.9 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "afe98463-0885-401c-b3f2-2b926ed2df28")
-		)
-		(pin "Coil_A" input
-			(at 119.38 80.01 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "1c2113b8-ed59-4f33-ae15-34142f808b9c")
-		)
-		(pin "POW" passive
-			(at 137.16 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "a1a40669-036c-40cd-8744-45d2a068dfd3")
+			(uuid "6317d918-a5a1-4e84-99e2-1cc6ede5dd4e")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -2604,8 +2195,55 @@
 		)
 	)
 	(sheet
-		(at 119.38 66.04)
-		(size 17.78 7.62)
+		(at 87.63 132.08)
+		(size 17.78 10.16)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "15e27eb8-e231-422d-b38d-086e678d6312")
+		(property "Sheetname" "currentSense"
+			(at 91.44 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "currentSense.kicad_sch"
+			(at 83.82 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CS" output
+			(at 96.52 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "5387e817-85e0-429f-b9e2-91dc4f35d202")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 118.11 58.42)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2614,8 +2252,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9")
-		(property "Sheetname" "mosfets"
-			(at 124.46 68.58 0)
+		(property "Sheetname" "mosfets1"
+			(at 120.65 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2624,53 +2262,24 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 74.2446 0)
+			(at 118.11 66.6246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "89a24817-19ec-4109-8235-350879336b27")
-		)
-		(pin "Coil_B" input
-			(at 119.38 72.39 180)
+		(pin "{COIL}" input
+			(at 118.11 71.12 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d87c06d4-53d5-46c9-88f4-3c96e020eadf")
-		)
-		(pin "Coil_A" input
-			(at 119.38 69.85 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "45efcba9-7af6-466f-b4d7-a9d8d1f67af7")
-		)
-		(pin "POW" passive
-			(at 137.16 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "6e6bb3c4-1e02-4884-aa4d-5c60febc945b")
+			(uuid "a75bc21e-295d-4a44-bb7b-5aabccf2b596")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -2681,8 +2290,8 @@
 		)
 	)
 	(sheet
-		(at 119.38 86.36)
-		(size 17.78 7.62)
+		(at 118.11 93.98)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2691,8 +2300,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "7f9196aa-0693-4a68-a190-2a098c79ec0d")
-		(property "Sheetname" "mosfets2"
-			(at 124.46 88.9 0)
+		(property "Sheetname" "mosfets3"
+			(at 120.65 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2701,7 +2310,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 94.5646 0)
+			(at 118.11 102.1846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2709,45 +2318,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "bb18cac5-3a76-41dc-9dee-0105d3a5403c")
-		)
-		(pin "Coil_B" input
-			(at 119.38 92.71 180)
+		(pin "{COIL}" input
+			(at 118.11 106.68 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "9d4f3b95-de50-49b8-9a4b-dd9a9dc2b0c7")
-		)
-		(pin "Coil_A" input
-			(at 119.38 90.17 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "37e845a7-e905-4bb0-9d51-82f070658e46")
-		)
-		(pin "POW" passive
-			(at 137.16 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "404139c9-d680-4d5a-937c-9237869b25da")
+			(uuid "13920c33-efcd-42fb-8673-5118de2fc845")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -2758,8 +2337,8 @@
 		)
 	)
 	(sheet
-		(at 49.53 64.77)
-		(size 20.32 16.51)
+		(at 82.55 48.26)
+		(size 12.7 11.43)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2769,7 +2348,7 @@
 		)
 		(uuid "8844a919-370c-43dd-897a-ce1fcbceebfa")
 		(property "Sheetname" "DCC"
-			(at 50.8 68.58 0)
+			(at 87.63 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2778,7 +2357,7 @@
 			)
 		)
 		(property "Sheetfile" "DCC.kicad_sch"
-			(at 38.1 82.55 0)
+			(at 82.55 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2787,54 +2366,24 @@
 			)
 		)
 		(pin "DCC_TTL" output
-			(at 69.85 74.93 0)
+			(at 82.55 57.15 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 			(uuid "ed1fae41-c155-4c27-9552-bc008d13a388")
 		)
-		(pin "GND" passive
-			(at 59.69 81.28 270)
+		(pin "{DCC}" input
+			(at 82.55 50.8 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "688b97a6-ed46-48cf-a877-899c70c799b5")
-		)
-		(pin "DCC_A" input
-			(at 49.53 72.39 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "f9f44e71-e1cc-4862-ae17-6e8b9de236ed")
-		)
-		(pin "DCC_B" input
-			(at 49.53 74.93 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "1a53bc1f-10aa-4e05-a23f-f828aeff0732")
-		)
-		(pin "5V" passive
-			(at 62.23 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "bffd3b24-87dc-43e9-8ddd-66d886634046")
+			(uuid "e2a94df9-6d37-45fd-875f-31215b290ece")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -2845,8 +2394,8 @@
 		)
 	)
 	(sheet
-		(at 119.38 127)
-		(size 17.78 7.62)
+		(at 57.15 76.2)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2855,8 +2404,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1")
-		(property "Sheetname" "mosfets6"
-			(at 124.46 129.54 0)
+		(property "Sheetname" "mosfets7"
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2865,7 +2414,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 135.2046 0)
+			(at 57.15 84.4046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2873,45 +2422,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 133.35 0)
+		(pin "{COIL}" input
+			(at 74.93 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e5ad0a5e-3536-455e-a8a5-729d6a1c16ee")
-		)
-		(pin "Coil_B" input
-			(at 119.38 133.35 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "ed8f59c1-329f-4a36-a706-d4e1a105f520")
-		)
-		(pin "Coil_A" input
-			(at 119.38 130.81 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "537fc531-071a-4e44-bb9d-fa47d889e83e")
-		)
-		(pin "POW" passive
-			(at 137.16 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "8ff88b1b-b81c-4903-a1b4-18bcaea36c94")
+			(uuid "ffd55a15-c0ad-4923-852c-5644ca9df242")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -2922,8 +2441,8 @@
 		)
 	)
 	(sheet
-		(at 54.61 43.18)
-		(size 25.4 11.43)
+		(at 97.79 48.26)
+		(size 12.7 11.43)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2933,7 +2452,7 @@
 		)
 		(uuid "ab851e10-6952-453a-94c1-2661101c520a")
 		(property "Sheetname" "POWER"
-			(at 59.69 45.72 0)
+			(at 100.33 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2942,7 +2461,7 @@
 			)
 		)
 		(property "Sheetfile" "voltageRegulator.kicad_sch"
-			(at 57.15 54.61 0)
+			(at 140.97 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2950,48 +2469,8 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 63.5 54.61 270)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "7340a527-91d1-4682-a952-82c6dbd50028")
-		)
-		(pin "Vin1" passive
-			(at 54.61 46.99 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "3c1f4db8-cc9f-45fe-add7-a16314aa2edd")
-		)
-		(pin "Vcoils" passive
-			(at 80.01 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "8930cb36-2c60-4567-97c7-69f0ee410fd6")
-		)
-		(pin "Vin2" passive
-			(at 54.61 50.8 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "440cd80c-f89f-4edc-9f41-1ce160dd536b")
-		)
-		(pin "coilVoltage" input
-			(at 80.01 52.07 0)
+		(pin "coilVoltage" output
+			(at 110.49 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2999,6 +2478,16 @@
 				(justify right)
 			)
 			(uuid "61ac3087-5df1-458d-9eac-42a1015a33e2")
+		)
+		(pin "{POW}" input
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0162af7a-57e5-484e-b064-910542eb53b5")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -3009,8 +2498,8 @@
 		)
 	)
 	(sheet
-		(at 86.36 67.31)
-		(size 20.32 86.36)
+		(at 82.55 63.5)
+		(size 27.94 63.5)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3020,7 +2509,7 @@
 		)
 		(uuid "ae44f076-083a-4f7c-82da-9165b8813e09")
 		(property "Sheetname" "uController"
-			(at 87.63 78.74 0)
+			(at 90.17 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3029,7 +2518,7 @@
 			)
 		)
 		(property "Sheetfile" "uController.kicad_sch"
-			(at 83.82 154.94 0)
+			(at 80.01 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3037,168 +2526,8 @@
 				(justify left top)
 			)
 		)
-		(pin "GPIO6" input
-			(at 106.68 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "9ab45134-257a-4899-bcea-1b4db1a95767")
-		)
-		(pin "GPIO5" input
-			(at 106.68 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "fa4b4d4b-f1a9-462a-a3fc-ba1b0fde2869")
-		)
-		(pin "GPIO4" input
-			(at 106.68 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "7b69aed9-3661-4880-b936-adadd4fa2b70")
-		)
-		(pin "GPIO15" input
-			(at 106.68 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "a4849ce3-b6d7-46d2-9343-c18c5bb1d700")
-		)
-		(pin "GPIO16" input
-			(at 106.68 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "290f68f7-f91d-445d-9680-7b0c8271c572")
-		)
-		(pin "GPIO13" input
-			(at 106.68 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "7b0ebfa9-113f-42e4-a035-0958df802737")
-		)
-		(pin "GPIO14" input
-			(at 106.68 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "7febab35-e19e-4f60-b882-91c909273586")
-		)
-		(pin "GPIO12" input
-			(at 106.68 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d9dfed1a-5511-4ba5-a62f-a9d6ac86c0e8")
-		)
-		(pin "GPIO11" input
-			(at 106.68 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "9cb27116-555c-48d0-aa98-142357dedd14")
-		)
-		(pin "GPIO10" input
-			(at 106.68 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "cb0a3cd3-f5c7-4f0b-80df-80e8c6d03c21")
-		)
-		(pin "GPIO7" input
-			(at 106.68 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "4a24810b-d79f-4fe8-87bc-7c2983ea0a21")
-		)
-		(pin "GPIO9" input
-			(at 106.68 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "a74fe9ec-bd9b-4431-bdfc-cdb37e073b02")
-		)
-		(pin "GPIO8" input
-			(at 106.68 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "c706724e-b40d-4fd3-89c3-8238a31707a4")
-		)
-		(pin "GPIO3" input
-			(at 106.68 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "2b47ec07-0851-46d3-bf25-4a16690bcc50")
-		)
-		(pin "GPIO1" input
-			(at 106.68 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "bd504d76-8352-4aef-9aa9-e64844cc1720")
-		)
-		(pin "GPIO2" input
-			(at 106.68 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "61b85496-6a0e-4a60-bfb0-9cdc706c9e75")
-		)
-		(pin "DCC_TTL" passive
-			(at 86.36 74.93 180)
+		(pin "DCC_TTL" input
+			(at 82.55 66.04 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,45 +2536,105 @@
 			)
 			(uuid "a16e8f37-d912-4776-b1c4-a4c5e20a3daa")
 		)
-		(pin "GND" passive
-			(at 92.71 153.67 270)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "b3149a84-5320-4366-9f2c-cf822e161dcc")
-		)
-		(pin "5V" passive
-			(at 96.52 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "14a4ba4f-9b4b-4553-88ec-97b6dfb7b47c")
-		)
-		(pin "CS" input
-			(at 106.68 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "72751804-ff56-44d1-af09-39caea98a2d5")
-		)
 		(pin "coilVoltage" input
-			(at 86.36 72.39 180)
+			(at 110.49 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 			(uuid "b50d2e52-a2bf-47f0-bf93-f592b0c463d5")
+		)
+		(pin "7{COIL}" output
+			(at 82.55 88.9 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2c3566d6-a014-485e-8453-697493ebc298")
+		)
+		(pin "6{COIL}" output
+			(at 82.55 106.68 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "88edca58-89cd-4a05-b60d-a53eecd5a085")
+		)
+		(pin "5{COIL}" output
+			(at 82.55 124.46 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f5ce7323-ae99-4c78-9c6b-c8cb2e2e0a52")
+		)
+		(pin "8{COIL}" output
+			(at 82.55 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "6e6af661-e775-4efe-b49c-f575a9a5a44b")
+		)
+		(pin "CS" input
+			(at 96.52 127 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2119b871-c6f3-49ae-8956-c4db8a3b0e30")
+		)
+		(pin "1{COIL}" output
+			(at 110.49 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "cdd7572c-3fed-46e8-8ed2-23720afce8f1")
+		)
+		(pin "2{COIL}" output
+			(at 110.49 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "adf185af-de57-49be-8657-2a47b7ce788d")
+		)
+		(pin "3{COIL}" output
+			(at 110.49 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ccf2b913-efd7-428e-84ed-51f137f3ca16")
+		)
+		(pin "4{COIL}" output
+			(at 110.49 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a2655f73-1b48-4c05-9875-7212af041f19")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -3256,8 +2645,65 @@
 		)
 	)
 	(sheet
-		(at 119.38 96.52)
-		(size 17.78 7.62)
+		(at 86.36 34.29)
+		(size 20.32 10.16)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bc9ba66d-6a89-4550-a3c5-7275196e0cae")
+		(property "Sheetname" "Terminal"
+			(at 92.71 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Terminal.kicad_sch"
+			(at 86.36 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "1{DCC}" output
+			(at 86.36 43.18 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "92b30ff3-ce78-49a7-9a33-f964fcea9075")
+		)
+		(pin "2{POW}" output
+			(at 106.68 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b6a447b6-f32d-4b44-8c00-d5fbc54a297c")
+		)
+		(instances
+			(project "solenoidDecoder"
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 118.11 111.76)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3266,8 +2712,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "cfe5722c-5b40-4534-ab09-34019a7dae07")
-		(property "Sheetname" "mosfets3"
-			(at 124.46 99.06 0)
+		(property "Sheetname" "mosfets4"
+			(at 120.65 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3276,7 +2722,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 104.7246 0)
+			(at 118.11 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3284,45 +2730,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d9d4a13c-bc15-47e6-97ba-b89725906d4d")
-		)
-		(pin "Coil_B" input
-			(at 119.38 102.87 180)
+		(pin "{COIL}" input
+			(at 118.11 124.46 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f71748fb-11fe-489f-aac3-72da5883970c")
-		)
-		(pin "Coil_A" input
-			(at 119.38 100.33 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "47c341d1-6f6c-41a7-82bf-8d4a8f959fe9")
-		)
-		(pin "POW" passive
-			(at 137.16 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d78c9b78-8edc-49dd-9a07-c0ce0ffb08d2")
+			(uuid "21bbbe6f-1673-42ca-8280-7c0202269cc4")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -3333,8 +2749,8 @@
 		)
 	)
 	(sheet
-		(at 119.38 116.84)
-		(size 17.78 7.62)
+		(at 57.15 93.98)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3343,8 +2759,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "d8b627d5-fbe5-4481-9bd8-57e990c24c52")
-		(property "Sheetname" "mosfets5"
-			(at 124.46 119.38 0)
+		(property "Sheetname" "mosfets6"
+			(at 64.77 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3353,7 +2769,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 125.0446 0)
+			(at 57.15 102.1846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3361,45 +2777,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 123.19 0)
+		(pin "{COIL}" input
+			(at 74.93 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a28ada36-71af-4aa5-af5f-bc6072fe9f38")
-		)
-		(pin "Coil_B" input
-			(at 119.38 123.19 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "7c40d5cb-b6ec-44ab-b684-a0d2d6e010b6")
-		)
-		(pin "Coil_A" input
-			(at 119.38 120.65 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "2a2ffa04-7b2a-4993-b389-408352bb9c71")
-		)
-		(pin "POW" passive
-			(at 137.16 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "0e95adaa-a402-4841-980a-43aa8f52a766")
+			(uuid "c2cbdd37-7c0f-434a-bcf3-a5a957ae9ce9")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -3410,8 +2796,8 @@
 		)
 	)
 	(sheet
-		(at 119.38 106.68)
-		(size 17.78 7.62)
+		(at 57.15 111.76)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3420,8 +2806,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "da21b652-f556-4e58-aadb-4222a0d5c167")
-		(property "Sheetname" "mosfets4"
-			(at 124.46 109.22 0)
+		(property "Sheetname" "mosfets5"
+			(at 64.77 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3430,7 +2816,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 114.8846 0)
+			(at 54.61 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3438,45 +2824,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 113.03 0)
+		(pin "{COIL}" input
+			(at 74.93 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "32d9ae98-91bf-4dfd-8701-b1e560213227")
-		)
-		(pin "Coil_B" input
-			(at 119.38 113.03 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "42a2fc2b-0809-42d1-b905-5e0c57acd029")
-		)
-		(pin "Coil_A" input
-			(at 119.38 110.49 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "1aee895d-6b79-4e2e-afdb-5fcc477bc127")
-		)
-		(pin "POW" passive
-			(at 137.16 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "4f803585-7ff3-4e21-9eb8-db7631f8e3d6")
+			(uuid "a1938873-bc13-45c3-ba4f-7bded9762bba")
 		)
 		(instances
 			(project "solenoidDecoder"
@@ -3487,8 +2843,8 @@
 		)
 	)
 	(sheet
-		(at 119.38 137.16)
-		(size 17.78 7.62)
+		(at 57.15 58.42)
+		(size 17.78 15.24)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3497,8 +2853,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "dc9ddee9-2c98-494d-af27-92c8e13dacd2")
-		(property "Sheetname" "mosfets7"
-			(at 124.46 139.7 0)
+		(property "Sheetname" "mosfets8"
+			(at 64.77 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3507,7 +2863,7 @@
 			)
 		)
 		(property "Sheetfile" "mosfets.kicad_sch"
-			(at 119.38 145.3646 0)
+			(at 57.15 66.6246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3515,45 +2871,15 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 137.16 143.51 0)
+		(pin "{COIL}" input
+			(at 74.93 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a404ee2f-33f6-44c8-9246-8dffef1eaaca")
-		)
-		(pin "Coil_B" input
-			(at 119.38 143.51 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "a5ec7e4c-763b-4211-8a98-ffe2b9197397")
-		)
-		(pin "Coil_A" input
-			(at 119.38 140.97 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "14fea423-8707-471e-8028-6a4f784efaef")
-		)
-		(pin "POW" passive
-			(at 137.16 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "c756f7b0-2de5-4349-b114-b091987372b9")
+			(uuid "f80d13a0-b0d4-4ac1-849a-40f691ec2a8b")
 		)
 		(instances
 			(project "solenoidDecoder"

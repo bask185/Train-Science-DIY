@@ -1280,16 +1280,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 154.94) (xy 118.11 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ebef86e-3139-4a6e-9ff0-b11540755452")
-	)
-	(wire
-		(pts
 			(xy 130.81 58.42) (xy 146.05 58.42)
 		)
 		(stroke
@@ -1330,7 +1320,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 166.37) (xy 78.74 166.37)
+			(xy 63.5 152.4) (xy 78.74 152.4)
 		)
 		(stroke
 			(width 0)
@@ -1340,7 +1330,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 168.91) (xy 78.74 168.91)
+			(xy 60.96 154.94) (xy 78.74 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1420,7 +1410,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 176.53) (xy 92.71 180.34)
+			(xy 92.71 162.56) (xy 92.71 166.37)
 		)
 		(stroke
 			(width 0)
@@ -1520,7 +1510,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 143.51) (xy 63.5 166.37)
+			(xy 63.5 143.51) (xy 63.5 152.4)
 		)
 		(stroke
 			(width 0)
@@ -1540,7 +1530,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 146.05) (xy 60.96 168.91)
+			(xy 60.96 146.05) (xy 60.96 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1730,16 +1720,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 168.91) (xy 107.95 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d187739d-7e3a-445a-918d-39f61856301e")
-	)
-	(wire
-		(pts
 			(xy 45.72 128.27) (xy 52.07 128.27)
 		)
 		(stroke
@@ -1780,7 +1760,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 161.29) (xy 92.71 162.56)
+			(xy 92.71 147.32) (xy 92.71 148.59)
 		)
 		(stroke
 			(width 0)
@@ -1860,7 +1840,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 168.91) (xy 107.95 168.91)
+			(xy 100.33 154.94) (xy 118.11 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1986,7 +1966,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 180.34 0)
+		(at 92.71 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1995,7 +1975,7 @@
 		(fields_autoplaced yes)
 		(uuid "1b6bf410-d350-4df2-8c35-390227cc5824")
 		(property "Reference" "#PWR0105"
-			(at 92.71 186.69 0)
+			(at 92.71 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2004,7 +1984,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 185.42 0)
+			(at 92.71 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2012,7 +1992,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 180.34 0)
+			(at 92.71 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2021,7 +2001,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 180.34 0)
+			(at 92.71 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2030,7 +2010,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 92.71 180.34 0)
+			(at 92.71 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2410,7 +2390,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 92.71 161.29 0)
+		(at 92.71 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2419,7 +2399,7 @@
 		(fields_autoplaced yes)
 		(uuid "92a99586-c845-4fb0-9b8e-f4640c5a1378")
 		(property "Reference" "#PWR0106"
-			(at 92.71 165.1 0)
+			(at 92.71 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2408,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 92.71 156.21 0)
+			(at 92.71 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2436,7 +2416,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 161.29 0)
+			(at 92.71 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2445,7 +2425,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 161.29 0)
+			(at 92.71 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2454,7 +2434,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 92.71 161.29 0)
+			(at 92.71 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3053,7 +3033,7 @@
 		)
 	)
 	(sheet
-		(at 78.74 162.56)
+		(at 78.74 148.59)
 		(size 21.59 13.97)
 		(fields_autoplaced yes)
 		(stroke
@@ -3065,7 +3045,7 @@
 		)
 		(uuid "1efd0b4f-2acb-4126-88e4-4e4c50af21d3")
 		(property "Sheetname" "DCC"
-			(at 78.74 161.8484 0)
+			(at 78.74 147.8784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3074,7 +3054,7 @@
 			)
 		)
 		(property "Sheetfile" "DCC.kicad_sch"
-			(at 78.74 177.1146 0)
+			(at 78.74 163.1446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3083,7 +3063,7 @@
 			)
 		)
 		(pin "5V" input
-			(at 92.71 162.56 90)
+			(at 92.71 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3093,7 +3073,7 @@
 			(uuid "553a4e39-ec67-41e3-9636-109118eea48a")
 		)
 		(pin "DCC_TTL" input
-			(at 100.33 168.91 0)
+			(at 100.33 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3103,7 +3083,7 @@
 			(uuid "be3ab05d-a8d4-44a9-813f-8821a1defdb9")
 		)
 		(pin "GND" input
-			(at 92.71 176.53 270)
+			(at 92.71 162.56 270)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3113,7 +3093,7 @@
 			(uuid "7693d8f4-a9b1-4fbf-a0f3-4d91ee833d97")
 		)
 		(pin "DCC_A" input
-			(at 78.74 166.37 180)
+			(at 78.74 152.4 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3123,7 +3103,7 @@
 			(uuid "2bdff1ef-6e73-4305-aa19-f8d6a2938d9c")
 		)
 		(pin "DCC_B" input
-			(at 78.74 168.91 180)
+			(at 78.74 154.94 180)
 			(effects
 				(font
 					(size 1.27 1.27)

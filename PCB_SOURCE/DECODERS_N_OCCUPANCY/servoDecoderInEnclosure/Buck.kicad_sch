@@ -2205,7 +2205,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7"
 			(at 199.0852 88.9 0)
 			(effects
 				(font
@@ -2224,6 +2224,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 198.12 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C114446"
 			(at 198.12 85.09 0)
 			(effects
 				(font

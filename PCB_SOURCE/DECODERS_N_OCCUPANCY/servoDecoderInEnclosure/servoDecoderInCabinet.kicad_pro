@@ -504,7 +504,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 1000,
+    "annotate_start_num": 2100,
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -623,6 +623,18 @@
       "Buck"
     ],
     [
+      "0c27c8b7-3734-4129-8cd0-d3d033ef2608",
+      "D_bridge"
+    ],
+    [
+      "e13e46f3-84b9-4b95-8587-c7e8df7a2232",
+      "USB"
+    ],
+    [
+      "fe7a571a-f4cb-4c8f-b332-bbc81ab00da9",
+      "P1"
+    ],
+    [
       "176f2eac-936a-43f5-aacd-56c254800839",
       "P2"
     ],
@@ -631,24 +643,12 @@
       "P3"
     ],
     [
-      "fe7a571a-f4cb-4c8f-b332-bbc81ab00da9",
-      "P1"
-    ],
-    [
       "7d7fa5f9-deaf-47b9-ab3f-b1087ee38f4d",
       "P4"
     ],
     [
       "6df31c75-7edc-4658-a58b-c86a17429989",
       "P5"
-    ],
-    [
-      "0c27c8b7-3734-4129-8cd0-d3d033ef2608",
-      "D_bridge"
-    ],
-    [
-      "e13e46f3-84b9-4b95-8587-c7e8df7a2232",
-      "USB"
     ],
     [
       "63c85b9d-d0b0-442f-8854-1e91bc600183",

@@ -502,7 +502,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "solenoidDecoder.step",
       "svg": "",
       "vrml": ""
     },
@@ -631,7 +631,7 @@
     ],
     [
       "13632baa-2697-4964-b8b7-b6a342545e82",
-      "mosfets1"
+      "mosfets2"
     ],
     [
       "ab851e10-6952-453a-94c1-2661101c520a",
@@ -639,31 +639,39 @@
     ],
     [
       "6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9",
-      "mosfets"
+      "mosfets1"
     ],
     [
       "7f9196aa-0693-4a68-a190-2a098c79ec0d",
-      "mosfets2"
-    ],
-    [
-      "cfe5722c-5b40-4534-ab09-34019a7dae07",
       "mosfets3"
     ],
     [
-      "da21b652-f556-4e58-aadb-4222a0d5c167",
+      "cfe5722c-5b40-4534-ab09-34019a7dae07",
       "mosfets4"
     ],
     [
-      "d8b627d5-fbe5-4481-9bd8-57e990c24c52",
+      "da21b652-f556-4e58-aadb-4222a0d5c167",
       "mosfets5"
     ],
     [
-      "a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1",
+      "d8b627d5-fbe5-4481-9bd8-57e990c24c52",
       "mosfets6"
     ],
     [
-      "dc9ddee9-2c98-494d-af27-92c8e13dacd2",
+      "a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1",
       "mosfets7"
+    ],
+    [
+      "dc9ddee9-2c98-494d-af27-92c8e13dacd2",
+      "mosfets8"
+    ],
+    [
+      "bc9ba66d-6a89-4550-a3c5-7275196e0cae",
+      "Terminal"
+    ],
+    [
+      "15e27eb8-e231-422d-b38d-086e678d6312",
+      "currentSense"
     ]
   ],
   "text_variables": {}

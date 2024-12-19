@@ -1529,7 +1529,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 119.38) (xy 204.47 119.38)
+			(xy 196.85 119.38) (xy 204.47 119.38)
 		)
 		(stroke
 			(width 0)
@@ -1579,7 +1579,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 116.84) (xy 204.47 116.84)
+			(xy 200.66 116.84) (xy 204.47 116.84)
 		)
 		(stroke
 			(width 0)
@@ -1596,16 +1596,6 @@
 			(type default)
 		)
 		(uuid "666d1900-b31d-4b2b-a60d-b75ba333926e")
-	)
-	(wire
-		(pts
-			(xy 199.39 114.3) (xy 204.47 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77de7453-8331-4f5b-a029-b81c5dfe6f30")
 	)
 	(wire
 		(pts
@@ -1669,7 +1659,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 116.84) (xy 217.17 116.84)
+			(xy 222.25 116.84) (xy 217.17 116.84)
 		)
 		(stroke
 			(width 0)
@@ -1699,7 +1689,17 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 114.3) (xy 217.17 114.3)
+			(xy 200.66 114.3) (xy 204.47 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5934e5a-02d5-4388-af79-0f6a7126e601")
+	)
+	(wire
+		(pts
+			(xy 223.52 114.3) (xy 217.17 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1852,7 +1852,7 @@
 		(uuid "5d7d4249-1896-47bb-8b2d-6962dc7f95ba")
 	)
 	(label "OUT"
-		(at 199.39 114.3 180)
+		(at 196.85 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1885,13 +1885,13 @@
 		(uuid "c0332f76-f996-49da-ae4c-0890da8b6ce8")
 	)
 	(label "OUT"
-		(at 222.25 119.38 180)
+		(at 223.52 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "c0357f77-a2fb-4573-8d26-153758eeba36")
 	)
@@ -1930,7 +1930,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 195.58 119.38 270)
+		(at 200.66 114.3 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1938,7 +1939,7 @@
 		(dnp no)
 		(uuid "1f1f10ec-e1cc-4ae0-abb9-e1369773720f")
 		(property "Reference" "#PWR0105"
-			(at 189.23 119.38 0)
+			(at 194.31 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1947,7 +1948,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 119.38 90)
+			(at 195.58 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1955,7 +1956,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 119.38 0)
+			(at 200.66 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1964,7 +1965,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 119.38 0)
+			(at 200.66 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1973,7 +1974,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 195.58 119.38 0)
+			(at 200.66 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1995,7 +1996,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 226.06 114.3 90)
+		(at 222.25 119.38 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2003,7 +2005,7 @@
 		(dnp no)
 		(uuid "6839c46e-b6ff-4986-b8ee-5a001c554ce8")
 		(property "Reference" "#PWR0108"
-			(at 232.41 114.3 0)
+			(at 228.6 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2012,7 +2014,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 231.14 114.3 90)
+			(at 227.33 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2020,7 +2022,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 114.3 0)
+			(at 222.25 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2029,7 +2031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 114.3 0)
+			(at 222.25 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2038,7 +2040,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 226.06 114.3 0)
+			(at 222.25 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2423,7 +2425,8 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 226.06 116.84 270)
+		(at 222.25 116.84 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2431,7 +2434,7 @@
 		(dnp no)
 		(uuid "a4223033-3dc9-4b3d-a05d-a44058375ec6")
 		(property "Reference" "#PWR0107"
-			(at 222.25 116.84 0)
+			(at 218.44 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2440,7 +2443,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 231.14 116.84 90)
+			(at 227.33 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2448,7 +2451,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 116.84 0)
+			(at 222.25 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2457,7 +2460,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 116.84 0)
+			(at 222.25 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2466,7 +2469,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 226.06 116.84 0)
+			(at 222.25 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2688,7 +2691,8 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 195.58 116.84 90)
+		(at 200.66 116.84 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2696,7 +2700,7 @@
 		(dnp no)
 		(uuid "e3762454-b57b-4876-b040-c8de3d1a2f40")
 		(property "Reference" "#PWR0106"
-			(at 199.39 116.84 0)
+			(at 204.47 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2705,7 +2709,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 190.5 116.84 90)
+			(at 195.58 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2713,7 +2717,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 116.84 0)
+			(at 200.66 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2722,7 +2726,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 116.84 0)
+			(at 200.66 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2731,7 +2735,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 195.58 116.84 0)
+			(at 200.66 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
