@@ -1,0 +1,4 @@
+solenoidDecoder
+v0.0.0   Date/time:2023-04-07 11:20:06.920422
+Project assembled
+

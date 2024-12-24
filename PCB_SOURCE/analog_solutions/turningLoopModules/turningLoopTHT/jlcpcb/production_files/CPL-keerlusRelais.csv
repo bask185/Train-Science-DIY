@@ -1,0 +1,14 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,330nF,C_Disc_D3.0mm_W2.0mm_P2.50mm,167.0,-45.0,0.0,top
+C2,100nF,C_Disc_D3.0mm_W2.0mm_P2.50mm,167.02,-55.414,0.0,top
+C3,47uF,CP_Radial_D4.0mm_P2.00mm,175.033401,-63.5,0.0,top
+D1,D_Bridge_+-AA,Diode_Bridge_DIP-4_W7.62mm_P5.08mm,157.086,-48.133,-90.0,top
+D2,D,D_DO-34_SOD68_P7.62mm_Horizontal,157.4325,-76.4305,0.0,top
+D3,D,D_DO-34_SOD68_P7.62mm_Horizontal,172.715,-68.707,0.0,top
+J1,DCC_IN,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",145.415,-55.499,-90.0,top
+J2,DCC_out,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",145.415,-65.659,-90.0,top
+J3,Conn_01x03_Male,PinHeader_1x03_P2.54mm_Horizontal,173.625,-54.015,0.0,top
+K1,G5V-2,Relay_DPDT_Omron_G5V-2,157.4325,-64.3565,180.0,top
+Q1,BC547,TO-92_Inline_Wide,167.005,-64.643,0.0,top
+R1,4k7,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,168.0,-60.0,0.0,top
+U1,LM78L12_TO92,TO-92_Inline_Wide,166.5,-49.5,180.0,top

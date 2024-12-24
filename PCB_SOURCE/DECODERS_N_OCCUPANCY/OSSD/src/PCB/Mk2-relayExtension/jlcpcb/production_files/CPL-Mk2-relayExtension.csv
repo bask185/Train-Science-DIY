@@ -1,0 +1,6 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,108.75,-63.5,-90.0,top
+J4,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",150.8575,-63.5,90.0,top
+J5,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.3575,-63.5175,-90.0,top
+K1,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,127.5,-63.5,90.0,top
+K2,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,117.0,-63.5,270.0,top

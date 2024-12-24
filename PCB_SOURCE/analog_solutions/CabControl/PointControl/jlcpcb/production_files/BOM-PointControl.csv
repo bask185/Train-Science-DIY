@@ -1,0 +1,9 @@
+Comment,Designator,Footprint,LCSC
+1K5,R1,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+Screw_Terminal_01x03,J2,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",
+Screw_Terminal_01x02,J1,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",
+LED,D1,LED_D3.0mm,
+LED,D2,LED_D3.0mm,
+MTS202,SW1,MTS_DPDT,
+D,D3,D_DO-34_SOD68_P7.62mm_Horizontal,
+Screw_Terminal_01x02,J3,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",

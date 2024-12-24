@@ -1,0 +1,34 @@
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 647:Plugin executed on: 'win32'
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 648:Plugin executed with python version: '3.11.5 (main, Apr  9 2024, 02:53:56) [MSC v.1936 64 bit (AMD64)]'
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 649:KiCad build version: 8.0.2
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 650:Plugin version: 3.0.0
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 651:Frame repr: <wx._core.Frame object at 0x00000138941F7D90>
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 121:getting a list of all footprints on board
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J101 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J103 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint REF** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J104 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J102 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint REF** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint G*** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint REF** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J106 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint REF** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint J105 on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint G*** on root level
+12-19 00:39:38 com_github_MitjaNemec_PlaceFootprints.place_footprints 156:Footprint REF** on root level
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 86:By Sheet GUI initialized
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 95:Selecting: 1
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 99:Should invoke level_changed()
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 277:Level_changed() invoked
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.place_footprints 244:constructing a list of sheets suitable for replication on level:'CS8', file:'current sensor.kicad_sch'
+12-19 00:39:40 com_github_MitjaNemec_PlaceFootprints.place_footprints 279:suitable sheets are:[['CS1'], ['CS10'], ['CS11'], ['CS12'], ['CS13'], ['CS14'], ['CS15'], ['CS16'], ['CS2'], ['CS3'], ['CS4'], ['CS5'], ['CS6'], ['CS7'], ['CS9']]
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 184:Saving config sheet
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 196:Preparing config for sheet linear
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 216:Saving config file
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 218:Saved the config file
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 718:Sheets selected: [['CS1'], ['CS10'], ['CS11'], ['CS12'], ['CS13'], ['CS14'], ['CS15'], ['CS16'], ['CS2'], ['CS3'], ['CS4'], ['CS5'], ['CS6'], ['CS7'], ['CS9']]
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 727:Footprints to place: ['U1001', 'U1901', 'U1301', 'U1401', 'U1501', 'U1601', 'U1701', 'U1801', 'U1901', 'U401', 'U501', 'U601', 'U701', 'U801', 'U901', 'U1101']
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.place_footprints 367:Starting placing with linear layout
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 772:Placing complete
+12-19 00:39:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 773:Sorted_footprints: ['U401', 'U501', 'U601', 'U701', 'U801', 'U901', 'U1001', 'U1101', 'U1301', 'U1401', 'U1501', 'U1601', 'U1701', 'U1801', 'U1901', 'U1901']

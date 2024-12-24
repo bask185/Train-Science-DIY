@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC
+Screw_Terminal_01x03,J5,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",C192778
+Screw_Terminal_01x03,J4,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",C22380440
+G6K-2F-Y-TR DC12,"K1,K2",Relay_DPDT_Omron_G6K-2F-Y,C397192
+Screw_Terminal_01x03,J1,connector_3.50mm_3P horizontal_MALE,C6394074
