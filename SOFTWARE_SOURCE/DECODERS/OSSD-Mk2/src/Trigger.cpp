@@ -45,4 +45,20 @@ uint8_t F_trigger::update( uint8 IN )
     }
 
     return Q ;
-} 
+}
+
+C_trigger::C_trigger()
+{
+}
+
+uint8_t C_trigger::update( uint8 IN )
+{
+    Q = 0 ;
+    if( IN != old )
+    {
+        Q = 1 ;
+        old = IN ;
+    }
+
+    return Q ;
+}

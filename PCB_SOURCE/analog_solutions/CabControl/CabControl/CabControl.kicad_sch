@@ -1416,16 +1416,16 @@
 		(uuid "33328f4c-f2e0-4965-baae-7c8ea348e42e")
 	)
 	(junction
-		(at 135.89 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6baf25e7-70cd-4692-bf3c-55a6a5e0829b")
-	)
-	(junction
 		(at 123.19 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "72227677-766b-4b62-b4d5-c69c5194dd62")
+	)
+	(junction
+		(at 135.89 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c8ab562f-f199-4c9d-844d-09cc34bea4b2")
 	)
 	(junction
 		(at 120.65 133.35)
@@ -1455,7 +1455,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 105.41) (xy 138.43 109.22)
+			(xy 138.43 99.06) (xy 138.43 102.87)
 		)
 		(stroke
 			(width 0)
@@ -1485,7 +1485,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 95.25) (xy 123.19 109.22)
+			(xy 123.19 88.9) (xy 123.19 133.35)
 		)
 		(stroke
 			(width 0)
@@ -1502,16 +1502,6 @@
 			(type default)
 		)
 		(uuid "3873f0c3-b5dd-4a1a-bbbc-8eea962c8dea")
-	)
-	(wire
-		(pts
-			(xy 135.89 118.11) (xy 135.89 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bd9ec90-dfda-4fb1-a81a-4c56bc384a3a")
 	)
 	(wire
 		(pts
@@ -1555,7 +1545,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 118.11) (xy 133.35 116.84)
+			(xy 133.35 110.49) (xy 133.35 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1565,7 +1555,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 95.25) (xy 123.19 95.25)
+			(xy 135.89 88.9) (xy 123.19 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1575,7 +1565,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 118.11) (xy 135.89 118.11)
+			(xy 133.35 123.19) (xy 135.89 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1585,7 +1575,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 105.41) (xy 133.35 109.22)
+			(xy 133.35 99.06) (xy 133.35 102.87)
 		)
 		(stroke
 			(width 0)
@@ -1595,23 +1585,23 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 118.11) (xy 138.43 118.11)
+			(xy 135.89 123.19) (xy 135.89 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f71cd7a-ae84-4e28-8b7c-269453ef4174")
+	)
+	(wire
+		(pts
+			(xy 135.89 123.19) (xy 138.43 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "64859430-475d-4e76-b347-82fc78d12cfb")
-	)
-	(wire
-		(pts
-			(xy 123.19 116.84) (xy 123.19 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68836b26-0acf-4c83-a2c0-d14aa1fe09d8")
 	)
 	(wire
 		(pts
@@ -1622,6 +1612,16 @@
 			(type default)
 		)
 		(uuid "6dcfb98f-b4ab-4140-acc2-ceebf6a0f528")
+	)
+	(wire
+		(pts
+			(xy 133.35 120.65) (xy 133.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8140f72d-f5b9-44cc-9b1c-1ffd770fa291")
 	)
 	(wire
 		(pts
@@ -1675,13 +1675,23 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 118.11) (xy 138.43 116.84)
+			(xy 138.43 110.49) (xy 138.43 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c3e0dae9-b938-4949-ad9a-1fb6ec69a118")
+	)
+	(wire
+		(pts
+			(xy 138.43 120.65) (xy 138.43 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbef0ae7-07ad-4458-997c-90f8bddc7565")
 	)
 	(wire
 		(pts
@@ -1734,7 +1744,7 @@
 		(uuid "1e0669a2-6825-406e-8be7-42f8010f7b01")
 	)
 	(label "LED B"
-		(at 138.43 107.95 0)
+		(at 138.43 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1778,7 +1788,7 @@
 		(uuid "df915911-eccb-49e9-8285-9d0802d7a872")
 	)
 	(label "LED A"
-		(at 133.35 107.95 180)
+		(at 133.35 101.6 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1857,6 +1867,75 @@
 			(project "CabControl"
 				(path "/51ef48e6-556b-44be-b086-25f7b2c50359"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 133.35 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2ccb9c98-2bb7-4789-8cc2-1f07f462857f")
+		(property "Reference" "R1"
+			(at 127 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "???"
+			(at 127 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 131.572 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 133.35 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 133.35 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4b51abb2-df6a-43cd-892a-57a23d7053d5")
+		)
+		(pin "1"
+			(uuid "3d960505-2fe4-4220-802b-7b9e1953605b")
+		)
+		(instances
+			(project "CabControl"
+				(path "/51ef48e6-556b-44be-b086-25f7b2c50359"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -1944,16 +2023,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 133.35 113.03 270)
+		(lib_id "Device:R")
+		(at 138.43 116.84 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6323ebbe-57e1-49a0-a076-3e7f099f7370")
-		(property "Reference" "D1"
-			(at 129.54 113.03 90)
+		(uuid "3b8005d3-e923-46c1-a217-3bb1c914a73c")
+		(property "Reference" "R2"
+			(at 144.78 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1961,8 +2040,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 129.54 115.57 90)
+		(property "Value" "???"
+			(at 144.78 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1970,8 +2049,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 133.35 113.03 0)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 140.208 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1980,7 +2059,76 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.35 113.03 0)
+			(at 138.43 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 138.43 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d6c7f478-afe9-4615-97ad-c82371537397")
+		)
+		(pin "1"
+			(uuid "d5e9a694-cba0-4648-8a8e-a902c5401150")
+		)
+		(instances
+			(project "CabControl"
+				(path "/51ef48e6-556b-44be-b086-25f7b2c50359"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 133.35 106.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6323ebbe-57e1-49a0-a076-3e7f099f7370")
+		(property "Reference" "D1"
+			(at 129.54 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 129.54 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 133.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 133.35 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1989,7 +2137,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 133.35 113.03 0)
+			(at 133.35 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2094,7 +2242,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 138.43 113.03 270)
+		(at 138.43 106.68 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2102,7 +2250,7 @@
 		(dnp no)
 		(uuid "98d4d409-7ba1-462b-ae44-b8bd240b913d")
 		(property "Reference" "D2"
-			(at 139.7 113.03 90)
+			(at 139.7 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2111,7 +2259,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 139.7 115.57 90)
+			(at 139.7 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2120,7 +2268,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 138.43 113.03 0)
+			(at 138.43 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2129,7 +2277,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 113.03 0)
+			(at 138.43 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2138,7 +2286,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 138.43 113.03 0)
+			(at 138.43 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2163,7 +2311,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_DPDT_x2")
-		(at 135.89 100.33 270)
+		(at 135.89 93.98 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2171,7 +2319,7 @@
 		(dnp no)
 		(uuid "b5e226db-aabd-4521-9677-5e6f6968b9fe")
 		(property "Reference" "SW2"
-			(at 135.89 92.71 90)
+			(at 135.89 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2180,7 +2328,7 @@
 			)
 		)
 		(property "Value" "MTS203"
-			(at 135.89 95.25 90)
+			(at 135.89 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2189,7 +2337,7 @@
 			)
 		)
 		(property "Footprint" "custom_kicad_lib_sk:MTS_DPDT"
-			(at 135.89 100.33 0)
+			(at 135.89 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2198,7 +2346,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 100.33 0)
+			(at 135.89 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2207,7 +2355,7 @@
 			)
 		)
 		(property "Description" "Switch, dual pole double throw, separate symbols"
-			(at 135.89 100.33 0)
+			(at 135.89 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2216,96 +2364,27 @@
 			)
 		)
 		(pin "6"
-			(uuid "e864cea7-6784-4828-ae65-e0e69409cbe1")
+			(uuid "e864cea7-6784-4828-ae65-e0e69409cbe2")
 		)
 		(pin "5"
-			(uuid "4f26be71-77b7-4bf6-9e26-833e9cf28aa1")
+			(uuid "4f26be71-77b7-4bf6-9e26-833e9cf28aa2")
 		)
 		(pin "1"
-			(uuid "7775af32-5c90-422d-aaee-3d22a8104798")
+			(uuid "7775af32-5c90-422d-aaee-3d22a8104799")
 		)
 		(pin "2"
-			(uuid "9e291fde-062b-413b-9b79-578baf619fd4")
+			(uuid "9e291fde-062b-413b-9b79-578baf619fd5")
 		)
 		(pin "3"
-			(uuid "d6de20d3-22cc-4a66-a7f3-3b50f0561896")
+			(uuid "d6de20d3-22cc-4a66-a7f3-3b50f0561897")
 		)
 		(pin "4"
-			(uuid "f6ef706a-d7de-42b3-8e2c-a7e9aae33591")
+			(uuid "f6ef706a-d7de-42b3-8e2c-a7e9aae33592")
 		)
 		(instances
 			(project "CabControl"
 				(path "/51ef48e6-556b-44be-b086-25f7b2c50359"
 					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 123.19 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c0f2c28f-d1c6-4115-ae1a-16e9f20e367e")
-		(property "Reference" "R1"
-			(at 116.84 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1K5"
-			(at 116.84 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 121.412 113.03 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3fabb6e7-69d6-4df1-8249-7046fe5c3682")
-		)
-		(pin "1"
-			(uuid "f692ef42-46dd-4225-9ad5-076849b5229c")
-		)
-		(instances
-			(project "CabControl"
-				(path "/51ef48e6-556b-44be-b086-25f7b2c50359"
-					(reference "R1")
 					(unit 1)
 				)
 			)

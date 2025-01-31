@@ -3,5 +3,6 @@ D1,LED,LED_D3.0mm,160.878574,-76.229534,0.0,top
 D2,LED,LED_D3.0mm,160.878574,-84.229534,0.0,top
 J1,Screw_Terminal_01x04,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",166.469574,-75.152534,270.0,bottom
 J2,Screw_Terminal_01x05,"PhoenixContact_MC_1,5_5-G-3.5_1x05_P3.50mm_Horizontal",138.284074,-76.902534,90.0,bottom
-R1,1K5,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,151.969574,-71.402534,0.0,top
+R1,???,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,152.273,-69.469,180.0,top
+R2,???,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,152.273,-71.755,0.0,top
 SW2,MTS203,MTS_DPDT,151.340574,-80.039534,-90.0,top

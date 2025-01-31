@@ -7593,7 +7593,6 @@
 		)
 	)
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "bacdc09c-031d-415c-b966-fa4059f858dc")
 		(at 182 129.5 180)
@@ -9302,7 +9301,6 @@
 		)
 	)
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "f643de54-a431-4dc6-bf86-85da025ba009")
 		(at 139 129.5 180)
@@ -10178,8 +10176,8 @@
 			(justify bottom)
 		)
 	)
-	(gr_text "<-up line"
-		(at 139.573 123.37522 0)
+	(gr_text "<IO modules"
+		(at 140.462 123.444 0)
 		(layer "F.SilkS")
 		(uuid "76525458-171d-4454-81a5-1cbfd1b6da53")
 		(effects
@@ -10190,8 +10188,8 @@
 			(justify bottom)
 		)
 	)
-	(gr_text "down->\nline"
-		(at 182.118 124.841 0)
+	(gr_text "central>\n"
+		(at 182.118 123.825 0)
 		(layer "F.SilkS")
 		(uuid "98c22499-0f67-483c-9d51-ca2e2303cb0e")
 		(effects
@@ -10225,6 +10223,72 @@
 			)
 			(justify bottom)
 		)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "2b733ea0-bbb8-47e3-bfd5-9d98d6d66efb")
+		(pts
+			(xy 135.5 136.5) (xy 185.5 136.5)
+		)
+		(height 5.866999)
+		(gr_text "50,0000 mm"
+			(at 160.5 141.216999 0)
+			(layer "Dwgs.User")
+			(uuid "2b733ea0-bbb8-47e3-bfd5-9d98d6d66efb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "bd9fc179-f31f-4f18-8245-ed821255e248")
+		(pts
+			(xy 135.5 136.5) (xy 135.5 106)
+		)
+		(height -4.69)
+		(gr_text "30,5000 mm"
+			(at 129.66 121.25 90)
+			(layer "Dwgs.User")
+			(uuid "bd9fc179-f31f-4f18-8245-ed821255e248")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
 	)
 	(segment
 		(start 149 121.024)

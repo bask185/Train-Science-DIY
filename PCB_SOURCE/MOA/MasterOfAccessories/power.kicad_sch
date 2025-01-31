@@ -1167,7 +1167,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1487d290-a849-4310-aa83-b9895ebb281f")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0306"
 			(at 144.78 80.01 0)
 			(effects
 				(font
@@ -1217,7 +1217,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR06")
+					(reference "#PWR0306")
 					(unit 1)
 				)
 			)
@@ -1367,7 +1367,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f8ca588-d53e-450b-b4ec-2cf8a56d9ee0")
-		(property "Reference" "C402"
+		(property "Reference" "C302"
 			(at 142.24 80.0162 0)
 			(effects
 				(font
@@ -1430,7 +1430,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "C402")
+					(reference "C302")
 					(unit 1)
 				)
 			)
@@ -1446,7 +1446,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f568137-dc76-48c2-a2c8-9ad27c884d6a")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR0303"
 			(at 111.76 91.44 0)
 			(effects
 				(font
@@ -1496,7 +1496,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR05")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -1512,7 +1512,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0154225-33f8-4dcc-972b-d55d94b4c55c")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0302"
 			(at 104.14 80.01 0)
 			(effects
 				(font
@@ -1562,7 +1562,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR07")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -1578,7 +1578,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8fac379-9288-4e5e-b75b-f6c525eeba25")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR0304"
 			(at 127 91.44 0)
 			(effects
 				(font
@@ -1628,7 +1628,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR04")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -1644,7 +1644,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d101bd60-4a22-47fc-9d27-f4ceb2a0e9a1")
-		(property "Reference" "C401"
+		(property "Reference" "C301"
 			(at 114.3 80.0162 0)
 			(effects
 				(font
@@ -1707,7 +1707,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "C401")
+					(reference "C301")
 					(unit 1)
 				)
 			)
@@ -1723,7 +1723,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd603276-afb5-4633-b8f9-67e45aad5c1f")
-		(property "Reference" "U401"
+		(property "Reference" "U301"
 			(at 127 69.85 0)
 			(effects
 				(font
@@ -1787,7 +1787,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "U401")
+					(reference "U301")
 					(unit 1)
 				)
 			)
@@ -1803,7 +1803,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0dc5388-465d-44f0-93c6-0f84c01cd3c0")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR0305"
 			(at 139.7 91.44 0)
 			(effects
 				(font
@@ -1853,7 +1853,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR03")
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)

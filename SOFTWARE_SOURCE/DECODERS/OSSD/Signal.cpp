@@ -390,6 +390,7 @@ uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
     if( dccAddress == myAddress )
     {
         currentAspect = _aspect ;
+        saveAspect() ;
         return 1 ;
     }
     return 0 ;
@@ -397,17 +398,14 @@ uint8_t Signal::setAspectExt( uint16 dccAddress, uint8 _aspect )
 
 void Signal::loadAspect()
 {
-    uint8 oldAspect = EEPROM.read( eeAddress ) ;
+    currentAspect = EEPROM.read( eeAddress ) ;
     
-    currentAspect = oldAspect ;
-    if( type == IS_COIL ) currentAspect |= SET_COIL ;
+    //if( type == IS_COIL ) currentAspect |= SET_COIL ; // note is this desirable? do we want to set coils?
 }
 
 void Signal::saveAspect()
 {
-    uint8 newAspect = currentAspect & 0b01111111 ; // do not store first bit, reserved for coils
-
-    EEPROM.update( eeAddress, newAspect ) ;
+    EEPROM.update( eeAddress, currentAspect ) ;
 }
 
 uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
@@ -418,6 +416,7 @@ uint8_t Signal::setAspect( uint16 dccAddress, uint8 dir )
     if( dccAddress >= beginAddress && dccAddress <= endAddress )
     {
         currentAspect = ((dccAddress - myAddress) % nAddresses) * 2 + dir ; // for signals determen which aspect corrsponds with received address
+        saveAspect() ;
         if( type == IS_COIL ) currentAspect |= SET_COIL ;
 
         return 1 ;

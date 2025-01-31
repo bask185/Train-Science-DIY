@@ -10,33 +10,32 @@
 
 
 /******* SK NOTES **********
- * 
- * 
- * JE BENT BEZIG MET de LED BLINK CODE
- * 
- Welcome to the new Mk2 source code.
- The Mk2 will be able to work with an external CDU
+ 
+  Welcome to the new OSSD Mk2 source code.
+
  
  * TODO
-  The capacitor level can be monitored. I want to measure atleast 16V before a point is set.
-  I could make the decoder smart. If capacitor is found I can wait the first time to measure total voltage
-  
 
-  CONFIG MENU must be fixed.
-  - all double pulse share the same pulse duration CHECK
-  - unique address per coil should be added CHECK
-  - loco functions for accessories.  UNSURE IF DESIRED 
+    pwm speeds, must be fetched from EEPROM and send to the PWM controllers.
+    This part may already work because the PWM speed is part of the coil array.
+    In order to save the speed I merely have to set the speed once and store coil array and ofcourse 
 
-  DEADBEEF CHECK and initialization values CHECK
+    make helper functions to load en save data from EEPROM. As is now, EEPROM is too small for the entire coil array
+    the array has grown too big
 
+    go test things.
+    The code does compile and should work
+
+    Re-invent interlocking method. Only double pulse outputs may not be activated at the same time. I was thinking too add a 
+    static token inside the update function. If a double pulse mode is active no other double pulse method may be activated.
+
+    After an overcurrent, a lockout time should take place which keeps all outputs dorment for atleast 5 seconds or so.
+
+    Methods to get the PWM dutycucle from config to objects and storage.
 */
 
-// config bits
-const int   DCC_EXTENDED       = 0 ;
-const int   UNIQUE_ADDRESSES   = 1 ;
-// const int   bit2         = 2 ;
 
-uint8       configBits ;
+
 const int   nCoils    = 8 ;
 uint8       coilIndex = 0 ;
 
@@ -45,6 +44,8 @@ CoilDriver  coil[nCoils] ;
 Debounce    configButton ;
 LedBlink blueLed( blueLedPin) ;
 LedBlink yellowLed( yellowLedPin ) ;
+
+const int DEADBEEF_EE_ADDRESS ;
 
 enum modeState
 {
@@ -57,18 +58,65 @@ enum modeState
     configMode,
     getIndex4pulse,
     setPulseTime,
-
+    setDutyCycle,
     checkButton, // not an actual mode
 } ;
+
+const int LOCO_FUNCTIONS_OFF    = 0 ;
+const int FANTASTIC_FOUR        = 1 ;
+const int EIGHT_BALL            = 2 ;
 
 struct
 {
     uint16 uniqueAddresses :  1 ;
-    uint16          dccExt :  1 ;
-    uint16   locoFunctions :  1 ; // enable the usage of locomotive function.
-    uint16       eeAddress : 10 ;
+    uint16          dccExt :  1 ; 
+    uint16   locoFunctions :  2 ; // enable the usage of locomotive function. this can be 1 address with 16 functions or 4 addresses with 4 functions
+    uint8    disableOnBoot :  1 ;
 } settings;
 
+struct // these struct is only used to save and load critical variable to and fom EEPROM
+{
+    uint16_t     type       :  3 ;
+    uint16_t     stateA     :  1 ;
+    uint16_t     stateB     :  1 ;
+    uint16_t     dutyCycleA :  7 ;
+    uint16_t     dutyCycleB :  7 ;
+    uint16_t     address    : 12 ;
+    uint32_t     pulseTime ;
+} coilSettings[nCoils] ;
+
+const int EE_COILS = 0 ;
+const int EE_SETTINGS = sizeof( coilSettings ) ;
+
+void saveCoils()
+{
+    for( int i = 0 ; i < nCoils ; i ++ )
+    {
+        coilSettings[i].type       = coil[i].getType() ;
+        coilSettings[i].stateA     = coil[i].getState( 0 ) ; // A
+        coilSettings[i].stateB     = coil[i].getState( 1 ) ; // B
+        coilSettings[i].dutyCycleA = coil[i].getDutyCycle( 0 ) ; // A
+        coilSettings[i].dutyCycleB = coil[i].getDutyCycle( 1 ) ; // B
+        coilSettings[i].address    = coil[i].getAddress() ;
+        coilSettings[i].pulseTime  = coil[i].getPulseTime() ;
+    }
+
+    EEPROM.put( EE_COILS, coilSettings ) ;
+}
+
+void loadCoils()
+{
+    EEPROM.get( EE_COILS, coilSettings ) ;
+
+    for( int i = 0 ; i < nCoils ; i ++ )
+    {
+        coil[i].setType(      coilSettings[i].type      ) ;
+        coil[i].setStates(    coilSettings[i].stateA,     coilSettings[i].stateB ) ;
+        coil[i].setDutycycles(coilSettings[i].dutyCycleA, coilSettings[i].dutyCycleB ) ;
+        coil[i].setAddress(   coilSettings[i].address   ) ;
+        coil[i].setPulseTime( coilSettings[i].pulseTime ) ;
+    }
+}
 
 uint8                   state = idle ;
 uint32                  beginTime ;
@@ -77,26 +125,24 @@ volatile uint16         receivedAddress ;
 volatile uint8          newAddressSet ;
 volatile static uint32  lastTime ;
 
-// calculuse max ADC value that correspond with 5A, 1023 adc pulses and 0.125R shunt resistor
-static uint8 R_shunt  =  25 ;              // 0.025R
+// calculuse max ADC value that correspond with 5A, 1024 adc pulses and 0.125R shunt resistor CHECK ME
+static uint8 R_shunt  = 125 ;              // 0.0125R
 static uint8 I_max    =   5 ;              // ampere
 static uint8 V_max    =  R_shunt * I_max ; //  /100V
-static uint8 ADC_max  =  ((uint32)1023 * V_max) / ((uint32)5 * 10000) ;
+static uint8 ADC_max  =  ((uint32)1024 * V_max) / ((uint32)5 * 10000) ;
 
-uint8 preset = 0 ;  // 1-4 are used, 255, means no preset
-uint8 blueBleep ;   // 0 is no bleep, 1, 2, 3, 4 bleeps are used. And 255 is ON
-uint8 yellowF ;     // 0 is OFF, 255 is ON
-
-// In deze functie stellen we de patronen in voor de 2 leds, gebaseerd op state en preset
 void determineLedPattern()
 {
-    if(state == idle) switch(preset)
+    uint8_t currentPreset = getPreset() ;
+
+    if(state == idle) switch( currentPreset )
     {
-        case DOUBLE_COIL_PULSED:        blueLed.bleep( 1 )  ; yellowLed.bleep( 1 ) ; break ;
-        case DOUBLE_COIL_CONTINUOUSLY:  blueLed.turn(  ON ) ; yellowLed.turn( ON ) ; break ;
-        case SINGLE_COIL_PULSED:        blueLed.turn( OFF ) ; yellowLed.bleep( 1 ) ; break ;
-        case SINGLE_COIL_CONTINUOUSLY:  blueLed.turn( OFF ) ; yellowLed.turn( ON ) ; break ;
-        default:                        blueLed.bleep( 1 )  ; yellowLed.turn( ON ) ; break ;
+        case DOUBLE_COIL_PULSED:        blueLed.bleep(  1 ) ; yellowLed.bleep(  1 ) ; break ;
+        case DOUBLE_COIL_CONTINUOUSLY:  blueLed.turn(  ON ) ; yellowLed.turn(  ON ) ; break ;
+        case SINGLE_COIL_PULSED:        blueLed.turn( OFF ) ; yellowLed.bleep(  1 ) ; break ;
+        case SINGLE_COIL_CONTINUOUSLY:  blueLed.turn( OFF ) ; yellowLed.turn(  ON ) ; break ;
+        case DOUBLE_PULSE_W_FROG:       blueLed.turn(  ON ) ; yellowLed.bleep(  2 ) ; break ;
+        default:                        blueLed.bleep(  1 ) ; yellowLed.turn(  ON ) ; break ;
     }
     else switch(state)
     {
@@ -112,38 +158,39 @@ void determineLedPattern()
     }
 }
 
-void getPreset()
+// checks if all coils are of the same type, If so an preset is active.
+uint8_t getPreset()
 {
-    preset = coil[0].getType() ;
+    uint8_t preset = coil[0].getType() ;
+
     for( int i = 1 ; i < nCoils ; i ++ )
     {
         if( coil[i].getType() != preset )
         {
             preset = 255 ; // no preset
-            return ;
+            return preset ;
         }
     }
+    return preset ;
 }
 
 
 void setup()
 {
-    pinMode( 13, OUTPUT ) ;
     configButton.begin( configPin ) ;
-    
-    int eeAddress = 0 ;
-    EEPROM.get( eeAddress, coil ) ; // load entire array from EEPROM
 
-    for( int i = 0 ; i < 8 ; i ++ ) { coil[i].begin( GPIO[i*2], GPIO[i*2+1] ) ; }
-
+    for( int i = 0 ; i < 16 ; i ++ )
+    {
+        pinMode( GPIO[i], OUTPUT ) ;
+    }
       blueLed.begin();
     yellowLed.begin();
 
     uint32 DEADBEEF ;
-    EEPROM.get( 1000, DEADBEEF ) ;
+    EEPROM.get( DEADBEEF_EE_ADDRESS, DEADBEEF ) ;
     if( DEADBEEF != 0xDEADBEEF )
     {   DEADBEEF  = 0xDEADBEEF ;
-        EEPROM.put( 1000, DEADBEEF ) ;
+        EEPROM.put( DEADBEEF_EE_ADDRESS, DEADBEEF ) ;
         
         for( int i = 0 ; i < nCoils ; i ++ )
         {
@@ -151,15 +198,22 @@ void setup()
             coil[i].setPulseTime( 50 ) ; // default to 50ms
             coil[i].setAddress( i+1 ) ;
         }
-        EEPROM.put( eeAddress, coil ) ;
+        saveCoils() ;
+
+        settings.dccExt = 0 ; 
+        settings.locoFunctions = LOCO_FUNCTIONS_OFF ;
+        settings.uniqueAddresses = 0 ;
+        EEPROM.put( EE_SETTINGS, settings ) ;
     }
-    getPreset() ; // determen if a preset is used (all coils same type)
+
+    loadCoils() ;
+    EEPROM.get( EE_SETTINGS, settings ) ;
+
+    for( int i = 0 ; i < nCoils ; i++ ) coil[i].begin() ; // set last known state.
 
     dcc.pin( 2, 0 ) ;
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 }
-
-
 
 
 void loop()
@@ -177,8 +231,13 @@ void loop()
         int sample = analogRead( currentSensePin ) ;
         if( sample >= ADC_max ) // true => shortcircuit
         {
-            //killOutputs() ;
-            delay( 5000 ) ;
+            for( int i = 0 ; i < nGpio ; i ++ )
+            {
+                digitalWrite( GPIO[i], LOW ) ;  // kill all outputs
+            }
+
+            blueLed.handleEvent(5) ;            // go flash LED's
+            yellowLed.handleEvent(5) ;      
         }
     }
     END_REPEAT
@@ -189,19 +248,24 @@ void loop()
 }
 
 /* Dynamically allocate addresses 
-called whenever a type is changed. The first address of the first object is starting point
+To be called whenever a type is changed. The first address of the first object is starting point
+returns the amount of used addresses;
 */
-void squashAddresses()
+uint8_t squashAddresses()
 {
+    uint8  addressCount = nCoils ;
     uint16 startAddress = coil[0].getAddress() ;
-    for( int i = 1 ; i < nCoils ; i ++ )
+
+    for( int i = 0 ; i < nCoils ; i ++ )
     {
-        uint8 prevType = coil[i-1].getType() ;
+        uint8 prevType = coil[i].getType() ;
         if( prevType == SINGLE_COIL_CONTINUOUSLY
-        ||  prevType == SINGLE_COIL_PULSED ) startAddress += 2 ;
-        else                                 startAddress += 1 ;
-        coil[i].setAddress( startAddress ) ;
+        ||  prevType == SINGLE_COIL_PULSED ){ startAddress += 2 ; addressCount ++ ; }
+        else                                { startAddress += 1 ; }
+        coil[i+1].setAddress( startAddress ) ;
     }
+
+    return addressCount ;
 }
 
 
@@ -213,7 +277,8 @@ void config()
     static R_trigger trigger_1s ; // -> get address OR get index for address
     static R_trigger trigger_2s ; // -> get index for type
     static R_trigger trigger_3s ; // -> get index for pulse length
-    static R_trigger trigger_4s ; // -> option menu
+    static R_trigger trigger_4s ; // -> enable PWM dutycycle
+    static R_trigger trigger_5s ; // -> option menu
 
     REPEAT_MS( 20 )
     {
@@ -245,17 +310,19 @@ void config()
         break ;
 
     case checkButton:
-        if( trigger_1s.update( millis() - prevTime > 1000 ) ) { nextState = getBaseAddress ; blueLed.handleEvent(1) ; }
-        if( trigger_2s.update( millis() - prevTime > 3000 ) ) { nextState = getIndex4Type ;  blueLed.handleEvent(2) ; }
-        if( trigger_3s.update( millis() - prevTime > 5000 ) ) { nextState = getIndex4pulse ; blueLed.handleEvent(3) ; }
-        if( trigger_4s.update( millis() - prevTime > 7000 ) ) { nextState = configMode ;     blueLed.handleEvent(4) ; }
+        if( trigger_1s.update( millis() - beginTime > 1000 ) ) { nextState = getBaseAddress ; blueLed.handleEvent(1) ; }
+        if( trigger_2s.update( millis() - beginTime > 3000 ) ) { nextState = getIndex4Type ;  blueLed.handleEvent(2) ; }
+        if( trigger_3s.update( millis() - beginTime > 5000 ) ) { nextState = getIndex4pulse ; blueLed.handleEvent(3) ; }
+        if( trigger_4s.update( millis() - beginTime > 7000 ) ) { nextState = setDutyCycle ;    blueLed.handleEvent(4) ; }
+        if( trigger_4s.update( millis() - beginTime > 9000 ) ) { nextState = configMode ;     blueLed.handleEvent(5) ; }
 
         if( btnState == RISING ) state = nextState ;
         break ;
 
 
     case getBaseAddress:
-        // if( settings.uniqueAddresses ) state = getIndex4Address ;
+        if( settings.uniqueAddresses ) state = getIndex4Address ; // if this flag is set, we do not use sequential address so we go to this state instead.
+
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
@@ -280,6 +347,7 @@ void config()
         {   newAddressSet = 0 ;
 
             coil[coilIndex].setAddress( receivedAddress ) ;
+            EEPROM.put( 0, coil ) ;
             state = getIndex4Address ;
         }
         break ;
@@ -301,7 +369,7 @@ void config()
 
             coil[coilIndex].setType( type ) ;
             squashAddresses() ;
-            getPreset() ;
+            EEPROM.put( 0, coil ) ;
             state = getIndex4Type ;
         }
         break ; 
@@ -319,51 +387,84 @@ void config()
         if( newAddressSet == 1 ) // RESTRAIN VALUE TO ACCEPTABLE NUMBERS  
         {   newAddressSet = 0 ;
 
-            if( coil[coilIndex].getType() == DOUBLE_COIL_PULSED ) for( i = 0 ; i < nCoils ; i ++ ) // all double pulse coils, share the same pulse
+            receivedAddress = constrain( receivedAddress, 3, 50 ) ; // constrain time to 5 seconds max 
+            if( coil[coilIndex].getType() == DOUBLE_COIL_PULSED )   // the selected coil, has to be a double coil type for this
+            for( i = 0 ; i < nCoils ; i ++ )                        // all double pulse coils, share the same pulse time
             {
-                if( coil[i].getType() == DOUBLE_COIL_PULSED ) coil[i].setPulseTime( receivedAddress * 10 ) ;
+                if( coil[i].getType() == DOUBLE_COIL_PULSED )       // check per coil, if the type is also double pulse and if so, adjust set the time.
+                {
+                    coil[i].setPulseTime( receivedAddress * 10 ) ;
+                }
+                EEPROM.put( 0, coil ) ;
+                state = getIndex4Type ;
+                break ;
             }
+
             if( coil[coilIndex].getType() == SINGLE_COIL_PULSED ) // these don't share the same time
             {
-                coil[i].setPulseTime( receivedAddress * 100 ) ;
+                coil[coilIndex].setPulseTime( receivedAddress * 100 ) ;
             }
             state = getIndex4Type ;
         }
-        break ; 
+        break ;
+
+    case setDutyCycle:
+        if( newAddressSet == 1 )
+        {   newAddressSet = 0 ;
+
+            settings.dutyCyle = constrain( receivedAddress, 1, 10 ) ; // 1 = 10%, 10 = 100%
+        }
+        break ;
 
     case configMode:
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
-            if( receivedAddress == 1 ) for( i = 0 ; i < nCoils ; i ++ )
+            if( receivedAddress == 1 ) for( i = 0 ; i < nCoils ; i ++ ) // preset 1, all double pulse (default time 50ms)
             {
                 coil[i].setType( DOUBLE_COIL_PULSED ) ;
                 coil[i].setPulseTime( 50 ) ; // default to 50ms
             }
-            if( receivedAddress == 2 ) for( i = 0 ; i < nCoils ; i ++ )
+
+            if( receivedAddress == 2 ) for( i = 0 ; i < nCoils ; i ++ ) // preset 2, all double continously ( PM1 style motors of green red signals)
             {
                 coil[i].setType( DOUBLE_COIL_CONTINUOUSLY ) ;
             }
-            if( receivedAddress == 3 ) for( i = 0 ; i < nCoils ; i ++ )
+
+            if( receivedAddress == 3 ) for( i = 0 ; i < nCoils ; i ++ )  // preset 3, single coils pulsed (16x) (default time set at 5s)
             {
                 coil[i].setType( SINGLE_COIL_PULSED ) ;
                 coil[i].setPulseTime( 5000 ) ; // default to 5 seconds
             }
-            if( receivedAddress == 4 ) for( i = 0 ; i < nCoils ; i ++ )
+
+            if( receivedAddress == 4 ) for( i = 0 ; i < nCoils ; i ++ ) // preset 4, single Coil continously (16x ON or OFF)
             {
                 coil[i].setType( SINGLE_COIL_CONTINUOUSLY ) ;
             }
 
-            if( receivedAddress ==  5 ) ; // settings.uniqueAddresses = 1 ;
-            if( receivedAddress ==  6 ) ; // settings.uniqueAddresses = 0 ;
-            if( receivedAddress ==  7 ) ; // settings.dccExt = 1 ;
-            if( receivedAddress ==  8 ) ; // settings.dccExt = 0 ;
-            if( receivedAddress ==  9 ) ; // settings.locoFunctions = 1 ;
-            if( receivedAddress == 10 ) ; // settings.locoFunctions = 0 ;
+            if( receivedAddress ==  5 ) for( i = 0 ; i < (nCoils/2) ; i ++ ) // preset 5, 4x double coil (right side) and 4x double relay (left side) for dual relay frog juicing
+            {
+                coil[i].setType( DOUBLE_PULSE_W_FROG ) ;
+                coil[i].setPulseTime( 50 ) ; // default to 50ms
+            }
+
+            if( receivedAddress == 20 ) settings.uniqueAddresses = 0 ; // default
+            if( receivedAddress == 21 ) settings.uniqueAddresses = 1 ;
+            
+            if( receivedAddress == 30 ) settings.dccExt = 0 ;          // default
+            if( receivedAddress == 31 ) settings.dccExt = 1 ;  // allow DCC EXTENDED TO CONTROL PULSE DURATION. (Note, this can perhaps be set via normal or ext instruction.)
+            
+            if( receivedAddress == 40 ) settings.locoFunctions = LOCO_FUNCTIONS_OFF ; // default
+            if( receivedAddress == 41 ) settings.locoFunctions =         EIGHT_BALL ; // 16 points per address (for single mode, use F1 - F16
+            if( receivedAddress == 42 ) settings.locoFunctions =     FANTASTIC_FOUR ; //  4 points per address (2 address per decoder) (special support for locomaus)
+
+            if( receivedAddress == 50 ) settings.disableOnBoot  = 0 ; // default
+            if( receivedAddress == 51 ) settings.disableOnBoot  = 1 ;
 
             squashAddresses() ;
             EEPROM.put( 0, coil ) ; // commit entire array
-            //EEPROM.put(500, settings ) ;
+
+            EEPROM.put( EE_SETTINGS, settings ) ;
             state = idle ;
         }
         break ;
@@ -383,7 +484,7 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
-    if( millis() - lastTime >= 500 ) // create lockout time of 500ms to prevent processing package more than 1x
+    if( millis() - lastTime >= 500 ) // create lockout time to prevent processing package more than 1x (used for config menu only)
     {   lastTime = millis() ;
 
         newAddressSet = 1 ;
@@ -397,5 +498,63 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
     for( int i = 0 ; i < nCoils ; i ++ )
     {
         coil[i].setCoil( address, direction ) ;
+    }
+}
+
+
+// Locomotive function support
+static uint16_t oldState = 0 ;
+static uint16_t newState = 0 ;
+
+void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint8_t FuncState)
+{
+    if( settings.locoFunctions == LOCO_FUNCTIONS_OFF ) return ;
+
+    uint8_t  bitOffset       = 0 ;
+    uint8_t  maxFunctions    = squashAddresses() ;      // check settings of all coils and determen how many addresses that are in use.
+    uint16_t dccBaseAddress  = coil[0].getAddress() ;   // the address of the first coil determens to which loco address to listen to.
+    uint8_t  neededAddresses = 1 ;                      // used for the Lok maus support. As we have 4 dcc addresses per loco address, we need more loco addresses per decoder 
+
+    if( settings.locoFunctions == FANTASTIC_FOUR )      // lok maus support, F1-F4 of sequential loco addresses are used to control a decoder 
+    {
+        if( FuncGrp != FN_0_4 ) return ;
+
+        neededAddresses = (maxFunctions - 1) / 4 + 1 ; 
+        if (Addr < dccBaseAddress || Addr >= (dccBaseAddress + neededAddresses)) return ;
+
+        bitOffset = (Addr - dccBaseAddress) * 4 ;
+    }
+
+    if( settings.locoFunctions == EIGHT_BALL ) // 1 loco address 16 functions max
+    {
+        if (Addr != dccBaseAddress) return ;
+
+        if(      FuncGrp ==   FN_0_4 ) { bitOffset =  0 ; }
+        else if( FuncGrp ==   FN_5_8 ) { bitOffset =  4 ; }
+        else if( FuncGrp ==  FN_9_12 ) { bitOffset =  8 ; }
+        else if( FuncGrp == FN_13_20 ) { bitOffset = 12 ; FuncState >>= 4 ; }
+        else return ;
+    }
+
+    newState &= ~(0x0F << bitOffset) ;              // first clear the old bits
+    newState |= (FuncState & 0x0F) << bitOffset ;   // than reload the newly received bits
+
+    uint16_t changedBits = oldState ^ newState;     // if atleast 1 bit has changed, 
+    oldState = newState ;
+    if (changedBits == 0) return ;
+
+    for( int i = 0 ; i < maxFunctions ; i++ ) // loop through all changedBits to set the coil.
+    {
+        uint16_t andMask = 1 << i ;
+        if ((changedBits & andMask) == 0) continue ;
+
+        uint8_t state = (newState >> i) & 0x1 ;
+
+        uint16_t dccAddress = dccBaseAddress + i ; // calculate the appriopitate DCC address to be used in setCoil.
+
+        for (int j = 0 ; j < nCoils ; j++ )
+        {
+            coil[j].setCoil( dccAddress, state ) ; // and feed the changed state of this address into all coils
+        }
     }
 }

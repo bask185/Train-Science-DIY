@@ -664,6 +664,14 @@
     [
       "f3268e40-3e30-4729-953d-ad706ea621b4",
       "EEPROM"
+    ],
+    [
+      "ed9ef930-f579-4e8b-8cb4-3cc008c01dc5",
+      "DCC"
+    ],
+    [
+      "b1da3be0-c4de-4496-acba-ace9d1de3495",
+      "config"
     ]
   ],
   "text_variables": {}

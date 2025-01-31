@@ -440,17 +440,7 @@
 	)
 	(bus
 		(pts
-			(xy 111.76 55.88) (xy 123.19 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1dec2b0e-7850-4a4c-b4e7-f75673ab02d4")
-	)
-	(bus
-		(pts
-			(xy 69.85 74.93) (xy 78.74 74.93)
+			(xy 69.85 67.31) (xy 78.74 67.31)
 		)
 		(stroke
 			(width 0)
@@ -460,13 +450,23 @@
 	)
 	(bus
 		(pts
-			(xy 111.76 74.93) (xy 123.19 74.93)
+			(xy 111.76 69.85) (xy 123.19 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "36748787-3e96-44f5-9c09-afa44f6a70c5")
+	)
+	(bus
+		(pts
+			(xy 78.74 78.74) (xy 74.93 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55476cdd-b9de-452b-afb9-79cdf4e6b22c")
 	)
 	(bus
 		(pts
@@ -478,25 +478,15 @@
 		)
 		(uuid "56ee96c3-8743-4d00-92ac-84b84e300915")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 69.85 77.47) (xy 78.74 77.47)
+			(xy 111.76 55.88) (xy 123.19 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5cbde9d7-a5bd-46a8-89b5-3f77c5b9a6f8")
-	)
-	(wire
-		(pts
-			(xy 69.85 80.01) (xy 78.74 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9667a48c-d01f-4128-9587-3646da3f2e42")
+		(uuid "6e8f6cc1-5bbe-4658-bd36-1e1aec868e52")
 	)
 	(bus
 		(pts
@@ -520,6 +510,26 @@
 	)
 	(bus
 		(pts
+			(xy 74.93 78.74) (xy 74.93 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf41d6be-bf99-4642-abfb-62f9d88084bf")
+	)
+	(wire
+		(pts
+			(xy 111.76 78.74) (xy 123.19 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4f0dc70-1798-4fef-9841-f6004f060bff")
+	)
+	(bus
+		(pts
 			(xy 67.31 57.15) (xy 78.74 57.15)
 		)
 		(stroke
@@ -538,9 +548,19 @@
 		)
 		(uuid "dc976788-d05d-4028-98ea-250a7ac81590")
 	)
+	(bus
+		(pts
+			(xy 74.93 88.9) (xy 78.74 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0f14854-7ab2-4fa3-bb1b-f8157c32fc3a")
+	)
 	(text "-> to extra IO"
 		(exclude_from_sim no)
-		(at 59.69 87.63 0)
+		(at 59.69 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -568,7 +588,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a79186b-9390-4946-a909-e759aaa836eb")
-		(property "Reference" "u104"
+		(property "Reference" "u109"
 			(at 95.25 29.083 0)
 			(effects
 				(font
@@ -616,7 +636,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u104")
+					(reference "u109")
 					(unit 1)
 				)
 			)
@@ -632,7 +652,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "181e535d-6269-4d92-92f3-3428f9e4f9b0")
-		(property "Reference" "u102"
+		(property "Reference" "u107"
 			(at 85.09 29.083 0)
 			(effects
 				(font
@@ -680,7 +700,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u102")
+					(reference "u107")
 					(unit 1)
 				)
 			)
@@ -688,7 +708,7 @@
 	)
 	(symbol
 		(lib_id "custom_kicad_lib_sk:screwterminal")
-		(at 48.26 82.55 0)
+		(at 48.26 74.93 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -697,8 +717,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a77c777-c2ab-4586-9d10-cd68d139a9ec")
-		(property "Reference" "u108"
-			(at 48.26 82.423 0)
+		(property "Reference" "u103"
+			(at 48.26 74.803 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -707,7 +727,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 44.45 82.55 0)
+			(at 44.45 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -716,7 +736,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 82.55 0)
+			(at 48.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -725,7 +745,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 82.55 0)
+			(at 48.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -734,7 +754,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 82.55 0)
+			(at 48.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -745,7 +765,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u108")
+					(reference "u103")
 					(unit 1)
 				)
 			)
@@ -753,7 +773,7 @@
 	)
 	(symbol
 		(lib_id "custom_kicad_lib_sk:screwterminal")
-		(at 48.26 87.63 0)
+		(at 48.26 80.01 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -762,8 +782,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a8ea8ae-909d-40ac-a679-1aa03a64386c")
-		(property "Reference" "u109"
-			(at 48.26 87.503 0)
+		(property "Reference" "u104"
+			(at 48.26 79.883 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -772,7 +792,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 44.45 87.63 0)
+			(at 44.45 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -781,7 +801,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 87.63 0)
+			(at 48.26 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -790,7 +810,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 87.63 0)
+			(at 48.26 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -799,7 +819,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 87.63 0)
+			(at 48.26 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -810,7 +830,72 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u109")
+					(reference "u104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 48.26 90.17 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29eb84d7-4679-47c2-a115-0847c55d1720")
+		(property "Reference" "u106"
+			(at 48.26 90.043 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 44.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(reference "u106")
 					(unit 1)
 				)
 			)
@@ -826,7 +911,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "364f8700-1241-4f1f-b92b-174094f00da3")
-		(property "Reference" "u103"
+		(property "Reference" "u108"
 			(at 90.17 29.083 0)
 			(effects
 				(font
@@ -874,7 +959,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u103")
+					(reference "u108")
 					(unit 1)
 				)
 			)
@@ -882,7 +967,7 @@
 	)
 	(symbol
 		(lib_id "custom_kicad_lib_sk:screwterminal")
-		(at 48.26 77.47 0)
+		(at 48.26 69.85 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -891,8 +976,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f72081a-d58a-4ea7-be94-742957ad0fba")
-		(property "Reference" "u107"
-			(at 48.26 77.343 0)
+		(property "Reference" "u102"
+			(at 48.26 69.723 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -901,7 +986,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 44.45 77.47 0)
+			(at 44.45 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -910,7 +995,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 77.47 0)
+			(at 48.26 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -919,7 +1004,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 77.47 0)
+			(at 48.26 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -928,7 +1013,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 77.47 0)
+			(at 48.26 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -939,7 +1024,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u107")
+					(reference "u102")
 					(unit 1)
 				)
 			)
@@ -955,7 +1040,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e7f980c-16b3-4e45-bebb-e591f684ae58")
-		(property "Reference" "u105"
+		(property "Reference" "u110"
 			(at 100.33 29.083 0)
 			(effects
 				(font
@@ -1003,7 +1088,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u105")
+					(reference "u110")
 					(unit 1)
 				)
 			)
@@ -1011,17 +1096,16 @@
 	)
 	(symbol
 		(lib_id "custom_kicad_lib_sk:screwterminal")
-		(at 48.26 72.39 0)
-		(mirror y)
+		(at 142.24 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "91ac98b3-211c-4d6c-a380-434df14b157f")
-		(property "Reference" "u106"
-			(at 48.26 72.263 0)
+		(uuid "8ec6e1a5-78b4-4281-b905-8095a627d5fe")
+		(property "Reference" "u111"
+			(at 142.24 78.613 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1030,7 +1114,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 44.45 72.39 0)
+			(at 146.05 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1039,7 +1123,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 72.39 0)
+			(at 142.24 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1048,7 +1132,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 72.39 0)
+			(at 142.24 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1057,7 +1141,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 72.39 0)
+			(at 142.24 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1068,7 +1152,137 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "u106")
+					(reference "u111")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 48.26 64.77 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "91ac98b3-211c-4d6c-a380-434df14b157f")
+		(property "Reference" "u101"
+			(at 48.26 64.643 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 44.45 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(reference "u101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 48.26 85.09 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1654edd-82a5-4a10-aafd-8d1a5fa56b0b")
+		(property "Reference" "u105"
+			(at 48.26 84.963 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 44.45 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(reference "u105")
 					(unit 1)
 				)
 			)
@@ -1084,7 +1298,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2848634-3e20-4d23-af9e-08bd464ec4cc")
-		(property "Reference" "J101"
+		(property "Reference" "J102"
 			(at 123.444 33.02 0)
 			(effects
 				(font
@@ -1132,7 +1346,71 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "J101")
+					(reference "J102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "custom_kicad_lib_sk:screwterminal")
+		(at 142.24 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7700b8e-4cda-47b6-bb55-03ecffcb0940")
+		(property "Reference" "u112"
+			(at 142.24 83.693 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(reference "u112")
 					(unit 1)
 				)
 			)
@@ -1148,7 +1426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfefbf8b-5cfb-44c9-b614-5ccbacc3f122")
-		(property "Reference" "J104"
+		(property "Reference" "J101"
 			(at 54.61 24.13 0)
 			(effects
 				(font
@@ -1198,7 +1476,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
-					(reference "J104")
+					(reference "J101")
 					(unit 1)
 				)
 			)
@@ -1243,9 +1521,8 @@
 		)
 	)
 	(sheet
-		(at 123.19 50.8)
+		(at 123.19 45.72)
 		(size 29.21 11.43)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -1256,7 +1533,7 @@
 		)
 		(uuid "3cd81a08-dbfb-46cf-8c7b-9fac5c669f8b")
 		(property "Sheetname" "servoFineTuning"
-			(at 123.19 50.0884 0)
+			(at 124.46 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1265,7 +1542,7 @@
 			)
 		)
 		(property "Sheetfile" "servoFineTuning.kicad_sch"
-			(at 123.19 62.8146 0)
+			(at 123.19 57.7346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1390,7 +1667,7 @@
 			(uuid "7887b5f0-f17f-4be9-afa3-420dfef64581")
 		)
 		(pin "{I2C}" input
-			(at 111.76 74.93 0)
+			(at 111.76 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1400,7 +1677,7 @@
 			(uuid "cb5003d3-c5e7-4d4f-bbc0-a5d6dc153475")
 		)
 		(pin "{shift}" input
-			(at 78.74 74.93 180)
+			(at 78.74 67.31 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1408,26 +1685,6 @@
 				(justify left)
 			)
 			(uuid "43e79770-f146-4bb5-b58d-669890c74b73")
-		)
-		(pin "input2nextUnit" input
-			(at 78.74 80.01 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "751078b4-40de-4f93-9118-e7739fe1f5ad")
-		)
-		(pin "output2nextUnit" input
-			(at 78.74 77.47 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "1aa18edd-5f57-4a72-aafd-cb0cb8fc81b9")
 		)
 		(pin "{servoTuning}" input
 			(at 111.76 55.88 0)
@@ -1438,6 +1695,26 @@
 				(justify right)
 			)
 			(uuid "eae70104-c517-4f8e-88a4-72dee95fe705")
+		)
+		(pin "DCC" input
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "5fd057c7-7a1d-4dc0-9cc8-a024d4350a67")
+		)
+		(pin "{config}" input
+			(at 78.74 78.74 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "30b14065-2e4e-417a-a82e-66004770d50e")
 		)
 		(instances
 			(project "MasterOfAccessories"
@@ -1496,8 +1773,56 @@
 		)
 	)
 	(sheet
-		(at 45.72 68.58)
-		(size 24.13 22.86)
+		(at 78.74 87.63)
+		(size 12.7 11.43)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 72 72 1)
+		)
+		(fill
+			(color 132 132 132 1.0000)
+		)
+		(uuid "b1da3be0-c4de-4496-acba-ace9d1de3495")
+		(property "Sheetname" "config"
+			(at 81.28 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "config.kicad_sch"
+			(at 78.74 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{config}" input
+			(at 78.74 88.9 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3f790969-6bf0-4c47-bac7-548811c40f26")
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 45.72 60.96)
+		(size 24.13 31.75)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -1508,7 +1833,7 @@
 		)
 		(uuid "ddf6a43e-5d4e-4ba5-9762-aa7526144427")
 		(property "Sheetname" "sideBySide"
-			(at 46.228 70.866 0)
+			(at 54.61 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1517,7 +1842,7 @@
 			)
 		)
 		(property "Sheetfile" "sideBySide.kicad_sch"
-			(at 46.99 92.71 0)
+			(at 44.45 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1526,7 +1851,7 @@
 			)
 		)
 		(property "Field2" ""
-			(at 45.72 68.58 0)
+			(at 45.72 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1535,7 +1860,7 @@
 			)
 		)
 		(pin "{shift}" input
-			(at 69.85 74.93 0)
+			(at 69.85 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1543,26 +1868,6 @@
 				(justify right)
 			)
 			(uuid "8f0ad266-a0dd-445d-b311-9e4d3e0a47d9")
-		)
-		(pin "input2central" input
-			(at 69.85 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "1bf0984f-8c6f-469c-94d6-661c709ec9a6")
-		)
-		(pin "output2central" input
-			(at 69.85 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "c5471b9a-e220-4820-b6ab-b06d5bfe3d2f")
 		)
 		(instances
 			(project "MasterOfAccessories"
@@ -1573,7 +1878,55 @@
 		)
 	)
 	(sheet
-		(at 123.19 64.77)
+		(at 123.19 76.2)
+		(size 21.59 10.16)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 132 132 1)
+		)
+		(fill
+			(color 194 194 194 1.0000)
+		)
+		(uuid "ed9ef930-f579-4e8b-8cb4-3cc008c01dc5")
+		(property "Sheetname" "DCC"
+			(at 132.08 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DCC.kicad_sch"
+			(at 127 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DCC" input
+			(at 123.19 78.74 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3b37c3ef-fc54-4bb4-b442-a960bdd59462")
+		)
+		(instances
+			(project "MasterOfAccessories"
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 123.19 59.69)
 		(size 12.7 13.97)
 		(stroke
 			(width 0.1524)
@@ -1585,7 +1938,7 @@
 		)
 		(uuid "f3268e40-3e30-4729-953d-ad706ea621b4")
 		(property "Sheetname" "EEPROM"
-			(at 128.27 71.12 0)
+			(at 128.27 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1594,7 +1947,7 @@
 			)
 		)
 		(property "Sheetfile" "EEPROM.kicad_sch"
-			(at 140.97 72.39 0)
+			(at 138.43 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1603,7 +1956,7 @@
 			)
 		)
 		(pin "{I2C}" input
-			(at 123.19 74.93 180)
+			(at 123.19 69.85 180)
 			(effects
 				(font
 					(size 1.27 1.27)

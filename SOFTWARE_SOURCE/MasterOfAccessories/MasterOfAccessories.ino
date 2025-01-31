@@ -20,6 +20,11 @@
        config mode, cycle through button modes -> accessory or route button   TODO
        teach mode,  teach in routes soley using buttons                       TODO
 
+       holding down da button enters condif mode. 
+         1 bleep is configuration mode
+         2 bleep is teachin mode, make routes n such
+         3 bleep is adjusting amount of modules. The first 2 buttons are used for this. every first LED of every module must light up when module is active 
+
     In essence we can have like idk lets say 128 button/LEDs max. This may be more, big eeprom storage
 
     every button has a button ID which is essentially it's place in the list

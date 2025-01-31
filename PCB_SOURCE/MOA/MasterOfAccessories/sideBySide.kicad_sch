@@ -335,11 +335,11 @@
 				)
 			)
 		)
-		(symbol "power:+12V"
+		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -352,7 +352,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+12V"
+			(property "Value" "+5V"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -378,7 +378,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -396,7 +396,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+12V_0_1"
+			(symbol "+5V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -434,11 +434,11 @@
 					)
 				)
 			)
-			(symbol "+12V_1_1"
+			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+12V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -570,9 +570,27 @@
 		)
 		(uuid "43528f83-2672-4d3a-9b1b-e4a447c68b9e")
 	)
+	(bus_entry
+		(at 90.17 91.44)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "623b33de-1465-44b6-ad29-fe7a2b99e4d5")
+	)
+	(bus_entry
+		(at 90.17 93.98)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78bc1789-2620-488f-83f7-2df9cb4036e0")
+	)
 	(bus
 		(pts
-			(xy 90.17 90.17) (xy 90.17 96.52)
+			(xy 90.17 90.17) (xy 90.17 91.44)
 		)
 		(stroke
 			(width 0)
@@ -582,13 +600,23 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 104.14) (xy 54.61 104.14)
+			(xy 76.2 104.14) (xy 72.39 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1f700310-8360-4404-b0e2-deadb7f3ace5")
+	)
+	(bus
+		(pts
+			(xy 90.17 93.98) (xy 90.17 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2278173f-cee0-46b2-9901-1295f7b772d3")
 	)
 	(bus
 		(pts
@@ -612,7 +640,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 101.6) (xy 54.61 101.6)
+			(xy 87.63 101.6) (xy 72.39 101.6)
 		)
 		(stroke
 			(width 0)
@@ -632,7 +660,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 96.52) (xy 54.61 96.52)
+			(xy 72.39 96.52) (xy 87.63 96.52)
 		)
 		(stroke
 			(width 0)
@@ -642,7 +670,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 99.06) (xy 54.61 99.06)
+			(xy 87.63 99.06) (xy 72.39 99.06)
 		)
 		(stroke
 			(width 0)
@@ -652,7 +680,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 91.44) (xy 54.61 91.44)
+			(xy 76.2 91.44) (xy 72.39 91.44)
 		)
 		(stroke
 			(width 0)
@@ -662,13 +690,34 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 93.98) (xy 54.61 93.98)
+			(xy 72.39 93.98) (xy 87.63 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bd166267-ee29-4d1c-bbd6-53445e9ce755")
+	)
+	(bus
+		(pts
+			(xy 90.17 91.44) (xy 90.17 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c090d354-bbe8-4010-97f8-fdab42c88fe1")
+	)
+	(label "dataOut"
+		(at 78.74 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c34b9d3-f25e-4e25-a981-1b5ae88e820c")
 	)
 	(label "latch"
 		(at 83.82 101.6 180)
@@ -681,6 +730,17 @@
 		)
 		(uuid "2e0d480d-ec9f-463f-ae2c-1b2c41548a61")
 	)
+	(label "dataIn"
+		(at 78.74 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91667764-2b5d-49fa-8354-e44c40737d27")
+	)
 	(label "clock"
 		(at 83.82 99.06 180)
 		(fields_autoplaced yes)
@@ -691,18 +751,6 @@
 			(justify right bottom)
 		)
 		(uuid "a0f87f0b-4ed6-4f99-b8fb-a583c9d3a456")
-	)
-	(hierarchical_label "output2central"
-		(shape input)
-		(at 57.15 93.98 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2fad9922-91a2-4c10-86d3-1a53f5a40e6c")
 	)
 	(hierarchical_label "{shift}"
 		(shape input)
@@ -716,29 +764,17 @@
 		)
 		(uuid "388a1423-4c77-47e1-ab82-280a52b71ade")
 	)
-	(hierarchical_label "input2central"
-		(shape input)
-		(at 57.15 96.52 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5eba723b-158c-40a5-b0e9-9f440c0f0129")
-	)
 	(symbol
 		(lib_id "Connector:Conn_01x06_Socket")
-		(at 49.53 99.06 180)
+		(at 67.31 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6f4088af-9572-4bc3-99cb-b3d6683cf8c5")
-		(property "Reference" "J702"
-			(at 53.34 107.95 0)
+		(property "Reference" "J601"
+			(at 71.12 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -747,7 +783,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06_Socket"
-			(at 48.26 96.52 0)
+			(at 66.04 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -757,7 +793,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal"
-			(at 49.53 99.06 0)
+			(at 67.31 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -766,7 +802,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 99.06 0)
+			(at 67.31 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -775,7 +811,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 49.53 99.06 0)
+			(at 67.31 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -804,25 +840,24 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/ddf6a43e-5d4e-4ba5-9762-aa7526144427"
-					(reference "J702")
+					(reference "J601")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 58.42 91.44 0)
-		(mirror y)
+		(lib_id "power:+5V")
+		(at 76.2 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "711cb946-5d97-43ac-80ba-a0d6d2055151")
-		(property "Reference" "#PWR0707"
-			(at 58.42 95.25 0)
+		(uuid "7c52a180-65f7-4ca2-b5a1-9426d774ee6f")
+		(property "Reference" "#PWR0601"
+			(at 76.2 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -830,8 +865,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
-			(at 58.42 86.36 0)
+		(property "Value" "+5V"
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -839,7 +874,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 91.44 0)
+			(at 76.2 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -848,7 +883,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 91.44 0)
+			(at 76.2 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -856,8 +891,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 58.42 91.44 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 76.2 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -866,12 +901,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "68d908bc-2e9a-4c00-9b5f-a0982c2a0595")
+			(uuid "467fb272-dca9-4c7a-af49-b92378e25336")
 		)
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/ddf6a43e-5d4e-4ba5-9762-aa7526144427"
-					(reference "#PWR0707")
+					(reference "#PWR0601")
 					(unit 1)
 				)
 			)
@@ -879,7 +914,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 58.42 104.14 0)
+		(at 76.2 104.14 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -888,8 +923,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8badac8b-913c-414d-a3e3-61f2c3a9cea5")
-		(property "Reference" "#PWR0708"
-			(at 58.42 110.49 0)
+		(property "Reference" "#PWR0602"
+			(at 76.2 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -898,7 +933,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 58.42 109.22 0)
+			(at 76.2 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -906,7 +941,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 104.14 0)
+			(at 76.2 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -915,7 +950,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 104.14 0)
+			(at 76.2 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -924,7 +959,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 58.42 104.14 0)
+			(at 76.2 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -938,7 +973,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/ddf6a43e-5d4e-4ba5-9762-aa7526144427"
-					(reference "#PWR0708")
+					(reference "#PWR0602")
 					(unit 1)
 				)
 			)

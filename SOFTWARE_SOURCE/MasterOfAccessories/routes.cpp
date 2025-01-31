@@ -137,6 +137,8 @@ void sendButton( uint8 newButton, uint8 level )
         {
             firstButton = newButton ; // store which
             button.state = awaitSecond ;
+            Serial.print("first button pressed: ");
+            Serial.println(firstButton);
         }
         break ;
 
@@ -144,10 +146,13 @@ void sendButton( uint8 newButton, uint8 level )
         if( level == 1 ) // a button is released, so we are working with just one button
         {
             secondButton = 0xFF ;
+            Serial.print("first button is released, we will use one button") ;
         }
         else
         {
             secondButton = newButton ;
+            Serial.print("second button pressed: ");
+            Serial.println(firstButton);
         }
         //break ;
 
