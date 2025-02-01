@@ -1,6 +1,0 @@
-Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
-D101,1N4148WS,D_SOD-323,146.812,-95.25,180.0,top
-J101,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",135.1395,-88.574,-90.0,top
-J102,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",159.0,-95.5,90.0,top
-J103,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",159.0,-81.555,90.0,top
-R101,47R,R_0805_handsolder-smalltext,143.002,-95.25,180.0,top

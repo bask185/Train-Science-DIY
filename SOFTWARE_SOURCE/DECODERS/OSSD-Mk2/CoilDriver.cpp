@@ -45,23 +45,27 @@ void CoilDriver::setBuddyPins( uint8 _A, uint8 _B )
 
 void CoilDriver::begin()
 {
-    if( type != SINGLE_COIL_CONTINUOUSLY
-    &&  type != DOUBLE_COIL_CONTINUOUSLY ) return ; // if pulsed output, return.
-    
-    // continuous outputs must be activated by default
-    if( stateA ) digitalWrite( pinA, HIGH ) ;
-    if( stateB ) digitalWrite( pinB, HIGH ) ;
-
-    pwmA.begin( pinA, 50, 100 ) ;
-    pwmB.begin( pinB, 50, 100 ) ;
-
-    pwmA.setSpeed( 100 ) ;
-    pwmB.setSpeed( 100 ) ;
+    pwmA.begin( pinA, 30, 100 ) ;
+    pwmB.begin( pinB, 30, 100 ) ;
 } 
-
+const int FREE  = 0 ; 
+const int IN_POSESSION = 1 ; 
 uint8 CoilDriver::update()
 {
-    if( type == DOUBLE_PULSE_W_FROG )
+    static uint8_t sharedToken =  FREE ;    // shared token prevents from double pulse types from being activated simultaneously.
+
+    if( sharedToken == FREE    // if shared token is not claimed, I am a double pulse type and I am to set one of my coils, I must obtain the token.
+    && (type == DOUBLE_PULSE_W_FROG || type == DOUBLE_COIL_PULSED)
+    && (stateA == 1 || stateB == 1) )
+    {
+        sharedToken   = IN_POSESSION ; 
+        myToken       = IN_POSESSION ;
+    }
+    if( type != DOUBLE_PULSE_W_FROG && type != DOUBLE_COIL_PULSED ) { // if I am not double pulse, I may always have my own token, and leave the shared token for others to use
+        myToken = IN_POSESSION;
+    }
+
+    if( type == DOUBLE_PULSE_W_FROG && myToken == IN_POSESSION )
     {
         startA.update( stateA ) ;  stopA.update( stateA ) ;
         startB.update( stateB ) ;  stopB.update( stateB ) ;
@@ -76,29 +80,32 @@ uint8 CoilDriver::update()
         if( stopB.Q ) digitalWrite( buddyPinB, HIGH ) ;
     }
     
-    if( type == SINGLE_COIL_PULSED
-    ||  type == DOUBLE_COIL_PULSED 
-    ||  type == DOUBLE_PULSE_W_FROG )
+    if( myToken == IN_POSESSION 
+                && 
+    (   type    ==   SINGLE_COIL_PULSED
+    ||  type    ==   DOUBLE_COIL_PULSED 
+    ||  type    ==   DOUBLE_PULSE_W_FROG ) )
     {
         timerA.update( stateA ) ;       // timer starts when state become 1, 
         timerB.update( stateB ) ;
 
         if( timerA.Q ) { stateA = 0 ; } // when timer expires state becomes 0
         if( timerB.Q ) { stateB = 0 ; }
+
+        if(stateA == 0 && stateB == 0 )  
+        {  
+            myToken     = FREE;  
+            sharedToken = FREE;  
+        }
+
+        pwmA.setState( stateA ) ; // sets actual Outputs
+        pwmB.setState( stateB ) ;
     }
-
-    // digitalWrite( pinA, stateA ) ;      // we simply continously write outputs, this happens for all coil types
-    // digitalWrite( pinB, stateB ) ;
-
-    pwmA.setState( stateA ) ;
-    pwmB.setState( stateB ) ;
 
     pwmA.update() ;
     pwmB.update() ;
 
-    return ! (         ( stateA || stateB )                 // in any double pulse mode, we must return false when any of the outputs is active. This signals main routine not to start an other coil.
-                                && 
-    (type == DOUBLE_COIL_PULSED || type == DOUBLE_PULSE_W_FROG) ) ;
+    return 1 ;
 }
 
 
@@ -123,10 +130,7 @@ void CoilDriver::setStates( uint8_t A, uint8_t B )
 void CoilDriver::setCoil( uint16 dccAddress, uint8 dir )
 {
     uint16 primaryAddress   = myAddress ;
-    uint16 secondaryAddress = primaryAddress ;
-
-    if( type == SINGLE_COIL_CONTINUOUSLY 
-    ||  type == SINGLE_COIL_PULSED ) secondaryAddress ++ ; // if we are single, we have 2 addresses not 1
+    uint16 secondaryAddress = primaryAddress + 1 ;
    
     switch( type )
     {
@@ -158,15 +162,11 @@ uint16 CoilDriver::getAddress() { return myAddress ; }
 void   CoilDriver::setPulseTime( uint16 _pulseTime ) { myPulseTime = _pulseTime ; }
 uint16 CoilDriver::getPulseTime() { return myPulseTime ; }
 
-void   CoilDriver::setDutyCycles( uint8_t A, uint8_t B )
+void   CoilDriver::setDutyCycle( uint8_t dutycycle )
 {
-    pwmA.setSpeed( A ) ;
-    pwmB.setSpeed( B ) ;
+    pwmA.setSpeed( dutycycle ) ;
+    pwmB.setSpeed( dutycycle ) ;
 }
-uint8_t CoilDriver::getDutyCycle( uint8_t channel )
-{
-    if( channel == 0 ) return pwmA.getSpeed() ;
-    else               return pwmB.getSpeed() ;
-}
+uint8_t CoilDriver::getDutyCycle() { return pwmA.getSpeed() ; }
 
 uint8  CoilDriver::isActive() { return active ; }

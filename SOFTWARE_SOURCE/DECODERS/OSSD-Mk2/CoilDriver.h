@@ -47,8 +47,8 @@ public:
     uint16  getAddress() ;
     void    setPulseTime( uint16 ) ;
     uint16  getPulseTime() ;
-    void    setDutyCycles( uint8_t, uint8_t ) ;
-    uint8_t getDutyCycle( uint8_t ) ;
+    void    setDutyCycle( uint8_t ) ;
+    uint8_t getDutyCycle( ) ;
     uint8   isActive() ;
 
 private:
@@ -64,6 +64,7 @@ private:
     uint16  myAddress  : 16 ;
     uint8   buddyPinA  :  5 ;  // when frog Relay are used, these pins are used to set the relays
     uint8   buddyPinB  :  5 ;
+    uint8   myToken    :  1 ; 
 
     R_trigger startA ;
     R_trigger startB ;

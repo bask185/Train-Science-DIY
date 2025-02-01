@@ -30,8 +30,6 @@
     static token inside the update function. If a double pulse mode is active no other double pulse method may be activated.
 
     After an overcurrent, a lockout time should take place which keeps all outputs dorment for atleast 5 seconds or so.
-
-    Methods to get the PWM dutycucle from config to objects and storage.
 */
 
 
@@ -58,8 +56,9 @@ enum modeState
     configMode,
     getIndex4pulse,
     setPulseTime,
-    setDutyCycle,
-    checkButton, // not an actual mode
+    getIndex4dutyCycle,
+    setDutyCycle_,
+    checkButton,
 } ;
 
 const int LOCO_FUNCTIONS_OFF    = 0 ;
@@ -71,7 +70,7 @@ struct
     uint16 uniqueAddresses :  1 ;
     uint16          dccExt :  1 ; 
     uint16   locoFunctions :  2 ; // enable the usage of locomotive function. this can be 1 address with 16 functions or 4 addresses with 4 functions
-    uint8    disableOnBoot :  1 ;
+    uint8      retainState :  1 ;
 } settings;
 
 struct // these struct is only used to save and load critical variable to and fom EEPROM
@@ -79,8 +78,7 @@ struct // these struct is only used to save and load critical variable to and fo
     uint16_t     type       :  3 ;
     uint16_t     stateA     :  1 ;
     uint16_t     stateB     :  1 ;
-    uint16_t     dutyCycleA :  7 ;
-    uint16_t     dutyCycleB :  7 ;
+    uint16_t     dutyCycle  :  7 ;
     uint16_t     address    : 12 ;
     uint32_t     pulseTime ;
 } coilSettings[nCoils] ;
@@ -95,8 +93,7 @@ void saveCoils()
         coilSettings[i].type       = coil[i].getType() ;
         coilSettings[i].stateA     = coil[i].getState( 0 ) ; // A
         coilSettings[i].stateB     = coil[i].getState( 1 ) ; // B
-        coilSettings[i].dutyCycleA = coil[i].getDutyCycle( 0 ) ; // A
-        coilSettings[i].dutyCycleB = coil[i].getDutyCycle( 1 ) ; // B
+        coilSettings[i].dutyCycle  = coil[i].getDutyCycle( );
         coilSettings[i].address    = coil[i].getAddress() ;
         coilSettings[i].pulseTime  = coil[i].getPulseTime() ;
     }
@@ -111,8 +108,9 @@ void loadCoils()
     for( int i = 0 ; i < nCoils ; i ++ )
     {
         coil[i].setType(      coilSettings[i].type      ) ;
-        coil[i].setStates(    coilSettings[i].stateA,     coilSettings[i].stateB ) ;
-        coil[i].setDutycycles(coilSettings[i].dutyCycleA, coilSettings[i].dutyCycleB ) ;
+        if( settings.retainState ) 
+            coil[i].setStates(coilSettings[i].stateA, coilSettings[i].stateB ) ;        
+        coil[i].setDutyCycle( coilSettings[i].dutyCycle ) ;
         coil[i].setAddress(   coilSettings[i].address   ) ;
         coil[i].setPulseTime( coilSettings[i].pulseTime ) ;
     }
@@ -197,19 +195,21 @@ void setup()
             coil[i].setType( DOUBLE_COIL_PULSED ) ;
             coil[i].setPulseTime( 50 ) ; // default to 50ms
             coil[i].setAddress( i+1 ) ;
+            coil[i].setDutyCycle( 100 ) ;
         }
         saveCoils() ;
 
-        settings.dccExt = 0 ; 
-        settings.locoFunctions = LOCO_FUNCTIONS_OFF ;
+        settings.dccExt          = 0 ; 
+        settings.locoFunctions   = LOCO_FUNCTIONS_OFF ;
         settings.uniqueAddresses = 0 ;
+        settings.retainState     = 0 ;
         EEPROM.put( EE_SETTINGS, settings ) ;
     }
 
-    loadCoils() ;
     EEPROM.get( EE_SETTINGS, settings ) ;
+    loadCoils() ;
 
-    for( int i = 0 ; i < nCoils ; i++ ) coil[i].begin() ; // set last known state.
+    for( int i = 0 ; i < nCoils ; i++ ) coil[i].begin() ; // initialize pwm controllers
 
     dcc.pin( 2, 0 ) ;
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
@@ -242,7 +242,6 @@ void loop()
     }
     END_REPEAT
 
-    
     static uint8 index = 0 ;
     if( coil[index].update() == 1 ) iterate( index, nCoils ) ;
 }
@@ -274,11 +273,11 @@ void config()
 {
     static uint8  nextState = 0 ;
     static uint32 prevTime  = 0 ;
-    static R_trigger trigger_1s ; // -> get address OR get index for address
-    static R_trigger trigger_2s ; // -> get index for type
-    static R_trigger trigger_3s ; // -> get index for pulse length
-    static R_trigger trigger_4s ; // -> enable PWM dutycycle
-    static R_trigger trigger_5s ; // -> option menu
+    static R_trigger trigger_1 ; // -> get address OR get index for address
+    static R_trigger trigger_2 ; // -> get index for type
+    static R_trigger trigger_3 ; // -> get index for pulse length
+    static R_trigger trigger_4 ; // -> enable PWM dutycycle
+    static R_trigger trigger_5 ; // -> option menu
 
     REPEAT_MS( 20 )
     {
@@ -291,7 +290,6 @@ void config()
     if( btnState == FALLING && state != idle )
     {
         state = idle ;
-        EEPROM.put( 0, coil ) ;
         btnState = HIGH ;
     }
 
@@ -310,11 +308,11 @@ void config()
         break ;
 
     case checkButton:
-        if( trigger_1s.update( millis() - beginTime > 1000 ) ) { nextState = getBaseAddress ; blueLed.handleEvent(1) ; }
-        if( trigger_2s.update( millis() - beginTime > 3000 ) ) { nextState = getIndex4Type ;  blueLed.handleEvent(2) ; }
-        if( trigger_3s.update( millis() - beginTime > 5000 ) ) { nextState = getIndex4pulse ; blueLed.handleEvent(3) ; }
-        if( trigger_4s.update( millis() - beginTime > 7000 ) ) { nextState = setDutyCycle ;    blueLed.handleEvent(4) ; }
-        if( trigger_4s.update( millis() - beginTime > 9000 ) ) { nextState = configMode ;     blueLed.handleEvent(5) ; }
+        if( trigger_1.update( millis() - beginTime > 1000 ) ) { nextState = getBaseAddress     ; blueLed.handleEvent(1) ; }
+        if( trigger_2.update( millis() - beginTime > 3000 ) ) { nextState = getIndex4Type      ; blueLed.handleEvent(2) ; }
+        if( trigger_3.update( millis() - beginTime > 5000 ) ) { nextState = getIndex4pulse     ; blueLed.handleEvent(3) ; }
+        if( trigger_4.update( millis() - beginTime > 7000 ) ) { nextState = getIndex4dutyCycle ; blueLed.handleEvent(4) ; }
+        if( trigger_5.update( millis() - beginTime > 9000 ) ) { nextState = configMode         ; blueLed.handleEvent(5) ; }
 
         if( btnState == RISING ) state = nextState ;
         break ;
@@ -328,7 +326,7 @@ void config()
 
             coil[0].setAddress( receivedAddress ) ;
             squashAddresses() ;
-            EEPROM.put( 0, coil ) ;
+            saveCoils() ;
             state = idle ;
         }
         break ; 
@@ -337,7 +335,7 @@ void config()
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
 
-            coilIndex = receivedAddress-1 ;
+            coilIndex = constrain( receivedAddress-1, 0, 7 ) ;
             state = getUniqueAddress ;
         }
         break ;
@@ -347,7 +345,7 @@ void config()
         {   newAddressSet = 0 ;
 
             coil[coilIndex].setAddress( receivedAddress ) ;
-            EEPROM.put( 0, coil ) ;
+            saveCoils() ;
             state = getIndex4Address ;
         }
         break ;
@@ -356,7 +354,7 @@ void config()
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
 
-            coilIndex = receivedAddress-1 ;
+            coilIndex = constrain( receivedAddress-1, 0, 7 ) ;
             state = getCoilType ;
         }
         break ;
@@ -369,7 +367,7 @@ void config()
 
             coil[coilIndex].setType( type ) ;
             squashAddresses() ;
-            EEPROM.put( 0, coil ) ;
+            saveCoils() ;
             state = getIndex4Type ;
         }
         break ; 
@@ -378,7 +376,7 @@ void config()
         if( newAddressSet == 1  )
         {   newAddressSet = 0 ;
 
-            coilIndex = receivedAddress-1 ;
+            coilIndex = constrain( receivedAddress-1, 0, 7 ) ;
             state = setPulseTime ;
         }
         break ;
@@ -395,7 +393,7 @@ void config()
                 {
                     coil[i].setPulseTime( receivedAddress * 10 ) ;
                 }
-                EEPROM.put( 0, coil ) ;
+                saveCoils() ;
                 state = getIndex4Type ;
                 break ;
             }
@@ -408,12 +406,23 @@ void config()
         }
         break ;
 
-    case setDutyCycle:
+    case getIndex4dutyCycle:
+        if( newAddressSet == 1  )
+        {   newAddressSet = 0 ;
+
+            coilIndex = constrain( receivedAddress-1, 0, 8 ) ; // note with, 8 we can set all coils at same frequency at once.
+            state = setDutyCycle_ ;
+        }
+        break ;
+
+    case setDutyCycle_:
         if( newAddressSet == 1 )
         {   newAddressSet = 0 ;
 
-            settings.dutyCyle = constrain( receivedAddress, 1, 10 ) ; // 1 = 10%, 10 = 100%
-        }
+            receivedAddress = constrain( receivedAddress, 1, 10 ) ; // 1 = 10%, 10 = 100%
+            if( coilIndex < 8 )                       coil[coilIndex].setDutyCycle( receivedAddress ) ;
+            else for( int i = 0 ; i < nCoils ; i ++ ) coil[i].setDutyCycle( receivedAddress ) ;
+        }  
         break ;
 
     case configMode:
@@ -424,28 +433,33 @@ void config()
             {
                 coil[i].setType( DOUBLE_COIL_PULSED ) ;
                 coil[i].setPulseTime( 50 ) ; // default to 50ms
+                settings.retainState = 0 ;
             }
 
             if( receivedAddress == 2 ) for( i = 0 ; i < nCoils ; i ++ ) // preset 2, all double continously ( PM1 style motors of green red signals)
             {
                 coil[i].setType( DOUBLE_COIL_CONTINUOUSLY ) ;
+                settings.retainState = 1 ;
             }
 
             if( receivedAddress == 3 ) for( i = 0 ; i < nCoils ; i ++ )  // preset 3, single coils pulsed (16x) (default time set at 5s)
             {
                 coil[i].setType( SINGLE_COIL_PULSED ) ;
                 coil[i].setPulseTime( 5000 ) ; // default to 5 seconds
+                settings.retainState = 0 ;
             }
 
             if( receivedAddress == 4 ) for( i = 0 ; i < nCoils ; i ++ ) // preset 4, single Coil continously (16x ON or OFF)
             {
                 coil[i].setType( SINGLE_COIL_CONTINUOUSLY ) ;
+                settings.retainState = 1 ;
             }
 
             if( receivedAddress ==  5 ) for( i = 0 ; i < (nCoils/2) ; i ++ ) // preset 5, 4x double coil (right side) and 4x double relay (left side) for dual relay frog juicing
             {
                 coil[i].setType( DOUBLE_PULSE_W_FROG ) ;
                 coil[i].setPulseTime( 50 ) ; // default to 50ms
+                settings.retainState = 0 ;
             }
 
             if( receivedAddress == 20 ) settings.uniqueAddresses = 0 ; // default
@@ -458,12 +472,11 @@ void config()
             if( receivedAddress == 41 ) settings.locoFunctions =         EIGHT_BALL ; // 16 points per address (for single mode, use F1 - F16
             if( receivedAddress == 42 ) settings.locoFunctions =     FANTASTIC_FOUR ; //  4 points per address (2 address per decoder) (special support for locomaus)
 
-            if( receivedAddress == 50 ) settings.disableOnBoot  = 0 ; // default
-            if( receivedAddress == 51 ) settings.disableOnBoot  = 1 ;
+            if( receivedAddress == 50 ) settings.retainState  = 0 ; // default
+            if( receivedAddress == 51 ) settings.retainState  = 1 ;
 
             squashAddresses() ;
-            EEPROM.put( 0, coil ) ; // commit entire array
-
+            saveCoils() ; 
             EEPROM.put( EE_SETTINGS, settings ) ;
             state = idle ;
         }
