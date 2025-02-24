@@ -1,0 +1,1810 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "fc9ad296-90b4-4418-92dc-e7c4cf8b726e")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector:Screw_Terminal_01x03"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x03"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Diode:1N4001"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4001"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?41*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4001_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4001_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:BD135"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BD135"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "1.5A Ic, 45V Vce, Low Voltage Transistor, TO-126"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Low Voltage Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?126*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BD135_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 0.635 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 0.635 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.2446 -1.778) (xy 1.7526 -1.27) (xy 2.286 -2.286) (xy 1.2446 -1.778) (xy 1.2446 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BD135_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 142.24 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10d39bda-d834-461c-b6d3-59fa479b3564")
+	)
+	(junction
+		(at 142.24 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23ebbc29-ed50-4d47-a415-f39d57943b96")
+	)
+	(junction
+		(at 149.86 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24a0b471-3073-4e73-8aa0-4cd41242cf0d")
+	)
+	(junction
+		(at 146.05 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "479a89da-5e95-45fa-aa68-0764f1525e9c")
+	)
+	(junction
+		(at 125.73 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "692e4df6-fde1-42a8-b1cc-4a2b5e906a42")
+	)
+	(junction
+		(at 149.86 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7fa9c107-f222-46f5-a4a0-9004ede42a83")
+	)
+	(junction
+		(at 162.56 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc35b45f-647d-4cfe-a5ad-bfb5e7eb7296")
+	)
+	(no_connect
+		(at 146.05 101.6)
+		(uuid "613766ba-9d1f-4a43-9341-fd53ea77c894")
+	)
+	(wire
+		(pts
+			(xy 142.24 81.28) (xy 146.05 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00b94898-c829-49a8-90ca-4bd7445cd84b")
+	)
+	(wire
+		(pts
+			(xy 120.65 71.12) (xy 120.65 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "068ce806-13ee-4d3f-8abd-e064e1ab5b53")
+	)
+	(wire
+		(pts
+			(xy 171.45 71.12) (xy 171.45 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d6a428b-88e2-47f5-9a2b-f6e72e3d70eb")
+	)
+	(wire
+		(pts
+			(xy 148.59 97.79) (xy 149.86 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13350700-1d14-4ef1-bda2-29464096a3e1")
+	)
+	(wire
+		(pts
+			(xy 143.51 97.79) (xy 142.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19c8e0e5-3689-4cd4-8881-8ba10605c7b9")
+	)
+	(wire
+		(pts
+			(xy 162.56 88.9) (xy 162.56 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "436d79b9-38b4-4b3d-8048-595e1f92c8f9")
+	)
+	(wire
+		(pts
+			(xy 142.24 81.28) (xy 142.24 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4612f0eb-e208-4dc1-856f-6219c1a4ae69")
+	)
+	(wire
+		(pts
+			(xy 125.73 88.9) (xy 125.73 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5075e058-cb9a-4326-8d99-fee0eeccbfb5")
+	)
+	(wire
+		(pts
+			(xy 125.73 81.28) (xy 142.24 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52968444-ea19-4396-8d01-8198c9a56e3a")
+	)
+	(wire
+		(pts
+			(xy 171.45 71.12) (xy 148.59 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d37e301-7a3c-47a7-b877-ee3ff5359421")
+	)
+	(wire
+		(pts
+			(xy 157.48 88.9) (xy 162.56 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69514f03-0b99-442e-ac31-4bcb2e0d3f36")
+	)
+	(wire
+		(pts
+			(xy 162.56 97.79) (xy 149.86 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7827502d-cc0d-43fc-9bd0-3cf2392e9f62")
+	)
+	(wire
+		(pts
+			(xy 142.24 97.79) (xy 142.24 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83c54bf5-c542-438a-b57e-f5de4fdefd96")
+	)
+	(wire
+		(pts
+			(xy 149.86 81.28) (xy 162.56 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8df7825d-aa3c-4d6f-b2e6-020a8554a0f8")
+	)
+	(wire
+		(pts
+			(xy 143.51 71.12) (xy 120.65 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a701c328-7f7d-4d7a-86b9-b16674f6d572")
+	)
+	(wire
+		(pts
+			(xy 143.51 97.79) (xy 143.51 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8e58863-41ef-4273-9b36-1f1d163d17ba")
+	)
+	(wire
+		(pts
+			(xy 149.86 81.28) (xy 149.86 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd962164-d994-4be8-bb57-21574fb3eb45")
+	)
+	(wire
+		(pts
+			(xy 125.73 88.9) (xy 134.62 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf4530ff-a08c-4e5f-b6c7-cf11b033a200")
+	)
+	(wire
+		(pts
+			(xy 146.05 71.12) (xy 146.05 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c05b2159-7ed9-4082-9853-f063810701b5")
+	)
+	(wire
+		(pts
+			(xy 149.86 97.79) (xy 149.86 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5dbf391-327b-46d6-866f-8a55d898c6f0")
+	)
+	(wire
+		(pts
+			(xy 146.05 81.28) (xy 149.86 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d58df163-ab4c-4f6c-94b0-34b8471fac66")
+	)
+	(wire
+		(pts
+			(xy 148.59 97.79) (xy 148.59 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6dcb1aa-2f79-4abd-8149-43053028688c")
+	)
+	(wire
+		(pts
+			(xy 125.73 97.79) (xy 142.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f879bfd1-6f03-490b-97db-3f0809ec8aeb")
+	)
+	(wire
+		(pts
+			(xy 162.56 88.9) (xy 171.45 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc5aafc9-584b-431e-b0fa-7010dc937a72")
+	)
+	(wire
+		(pts
+			(xy 120.65 88.9) (xy 125.73 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff2493b2-4dc6-4e5e-86f0-f8a9fd3415f3")
+	)
+	(label "coilA"
+		(at 154.94 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e1800d0-31c1-4f4f-a411-408ddd014151")
+	)
+	(label "motA"
+		(at 148.59 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "523d6683-96ce-4ad4-a940-14b83406eb20")
+	)
+	(label "coilB"
+		(at 132.08 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bba21a75-6b63-4e7f-8425-9e4db491866f")
+	)
+	(label "motB"
+		(at 143.51 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ce55bb59-2f83-4a8e-9506-677726580d5a")
+	)
+	(label "collector"
+		(at 149.86 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6d777df-934a-4628-90ce-b7ff4557175a")
+	)
+	(symbol
+		(lib_id "Diode:1N4001")
+		(at 125.73 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "142d381e-eecd-47c7-bd95-a4eca94d044e")
+		(property "Reference" "D201"
+			(at 124.46 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4001"
+			(at 124.46 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 125.73 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 125.73 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+			(at 125.73 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 125.73 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 125.73 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a82f777-695d-4b17-8f6d-3af8c26760bf")
+		)
+		(pin "2"
+			(uuid "f97136dc-9bfc-49cc-90d8-af7c0cc63f24")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "D201")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "D301")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "D401")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "D501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BD135")
+		(at 152.4 88.9 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "571b4533-4454-45b3-aa87-00611f3be9f6")
+		(property "Reference" "Q202"
+			(at 153.67 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BD679"
+			(at 157.48 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 147.32 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf"
+			(at 152.4 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Ic, 45V Vce, Low Voltage Transistor, TO-126"
+			(at 152.4 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b178326-7b1f-41f1-8505-1f35b33ffa3f")
+		)
+		(pin "2"
+			(uuid "caa5f304-ee0b-4c7d-863e-1d72b39923cf")
+		)
+		(pin "3"
+			(uuid "3453b6ce-aeae-4e84-8517-1b2cd5155410")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "Q202")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "Q302")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "Q402")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "Q502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 146.05 106.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5f7f2512-c811-411f-b548-7c6660a37769")
+		(property "Reference" "J202"
+			(at 151.13 106.6799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x03"
+			(at 139.7 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C22380440"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "827798b2-1737-41b9-9882-8b76091521f9")
+		)
+		(pin "2"
+			(uuid "d338072c-0f40-4889-99b7-ab1499d80ba6")
+		)
+		(pin "1"
+			(uuid "34f1eeb0-d00d-48ec-b6be-c3b47ddac383")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "J202")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "J302")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "J402")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "J502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4001")
+		(at 162.56 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8c519f8f-4977-4557-a87c-06917cc8fa8d")
+		(property "Reference" "D202"
+			(at 163.83 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4001"
+			(at 163.83 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "000b5c7e-7975-4874-90e7-55d3f01c585e")
+		)
+		(pin "2"
+			(uuid "85a73e50-41ac-439b-9dc3-6d17c7d9de1d")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "D202")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "D302")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "D402")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "D502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 125.73 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3c16098-c204-425c-816d-934c8403af15")
+		(property "Reference" "R201"
+			(at 128.27 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22k"
+			(at 128.27 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 123.952 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 125.73 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 125.73 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a1d4f9a4-191e-4642-923a-7c5d08d70fbe")
+		)
+		(pin "1"
+			(uuid "1a80774e-3f13-4f64-95a9-554b90a819b5")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "R201")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "R301")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "R401")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "R501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 162.56 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db6e54b6-9a51-49e2-8012-a1d5065a119b")
+		(property "Reference" "R202"
+			(at 165.1 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22k"
+			(at 165.1 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 160.782 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 162.56 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 162.56 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "65541576-1b81-49ad-95e4-d4b9c0640009")
+		)
+		(pin "1"
+			(uuid "83decef3-b886-4c40-b22b-792aedae516a")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "R202")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "R302")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "R402")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "R502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BD135")
+		(at 139.7 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eea00b53-5fd0-40fa-bfb7-a17845b21338")
+		(property "Reference" "Q201"
+			(at 134.62 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BD679"
+			(at 133.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 144.78 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf"
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Ic, 45V Vce, Low Voltage Transistor, TO-126"
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "370041b9-2c80-45f3-a398-80626b4b39a5")
+		)
+		(pin "2"
+			(uuid "55b30d62-b24c-40db-9304-854175ef1945")
+		)
+		(pin "3"
+			(uuid "4e7fd2b3-f9f4-47c0-b50a-4fb046880836")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "Q201")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "Q301")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "Q401")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "Q501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 146.05 66.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa3e72fe-daea-4514-9591-d109050b796b")
+		(property "Reference" "J201"
+			(at 151.13 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x03"
+			(at 152.4 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:connector_3.50mm_3P horizontal_MALE"
+			(at 146.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 146.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C6394074"
+			(at 146.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ef5a1e9f-c759-4462-802c-0a8293f24b5f")
+		)
+		(pin "2"
+			(uuid "ad51d7b1-1095-4e4d-b198-2e77dd695eb8")
+		)
+		(pin "1"
+			(uuid "e25178bd-2884-49f6-bee3-e73fe8e69e3a")
+		)
+		(instances
+			(project "wisselMotorExtension-THT"
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e105439b-e03f-4c90-9391-fa1caac79943"
+					(reference "J201")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/2dd1c7ab-3fde-4b45-ac10-8335864b0b3a"
+					(reference "J301")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/e21ba99d-969d-4f19-8d7c-8c3688addab5"
+					(reference "J401")
+					(unit 1)
+				)
+				(path "/42850bce-3fd5-4668-8f5f-66c54b8432af/d930748c-9176-4aaf-95b1-3e58c5ca4aac"
+					(reference "J501")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

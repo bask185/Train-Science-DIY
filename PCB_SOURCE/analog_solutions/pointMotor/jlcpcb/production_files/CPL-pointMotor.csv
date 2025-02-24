@@ -1,0 +1,16 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1,1N4001,D_DO-34_SOD68_P7.62mm_Horizontal,116.454,-86.741,0.0,top
+D101,D,D_DO-34_SOD68_P7.62mm_Horizontal,115.995,-94.189,0.0,top
+D102,D,D_DO-34_SOD68_P7.62mm_Horizontal,116.005,-92.0,180.0,top
+D2,1N4001,D_DO-34_SOD68_P7.62mm_Horizontal,116.495,-89.0,0.0,top
+J1,frog,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",107.0,-82.555,-90.0,top
+J101,frog,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",125.0,-82.5,90.0,top
+J102,motor,N20_motor,116.0,-87.3,0.0,top
+Q1,BD679,TO-126-3_Vertical,105.5,-74.0,0.0,top
+Q2,BD679,TO-126-3_Vertical,127.006,-73.787,0.0,top
+R1,22k,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,116.332,-82.067,0.0,top
+R2,22k,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,116.332,-84.328,0.0,top
+SW101,SW_SPDT,limitSwitchVertical,107.5,-108.015,0.0,top
+SW102,SW_SPDT,limitSwitchVertical,124.5,-108.005,180.0,top
+SW103,SW_SPDT,limitSwitchVertical,107.5,-114.515,0.0,top
+SW104,SW_SPDT,limitSwitchVertical,124.5,-114.505,180.0,top

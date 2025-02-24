@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC
+~,U1,DFPlayer,
+Screw_Terminal_01x02,J3,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",
+Conn_01x04_Socket,J2,PinSocket_1x04_P2.54mm_Horizontal,
+Conn_01x01_Pin,J1,PinHeader_1x01_P2.54mm_Vertical,

@@ -3,8 +3,13 @@
 
 #include <Arduino.h>
 
-const int OFF = 0 ;
-const int  ON = 1 ;
+const int  OFF          = 0 ;
+const int  ON           = 1 ;
+const int  BLEEPING     = 2 ;
+const int  SLOW         = 3 ;
+const int  FAST         = 4 ;
+const int  REALLY_FAST  = 5 ;
+
 
 class LedBlink
 {
@@ -12,44 +17,28 @@ public:
     LedBlink(uint8_t pin);
 
     void begin();
-    void setCycleTime(uint32_t ms);
-    void setBleepOnTime(uint32_t ms);
-    void bleep(uint8_t count);
-    void turn( uint8_t );
-    void blinkSlow();
-    void blinkFast();
 
-    void handleEvent(uint8_t eventBleeps);
-    void clearEvent();
+    void bleep( uint8_t ); // keeps bleeping x amounf of time every cycle
+    void turn(  uint8_t );      // on or off
+    void blink( uint8_t );
+    void setEventBleeps(uint8_t eventBleeps); // also bleeps but just one time, also resets cycle
 
     void update();
 
 private:
-    enum Mode
-    {
-        MODE_OFF,
-        MODE_CONTINUOUS_ON,
-        MODE_BLEEPS,
-        MODE_TOGGLE_SLOW,
-        MODE_TOGGLE_FAST
-    };
 
-    uint8_t  _pin;
-    uint8_t  _mode;
-    uint8_t  _bleepCount;
-    uint32_t _cycleTime;
-    uint32_t _bleepOnTime;
-    uint32_t _lastUpdate;
-    uint32_t _cycleStart;
-    bool     _ledState;
+    uint8_t  pin;
+    uint8_t  mode;
+    uint8_t  bleepCount;
+    uint8_t  cycleCounter;
+    bool     ledState;
 
-    // Event mode
-    bool     _inEventMode;
-    uint8_t  _eventBleeps;
+    uint32_t lastTime ;
+    bool     eventActive;
+    uint8_t  eventBleeps;
+    const uint32_t interval = 120 ;
+    const uint8_t nCycles   =  16 ; // was 20
 
-    void updateNormalMode(uint32_t now, uint32_t cyclePos);
-    void updateEventMode(uint32_t now, uint32_t cyclePos);
-    void setLed(bool on);
 };
 
 #endif

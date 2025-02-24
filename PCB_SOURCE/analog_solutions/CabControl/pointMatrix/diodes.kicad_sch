@@ -1,0 +1,1657 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "bfdae7e6-6e93-4fc5-a27e-e51cea0d2494")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:D"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 130.81 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1424666e-49d2-4de3-92b6-7ae038de30d3")
+	)
+	(junction
+		(at 123.19 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2bec5808-8078-400c-a511-7e2460754c7f")
+	)
+	(junction
+		(at 146.05 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f513cb3-d1f0-4998-ab2c-45cfe56a42f3")
+	)
+	(junction
+		(at 153.67 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a8f7413-cf52-4ac1-95a2-f651f9739932")
+	)
+	(junction
+		(at 115.57 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a45aa72-08d2-4a80-b04f-be739150292f")
+	)
+	(junction
+		(at 161.29 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d3d9cb9-02c8-4748-acc2-ea93e0f42e8e")
+	)
+	(junction
+		(at 138.43 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eeca7634-ee56-4508-96d6-3687b1ba3b8c")
+	)
+	(wire
+		(pts
+			(xy 161.29 54.61) (xy 161.29 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a9c7b40-ab74-4643-8af0-9a4bc0d784c6")
+	)
+	(wire
+		(pts
+			(xy 123.19 54.61) (xy 123.19 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f987f2d-215f-4f7f-87f8-940b419f5420")
+	)
+	(wire
+		(pts
+			(xy 138.43 54.61) (xy 138.43 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b6549d-0fed-46a5-acc7-342704645224")
+	)
+	(wire
+		(pts
+			(xy 146.05 54.61) (xy 146.05 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2913cc0e-4b68-44d5-8be6-55aaf42accd7")
+	)
+	(wire
+		(pts
+			(xy 168.91 54.61) (xy 168.91 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "378d15f9-dc7e-4882-8d3c-7e4f61b73866")
+	)
+	(wire
+		(pts
+			(xy 115.57 54.61) (xy 115.57 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5958300a-4e7e-4e10-a091-5f435fa7b551")
+	)
+	(wire
+		(pts
+			(xy 146.05 46.99) (xy 153.67 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7022a960-b5ff-4af1-92f6-8966df925d1f")
+	)
+	(wire
+		(pts
+			(xy 138.43 46.99) (xy 146.05 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e4a6579-a009-4b9f-b6e7-50b7820ab97d")
+	)
+	(wire
+		(pts
+			(xy 113.03 46.99) (xy 115.57 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fa94134-1fe9-4cc0-9708-2c82df7e16f2")
+	)
+	(wire
+		(pts
+			(xy 153.67 54.61) (xy 153.67 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94f0a736-d22b-49bf-b587-8ad41f12a88b")
+	)
+	(wire
+		(pts
+			(xy 123.19 46.99) (xy 130.81 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9574b362-770f-47b3-933b-d1f8407f773e")
+	)
+	(wire
+		(pts
+			(xy 130.81 54.61) (xy 130.81 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2c50d1d-4016-4252-bd6f-5d1c6dc53a2b")
+	)
+	(wire
+		(pts
+			(xy 130.81 46.99) (xy 138.43 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd5d3da8-af74-45d9-9a28-ea163e18f2e2")
+	)
+	(wire
+		(pts
+			(xy 153.67 46.99) (xy 161.29 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d90c5014-61ca-4b24-91cf-9ca1ee221033")
+	)
+	(wire
+		(pts
+			(xy 161.29 46.99) (xy 168.91 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e63d801b-bfaf-495f-904c-420ecba8179d")
+	)
+	(wire
+		(pts
+			(xy 115.57 46.99) (xy 123.19 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6816136-d533-47c3-94af-d64408106f23")
+	)
+	(hierarchical_label "COL2"
+		(shape input)
+		(at 123.19 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2f31e770-c56e-4064-a1a1-d6e581639d50")
+	)
+	(hierarchical_label "COL8"
+		(shape input)
+		(at 168.91 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "391a204b-f9e0-476e-9312-643504f92d6f")
+	)
+	(hierarchical_label "COL6"
+		(shape input)
+		(at 153.67 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45940e49-a349-47b4-a6b1-34317687b959")
+	)
+	(hierarchical_label "COL7"
+		(shape input)
+		(at 161.29 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4b2f70fe-84ed-46be-b43e-2f7b51ea69c2")
+	)
+	(hierarchical_label "COL4"
+		(shape input)
+		(at 138.43 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6aa29965-7d57-459a-b7d2-fde7af3dcb27")
+	)
+	(hierarchical_label "COL1"
+		(shape input)
+		(at 115.57 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "79036761-93d9-4c0a-8163-2a258e433a77")
+	)
+	(hierarchical_label "COL5"
+		(shape input)
+		(at 146.05 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d492880-2de2-4de7-aee6-95e7eb0fa69c")
+	)
+	(hierarchical_label "ROW"
+		(shape input)
+		(at 113.03 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b8360189-3adb-4509-8862-6d35ca30da6b")
+	)
+	(hierarchical_label "COL3"
+		(shape input)
+		(at 130.81 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c0c3bcf6-02c0-4ec2-b104-ec1991370d89")
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 115.57 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e38bc45-c09e-4ea0-87b2-b92d9dc0821a")
+		(property "Reference" "D2501"
+			(at 118.11 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 118.11 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 115.57 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.57 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 115.57 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 115.57 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 115.57 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5428479f-4144-4d15-a580-df01261090a5")
+		)
+		(pin "2"
+			(uuid "35694e4b-eddc-4dc0-8aa4-06e7974c5469")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2501")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2101")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2401")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1201")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1101")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1801")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1401")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2001")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2201")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2301")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1301")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2601")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1501")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1601")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1701")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1901")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 168.91 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2eeea732-8974-4605-b9a4-8145206441a5")
+		(property "Reference" "D2508"
+			(at 171.45 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 171.45 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "572073d8-91c2-4b08-a07f-051f0e94c212")
+		)
+		(pin "2"
+			(uuid "1d7f25fb-3976-43d3-8d93-1281f842fa5a")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2508")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2108")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2408")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1208")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1108")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1808")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1408")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2008")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2208")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2308")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1308")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2608")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1508")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1608")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1708")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1908")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 130.81 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "337ce48c-6610-4e40-9acb-b59344c000c7")
+		(property "Reference" "D2503"
+			(at 133.35 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 133.35 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bce9a19-0886-496a-a8a6-5a4ef8932b78")
+		)
+		(pin "2"
+			(uuid "0d4c1a13-843e-46f5-a5ac-e77cf3974d2e")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2503")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2103")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2403")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1203")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1103")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1803")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1403")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2003")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2203")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2303")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1303")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2603")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1503")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1603")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1703")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 123.19 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ce33542-29dd-4135-bb21-e7321844c19c")
+		(property "Reference" "D2502"
+			(at 125.73 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 125.73 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f8f11f3-701b-4c61-81da-23f20d5ec8de")
+		)
+		(pin "2"
+			(uuid "618e9ed7-bf22-41e7-9c97-6ace2a7f83e3")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2502")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2102")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2402")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1202")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1102")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1802")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1402")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2002")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2202")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2302")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1302")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2602")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1502")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1602")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1702")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1902")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 153.67 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44735809-82f0-4c5d-8e45-6ba5bbe1d219")
+		(property "Reference" "D2506"
+			(at 156.21 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 156.21 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc5c2dd7-5a0d-4524-b413-254fc51f4317")
+		)
+		(pin "2"
+			(uuid "8b92d719-d6fa-423b-8b7a-056c3e83017d")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2506")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2106")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2406")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1206")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1106")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1806")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1406")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2006")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2206")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2306")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1306")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2606")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1506")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1606")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1706")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1906")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 146.05 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69a4ff0c-283a-41c2-bc8d-d992987bc70c")
+		(property "Reference" "D2505"
+			(at 148.59 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 148.59 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "add5342d-f2aa-4844-9d9c-bb87e5d31a66")
+		)
+		(pin "2"
+			(uuid "e84fc3e2-de1d-42a4-acdd-ba8a31cdd184")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2505")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2105")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2405")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1205")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1105")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1805")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1405")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2005")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2205")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2305")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1305")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2605")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1505")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1605")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1705")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1905")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 161.29 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b5dcdef-a7e8-431d-9031-eb8df0c3cb1b")
+		(property "Reference" "D2507"
+			(at 163.83 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 163.83 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 161.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 161.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 161.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 161.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3243297-1e11-4729-b89d-4837476fbdab")
+		)
+		(pin "2"
+			(uuid "6b1c832d-7d3f-46a9-9303-76c46d62c32d")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2507")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2107")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2407")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1207")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1107")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1807")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1407")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2007")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2207")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2307")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1307")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2607")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1507")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1607")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1707")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1907")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 138.43 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e428fc0c-8a36-44f1-b493-09e58d20a635")
+		(property "Reference" "D2504"
+			(at 140.97 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 140.97 52.0699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:diode4matrix"
+			(at 138.43 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 138.43 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 138.43 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 138.43 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ef07538-4611-4892-8679-ce7f99c4e67e")
+		)
+		(pin "2"
+			(uuid "659145f2-223a-49c9-96af-d8f94fdaca19")
+		)
+		(instances
+			(project "pointMatrix"
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/06ab4991-4291-49c2-992e-65b6f04576fb"
+					(reference "D2504")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/0e8202c5-4bd1-4f9a-b36c-a0d5f58f663c"
+					(reference "D2104")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/15a80ea2-891d-49e6-a76d-a69d292d2e32"
+					(reference "D2404")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/31632ae4-1f3c-4183-88a5-5cf474e43a7f"
+					(reference "D1204")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/369e4be7-3669-4235-aed5-cf1aecf403a9"
+					(reference "D1104")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/38ea59c7-c82d-478c-b249-97520f5a15df"
+					(reference "D1804")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/4f753a8c-8b4b-49f3-a530-5c4532cb9a7d"
+					(reference "D1404")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/6bbadecc-adb0-4320-82d9-3177c8e88d05"
+					(reference "D2004")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/82df045d-671a-450b-8f9d-8ce9ae5f726c"
+					(reference "D2204")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/90cdf120-198c-4741-b0e5-492112db2b32"
+					(reference "D2304")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/a2fc5c84-27d7-47c2-9c2f-7e0a2c48782b"
+					(reference "D1304")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/cb0f8959-0f21-4e2b-b792-5d8c7d40e644"
+					(reference "D2604")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/d82ef7c8-0a1d-4874-a582-b3256de6a4db"
+					(reference "D1504")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/ea9538ad-668d-48de-8481-d94c7bfd38f8"
+					(reference "D1604")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/eb6fc6eb-209e-48f3-b0c8-807682cb59ca"
+					(reference "D1704")
+					(unit 1)
+				)
+				(path "/1297f57d-6421-430e-8d46-81a498a3ad81/f11c9c17-ef5c-4cdf-91e2-c8fe5b30c188/fedac3f5-b123-4c59-8ff5-031f5bf1a0b0"
+					(reference "D1904")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

@@ -56,6 +56,7 @@
 #define STR2(s)             #s
 #define STR(s)              STR2(s)
 
-#define iterate(idx,lim) ( (++idx >= (lim)) ? (idx = 0) : idx )
+// #define iterate(idx,lim) ( (++idx >= (lim)) ? (idx = 0) : idx )
+#define iterate(idx,lim) if( (++idx) >= (lim) ) idx = 0 ;
 
 #endif

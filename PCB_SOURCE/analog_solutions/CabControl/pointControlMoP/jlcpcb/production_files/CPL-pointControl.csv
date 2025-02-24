@@ -1,0 +1,8 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1,D,D_DO-34_SOD68_P7.62mm_Horizontal,153.005,-64.5,180.0,top
+D_NEG2,LED,LED_D3.0mm,163.5,-76.3,180.0,top
+D_POS3,D,LED_D3.0mm,163.5,-69.3,0.0,top
+J1,Screw_Terminal_01x04,"PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",154.389,-84.0,0.0,bottom
+R1,10k,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,143.239,-73.81,90.0,top
+R2,10k,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,145.5,-73.81,-90.0,top
+SW1,SW_Push_DPDT,MTS_DPDT,153.543,-72.85,90.0,top

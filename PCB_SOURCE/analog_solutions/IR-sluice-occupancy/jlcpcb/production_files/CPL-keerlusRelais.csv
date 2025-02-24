@@ -1,0 +1,6 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",135.199,-134.493,0.0,top
+J2,Conn_01x04_Pin,IR_EXTENDER_CUTOUT,161.671,-133.953277,180.0,top
+J3,Conn_01x04_Pin,IR_EXTENDER_CUTOUT,107.442,-134.078277,0.0,top
+J6,Conn_01x04_Pin,IR_EXTENDER_PCB,90.832,-137.755,0.0,top
+U1,IS471F,IR_EXTENDER_PCB,90.832,-130.755,0.0,top

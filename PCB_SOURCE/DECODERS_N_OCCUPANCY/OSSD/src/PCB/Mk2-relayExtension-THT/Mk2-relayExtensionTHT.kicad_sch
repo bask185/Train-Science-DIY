@@ -1,0 +1,161 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e7280eb5-1386-47ea-974c-c755a08b04e7")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 45.72 54.61)
+		(size 12.7 5.08)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "41bba28a-ec8f-4007-b6c6-6cd3fe4f31f4")
+		(property "Sheetname" "relay1"
+			(at 49.53 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay.kicad_sch"
+			(at 45.72 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Mk2-relayExtensionTHT"
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 45.72 71.12)
+		(size 12.7 5.08)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5b58b096-6dbe-4801-824f-a9589771fa81")
+		(property "Sheetname" "relay3"
+			(at 49.53 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay.kicad_sch"
+			(at 45.72 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Mk2-relayExtensionTHT"
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 45.72 78.74)
+		(size 12.7 5.08)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8ed02587-de5d-4e4c-b198-ec2f04219e8a")
+		(property "Sheetname" "relay4"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay.kicad_sch"
+			(at 45.72 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Mk2-relayExtensionTHT"
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 45.72 62.23)
+		(size 12.7 5.08)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "991e30e4-9d55-4765-b468-3531f42cf09b")
+		(property "Sheetname" "relay2"
+			(at 49.53 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay.kicad_sch"
+			(at 45.72 67.8946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Mk2-relayExtensionTHT"
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

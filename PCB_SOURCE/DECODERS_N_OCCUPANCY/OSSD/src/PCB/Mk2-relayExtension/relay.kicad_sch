@@ -791,33 +791,28 @@
 				)
 			)
 		)
-		(symbol "power:+12V"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
+		(symbol "resistors_0603:R_680R_0603"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+12V"
-				(at 0 3.556 0)
+			(property "Reference" "R"
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
+			(property "Value" "680R"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+				(at 2.54 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -826,6 +821,15 @@
 				)
 			)
 			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -834,7 +838,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(property "JLCPCB Part#" "C17798"
 				(at 0 0 0)
 				(effects
 					(font
@@ -843,46 +847,12 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+12V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
+			(symbol "R_680R_0603_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
+						(width 0.2032)
 						(type default)
 					)
 					(fill
@@ -890,10 +860,10 @@
 					)
 				)
 			)
-			(symbol "+12V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
+			(symbol "R_680R_0603_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
 					(name "~"
 						(effects
 							(font
@@ -902,6 +872,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -950,16 +938,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 67.31) (xy 121.92 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e9d8f42-b118-4789-ba05-fdd5a4ad6d9b")
-	)
-	(wire
-		(pts
 			(xy 165.1 102.87) (xy 166.37 102.87)
 		)
 		(stroke
@@ -990,6 +968,26 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 90.17) (xy 171.45 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25bf64bd-301b-4b69-83b3-eb8be64bd4d9")
+	)
+	(wire
+		(pts
+			(xy 107.95 68.58) (xy 113.03 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a79fd82-379f-4862-8171-b4b8113e66b3")
+	)
+	(wire
+		(pts
 			(xy 162.56 97.79) (xy 163.83 97.79)
 		)
 		(stroke
@@ -1000,7 +998,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 53.34) (xy 165.1 53.34)
+			(xy 162.56 53.34) (xy 166.37 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1070,16 +1068,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 68.58) (xy 121.92 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76b50ae3-b49c-4ea3-9cb7-9ab46eea9442")
-	)
-	(wire
-		(pts
 			(xy 107.95 71.12) (xy 113.03 71.12)
 		)
 		(stroke
@@ -1130,6 +1118,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 53.34) (xy 171.45 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aac5b850-0f32-4571-9e79-03c243c26482")
+	)
+	(wire
+		(pts
 			(xy 146.05 73.66) (xy 146.05 63.5)
 		)
 		(stroke
@@ -1167,16 +1165,6 @@
 			(type default)
 		)
 		(uuid "b7c8e033-0c57-44db-aefa-f5de16a8bee4")
-	)
-	(wire
-		(pts
-			(xy 162.56 90.17) (xy 165.1 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb27abe8-2725-4611-85cc-ecbdf7251448")
 	)
 	(wire
 		(pts
@@ -1250,6 +1238,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 90.17) (xy 166.37 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e85261c3-aff9-4cc3-b7b9-f31dd55cccc2")
+	)
+	(wire
+		(pts
 			(xy 162.56 71.12) (xy 163.83 71.12)
 		)
 		(stroke
@@ -1268,9 +1266,18 @@
 		)
 		(uuid "ffe096fe-1cf6-482a-9a8f-653b214e3467")
 	)
+	(label "V+"
+		(at 173.99 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1213c8a0-4893-4282-aca5-456736c52115")
+	)
 	(label "Coil2"
 		(at 113.03 71.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1281,7 +1288,6 @@
 	)
 	(label "Coil2"
 		(at 146.05 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1292,7 +1298,6 @@
 	)
 	(label "Coil1"
 		(at 113.03 66.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1301,9 +1306,28 @@
 		)
 		(uuid "6392795f-5060-48a6-ad02-7c2b8f73fe5b")
 	)
+	(label "V+"
+		(at 113.03 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "731f49a3-7648-4308-a023-41ebee6105bd")
+	)
+	(label "V+"
+		(at 173.99 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb96f207-feec-4be9-a882-923f251f3fcb")
+	)
 	(label "Coil1"
 		(at 146.05 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1311,84 +1335,6 @@
 			(justify right bottom)
 		)
 		(uuid "f53d0b69-8596-44bf-b11f-15668395662e")
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 165.1 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22a93914-edb7-4e65-830c-fe1e449cc0e5")
-		(property "Reference" "#PWR03"
-			(at 165.1 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 165.1 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 165.1 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d0fe47a9-4046-4dcc-ae46-2c6a2fc70f8a")
-		)
-		(instances
-			(project "Mk2-relayExtension"
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/41bba28a-ec8f-4007-b6c6-6cd3fe4f31f4"
-					(reference "#PWR03")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "#PWR06")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
-					(reference "#PWR09")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "custom_kicad_lib_sk:G6K-2F-Y-TR DC12")
@@ -1485,10 +1431,6 @@
 					(reference "K1")
 					(unit 1)
 				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "K3")
-					(unit 1)
-				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
 					(reference "K5")
 					(unit 1)
@@ -1497,38 +1439,41 @@
 					(reference "K7")
 					(unit 1)
 				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "K3")
+					(unit 1)
+				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 121.92 67.31 0)
+		(lib_id "resistors_0603:R_680R_0603")
+		(at 168.91 90.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6533d921-a6d3-49a4-ada6-bfc0ecdf49e0")
-		(property "Reference" "#PWR01"
-			(at 121.92 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 121.92 62.23 0)
+		(uuid "577cd5ba-98ac-424a-a714-1ae71e753a05")
+		(property "Reference" "R2"
+			(at 168.91 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 121.92 67.31 0)
+		(property "Value" "680R"
+			(at 168.91 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 166.37 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1537,7 +1482,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 67.31 0)
+			(at 168.91 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1545,112 +1490,46 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 121.92 67.31 0)
+		(property "Description" ""
+			(at 168.91 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(property "JLCPCB Part#" "C17798"
+			(at 168.91 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8d289b47-a1cb-4cfc-89ae-d4eca275cefc")
 		)
 		(pin "1"
-			(uuid "75fe0489-1d2c-4f6a-bd14-86e59e8f8205")
+			(uuid "cf7791bf-41f0-475e-9099-8762c8c6675d")
 		)
 		(instances
 			(project "Mk2-relayExtension"
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/41bba28a-ec8f-4007-b6c6-6cd3fe4f31f4"
-					(reference "#PWR01")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "#PWR04")
+					(reference "R2")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
-					(reference "#PWR07")
+					(reference "R6")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 165.1 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "675d1be4-c197-4c13-b3fe-21fb8755e5a7")
-		(property "Reference" "#PWR02"
-			(at 165.1 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 165.1 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 165.1 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b29518ea-71a7-4d45-a896-10bb583eb6f2")
-		)
-		(instances
-			(project "Mk2-relayExtension"
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/41bba28a-ec8f-4007-b6c6-6cd3fe4f31f4"
-					(reference "#PWR02")
+					(reference "R8")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "#PWR05")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
-					(reference "#PWR08")
-					(unit 1)
-				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
-					(reference "#PWR011")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -1734,16 +1613,16 @@
 					(reference "J1")
 					(unit 1)
 				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "J2")
-					(unit 1)
-				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
 					(reference "J7")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
 					(reference "J10")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -1837,16 +1716,16 @@
 					(reference "J5")
 					(unit 1)
 				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "J6")
-					(unit 1)
-				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
 					(reference "J9")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
 					(reference "J12")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -1931,16 +1810,105 @@
 					(reference "J4")
 					(unit 1)
 				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "J3")
-					(unit 1)
-				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
 					(reference "J8")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
 					(reference "J11")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "resistors_0603:R_680R_0603")
+		(at 168.91 53.34 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c23c958b-6b4d-41eb-83ac-ba4247efe283")
+		(property "Reference" "R1"
+			(at 168.91 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "680R"
+			(at 168.91 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom_kicad_lib_sk:R_0603_smalltext"
+			(at 166.37 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 168.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C17798"
+			(at 168.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "683f62c4-c1f9-4213-8fed-35862773516a")
+		)
+		(pin "1"
+			(uuid "e53a25c3-b9d9-45ac-96e8-32b12d248405")
+		)
+		(instances
+			(project ""
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/41bba28a-ec8f-4007-b6c6-6cd3fe4f31f4"
+					(reference "R1")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
+					(reference "R5")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
+					(reference "R7")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -2041,16 +2009,16 @@
 					(reference "K2")
 					(unit 1)
 				)
-				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
-					(reference "K4")
-					(unit 1)
-				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/5b58b096-6dbe-4801-824f-a9589771fa81"
 					(reference "K6")
 					(unit 1)
 				)
 				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/8ed02587-de5d-4e4c-b198-ec2f04219e8a"
 					(reference "K8")
+					(unit 1)
+				)
+				(path "/e7280eb5-1386-47ea-974c-c755a08b04e7/991e30e4-9d55-4765-b468-3531f42cf09b"
+					(reference "K4")
 					(unit 1)
 				)
 			)

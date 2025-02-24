@@ -1,0 +1,27 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J201,Conn_02x02_Odd_Even,PinHeader_2x02_P2.54mm_Vertical_SMD,211.328,-83.566,90.0,top
+J202,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,237.75,-83.5,90.0,top
+J301,Conn_02x02_Odd_Even,PinHeader_2x02_P2.54mm_Vertical_SMD,211.328,-98.566,90.0,top
+J302,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,237.75,-98.5,90.0,top
+J401,Screw_Terminal_01x04,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",204.9325,-114.75,-90.0,top
+J501,Conn_02x02_Odd_Even,PinHeader_2x02_P2.54mm_Vertical_SMD,211.328,-113.566,90.0,top
+J502,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,237.75,-113.5,90.0,top
+J601,Screw_Terminal_01x02,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",204.9325,-98.055,-90.0,top
+J701,Conn_02x02_Odd_Even,PinHeader_2x02_P2.54mm_Vertical_SMD,211.328,-128.566,90.0,top
+J702,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,237.75,-128.5,90.0,top
+K201,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,219.837,-83.058,90.0,top
+K202,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,229.433,-83.068,90.0,top
+K301,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,219.837,-98.058,90.0,top
+K302,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,229.433,-98.068,90.0,top
+K501,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,219.837,-113.058,90.0,top
+K502,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,229.433,-113.068,90.0,top
+K701,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,219.837,-128.058,90.0,top
+K702,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,229.433,-128.068,90.0,top
+R201,680R,R_0603_smalltext,226.949,-89.281,0.0,top
+R202,680R,R_0603_smalltext,217.297,-89.408,0.0,top
+R301,680R,R_0603_smalltext,226.949,-104.281,0.0,top
+R302,680R,R_0603_smalltext,217.297,-104.408,0.0,top
+R501,680R,R_0603_smalltext,226.949,-119.281,0.0,top
+R502,680R,R_0603_smalltext,217.297,-119.408,0.0,top
+R701,680R,R_0603_smalltext,226.949,-134.281,0.0,top
+R702,680R,R_0603_smalltext,217.297,-134.408,0.0,top

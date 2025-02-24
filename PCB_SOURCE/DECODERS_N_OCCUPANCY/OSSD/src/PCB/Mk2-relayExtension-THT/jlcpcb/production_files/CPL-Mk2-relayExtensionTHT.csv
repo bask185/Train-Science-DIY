@@ -1,0 +1,29 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,107.25,-64.0,-90.0,top
+J10,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,107.25,-94.0,-90.0,top
+J11,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",151.3575,-94.0,90.0,top
+J12,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.8575,-94.0175,-90.0,top
+J2,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,107.25,-49.0,-90.0,top
+J3,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",151.3575,-49.0,90.0,top
+J4,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",151.3575,-64.0,90.0,top
+J5,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.8575,-64.0175,-90.0,top
+J6,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.8575,-49.0175,-90.0,top
+J7,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,107.25,-79.0,-90.0,top
+J8,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",151.3575,-79.0,90.0,top
+J9,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.8575,-79.0175,-90.0,top
+K201,G5V-1,Relay_SPDT_Omron_G5V-1,120.1325,-64.1225,0.0,top
+K202,G5V-1,Relay_SPDT_Omron_G5V-1,128.6325,-64.1225,0.0,top
+K301,G5V-1,Relay_SPDT_Omron_G5V-1,120.1325,-49.1225,0.0,top
+K302,G5V-1,Relay_SPDT_Omron_G5V-1,128.6325,-49.1225,0.0,top
+K401,G5V-1,Relay_SPDT_Omron_G5V-1,120.1325,-79.1225,0.0,top
+K402,G5V-1,Relay_SPDT_Omron_G5V-1,128.6325,-79.1225,0.0,top
+K501,G5V-1,Relay_SPDT_Omron_G5V-1,120.1325,-94.1225,0.0,top
+K502,G5V-1,Relay_SPDT_Omron_G5V-1,128.6325,-94.1225,0.0,top
+R201,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,112.0,-63.5,90.0,top
+R202,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,114.5,-63.5,-90.0,top
+R301,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,112.0,-48.5,90.0,top
+R302,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,114.5,-48.5,-90.0,top
+R401,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,112.0,-78.5,90.0,top
+R402,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,114.5,-78.5,-90.0,top
+R501,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,112.0,-93.5,90.0,top
+R502,470R,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,114.5,-93.5,-90.0,top

@@ -1,0 +1,6 @@
+Comment,Designator,Footprint,LCSC
+IS471F,U1,IR_EXTENDER_PCB,
+Screw_Terminal_01x03,J1,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+Conn_01x04_Pin,J6,IR_EXTENDER_PCB,
+Conn_01x04_Pin,J2,IR_EXTENDER_CUTOUT,
+Conn_01x04_Pin,J3,IR_EXTENDER_CUTOUT,

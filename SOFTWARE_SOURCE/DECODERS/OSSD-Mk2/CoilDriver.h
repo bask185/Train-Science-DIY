@@ -24,20 +24,22 @@ enum types
     SINGLE_COIL_PULSED,
     SINGLE_COIL_CONTINUOUSLY,
     DOUBLE_PULSE_W_FROG,
+    DORMENT,
 } ;
 
 class CoilDriver {
 
 public:
     CoilDriver() ;
-    void    setPin( uint8, uint8 ) ; 
     void    setBuddyPins( uint8, uint8 ) ;
-    void    begin() ;
+    void    begin(uint8, uint8 ) ;
+    void    initializeCoils() ;
+    void    reset() ;
     
     uint8   update() ;
 
-    void    setCoilExt( uint16, uint8 ) ;
-    void    setCoil(    uint16, uint8 ) ;
+    uint8   setCoilExt( uint16, uint8 ) ;
+    uint8   setCoil(    uint16, uint8, uint8 ) ;
 
     void    setStates( uint8_t, uint8_t ) ;
     uint8   getState( uint8_t ) ;
@@ -45,26 +47,31 @@ public:
     uint8   getType() ;
     void    setAddress( uint16 ) ;
     uint16  getAddress() ;
-    void    setPulseTime( uint16 ) ;
+    void    setPulseTime( uint32 ) ;
     uint16  getPulseTime() ;
     void    setDutyCycle( uint8_t ) ;
     uint8_t getDutyCycle( ) ;
     uint8   isActive() ;
 
 private:
-    uint16 inputVoltage: 10 ;
-    uint8   sm         :  3 ; // obsolete
-    uint8   active     :  1 ; // obsolete
-    uint8   type       :  3 ;
-    uint8   stateA     :  1 ;
-    uint8   stateB     :  1 ;
-    uint8   pinA       :  5 ;
-    uint8   pinB       :  5 ;
-    uint32  myPulseTime: 32 ;
-    uint16  myAddress  : 16 ;
-    uint8   buddyPinA  :  5 ;  // when frog Relay are used, these pins are used to set the relays
-    uint8   buddyPinB  :  5 ;
-    uint8   myToken    :  1 ; 
+    uint16  inputVoltage    : 10 ;
+    uint8   sm              :  3 ; // obsolete
+    uint8   active          :  1 ; // obsolete
+    uint8   type            :  3 ;
+    uint8   outputStateA    :  1 ;
+    uint8   outputStateB    :  1 ;
+    uint8   state2beA       :  1 ;
+    uint8   state2beB       :  1 ;
+    uint8   oldStateA       :  1 ;
+    uint8   oldStateB       :  1 ;
+    uint8   pinA            :  5 ;
+    uint8   pinB            :  5 ;
+    uint32  myPulseTime     : 32 ;
+    uint16  myAddress       : 16 ;
+    uint8   buddyPinA       :  5 ;  // when frog Relay are used, these pins are used to set the relays
+    uint8   buddyPinB       :  5 ;
+    uint8   myToken         :  1 ; 
+    uint8   lockout         :  1 ;
 
     R_trigger startA ;
     R_trigger startB ;
@@ -72,8 +79,10 @@ private:
     F_trigger stopA ;
     F_trigger stopB ;
 
-    TON_timer timerA ;
-    TON_timer timerB ;
+    T_ON timerA ;
+    T_ON timerB ;
+
+    T_OFF lockoutTimer ;
 
     Weistra   pwmA ; // general Idea is to use the Weistra class to handle software PWM. We may need as many as 16 objects, 2 per coil.
     Weistra   pwmB ; // we might as well stuff this inside the coil class..

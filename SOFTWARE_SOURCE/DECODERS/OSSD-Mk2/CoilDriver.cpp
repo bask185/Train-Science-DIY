@@ -14,7 +14,6 @@
 // Written By: Sebastiaan Knippels. This library is public domain
 
 #include "CoilDriver.h"
-#include <EEPROM.h>
 
 // double coil pulsed
 // double coil continously
@@ -25,133 +24,209 @@
 
 CoilDriver::CoilDriver()
 {
-}
-
-void CoilDriver::setPin( uint8_t _pinA, uint8_t _pinB ) // pins are fixed
-// switchTime, lastState, type
-{
-    pinA = _pinA ;
-    pinB = _pinB ;
-
     buddyPinA = 0xFF ;
     buddyPinB = 0xFF ;
 }
 
-void CoilDriver::setBuddyPins( uint8 _A, uint8 _B )
+
+void CoilDriver::setBuddyPins( uint8 _B, uint8 _A ) // B is in front to mirror outputs deliberately
 {
     buddyPinA = _A ;
     buddyPinB = _B ;
 }
 
-void CoilDriver::begin()
+void CoilDriver::begin( uint8_t _pinA, uint8_t _pinB )
 {
+    pinA = _pinA ;
+    pinB = _pinB ;
+
+    lockoutTimer.setTime( 1000 ); // 'debounce' lockout time for repetetive DCC messages.
+
     pwmA.begin( pinA, 30, 100 ) ;
     pwmB.begin( pinB, 30, 100 ) ;
 } 
+
+void CoilDriver::initializeCoils()
+{
+    if( type == DOUBLE_COIL_PULSED
+    ||  type == SINGLE_COIL_PULSED
+    ||  type == DOUBLE_PULSE_W_FROG )
+    {
+        digitalWrite( pinA, LOW ) ;
+        digitalWrite( pinB, LOW ) ;
+    }
+
+    if( type == DOUBLE_PULSE_W_FROG )
+    {
+        digitalWrite( buddyPinA,  oldStateA ) ;
+        digitalWrite( buddyPinB,  oldStateB ) ; 
+    }
+
+    if( type == SINGLE_COIL_CONTINUOUSLY
+    ||  type == DOUBLE_COIL_CONTINUOUSLY )
+    {
+        state2beA = oldStateA ; // this will ensure that the ouput goes on
+        state2beB = oldStateB ;
+    }
+}
+
+void CoilDriver::reset()
+{
+    outputStateA = state2beA = oldStateA = 0 ;
+    outputStateB = state2beB = oldStateB = 0 ;
+
+    digitalWrite( pinA, LOW ) ;
+    digitalWrite( pinB, LOW ) ;
+
+    digitalWrite( buddyPinA,  LOW ) ;
+    digitalWrite( buddyPinB,  LOW ) ;
+}
+
 const int FREE  = 0 ; 
 const int IN_POSESSION = 1 ; 
+
 uint8 CoilDriver::update()
 {
-    static uint8_t sharedToken =  FREE ;    // shared token prevents from double pulse types from being activated simultaneously.
+    if( type == DORMENT ) return 1 ;
 
-    if( sharedToken == FREE    // if shared token is not claimed, I am a double pulse type and I am to set one of my coils, I must obtain the token.
+    if( lockoutTimer.update( lockout ) ) { lockout = 1 ; }
+    
+    static uint8_t sharedToken =  FREE ;
+
+    // a double pulsed output require posession of the shared token before the outputs may be turned on.
+    // The token prevents from more than one output being activated at the same time. This protects CDU, power supply, decoder and ensures no overcurrent is tripped.
+    // The shared token is static and shared betweeen all 8 coil objects.
+
+    if( sharedToken == FREE   
     && (type == DOUBLE_PULSE_W_FROG || type == DOUBLE_COIL_PULSED)
-    && (stateA == 1 || stateB == 1) )
+    && (state2beA == 1 || state2beB == 1) )
     {
         sharedToken   = IN_POSESSION ; 
         myToken       = IN_POSESSION ;
+
+        outputStateA = state2beA ;
+        outputStateB = state2beB ;
     }
-    if( type != DOUBLE_PULSE_W_FROG && type != DOUBLE_COIL_PULSED ) { // if I am not double pulse, I may always have my own token, and leave the shared token for others to use
-        myToken = IN_POSESSION;
-    }
 
-    if( type == DOUBLE_PULSE_W_FROG && myToken == IN_POSESSION )
-    {
-        startA.update( stateA ) ;  stopA.update( stateA ) ;
-        startB.update( stateB ) ;  stopB.update( stateB ) ;
-
-        if( startA.Q || startB.Q )  // if either state becomes true, kill the relay pins
-        {
-            digitalWrite( buddyPinA, LOW ) ;
-            digitalWrite( buddyPinB, LOW ) ;
-        }
-
-        if( stopA.Q ) digitalWrite( buddyPinA, HIGH ) ; // if a state becomes low, the pulse has finished and a relay pin may be set.
-        if( stopB.Q ) digitalWrite( buddyPinB, HIGH ) ;
+    // if I am not double pulse, I can always have my own token, and leave the shared token free for others to use. Also update ouputs at once
+    if( !(type == DOUBLE_PULSE_W_FROG) || (type == DOUBLE_COIL_PULSED) )
+    { 
+        myToken        = IN_POSESSION ;      
+        outputStateA   =    state2beA ;
+        outputStateB   =    state2beB ; 
     }
     
+    // only used for pulsed modi. Timer is examined here to check when the pulse needs to to be stopped.
+
+    timerA.update( outputStateA ) ;
+    timerB.update( outputStateB ) ;
+
     if( myToken == IN_POSESSION 
                 && 
     (   type    ==   SINGLE_COIL_PULSED
     ||  type    ==   DOUBLE_COIL_PULSED 
     ||  type    ==   DOUBLE_PULSE_W_FROG ) )
     {
-        timerA.update( stateA ) ;       // timer starts when state become 1, 
-        timerB.update( stateB ) ;
+        if( timerA.Q ) { outputStateA = 0 ; state2beA = 0 ; } // when timer expires states become 0
+        if( timerB.Q ) { outputStateB = 0 ; state2beB = 0 ; }
 
-        if( timerA.Q ) { stateA = 0 ; } // when timer expires state becomes 0
-        if( timerB.Q ) { stateB = 0 ; }
-
-        if(stateA == 0 && stateB == 0 )  
+        // a double pulsed coil must release the Token 
+        if( (type == DOUBLE_COIL_PULSED || type == DOUBLE_PULSE_W_FROG)
+        &&  outputStateA == 0 && outputStateB == 0 )  
         {  
             myToken     = FREE;  
-            sharedToken = FREE;  
+            sharedToken = FREE;
+        }
+    }
+
+    if( startA.trigger( outputStateA ) ) { pwmA.setState( 1 ) ; } // start trigger, rising flank -> set output
+    if( startB.trigger( outputStateB ) ) { pwmB.setState( 1 ) ; }
+
+    if( stopA.trigger(  outputStateA ) ) { pwmA.setState( 0 ) ; } // start trigger, falling flank -> kill output
+    if( stopB.trigger(  outputStateB ) ) { pwmB.setState( 0 ) ; }
+
+    // this part handles the buddy pins for DOUBLE_PULSE_W_FROG mode
+    if( type == DOUBLE_PULSE_W_FROG ) 
+    {
+        if( startA.Q || startB.Q )  // if either state becomes true, kill both relay pins
+        {
+            digitalWrite( buddyPinA, LOW ) ;
+            digitalWrite( buddyPinB, LOW ) ;
         }
 
-        pwmA.setState( stateA ) ; // sets actual Outputs
-        pwmB.setState( stateB ) ;
+        if( stopA.Q ) { digitalWrite( buddyPinA, HIGH ) ; } // the pulse has finished and one of the relay pins may be set.
+        if( stopB.Q ) { digitalWrite( buddyPinB, HIGH ) ; }
     }
 
     pwmA.update() ;
     pwmB.update() ;
 
-    return 1 ;
+    if( type == DOUBLE_COIL_PULSED || type == DOUBLE_PULSE_W_FROG ) // double pulse coils, may only return true when deactivated.
+    {
+        if( outputStateA == 0 && outputStateA == 0 ) return 1 ;
+        else                                         return 0 ;
+    }
+    else return 1 ;
 }
 
 
-void CoilDriver::setCoilExt( uint16 dccAddress, uint8 _aspect )
+uint8_t CoilDriver::setCoilExt( uint16 dccAddress, uint8 _aspect )
 {
-    if( type != SINGLE_COIL_PULSED ) return ;
+    if( type != SINGLE_COIL_PULSED ) return ; // and 
 
     uint16    primaryAddress = myAddress ;
     uint16  secondaryAddress = primaryAddress + 1 ;
-    uint32         pulseTime = _aspect * 1000 ; // aspect number is used for pulse length.
-    
-    if( dccAddress ==   primaryAddress ) timerA.setTime( pulseTime ) ; stateA = 1 ;
-    if( dccAddress == secondaryAddress ) timerB.setTime( pulseTime ) ; stateB = 1 ;
+    uint32         pulseTime = _aspect * 1000 ; // aspect number is used for pulse length in seconds.
+
+    if( dccAddress ==   primaryAddress ) { timerA.setTime( pulseTime ) ; outputStateA = 1 ; return 1 ; }
+    if( dccAddress == secondaryAddress ) { timerB.setTime( pulseTime ) ; outputStateB = 1 ; return 1 ; }
+
+    return 0 ;
 }
 
+// may become obsolete in favor of initialize IO.
 void CoilDriver::setStates( uint8_t A, uint8_t B )
 {
-    stateA = A ;
-    stateB = B ;
+    oldStateA = A ; // unsure at this time
+    oldStateB = B ;
 }
 
-void CoilDriver::setCoil( uint16 dccAddress, uint8 dir )
+uint8 CoilDriver::setCoil( uint16 dccAddress, uint8 dir, uint8 override )
 {
+    if( type    == DORMENT ) return 0 ;
+    if( lockout == 0 && ! override )    {  return 0 ; }
+    else                  { lockout = 0 ; }
+    
     uint16 primaryAddress   = myAddress ;
-    uint16 secondaryAddress = primaryAddress + 1 ;
+    uint16 secondaryAddress = myAddress + 1 ;
    
     switch( type )
     {
-    case SINGLE_COIL_PULSED:
+    
     case SINGLE_COIL_CONTINUOUSLY:
-        if( dccAddress ==   primaryAddress ) { stateA = dir ; }
-        if( dccAddress == secondaryAddress ) { stateB = dir ; }
-        break ;
+        oldStateA = state2beA ;
+        oldStateB = state2beB ;
+    case SINGLE_COIL_PULSED:
+        if( dccAddress ==   primaryAddress ) { state2beA = dir ; return 1 ; }
+        if( dccAddress == secondaryAddress ) { state2beB = dir ; return 1 ; }
+        return 0 ;
 
     case DOUBLE_COIL_CONTINUOUSLY:
     case DOUBLE_PULSE_W_FROG:
     case DOUBLE_COIL_PULSED:
-        if( dccAddress != primaryAddress ) break ;
-        stateA =  dir ;
-        stateB = !dir ;
-        break ;
+        if( dccAddress != primaryAddress ) break ;  
+        state2beA = !dir ; oldStateA = state2beA ;
+        state2beB =  dir ; oldStateB = state2beB ;
+
+        return 1 ;
+    
+    default:
+        return 0 ;
     }
 }
 
-uint8  CoilDriver::getState( uint8_t channel ) { if( channel == 0 ) return stateA ;
-                                                 else               return stateB ; }
+uint8  CoilDriver::getState( uint8_t channel ) { if( channel == 0 ) return oldStateA ;
+                                                 else               return oldStateB ; }
 
 void   CoilDriver::setType( uint8_t _type ) { type = _type ; }
 uint8  CoilDriver::getType() { return type ; }
@@ -159,14 +234,23 @@ uint8  CoilDriver::getType() { return type ; }
 void   CoilDriver::setAddress( uint16 _address ) { myAddress = _address ; }
 uint16 CoilDriver::getAddress() { return myAddress ; }
 
-void   CoilDriver::setPulseTime( uint16 _pulseTime ) { myPulseTime = _pulseTime ; }
+void   CoilDriver::setPulseTime( uint32 _pulseTime )
+{
+    if( type == DOUBLE_COIL_CONTINUOUSLY ) return ;
+    if( type == SINGLE_COIL_CONTINUOUSLY ) return ;
+
+    myPulseTime = _pulseTime ;
+
+    timerA.setTime( myPulseTime ) ;
+    timerB.setTime( myPulseTime ) ;
+}
 uint16 CoilDriver::getPulseTime() { return myPulseTime ; }
 
 void   CoilDriver::setDutyCycle( uint8_t dutycycle )
 {
-    pwmA.setSpeed( dutycycle ) ;
-    pwmB.setSpeed( dutycycle ) ;
+    pwmA.setSpeed( 10 * dutycycle ) ;
+    pwmB.setSpeed( 10 * dutycycle ) ;
 }
-uint8_t CoilDriver::getDutyCycle() { return pwmA.getSpeed() ; }
+uint8_t CoilDriver::getDutyCycle() { return (pwmA.getSpeed() / 10) ; }
 
 uint8  CoilDriver::isActive() { return active ; }

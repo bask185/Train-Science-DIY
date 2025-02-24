@@ -13,11 +13,11 @@
 
 #include "Trigger.h"
 
-R_trigger::R_trigger()
+R_trigger::R_trigger() // rising trigger
 {
 }
 
-uint8_t R_trigger::update( uint8 IN )
+uint8_t R_trigger::trigger( uint8 IN )
 {
     Q = 0 ;
 
@@ -30,11 +30,11 @@ uint8_t R_trigger::update( uint8 IN )
     return Q ;
 } 
 
-F_trigger::F_trigger()
+F_trigger::F_trigger() // falling trigger
 {
 }
 
-uint8_t F_trigger::update( uint8 IN )
+uint8_t F_trigger::trigger( uint8 IN )
 {
     Q = 0 ;
 
@@ -47,13 +47,14 @@ uint8_t F_trigger::update( uint8 IN )
     return Q ;
 }
 
-C_trigger::C_trigger()
+C_trigger::C_trigger() // change trigger
 {
 }
 
-uint8_t C_trigger::update( uint8 IN )
+uint8_t C_trigger::trigger( uint8 IN )
 {
     Q = 0 ;
+    
     if( IN != old )
     {
         Q = 1 ;

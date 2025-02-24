@@ -1,0 +1,10 @@
+Comment,Designator,Footprint,LCSC
+D,D8,D_DO-34_SOD68_P7.62mm_Horizontal,
+D,D1,D_DO-34_SOD68_P7.62mm_Horizontal,
+LED,D3,LED_D3.0mm,
+SW_SPDT,SW1,SW_Toggle_Blue_wSlots,
+LED,D6,LED_D3.0mm,
+10k,R2,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+10k,R1,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+Screw_Terminal_01x02,J3,"PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+Screw_Terminal_01x03,J2,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",

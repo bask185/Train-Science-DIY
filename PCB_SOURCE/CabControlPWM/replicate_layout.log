@@ -1,0 +1,266 @@
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.11.5 (main, Apr  9 2024, 02:53:56) [MSC v.1936 64 bit (AMD64)]'
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 8.0.2
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 3.0.3
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x00000144ED220430>
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with SW1001 as a reference
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'SW1001'
+Located on: ['tracks', 'MTS203_6']
+With filenames: ['tracks.kicad_sch', 'MTS203.kicad_sch']
+With sheet_id:['tracks', 'MTS203_6']
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('SW601', ['tracks', 'MTS203_2']), ('SW501', ['tracks', 'MTS203_1']), ('SW1101', ['tracks', 'MTS203_7']), ('SW701', ['tracks', 'MTS203_3']), ('SW901', ['tracks', 'MTS203_5']), ('SW801', ['tracks', 'MTS203_4']), ('SW1201', ['tracks', 'MTS203_8']), ('SW1001', ['tracks', 'MTS203_6'])]
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'MTS203_6', file:'MTS203.kicad_sch'
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['tracks', 'MTS203_1'], ['tracks', 'MTS203_2'], ['tracks', 'MTS203_3'], ['tracks', 'MTS203_4'], ['tracks', 'MTS203_5'], ['tracks', 'MTS203_7'], ['tracks', 'MTS203_8']]
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1507:Level selected: ['tracks', 'MTS203_6']
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1331:Filtering list of tracks
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(1646, 77)
+01-03 14:59:24 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1207, 77)
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'MTS203_6', file:'MTS203.kicad_sch'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['tracks', 'MTS203_1'], ['tracks', 'MTS203_2'], ['tracks', 'MTS203_3'], ['tracks', 'MTS203_4'], ['tracks', 'MTS203_5'], ['tracks', 'MTS203_7'], ['tracks', 'MTS203_8']]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 288:Starting replication of sheets: [['tracks', 'MTS203_1'], ['tracks', 'MTS203_2'], ['tracks', 'MTS203_3'], ['tracks', 'MTS203_4'], ['tracks', 'MTS203_5'], ['tracks', 'MTS203_7'], ['tracks', 'MTS203_8']]
+on level: ['tracks', 'MTS203_6']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+01-03 14:59:28 root 332:updating GUI message: 'Preparing for replication'
+01-03 14:59:28 root 337:updating GUI with: 0
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 358:Getting the list of source footprints
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 368:Getting the list of all the remaining footprints
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 375:Getting source tracks
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1331:Filtering list of tracks
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 379:Getting source zones
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 383:Getting source text items
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 387:Getting source drawing items
+01-03 14:59:28 root 332:updating GUI message: 'Replicating footprints'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 861:Replicating footprints
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_1']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:5c2da2e1-c234-4d70-8dd0-00908aad50e9
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:83a99010-8eaf-4d91-8d06-7c1ba26967f6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:93b0dfb0-1ed9-4123-b536-2e7565aaf5a4
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:71a4ee3b-8ad1-4b51-b122-1924e3f7db47
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:2030a4f6-afc9-4a97-a97a-e450916a3026
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:81f20671-5ca7-4f86-8ee4-79c19de2bb44
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:c991ddaa-6326-49fd-b424-6bc610a1268a
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:875792b4-5946-4a5c-9a5f-7f5fbe706915
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:acb0b8a2-0d4a-4284-92f9-403bf816c781
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:7f05fb5e-6270-43b0-a71e-e4fadb3b255f
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d1053fbe-641c-4792-906b-281223948cbb
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:4a66e489-b61b-4dba-801e-ad896a247cac
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_2']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:20e690d1-2ef2-4311-97cd-3da225c29e83
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:0bcb8d76-a162-4775-b947-5e56d121d953
+01-03 14:59:28 root 337:updating GUI with: 20
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:9205c1bf-2298-4ea8-9548-4b0cbcfd3d9a
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b455d36f-219c-41f0-ab4e-fec991a1d9db
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3bef19e4-36c9-419a-ad3a-66574f11e5d8
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3dec7769-201f-470c-b877-1ad424eea9dd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:f5f2ffd3-a4da-42e0-9082-e377e7b7eb09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:5618bcbf-bc15-499e-8597-75714916fb80
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b8c512d9-8223-4884-a163-7793a4ac865b
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:615e7df7-03f1-45b9-8ebd-520327f08387
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3fd22830-046d-4168-a235-57c00e727351
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:aa705bfd-69bb-4df7-8342-0cda1105cddb
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_3']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:815ea1c9-fdb2-4521-a35b-dc434a19b8c5
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b7ae8b11-1a6a-4847-a6ab-cf36b0a80b82
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:30a11367-885e-4e07-8a68-92c4f73ffd27
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:f6f7e85d-29b7-4b07-906e-5d1ad332f4aa
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b6b826ae-ba76-4d9c-b3ec-fa5126b797e2
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:63806068-b9e7-4914-a929-8c2ced3810f9
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:1405a0be-7931-4828-8e96-501ffa4452f3
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d00fd37f-cd9a-4b8b-824c-87edd004a468
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:9cc30552-fd61-4c51-be98-778205086d37
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:4fe93fd2-20ac-4660-b98d-ff11b1a1508e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:62134a41-9562-4079-afb8-55d82a03572e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:0305fea9-931b-43f2-ae79-8c994c784773
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_4']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:576e44f6-cca5-47e1-b24a-0270967280a9
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:84d8664c-869c-4851-a289-1004f6bee3b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:cf686606-e7de-443e-bddb-28218ee67813
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:8af08d52-a0eb-445d-b851-bb9d954c60a5
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3e0e8adc-0c53-4db0-b282-5ccdb845672c
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:43938f8d-f448-4dd3-83f7-0b228fd65cad
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:9abdbde2-580b-472c-8438-26bad144c870
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:eca29f8c-c2ab-459a-b5f5-9819f763d925
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:a3e2e95f-a8e0-4b89-9815-38118ef6f686
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d5d89b87-9f9f-44e7-b625-93e7cef63f34
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3ce54efa-c341-4834-8ebe-df1dbd63f969
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:299dc632-4d5c-438b-824c-585fd5edb8c4
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_5']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:2f248fee-5b65-468b-a981-c4bbb5348696
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:7c9dedda-47a0-473e-a177-ab75ad637a1e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d910e78b-918c-43d7-8c0c-fc144a4afd22
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:85aa2554-03df-45bd-8c2d-76f39ddb6eea
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d78ea2e4-70cc-41ba-8804-6e12db366a1a
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:1181e404-2179-41b7-977f-53e791ccf03c
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:930f5b04-ebed-4dd4-bd5e-b900fe6b4c25
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:5ca3d451-d02b-455d-8b13-8d3960f91b89
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:bf6b3f16-dcc8-43f2-89ae-5b2019d11364
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:a5da2086-caa7-4626-b842-c88ae92a3cd8
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:7ebcc89d-0ead-45ee-837e-ee274f3a646e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d2c8f396-5062-4f95-84e6-c3aadf009f42
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_7']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:acdd9474-b8bd-48f1-b98f-e35384dc3bb6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:1146763f-1225-4805-9a83-eccad2e687c9
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:3d68cf32-7fbf-4ba2-b4a3-1f9dcead5dac
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:8d725015-2eda-4d58-9840-b8c09fe7f740
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:caca2675-3615-4158-b2a6-fb9762a2c637
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:0f97ff53-4fc0-443d-9bf7-36f7962b5f3e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:60496333-bd26-41ff-9ffd-6da9a7824d94
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:65f747cc-dcb8-4177-b6b3-08f9733c95e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:a1dff6ef-1f16-4a54-8112-464ecd99a37c
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:ef22a592-54ba-4fa1-8388-23acd337e36d
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:5a70f348-b17f-4c48-940d-a6c22b787aeb
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:051f04c6-aabb-4109-88ef-186752471931
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['tracks', 'MTS203_8']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:bfe710e2-6ba1-427f-b1af-b3cc5b39a3e6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:bb85e8a3-dfd0-46f9-8a9a-dfd1a32f1596
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:cdeb6d48-3537-453e-a101-c6ac8191f2b7
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b3bfc6d3-5db0-4012-922d-261b56d50002
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:506a1dc4-e1cc-499d-8842-ae43937cd89e
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:077fb713-e380-4a2b-9257-9ca9638862cc
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:f75d8776-b34b-4115-844d-4952a58df2fd
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:35f1f266-2fdc-4a21-9091-4ca338cb1c8d
+01-03 14:59:28 root 337:updating GUI with: 94
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:97d1ad72-f592-408f-b46b-8230a9c02ca6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d91f672c-952f-4376-93f5-97ab9df5b211
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:4275ae18-0126-4cd0-8dd4-e9560aa9ed09
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:6e963ff6-2dd8-4280-af40-ede06ddf56f3
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17b6e6c2-763f-4aaa-83da-681811a1eb54
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:c5d87b2f-82b5-4707-9979-dd1ba031b091
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:59827064-73fb-4788-a8dc-44b034bd9dc6
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:71992aee-bb59-4dad-ba4c-57b70e8cf5da
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9cd635e0-2d14-4c89-959e-52556acd2418
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:1d9fb233-fdd0-4266-886e-6a28d0e5fe84
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9244cd58-209f-42a9-a4fa-ccb209dcaa35
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:ef460169-8e81-4f45-a786-efcfb423697d
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:8fa73aac-0691-402d-a0c1-248a3d208d46
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:bc251d31-8898-4f86-9866-a0c22fc70c6c
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:92b91f1f-835a-4a93-a92a-302bace26346
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:cb566cb7-04a2-449d-aa3f-de30ac4a8257
+01-03 14:59:28 root 332:updating GUI message: 'Replicating tracks'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1009:Replicating tracks
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_1']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_1'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('Net-(D1001-K)', 'Net-(D501-K)'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP1'), ('Net-(D1002-A)', 'Net-(D502-A)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_1/TRACK'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_2']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_2'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('Net-(D1002-A)', 'Net-(D604-A)'), ('+5V', '+5V'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_2/TRACK'), ('Net-(D1001-K)', 'Net-(D603-K)'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP2'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_3']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_3'] :[('Net-(D1002-A)', 'Net-(D702-A)'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_3/TRACK'), ('+3V3', '+3V3'), ('/tracks/INP6', '/tracks/INP3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1001-K)', 'Net-(D701-K)'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_4']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_4'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_4/TRACK'), ('+5V', '+5V'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP4'), ('Net-(D1001-K)', 'Net-(D801-K)'), ('GND', 'GND'), ('Net-(D1002-A)', 'Net-(D802-A)')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_5']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_5'] :[('Net-(D1001-K)', 'Net-(D901-K)'), ('/tracks/INP6', '/tracks/INP5'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('GND', 'GND'), ('+3V3', '+3V3'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_5/TRACK'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1002-A)', 'Net-(D902-A)')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_7']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_7'] :[('Net-(D1002-A)', 'Net-(D1102-A)'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('Net-(D1001-K)', 'Net-(D1101-K)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_7/TRACK'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP7'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['tracks', 'MTS203_8']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_8'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('+3V3', '+3V3'), ('/tracks/INP6', '/tracks/INP8'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1001-K)', 'Net-(D1201-K)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_8/TRACK'), ('GND', 'GND'), ('Net-(D1002-A)', 'Net-(D1202-A)')]
+01-03 14:59:28 root 337:updating GUI with: 86
+01-03 14:59:28 root 332:updating GUI message: 'Replicating zones'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1079:Replicating zones
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_1']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_1'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('Net-(D1001-K)', 'Net-(D501-K)'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP1'), ('Net-(D1002-A)', 'Net-(D502-A)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_1/TRACK'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_2']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_2'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('Net-(D1002-A)', 'Net-(D604-A)'), ('+5V', '+5V'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_2/TRACK'), ('Net-(D1001-K)', 'Net-(D603-K)'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP2'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_3']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_3'] :[('Net-(D1002-A)', 'Net-(D702-A)'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_3/TRACK'), ('+3V3', '+3V3'), ('/tracks/INP6', '/tracks/INP3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1001-K)', 'Net-(D701-K)'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_4']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_4'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_4/TRACK'), ('+5V', '+5V'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP4'), ('Net-(D1001-K)', 'Net-(D801-K)'), ('GND', 'GND'), ('Net-(D1002-A)', 'Net-(D802-A)')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_5']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_5'] :[('Net-(D1001-K)', 'Net-(D901-K)'), ('/tracks/INP6', '/tracks/INP5'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('GND', 'GND'), ('+3V3', '+3V3'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_5/TRACK'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1002-A)', 'Net-(D902-A)')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_7']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_7'] :[('Net-(D1002-A)', 'Net-(D1102-A)'), ('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('Net-(D1001-K)', 'Net-(D1101-K)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_7/TRACK'), ('+3V3', '+3V3'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('/tracks/INP6', '/tracks/INP7'), ('GND', 'GND')]
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['tracks', 'MTS203_8']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['tracks', 'MTS203_8'] :[('/TRACK_OUT/K1', '/TRACK_OUT/K1'), ('+5V', '+5V'), ('+3V3', '+3V3'), ('/tracks/INP6', '/tracks/INP8'), ('/TRACK_OUT/K2', '/TRACK_OUT/K2'), ('Net-(D1001-K)', 'Net-(D1201-K)'), ('/tracks/MTS203_6/TRACK', '/tracks/MTS203_8/TRACK'), ('GND', 'GND'), ('Net-(D1002-A)', 'Net-(D1202-A)')]
+01-03 14:59:28 root 332:updating GUI message: 'Replicating text'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1168:Replicating text
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_1']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_2']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_3']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_4']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_5']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_7']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['tracks', 'MTS203_8']
+01-03 14:59:28 root 332:updating GUI message: 'Replicating drawings'
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1219:Replicating drawings
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_1']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_2']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_3']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_4']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_5']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_7']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['tracks', 'MTS203_8']
+01-03 14:59:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete

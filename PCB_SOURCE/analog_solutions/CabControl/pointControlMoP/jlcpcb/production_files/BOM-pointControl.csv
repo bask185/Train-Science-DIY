@@ -1,0 +1,8 @@
+Comment,Designator,Footprint,LCSC
+D,D_POS3,LED_D3.0mm,
+LED,D_NEG2,LED_D3.0mm,
+SW_Push_DPDT,SW1,MTS_DPDT,
+10k,R2,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+10k,R1,R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,
+Screw_Terminal_01x04,J1,"PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",
+D,D1,D_DO-34_SOD68_P7.62mm_Horizontal,

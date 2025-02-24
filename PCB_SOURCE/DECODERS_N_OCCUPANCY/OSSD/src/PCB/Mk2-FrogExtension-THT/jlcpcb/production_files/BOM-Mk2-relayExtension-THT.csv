@@ -1,0 +1,13 @@
+Comment,Designator,Footprint,LCSC
+680R,"R201,R202,R301,R302,R501,R502,R701,R702",R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,C17798
+Screw_Terminal_01x03,"J202,J302,J502,J702",connector_3.50mm_3P horizontal_MALE,C6394074
+Conn_02x02_Odd_Even,"J201,J301,J501,J701",PinHeader_2x02_P2.54mm_Vertical,C919361
+Screw_Terminal_01x06,J401,"PhoenixContact_MC_1,5_6-G-3.5_1x06_P3.50mm_Horizontal",
+G5V-1,K8,Relay_SPDT_Omron_G5V-1,
+G5V-1,K7,Relay_SPDT_Omron_G5V-1,
+G5V-1,K6,Relay_SPDT_Omron_G5V-1,
+G5V-1,K5,Relay_SPDT_Omron_G5V-1,
+G5V-1,K4,Relay_SPDT_Omron_G5V-1,
+G5V-1,K3,Relay_SPDT_Omron_G5V-1,
+G5V-1,K2,Relay_SPDT_Omron_G5V-1,
+G5V-1,K1,Relay_SPDT_Omron_G5V-1,
