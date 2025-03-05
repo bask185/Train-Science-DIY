@@ -2,6 +2,7 @@
 #include "src/NmraDcc.h"
 #include "config.h"
 #include "CoilDriver.h"
+#include "pwm.h"
 #include "src/debounceClass.h"
 #include "src/Trigger.h"
 #include "src/Timers.h"
@@ -81,7 +82,11 @@ struct
     uint16          dccExt :  1 ; 
     uint16   locoFunctions :  2 ; // enable the usage of locomotive function. this can be 1 address with 16 functions or 4 addresses with 4 functions
     uint16   maxCduVoltage : 12 ;
-
+    uint16          hasCdu :  1 ; // needed? or autodetect? In essence with constant power supply, the software should ever switch.
+    uint16          rcn213 :  1 ; // address offset for multimaus icw old roco boosters. Addresses are to be substracted with 4 when option is OFF.
+    // I used double addresses so any system can turn on or off this setting. Address 1001 and 997 both turn it ON
+    // addresses 1000 and 996 turn it OFF.
+    // the default = ON
 } settings;
 
 struct // these struct is only used to save and load critical variable to and fom EEPROM
@@ -98,7 +103,6 @@ const int EE_COILS = 0 ;
 const int EE_SETTINGS = sizeof( coilSettings ) ;
 
 void saveCoils()
-
 {
     for( int i = 0 ; i < nCoils ; i ++ )
     {
@@ -140,7 +144,6 @@ uint32                  lockoutTime ;
 
 uint8                   state = idle ;
 uint32                  beginTime ;
-uint8                   index ;
 volatile uint16         receivedAddress ;
 volatile uint8          newAddressSet ;
 volatile static uint32  lastTime ;
@@ -221,7 +224,7 @@ void updateCduVoltage()
     if( timer.update(1) )
     {    
         uint16 voltage = analogRead( coilVoltagePin) ;
-        if( voltage > settings.maxCduVoltage )
+        if( voltage > settings.maxCduVoltage + 3 )
         {
             settings.maxCduVoltage = voltage ;
             EEPROM.put( EE_SETTINGS, settings ) ;
@@ -261,6 +264,7 @@ void setup()
         settings.locoFunctions   = LOCO_FUNCTIONS_OFF ;
         settings.uniqueAddresses = 0 ;
         settings.maxCduVoltage   = 0 ;
+        settings.rcn213          = 1 ;
         EEPROM.put( EE_SETTINGS, settings ) ;
         
         for( int i = 0 ; i < nCoils ; i ++ )
@@ -291,6 +295,8 @@ void loop()
     determineLedPattern(); 
     blueLed.update();
     yellowLed.update();
+    
+    updatePwm() ;
 
     dcc.process() ;
 
@@ -298,23 +304,24 @@ void loop()
 
     config() ;
 
-    REPEAT_MS( 1 )
-    {
-        int sample = analogRead( currentSensePin ) ;
-        if( sample >= ADC_max )                 // if shortcircuit...
-        {
-            for( int i = 0 ; i < nGpio ; i ++ )
-            {
-                digitalWrite( GPIO[i], LOW ) ;  // kill all outputs
-            }
+    // REPEAT_MS( 1 )
+    // {
+    //     int sample = analogRead( currentSensePin ) ;
+    //     if( sample >= ADC_max )                 // if shortcircuit...
+    //     {
+    //         for( int i = 0 ; i < nGpio ; i ++ )
+    //         {
+    //             digitalWrite( GPIO[i], LOW ) ;  // kill all outputs
+    //         }
 
-            blueLed.setEventBleeps(5) ;            // go flash LED's
-            yellowLed.setEventBleeps(5) ;
+    //         blueLed.setEventBleeps(5) ;            // go flash LED's
+    //         yellowLed.setEventBleeps(5) ;
 
-            //runMode = 0 ;                       // set lockout time of atleast 5 seconds.
-            lockoutTime = millis() ;
-        }
-    }
+    //         runMode = 0 ;                       // set lockout time of atleast 5 seconds.
+    //         lockoutTime = millis() ;
+    //     }
+    // }
+    // END_REPEAT
     
 
     if( runMode == 0 && (millis() - lockoutTime) >= 5000 ) { runMode = 1 ; } // after 5 seconds reinstate outputs.
@@ -326,16 +333,15 @@ void loop()
         if( coil[index].update() )
         {   
             int voltage = analogRead( coilVoltagePin ) ;
-            if( voltage >= (settings.maxCduVoltage * 9 / 10) )
+            //if( voltage >= (settings.maxCduVoltage * 9 / 10) )
             {
                 iterate( index, nCoils ) ; // iterate to next coil if conditions allow for it.
             }
         }
     }
-    END_REPEAT
 
     saveStates() ;
-    updateCduVoltage() ;
+   // updateCduVoltage() ;
 }
 
 
@@ -445,7 +451,7 @@ void config()
     case setIndex4Address:
         if( addressReceived() )
         {
-            coilIndex = constrain( receivedAddress-1, 0, 7 ) ;    
+            coilIndex = constrain( receivedAddress, 1, 8 ) - 1 ;    
             state = setUniqueAddress ;
         }
         break ;
@@ -465,7 +471,7 @@ void config()
     case setIndex4Type:
         if( addressReceived() )
         {
-            coilIndex = constrain( receivedAddress-1, 0, 7 ) ;
+            coilIndex = constrain( receivedAddress, 1, 8 ) - 1 ;
             state = setCoilType ;
         }
         break ;
@@ -475,7 +481,7 @@ void config()
         {
             uint8 type = constrain( receivedAddress, 1, 5 ) - 1 ;
             coil[coilIndex].setType( type ) ;
-            if( index < 4
+            if( coilIndex < 4
             &&  type == DOUBLE_PULSE_W_FROG )  // this type require the one on the other side to be disabled.
             {
                 coil[7-coilIndex].setType( DORMENT ) ;
@@ -503,8 +509,7 @@ void config()
     case setPulseTime:
         if( addressReceived() )
         {
-            receivedAddress = constrain( receivedAddress, 1, 500 ) ; // constrain time to from 30ms to 5s 
-            
+            receivedAddress = constrain( receivedAddress, 1, 500 ) ;
 
             if( coilIndex < 8 )                      
             {
@@ -513,8 +518,8 @@ void config()
             }
             else for( int i = 0 ; i < nCoils ; i ++ ) // index 8 -> adjust all coils
             {
-                if( coil[i].getType() == SINGLE_COIL_PULSED ) coil[coilIndex].setPulseTime( receivedAddress * 1000 ) ;
-                else                                          coil[coilIndex].setPulseTime( receivedAddress *   10 ) ;
+                if( coil[i].getType() == SINGLE_COIL_PULSED ) coil[i].setPulseTime( receivedAddress * 1000 ) ;
+                else                                          coil[i].setPulseTime( receivedAddress *   10 ) ;
             }
 
             saveCoils() ;
@@ -527,7 +532,7 @@ void config()
     case setIndex4dutyCycle:
         if( addressReceived() )
         {
-            coilIndex = constrain( receivedAddress, 1, 9 ) - 1 ; // note with address 9 we can set all coils at same frequency at once.
+            coilIndex = constrain( receivedAddress, 1, 9 ) - 1 ; // note with address 9 we can set all coils at same dutycycle at once.
             state = setDutyCycle_ ;
         }
         break ;
@@ -609,9 +614,12 @@ void config()
             if( receivedAddress == 41 ) { settings.locoFunctions =         EIGHT_BALL ; } // 16 points per address (for single mode, use F1 - F16
             if( receivedAddress == 42 ) { settings.locoFunctions =     FANTASTIC_FOUR ; } //  4 points per address (2 address per decoder) (special support for locomaus)
 
-            // need CDU? cdu does happen to work out of the box so, we kinda need no setting
-            // if( receivedAddress == 50 ) { settings.retainState  = 0 ; } // unsure if needed anymore..
-            // if( receivedAddress == 51 ) { settings.retainState  = 1 ; }
+            // need CDU as option? cdu does happen to work out of the box so, we kinda need no setting
+            // if( receivedAddress == 50 ) { settings.hasCdu  = 0 ; } // unsure if needed anymore..
+            // if( receivedAddress == 51 ) { settings.hasCdu  = 1 ; }
+            
+            if( receivedAddress == 1000 || receivedAddress == 996 ) { settings.rcn213 = 0 ; }
+            if( receivedAddress == 1001 || receivedAddress == 997 ) { settings.rcn213 = 1 ; }
 
             squashAddresses() ;
             saveCoils() ; 
@@ -640,6 +648,11 @@ void notifyDccSigOutputState( uint16_t address, uint8_t aspect ) // incomming DC
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output ) // incomming DCC commands
 {
+    if( settings.rcn213 == 0 )
+    {
+        address = constrain( address - 4, 1, 2048 ) ;
+    }
+
     if( millis() - lastTime >= 500 ) // create lockout time to prevent processing package more than 1x (used for config menu only)
     {   lastTime = millis() ;
 
@@ -685,14 +698,14 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
         bitOffset = (Addr - dccBaseAddress) * 4 ;
     }
 
-    if( settings.locoFunctions == EIGHT_BALL ) // 1 loco address 16 functions max
+    if( settings.locoFunctions == EIGHT_BALL ) // 1 loco address 16 functions max (if single outputs are used.
     {
         if (Addr != dccBaseAddress) return ;
 
         if(      FuncGrp ==   FN_0_4 ) { bitOffset =  0 ; }
         else if( FuncGrp ==   FN_5_8 ) { bitOffset =  4 ; }
         else if( FuncGrp ==  FN_9_12 ) { bitOffset =  8 ; }
-        else if( FuncGrp == FN_13_20 ) { bitOffset = 12 ; /*FuncState >>= 4 ;*/ }
+        else if( FuncGrp == FN_13_20 ) { bitOffset = 12 ; }
         else return ;
     }
 
@@ -706,13 +719,13 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
     for( int i = 0 ; i < maxFunctions+1 ; i++ ) // loop through all changedBits to set the coil.
     {
         uint16_t andMask = 1 << i ;
-        if ((changedBits & andMask) == 0) continue ;
+        if(( changedBits & andMask ) == 0 ) continue ;
 
         uint8_t state = (newState >> i) & 0x1 ;
 
-        uint16_t dccAddress = dccBaseAddress + i ; // calculate the appriopitate DCC address to be used in setCoil. 
+        uint16_t dccAddress = dccBaseAddress + i ; // calculate the appropiatate DCC address to be used in setCoil. 
 
-        for (int j = 0 ; j < nCoils ; j++ )
+        for( int j = 0 ; j < nCoils ; j++ )
         {
             coil[j].setCoil( dccAddress, state, 1 ) ; // and feed the changed state of this address into all coils, override lockout time active
         }

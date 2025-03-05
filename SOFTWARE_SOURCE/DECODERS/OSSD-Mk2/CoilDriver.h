@@ -1,19 +1,8 @@
-/*
- * Copyright (C) 2024 Sebastiaan Knippels, Train-Science
- *
- * To the extent possible under law, the person who associated CC0 with this work
- * has waived all copyright and related or neighboring rights to this work.
- *
- * This work is published from: The Netherlands
- *
- * You can copy, modify, distribute and perform the work, even for commercial purposes,
- * all without asking permission. See the full license for details at:
- * https://creativecommons.org/publicdomain/zero/1.0/
- */
+#ifndef COILDRIVER_H
+#define COILDRIVER_H
 
 #include <Arduino.h>
 #include "src/macros.h"
-#include "Weistra.h"
 #include "src/Trigger.h"
 #include "src/Timers.h"
 
@@ -32,7 +21,7 @@ class CoilDriver {
 public:
     CoilDriver() ;
     void    setBuddyPins( uint8, uint8 ) ;
-    void    begin(uint8, uint8 ) ;
+    void    begin( uint8, uint8 ) ;
     void    initializeCoils() ;
     void    reset() ;
     
@@ -66,6 +55,8 @@ private:
     uint8   oldStateB       :  1 ;
     uint8   pinA            :  5 ;
     uint8   pinB            :  5 ;
+    uint8   indexA          :  5 ; // Index in pwmPins[]
+    uint8   indexB          :  5 ; // Index in pwmPins[]
     uint32  myPulseTime     : 32 ;
     uint16  myAddress       : 16 ;
     uint8   buddyPinA       :  5 ;  // when frog Relay are used, these pins are used to set the relays
@@ -84,6 +75,7 @@ private:
 
     T_OFF lockoutTimer ;
 
-    Weistra   pwmA ; // general Idea is to use the Weistra class to handle software PWM. We may need as many as 16 objects, 2 per coil.
-    Weistra   pwmB ; // we might as well stuff this inside the coil class..
+    uint8 getPwmIndex( uint8 pinNumber ) ;
 } ;
+
+#endif
