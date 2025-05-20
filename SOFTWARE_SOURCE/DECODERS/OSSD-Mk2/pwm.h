@@ -1,21 +1,23 @@
-#ifndef PWM_H
-#define PWM_H
+#ifndef PWM_CONTROLLER_H
+#define PWM_CONTROLLER_H
 
 #include <Arduino.h>
+#include "src/macros.h"
 
-// Structure to hold PWM pin information
-struct PwmPin {
-    uint8_t pinNumber;      // The physical pin number
-    volatile uint8_t *portx_p; // Pointer to the corresponding PORT register
-    uint8_t pin;           // Bitmask for the pin
-    uint8_t state;         // Current state (0 = OFF, 1 = ON)
-    uint8_t dutycycle;     // Duty cycle percentage (0-100)
-};
+#define MAX_PWM_PINS 16  // Maximum number of software PWM pins
 
-extern PwmPin pwmPins[16]; // Array of 16 PWM pins
+const int INACTIVE = 255 ;
+struct PwmPin
+{
+    volatile uint8_t    *portReg ;          // Pointer to port register
+    uint8_t             bitmask ;           // Bitmask for pin
+    uint8_t             dutyCycle ;         // Duty cycle (0-10)
+    uint8_t             pin = INACTIVE ;    // Pin number (255 = inactive)
+} ;
 
-void addPin(uint8_t idx);
-uint8_t getPwmIndex(uint8_t pinNumber);
-void updatePwm();
 
-#endif // PWM_H
+void updatePwm();  
+void subscribePwm(   uint8_t digitalPin, uint8_t dutyCycle ) ;
+void unsubscribePwm( uint8_t digitalPin ) ;
+
+#endif // PWM_CONTROLLER_H

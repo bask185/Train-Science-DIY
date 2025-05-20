@@ -36,8 +36,8 @@ private:
     uint32_t lastTime ;
     bool     eventActive;
     uint8_t  eventBleeps;
-    const uint32_t interval = 120 ;
-    const uint8_t nCycles   =  16 ; // was 20
+    const uint32_t interval = 150 ; // was 120
+    const uint8_t nCycles   =  20 ; // was 16
 
 };
 

@@ -458,10 +458,10 @@ DCC_PROCESSOR_STATE DccProcState ;
 
         #ifndef SYNC_ALWAYS
     case WAIT_START_BIT_FULL:
-        // wait for startbit without level checking
+        // wait for riseBit without level checking
         if (!DccBitVal)
         {
-            // we got the startbit
+            // we got the riseBit
             CLR_TP2;
             CLR_TP1;
             DccRx.State = WAIT_DATA ;
@@ -492,7 +492,7 @@ DCC_PROCESSOR_STATE DccProcState ;
             }
             else
             {
-                // was "0" half bit, maybe the startbit
+                // was "0" half bit, maybe the riseBit
                 halfBit = 4;
             }
             break;
@@ -547,7 +547,7 @@ DCC_PROCESSOR_STATE DccProcState ;
             }
             else
             {
-                // we got two '0' halfbits -> it's the startbit
+                // we got two '0' halfbits -> it's the riseBit
                 // but sync is NOT ok, change IRQ edge.
                 CLR_TP2;
                 CLR_TP1;
@@ -582,7 +582,7 @@ DCC_PROCESSOR_STATE DccProcState ;
             //CLR_TP4;
             break;
         case 4: // previous (first) halfbit was 0
-            // if this halfbit is 0 too, we got the startbit
+            // if this halfbit is 0 too, we got the riseBit
             if (DccBitVal)
             {
                 // second halfbit is 1 -> unknown protokoll
@@ -596,7 +596,7 @@ DCC_PROCESSOR_STATE DccProcState ;
             }
             else
             {
-                // we got the startbit
+                // we got the riseBit
                 CLR_TP2;
                 CLR_TP1;
                 DccRx.State = WAIT_DATA ;

@@ -8,6 +8,13 @@ const int GPIO[] =
     A3, A2, A1, A0, // GPIO13-GPIO16
 } ;
 
+const int DEF_SINGLE_PULSE_TIME     = 5000 ;
+const int DEF_DOUBLE_PULSE_TIME     =   50 ;
+const int DEF_DUTYCYCLE             =   10 ;
+const int LOCKOUT_TIME              =  500 ;
+const int nDccAddresses             = 2048 ;
+
+
 // const int GPIO[] = // BAD ARRAY
 // {
 //     9,  2,  5,  6, // GPIO01-GPIO04
@@ -18,8 +25,8 @@ const int GPIO[] =
 
 const int nGpio         = 16 ;
 const int configPin     =  8 ;
-const int blueLedPin    =  4 ; 
-const int yellowLedPin  = 13 ; // 13 GOOD     BAD 14
+const int rightLedPin   =  4 ; 
+const int leftLedPin    = 13 ;
 
 const int currentSensePin = A6 ;
 const int coilVoltagePin  = A7 ;

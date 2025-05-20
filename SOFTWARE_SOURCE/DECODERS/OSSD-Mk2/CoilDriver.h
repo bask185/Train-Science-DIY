@@ -16,6 +16,8 @@ enum types
     DORMENT,
 } ;
 
+const int   nTypes    = 5 ;
+
 class CoilDriver {
 
 public:
@@ -26,6 +28,7 @@ public:
     void    reset() ;
     
     uint8   update() ;
+    void    turn( uint8 ) ;
 
     uint8   setCoilExt( uint16, uint8 ) ;
     uint8   setCoil(    uint16, uint8, uint8 ) ;
@@ -40,7 +43,6 @@ public:
     uint16  getPulseTime() ;
     void    setDutyCycle( uint8_t ) ;
     uint8_t getDutyCycle( ) ;
-    uint8   isActive() ;
 
 private:
     uint16  inputVoltage    : 10 ;
@@ -53,28 +55,30 @@ private:
     uint8   state2beB       :  1 ;
     uint8   oldStateA       :  1 ;
     uint8   oldStateB       :  1 ;
-    uint8   pinA            :  5 ;
-    uint8   pinB            :  5 ;
-    uint8   indexA          :  5 ; // Index in pwmPins[]
-    uint8   indexB          :  5 ; // Index in pwmPins[]
+    uint8   indexA          :  5 ;
+    uint8   indexB          :  5 ;
     uint32  myPulseTime     : 32 ;
     uint16  myAddress       : 16 ;
-    uint8   buddyPinA       :  5 ;  // when frog Relay are used, these pins are used to set the relays
+    uint8   pinA            :  5 ; 
+    uint8   pinB            :  5 ;
+    uint8   buddyPinA       :  5 ; 
     uint8   buddyPinB       :  5 ;
     uint8   myToken         :  1 ; 
     uint8   lockout         :  1 ;
+    uint8   dutycycle       :  4 ;
 
-    R_trigger startA ;
-    R_trigger startB ;
-
-    F_trigger stopA ;
-    F_trigger stopB ;
-
+    R_trigger riseA ;
+    R_trigger riseB ;
+    
+    F_trigger fallA ;
+    F_trigger fallB ;
+    
     T_ON timerA ;
     T_ON timerB ;
-
+    
     T_OFF lockoutTimer ;
-
+    
+    void  turn( uint8, uint8 ) ;
     uint8 getPwmIndex( uint8 pinNumber ) ;
 } ;
 
