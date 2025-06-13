@@ -1,0 +1,9 @@
+Comment,Designator,Footprint,LCSC
+680R,"R10,R11,R12,R9",R_0603_smalltext,C17798
+1N4148WS,"D1,D2,D3,D4,D5,D6,D7,D8",D_SOD-323,C2128
+NPN_TOR,"Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8",SOT-23,C2145
+G6KU-2,"K1,K2,K3,K4",Relay_DPDT_Omron_G6K-2F-Y,C2153173
+Screw_Terminal_01x03,"J11,J3,J4,J8","PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",C22380440
+22k,"R1,R2,R3,R4,R5,R6,R7,R8",R_0603_smalltext,C31850
+Screw_Terminal_01x03,"J1,J10,J2,J7",connector_3.50mm_3P horizontal_MALE,C6394074
+Screw_Terminal_01x03,"J12,J5,J6,J9","PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",C880555

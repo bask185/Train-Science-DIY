@@ -1,0 +1,29 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+J1,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,106.75,-63.5,-90.0,top
+J10,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,106.75,-93.5,-90.0,top
+J11,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",150.8575,-93.5,90.0,top
+J12,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.3575,-93.5175,-90.0,top
+J2,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,106.75,-48.5,-90.0,top
+J3,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",150.8575,-48.5,90.0,top
+J4,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",150.8575,-63.5,90.0,top
+J5,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.3575,-63.5175,-90.0,top
+J6,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.3575,-48.5175,-90.0,top
+J7,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,106.75,-78.5,-90.0,top
+J8,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",150.8575,-78.5,90.0,top
+J9,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",143.3575,-78.5175,-90.0,top
+K1,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,127.5,-63.5,90.0,top
+K2,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,117.0,-63.5,270.0,top
+K3,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,127.5,-48.5,90.0,top
+K4,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,117.0,-48.5,270.0,top
+K5,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,127.5,-78.5,90.0,top
+K6,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,117.0,-78.5,270.0,top
+K7,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,127.5,-93.5,90.0,top
+K8,G6K-2F-Y-TR DC12,Relay_DPDT_Omron_G6K-2F-Y,117.0,-93.5,270.0,top
+R1,680R,R_0603_smalltext,110.998,-65.3015,90.0,top
+R2,680R,R_0603_smalltext,110.998,-61.722,-90.0,top
+R3,680R,R_0603_smalltext,110.998,-50.3015,90.0,top
+R4,680R,R_0603_smalltext,110.998,-46.722,-90.0,top
+R5,680R,R_0603_smalltext,110.998,-80.3015,90.0,top
+R6,680R,R_0603_smalltext,110.998,-76.722,-90.0,top
+R7,680R,R_0603_smalltext,110.998,-95.3015,90.0,top
+R8,680R,R_0603_smalltext,110.998,-91.722,-90.0,top

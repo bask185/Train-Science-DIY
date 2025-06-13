@@ -1,0 +1,45 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+D1,1N4148WS,D_SOD-323,95.074,-75.039,180.0,top
+D2,1N4148WS,D_SOD-323,95.074,-80.5,180.0,top
+D3,1N4148WS,D_SOD-323,95.074,-90.039,180.0,top
+D4,1N4148WS,D_SOD-323,95.074,-95.5,180.0,top
+D5,1N4148WS,D_SOD-323,95.074,-105.039,180.0,top
+D6,1N4148WS,D_SOD-323,95.074,-110.5,180.0,top
+D7,1N4148WS,D_SOD-323,95.074,-120.039,180.0,top
+D8,1N4148WS,D_SOD-323,95.074,-125.5,180.0,top
+J1,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,85.75,-93.5,-90.0,top
+J10,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,85.75,-123.5,-90.0,top
+J11,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",120.943,-123.445,90.0,top
+J12,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",113.3575,-123.5175,-90.0,top
+J2,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,85.75,-78.5,-90.0,top
+J3,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",121.0,-78.445,90.0,top
+J4,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",120.943,-93.5,90.0,top
+J5,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",113.3575,-78.5175,-90.0,top
+J6,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",113.3575,-93.5175,-90.0,top
+J7,Screw_Terminal_01x03,connector_3.50mm_3P horizontal_MALE,85.75,-108.5,-90.0,top
+J8,Screw_Terminal_01x03,"PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal",120.943,-108.445,90.0,top
+J9,Screw_Terminal_01x03,"PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",113.3575,-108.5175,-90.0,top
+K1,G6KU-2,Relay_DPDT_Omron_G6K-2F-Y,102.5375,-78.587,0.0,top
+K2,G6KU-2,Relay_DPDT_Omron_G6K-2F-Y,102.5375,-93.587,0.0,top
+K3,G6KU-2,Relay_DPDT_Omron_G6K-2F-Y,102.5375,-108.587,0.0,top
+K4,G6KU-2,Relay_DPDT_Omron_G6K-2F-Y,102.5375,-123.587,0.0,top
+Q1,NPN_TOR,SOT-23,91.264,-76.66,0.0,top
+Q2,NPN_TOR,SOT-23,91.264,-80.597,0.0,top
+Q3,NPN_TOR,SOT-23,91.264,-91.66,0.0,top
+Q4,NPN_TOR,SOT-23,91.264,-95.597,0.0,top
+Q5,NPN_TOR,SOT-23,91.264,-106.66,0.0,top
+Q6,NPN_TOR,SOT-23,91.264,-110.597,0.0,top
+Q7,NPN_TOR,SOT-23,91.264,-121.66,0.0,top
+Q8,NPN_TOR,SOT-23,91.264,-125.597,0.0,top
+R1,22k,R_0603_smalltext,95.201,-76.944,0.0,top
+R10,680R,R_0603_smalltext,95.0875,-97.5,0.0,top
+R11,680R,R_0603_smalltext,95.0875,-112.5,0.0,top
+R12,680R,R_0603_smalltext,95.0875,-127.5,0.0,top
+R2,22k,R_0603_smalltext,95.201,-78.595,0.0,top
+R3,22k,R_0603_smalltext,95.201,-91.944,0.0,top
+R4,22k,R_0603_smalltext,95.201,-93.595,0.0,top
+R5,22k,R_0603_smalltext,95.201,-106.944,0.0,top
+R6,22k,R_0603_smalltext,95.201,-108.595,0.0,top
+R7,22k,R_0603_smalltext,95.201,-121.944,0.0,top
+R8,22k,R_0603_smalltext,95.201,-123.595,0.0,top
+R9,680R,R_0603_smalltext,95.0875,-82.5,0.0,top
