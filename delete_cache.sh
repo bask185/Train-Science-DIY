@@ -15,4 +15,7 @@ find . -type f \( \
   -o -name "*.gbr" \
   -o -name "*.drl" \
   -o -name "*.lck" \
+  -o -name "*.kicad_pcb-bak" \
+  -o -name "*.ini" \
+  -o -name "*.log" \
 \) -exec rm -v {} +
