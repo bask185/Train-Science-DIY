@@ -159,6 +159,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -171,6 +172,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -183,6 +185,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -517,6 +520,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -529,6 +533,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -541,6 +546,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1132,6 +1138,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1144,6 +1151,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1156,6 +1164,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1490,6 +1499,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1502,6 +1512,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1514,6 +1525,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1569,7 +1581,7 @@
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "1da67a74-a27f-414d-8c78-9421ee4fb54e")
+			(uuid "a5f9874f-6ae5-4f3c-a925-377e5995e3a6")
 			(effects
 				(font
 					(size 1 1)
@@ -1580,7 +1592,7 @@
 		(property "Value" "MountingHole_3.2mm_M3"
 			(at 0 4.2 0)
 			(layer "F.Fab")
-			(uuid "18a376a3-9017-43a6-b87a-da25d4154c0e")
+			(uuid "4d99accd-cb12-4444-bd84-fc07ea95c2d8")
 			(effects
 				(font
 					(size 1 1)
@@ -1597,6 +1609,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1609,6 +1622,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1621,6 +1635,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1634,7 +1649,7 @@
 			)
 			(fill none)
 			(layer "Cmts.User")
-			(uuid "2706df33-ddb2-42ef-a175-d82c508405e1")
+			(uuid "9428de4a-674e-4c41-a35d-bd2ae91bdbb9")
 		)
 		(fp_circle
 			(center 0 0)
@@ -1645,12 +1660,12 @@
 			)
 			(fill none)
 			(layer "F.CrtYd")
-			(uuid "081aacb1-30dd-440f-8703-d67edf58bfdc")
+			(uuid "91f433d8-bce7-4474-81bf-91112e1073b8")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "915c9d81-01bf-4f53-93bb-ff0aa6960894")
+			(uuid "78dfe193-bd0d-410d-9fd3-b7f2ef1463f6")
 			(effects
 				(font
 					(size 1 1)
@@ -1663,7 +1678,7 @@
 			(size 3.2 3.2)
 			(drill 3.2)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "abf95cc9-d0bc-4677-b92d-f64ddc7504bb")
+			(uuid "7c471371-5d0c-4ad4-ba16-14d6114939ec")
 		)
 	)
 	(footprint "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
@@ -1704,6 +1719,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1716,6 +1732,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1728,6 +1745,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2034,7 +2052,7 @@
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "1da67a74-a27f-414d-8c78-9421ee4fb54e")
+			(uuid "aeebe635-3faf-41ea-95f6-993837c5d84d")
 			(effects
 				(font
 					(size 1 1)
@@ -2045,7 +2063,7 @@
 		(property "Value" "MountingHole_3.2mm_M3"
 			(at 0 4.2 0)
 			(layer "F.Fab")
-			(uuid "18a376a3-9017-43a6-b87a-da25d4154c0e")
+			(uuid "8ee9ee58-1450-452a-a9ef-0d886fa4118e")
 			(effects
 				(font
 					(size 1 1)
@@ -2062,6 +2080,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2074,6 +2093,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2086,6 +2106,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2099,7 +2120,7 @@
 			)
 			(fill none)
 			(layer "Cmts.User")
-			(uuid "2706df33-ddb2-42ef-a175-d82c508405e1")
+			(uuid "bd7dc31d-3962-49da-9791-7f7b21850f36")
 		)
 		(fp_circle
 			(center 0 0)
@@ -2110,12 +2131,12 @@
 			)
 			(fill none)
 			(layer "F.CrtYd")
-			(uuid "081aacb1-30dd-440f-8703-d67edf58bfdc")
+			(uuid "4e82c7eb-f2d7-486f-9c33-31a135c4273b")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "915c9d81-01bf-4f53-93bb-ff0aa6960894")
+			(uuid "67f9a1ba-c039-4106-aa28-844b597d6c0c")
 			(effects
 				(font
 					(size 1 1)
@@ -2128,7 +2149,7 @@
 			(size 3.2 3.2)
 			(drill 3.2)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "abf95cc9-d0bc-4677-b92d-f64ddc7504bb")
+			(uuid "2514a5dd-2b32-48bb-967d-4ac202906fd5")
 		)
 	)
 	(footprint "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal"
@@ -2169,6 +2190,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2181,6 +2203,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2193,6 +2216,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2499,7 +2523,7 @@
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "1da67a74-a27f-414d-8c78-9421ee4fb54e")
+			(uuid "3fc1ec33-7c84-4701-9ceb-7c86f0bcc59f")
 			(effects
 				(font
 					(size 1 1)
@@ -2510,7 +2534,7 @@
 		(property "Value" "MountingHole_3.2mm_M3"
 			(at 0 4.2 0)
 			(layer "F.Fab")
-			(uuid "18a376a3-9017-43a6-b87a-da25d4154c0e")
+			(uuid "64139d07-53a1-4b0b-b21e-2142c094a283")
 			(effects
 				(font
 					(size 1 1)
@@ -2527,6 +2551,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2539,6 +2564,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2551,6 +2577,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2564,7 +2591,7 @@
 			)
 			(fill none)
 			(layer "Cmts.User")
-			(uuid "2706df33-ddb2-42ef-a175-d82c508405e1")
+			(uuid "d8b043e2-23f7-4579-ad94-e158a9266748")
 		)
 		(fp_circle
 			(center 0 0)
@@ -2575,12 +2602,12 @@
 			)
 			(fill none)
 			(layer "F.CrtYd")
-			(uuid "081aacb1-30dd-440f-8703-d67edf58bfdc")
+			(uuid "24b57fec-c8d5-450c-beed-58c4d1ef7634")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "915c9d81-01bf-4f53-93bb-ff0aa6960894")
+			(uuid "143ddc39-d87c-49c6-a7a6-5e6738bba92a")
 			(effects
 				(font
 					(size 1 1)
@@ -2593,7 +2620,7 @@
 			(size 3.2 3.2)
 			(drill 3.2)
 			(layers "*.Cu" "*.Mask")
-			(uuid "abf95cc9-d0bc-4677-b92d-f64ddc7504bb")
+			(uuid "5c7ab319-0546-4a3c-a410-62662410e77c")
 		)
 	)
 	(footprint "custom_kicad_lib_sk:Train-Science logo small"
@@ -2635,6 +2662,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -2648,6 +2676,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -2661,6 +2690,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)

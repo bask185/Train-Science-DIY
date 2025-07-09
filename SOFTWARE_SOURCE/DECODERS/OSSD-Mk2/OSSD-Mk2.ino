@@ -661,9 +661,7 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
         receivedAddress = address ;
     }
 
-    if( settings.locoFunctions != LOCO_FUNCTIONS_OFF ) return ; // loco functions are used, disable conventional addresses
-    if(  state                 != idle )               return ; // config menu is run, dont set output
-    if( output                 ==    0 )               return ; // ancient DCC flag is a dont care
+
 
     if( direction > 0 ) direction = 1 ; 
 

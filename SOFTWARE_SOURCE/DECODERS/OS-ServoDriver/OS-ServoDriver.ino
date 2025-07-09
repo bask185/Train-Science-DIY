@@ -8,15 +8,11 @@
 enum
 {
     initialize,
-    F1_off,
-    F2_off,
-    speed_zero,
-
     configureServo,
 } ;
 
 uint8           index ;
-const uint16    eeAddress = 0x50 ;
+const uint16    eeAddress = 1000 ;
 uint16          myAddress ;
 uint8           waiting4address ;
 uint8           state = initialize ;
@@ -31,14 +27,14 @@ const int defaultMax = 100 ;
 
 ServoSweep servo[nServos] =
 {
-    ServoSweep( servoPin1, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin2, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin3, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin4, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin5, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin6, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin7, defaultMin, defaultMax, 40, 1 ),
-    ServoSweep( servoPin8, defaultMin, defaultMax, 40, 1 ),
+    ServoSweep( servoPin1, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin2, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin3, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin4, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin5, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin6, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin7, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin8, defaultMin, defaultMax, 40 ),
 } ;
 
 Debounce switches[nSwitches] = 
@@ -62,50 +58,59 @@ enum // switch order
 
 void processSwitches()
 {
-    static uint32 lastTime ;
+    static Timer pressTimer( TIMER_ON, 1500 ) ;
+
+    uint8_t stateDown = switches[DOWN].getState() ;
+    uint8_t stateUp   = switches[ UP ].getState() ;
 
     if( switches[LEFT].getState() == FALLING )
     {
+        servo[index].manualRelease() ;
         if( -- index == 255 ) index = 7 ;
-        servo[index].setState( !servo[index].getState() ) ;
+        servo[index].toggle() ;
         blinkLed(1) ;
     }
 
     if( switches[RIGHT].getState() == FALLING )
     {
+        servo[index].manualRelease() ;
         if( ++ index == 8 ) index = 0 ;
-        servo[index].setState( !servo[index].getState() ) ;
+        servo[index].toggle() ;
         blinkLed(4) ;
     }
 
-    if( switches[DOWN].getState() == FALLING )
+    REPEAT_MS( 100 )
     {
-        servo[index].decrement() ;
-        blinkLed(3) ;
-    }
+        if( stateDown == LOW )
+        {
+            servo[index].decrement() ;
+            servo[index].manualRelease() ;
+        }
 
-    if( switches[UP].getState() == FALLING )
+        if( stateUp == LOW )
+        {
+            servo[index].increment() ;
+            servo[index].manualRelease() ;
+        }
+    }
+    END_REPEAT
+
+    if( stateDown == RISING || stateUp == RISING ) // in either one of the 2 buttons is released, we release the signal.
     {
-        servo[index].increment() ;
-        blinkLed(2) ;
+        servo[index].commitPos() ;
+        blinkLed(1) ;
     }
 
     if( switches[SEL].getState() == FALLING )
     {
-        servo[index].setState( !servo[index].getState() ) ;
+        servo[index].manualRelease() ;
+        servo[index].toggle() ;
         blinkLed(5) ;
     }
 
-    if( switches[SEL].getState() == LOW )
+    if( pressTimer.update( switches[SEL].getState() == LOW )) 
     {
-        if( millis() - lastTime >= 1500 )
-        {
-            waiting4address = 1 ;
-        }
-    }
-    else
-    {
-        lastTime = millis() ;
+        waiting4address = 1 ;
     }
 }
 
@@ -129,44 +134,69 @@ void statusLed()
     REPEAT_MS( blinkInterval )
     {
         if( flashing )  blinkCounter ++ ;
-        else if( waiting4address ) blinkInterval = 333 ;
-        else if( state == F1_off 
-              || state == F2_off 
-              || state == speed_zero ) blinkInterval = 100 ;
-        else if( state == configureServo )  blinkInterval = 1000 ;
-        else    blinkInterval = 1 ; // just normal idle mode ;
+        else if( waiting4address )          blinkInterval =  333 ;
+        //else if( state == configureServo )  blinkInterval = 1000 ;
+        else                                blinkInterval =     1 ; // just normal idle mode ;
 
-        if( blinkInterval == 1 ) PORTB &= ~(1 << 5) ; // just be on, if there is nothing going on
+        if( blinkInterval == 1 ) PORTB &= ~(1 << 5) ;    // just be on, if there is nothing going on
         else                     PORTB ^=   1 << 5  ;    // toggle
     }
     END_REPEAT
 }
 
 
+bool deadbeef()
+{
+    const int DEADBEEF_EE_ADDRESS = 1000 ; 
+
+    uint32_t  deadbeef_ ;
+    EEPROM.get(DEADBEEF_EE_ADDRESS, deadbeef_) ;
+
+    if( deadbeef_ != 0xDEADBEEF )
+    {   deadbeef_  = 0xDEADBEEF ;
+
+        EEPROM.put(DEADBEEF_EE_ADDRESS, deadbeef_) ;
+        return true;
+    }
+
+    return false;
+}
+
 void setup()
 {
     initIO() ;
 
-    EEPROM.get( eeAddress, myAddress ) ;
-    if( myAddress == 0xFFFF )
+    for (int i = 0; i < nServos; i++) { servo[i].useEEPROM() ; }
+
+    if( deadbeef() )
     {
+        for( int i = 0; i < nServos; i++ ) servo[i].init() ; // load default values when EEPROM is corrupted
         myAddress = 1 ;
         EEPROM.put( eeAddress, myAddress ) ;
     }
 
+    for (int i = 0; i < nServos; i++) { servo[i].begin() ; }
 
-    for (int i = 0; i < nServos; i++)
-    {
-        servo[i].useEEPROM() ;
-        servo[i].begin() ;
-    }
+    EEPROM.get( eeAddress, myAddress ) ;
 
     dcc.pin( 2, 0 ) ;
     dcc.init( MAN_ID_DIY, 11, FLAGS_OUTPUT_ADDRESS_MODE | FLAGS_DCC_ACCESSORY_DECODER, 0 );
 }
 
+uint8_t enableIndex = 0 ;
+
 void loop()
 {
+    if( enableIndex < nServos )
+    {
+        REPEAT_MS( 500 )
+        {
+            servo[enableIndex++].enable() ;
+        }
+        END_REPEAT
+    }
+
+
     statusLed() ;
  
     for (int i = 0; i < nServos; i++)
@@ -204,11 +234,6 @@ void loop()
 */
 uint8 dccIndex = 0xFF ;
 uint8 servoSetpoint  ;
-uint8 F0 ;
-uint8 F1 ;
-uint8 F1_teach ;
-uint8 F2 ;
-uint8 F2_teach ;
 
 void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t output )
 {
@@ -220,20 +245,23 @@ void notifyDccAccTurnoutOutput( uint16_t address, uint8_t direction, uint8_t out
         myAddress = address ;
         EEPROM.put( eeAddress, myAddress ) ;
         blinkLed(6);
+        return ;
     }
 
-    else if( address >= myAddress && address < myAddress + 8 )
+    if( address < myAddress || address >= myAddress + nServos )
     {
-        uint8 index = address - myAddress ;
-        dccIndex = index ;
+        dccIndex = 0xFF ;
+        return ;
+    } 
+   
+    uint8 index = address - myAddress ;
+    dccIndex = index ;
 
-        if( direction >= 1 ) direction = 1 ;
+    if( direction >= 1 ) direction = 1 ;
 
-        servo[index].manualRelease() ;
-        servo[index].setState( direction ) ;
-        blinkLed(3);
-    }
-    else dccIndex = 0xFF ;
+    servo[index].manualRelease() ;
+    servo[index].setState( direction ) ;
+    blinkLed(3); 
 }
 
 // DCC extended directly controls a servo motor
@@ -254,82 +282,54 @@ void notifyDccSigOutputState( uint16_t address, uint8_t state )
 void notifyDccSpeed( uint16_t Addr, DCC_ADDR_TYPE AddrType, uint8_t Speed, DCC_DIRECTION Dir, DCC_SPEED_STEPS SpeedSteps)
 {
     if( Addr != 9999 ) return ;
-    // is speed is negative (dir = 1?, whatever ) speed of 1-128 must be MAP'ed to 20-90 degrees
-    // is speed is  postive (dir = 0?, whatever ) speed of 1-128 must be MAP'ed to 90-160 degrees
-
     if( Dir == 1 ) servoSetpoint = map( Speed, 1, 128, 90,  20 ) ;
     else           servoSetpoint = map( Speed, 1, 128, 90, 160 ) ;
 }
+
+Trigger F0 ;
+Trigger F1 ;
+Trigger F2 ;
+Trigger F3 ;
+Trigger F4 ;
 
 void notifyDccFunc( uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint8_t FuncState)
 {
     if( Addr    !=   9999 ) return ;
     if( FuncGrp != FN_0_4 ) return ;
 
-    if( FuncState & FN_BIT_00 ) F0 = 1 ; else F0 = 0 ;
-    if( FuncState & FN_BIT_01 ) F1 = 1 ; else F1 = 0 ;
-    if( FuncState & FN_BIT_02 ) F2 = 1 ; else F2 = 0 ;   
+    F0.arm() ; F0.update( (FuncState & FN_BIT_00) ? 1 : 0 ) ;
+    F1.arm() ; F1.update( (FuncState & FN_BIT_01) ? 1 : 0 ) ;
+    F2.arm() ; F2.update( (FuncState & FN_BIT_02) ? 1 : 0 ) ;
+    F3.arm() ; F3.update( (FuncState & FN_BIT_03) ? 1 : 0 ) ;
+    F4.arm() ; F4.update( (FuncState & FN_BIT_04) ? 1 : 0 ) ;
 } ;
 
 
 void dccConfiguration()
 {
-    if( dccIndex == 0xFF )
-    {
-        state = initialize ;
-        return ;
-    }
-
     switch( state )
     {
     case initialize:
-        if( F0 == 1 )
-        {   // initialize some variables.
-            F1_teach = 1 ;
-            F2_teach = 1 ;
-
-            state ++ ;
+        if( F0.rose()
+        &&  dccIndex      != 0xFF
+        &&  servoSetpoint == 90 ) 
+        {
+            state = configureServo ;
         }
         break ;
 
-    case F1_off:
-        if( F1 == 0 ) state ++ ;
-        break ;
-
-    case F2_off:
-        if( F2 == 0 ) state ++ ;
-        break ;
-
-    case speed_zero:
-        if( servoSetpoint == 90 ) state ++ ;
-        break ;
-        
     case configureServo:
-        REPEAT_MS( 50 ) // update servo position
+        servo[dccIndex].manualOverride( servoSetpoint ) ;
+
+        if( F0.isLow()   ) { blinkLed(1); servo[dccIndex].manualRelease() ; state = initialize ; dccIndex = 0xFF ; }
+        if( F1.toggled() ) { blinkLed(1); servo[dccIndex].setMin( servoSetpoint ) ; }
+        if( F2.toggled() ) { blinkLed(2); servo[dccIndex].setMax( servoSetpoint ) ; }
+
+        if(servoSetpoint == 90 )
         {
-            servo[dccIndex].manualOverride( servoSetpoint ) ;
-        }
-        END_REPEAT
-
-        if( F1 && F1_teach ) 
-        {         F1_teach = 0 ; 
-
-            servo[dccIndex].setMin( servoSetpoint ) ;
-            blinkLed( 2 ) ;
-        }
-        if( F2 && F2_teach ) 
-        {         F2_teach = 0 ; 
-
-            servo[dccIndex].setMax( servoSetpoint ) ;
-            blinkLed( 3 ) ;
-        }
-
-        if( F0 == 0 )
-        {
-            servo[dccIndex].manualRelease() ;
+            if( F3.toggled() ) { blinkLed(3); if( -- dccIndex ==     255 ) dccIndex = nServos - 1 ; servo[dccIndex].toggle() ; }
+            if( F4.toggled() ) { blinkLed(4); if( ++ dccIndex == nServos ) dccIndex =           0 ; servo[dccIndex].toggle() ; }
         }
         break ;
     }
-
-    if( F0 == 0 ) state = initialize ; // leave the config mode
 }

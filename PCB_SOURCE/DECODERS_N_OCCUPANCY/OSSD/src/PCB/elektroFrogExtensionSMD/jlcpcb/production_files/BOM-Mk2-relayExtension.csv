@@ -1,7 +1,0 @@
-Comment,Designator,Footprint,LCSC
-680R,"R201,R202,R301,R302,R501,R502,R701,R702",R_0603_smalltext,C17798
-G6K-2F-Y-TR DC12,"K201,K202,K301,K302,K501,K502,K701,K702",Relay_DPDT_Omron_G6K-2F-Y,C397192
-Screw_Terminal_01x03,"J202,J302,J502,J702",connector_3.50mm_3P horizontal_MALE,C6394074
-Screw_Terminal_01x02,J601,"PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal",C880572
-Screw_Terminal_01x04,J401,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",C880574
-Conn_02x02_Odd_Even,"J201,J301,J501,J701",PinHeader_2x02_P2.54mm_Vertical_SMD,C919361

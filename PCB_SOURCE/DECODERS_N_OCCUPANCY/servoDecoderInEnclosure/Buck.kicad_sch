@@ -1822,7 +1822,6 @@
 	(hierarchical_label "5V"
 		(shape input)
 		(at 203.2 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1834,7 +1833,6 @@
 	(hierarchical_label "VCC"
 		(shape input)
 		(at 101.6 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

@@ -1,9 +1,0 @@
-Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
-J11,MALE,connector_3.50mm_4P horizontal_MALE,177.25,-114.25,90.0,top
-J12,MALE,connector_3.50mm_4P horizontal_MALE,177.25,-100.25,90.0,top
-J21,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",164.25,-89.0,180.0,top
-J22,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",150.25,-89.0,180.0,top
-J31,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",164.25,-125.0,0.0,top
-J32,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",150.25,-125.0,0.0,top
-J41,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",138.5,-114.25,-90.0,top
-J42,FEMALE,"PhoenixContact_MC_1,5_4-G-3.5_1x04_P3.50mm_Horizontal",138.5,-100.25,-90.0,top

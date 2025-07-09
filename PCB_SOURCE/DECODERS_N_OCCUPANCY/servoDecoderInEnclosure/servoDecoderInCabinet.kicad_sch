@@ -1556,7 +1556,6 @@
 	)
 	(label "P3"
 		(at 195.58 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1567,7 +1566,6 @@
 	)
 	(label "P5"
 		(at 195.58 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1578,7 +1576,6 @@
 	)
 	(label "P6"
 		(at 195.58 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1589,7 +1586,6 @@
 	)
 	(label "P15"
 		(at 195.58 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1600,7 +1596,6 @@
 	)
 	(label "P9"
 		(at 195.58 132.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1611,7 +1606,6 @@
 	)
 	(label "P14"
 		(at 195.58 151.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1622,7 +1616,6 @@
 	)
 	(label "P8"
 		(at 195.58 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1633,7 +1626,6 @@
 	)
 	(label "P2"
 		(at 195.58 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1644,7 +1636,6 @@
 	)
 	(label "P1"
 		(at 195.58 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1655,7 +1646,6 @@
 	)
 	(label "P13"
 		(at 195.58 147.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1666,7 +1656,6 @@
 	)
 	(label "A"
 		(at 66.04 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1677,7 +1666,6 @@
 	)
 	(label "P10"
 		(at 195.58 135.89 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1688,7 +1676,6 @@
 	)
 	(label "P11"
 		(at 195.58 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1699,7 +1686,6 @@
 	)
 	(label "P4"
 		(at 195.58 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1710,7 +1696,6 @@
 	)
 	(label "P7"
 		(at 195.58 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1721,7 +1706,6 @@
 	)
 	(label "B"
 		(at 66.04 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1732,7 +1716,6 @@
 	)
 	(label "P12"
 		(at 195.58 143.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1743,7 +1726,6 @@
 	)
 	(label "P16"
 		(at 195.58 158.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
