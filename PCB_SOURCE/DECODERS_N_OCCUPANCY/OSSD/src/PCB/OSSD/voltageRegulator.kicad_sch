@@ -1238,7 +1238,6 @@
 	)
 	(label "B"
 		(at 99.06 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1249,7 +1248,6 @@
 	)
 	(label "A"
 		(at 111.76 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1260,7 +1258,6 @@
 	)
 	(label "B"
 		(at 137.16 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1271,7 +1268,6 @@
 	)
 	(label "A"
 		(at 99.06 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1283,7 +1279,6 @@
 	(hierarchical_label "coilVoltage"
 		(shape output)
 		(at 153.67 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1295,7 +1290,6 @@
 	(hierarchical_label "{POW}"
 		(shape input)
 		(at 90.17 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

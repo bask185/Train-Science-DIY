@@ -540,7 +540,6 @@
 	(hierarchical_label "CS"
 		(shape output)
 		(at 161.29 95.25 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

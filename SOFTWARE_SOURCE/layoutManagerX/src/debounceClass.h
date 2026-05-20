@@ -24,7 +24,7 @@ class Debounce {
 public:
 	Debounce(unsigned char _pin);
 	unsigned char getState();
-	void debounce();
+	void debounce();  // comments
 	void debounce( bool );
 
 private:

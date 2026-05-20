@@ -642,6 +642,10 @@
       "MCU"
     ],
     [
+      "afcf3847-25fc-43d2-9cee-80bbb0e72533",
+      "IO"
+    ],
+    [
       "19b2cb36-8513-4004-a0c4-1eb5cf0961ab",
       "power"
     ],
@@ -672,6 +676,82 @@
     [
       "b1da3be0-c4de-4496-acba-ace9d1de3495",
       "config"
+    ],
+    [
+      "225d42af-0ade-42f8-97cb-e6cd3765bc19",
+      "shiftregisters1"
+    ],
+    [
+      "8bc1b8f6-bb4e-46d2-92a2-be0294a22966",
+      "shiftregisters2"
+    ],
+    [
+      "afcf3847-25fc-43d2-9cee-80bbb0e72533",
+      "IO"
+    ],
+    [
+      "948cfe4d-d1f2-44e9-a1e7-7061e36bca52",
+      "JST1"
+    ],
+    [
+      "b5b8c2ba-16bb-45c7-a525-83360a3f0201",
+      "JST2"
+    ],
+    [
+      "e5714821-2842-4ff0-9c50-68e45db964c9",
+      "JST3"
+    ],
+    [
+      "2d2d1445-ba2c-4c5c-93e2-8ad26056fcb4",
+      "JST4"
+    ],
+    [
+      "30f870d6-a22e-437e-bc7f-98534f6e4d11",
+      "JST5"
+    ],
+    [
+      "f995b104-1928-431f-b9d6-7ce065595436",
+      "JST6"
+    ],
+    [
+      "6cc7be61-de51-41cb-ae34-65a0cbb04084",
+      "JST7"
+    ],
+    [
+      "c3c5faf9-a571-4f3d-8c6e-5a1a49042b32",
+      "JST8"
+    ],
+    [
+      "948cfe4d-d1f2-44e9-a1e7-7061e36bca52",
+      "JST1"
+    ],
+    [
+      "b5b8c2ba-16bb-45c7-a525-83360a3f0201",
+      "JST2"
+    ],
+    [
+      "e5714821-2842-4ff0-9c50-68e45db964c9",
+      "JST3"
+    ],
+    [
+      "2d2d1445-ba2c-4c5c-93e2-8ad26056fcb4",
+      "JST4"
+    ],
+    [
+      "30f870d6-a22e-437e-bc7f-98534f6e4d11",
+      "JST5"
+    ],
+    [
+      "f995b104-1928-431f-b9d6-7ce065595436",
+      "JST6"
+    ],
+    [
+      "6cc7be61-de51-41cb-ae34-65a0cbb04084",
+      "JST7"
+    ],
+    [
+      "c3c5faf9-a571-4f3d-8c6e-5a1a49042b32",
+      "JST8"
     ]
   ],
   "text_variables": {}

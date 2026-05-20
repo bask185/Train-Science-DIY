@@ -20,13 +20,7 @@ Public Domain
 #include "macros.h"
 #include <EEPROM.h>
 
-// use constructor 1 if you have no optional relay
-// use the other if you 
 
-const int STORE_POSITIONS   = 0b10000000 ;
-const int DEFAULT_BITS      = 0b00111110 ;
-
-const int SERVO_EE_SIZE = 3 ;
 /**
  * @brief Construct a new Servo Sweep:: Servo Sweep object
  * 
@@ -36,20 +30,16 @@ const int SERVO_EE_SIZE = 3 ;
  * @param _speed    time in ms between degrees
  * @param _turnOff  turn of the servo when in position
  */
-ServoSweep::ServoSweep( uint8_t _servoPin, uint8_t _min, uint8_t _max, uint8_t _speed )                    // constructor 1
+ServoSweep::ServoSweep( uint8_t _servoPin  )                    // constructor 1
 {
-    servoPin = _servoPin ;
-    servoSpeed = _speed ;
-    servoMin = _min ;
-    servoMax = _max ;
-   
+    servoPin   = _servoPin ;
+    servoSpeed = 40 ;  
 }
 
 void ServoSweep::init()
 {
-    EEPROM.write( eeAddress+0, servoMin ) ;
-    EEPROM.write( eeAddress+1, servoMax ) ;
-    EEPROM.write( eeAddress+2, 0 ) ; // last state
+    eedata = defaultSettings ;
+    EEPROM.put( eeAddress, eedata ) ;
 }
 
 void ServoSweep::begin()
@@ -57,14 +47,10 @@ void ServoSweep::begin()
     if( eeAddress != 0xFFFF ) // If EEPROM present
     {
 
-        servoMin = EEPROM.read( eeAddress+0 ) ;
-        servoMax = EEPROM.read( eeAddress+1 ) ;
-
-        uint8 status = EEPROM.read(eeAddress+2) ;
-        state = bitRead( status, 0 ) ;
+        EEPROM.get( eeAddress, eedata ) ;
         
-        if( status & 1 ) { pos = servoMax ; state = 1 ; }
-        else             { pos = servoMin ; state = 0 ; }
+        if( eedata.state ) { pos = eedata.servoMax ; }
+        else               { pos = eedata.servoMin ; }
         
 
     }
@@ -78,28 +64,25 @@ void ServoSweep::begin()
 
 void ServoSweep::setState( uint8_t _state )
 {
-    state = _state ;
-
-    uint8_t newState = EEPROM.read( eeAddress+2 ) ;
-    bitWrite( newState, 0, state ) ;
-    EEPROM.write( eeAddress+2, newState ) ;    
+    eedata.state = _state ;
+    EEPROM.put( eeAddress, eedata ) ;
 }
 
 uint8_t ServoSweep::getState()
 {
-    return state ;
+    return eedata.state ;
 }
 
 void ServoSweep::setMin( uint8_t _min)
 {
-    servoMin = _min ;
-    EEPROM.write( eeAddress+0, servoMin ) ;
+    eedata.servoMin = _min ;
+    EEPROM.put( eeAddress, eedata ) ;
 }
 
 void ServoSweep::setMax( uint8_t _max)
 {
-    servoMax = _max ;
-    EEPROM.write( eeAddress+1, servoMax ) ;
+    eedata.servoMax = _max ;
+    EEPROM.put( eeAddress, eedata ) ;
 }
 
 void ServoSweep::manualOverride( uint8_t pos)
@@ -115,25 +98,24 @@ void ServoSweep::manualRelease()
 
 void ServoSweep::increment()
 {
-    if( state )  { if( servoMax <= 160 ) { servoMax ++ ; } }
-    else {         if( servoMin <= 160 ) { servoMin ++ ; } }
+    if( eedata.state )  { if( eedata.servoMax <= 160 ) { eedata.servoMax ++ ; } }
+    else {                if( eedata.servoMin <= 160 ) { eedata.servoMin ++ ; } }
 }
 
 void ServoSweep::decrement()
 {
-    if( state )  { if( servoMax >= 20 ) { servoMax -- ; } }
-    else {         if( servoMin >= 20 ) { servoMin -- ; } }
+    if( eedata.state )  { if( eedata.servoMax >= 20 ) { eedata.servoMax -- ; } }
+    else {                if( eedata.servoMin >= 20 ) { eedata.servoMin -- ; } }
 }
 
 void ServoSweep::commitPos()
 {
-    EEPROM.update( eeAddress+0, servoMin ) ;
-    EEPROM.update( eeAddress+1, servoMax ) ;
+    EEPROM.put( eeAddress, eedata ) ;
 }
 
 void ServoSweep::toggle()
 {
-    setState( !state ) ;
+    setState( !eedata.state ) ;
 }
 
 void ServoSweep::enable()
@@ -150,9 +132,9 @@ void ServoSweep::sweep ( )
     {
         uint8_t setPoint ;
 
-        if( state )     setPoint = servoMax ; // get set point
-        else            setPoint = servoMin ;
-        if( override )  setPoint = servoSetpoint ;
+        if( eedata.state )  setPoint = eedata.servoMax ; // get set point
+        else                setPoint = eedata.servoMin ;
+        if( override )      setPoint = servoSetpoint ;
 
         if( pos < setPoint ) pos ++ ;       // follow positon to setPoint
         if( pos > setPoint ) pos -- ;
@@ -179,7 +161,7 @@ void ServoSweep::setEeAddress( uint16_t _eeAddress )
     }
 
     eeAddress     =  firstAddress ;      // set my own eeAddress
-    firstAddress += SERVO_EE_SIZE ; // increment for next servoSweep object
+    firstAddress += sizeof( eedata ) ; // increment for next servoSweep object
 }
 
 

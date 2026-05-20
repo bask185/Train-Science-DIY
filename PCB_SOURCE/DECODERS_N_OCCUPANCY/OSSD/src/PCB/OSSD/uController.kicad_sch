@@ -3701,7 +3701,6 @@
 	)
 	(label "3.B"
 		(at 176.53 64.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3712,7 +3711,6 @@
 	)
 	(label "X2"
 		(at 168.91 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3723,7 +3721,6 @@
 	)
 	(label "GPIO13"
 		(at 167.64 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3734,7 +3731,6 @@
 	)
 	(label "GPIO16"
 		(at 167.64 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3745,7 +3741,6 @@
 	)
 	(label "8.B"
 		(at 60.96 73.66 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3756,7 +3751,6 @@
 	)
 	(label "7.B"
 		(at 60.96 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3767,7 +3761,6 @@
 	)
 	(label "5.B"
 		(at 60.96 100.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3778,7 +3771,6 @@
 	)
 	(label "GPIO14"
 		(at 167.64 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3789,7 +3781,6 @@
 	)
 	(label "MOSI"
 		(at 110.49 120.65 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3800,7 +3791,6 @@
 	)
 	(label "X2"
 		(at 114.3 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3811,7 +3801,6 @@
 	)
 	(label "2.B"
 		(at 234.95 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3822,7 +3811,6 @@
 	)
 	(label "LED_BLUE"
 		(at 102.87 29.21 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3833,7 +3821,6 @@
 	)
 	(label "7.A"
 		(at 60.96 85.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3844,7 +3831,6 @@
 	)
 	(label "4.B"
 		(at 176.53 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3855,7 +3841,6 @@
 	)
 	(label "2.B"
 		(at 175.26 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3866,7 +3851,6 @@
 	)
 	(label "8.A"
 		(at 175.26 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3877,7 +3861,6 @@
 	)
 	(label "3.B"
 		(at 234.95 93.98 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3888,7 +3871,6 @@
 	)
 	(label "RESET"
 		(at 110.49 118.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3899,7 +3881,6 @@
 	)
 	(label "6.A"
 		(at 175.26 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3910,7 +3891,6 @@
 	)
 	(label "4.A"
 		(at 176.53 67.31 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3921,7 +3901,6 @@
 	)
 	(label "7.A"
 		(at 175.26 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3932,7 +3911,6 @@
 	)
 	(label "LED"
 		(at 111.76 29.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3943,7 +3921,6 @@
 	)
 	(label "1.B"
 		(at 175.26 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3954,7 +3931,6 @@
 	)
 	(label "GPIO2"
 		(at 167.64 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3965,7 +3941,6 @@
 	)
 	(label "7.B"
 		(at 175.26 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3976,7 +3951,6 @@
 	)
 	(label "GPIO15"
 		(at 167.64 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3987,7 +3961,6 @@
 	)
 	(label "3.A"
 		(at 175.26 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3998,7 +3971,6 @@
 	)
 	(label "6.A"
 		(at 60.96 93.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4009,7 +3981,6 @@
 	)
 	(label "SCK"
 		(at 167.64 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4020,7 +3991,6 @@
 	)
 	(label "1.A"
 		(at 234.95 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4031,7 +4001,6 @@
 	)
 	(label "X1"
 		(at 168.91 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4042,7 +4011,6 @@
 	)
 	(label "GPIO10"
 		(at 167.64 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4053,7 +4021,6 @@
 	)
 	(label "X1"
 		(at 100.33 77.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4064,7 +4031,6 @@
 	)
 	(label "1.A"
 		(at 176.53 62.23 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4075,7 +4041,6 @@
 	)
 	(label "LED"
 		(at 176.53 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4086,7 +4051,6 @@
 	)
 	(label "MOSI"
 		(at 173.99 67.31 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4097,7 +4061,6 @@
 	)
 	(label "5.B"
 		(at 175.26 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4108,7 +4071,6 @@
 	)
 	(label "MISO"
 		(at 173.99 69.85 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4119,7 +4081,6 @@
 	)
 	(label "RESET"
 		(at 173.99 97.79 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4130,7 +4091,6 @@
 	)
 	(label "SCK"
 		(at 110.49 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4141,7 +4101,6 @@
 	)
 	(label "LED_BLUE"
 		(at 175.26 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4152,7 +4111,6 @@
 	)
 	(label "4.A"
 		(at 234.95 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4163,7 +4121,6 @@
 	)
 	(label "8.A"
 		(at 60.96 76.2 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4174,7 +4131,6 @@
 	)
 	(label "MISO"
 		(at 110.49 123.19 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4185,7 +4141,6 @@
 	)
 	(label "GPIO1"
 		(at 168.91 62.23 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4196,7 +4151,6 @@
 	)
 	(label "5.A"
 		(at 175.26 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4207,7 +4161,6 @@
 	)
 	(label "4.B"
 		(at 234.95 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4218,7 +4171,6 @@
 	)
 	(label "8.B"
 		(at 175.26 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4229,7 +4181,6 @@
 	)
 	(label "6.B"
 		(at 60.96 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4240,7 +4191,6 @@
 	)
 	(label "GPIO3"
 		(at 167.64 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4251,7 +4201,6 @@
 	)
 	(label "GPIO5"
 		(at 167.64 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4262,7 +4211,6 @@
 	)
 	(label "GPIO9"
 		(at 167.64 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4273,7 +4221,6 @@
 	)
 	(label "GPIO11"
 		(at 167.64 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4284,7 +4231,6 @@
 	)
 	(label "GPIO6"
 		(at 168.91 64.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4295,7 +4241,6 @@
 	)
 	(label "GPIO4"
 		(at 167.64 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4306,7 +4251,6 @@
 	)
 	(label "2.A"
 		(at 175.26 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4317,7 +4261,6 @@
 	)
 	(label "GPIO12"
 		(at 167.64 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4328,7 +4271,6 @@
 	)
 	(label "3.A"
 		(at 234.95 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4339,7 +4281,6 @@
 	)
 	(label "6.B"
 		(at 175.26 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4350,7 +4291,6 @@
 	)
 	(label "5.A"
 		(at 60.96 102.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4361,7 +4301,6 @@
 	)
 	(label "2.A"
 		(at 234.95 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4372,7 +4311,6 @@
 	)
 	(label "1.B"
 		(at 234.95 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4384,7 +4322,6 @@
 	(hierarchical_label "coilVoltage"
 		(shape input)
 		(at 127 67.31 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4396,7 +4333,6 @@
 	(hierarchical_label "7{COIL}"
 		(shape output)
 		(at 49.53 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4408,7 +4344,6 @@
 	(hierarchical_label "4{COIL}"
 		(shape output)
 		(at 246.38 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4420,7 +4355,6 @@
 	(hierarchical_label "CS"
 		(shape input)
 		(at 127 64.77 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4432,7 +4366,6 @@
 	(hierarchical_label "8{COIL}"
 		(shape output)
 		(at 49.53 73.66 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4444,7 +4377,6 @@
 	(hierarchical_label "DCC_TTL"
 		(shape input)
 		(at 175.26 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4456,7 +4388,6 @@
 	(hierarchical_label "5{COIL}"
 		(shape output)
 		(at 49.53 100.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4468,7 +4399,6 @@
 	(hierarchical_label "6{COIL}"
 		(shape output)
 		(at 49.53 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4480,7 +4410,6 @@
 	(hierarchical_label "1{COIL}"
 		(shape output)
 		(at 246.38 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4492,7 +4421,6 @@
 	(hierarchical_label "3{COIL}"
 		(shape output)
 		(at 246.38 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4504,7 +4432,6 @@
 	(hierarchical_label "2{COIL}"
 		(shape output)
 		(at 246.38 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

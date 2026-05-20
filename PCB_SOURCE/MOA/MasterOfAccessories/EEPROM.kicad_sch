@@ -855,7 +855,6 @@
 	)
 	(label "SDA"
 		(at 116.84 68.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -866,7 +865,6 @@
 	)
 	(label "SCL"
 		(at 116.84 71.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -878,7 +876,6 @@
 	(hierarchical_label "{I2C}"
 		(shape input)
 		(at 127 64.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -897,7 +894,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "555c6064-2098-435d-b88f-446820817e69")
-		(property "Reference" "#PWR0801"
+		(property "Reference" "#PWR?"
 			(at 102.87 60.96 0)
 			(effects
 				(font
@@ -947,19 +944,19 @@
 		(instances
 			(project "EEPROM"
 				(path "/7726f3b0-6d28-4a62-ae77-022bfbf3ad3f"
-					(reference "#PWR0801")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/f3268e40-3e30-4729-953d-ad706ea621b4"
-					(reference "#PWR0801")
+					(reference "#PWR0901")
 					(unit 1)
 				)
 			)
 			(project "general_schematics"
 				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/061d5b60-6a9d-4005-baf0-f56c3f730e99"
-					(reference "#PWR0154")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -975,7 +972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90dc646b-1260-4819-b979-749c6156871c")
-		(property "Reference" "U801"
+		(property "Reference" "U?"
 			(at 104.8894 62.3402 0)
 			(effects
 				(font
@@ -1056,19 +1053,19 @@
 		(instances
 			(project "EEPROM"
 				(path "/7726f3b0-6d28-4a62-ae77-022bfbf3ad3f"
-					(reference "U801")
+					(reference "U?")
 					(unit 1)
 				)
 			)
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/f3268e40-3e30-4729-953d-ad706ea621b4"
-					(reference "U801")
+					(reference "U901")
 					(unit 1)
 				)
 			)
 			(project "general_schematics"
 				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/061d5b60-6a9d-4005-baf0-f56c3f730e99"
-					(reference "U1901")
+					(reference "U?")
 					(unit 1)
 				)
 			)
@@ -1084,7 +1081,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a970fb5e-53bf-428e-a9cb-d073161bf9c0")
-		(property "Reference" "#PWR0802"
+		(property "Reference" "#PWR?"
 			(at 102.87 91.44 0)
 			(effects
 				(font
@@ -1134,13 +1131,13 @@
 		(instances
 			(project "EEPROM"
 				(path "/7726f3b0-6d28-4a62-ae77-022bfbf3ad3f"
-					(reference "#PWR0802")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/f3268e40-3e30-4729-953d-ad706ea621b4"
-					(reference "#PWR0802")
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -1157,7 +1154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ade9a917-f56b-4b4e-8223-d4a15c0de94f")
-		(property "Reference" "C801"
+		(property "Reference" "C?"
 			(at 83.439 67.7453 0)
 			(effects
 				(font
@@ -1220,19 +1217,19 @@
 		(instances
 			(project "EEPROM"
 				(path "/7726f3b0-6d28-4a62-ae77-022bfbf3ad3f"
-					(reference "C801")
+					(reference "C?")
 					(unit 1)
 				)
 			)
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/f3268e40-3e30-4729-953d-ad706ea621b4"
-					(reference "C801")
+					(reference "C901")
 					(unit 1)
 				)
 			)
 			(project "general_schematics"
 				(path "/e777d9ec-d073-4229-a9e6-2cf85636e407/061d5b60-6a9d-4005-baf0-f56c3f730e99"
-					(reference "C1901")
+					(reference "C?")
 					(unit 1)
 				)
 			)

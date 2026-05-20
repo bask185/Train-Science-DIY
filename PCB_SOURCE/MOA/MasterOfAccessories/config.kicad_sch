@@ -663,7 +663,6 @@
 	)
 	(label "Switch"
 		(at 102.87 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -674,7 +673,6 @@
 	)
 	(label "LED"
 		(at 102.87 99.06 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -686,7 +684,6 @@
 	(hierarchical_label "{config}"
 		(shape input)
 		(at 88.9 93.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -705,7 +702,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "28ee315f-2a19-4ab3-ae54-f60cff9d10e0")
-		(property "Reference" "#PWR01001"
+		(property "Reference" "#PWR01101"
 			(at 109.22 123.19 0)
 			(effects
 				(font
@@ -755,7 +752,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/b1da3be0-c4de-4496-acba-ace9d1de3495"
-					(reference "#PWR01001")
+					(reference "#PWR01101")
 					(unit 1)
 				)
 			)
@@ -771,7 +768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4026ad33-20b1-4c2e-8686-ea8d33d67574")
-		(property "Reference" "#PWR01002"
+		(property "Reference" "#PWR01102"
 			(at 116.84 123.19 0)
 			(effects
 				(font
@@ -821,7 +818,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/b1da3be0-c4de-4496-acba-ace9d1de3495"
-					(reference "#PWR01002")
+					(reference "#PWR01102")
 					(unit 1)
 				)
 			)
@@ -836,7 +833,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e7a04064-f532-4020-9d38-72b4158fb6d8")
-		(property "Reference" "SW1001"
+		(property "Reference" "SW1101"
 			(at 92.71 107.95 90)
 			(effects
 				(font
@@ -899,7 +896,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/b1da3be0-c4de-4496-acba-ace9d1de3495"
-					(reference "SW1001")
+					(reference "SW1101")
 					(unit 1)
 				)
 			)
@@ -915,7 +912,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f91c9c4b-13c6-4c2c-8414-0f63138e72c3")
-		(property "Reference" "D1001"
+		(property "Reference" "D1101"
 			(at 120.65 104.4574 90)
 			(effects
 				(font
@@ -978,7 +975,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/b1da3be0-c4de-4496-acba-ace9d1de3495"
-					(reference "D1001")
+					(reference "D1101")
 					(unit 1)
 				)
 			)
@@ -994,7 +991,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fceb32e4-f4e4-4e38-b8d0-42213f07c7e5")
-		(property "Reference" "R1001"
+		(property "Reference" "R1101"
 			(at 119.38 110.4899 0)
 			(effects
 				(font
@@ -1057,7 +1054,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/b1da3be0-c4de-4496-acba-ace9d1de3495"
-					(reference "R1001")
+					(reference "R1101")
 					(unit 1)
 				)
 			)

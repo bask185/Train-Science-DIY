@@ -12,7 +12,7 @@ enum
 } ;
 
 uint8           index ;
-const uint16    eeAddress = 1000 ;
+const uint16    eeAddress = 900 ;
 uint16          myAddress ;
 uint8           waiting4address ;
 uint8           state = initialize ;
@@ -22,19 +22,16 @@ NmraDcc dcc ;
 const int nServos   = 8 ;
 const int nSwitches = 5 ;
 
-const int defaultMin =  80 ;
-const int defaultMax = 100 ;
-
 ServoSweep servo[nServos] =
 {
-    ServoSweep( servoPin1, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin2, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin3, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin4, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin5, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin6, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin7, defaultMin, defaultMax, 40 ),
-    ServoSweep( servoPin8, defaultMin, defaultMax, 40 ),
+    ServoSweep( servoPin1 ),
+    ServoSweep( servoPin2 ),
+    ServoSweep( servoPin3 ),
+    ServoSweep( servoPin4 ),
+    ServoSweep( servoPin5 ),
+    ServoSweep( servoPin6 ),
+    ServoSweep( servoPin7 ),
+    ServoSweep( servoPin8 ),
 } ;
 
 Debounce switches[nSwitches] = 

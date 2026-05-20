@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.075,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -79,6 +79,7 @@
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -502,7 +503,8 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 500,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -605,64 +607,28 @@
       "Root"
     ],
     [
-      "2a271825-3c39-4934-86c3-e983d97722d2",
-      "power"
-    ],
-    [
-      "9d7f619c-12f3-4920-83f9-98c1de1c7009",
-      "Lnet"
-    ],
-    [
-      "d6807133-c482-4d21-af8d-3e8ef9067040",
-      "tracks"
-    ],
-    [
-      "8f41ee38-a46d-45ef-963f-c62825d86cfc",
-      "MTS203_1"
-    ],
-    [
-      "8440ff70-6159-449a-bf47-9cecce5f20eb",
-      "MTS203_2"
-    ],
-    [
-      "789c53b9-e60c-415c-b03d-3af1aec95a2b",
-      "MTS203_3"
-    ],
-    [
-      "e885add0-345a-4665-a9bd-40aafd487ae6",
-      "MTS203_4"
-    ],
-    [
-      "964838b8-0246-459a-8c48-58916198629a",
-      "MTS203_5"
-    ],
-    [
-      "34d3f42a-1244-46f1-bdca-7e9db96c00ce",
-      "MTS203_6"
-    ],
-    [
-      "7d4e5c51-9d0d-4580-b766-f91f2156f419",
-      "MTS203_7"
-    ],
-    [
-      "b9d384ed-f22c-4f98-80cc-df2b7b8c0c8f",
-      "MTS203_8"
-    ],
-    [
-      "be4a165b-d63a-450d-aa05-d455a3b3bc22",
-      "TRACK_OUT"
-    ],
-    [
-      "42b1a065-ad2e-4131-928b-936c044c9cd4",
+      "882e024e-a205-4f8c-bcd7-20fedc8309b2",
       "uProcessor"
     ],
     [
-      "0d737e32-582e-4e70-b537-845bbc2021c1",
-      "board2board"
+      "ff306cda-cc72-444f-80fa-98b9a9c211c8",
+      "controls"
     ],
     [
-      "6862e986-96d8-48fd-8713-3ba8b20d16b2",
-      "controls"
+      "741dff2a-fb03-4af6-a2b4-5de898825999",
+      "power"
+    ],
+    [
+      "7f91f99c-3d20-49b2-98e2-1055d4e1ddfd",
+      "trackPower"
+    ],
+    [
+      "1505bd85-576e-4aba-a584-a420402a02be",
+      "brake_filter"
+    ],
+    [
+      "c4461945-44eb-4088-8674-14d67f1f80d3",
+      "throttle_filter"
     ]
   ],
   "text_variables": {}

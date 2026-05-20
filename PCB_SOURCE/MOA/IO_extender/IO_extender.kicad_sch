@@ -1090,7 +1090,6 @@
 	)
 	(label "out_next"
 		(at 173.99 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1101,7 +1100,6 @@
 	)
 	(label "clock"
 		(at 173.99 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1112,7 +1110,6 @@
 	)
 	(label "latch"
 		(at 173.99 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1123,7 +1120,6 @@
 	)
 	(label "latch"
 		(at 119.38 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1134,7 +1130,6 @@
 	)
 	(label "in_prev"
 		(at 119.38 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1145,7 +1140,6 @@
 	)
 	(label "out_prev"
 		(at 119.38 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1156,7 +1150,6 @@
 	)
 	(label "clock"
 		(at 119.38 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1167,7 +1160,6 @@
 	)
 	(label "in_next"
 		(at 173.99 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

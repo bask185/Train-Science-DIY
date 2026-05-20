@@ -5,6 +5,147 @@
 	(uuid "c522c187-2ef0-48da-8688-802a898d08f7")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Regulator_Linear:L7805"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L7805"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.635 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Voltage Regulator 1.5A Positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?252* TO?263* TO?220*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "L7805_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "L7805_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "capacitor_miscellaneous:C_0603_100nF"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -247,151 +388,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "custom_kicad_lib_sk:AMS1117-5.0"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -3.81 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "AMS1117-5.0"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "JLCPCB Part#" "C6187"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "linear regulator ldo fixed positive"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AMS1117-5.0_0_1"
-				(rectangle
-					(start -5.08 1.905)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "AMS1117-5.0_1_1"
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "VO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1167,7 +1163,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1487d290-a849-4310-aa83-b9895ebb281f")
-		(property "Reference" "#PWR0306"
+		(property "Reference" "#PWR0406"
 			(at 144.78 80.01 0)
 			(effects
 				(font
@@ -1217,7 +1213,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0306")
+					(reference "#PWR0406")
 					(unit 1)
 				)
 			)
@@ -1233,7 +1229,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d925e89-d4a7-4d5a-9a42-6783073c2000")
-		(property "Reference" "J301"
+		(property "Reference" "J401"
 			(at 93.98 69.85 0)
 			(effects
 				(font
@@ -1285,7 +1281,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "J301")
+					(reference "J401")
 					(unit 1)
 				)
 			)
@@ -1301,7 +1297,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21a71abb-7f28-4a73-b8ea-93bdba857501")
-		(property "Reference" "#FLG0301"
+		(property "Reference" "#FLG0401"
 			(at 114.3 74.295 0)
 			(effects
 				(font
@@ -1351,7 +1347,89 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#FLG0301")
+					(reference "#FLG0401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:L7805")
+		(at 127 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ff962db-ed2a-4cee-aaa9-0b9696ce1bf1")
+		(property "Reference" "U401"
+			(at 127 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L7805"
+			(at 127 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+			(at 127.635 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
+			(at 127 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
+			(at 127 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part#" "C7394043"
+			(at 127 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "08209985-be1a-470f-b20e-6da90cf107c8")
+		)
+		(pin "1"
+			(uuid "24781abd-9776-4b89-81b8-05b5601feb6e")
+		)
+		(pin "3"
+			(uuid "a16ea93c-8aa8-4d7f-b62b-6031fcd393ff")
+		)
+		(instances
+			(project ""
+				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
+					(reference "U401")
 					(unit 1)
 				)
 			)
@@ -1367,7 +1445,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f8ca588-d53e-450b-b4ec-2cf8a56d9ee0")
-		(property "Reference" "C302"
+		(property "Reference" "C402"
 			(at 142.24 80.0162 0)
 			(effects
 				(font
@@ -1430,7 +1508,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "C302")
+					(reference "C402")
 					(unit 1)
 				)
 			)
@@ -1446,7 +1524,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f568137-dc76-48c2-a2c8-9ad27c884d6a")
-		(property "Reference" "#PWR0303"
+		(property "Reference" "#PWR0403"
 			(at 111.76 91.44 0)
 			(effects
 				(font
@@ -1496,7 +1574,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0303")
+					(reference "#PWR0403")
 					(unit 1)
 				)
 			)
@@ -1512,7 +1590,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0154225-33f8-4dcc-972b-d55d94b4c55c")
-		(property "Reference" "#PWR0302"
+		(property "Reference" "#PWR0402"
 			(at 104.14 80.01 0)
 			(effects
 				(font
@@ -1562,7 +1640,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0302")
+					(reference "#PWR0402")
 					(unit 1)
 				)
 			)
@@ -1578,7 +1656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8fac379-9288-4e5e-b75b-f6c525eeba25")
-		(property "Reference" "#PWR0304"
+		(property "Reference" "#PWR0404"
 			(at 127 91.44 0)
 			(effects
 				(font
@@ -1628,7 +1706,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0304")
+					(reference "#PWR0404")
 					(unit 1)
 				)
 			)
@@ -1644,7 +1722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d101bd60-4a22-47fc-9d27-f4ceb2a0e9a1")
-		(property "Reference" "C301"
+		(property "Reference" "C401"
 			(at 114.3 80.0162 0)
 			(effects
 				(font
@@ -1707,87 +1785,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "C301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "custom_kicad_lib_sk:AMS1117-5.0")
-		(at 127 76.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd603276-afb5-4633-b8f9-67e45aad5c1f")
-		(property "Reference" "U301"
-			(at 127 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AMS1117-5.0"
-			(at 127 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 127 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-			(at 129.54 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1A Low Dropout regulator, positive, 5.0V fixed output, SOT-223"
-			(at 127 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part#" "C347223"
-			(at 127 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "d027bac2-5be9-4e55-a3d0-dfdc7fdd4dd1")
-		)
-		(pin "2"
-			(uuid "7c853cba-49b6-46e9-854c-d0b821fd90d3")
-		)
-		(pin "1"
-			(uuid "4364a6eb-5da5-49d9-8d80-4378ce903dd2")
-		)
-		(instances
-			(project "MasterOfAccessories"
-				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "U301")
+					(reference "C401")
 					(unit 1)
 				)
 			)
@@ -1803,7 +1801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0dc5388-465d-44f0-93c6-0f84c01cd3c0")
-		(property "Reference" "#PWR0305"
+		(property "Reference" "#PWR0405"
 			(at 139.7 91.44 0)
 			(effects
 				(font
@@ -1853,7 +1851,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0305")
+					(reference "#PWR0405")
 					(unit 1)
 				)
 			)
@@ -1869,7 +1867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7f0fc71-66ea-4e93-9a5c-c3a0554efa5d")
-		(property "Reference" "#PWR0301"
+		(property "Reference" "#PWR0401"
 			(at 101.6 91.44 0)
 			(effects
 				(font
@@ -1919,7 +1917,7 @@
 		(instances
 			(project "MasterOfAccessories"
 				(path "/d28c018f-83ab-41ca-9c80-395a46ff97ad/19b2cb36-8513-4004-a0c4-1eb5cf0961ab"
-					(reference "#PWR0301")
+					(reference "#PWR0401")
 					(unit 1)
 				)
 			)

@@ -703,7 +703,6 @@
 	)
 	(label "1.A"
 		(at 135.89 88.9 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -714,7 +713,6 @@
 	)
 	(label "1.B"
 		(at 135.89 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -725,7 +723,6 @@
 	)
 	(label "2.B"
 		(at 154.94 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -736,7 +733,6 @@
 	)
 	(label "2.A"
 		(at 154.94 88.9 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -748,7 +744,6 @@
 	(hierarchical_label "1{DCC}"
 		(shape output)
 		(at 129.54 95.25 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -760,7 +755,6 @@
 	(hierarchical_label "2{POW}"
 		(shape output)
 		(at 163.83 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

@@ -1515,7 +1515,6 @@
 	)
 	(label "B"
 		(at 99.06 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1526,7 +1525,6 @@
 	)
 	(label "A"
 		(at 99.06 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1538,7 +1536,6 @@
 	(hierarchical_label "{COIL}"
 		(shape input)
 		(at 88.9 31.75 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1726,20 +1723,20 @@
 					(reference "TP5")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
-					(reference "TP7")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
+					(reference "TP13")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
-					(reference "TP9")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
+					(reference "TP7")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/d8b627d5-fbe5-4481-9bd8-57e990c24c52"
 					(reference "TP11")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
-					(reference "TP13")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
+					(reference "TP9")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/dc9ddee9-2c98-494d-af27-92c8e13dacd2"
@@ -1913,32 +1910,32 @@
 		)
 		(instances
 			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
-					(reference "TP4")
-					(unit 1)
-				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/13632baa-2697-4964-b8b7-b6a342545e82"
 					(reference "TP2")
+					(unit 1)
+				)
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
+					(reference "TP4")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/7f9196aa-0693-4a68-a190-2a098c79ec0d"
 					(reference "TP6")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
-					(reference "TP8")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
+					(reference "TP14")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
-					(reference "TP10")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
+					(reference "TP8")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/d8b627d5-fbe5-4481-9bd8-57e990c24c52"
 					(reference "TP12")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
-					(reference "TP14")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
+					(reference "TP10")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/dc9ddee9-2c98-494d-af27-92c8e13dacd2"
@@ -2115,10 +2112,6 @@
 		)
 		(instances
 			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/dc9ddee9-2c98-494d-af27-92c8e13dacd2"
-					(reference "#PWR01201")
-					(unit 1)
-				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/13632baa-2697-4964-b8b7-b6a342545e82"
 					(reference "#PWR0401")
 					(unit 1)
@@ -2131,20 +2124,24 @@
 					(reference "#PWR0701")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
-					(reference "#PWR0801")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
+					(reference "#PWR01101")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
-					(reference "#PWR0901")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
+					(reference "#PWR0801")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/d8b627d5-fbe5-4481-9bd8-57e990c24c52"
 					(reference "#PWR01001")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
-					(reference "#PWR01101")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
+					(reference "#PWR0901")
+					(unit 1)
+				)
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/dc9ddee9-2c98-494d-af27-92c8e13dacd2"
+					(reference "#PWR01201")
 					(unit 1)
 				)
 			)
@@ -2853,32 +2850,32 @@
 		)
 		(instances
 			(project "solenoidDecoder"
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
-					(reference "#PWR0602")
-					(unit 1)
-				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/13632baa-2697-4964-b8b7-b6a342545e82"
 					(reference "#PWR0402")
+					(unit 1)
+				)
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/6c5e0d12-8ed5-4c38-93b5-5d0f856a23b9"
+					(reference "#PWR0602")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/7f9196aa-0693-4a68-a190-2a098c79ec0d"
 					(reference "#PWR0702")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
-					(reference "#PWR0802")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
+					(reference "#PWR01102")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
-					(reference "#PWR0902")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/cfe5722c-5b40-4534-ab09-34019a7dae07"
+					(reference "#PWR0802")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/d8b627d5-fbe5-4481-9bd8-57e990c24c52"
 					(reference "#PWR01002")
 					(unit 1)
 				)
-				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/a9e55665-cebd-4e9e-8bd3-ae5bc20de2e1"
-					(reference "#PWR01102")
+				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/da21b652-f556-4e58-aadb-4222a0d5c167"
+					(reference "#PWR0902")
 					(unit 1)
 				)
 				(path "/5ccbe098-5784-427e-9721-db3f20de1ebf/dc9ddee9-2c98-494d-af27-92c8e13dacd2"

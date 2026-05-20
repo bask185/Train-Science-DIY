@@ -20,12 +20,21 @@ Public Domain
 #include <Servo.h>
 #include "ST.h"
 
+typedef struct 
+{
+    uint8_t servoMin ;
+    uint8_t servoMax ;
+    uint8_t state ;
+} Settings;
+
+const Settings defaultSettings = { 80, 100, 0 } ;
+
 const int NO_POS = 0xFF ;
 
 class ServoSweep
 {
 public:
-    ServoSweep( uint8_t _servoPin, uint8_t _min, uint8_t _max, uint8_t _speed  ) ;
+    ServoSweep( uint8_t _servoPin ) ;
     void sweep( ) ;
     void setState( uint8_t _state ) ;
     uint8_t getState() ;
@@ -50,15 +59,13 @@ private:
     uint8_t     prevPos ;
     uint8_t     override    : 1;
     uint8_t     enabled     : 1;
-    uint8_t     state       : 1;
     uint8_t     servoPin    : 6;
     uint8_t     startUp     : 1 ;
     uint8_t     servoSpeed ;
-    uint8_t     servoMin ;
-    uint8_t     servoMax  ;
     uint8_t     servoSetpoint ;
     uint16_t    eeAddress = 0xFFFF ;
     Trigger     startTrigger ;
     Timer       detachDelay ;
     Timer       timer ;
+    Settings    eedata ;
 } ;
